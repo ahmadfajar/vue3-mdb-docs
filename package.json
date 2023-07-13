@@ -1,0 +1,28 @@
+{
+  "name": "vue-mdbootstrap-docs",
+  "version": "1.0.0",
+  "description": "Vue MDBootstrap Documentation",
+  "author": {
+    "name": "Ahmad Fajar",
+    "email": "ahmad.fajar234@hotmail.com"
+  },
+  "license": "BSD-3-Clause",
+  "private": true,
+  "homepage": "https://vue-mdbootstrap.fajarconsultant.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadfajar/vue3-mdb-docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-beta.5",
+    "vue-mdbootstrap": "^2.0.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  }
+}
