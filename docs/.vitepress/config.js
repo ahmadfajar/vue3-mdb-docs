@@ -33,8 +33,8 @@ export default defineConfig({
     // ],
   ],
   themeConfig: {
-    logo: '/img/logo.png',
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Components', link: '/components/', activeMatch: '/components/' }
@@ -44,9 +44,10 @@ export default defineConfig({
       {
         text: 'Introduction',
         items: [
-          { text: 'About', link: '/markdown-examples' },
-          { text: 'Getting Started', link: '/api-examples' },
-          { text: 'Release Notes', link: '/release-notes' }
+          { text: 'About', link: '/about' },
+          { text: 'Getting Started', link: '/getting-started' },
+          { text: 'Release Notes', link: '/release-notes' },
+          { text: 'Markdown Examples', link: '/markdown-examples' },
         ]
       },
       {

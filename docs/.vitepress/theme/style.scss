@@ -70,12 +70,24 @@
 }
 
 /**
- * Overrides styles
+ * Overridden styles
  * -------------------------------------------------------------------------- 
  */
 .vp-doc {
   h1 {
+    font-size: calc(1.75rem + 1.15vw);
+    font-weight: 500;
+    line-height: 1.25;
     margin-bottom: 32px;
+
+    @media (min-width: 992px) {
+      font-size: calc(1.875rem + 1.35vw);
+    }
+  }
+
+  h2 {
+    font-size: calc(1.325rem + 0.9vw);
+    font-weight: 500;
   }
 
   .lead {
@@ -105,6 +117,20 @@
   }
 }
 
+.VPSidebar {
+  &.open {
+    .nav {
+      display: block;
+    }
+  }
+}
+
+.VPDocAsideOutline {
+  ol, ul {
+    padding-left: 0;
+  }
+}
+
 .NotFound {
   .link {
     &:hover {
@@ -117,11 +143,11 @@
 }
 
 .dark {
+  --vp-c-bg: #252529;
+  --vp-c-bg-soft: #2e1848;
   --vp-c-brand: #c949c9;
   --vp-c-brand-light: #621d62;
   --vp-c-brand-lighter: #{lighten(#621d62, 40%)};
-  --vp-c-bg: #252529;
-  --vp-c-bg-soft: #2e1848;
   --vp-button-brand-bg: var(--vp-c-brand-light);
   --vp-button-brand-hover-bg: var(--vp-c-brand);
   --vp-button-alt-text: #{darken(#fff, 25%)};
@@ -137,6 +163,7 @@
       }
     }
   }
+
   .vp-doc {
     a {
       &:hover {
@@ -166,16 +193,16 @@ body {
 .VPDoc,
 .VPDocFooter,
 .VPHome,
-.VPSidebarItem,
-.VPNavBar {
+.VPNavBar,
+.VPSidebarItem {
   .container {
     --bs-gutter-x: 0;
   }
 }
 
 .VPDocFooter,
-.VPSidebarItem,
-.VPNavBar {
+.VPNavBar,
+.VPSidebarItem {
   a {
     text-decoration: none;
 
@@ -198,6 +225,7 @@ body {
       font-weight: 500;
       color: var(--doc-custom-text-1);
     }
+
     .tagline {
       color: var(--doc-custom-text-2);
     }
@@ -213,10 +241,24 @@ body {
       margin-bottom: 0;
     }
   }
+
+  .VPSidebarItem {
+    &:not(.is-active) {
+      > .item {
+        > .link {
+          &:hover {
+            > .text {
+              color: var(--vp-c-brand-lighter);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /**
- * Independent, not themeable
+ * Independent styles, not themeable
  * -------------------------------------------------------------------------- 
  */
 .VPHome {
@@ -244,6 +286,7 @@ body {
     .title {
       color: var(--doc-custom-text-1);
     }
+
     .details {
       color: var(--doc-custom-text-2);
       margin-bottom: 0;
