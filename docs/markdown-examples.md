@@ -38,46 +38,46 @@ export default {
 
 ```md
 ::: info
-This is an info box.
+This is an info box, and `code text`.
 :::
 
 ::: tip
-This is a tip.
+This is a tip, and `code text`.
 :::
 
 ::: warning
-This is a warning.
+This is a warning, and `code text`.
 :::
 
 ::: danger
-This is a dangerous warning.
+This is a dangerous warning, and `code text`.
 :::
 
 ::: details
-This is a details block.
+This is a details block, and `code text`.
 :::
 ```
 
 **Output**
 
 ::: info
-This is an info box.
+This is an info box, and `code text`.
 :::
 
 ::: tip
-This is a tip.
+This is a tip, and `code text`.
 :::
 
 ::: warning
-This is a warning.
+This is a warning, and `code text`.
 :::
 
 ::: danger
-This is a dangerous warning.
+This is a dangerous warning, and `code text`.
 :::
 
 ::: details
-This is a details block.
+This is a details block, and `code text`.
 :::
 
 ## More

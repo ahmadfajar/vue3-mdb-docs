@@ -1,43 +1,35 @@
+---
+outline: [2,3]
+---
+
 # Getting Started 
 
 <div class="lead">
 
-**Vue MDBootstrap** can be used to built Single Page Application by using module 
-bundler or built common web page by using the resources from the CDN.
+**Vue MDBootstrap** can be used to built Single Page Application (SPA) by using module 
+bundler or built common web page by using resources from the CDN.
 
 </div>
 
-**Vue MDBootstrap** is a collection of UI components for **Vue 3** and built 
-according to the [Google Material Design 3](https://m3.material.io/)
-specifications. This component library is built in the spirit of **Vue 3** framework and 
-leverages the **Bootstrap 5** css framework.
-
-Whether you are building an amazing **Single Page Application (SPA)** or common web page, 
-you have the power at your fingertips. You don't have to be a great programmer and
-have excellent UI design skills. Just use **Vue MDBootstrap**. It's easy to use and
-most of the components you need are already there.
-
 
 ## Requirements
+ 
+<div class="pt-2"></div>
 
 - [Vue.js](https://vuejs.org) `v3.3` is required, `v3.3.4` is recommended
 - [Bootstrap](https://getbootstrap.com) `v5.2` is required, `v5.2.3` is recommended
-- [vue-router](https://www.npmjs.com/package/vue-router) `v3.x` is optional, and is required for building 
-  Single Page Application (SPA) using module bundler 
-- [vuex](https://www.npmjs.com/package/vuex) `v3.x` is optional, and is required for building 
-  Single Page Application (SPA) using module bundler 
-- [vuelidate](https://www.npmjs.com/package/vuelidate) is optional, and is required for building 
-  Single Page Application (SPA) using module bundler 
+- [Vue Router](https://router.vuejs.org/) `v4.x` is optional, and is required for building SPA using module bundler 
+- [Pinia](https://pinia.vuejs.org/) is optional, and is required for building SPA using module bundler 
+- [Vuelidate](https://vuelidate-next.netlify.app/) is optional, and is required for forms validation 
 
 
-## How To Use
+## Setup Project
 
 ### Using Module Bundler
 
 If you are building a Single Page Application, then you can use module bundler such as 
-[Vite](https://vitejs.dev/), [Vue Cli](https://cli.vuejs.org/) or 
-[Webpack](https://webpack.js.org/) to build and jump-start your project. 
-And use `yarn` or `npm` to get the latest version of **Vue.js** 
+[Vite](https://vitejs.dev/), [Vue Cli](https://cli.vuejs.org/) or [Webpack](https://webpack.js.org/) 
+to build and jump-start your project. And use `yarn` or `npm` to get the latest version of **Vue.js** 
 and **Vue MDBootstrap**. We assume you have created your project using 
 [Vite + Vue](https://vuejs.org/guide/quick-start.html#creating-a-vue-application). 
 If not, please read the 
@@ -58,9 +50,9 @@ Create Vue application and mount at `#app` entry point.
 // file: main.js
 
 // import global function to register the components and create Vue application
-import { createVueMdb } from "vue-mdbootstrap";
+import { createVueMdb } from 'vue-mdbootstrap';
 
-// Import the main page template
+// Import main component or page layout
 import App from '@/App.vue';
 
 // Import router navigation, 
@@ -68,7 +60,7 @@ import App from '@/App.vue';
 import router from '@/router'; 
 
 // import components css stylesheet 
-import "vue-mdbootstrap/styles";
+import 'vue-mdbootstrap/styles';
 
 // main code start here...
 const app = createVueMdb(App);
@@ -84,7 +76,7 @@ Use code below at the HTML `<head>` section to load the Bootstrap css framework.
 ```
 
 
-### Using Vue MDBootstrap from CDN
+### Using resources from the CDN
 
 You can get the latest version of Vue MDBootstrap directly from 
 [unpkg](https://unpkg.com/) or [jsdelivr](https://www.jsdelivr.com/package/npm/vue-mdbootstrap).
@@ -138,17 +130,11 @@ Code below is an example on how to create HTML page using Vue MDBootstrap.
 </html>  
 ```
 
-## Demos
+## Starter Kit and Demo
 
-You can clone the demos from github repository and run it by your self to see it in action. 
-1. [vue3-mdb-example](https://github.com/ahmadfajar/vue3-mdb-example) - Vue MDBootstrap v2.0 
-   component demos.
-2. [vue3-mdb-starter](https://github.com/ahmadfajar/vue3-mdb-starter) - Vue MDBootstrap v2.0 
+You can clone the starter kit and demo from the GitHub repository and run it yourself to see it in action.
+
+1. [vue3-mdb-starter](https://github.com/ahmadfajar/vue3-mdb-starter) - Vue MDBootstrap v2.0 
    starter kit project template.
-
-
-## Start coding
-
-Now that you have implemented **Vue MDBootstrap** into your project. 
-And it's time to start writing your code. Please refer to each component’s 
-[documentation](/components/) to learn how to use them.
+2. [vue3-mdb-example](https://github.com/ahmadfajar/vue3-mdb-example) - Vue MDBootstrap v2.0 
+   component demos.

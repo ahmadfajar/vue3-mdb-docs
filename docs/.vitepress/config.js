@@ -37,7 +37,8 @@ export default defineConfig({
     logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components/', activeMatch: '/components/' }
+      { text: 'Components', link: '/components/', activeMatch: '/components/' },
+      { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
     ],
 
     sidebar: [
@@ -52,8 +53,31 @@ export default defineConfig({
       },
       {
         text: 'Components',
-        items: [{ text: 'Alert', link: '/components/alert' }]
-      }
+        items: [
+          { text: 'Alert', link: '/components/alert' },
+          { 
+            text: 'Animations', 
+            items: [{
+              text: 'Mask Loader',
+              link: '/components/mask-loader',
+            }, {
+              text: 'Ripple',
+              link: '/components/ripple',
+            }, {
+              text: 'Transition Effects',
+              link: '/components/transition-effect',
+            }] 
+          },
+          { text: 'Appbar', link: '/components/appbar' },
+        ]
+      },
+      {
+        text: 'Reference',
+        items: [
+          { text: 'Color Variants', link: '/reference/color-variants' },
+          { text: 'Appbar', link: '/reference/appbar' },
+        ]
+      },
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/ahmadfajar/vue-mdbootstrap' }],

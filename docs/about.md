@@ -1,5 +1,5 @@
 ---
-outline: deep
+outline: [2,3]
 ---
 
 # Introduction 
@@ -45,7 +45,7 @@ Bootstrap, some good starting points would be:
 
 - [Vue Guide](https://vuejs.org/guide/) 
 - [Vue API](https://vuejs.org/api/) 
-- [Bootstrap v5 documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/) 
+- [Bootstrap documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/) 
 
   
 ## Important HTML Globals
@@ -56,8 +56,8 @@ the normalization of cross browser styles. Refer to the following sub-sections f
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the `HTML5` doctype. Without it, you _may_ see some funky incomplete
-styling, but including it shouldn't cause any considerable hiccups.
+Bootstrap requires the use of the `HTML5` doctype. Without it, you *may see some funky incomplete
+styling*, but including it shouldn't cause any considerable hiccups.
 
 ```html
 <!doctype html>
@@ -70,7 +70,7 @@ styling, but including it shouldn't cause any considerable hiccups.
 
 Bootstrap developed for mobile first, a strategy in which code optimized for mobile devices
 first and then scale the components as necessary using CSS media queries. To ensure proper rendering
-and touch zooming for all devices, **add the responsive viewport meta** tag to your `<head>`.
+and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

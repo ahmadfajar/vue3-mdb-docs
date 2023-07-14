@@ -4,7 +4,7 @@
 
 **BsAlert** is a component that provides contextual feedback messages for typical user actions with the
 handful of available and flexible alert messages. With the right use of colors, they add some emotional 
-weight to our information, ranging from a simple warning to critical system failure or from an operation 
+weight of information, ranging from a simple warning to critical system failure or from an operation 
 success to neutral information.
 
 </div>

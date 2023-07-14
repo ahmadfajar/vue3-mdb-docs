@@ -10,6 +10,8 @@
   --vp-c-brand-dark: #535bf2;
   --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --vp-c-mute: rgba(239, 239, 239, 0.8);
+  --vp-c-yellow-dimm-2: rgba(234, 179, 8, 0.1);
 }
 
 /**
@@ -59,6 +61,11 @@
   --vp-custom-block-tip-border: var(--vp-c-brand);
   --vp-custom-block-tip-text: var(--vp-c-brand-darker);
   --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-warning-code-bg: var(--vp-c-yellow-dimm-2);
+  --vp-custom-block-danger-code-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-info-code-bg: var(--vp-c-code-dimm);
+  --vp-custom-block-details-code-bg: var(--vp-c-code-dimm);
 }
 
 /**
@@ -115,6 +122,17 @@
       color: var(--vp-c-brand-darker);
     }
   }
+
+  .custom-block {
+    a {
+      text-decoration: underline dotted;
+
+      &:hover {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .VPSidebar {
@@ -126,7 +144,8 @@
 }
 
 .VPDocAsideOutline {
-  ol, ul {
+  ol,
+  ul {
     padding-left: 0;
   }
 }
@@ -148,12 +167,19 @@
   --vp-c-brand: #c949c9;
   --vp-c-brand-light: #621d62;
   --vp-c-brand-lighter: #{lighten(#621d62, 40%)};
+  --vp-c-mute: #313136;
   --vp-button-brand-bg: var(--vp-c-brand-light);
   --vp-button-brand-hover-bg: var(--vp-c-brand);
   --vp-button-alt-text: #{darken(#fff, 25%)};
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-border: var(--vp-c-green-dark);
+  --vp-custom-block-tip-text: var(--vp-c-green);
+  --vp-custom-block-tip-bg: var(--vp-c-green-dimm-1);
+  --vp-custom-block-tip-code-bg: rgba(16, 185, 129, 0.1); // var(--vp-c-green-dimm-2);
+  --vp-custom-block-warning-code-bg: var(--vp-c-yellow-dimm-2);
+  --vp-custom-block-danger-border: var(--vp-c-red-dark);
+  --vp-custom-block-danger-code-bg: rgba(244, 63, 94, 0.1);
+  --vp-custom-block-info-code-bg: var(--vp-c-mute-light);
+  --vp-custom-block-details-code-bg: var(--vp-c-mute-light);
 
   .NotFound {
     .link {
@@ -168,7 +194,19 @@
     a {
       &:hover {
         color: var(--vp-c-brand-lighter);
-        text-decoration: dotted;
+        text-decoration: underline;
+      }
+    }
+
+    .custom-block {
+      a {
+        text-decoration: underline dotted;
+
+        &:hover {
+          color: inherit;
+          // font-weight: 600;
+          text-decoration: underline;
+        }
       }
     }
   }
