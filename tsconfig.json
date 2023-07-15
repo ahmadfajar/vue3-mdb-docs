@@ -1,0 +1,30 @@
+{
+  "include": ["env.d.ts", "docs/**/*", "docs/**/*.vue", "components/**/*.vue", "components/**/*.ts"],
+  "exclude": ["docs/**/__tests__/*", "components/**/__tests__/*"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    // Required in Vue projects
+    "allowJs": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "noImplicitThis": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+
+    // Recommended
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "baseUrl": ".",
+    "lib": [
+      "ES2021",
+      "DOM",
+      "DOM.Iterable"
+    ]
+  }
+}

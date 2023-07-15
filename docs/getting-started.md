@@ -2,14 +2,13 @@
 outline: [2,3]
 ---
 
+
 # Getting Started 
 
-<div class="lead">
-
+::: lead
 **Vue MDBootstrap** can be used to built Single Page Application (SPA) by using module 
 bundler or built common web page by using resources from the CDN.
-
-</div>
+:::
 
 
 ## Requirements

@@ -11,6 +11,7 @@ aid you in creating an inviting and color-consistent design. When using Vue MDBo
 components, these variants refers to their **color-name**, rather than by the underlying CSS classname.
 :::
 
+
 ## Applying Color Variants
 
 ### Background color variants
@@ -24,8 +25,8 @@ Background color can be applied to any html element by using the CSS classname `
   <div class="bg-primary p-3">Inner text.</div>
 </div>
 ```
-
 :::
+
 
 ### Border color variants
 
@@ -38,8 +39,8 @@ Border color can be applied to any html element by using the CSS classname `bord
   <div class="border border-primary p-3">Inner text.</div>
 </div>
 ```
-
 :::
+
 
 ### Text color variants
 
@@ -55,34 +56,36 @@ Text color can be applied to any html element by using the CSS classname `text-{
   <p>Impedit architecto, <a class="text-purple">totam hic sunt eum odio, deleniti</a>.</p>
 </div>
 ```
-
 :::
+
 
 ## MDBootstrap Colors
 
-```html
-<ColorPalete palette="bootstrap"></ColorPalete>
-```
+<ColorPalette palette="bootstrap" class="pt-3"></ColorPalette>
+
 
 ::: tip
 These color variants can be applied on some UI components via its property, such as `color`.
+They also can be applied to html element, see: applying [background](#background-color-variants), 
+[border](#border-color-variants), and [text](#text-color-variants) color variants above.
 :::
+
 
 ## Material Colors
 
-```html
-<ColorPalete palette="material"></ColorPalete>
-```
+<ColorPalette palette="material" class="pt-3"></ColorPalette>
 
 ::: tip
 These color variants can be applied on some UI components via its property, such as `color`.
+They also can be applied to html element, see: applying [background](#background-color-variants), 
+[border](#border-color-variants), and [text](#text-color-variants) color variants above.
 :::
+
 
 ## Grey Colors
 
-```
-<ColorPalete palette="grays"></ColorPalete>
-```
+<ColorPalette palette="grays" class="py-3"></ColorPalette>
+
 
 ::: tip
 These grey color variants can only be applied to html element, see: applying
@@ -91,45 +94,36 @@ These grey color variants can only be applied to html element, see: applying
 to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
+
 ## Full Colors
 
-```html
-<ColorPalete palette="fullColor"></ColorPalete>
-```
+<ColorPalette palette="fullColor" class="pt-3"></ColorPalette>
+
 
 ::: tip
-These color variants can only be applied as background color to html element, see: applying
+These color variants can only be applied as the background color of an html element, see: applying
 [background color variants](#background-color-variants) above. If wanted to apply
 to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
-<div class="pt-4"></div>
 
-These color variants can also be used to produce **RGBA background colors**.
+### RGBA color variants
 
-::: pureHtml
+The base color of the above color variants can also be used to produce an **RGBA background color**.
+
+::: BlockHtml
 
 ```html
 <div class="w-100">
-  <div class="row text-center mb-3 mb-md-0">
-    <div class="col-md-4">
+  <div class="row row-cols-1 row-cols-sm-2">
+    <div class="col text-center mb-4 mb-sm-0">
       <div class="p-3 bg-rgba-blue-slight">bg-rgba-blue-slight</div>
-    </div>
-    <div class="col-md-4">
       <div class="p-3 bg-rgba-blue-light">bg-rgba-blue-light</div>
-    </div>
-    <div class="col-md-4">
       <div class="p-3 bg-rgba-blue-strong">bg-rgba-blue-strong</div>
     </div>
-  </div>
-  <div class="row text-center">
-    <div class="col-md-4">
+    <div class="col text-center mb-4 mb-sm-0">
       <div class="p-3 bg-rgba-red-slight">bg-rgba-red-slight</div>
-    </div>
-    <div class="col-md-4">
       <div class="p-3 bg-rgba-red-light">bg-rgba-red-light</div>
-    </div>
-    <div class="col-md-4">
       <div class="p-3 bg-rgba-red-strong">bg-rgba-red-strong</div>
     </div>
   </div>
@@ -139,7 +133,7 @@ These color variants can also be used to produce **RGBA background colors**.
 :::
 
 ::: tip
-These color variants can only be applied as background color to html element, see: applying
+These RGBA color variants can only be applied as the background color of an html element, see: applying
 [background color variants](#background-color-variants) above. If wanted to apply
 to an UI component, use its _CSS classname_ on component's `class` property.
 :::

@@ -1,12 +1,10 @@
 # Release Notes
 
 
-<div class="lead">
-
+::: lead
 All release notes can be found through [GitHub](https://github.com/ahmadfajar/vue-mdbootstrap/releases) 
 and can be viewed below for your convenience.
-
-</div>
+:::
 
 
 ## v2.0.3

@@ -1,6 +1,7 @@
 export const sidebar = [
   {
     text: 'Introduction',
+    collapsed: true,
     items: [
       { text: 'About', link: '/about' },
       { text: 'Getting Started', link: '/getting-started' },
@@ -10,6 +11,7 @@ export const sidebar = [
   },
   {
     text: 'Components',
+    collapsed: true,
     items: [
       { text: 'Alert', link: '/components/alert' },
       {
@@ -34,6 +36,7 @@ export const sidebar = [
   },
   {
     text: 'Reference',
+    collapsed: true,
     items: [
       { text: 'Color Variants', link: '/reference/color-variants' },
       { text: 'Appbar', link: '/reference/appbar' }

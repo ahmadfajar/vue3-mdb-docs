@@ -2,15 +2,14 @@
 outline: [2,3]
 ---
 
+
 # Introduction 
 
-<div class="lead">
-
+::: lead
 **Vue MDBootstrap** is a collection of **Vue.js** UI components and was built from the ground up 
 to be easy to learn and use. Our collection of UI components maintain a consistent style throughout 
 your application with enough customization options to meet any use-case.
-
-</div>
+:::
 
 
 <h3>It’s free</h3>

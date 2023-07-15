@@ -3,10 +3,11 @@ import './minBootstrap.scss';
 
 import Theme from 'vitepress/theme';
 // import { h } from 'vue';
-import { App } from 'vue';
+import { type App } from 'vue';
 import * as _plugins from 'vue-mdbootstrap';
 import 'vue-mdbootstrap/styles';
 import DocBlockHtml from '../../../components/DocBlockHtml.vue';
+import ColorPalette from '../../../components/ColorPalette.vue';
 import './style.scss';
 
 export default {
@@ -18,7 +19,8 @@ export default {
   // },
   enhanceApp({ app, router, siteData }) {
     (app as App).component('DocBlockHtml', DocBlockHtml);
-    // console.log(_plugins);
+    (app as App).component('ColorPalette', ColorPalette);
+    
     for (const key of Object.keys(_plugins)) {
       if (key.startsWith('Bs') && key.endsWith('Plugin')) {
         app.use(_plugins[key]);
