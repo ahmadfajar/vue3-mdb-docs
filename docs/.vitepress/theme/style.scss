@@ -12,6 +12,7 @@
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
   --vp-c-mute: rgba(239, 239, 239, 0.8);
   --vp-c-yellow-dimm-2: rgba(234, 179, 8, 0.1);
+  --vp-c-text-code: var(--bs-code-color);
 }
 
 /**
@@ -58,6 +59,7 @@
  * -------------------------------------------------------------------------- 
  */
 :root {
+  --vp-code-line-height: 1.4;
   --vp-custom-block-tip-border: var(--vp-c-brand);
   --vp-custom-block-tip-text: var(--vp-c-brand-darker);
   --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
@@ -184,6 +186,7 @@
   --vp-custom-block-danger-code-bg: rgba(244, 63, 94, 0.1);
   --vp-custom-block-info-code-bg: var(--vp-c-mute-light);
   --vp-custom-block-details-code-bg: var(--vp-c-mute-light);
+  --vp-c-text-code: var(--vp-text-mute);
   --doc-example-border-color: #484848;
   --doc-example-toolbar-bg: #242424;
   --doc-example-content-bg: #1c1d1e;

@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Alert
 
 
@@ -12,5 +16,15 @@ success to neutral information.
 ## Overview
 
 By default, `<bs-alert>` is set to primary color. You can use `color` property to change its color and
-add some emotional weight. Any of [MDBootstrap Colors](/reference/color-variants) variants can be 
+add some emotional weight. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variants can be 
 applied to the `color` property.
+
+
+::: BlockVue {title="Alert Example"}
+
+```html
+<div class="w-100 pt-4 px-4 pb-2">
+  <bs-alert>Simple alert with primary color</bs-alert>
+</div>
+```
+:::
