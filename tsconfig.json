@@ -1,5 +1,5 @@
 {
-  "include": ["env.d.ts", "docs/**/*", "docs/**/*.vue", "components/**/*.vue", "components/**/*.ts"],
+  "include": ["env.d.ts", "docs/**/*.vue", "components/**/*.vue", "components/**/*.ts"],
   "exclude": ["docs/**/__tests__/*", "components/**/__tests__/*"],
   "compilerOptions": {
     "module": "ESNext",

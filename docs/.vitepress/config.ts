@@ -1,6 +1,7 @@
 import container from 'markdown-it-container';
 import Utils from 'markdown-it/lib/common/utils';
 import type Token from 'markdown-it/lib/token';
+import fs from 'node:fs';
 import { defineConfig } from 'vitepress';
 import { headMeta } from './headers';
 import { removeElement, stripTag } from './helpers';
@@ -18,7 +19,7 @@ export default defineConfig({
     logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components/', activeMatch: '/components/' },
+      { text: 'Guide', link: '/components/', activeMatch: '/components/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' }
     ],
     sidebar: sidebar,
@@ -54,7 +55,8 @@ export default defineConfig({
           if (token.nesting === 1) {
             let title: string | undefined,
               description: string | undefined,
-              clientOnly: boolean | undefined;
+              clientOnly: boolean | undefined,
+              jscript: string | undefined;
 
             const content = tokens[idx + 1].content.trim();
             const attrs = token.attrs;
@@ -68,6 +70,9 @@ export default defineConfig({
                 if (attr[0] === 'clientOnly') {
                   clientOnly = true;
                 }
+                if (attr[0] === 'file') {
+                  jscript = fs.readFileSync(attr[1], {encoding: 'utf8'});
+                }
               });
             }
 
@@ -75,8 +80,8 @@ export default defineConfig({
             resultHtml = stripTag(resultHtml, 'template');
             // console.info('result:', resultHtml);
 
-            let jscript = removeElement(content, ['template', 'style']);
-            jscript = stripTag(jscript, 'script');
+            // let jscript = removeElement(content, ['template', 'style']);
+            // jscript = stripTag(jscript, 'script');
 
             let styles = removeElement(content, ['template', 'script']);
             styles = stripTag(styles, 'style');

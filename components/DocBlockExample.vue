@@ -79,13 +79,13 @@ const openStackBlitz = () => {
       settings: {
         compile: {
           trigger: 'auto',
-          clearConsole: true
+          clearConsole: false
         }
       }
     },
     {
       newWindow: true,
-      openFile: ['index.html']
+      openFile: 'index.html'
     }
   );
 };
@@ -132,7 +132,7 @@ const openStackBlitz = () => {
   --doc-example-border-color: var(--bs-gray-400); // #cbcbcb;
   --doc-example-border-radius: calc(var(--bs-border-radius) + 2px);
   --doc-example-toolbar-bg: var(--bs-gray-100); // #f6f5f5;
-  --doc-example-content-bg: var(--bs-gray-300); // #dfdfdf;
+  --doc-example-content-bg: var(--bs-gray-200); // #dfdfdf;
 }
 
 .doc-example-container {

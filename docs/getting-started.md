@@ -75,7 +75,7 @@ Use code below at the HTML `<head>` section to load the Bootstrap css framework.
 ```
 
 
-### Using resources from the CDN
+### Using resources from the CDN {class="pt-3"}
 
 You can get the latest version of Vue MDBootstrap directly from 
 [unpkg](https://unpkg.com/) or [jsdelivr](https://www.jsdelivr.com/package/npm/vue-mdbootstrap).
