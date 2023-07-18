@@ -111,10 +111,6 @@
     }
   }
 
-  h5 {
-    font-size: 20px;
-  }
-
   .lead {
     font-size: 1.5rem;
     font-weight: 200;
@@ -155,6 +151,14 @@
       }
     }
   }
+
+  .doc-example-container {
+    .md-divider {
+      &.divider--light {
+        --md-divider-color: rgba(125, 125, 125, 0.75);
+      }
+    }
+  }
 }
 
 .md-tabs {
@@ -174,6 +178,7 @@
       > table {
         display: table;
         width: 100%;
+        margin-bottom: 8px;
       }
     }
 
@@ -401,6 +406,10 @@ body {
         }
       }
     }
+  }
+
+  .VPBadge {
+    font-weight: 500;
   }
 }
 

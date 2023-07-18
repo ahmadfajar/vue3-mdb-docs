@@ -1,5 +1,5 @@
 ---
-outline: [2,3]
+outline: deep
 ---
 
 
@@ -48,7 +48,7 @@ Create Vue application and mount at `#app` entry point.
 ```js
 // file: main.js
 
-// import global function to register the components and create Vue application
+// Import global function to register the components and create Vue application
 import { createVueMdb } from 'vue-mdbootstrap';
 
 // Import main component or page layout
@@ -58,13 +58,72 @@ import App from '@/App.vue';
 // read vue-router manual on how to setup the navigation
 import router from '@/router'; 
 
-// import components css stylesheet 
+// Import components css stylesheet 
 import 'vue-mdbootstrap/styles';
 
-// main code start here...
+// Main code start here...
 const app = createVueMdb(App);
 app.use(router).mount('#app');
 ```
+
+#### Individual Components {class="mt-5"}
+
+There are cases that in your project, you only need some components of ***Vue MDBootstrap*** 
+and for this you can add them as follows:
+
+```js
+// file: main.js
+
+import { createApp } from 'vue';
+
+// Import Button component plugins
+import { BsButtonPlugin } from 'vue-mdbootstrap';
+
+// Import main component or page layout
+import App from '@/App.vue';
+
+// Import components css stylesheet 
+import 'vue-mdbootstrap/styles';
+
+// Your main code
+const app = createApp(App);
+
+// Registers the Button component plugins
+app.use(BsButtonPlugin);
+
+app.use(router).mount('#app');
+```
+
+You can also register all the UI components manually.
+
+```js
+// file: main.js
+
+import { createApp } from 'vue';
+
+// Import all UI component plugins
+import * as _plugins from 'vue-mdbootstrap';
+
+// Import main component or page layout
+import App from '@/App.vue';
+
+// Import components css stylesheet 
+import 'vue-mdbootstrap/styles';
+
+// Your main code
+const app = createApp(App);
+
+// Registers all the UI component plugins
+for (const key of Object.keys(_plugins)) {
+  if (key.startsWith('Bs') && key.endsWith('Plugin')) {
+    app.use(_plugins[key]);
+  }
+}
+
+app.use(router).mount('#app');
+```
+
+<div class="mt-5"></div>
 
 Now, everything is registered and you are ready to go. Please note, 
 this component still requires css from **Bootstrap 5**. 
@@ -75,7 +134,7 @@ Use code below at the HTML `<head>` section to load the Bootstrap css framework.
 ```
 
 
-### Using resources from the CDN {class="pt-3"}
+### Using CDN Resources {class="pt-3"}
 
 You can get the latest version of Vue MDBootstrap directly from 
 [unpkg](https://unpkg.com/) or [jsdelivr](https://www.jsdelivr.com/package/npm/vue-mdbootstrap).

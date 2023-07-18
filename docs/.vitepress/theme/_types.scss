@@ -1,0 +1,56 @@
+hr {
+  margin: $hr-margin-y 0;
+  color: $hr-color; // 1
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+  opacity: $hr-opacity;
+}
+
+// Typography
+%heading {
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+}
+
+.doc-example-container {
+  h1 {
+    @extend %heading;
+    @include font-size($h1-font-size);
+  }
+
+  h2 {
+    @extend %heading;
+    @include font-size($h2-font-size);
+  }
+
+  h3 {
+    @extend %heading;
+    @include font-size($h3-font-size);
+  }
+
+  h4 {
+    @extend %heading;
+    @include font-size($h4-font-size);
+  }
+
+  h5 {
+    @extend %heading;
+    @include font-size($h5-font-size);
+  }
+
+  h6 {
+    @extend %heading;
+    @include font-size($h6-font-size);
+  }
+}
+
+// Type display classes
+@each $display, $font-size in $display-font-sizes {
+  .display-#{$display} {
+    @include font-size($font-size);
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+  }
+}

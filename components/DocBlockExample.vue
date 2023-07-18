@@ -31,7 +31,7 @@ const openStackBlitz = () => {
 
   const headers = [
     `<link href="${cdnBaseUri}bootstrap@5.2.3/dist/css/bootstrap.min.css"` +
-      'rel="stylesheet" crossorigin="anonymous"/>',
+      ' rel="stylesheet" crossorigin="anonymous"/>',
     `<link href="${cdnBaseUri}vue-mdbootstrap@2/dist/bundle.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous">',
     '<scr' +
@@ -60,21 +60,22 @@ const openStackBlitz = () => {
 
   sdk.openProject(
     {
-      title: stackblitzOpts.value?.title ?? 'Vue MDBootstrap example',
-      description: stackblitzOpts.value?.description ?? 'Vue MDBootstrap example project',
+      title: stackblitzOpts.value?.title || 'Vue MDBootstrap example',
+      description: stackblitzOpts.value?.description || 'Vue MDBootstrap example project',
       template: 'html',
       files: {
         'index.html':
           headers.join('\n') +
+          '<style>\n' +
+          (stackblitzOpts.value?.style || '.my-demo-wrapper { width: 100%; padding: 1rem; }') +
+          '\n</style>\n\n' +
           '<div id="app">\n' +
           content +
-          '\n</div>\n<scr' +
+          '\n</div>\n\n<scr' +
           'ipt>\n' +
           jscript +
           '</scr' +
-          'ipt>\n',
-        'style.css':
-          stackblitzOpts.value?.style ?? '.my-demo-wrapper { width: 100%; padding: 1rem; }'
+          'ipt>\n'
       },
       settings: {
         compile: {

@@ -16,7 +16,7 @@ success to neutral information.
 ## Overview
 
 By default, `<bs-alert>` is set to primary color. You can use `color` property to change its color and
-add some emotional weight. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variants can be 
+add some emotional weight. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be 
 applied to the `color` property.
 
 
@@ -291,21 +291,21 @@ function closeAlert() {
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `primary`   | Sets the component colors. Any of the [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variants can be used. |
+| color       | `String`    | `primary`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
-| filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <bs-badge>v2.0.0</bs-badge> |
+| filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge>v2.0.0</BsBadge> |
 | icon        | `String`    |             | The icon to display inside the component. Use any valid Google Material icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
 | icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
-| icon-type <bs-badge color="deep-orange">deprecated</bs-badge> | `String`  |  | Use `variant` property instead. |
+| icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
 | icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
-| model-value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. |
+| model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
-| solid-fill <bs-badge color="deep-orange">deprecated</bs-badge> | `Boolean`  |  | Use `filled` property instead. |
-| variant     | `String`    |  | Create contextual alert and use predefined icon. Valid values are: `success`, `info`, `warning`, `danger`, `help`. <bs-badge>v2.0.0</bs-badge> |
+| solid-fill <Badge type="warning">deprecated</Badge> | `Boolean`  |  | Use `filled` property instead. |
+| variant     | `String`    |  | Create contextual alert and use predefined icon. Valid values are: `success`, `info`, `warning`, `danger`, `help`. <BsBadge>v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
