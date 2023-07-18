@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Introduction
+# Color Variants
 
 ::: lead
 **Vue MDBootstrap** provides color classes that follow commonly used colors and derived from

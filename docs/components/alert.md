@@ -187,7 +187,7 @@ which will be styled with the appropriate color matching the variant.
 Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will 
 add a close `x` button. 
 
-::: BlockVue {title="Dismissible Alert Example"}
+::: BlockVue {title="Dismissible Alert Example" clientOnly="true"}
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert color="primary" dismissible>
@@ -282,6 +282,55 @@ function closeAlert() {
 ```
 :::
 
+
+## API Reference
+
+<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
+  <BsTab label="Props">
+    <div class="doc-table-responsive doc-table-props">
+
+| Property    | Type        | Default     | Description |
+|-------------|-------------|-------------|-------------|
+| color       | `String`    | `primary`   | Sets the component colors. Any of the [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variants can be used. |
+| dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
+| filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <bs-badge>v2.0.0</bs-badge> |
+| icon        | `String`    |             | The icon to display inside the component. Use any valid Google Material icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
+| icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
+| icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
+| icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
+| icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
+| icon-type <bs-badge color="deep-orange">deprecated</bs-badge> | `String`  |  | Use `variant` property instead. |
+| icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
+| model-value <bs-badge color="unique text-white">v-model</bs-badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. |
+| outlined    | `Boolean`   | `false`  | Create outline alert style. |
+| transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
+| solid-fill <bs-badge color="deep-orange">deprecated</bs-badge> | `Boolean`  |  | Use `filled` property instead. |
+| variant     | `String`    |  | Create contextual alert and use predefined icon. Valid values are: `success`, `info`, `warning`, `danger`, `help`. <bs-badge>v2.0.0</bs-badge> |
+
+</div>
+  </BsTab>
+  <BsTab label="Events">
+    <div class="doc-table-responsive doc-table-3cols">
+
+| Name   | Arguments | Description |
+|--------|---------------|-------------|
+| close  |      | Trigger when the component becomes invisible. |
+| update:model-value | (`value: boolean`) | Used to update the `model-value` property. |
+
+</div>
+  </BsTab>
+  <BsTab label="Slots">
+    <div class="doc-table-responsive doc-table-2cols">
+
+| Name    | Description  |
+|---------|--------------|
+| default | The outlet slot used to render the main content. |
+| icon    | The outlet slot used to render the custom icon.  |
+
+</div>
+  </BsTab>
+</BsTabs>
+
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 
@@ -291,6 +340,7 @@ const showDismissibleAlert1 = ref(false);
 const showDismissibleAlert2 = ref(false);
 const timerInterval = ref<number | undefined>();
 const percentProgress = computed(() => (dismissCountDown.value / dismissSecs) * 100);
+const tabs1active = ref(0);
 
 watch(
   () => dismissCountDown.value,
