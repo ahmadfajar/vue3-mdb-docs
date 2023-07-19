@@ -383,6 +383,12 @@ body {
     }
   }
 
+  .VPDoc {
+    &.has-sidebar {
+      overflow-x: hidden;
+    }
+  }
+
   .VPFooter {
     background-color: darken(#1e1134, 4%);
 

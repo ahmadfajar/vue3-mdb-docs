@@ -40,6 +40,7 @@ applied to the `color` property.
 Alert with default style variant will have appearance like **Bootstrap** alert.
 
 ::: BlockVue {title="Alert Example"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert> Simple alert with primary color</bs-alert>
@@ -57,6 +58,7 @@ Use `filled` property to enable the alert variant with **solid fill style**.
 
 
 ::: BlockVue {title="Solid Fill Alert Example"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert filled>Solid alert with primary color</bs-alert>
@@ -74,6 +76,7 @@ Use `filled` property to enable the alert variant with **solid fill style**.
 Use `outlined` property to enable the alert variant with **outline style**.
 
 ::: BlockVue {title="Outline Alert Example"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert color="primary" outlined>Outline alert with primary color</bs-alert>
@@ -94,6 +97,7 @@ you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`
 *Updated since Vue MDBootstrap `v2.0.0`*
 
 ::: BlockVue {title="Contextual Alert Example"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert variant="success" filled>
@@ -130,6 +134,7 @@ for details. The icon is loaded dynamically from Google Fonts site.
 *Updated since Vue MDBootstrap `v2.0.0`*
 
 ::: BlockVue {title="Alert's Custom Icon Example"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert color="green" icon="verified" icon-variant="outlined">
@@ -163,6 +168,7 @@ for details. The icon is loaded dynamically from Google Fonts site.
 which will be styled with the appropriate color matching the variant.
 
 ::: BlockVue {title="Alert with additional contents"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert filled variant="success">
@@ -188,6 +194,7 @@ Use the `dismissible` property to dismiss any inline `<bs-alert>`. This will
 add a close `x` button. 
 
 ::: BlockVue {title="Dismissible Alert Example" clientOnly="true"}
+
 ```html
 <div class="w-100 pt-3 px-4 pb-1">
   <bs-alert color="primary" dismissible>
@@ -218,6 +225,7 @@ because when user closes the alert, your variable will be updated.
 
 
 ::: BlockVue {title="Dismissible Alert Example" clientOnly="true" file="./docs/components/scripts/alert.js"}
+
 ```vue
 <template>
   <div class="w-100 pt-2 px-4 pb-1">
@@ -301,7 +309,7 @@ function closeAlert() {
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
 | icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
-| model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. |
+| model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge>v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
 | solid-fill <Badge type="warning">deprecated</Badge> | `Boolean`  |  | Use `filled` property instead. |
@@ -314,8 +322,8 @@ function closeAlert() {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| close  |      | Trigger when the component becomes invisible. |
-| update:model-value | (`value: boolean`) | Used to update the `model-value` property. |
+| close  |  | Trigger when the component becomes invisible. <BsBadge>v2.0.0</BsBadge> |
+| update:model-value | (`value: boolean`) | Used to update the `model-value` property. <BsBadge>v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -325,7 +333,7 @@ function closeAlert() {
 | Name    | Description  |
 |---------|--------------|
 | default | The outlet slot used to render the main content. |
-| icon    | The outlet slot used to render the custom icon.  |
+| icon    | The outlet slot used to render the custom icon. <BsBadge>v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

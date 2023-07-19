@@ -18,6 +18,7 @@ information to User that the application is busy performing a background task. E
 below will shows you how to use the `<bs-mask-loader>`.
 
 ::: BlockVue {title="Mask Loader Example" file="./docs/components/scripts/mask-loader-1.js"}
+
 ```vue
 <template>
   <div class="my-demo-wrapper w-100 text-grey-800">
@@ -54,6 +55,7 @@ const showLoader = ref(false);
 
 
 ::: BlockVue {title="Mask Loader Variants Example" file="./docs/components/scripts/mask-loader-2.js"}
+
 ```vue
 <template>
   <div class="my-demo-wrapper w-100 text-grey-800">
@@ -136,6 +138,7 @@ for the `spinner-color` property. Additionally you can set the value of the `ove
 property to change the backdrop overlay color.
 
 ::: BlockVue {title="Mask Loader Size and Color Example" file="./docs/components/scripts/mask-loader-3.js"}
+
 ```vue
 <template>
   <div class="my-demo-wrapper w-100 text-grey-800">

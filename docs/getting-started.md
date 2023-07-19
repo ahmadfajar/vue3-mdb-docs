@@ -68,7 +68,7 @@ app.use(router).mount('#app');
 
 #### Individual Components {class="mt-5"}
 
-There are cases that in your project, you only need some components of ***Vue MDBootstrap*** 
+There are cases in your project that you only need some components of ***Vue MDBootstrap*** 
 and for this you can add them as follows:
 
 ```js
