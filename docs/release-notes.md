@@ -19,11 +19,7 @@ Released: July 12, 2023
     [Bootstrap position helpers](https://getbootstrap.com/docs/5.3/helpers/position/)
 - **BsAvatar**: add property `border`, `borderColor`.
 - **BsCard**: add property `roundedOff`, `borderOff`.
-- **BsChip**: 
-  - Add property `readonly`, 
-  - Add property `iconPosition`, 
-  - Fix padding and border-radius on small chip size.
-  - Fix margin and icon-size on default chip size.
+- **BsChip**: add property `readonly`, `iconPosition`, 
 - **BsContainer**, **BsContent**: improve css styles when **BsAppbar** `fixedTop` property is set.
 - **BsProgressBar**: add property `valuePosition`.
 - **BsSideDrawer**: improve computing of drawer position.
@@ -31,6 +27,9 @@ Released: July 12, 2023
 
 ### Bug Fixes
 
+- **BsChip**:
+  - Fix padding and border-radius on small chip size.
+  - Fix margin and icon-size on default chip size.
 - **BsDropdownMenu**: fix bug when `v-model:open` is defined.
 - **BsListNav**, **BsListTile**: fix padding when `spaceAround` property is set on **BsListView**.
 - **BsListNavItem**: fix bug when `v-model:active` is defined.

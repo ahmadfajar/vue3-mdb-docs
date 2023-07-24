@@ -15,8 +15,8 @@ numerous components and elements.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="fadeShow = !fadeShow">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="fadeShow = !fadeShow">
       Click Me
     </bs-button>
     <transition name="fade">
@@ -47,8 +47,8 @@ const fadeShow = ref(true);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="scaleShow = !scaleShow">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="scaleShow = !scaleShow">
       Click Me
     </bs-button>
     <transition name="scale">
@@ -79,8 +79,8 @@ const scaleShow = ref(true);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideFade = !slideFade">
+  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideFade = !slideFade">
       Click Me
     </bs-button>
     <transition name="slide-fade">
@@ -111,8 +111,8 @@ const slideFade = ref(true);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideFadeReverse = !slideFadeReverse">
+  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideFadeReverse = !slideFadeReverse">
       Click Me
     </bs-button>
     <transition name="slide-fade-reverse">
@@ -143,8 +143,8 @@ const slideFadeReverse = ref(true);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideLeftRight = !slideLeftRight">
+  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideLeftRight = !slideLeftRight">
       Click Me
     </bs-button>
     <transition name="slide-left-right">
@@ -175,8 +175,8 @@ const slideLeftRight = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideRightLeft = !slideRightLeft">
+  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideRightLeft = !slideRightLeft">
       Click Me
     </bs-button>
     <transition name="slide-right-left">
@@ -207,8 +207,8 @@ const slideRightLeft = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideTopBottom = !slideTopBottom">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideTopBottom = !slideTopBottom">
       Click Me
     </bs-button>
     <transition name="slide-top-bottom">
@@ -239,8 +239,8 @@ const slideTopBottom = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="slideBottomTop = !slideBottomTop">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="slideBottomTop = !slideBottomTop">
       Click Me
     </bs-button>
     <transition name="slide-bottom-top">
@@ -271,8 +271,8 @@ const slideBottomTop = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="expandTransition = !expandTransition">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="expandTransition = !expandTransition">
       Click Me
     </bs-button>
     <bs-expand-transition>
@@ -303,8 +303,8 @@ const expandTransition = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="rotateClockWise = !rotateClockWise">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="rotateClockWise = !rotateClockWise">
       Click Me
     </bs-button>
     <transition name="rotate-clock-wise">
@@ -337,8 +337,8 @@ const rotateClockWise = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="rotateClockReverse = !rotateClockReverse">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="rotateClockReverse = !rotateClockReverse">
       Click Me
     </bs-button>
     <transition name="rotate-clock-reverse">
@@ -370,8 +370,8 @@ const rotateClockReverse = ref(false);
 ::: BlockVue {title="Roll In-Out Transition Example" file="./docs/components/scripts/roll-in-out-animation.js"}
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800" style="min-height: 200px">
-    <bs-button color="default-color" class="mb-3" @click="rollInOut = !rollInOut">
+  <div class="my-demo-wrapper w-100" style="min-height: 200px">
+    <bs-button color="indigo" class="mb-3" @click="rollInOut = !rollInOut">
       Click Me
     </bs-button>
     <transition name="roll-in-out">

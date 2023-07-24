@@ -88,10 +88,10 @@ import 'vue-mdbootstrap/styles';
 // Your main code
 const app = createApp(App);
 
-// Registers the Button component plugins
+// Registers the Button component plugin
 app.use(BsButtonPlugin);
 
-app.use(router).mount('#app');
+app.mount('#app');
 ```
 
 You can also register all the UI components manually.
@@ -120,7 +120,7 @@ for (const key of Object.keys(_plugins)) {
   }
 }
 
-app.use(router).mount('#app');
+app.mount('#app');
 ```
 
 <div class="mt-5"></div>

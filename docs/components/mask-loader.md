@@ -21,7 +21,7 @@ below will shows you how to use the `<bs-mask-loader>`.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800">
+  <div class="my-demo-wrapper w-100">
     <bs-card>
       <bs-card-body>
         <bs-card-content type="title">Content Title</bs-card-content>
@@ -30,7 +30,7 @@ below will shows you how to use the `<bs-mask-loader>`.
       </bs-card-body>
       <bs-mask-loader :show="showLoader" />
     </bs-card>
-    <bs-button class="mt-4" color="default-color" @click="showLoader = !showLoader">
+    <bs-button class="mt-4" color="indigo" @click="showLoader = !showLoader">
       Toggle Loader
     </bs-button>
   </div>
@@ -58,7 +58,7 @@ const showLoader = ref(false);
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800">
+  <div class="my-demo-wrapper w-100">
     <div class="mb-4">
       <bs-card>
         <bs-card-body>
@@ -67,7 +67,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showLinear1" />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showLinear1 = !showLinear1">
+      <bs-button class="mt-4" color="indigo" @click="showLinear1 = !showLinear1">
         Toggle Loader
       </bs-button>
     </div>
@@ -80,7 +80,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showLinear2" type="linear-alt" />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showLinear2 = !showLinear2">
+      <bs-button class="mt-4" color="indigo" @click="showLinear2 = !showLinear2">
         Toggle Loader
       </bs-button>
     </div>
@@ -93,7 +93,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showSpinner" type="spinner" />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showSpinner = !showSpinner">
+      <bs-button class="mt-4" color="indigo" @click="showSpinner = !showSpinner">
         Toggle Loader
       </bs-button>
     </div>
@@ -106,7 +106,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showGrow" type="grow" />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showGrow = !showGrow">
+      <bs-button class="mt-4" color="indigo" @click="showGrow = !showGrow">
         Toggle Loader
       </bs-button>
     </div>
@@ -141,7 +141,7 @@ property to change the backdrop overlay color.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-grey-800">
+  <div class="my-demo-wrapper w-100">
     <div class="mb-4">
       <bs-card>
         <bs-card-body>
@@ -156,7 +156,7 @@ property to change the backdrop overlay color.
           spinner-thickness="8"
         />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showLoader1 = !showLoader1">
+      <bs-button class="mt-4" color="indigo" @click="showLoader1 = !showLoader1">
         Toggle Loader
       </bs-button>
     </div>
@@ -176,7 +176,7 @@ property to change the backdrop overlay color.
           spinner-thickness="8"
         />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showLoader2 = !showLoader2">
+      <bs-button class="mt-4" color="indigo" @click="showLoader2 = !showLoader2">
         Toggle Loader
       </bs-button>
     </div>
@@ -195,7 +195,7 @@ property to change the backdrop overlay color.
           spinner-diameter="60"
         />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showSpinnerLoader = !showSpinnerLoader">
+      <bs-button class="mt-4" color="indigo" @click="showSpinnerLoader = !showSpinnerLoader">
         Toggle Loader
       </bs-button>
     </div>
@@ -214,7 +214,7 @@ property to change the backdrop overlay color.
           spinner-diameter="60"
         />
       </bs-card>
-      <bs-button class="mt-4" color="default-color" @click="showGrowLoader = !showGrowLoader">
+      <bs-button class="mt-4" color="indigo" @click="showGrowLoader = !showGrowLoader">
         Toggle Loader
       </bs-button>
     </div>

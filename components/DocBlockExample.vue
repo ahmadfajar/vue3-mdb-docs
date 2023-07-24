@@ -119,11 +119,11 @@ const openStackBlitz = () => {
         <slot />
       </div>
     </BsExpandTransition>
-    <div v-if="clientOnly" class="doc-block-content">
-      <slot name="content" />
-    </div>
-    <div v-else class="doc-block-content">
-      <slot name="content" />
+    <div class="doc-block-content">
+      <ClientOnly v-if="clientOnly">
+        <slot name="content" />
+      </ClientOnly>
+      <slot v-else name="content" />
     </div>
   </div>
 </template>

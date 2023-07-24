@@ -228,22 +228,24 @@ because when user closes the alert, your variable will be updated.
 
 ```vue
 <template>
-  <div class="w-100 pt-2 px-4 pb-1">
-    <bs-alert v-model="showDismissibleAlert1" color="dark-green" filled dismissible>
-      This is a dismissible alert.
-    </bs-alert>
-    <bs-alert v-model="showDismissibleAlert2" @close="closeAlert()" dismissible>
-      <div class="pb-2">This alert will dismiss after {{ dismissCountDown }} seconds...</div>
-      <bs-progress v-model="percentProgress" color="pink" mode="determinate" />
-    </bs-alert>
+  <div class="my-demo-wrapper w-100">
+    <div style="height: 150px">
+      <bs-alert v-model="showDismissibleAlert1" color="dark-green" filled dismissible>
+        This is a dismissible alert.
+      </bs-alert>
+      <bs-alert v-model="showDismissibleAlert2" @close="closeAlert()" dismissible>
+        <div class="pb-2">This alert will dismiss after {{ dismissCountDown }} seconds...</div>
+        <bs-progress v-model="percentProgress" color="pink" mode="determinate" />
+      </bs-alert>
+    </div>
     <div class="row row-cols-auto row-cols-md-2">
       <div class="col mb-3 mb-md-0">
-        <bs-button color="default-color" @click="toggleAlert()">
+        <bs-button color="indigo" @click="toggleAlert()">
           {{ showDismissibleAlert1 ? 'Hide' : 'Show' }} dismissible alert
         </bs-button>
       </div>
       <div class="col">
-        <bs-button color="default-color" @click="showAlert()">Show Alert</bs-button>
+        <bs-button color="indigo" @click="showAlert()">Show Alert</bs-button>
       </div>
     </div>
   </div>
@@ -299,7 +301,7 @@ function closeAlert() {
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `primary`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
+| color       | `String`    | `'primary'`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge>v2.0.0</BsBadge> |
 | icon        | `String`    |             | The icon to display inside the component. Use any valid Google Material icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |

@@ -6,7 +6,7 @@ export const sidebar = [
       { text: 'About', link: '/about' },
       { text: 'Getting Started', link: '/getting-started' },
       { text: 'Release Notes', link: '/release-notes' },
-      { text: 'Markdown Examples', link: '/markdown-examples' }
+      // { text: 'Markdown Examples', link: '/markdown-examples' }
     ]
   },
   {
@@ -31,7 +31,8 @@ export const sidebar = [
           }
         ]
       },
-      { text: 'Appbar', link: '/components/appbar' }
+      { text: 'App Container', link: '/components/container' },
+      { text: 'Appbar', link: '/components/appbar' },
     ]
   },
   {
@@ -39,7 +40,6 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'Color Variants', link: '/reference/color-variants' },
-      { text: 'Appbar', link: '/reference/appbar' }
     ]
   }
 ];

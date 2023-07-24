@@ -26,6 +26,7 @@ yarn.lock
 /cypress/screenshots/
 /dist
 /docs/.vitepress/cache
+/docs/.vitepress/dist
 
 # Editor directories and files
 .vscode/*

@@ -68,6 +68,8 @@
   --vp-custom-block-danger-code-bg: var(--vp-c-brand-dimm);
   --vp-custom-block-info-code-bg: var(--vp-c-code-dimm);
   --vp-custom-block-details-code-bg: var(--vp-c-code-dimm);
+  --vp-z-index-nav: 1030;
+  --vp-z-index-sidebar: 1031;
 }
 
 /**
@@ -246,6 +248,14 @@
   }
 }
 
+// .md-popover {
+//   .md-list {
+//     a:hover {
+//       text-decoration: none;
+//     }
+//   }
+// }
+
 .VPSidebar {
   &.open {
     .nav {
@@ -332,14 +342,6 @@ body {
   font-weight: 400;
   color: var(--vp-c-text-1);
   background-color: var(--vp-c-bg);
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 .VPDoc,

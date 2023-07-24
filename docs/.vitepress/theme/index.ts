@@ -21,7 +21,7 @@ export default {
     (app as App)
       .component('DocBlockExample', DocBlockExample)
       .component('ColorPalette', ColorPalette);
-
+    
     for (const key of Object.keys(_plugins)) {
       if (key.startsWith('Bs') && key.endsWith('Plugin')) {
         app.use(_plugins[key]);

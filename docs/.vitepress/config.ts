@@ -1,18 +1,19 @@
+import { load } from 'cheerio';
 import container from 'markdown-it-container';
 import Utils from 'markdown-it/lib/common/utils';
 import type Token from 'markdown-it/lib/token';
 import fs from 'node:fs';
 import { defineConfig } from 'vitepress';
 import { headMeta } from './headers';
-import { removeElement, stripTag } from './helpers';
 import { sidebar } from './sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Vue MDBootstrap',
   description: 'Vue.js UI Component Library',
-  // cleanUrls: true,
+  // base: '/vmdb-doc/',
   // appearance: false,
+  cleanUrls: true,
   head: headMeta,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -71,25 +72,19 @@ export default defineConfig({
                   clientOnly = true;
                 }
                 if (attr[0] === 'file') {
-                  jscript = fs.readFileSync(attr[1], {encoding: 'utf8'});
+                  jscript = fs.readFileSync(attr[1], { encoding: 'utf8' });
                 }
               });
             }
 
-            let resultHtml = removeElement(content, ['script', 'style']);
-            resultHtml = stripTag(resultHtml, 'template');
-            // console.info('result:', resultHtml);
-
-            // let jscript = removeElement(content, ['template', 'style']);
-            // jscript = stripTag(jscript, 'script');
-
-            let styles = removeElement(content, ['template', 'script']);
-            styles = stripTag(styles, 'style');
+            const doc = load(content);
+            const resultHtml = doc('template').html()?.trim() || content;
+            const styles = doc('style').html();
 
             const stackblitz = {
               html: resultHtml,
-              script: jscript !== resultHtml ? jscript : undefined,
-              style: styles !== resultHtml ? styles : undefined,
+              script: jscript,
+              style: styles,
               title: title,
               description: description
             };
