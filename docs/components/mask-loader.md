@@ -133,8 +133,8 @@ const showGrow = ref(false);
 You can change the **Loader** size simply by changing the `spinner-diameter` property value.
 And specify the value of the `spinner-color` property to change its color. Any 
 [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and 
-[Material Color](/reference/color-variants#material-colors) variants can be used 
-for the `spinner-color` property. Additionally you can set the value of the `overlay-color` 
+[Material Color](/reference/color-variants#material-colors) variants can be applied 
+to the `spinner-color` property. Additionally you can set the value of the `overlay-color` 
 property to change the backdrop overlay color.
 
 ::: BlockVue {title="Mask Loader Size and Color Example" file="./docs/components/scripts/mask-loader-3.js"}
@@ -275,5 +275,4 @@ const showLoader2 = ref(false);
 const showSpinnerLoader = ref(false);
 const showGrowLoader = ref(false);
 const tabs1active = ref(0);
-
 </script>

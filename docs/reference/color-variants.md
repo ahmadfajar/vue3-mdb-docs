@@ -21,7 +21,7 @@ Background color can be applied to any html element by using the CSS classname `
 ::: BlockHtml
 
 ```html
-<div class="col-6 col-md-4 col-xl-3 text-center">
+<div class="col-6 col-md-4 col-xl-3 text-center" style="color: var(--vp-c-neutral)">
   <div class="bg-primary p-3">Inner text.</div>
 </div>
 ```
@@ -35,7 +35,7 @@ Border color can be applied to any html element by using the CSS classname `bord
 ::: BlockHtml
 
 ```html
-<div class="col-6 col-md-4 col-xl-3 text-center">
+<div class="col-6 col-md-4 col-xl-3 text-center" style="color: var(--vp-c-neutral)">
   <div class="border border-primary p-3">Inner text.</div>
 </div>
 ```
@@ -49,7 +49,7 @@ Text color can be applied to any html element by using the CSS classname `text-{
 ::: BlockHtml
 
 ```html
-<div class="w-100">
+<div class="w-100" style="color: var(--vp-c-neutral)">
   <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   <p class="text-success">Impedit architecto, totam hic sunt eum odio, deleniti.</p>
   <p class="text-danger">Similique ex, expedita minus assumenda a magni beatae dolorum itaque.</p>
@@ -65,9 +65,10 @@ Text color can be applied to any html element by using the CSS classname `text-{
 
 
 ::: tip
-These color variants can be applied on some UI components via its property, such as `color`.
-They also can be applied to html element, see: applying [background](#background-color-variants), 
-[border](#border-color-variants), and [text](#text-color-variants) color variants above.
+These color variants can be applied on some UI components via its property, such as `color` 
+without `bg-` prefix. They also can be applied to html element, see: applying 
+[background](#background-color-variants), [border](#border-color-variants), and 
+[text](#text-color-variants) color variants above.
 :::
 
 
@@ -76,9 +77,10 @@ They also can be applied to html element, see: applying [background](#background
 <ColorPalette palette="material" class="pt-3"></ColorPalette>
 
 ::: tip
-These color variants can be applied on some UI components via its property, such as `color`.
-They also can be applied to html element, see: applying [background](#background-color-variants), 
-[border](#border-color-variants), and [text](#text-color-variants) color variants above.
+These color variants can be applied on some UI components via its property, such as `color` 
+without `bg-` prefix. They also can be applied to html element, see: applying 
+[background](#background-color-variants), [border](#border-color-variants), and 
+[text](#text-color-variants) color variants above.
 :::
 
 
@@ -114,17 +116,17 @@ The base color of the above color variants can also be used to produce an **RGBA
 ::: BlockHtml
 
 ```html
-<div class="w-100">
+<div class="w-100" style="color: var(--vp-c-neutral)">
   <div class="row row-cols-1 row-cols-sm-2">
     <div class="col text-center mb-4 mb-sm-0">
-      <div class="p-3 bg-rgba-blue-slight">bg-rgba-blue-slight</div>
-      <div class="p-3 bg-rgba-blue-light">bg-rgba-blue-light</div>
-      <div class="p-3 bg-rgba-blue-strong">bg-rgba-blue-strong</div>
+      <div class="p-3 bg-rgba-blue-slight">rgba-blue-slight</div>
+      <div class="p-3 bg-rgba-blue-light">rgba-blue-light</div>
+      <div class="p-3 bg-rgba-blue-strong">rgba-blue-strong</div>
     </div>
     <div class="col text-center mb-4 mb-sm-0">
-      <div class="p-3 bg-rgba-red-slight">bg-rgba-red-slight</div>
-      <div class="p-3 bg-rgba-red-light">bg-rgba-red-light</div>
-      <div class="p-3 bg-rgba-red-strong">bg-rgba-red-strong</div>
+      <div class="p-3 bg-rgba-red-slight">rgba-red-slight</div>
+      <div class="p-3 bg-rgba-red-light">rgba-red-light</div>
+      <div class="p-3 bg-rgba-red-strong">rgba-red-strong</div>
     </div>
   </div>
 </div>

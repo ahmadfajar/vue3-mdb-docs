@@ -82,7 +82,7 @@ export default defineConfig({
             const styles = doc('style').html();
 
             const stackblitz = {
-              html: resultHtml,
+              html: resultHtml.replaceAll('="/img', '="https://vue-mdbootstrap.fajarconsultant.com/img'),
               script: jscript,
               style: styles,
               title: title,

@@ -87,7 +87,7 @@ function toggleSideDrawer(value: boolean) {
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | id          | `String`    |  | Sets the element `ID` attribute. This property value is auto generate. |
-| viewport-height | `Boolean` | `false` | Use document viewport height or not. <BsBadge>v2.0.0</BsBadge> |
+| viewport-height | `Boolean` | `false` | Sets the component height equal to document viewport height. <BsBadge>v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -110,8 +110,8 @@ function toggleSideDrawer(value: boolean) {
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| app  | `Boolean` | `false` | Mount this component as part of application container or just ordinary container. If mounted as part of application container, then it will adapt to `BsSideDrawer` and `BsAppbar` size. |
-| tag  | `String`  | `'div'`   | Html tag used to render this component. |
+| app  | `Boolean` | `false` | Mount the component as part of application container or just ordinary container. If mounted as part of application container, then it will adapt to `BsSideDrawer` and `BsAppbar` size. |
+| tag  | `String`  | `'div'`   | Html tag used to render the component. |
 
 </div>
   </BsTab>
@@ -120,7 +120,7 @@ function toggleSideDrawer(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | (`target: HTMLElement`) | Triggers when this component is resized. <BsBadge>v2.0.0</BsBadge> |
+| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge>v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -143,8 +143,8 @@ function toggleSideDrawer(value: boolean) {
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| app  | `Boolean` | `false` | If `true`, then this component will be wrapped by `BsContainer`. |
-| tag  | `String`  | `'main'` | Html tag used to render this component. |
+| app  | `Boolean` | `false` | If `true`, then the component will be wrapped by `BsContainer`. |
+| tag  | `String`  | `'main'` | Html tag used to render the component. |
 
 </div>
   </BsTab>

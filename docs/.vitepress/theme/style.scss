@@ -70,6 +70,7 @@
   --vp-custom-block-details-code-bg: var(--vp-c-code-dimm);
   --vp-z-index-nav: 1030;
   --vp-z-index-sidebar: 1031;
+  --doc-text-code-dt: #f28f64;
 }
 
 /**
@@ -111,6 +112,14 @@
     @media (min-width: 480px) {
       font-weight: 500;
     }
+
+    @media (min-width: 1080px) {
+      font-weight: 400;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
   }
 
   .lead {
@@ -156,8 +165,31 @@
 
   .doc-example-container {
     .md-divider {
+      --md-divider-margin-y: 0.25rem;
+      margin: var(--md-divider-margin-y) 0;
+
       &.divider--light {
         --md-divider-color: rgba(125, 125, 125, 0.75);
+      }
+    }
+
+    .md-side-drawer-inner .nav {
+      --bs-nav-link-padding-x: 0.5rem;
+    }
+
+    .md-list-nav {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      .md-nav-item {
+        > .md-nav-item-inner {
+          color: var(--md-nav-item-state-color);
+        }
+
+        ~ .md-nav-item {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -182,6 +214,10 @@
         width: 100%;
         margin-bottom: 8px;
       }
+
+      a {
+        font-weight: 400;
+      }
     }
 
     .doc-table-props,
@@ -190,7 +226,7 @@
       .badge {
         --bs-badge-border-radius: 0.275rem;
       }
-      
+
       > table {
         td {
           &:first-child {
@@ -215,7 +251,7 @@
             white-space: nowrap;
 
             > code {
-              --vp-c-text-code: #f28f64;
+              --vp-c-text-code: var(--doc-text-code-dt);
               background-color: transparent;
             }
           }
@@ -230,7 +266,7 @@
             white-space: nowrap;
 
             > code {
-              --vp-c-text-code: #f28f64;
+              --vp-c-text-code: var(--doc-text-code-dt);
               background-color: transparent;
             }
           }

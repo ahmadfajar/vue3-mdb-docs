@@ -328,7 +328,7 @@ const rotateClockWise = ref(false);
 ```
 :::
 
-*Available in Vue MDBootstrap since `v2.0.0`*
+*Available since Vue MDBootstrap `v2.0.0`*
 
 
 ## Rotate Clock Reverse
@@ -362,7 +362,7 @@ const rotateClockReverse = ref(false);
 ```
 :::
 
-*Available in Vue MDBootstrap since `v2.0.0`*
+*Available since Vue MDBootstrap `v2.0.0`*
 
 
 ## Roll In-Out
@@ -395,7 +395,7 @@ const rollInOut = ref(false);
 ```
 :::
 
-*Available in Vue MDBootstrap since `v2.0.0`*
+*Available since Vue MDBootstrap `v2.0.0`*
 
 
 <script setup lang="ts">
