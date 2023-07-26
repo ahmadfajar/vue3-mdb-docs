@@ -84,7 +84,7 @@ export default defineConfig({
             const stackblitz = {
               html: resultHtml.replaceAll('="/img', '="https://vue-mdbootstrap.fajarconsultant.com/img'),
               script: jscript,
-              style: styles,
+              style: styles?.trim(),
               title: title,
               description: description
             };

@@ -42,7 +42,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 `<bs-avatar>` component comes with three predefined shape style: *Circle*, *Rounded* 
 and *Square* (default). Example below will shows you how enable *Circle* and *Rounded* shape.
 
-::: BlockVue {title="Avatar Shape Example"}
+::: BlockVue {title="Styling Avatar Example"}
 
 ```html
 <div class="my-demo-wrapper flex-column">
@@ -80,7 +80,7 @@ to adjust border thickness and its color.
 
 *Available since Vue MDBootstrap `v2.0.3`*
 
-::: BlockVue {title="Avatar Border Example"}
+::: BlockVue {title="Styling Avatar Example"}
 
 ```html
 <div class="my-demo-wrapper flex-column">
@@ -141,7 +141,7 @@ width by explicitly define the `height` and `width` property.
 *Updated since Vue MDBootstrap `v2.0.0`*
 
 
-::: BlockVue {title="Avatar Size Example"}
+::: BlockVue {title="Sizing Avatar Example"}
 
 ```html
 <div class="my-demo-wrapper row row-cols-auto">
@@ -173,7 +173,7 @@ width by explicitly define the `height` and `width` property.
 You can apply animation such as _spin_ or _pulse_ on avatar icon. Because 
 actually **BsAvatar** uses [BsIcon](/components/icon) internally.
 
-::: BlockVue {title="Animate Avatar Icon Example" file="./docs/components/scripts/avatar.js"}
+::: BlockVue {title="Animate Avatar's Icon Example" file="./docs/components/scripts/avatar.js"}
 
 ```vue
 <template>
@@ -234,7 +234,7 @@ const isPulse = ref(false);
 `<bs-avatar>` can also be used inside other component. Example below, shows you how to
 use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 
-::: BlockVue {title="Animate Avatar Icon Example" file="./docs/components/scripts/avatar.js"}
+::: BlockVue {title="Avatar Inside Other Component" file="./docs/components/scripts/avatar.js"}
 
 ```html
 <div class="my-demo-wrapper" style="max-width: 500px">
@@ -310,7 +310,7 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render custom content. <BsBadge>v2.0.0</BsBadge> |
+| default | The outlet slot used to render custom content. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

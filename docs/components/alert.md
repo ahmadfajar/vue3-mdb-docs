@@ -310,7 +310,7 @@ function closeAlert() {
 | icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
-| icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
+| icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
 | model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |

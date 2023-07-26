@@ -34,6 +34,7 @@ export const sidebar = [
       { text: 'App Container', link: '/components/container' },
       { text: 'Appbar', link: '/components/appbar' },
       { text: 'Avatar', link: '/components/avatar' },
+      { text: 'Badge', link: '/components/badge' },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },
