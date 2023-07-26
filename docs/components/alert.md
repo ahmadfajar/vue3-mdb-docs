@@ -303,7 +303,7 @@ function closeAlert() {
 |-------------|-------------|-------------|-------------|
 | color       | `String`    | `'primary'`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
-| filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge>v2.0.0</BsBadge> |
+| filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon        | `String`    |             | The icon to display inside the component. Use any valid Google Material icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
 | icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
@@ -311,11 +311,11 @@ function closeAlert() {
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
 | icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
-| model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge>v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
 | solid-fill <Badge type="warning">deprecated</Badge> | `Boolean`  |  | Use `filled` property instead. |
-| variant     | `String`    |  | Create contextual alert and use predefined icon. Valid values are: `success`, `info`, `warning`, `danger`, `help`. <BsBadge>v2.0.0</BsBadge> |
+| variant     | `String`    |  | Create contextual alert and use predefined icon. Valid values are: `success`, `info`, `warning`, `danger`, `help`. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -324,8 +324,8 @@ function closeAlert() {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| close  |  | Trigger when the component becomes invisible. <BsBadge>v2.0.0</BsBadge> |
-| update:model-value | (`value: boolean`) | Used to update the `model-value` property. <BsBadge>v2.0.0</BsBadge> |
+| close  |  | Trigger when the component becomes invisible. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | (`value: boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -335,7 +335,7 @@ function closeAlert() {
 | Name    | Description  |
 |---------|--------------|
 | default | The outlet slot used to render the main content. |
-| icon    | The outlet slot used to render the custom icon. <BsBadge>v2.0.0</BsBadge> |
+| icon    | The outlet slot used to render the custom icon. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

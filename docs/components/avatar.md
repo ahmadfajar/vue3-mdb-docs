@@ -288,10 +288,10 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 
 | Property      | Type        | Default  | Description |
 |---------------|-------------|----------|-------------|
-| border        | `String`    |          | Apply border to the component. <BsBadge>v2.0.3</BsBadge> |
-| border-color  | `String`    |          | The component border's color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge>v2.0.3</BsBadge> |
+| border        | `String`    |          | Apply border to the component. <BsBadge color="info">v2.0.3</BsBadge> |
+| border-color  | `String`    |          | The component border's color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge color="info">v2.0.3</BsBadge> |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
-| height        | `Number`/`String` |    | The component's height in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge>v2.0.0</BsBadge> |
+| height        | `Number`/`String` |    | The component's height in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon          | `String`    |          | The icon to display as avatar. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
 | icon-flip     | `String`    |          | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. |
@@ -301,7 +301,7 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String` | `48` | The component's size in pixel. If using unit, valid units are: `px`, `rem`, `em`. |
 | text          | `String`    |          | The text to display inside the component. Use short text (_1 to 3 characters_), so the text can be displayed properly. The text will be transformed to uppercase. |
-| width         | `Number`/`String` |    | The component's width in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge>v2.0.0</BsBadge> |
+| width         | `Number`/`String` |    | The component's width in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

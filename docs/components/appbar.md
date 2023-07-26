@@ -76,9 +76,9 @@ container for page title, logo, menus, and action buttons which is usually known
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | clipped-left  | `Boolean`  | `false`  | Cut off the left side of the component. Use this property if [BsSideDrawer](/components/side-drawer) is on the left. |
-| clipped-right | `Boolean`  | `false`  | Cut off the right side of the component. Use this property if [BsSideDrawer](/components/side-drawer) is on the right. <BsBadge>v2.0.0</BsBadge> |
+| clipped-right | `Boolean`  | `false`  | Cut off the right side of the component. Use this property if [BsSideDrawer](/components/side-drawer) is on the right. <BsBadge color="info">v2.0.0</BsBadge> |
 | fixed-top  | `Boolean`  | `false`  | Place the component fixed at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. |
-| sticky-top | `Boolean`  | `false`  | Stick the component at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. <BsBadge>v2.0.3</BsBadge> |
+| sticky-top | `Boolean`  | `false`  | Stick the component at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. <BsBadge color="info">v2.0.3</BsBadge> |
 | shadow | `Boolean`  | `false`  | Add shadow effect to the component. |
 | tag | `String`  | `'nav'`  | Html tag used to render the component. |
 
@@ -89,7 +89,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge>v2.0.0</BsBadge> |
+| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

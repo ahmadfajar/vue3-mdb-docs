@@ -78,7 +78,7 @@ function toggleSideDrawer(value: boolean) {
 
 ## API Reference
 
-### BsAppContainer
+### BsAppContainer {#bs-app-container}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props">
@@ -87,7 +87,7 @@ function toggleSideDrawer(value: boolean) {
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | id          | `String`    |  | Sets the element `ID` attribute. This property value is auto generate. |
-| viewport-height | `Boolean` | `false` | Sets the component height equal to document viewport height. <BsBadge>v2.0.0</BsBadge> |
+| viewport-height | `Boolean` | `false` | Sets the component height equal to document viewport height. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -102,7 +102,7 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContainer {class="pt-3"}
+### BsContainer {#bs-container class="pt-3"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props">
@@ -120,7 +120,7 @@ function toggleSideDrawer(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge>v2.0.0</BsBadge> |
+| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -135,7 +135,7 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContent {class="pt-3"}
+### BsContent {#bs-content class="pt-3"}
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props">

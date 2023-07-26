@@ -251,7 +251,7 @@ const showGrowLoader = ref(false);
 | spinner-diameter  | `Number` | `36` | The spinner diameter. |
 | spinner-thickness | `Number` | `5` | The spinner thickness. Only valid for `linear` and `linear-alt` variants. |
 | spinner-type <Badge type="warning">deprecated</Badge> | `String` |  | Use `type` property instead. |
-| type  | `String` | `'linear'` | The spinner types variant. Available types are: `linear`, `linear-alt`, `spinner`, and `grow`. <BsBadge>v2.0.0</BsBadge> |
+| type  | `String` | `'linear'` | The spinner types variant. Available types are: `linear`, `linear-alt`, `spinner`, and `grow`. <BsBadge color="info">v2.0.0</BsBadge> |
 | transition | `String` | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
 | z-index | `Number` | `100` | Sets the inline css-style `z-index` property. |
 

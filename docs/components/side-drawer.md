@@ -359,13 +359,13 @@ function toggleSideDrawer4(value: boolean) {
 |-------------|-----------|-------------|-------------|
 | color       | `String`  | `'white'`   | Sets the component colors. Any [color variants](/reference/color-variants) can be used. |
 | clipped     | `Boolean` | `false`     | Cut off the top edge of the component. |
-| fixed-layout | `Boolean` | `false`    | Sets the component position fixed on the left or right side even when scrolling the page. <BsBadge>v2.0.0</BsBadge> |
+| fixed-layout | `Boolean` | `false`    | Sets the component position fixed on the left or right side even when scrolling the page. <BsBadge color="info">v2.0.0</BsBadge> |
 | mini        | `Boolean` | `false`     | The component minimize state. |
 | mini-width  | `Number`  | `56` | The component width in pixel when on minimize state. |
 | modal-width | `Number`  | `300` | The component width in pixel when display as modal on small screen. |
 | open <Badge type="tip">v-model</Badge> | `Boolean` | `true` | The component state, show or hide. |
-| overlay-color | `String`  | `'#000'` | The backdrop overlay color when the component is displayed as modal. The value must be in hexa-decimal color format. <BsBadge>v2.0.0</BsBadge> |
-| position    | `String` | `'left'` | The component position location. Valid values are: `left`, `right`. <BsBadge>v2.0.0</BsBadge> |
+| overlay-color | `String`  | `'#000'` | The backdrop overlay color when the component is displayed as modal. The value must be in hexa-decimal color format. <BsBadge color="info">v2.0.0</BsBadge> |
+| position    | `String` | `'left'` | The component position location. Valid values are: `left`, `right`. <BsBadge color="info">v2.0.0</BsBadge> |
 | shadow      | `Boolean`  | `false` | Add shadow effect to the component. |
 | tag         | `String`  | `'aside'`  | Html tag used to render the component. |
 | width       | `Number` | `250` | The component width in pixel. |
@@ -377,7 +377,7 @@ function toggleSideDrawer4(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize  | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge>v2.0.0</BsBadge> |
+| resize  | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
 | update:open | (`state: boolean`) | Triggers when the component becomes visible or invisible. Use this event to update the `open` property or just use the shortcut `v-model:open`. |
 
 </div>
