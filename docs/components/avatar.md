@@ -40,7 +40,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ### Shape
 
 `<bs-avatar>` component comes with three predefined shape style: *Circle*, *Rounded* 
-and *Square* (default). Example below will shows you how enable *Circle* and *Rounded* shape.
+and *Square* (default). Example below will shows you how to enable *Circle* and *Rounded* shape.
 
 ::: BlockVue {title="Styling Avatar Example"}
 
@@ -131,7 +131,7 @@ to adjust border thickness and its color.
 :::
 
 
-## Size
+## Sizes
 
 By default `<bs-avatar>` size is `48px`. You can change the size of the `<bs-avatar>` by changing 
 the `size` property explicitly. Numbers will get converted to pixel. Any other value must include 
@@ -229,7 +229,11 @@ const isPulse = ref(false);
 :::
 
 
-## Inside Other Component  
+## Usage Example
+
+The following is an example that demonstrate more advanced use of the `<bs-avatar>`.
+
+### Inside Other Component  
 
 `<bs-avatar>` can also be used inside other component. Example below, shows you how to
 use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.

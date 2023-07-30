@@ -153,6 +153,15 @@
   }
 
   .custom-block {
+    > .custom-block-title {
+      display: flex;
+      align-items: center;
+    }
+    
+    &.tip, &.warning {
+      border-left-width: 5px;
+    }
+
     a {
       text-decoration: underline dotted;
 
@@ -164,6 +173,17 @@
   }
 
   .doc-example-container {
+    > .doc-block-content {
+      a.btn {
+        color: initial;
+        font-weight: initial;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
     .md-divider {
       --md-divider-margin-y: 0.25rem;
       margin: var(--md-divider-margin-y) 0;
@@ -284,14 +304,6 @@
   }
 }
 
-// .md-popover {
-//   .md-list {
-//     a:hover {
-//       text-decoration: none;
-//     }
-//   }
-// }
-
 .VPSidebar {
   &.open {
     .nav {
@@ -329,15 +341,15 @@
   --vp-button-brand-hover-bg: var(--vp-c-brand);
   --vp-button-alt-text: #{darken(#fff, 25%)};
   --vp-custom-block-tip-border: var(--vp-c-green-dark);
-  --vp-custom-block-tip-text: var(--vp-c-green);
+  --vp-custom-block-tip-text: #41d4a3;
   --vp-custom-block-tip-bg: var(--vp-c-green-dimm-1);
-  --vp-custom-block-tip-code-bg: rgba(16, 185, 129, 0.1); // var(--vp-c-green-dimm-2);
+  --vp-custom-block-tip-code-bg: rgba(16, 185, 129, 0.1);
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-dimm-2);
   --vp-custom-block-danger-border: var(--vp-c-red-dark);
   --vp-custom-block-danger-code-bg: rgba(244, 63, 94, 0.1);
   --vp-custom-block-info-code-bg: var(--vp-c-mute-light);
   --vp-custom-block-details-code-bg: var(--vp-c-mute-light);
-  --vp-c-text-code: var(--vp-text-mute);
+  --vp-c-text-code: #94faf7; // #fefebb; var(--vp-text-mute);
   --doc-example-border-color: #484848;
   --doc-example-toolbar-bg: #242424;
   --doc-example-content-bg: #1c1d1e;
@@ -372,13 +384,14 @@
   }
 }
 
-body {
-  font-family: var(--vp-font-family-base);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--vp-c-text-1);
-  background-color: var(--vp-c-bg);
-}
+// body {
+//   transition: background-color 2s cubic-bezier(0.64, 0, 0.78, 0);
+//   font-family: var(--vp-font-family-base);
+//   font-size: 1rem;
+//   font-weight: 400;
+//   color: var(--vp-c-text-1);
+//   background-color: var(--vp-c-bg);
+// }
 
 .VPDoc,
 .VPDocFooter,
@@ -505,10 +518,10 @@ body {
         border-radius: 12px;
         content: '';
         inset: 0;
-        // mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        // mask-composite: destination-out;
         -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: destination-out;
+        // mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        // mask-composite: destination-out;
         position: absolute;
       }
     }

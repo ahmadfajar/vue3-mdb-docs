@@ -23,7 +23,7 @@ applied to the `color` property.
 ::: BlockVue {title="Alert Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert>Simple alert with primary color</bs-alert>
 </div>
 ```
@@ -32,17 +32,14 @@ applied to the `color` property.
 
 ## Style Variants
 
-**BsAlert** comes with three style variants.
-
-
-### Default style
+### Default
 
 Alert with default style variant will have appearance like **Bootstrap** alert.
 
 ::: BlockVue {title="Alert Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert> Simple alert with primary color</bs-alert>
   <bs-alert color="info">Simple alert with info color</bs-alert>
   <bs-alert color="success">Simple alert with success color</bs-alert>
@@ -52,7 +49,7 @@ Alert with default style variant will have appearance like **Bootstrap** alert.
 ```
 :::
 
-### Solid Fill style {class="pt-3"}
+### Solid {class="pt-3"}
 
 Use `filled` property to enable the alert variant with **solid fill style**.
 
@@ -60,7 +57,7 @@ Use `filled` property to enable the alert variant with **solid fill style**.
 ::: BlockVue {title="Solid Fill Alert Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert filled>Solid alert with primary color</bs-alert>
   <bs-alert color="info" filled>Solid alert with info color</bs-alert>
   <bs-alert color="success" filled>Solid alert with success color</bs-alert>
@@ -71,14 +68,14 @@ Use `filled` property to enable the alert variant with **solid fill style**.
 :::
 
 
-### Outline style {class="pt-3"}
+### Outlined {class="pt-3"}
 
 Use `outlined` property to enable the alert variant with **outline style**.
 
 ::: BlockVue {title="Outline Alert Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert color="primary" outlined>Outline alert with primary color</bs-alert>
   <bs-alert color="info" outlined>Outline alert with info color</bs-alert>
   <bs-alert color="success" outlined>Outline alert with success color</bs-alert>
@@ -99,7 +96,7 @@ you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`
 ::: BlockVue {title="Contextual Alert Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert variant="success" filled>
     Aww yeah, you successfully read this alert message. This is an example how to 
     construct a predefined contextual <b>Success Alert</b>.
@@ -136,7 +133,7 @@ for details. The icon is loaded dynamically from Google Fonts site.
 ::: BlockVue {title="Alert's Custom Icon Example"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert color="green" icon="verified" icon-variant="outlined">
     Aww yeah, you successfully read this alert message. This is an example 
     how to construct alert with custom icon.
@@ -170,7 +167,7 @@ which will be styled with the appropriate color matching the variant.
 ::: BlockVue {title="Alert with additional contents"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert filled variant="success">
     <h5 class="mt-2">Well done!</h5>
     <p>
@@ -196,7 +193,7 @@ add a close `x` button.
 ::: BlockVue {title="Dismissible Alert Example" clientOnly="true"}
 
 ```html
-<div class="w-100 pt-3 px-4 pb-1">
+<div class="my-demo-wrapper w-100">
   <bs-alert color="primary" dismissible>
     Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
   </bs-alert>
@@ -224,7 +221,7 @@ property as in `v-model="showAlert"`. This is useful to control the dismissible,
 because when user closes the alert, your variable will be updated. 
 
 
-::: BlockVue {title="Dismissible Alert Example" clientOnly="true" file="./docs/components/scripts/alert.js"}
+::: BlockVue {title="Controlling Dismissible Alert Example" clientOnly="true" file="./docs/components/scripts/alert.js"}
 
 ```vue
 <template>
@@ -238,7 +235,7 @@ because when user closes the alert, your variable will be updated.
         <bs-progress v-model="percentProgress" color="pink" mode="determinate" />
       </bs-alert>
     </div>
-    <div class="row row-cols-auto row-cols-md-2">
+    <div class="row row-cols-auto">
       <div class="col mb-3 mb-md-0">
         <bs-button color="indigo" @click="toggleAlert()">
           {{ showDismissibleAlert1 ? 'Hide' : 'Show' }} dismissible alert
@@ -310,7 +307,7 @@ function closeAlert() {
 | icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
-| icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-variant  | `String`  | `'filled'` | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
 | model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |

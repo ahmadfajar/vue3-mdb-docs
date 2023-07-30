@@ -66,7 +66,7 @@ export default defineConfig({
               attrs.forEach((attr) => {
                 if (attr[0] === 'title') {
                   title = attr[1];
-                  description = 'Vue MDBootstrap - ' + title + ' Project';
+                  description = 'Vue MDBootstrap - ' + title;
                 }
                 if (attr[0] === 'clientOnly') {
                   clientOnly = true;

@@ -26,7 +26,7 @@ export const sidebar = [
             link: '/components/ripple'
           },
           {
-            text: 'Transition Effects',
+            text: 'Transition Effect',
             link: '/components/transition-effect'
           }
         ]
@@ -35,6 +35,7 @@ export const sidebar = [
       { text: 'Appbar', link: '/components/appbar' },
       { text: 'Avatar', link: '/components/avatar' },
       { text: 'Badge', link: '/components/badge' },
+      { text: 'Button', link: '/components/button' },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },

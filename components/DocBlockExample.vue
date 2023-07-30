@@ -167,7 +167,7 @@ const openStackBlitz = () => {
     background-color: var(--doc-example-content-bg);
     display: flex;
     justify-content: center;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
 
     @media (min-width: 590px) {
       border-bottom-left-radius: var(--doc-example-border-radius);

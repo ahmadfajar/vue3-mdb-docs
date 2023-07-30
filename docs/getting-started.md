@@ -123,8 +123,6 @@ for (const key of Object.keys(_plugins)) {
 app.mount('#app');
 ```
 
-<div class="mt-5"></div>
-
 Now, everything is registered and you are ready to go. Please note, 
 this component still requires css from **Bootstrap 5**. 
 Use code below at the HTML `<head>` section to load the Bootstrap css framework.

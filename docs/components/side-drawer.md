@@ -242,7 +242,11 @@ const miniSideDrawer1 = ref(true);
 :::
 
 
-## Use With Appbar
+## Usage Example
+
+The following are a collection of examples that demonstrate more advanced use of the `<bs-side-drawer>`.
+
+### Use With Appbar
 
 ::: BlockVue {title="Side Drawer with Appbar Example" clientOnly="true" file="./docs/components/scripts/side-drawer-3.js"}
 

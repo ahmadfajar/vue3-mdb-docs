@@ -38,8 +38,8 @@ export default defineComponent({
 
 <template>
   <div class="docs-color-table">
-    <div v-if="palette === 'bootstrap'" class="row row-cols-1 row-cols-sm-2">
-      <div v-for="(value, key) in themeColors" :key="key" class="col mb-4">
+    <div v-if="palette === 'bootstrap'" class="row row-cols-1 row-cols-sm-2 g-4">
+      <div v-for="(value, key) in themeColors" :key="key" class="col">
         <div :class="useBootstrapColorClasses(key)" class="d-flex p-3 md-shadow-1">
           <span class="flex-grow-1">{{ key }}</span>
           <span class="opacity-50 small">{{ value.toUpperCase() }}</span>
@@ -61,8 +61,8 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <div v-else-if="palette === 'fullColor'" class="row row-cols-1 row-cols-sm-2">
-      <div v-for="(items, key) in fullColors" :key="key" class="col mb-4">
+    <div v-else-if="palette === 'fullColor'" class="row row-cols-1 row-cols-sm-2 g-4">
+      <div v-for="(items, key) in fullColors" :key="key" class="col">
         <div class="md-shadow">
           <div
             v-for="(value, prop) in items"
@@ -76,8 +76,8 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <div v-else-if="palette === 'material'" class="row row-cols-1 row-cols-sm-2">
-      <div v-for="(item, key) in materialColors" :key="key" class="col mb-4">
+    <div v-else-if="palette === 'material'" class="row row-cols-1 row-cols-sm-2 g-4">
+      <div v-for="(item, key) in materialColors" :key="key" class="col">
         <div class="md-shadow-1">
           <div :class="['bg-' + useMaterialColorInfo(item)[0].color, 'doc-color-item text-white']">
             <div>{{ useMaterialColorInfo(item)[0].color }}</div>

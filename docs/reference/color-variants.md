@@ -61,10 +61,9 @@ Text color can be applied to any html element by using the CSS classname `text-{
 
 ## MDBootstrap Colors
 
-<ColorPalette palette="bootstrap" class="pt-3"></ColorPalette>
+<ColorPalette palette="bootstrap" class="py-3"></ColorPalette>
 
-
-::: tip
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can be applied on some UI components via its property, such as `color` 
 without `bg-` prefix. They also can be applied to html element, see: applying 
 [background](#background-color-variants), [border](#border-color-variants), and 
@@ -74,9 +73,9 @@ without `bg-` prefix. They also can be applied to html element, see: applying
 
 ## Material Colors
 
-<ColorPalette palette="material" class="pt-3"></ColorPalette>
+<ColorPalette palette="material" class="py-3"></ColorPalette>
 
-::: tip
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can be applied on some UI components via its property, such as `color` 
 without `bg-` prefix. They also can be applied to html element, see: applying 
 [background](#background-color-variants), [border](#border-color-variants), and 
@@ -88,8 +87,7 @@ without `bg-` prefix. They also can be applied to html element, see: applying
 
 <ColorPalette palette="grays" class="py-3"></ColorPalette>
 
-
-::: tip
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These grey color variants can only be applied to html element, see: applying
 [background](#background-color-variants), [border](#border-color-variants), and
 [text](#text-color-variants) color variants above. If wanted to apply
@@ -99,10 +97,9 @@ to an UI component, use its _CSS classname_ on component's `class` property.
 
 ## Full Colors
 
-<ColorPalette palette="fullColor" class="pt-3"></ColorPalette>
+<ColorPalette palette="fullColor" class="py-3"></ColorPalette>
 
-
-::: tip
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can only be applied as the background color of an html element, see: applying
 [background color variants](#background-color-variants) above. If wanted to apply
 to an UI component, use its _CSS classname_ on component's `class` property.
@@ -131,10 +128,9 @@ The base color of the above color variants can also be used to produce an **RGBA
   </div>
 </div>
 ```
-
 :::
 
-::: tip
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These RGBA color variants can only be applied as the background color of an html element, see: applying
 [background color variants](#background-color-variants) above. If wanted to apply
 to an UI component, use its _CSS classname_ on component's `class` property.

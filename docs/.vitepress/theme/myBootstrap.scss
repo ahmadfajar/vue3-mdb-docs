@@ -1,4 +1,5 @@
-// scss-docs-start import-stack
+// Custom build of Bootstrap v5.2.
+
 // Configuration
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
@@ -8,6 +9,8 @@
 
 // Layout & components
 @import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
 @import "./types";
 @import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
@@ -15,7 +18,7 @@
 @import "bootstrap/scss/tables";
 @import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/button-group";
 @import "bootstrap/scss/nav";
@@ -32,4 +35,3 @@
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-// scss-docs-end import-stack

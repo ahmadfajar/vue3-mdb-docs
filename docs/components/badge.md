@@ -13,8 +13,8 @@ adding context to just about any content.
 
 ## Overview
 
-**BsBadge** utilize [Boostrap CSS](https://getbootstrap.com/docs/5.2/components/badge/) 
-classes and can scale to match the size of the immediate parent element by using relative font sizing.
+**BsBadge** uses [Boostrap CSS](https://getbootstrap.com/docs/5.2/components/badge/) classes
+internally and can scale to match the size of the immediate parent element by using relative font sizing.
 
 ::: BlockVue {title="Basic Badge Example"}
 
@@ -83,9 +83,9 @@ can be applied to the `color` property.
 :::
 
 
-## Badge Style
+## Style Variants
 
-### Pill badges
+### Pill
 
 Sets the `type` property of `<bs-badge>` to `pill` to make badges more rounded with 
 a larger border-radius and a slight larger padding.
@@ -105,7 +105,7 @@ a larger border-radius and a slight larger padding.
 ::: 
 
 
-### Label badges {class="pt-3"}
+### Label {class="pt-3"}
 
 Sets the `type` property of `<bs-badge>` to `label` to make badges little larger 
 than normal with a slight larger padding. 
@@ -125,7 +125,7 @@ than normal with a slight larger padding.
 :::
 
 
-### Outline badges {class="pt-3"}
+### Outlined {class="pt-3"}
 
 Define the `outlined` property explicitly to create outline badges. Additionally 
 you can combine with the `type` property to create an outline _Pill badge_ or outline 
