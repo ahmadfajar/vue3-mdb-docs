@@ -35,7 +35,13 @@ export const sidebar = [
       { text: 'Appbar', link: '/components/appbar' },
       { text: 'Avatar', link: '/components/avatar' },
       { text: 'Badge', link: '/components/badge' },
-      { text: 'Button', link: '/components/button' },
+      {
+        text: 'Buttons',
+        items: [
+          { text: 'Button', link: '/components/button' },
+          { text: 'Toggle Button', link: '/components/toggle-button' },
+        ]
+      },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },

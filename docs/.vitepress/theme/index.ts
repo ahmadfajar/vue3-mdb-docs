@@ -8,6 +8,7 @@ import * as _plugins from 'vue-mdbootstrap';
 import 'vue-mdbootstrap/styles';
 import DocBlockExample from '../../../components/DocBlockExample.vue';
 import ColorPalette from '../../../components/ColorPalette.vue';
+import SmallNote from '../../../components/SmallNote.vue';
 import './style.scss';
 
 export default {
@@ -20,7 +21,8 @@ export default {
   enhanceApp({ app, router, siteData }) {
     (app as App)
       .component('DocBlockExample', DocBlockExample)
-      .component('ColorPalette', ColorPalette);
+      .component('ColorPalette', ColorPalette)
+      .component('SmallNote', SmallNote);
     
     for (const key of Object.keys(_plugins)) {
       if (key.startsWith('Bs') && key.endsWith('Plugin')) {

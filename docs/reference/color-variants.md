@@ -64,10 +64,10 @@ Text color can be applied to any html element by using the CSS classname `text-{
 <ColorPalette palette="bootstrap" class="py-3"></ColorPalette>
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
-These color variants can be applied on some UI components via its property, such as `color` 
-without `bg-` prefix. They also can be applied to html element, see: applying 
-[background](#background-color-variants), [border](#border-color-variants), and 
-[text](#text-color-variants) color variants above.
+These color variants except for `white` and `black` color variants can be applied 
+on some UI components via its property, such as `color` without `bg-` prefix. They also 
+can be applied to html element, see: applying [background](#background-color-variants), 
+[border](#border-color-variants), and [text](#text-color-variants) color variants above. 
 :::
 
 

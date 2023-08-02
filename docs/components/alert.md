@@ -290,6 +290,24 @@ function closeAlert() {
 :::
 
 
+## CSS Variables
+
+*Available since Vue MDBootstrap `v2.0.0`*
+
+```css
+--bs-alert-bg: #{$alert-bg-color};
+--bs-alert-border-color: #{$alert-border-color};
+--bs-alert-border: 1px solid var(--bs-alert-border-color);
+--bs-alert-border-radius: 0.375rem;
+--bs-alert-color: #{$alert-color};
+--bs-alert-hr-color: #{$hr-border-color};
+--bs-alert-link-color: #{$link-color};
+--bs-alert-margin-bottom: 1rem;
+--bs-alert-padding-x: 1rem;
+--bs-alert-padding-y: 0.7rem;
+
+```
+
 ## API Reference
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">

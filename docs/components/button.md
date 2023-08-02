@@ -155,7 +155,7 @@ This style is the default button's style and its appearance is like Material Des
 ```
 :::
 
-### Filled Tonal {class="pt-3"}
+### Filled Tonal {class="pt-lg-3"}
 
 You can create button with filled tonal style like Material Design 3 - 
 [Filled Tonal Button](https://m3.material.io/components/buttons/specs#158f0a18-67fb-4ac4-9d22-cc4d1adc4579) 
@@ -208,7 +208,7 @@ by defining the `tonal` property explicitly.
 ```
 :::
 
-### Elevated {class="pt-3"}
+### Elevated {class="pt-lg-3"}
 
 You can create button with elevated style like Material Design 3 - 
 [Elevated Button](https://m3.material.io/components/buttons/specs#0eea2a85-b4d7-4c74-b08e-98410b9412c7) 
@@ -261,7 +261,7 @@ by defining the `raised` property explicitly.
 ```
 :::
 
-### Outlined {class="pt-3"}
+### Outlined {class="pt-lg-3"}
 
 You can create button with outlined style like Material Design 3 - 
 [Outlined Button](https://m3.material.io/components/buttons/specs#de72d8b1-ba16-4cd7-989e-e2ad3293cf63) 
@@ -314,7 +314,7 @@ by defining the `outlined` property explicitly.
 ```
 :::
 
-### Flat {class="pt-3"}
+### Flat {class="pt-lg-3"}
 
 You can create button with flat style like Material Design 3 - 
 [Text Button](https://m3.material.io/components/buttons/specs#899b9107-0127-4a01-8f4c-87f19323a1b4) 
@@ -367,7 +367,7 @@ by defining the `flat` property explicitly.
 ```
 :::
 
-### Rounded {class="pt-3"}
+### Filled Rounded {class="pt-lg-3"}
 
 You can create button with rounded style by defining the `rounded` property explicitly 
 and sets the `pill` property to `false`.
@@ -417,7 +417,7 @@ and sets the `pill` property to `false`.
 ```
 :::
 
-### Rectangle {class="pt-3"}
+### Filled Rectangle {class="pt-lg-3"}
 
 You can create button with rectangle style by setting the `pill` property to `false`.
 
@@ -466,7 +466,7 @@ You can create button with rectangle style by setting the `pill` property to `fa
 ```
 :::
 
-### Combination {class="pt-3"}
+### Combination {class="pt-lg-3"}
 
 Other than those styles above, some styles can be combine to create another 
 effect. Example below will shows you how to do it.
@@ -554,7 +554,7 @@ As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=g
 is removed from the component's bundle, and replaced with dynamic loading Google Material Icons.
 :::
 
-### Rotating an icon
+### Rotating an icon {class="pt-lg-3"}
 
 Additionally, you can also rotate the icon to some extent. Use `icon-flip` property or `icon-rotation` 
 property to rotate the icon, but do not use both property together.
@@ -599,7 +599,7 @@ property to rotate the icon, but do not use both property together.
 ```
 :::
 
-### Animating an icon
+### Animating an icon {class="pt-lg-3"}
 
 `<bs-button>` also has built-in animations for icon, which are: `spin` and `pulse`.
 
@@ -689,6 +689,34 @@ property to rotate the icon, but do not use both property together.
     </div>
     <div class="col">
       <bs-button color="default-color" size="lg" flat>Large button</bs-button>
+    </div>
+  </div>
+  <div class="row row-cols-auto g-3 pt-3 justify-content-center">
+    <div class="col d-flex align-items-center">
+      <bs-button size="xs" icon="shopping_cart" icon-size="16" flat>Extra Small</bs-button>
+    </div>
+    <div class="col d-flex align-items-center">
+      <bs-button color="primary" icon="shopping_cart" icon-size="20" size="sm" flat>Small button</bs-button>
+    </div>
+    <div class="col d-flex align-items-center">
+      <bs-button color="success" icon="shopping_cart" flat>Standard button</bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="default-color" icon="shopping_cart" icon-size="32" size="lg" flat>Large button</bs-button>
+    </div>
+  </div>
+  <div class="row row-cols-auto g-3 pt-3 justify-content-center">
+    <div class="col d-flex align-items-center">
+      <bs-button size="xs" icon="shopping_cart" icon-size="16" icon-position="right" flat>Extra Small</bs-button>
+    </div>
+    <div class="col d-flex align-items-center">
+      <bs-button color="primary" icon="shopping_cart" icon-size="20" icon-position="right" size="sm" flat>Small button</bs-button>
+    </div>
+    <div class="col d-flex align-items-center">
+      <bs-button color="success" icon="shopping_cart" icon-position="right" flat>Standard button</bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="default-color" icon="shopping_cart" icon-size="32" icon-position="right" size="lg" flat>Large button</bs-button>
     </div>
   </div>
 </div>
@@ -1016,7 +1044,6 @@ on the screen using css helper or make your own css to adjust its position.
 `<bs-button>` can be grouped as series of buttons on a single line called _button group_ 
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button-group/).
 
-
 *Updated since Vue MDBootstrap `v2.0.4`*
 
 ::: BlockVue {title="Button Group Example"}
@@ -1067,7 +1094,41 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
 ```
 :::
 
-### Button toolbar
+### With dropdown menus {class="pt-lg-3"}
+
+You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
+
+*Available since Vue MDBootstrap `v2.0.4`*
+
+::: BlockVue {title="Button Group with dropdown menus" clientOnly="true"}
+
+```vue
+<template>
+  <div class="my-demo-wrapper bg-white w-100 rounded-4 p-3">
+    <div class="d-flex justify-content-center">
+      <div class="btn-group" role="group" aria-label="Nested with dropdown menus">
+        <bs-button color="primary">1</bs-button>
+        <bs-button color="primary">2</bs-button>
+        <bs-dropdown-menu placement="bottom-right">
+          <bs-button color="primary" dropdown-toggle>Dropdown</bs-button>
+          <template #content>
+            <bs-list-view>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">First Action</a>
+                <a class="dropdown-item" href="#">Second Action</a>
+                <a class="dropdown-item" href="#">Third Action</a>
+              </div>
+            </bs-list-view>
+          </template>
+        </bs-dropdown-menu>
+      </div>
+    </div>
+  </div>
+</template>
+```
+:::
+
+### Button toolbar {class="pt-lg-3"}
 
 `<bs-button>` can also be combined as sets of button groups called **button toolbar**
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button-group/#button-toolbar).
@@ -1154,19 +1215,19 @@ The following are a collection of examples that demonstrate more advanced use of
 ```
 :::
 
-### Join video conference
+### Join video conference {class="pt-lg-3"}
 
 ::: BlockVue {title="Button Advanced Example"}
 
 ```html
 <div class="my-demo-wrapper">
-  <bs-app-container class="rounded" style="max-width: 400px">
+  <bs-app-container class="rounded-3" style="max-width: 400px">
     <bs-appbar class="bg-default-color">
       <bs-button color="light-grey" icon="arrow_back" mode="icon" flat />
       <bs-appbar-title class="text-white" title="Join Conference" />
     </bs-appbar>
     <bs-container>
-      <bs-card class="rounded-bottom" rounded-off>
+      <bs-card class="rounded-top-0">
         <div class="p-2 position-relative">
           <img src="/img/conference-room.jpg" alt="" class="rounded-3" />
           <div class="position-absolute bottom-0 start-0 end-0 m-3">
