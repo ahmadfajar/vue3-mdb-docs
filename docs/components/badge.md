@@ -132,7 +132,7 @@ you can combine with the `type` property to create an outline _Pill badge_ or ou
 _Label badge_. Currently outline badges only support [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) 
 variant and [Material Color](/reference/color-variants#material-colors) variant.
 
-*Available since Vue MDBootstrap `v2.0.4`*
+<SmallNote color="teal">Added since v2.0.4</SmallNote>
 
 ::: BlockVue {title="Outline Badges Example"}
 
@@ -186,7 +186,7 @@ Quickly provide actionable badges with hover and focus states by specifying the
 Use bootstrap css utilities to modify a badge and position it in the corner of a 
 link or button. Or even create rounded badge without a count for a more generic indicator.
 
-*Available since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Badge Positioning Example"}
 

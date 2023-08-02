@@ -51,8 +51,7 @@ const showLoader = ref(false);
 **BsMaskLoader** comes with **four** type variants, which are: `linear` (*default*), 
 `linear-alt`, `spinner`, and `grow`. This variant can be sets via `variant` property.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
-
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Mask Loader Variants Example" file="./docs/components/scripts/mask-loader-2.js"}
 

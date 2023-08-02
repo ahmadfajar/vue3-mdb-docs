@@ -393,16 +393,16 @@ The Input item has properties as described below:
 |----------|-----------|-------------|
 | value <Badge type="danger">required</Badge> | `string`/`number`/`boolean` | The item value. |
 | label <Badge type="danger">required</Badge> | `string` | The item label. |
-| id       | `string`   | Item `<input>` element ID. |
-| name     | `string`   | Item `<input>` element name. It is used when `multiple` is `true`. |
-| disabled | `boolean`  | Item `<input>` element state. |
-| readonly | `boolean`  | Item `<input>` element state. |
-| icon     | `string`   | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon      | `string`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
 | iconFlip  | `string`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `boolean` | Apply ***pulse*** animation to the icon. |
 | iconSize  | `number`  | Render the icon at predefined size in pixel. |
 | iconSpin  | `boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
+| id       | `string`   | Item `<input>` element ID. |
+| name     | `string`   | Item `<input>` element name. It is used when `multiple` is `true`. |
+| disabled | `boolean`  | Item `<input>` element state. |
+| readonly | `boolean`  | Item `<input>` element state. |
 
 </div>
 </div>

@@ -110,7 +110,7 @@ based on Google **Material Design 3** specifications.
 This style is the default button's style and its appearance is like Material Design 3 - 
 [Filled Button](https://m3.material.io/components/buttons/specs#0b1b7bd2-3de8-431a-afa1-d692e2e18b0d). 
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Filled Buttons Example"}
 
@@ -161,7 +161,7 @@ You can create button with filled tonal style like Material Design 3 -
 [Filled Tonal Button](https://m3.material.io/components/buttons/specs#158f0a18-67fb-4ac4-9d22-cc4d1adc4579) 
 by defining the `tonal` property explicitly.
 
-*Available since Vue MDBootstrap `v2.0.4`*
+<SmallNote color="teal">Added since v2.0.4</SmallNote>
 
 ::: BlockVue {title="Filled Tonal Buttons Example"}
 
@@ -214,7 +214,7 @@ You can create button with elevated style like Material Design 3 -
 [Elevated Button](https://m3.material.io/components/buttons/specs#0eea2a85-b4d7-4c74-b08e-98410b9412c7) 
 by defining the `raised` property explicitly.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Elevated Buttons Example"}
 
@@ -267,7 +267,7 @@ You can create button with outlined style like Material Design 3 -
 [Outlined Button](https://m3.material.io/components/buttons/specs#de72d8b1-ba16-4cd7-989e-e2ad3293cf63) 
 by defining the `outlined` property explicitly.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Outlined Buttons Example"}
 
@@ -320,7 +320,7 @@ You can create button with flat style like Material Design 3 -
 [Text Button](https://m3.material.io/components/buttons/specs#899b9107-0127-4a01-8f4c-87f19323a1b4) 
 by defining the `flat` property explicitly.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Flat Buttons Example"}
 
@@ -520,7 +520,7 @@ effect. Example below will shows you how to do it.
 see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons)
 for details.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Icon Inside Button Example"}
 
@@ -862,7 +862,7 @@ as FAB's button. The only downside is, `<bs-button>` doesn't have the ability to
 automatically position itself on the screen. You have to manually adjust its position 
 on the screen using css helper or make your own css to adjust its position.
 
-*Available since Vue MDBootstrap `v2.0.4`*
+<SmallNote color="teal">Added since v2.0.4</SmallNote>
 
 ::: BlockVue {title="FAB Example"}
 
@@ -1044,7 +1044,7 @@ on the screen using css helper or make your own css to adjust its position.
 `<bs-button>` can be grouped as series of buttons on a single line called _button group_ 
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button-group/).
 
-*Updated since Vue MDBootstrap `v2.0.4`*
+<SmallNote color="teal">Updated since v2.0.4</SmallNote>
 
 ::: BlockVue {title="Button Group Example"}
 
@@ -1098,7 +1098,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
 
 You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
 
-*Available since Vue MDBootstrap `v2.0.4`*
+<SmallNote color="teal">Added since v2.0.4</SmallNote>
 
 ::: BlockVue {title="Button Group with dropdown menus" clientOnly="true"}
 
@@ -1284,7 +1284,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ## CSS Variables
 
-*Available since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```css
 --bs-btn-font-family: #{$body-font-family};

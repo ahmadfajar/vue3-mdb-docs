@@ -78,7 +78,7 @@ and *Square* (default). Example below will shows you how to enable *Circle* and 
 `<bs-avatar>` can also have border. Use `border` property and `border-color` property 
 to adjust border thickness and its color. 
 
-*Available since Vue MDBootstrap `v2.0.3`*
+<SmallNote color="teal">Added since v2.0.3</SmallNote>
 
 ::: BlockVue {title="Styling Avatar Example"}
 
@@ -138,7 +138,7 @@ the `size` property explicitly. Numbers will get converted to pixel. Any other v
 the units (such as `px`, `em`, or `rem`). You can also create an avatar with different height and 
 width by explicitly define the `height` and `width` property.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 
 ::: BlockVue {title="Sizing Avatar Example"}

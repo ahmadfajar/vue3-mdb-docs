@@ -91,7 +91,7 @@ Use `variant` property to create contextual alert with predefined icon. Addition
 you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`. See 
 [Google Material Icon's](https://fonts.google.com/icons?icon.set=Material+Icons) for details.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Contextual Alert Example"}
 
@@ -128,7 +128,7 @@ Custom icon can be enabled by using the `icon` property. Use any valid Google Ma
 icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons)
 for details. The icon is loaded dynamically from Google Fonts site.
 
-*Updated since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Updated since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Alert's Custom Icon Example"}
 
@@ -292,7 +292,7 @@ function closeAlert() {
 
 ## CSS Variables
 
-*Available since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```css
 --bs-alert-bg: #{$alert-bg-color};

@@ -299,6 +299,8 @@ const expandTransition = ref(false);
 
 ## Rotate Clock Wise
 
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
+
 ::: BlockVue {title="Rotate Clock Wise Transition Example" file="./docs/components/scripts/rotate-clock-animation.js"}
 
 ```vue
@@ -328,10 +330,10 @@ const rotateClockWise = ref(false);
 ```
 :::
 
-*Available since Vue MDBootstrap `v2.0.0`*
-
 
 ## Rotate Clock Reverse
+
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Rotate Clock Reverse Transition Example" file="./docs/components/scripts/rotate-reverse-animation.js"}
 
@@ -362,10 +364,10 @@ const rotateClockReverse = ref(false);
 ```
 :::
 
-*Available since Vue MDBootstrap `v2.0.0`*
-
 
 ## Roll In-Out
+
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Roll In-Out Transition Example" file="./docs/components/scripts/roll-in-out-animation.js"}
 ```vue
@@ -394,8 +396,6 @@ const rollInOut = ref(false);
 </script>
 ```
 :::
-
-*Available since Vue MDBootstrap `v2.0.0`*
 
 
 <script setup lang="ts">
