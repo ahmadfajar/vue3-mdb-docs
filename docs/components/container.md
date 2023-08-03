@@ -102,7 +102,7 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContainer {#bs-container class="pt-3"}
+### BsContainer {#bs-container class="pt-lg-3"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props">
@@ -135,7 +135,7 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContent {#bs-content class="pt-3"}
+### BsContent {#bs-content class="pt-lg-3"}
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props">

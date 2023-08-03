@@ -208,7 +208,7 @@ by defining the `tonal` property explicitly.
 ```
 :::
 
-### Elevated {class="pt-lg-3"}
+### Filled Elevated {class="pt-lg-3"}
 
 You can create button with elevated style like Material Design 3 - 
 [Elevated Button](https://m3.material.io/components/buttons/specs#0eea2a85-b4d7-4c74-b08e-98410b9412c7) 
@@ -253,6 +253,105 @@ by defining the `raised` property explicitly.
     </div>
     <div class="col">
       <bs-button color="secondary-color" raised>
+        Secondary Color
+      </bs-button>
+    </div>
+  </div>
+</div>
+```
+:::
+
+### Filled Rounded {class="pt-lg-3"}
+
+You can create button with rounded style by defining the `rounded` property explicitly 
+and sets the `pill` property to `false`.
+
+::: BlockVue {title="Rounded Buttons Example"}
+
+```html
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="row row-cols-auto g-3 justify-content-center">
+    <div class="col">
+      <bs-button :pill="false" rounded>
+        Default
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="primary" :pill="false" rounded>
+        Primary
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="success" :pill="false" rounded>
+        Success
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="danger" :pill="false" rounded>
+        Danger
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="warning" :pill="false" rounded>
+        Warning
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="default-color" :pill="false" rounded>
+        Default Color
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="secondary-color" :pill="false" rounded>
+        Secondary Color
+      </bs-button>
+    </div>
+  </div>
+</div>
+```
+:::
+
+### Filled Rectangle {class="pt-lg-3"}
+
+You can create button with rectangle style by setting the `pill` property to `false`.
+
+::: BlockVue {title="Rectangle Buttons Example"}
+
+```html
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="row row-cols-auto g-3 justify-content-center">
+    <div class="col">
+      <bs-button :pill="false">
+        Default
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="primary" :pill="false">
+        Primary
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="success" :pill="false">
+        Success
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="danger" :pill="false">
+        Danger
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="warning" :pill="false">
+        Warning
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="default-color" :pill="false">
+        Default Color
+      </bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="secondary-color" :pill="false">
         Secondary Color
       </bs-button>
     </div>
@@ -359,105 +458,6 @@ by defining the `flat` property explicitly.
     </div>
     <div class="col">
       <bs-button color="secondary-color" flat>
-        Secondary Color
-      </bs-button>
-    </div>
-  </div>
-</div>
-```
-:::
-
-### Filled Rounded {class="pt-lg-3"}
-
-You can create button with rounded style by defining the `rounded` property explicitly 
-and sets the `pill` property to `false`.
-
-::: BlockVue {title="Rounded Buttons Example"}
-
-```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
-  <div class="row row-cols-auto g-3 justify-content-center">
-    <div class="col">
-      <bs-button :pill="false" rounded>
-        Default
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="primary" :pill="false" rounded>
-        Primary
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="success" :pill="false" rounded>
-        Success
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="danger" :pill="false" rounded>
-        Danger
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="warning" :pill="false" rounded>
-        Warning
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="default-color" :pill="false" rounded>
-        Default Color
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="secondary-color" :pill="false" rounded>
-        Secondary Color
-      </bs-button>
-    </div>
-  </div>
-</div>
-```
-:::
-
-### Filled Rectangle {class="pt-lg-3"}
-
-You can create button with rectangle style by setting the `pill` property to `false`.
-
-::: BlockVue {title="Rectangle Buttons Example"}
-
-```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
-  <div class="row row-cols-auto g-3 justify-content-center">
-    <div class="col">
-      <bs-button :pill="false">
-        Default
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="primary" :pill="false">
-        Primary
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="success" :pill="false">
-        Success
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="danger" :pill="false">
-        Danger
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="warning" :pill="false">
-        Warning
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="default-color" :pill="false">
-        Default Color
-      </bs-button>
-    </div>
-    <div class="col">
-      <bs-button color="secondary-color" :pill="false">
         Secondary Color
       </bs-button>
     </div>

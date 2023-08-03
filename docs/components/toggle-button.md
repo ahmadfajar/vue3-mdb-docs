@@ -250,11 +250,11 @@ and change the icon dynamically like segmented buttons behavior.
       </div>
     </div>
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Elevated</label>
+      <label class="col-md-3 col-form-label">Filled Elevated</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather5" :items="weathers" color="deep-purple" raised>
+        <bs-toggle-button v-model="selectedWeather4" :items="weathers" color="deep-purple" raised>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon" />
           </template>
         </bs-toggle-button>
       </div>
@@ -262,9 +262,9 @@ and change the icon dynamically like segmented buttons behavior.
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Filled Tonal</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather4" :items="weathers" color="deep-purple" tonal>
+        <bs-toggle-button v-model="selectedWeather5" :items="weathers" color="deep-purple" tonal>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon" />
           </template>
         </bs-toggle-button>
       </div>
@@ -324,6 +324,125 @@ const weathers: TInputOptionItem[] = [
 </script>
 ```
 :::
+
+
+## Usage Example
+
+The following is an example that demonstrate more advanced use of the `<bs-toggle-button>`.
+
+::: BlockVue {title="Toggle Buttons Advanced Example" file="./docs/components/scripts/toggle-button-5.js"}
+
+```vue
+<template>
+  <div class="my-demo-wrapper">
+    <bs-app-container class="rounded-3" style="max-width: 450px">
+      <bs-appbar class="bg-default-color">
+        <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
+        <bs-appbar-title class="text-white" title="Your Downloads"></bs-appbar-title>
+        <bs-spacer></bs-spacer>
+        <bs-button color="light-grey" mode="icon" icon="search" flat></bs-button>
+      </bs-appbar>
+      <bs-container>
+        <bs-card class="rounded-top-0">
+          <bs-card-body class="d-flex flex-column pb-1">
+            <bs-toggle-button
+              v-model="selectedCategory"
+              :items="categories"
+              color="deep-purple"
+              outlined
+            ></bs-toggle-button>
+            <bs-list-view 
+              class="mt-3" 
+              style="--md-tile-padding-x: .5rem"
+            > 
+              <bs-list-tile 
+                v-for="item in albums" 
+                :key="item.title" 
+                class="bg-purple lighten-5 rounded-3 mb-2 my-album-tile"
+              >
+                <bs-list-tile-leading :img-src="item.cover" rounded></bs-list-tile-leading>
+                <bs-list-tile-content>
+                  <bs-list-tile-title>
+                    {{ item.title }}
+                  </bs-list-tile-title>
+                  <bs-list-tile-subtitle>
+                    {{ item.size }}
+                  </bs-list-tile-subtitle>
+                </bs-list-tile-content>
+                <bs-list-tile-action center>
+                  <bs-button color="secondary" icon="play_circle" mode="icon" flat />
+                </bs-list-tile-action>
+              </bs-list-tile>
+            </bs-list-view>
+          </bs-card-body>
+        </bs-card>
+      </bs-container>
+    </bs-app-container>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+import type { TInputOptionItem } from "vue-mdbootstrap";
+
+const selectedCategory = ref("Songs");
+const categories: TInputOptionItem[] = [
+  {
+    value: "Songs",
+    label: "Songs",
+  },
+  {
+    value: "Albums",
+    label: "Albums",
+  },
+  {
+    value: "Podcasts",
+    label: "Podcasts",
+  },
+];
+const albums = [
+  {
+    cover: "https://i.pinimg.com/736x/1b/fb/1b/1bfb1b68d38b4f6833188c7bc4d99d4d.jpg",
+    title: "21st Century Strangers",
+    size: "68 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/70/59/f9/7059f9d0b79c34d77b1448a25c542171.jpg",
+    title: "New Name",
+    size: "72 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/33/6d/ed/336ded540abb8c797125bfcb6491f5fd.jpg",
+    title: "Not Me",
+    size: "58 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/8b/4f/7c/8b4f7cba6c4e6852857ae311b2aa01e3.jpg",
+    title: "Mutter",
+    size: "68 MB",
+  },
+  {
+    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/fe529a64193929.5aca8500ba9ab.jpg",
+    title: "True Love",
+    size: "68 MB",
+  },
+];
+</script>
+
+<style>
+.my-demo-wrapper {
+  padding: 24px;
+}
+.md-list-tile.my-album-tile {
+  --md-tile-subtitle-color: #6c757d; 
+  --md-tile-subtitle-font-size: .8rem; 
+  --md-tile-title-font-weight: 500;
+}
+</style>
+
+```
+:::
+
 
 ## CSS Variables
 
@@ -407,6 +526,13 @@ The Input item has properties as described below:
 </div>
 </div>
 
+<style>
+.md-list-tile.my-album-tile {
+  --md-tile-subtitle-color: #6c757d; 
+  --md-tile-subtitle-font-size: .8rem; 
+  --md-tile-title-font-weight: 500;
+}
+</style>
 <script lang="ts" setup>
 import { ref } from 'vue';
 
@@ -421,6 +547,7 @@ const selectedWeather4 = ref();
 const selectedWeather5 = ref();
 const selectedWeather6 = ref();
 const selectedWeather7 = ref();
+const selectedCategory = ref("Songs");
 const tabs1active = ref(0);
 
 const drinkTypes = [
@@ -480,6 +607,47 @@ const weathers: TInputOptionItem[] = [
     value: "heavy-rain",
     label: "Heavy Rain",
     icon: "thunderstorm",
+  },
+];
+const categories: TInputOptionItem[] = [
+  {
+    value: "Songs",
+    label: "Songs",
+  },
+  {
+    value: "Albums",
+    label: "Albums",
+  },
+  {
+    value: "Podcasts",
+    label: "Podcasts",
+  },
+];
+const albums = [
+  {
+    cover: "https://i.pinimg.com/736x/1b/fb/1b/1bfb1b68d38b4f6833188c7bc4d99d4d.jpg",
+    title: "21st Century Strangers",
+    size: "68 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/70/59/f9/7059f9d0b79c34d77b1448a25c542171.jpg",
+    title: "New Name",
+    size: "72 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/33/6d/ed/336ded540abb8c797125bfcb6491f5fd.jpg",
+    title: "Not Me",
+    size: "58 MB",
+  },
+  {
+    cover: "https://i.pinimg.com/originals/8b/4f/7c/8b4f7cba6c4e6852857ae311b2aa01e3.jpg",
+    title: "Mutter",
+    size: "68 MB",
+  },
+  {
+    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/fe529a64193929.5aca8500ba9ab.jpg",
+    title: "True Love",
+    size: "68 MB",
   },
 ];
 </script>

@@ -90,7 +90,7 @@ function toggleSideDrawer1(value: boolean) {
 **BsSideDrawer** support 2 position location: ***left*** and ***right***. Use 
 `position` property with value `left` or `right` to change the position location. 
 
-*Available since Vue MDBootstrap `v2.0.0`*
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Side Drawer Location Example" clientOnly="true" file="./docs/components/scripts/side-drawer-2.js"}
 
