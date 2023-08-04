@@ -18,6 +18,7 @@
 
 .doc-example-container {
   > .doc-block-content {
+    line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     
     h1, .h1 {
@@ -53,12 +54,3 @@
     }
   }
 }
-
-// Type display classes
-// @each $display, $font-size in $display-font-sizes {
-//   .display-#{$display} {
-//     @include font-size($font-size);
-//     font-weight: $display-font-weight;
-//     line-height: $display-line-height;
-//   }
-// }

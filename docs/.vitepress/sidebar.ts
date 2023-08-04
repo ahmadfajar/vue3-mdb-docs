@@ -42,6 +42,7 @@ export const sidebar = [
           { text: 'Toggle Button', link: '/components/toggle-button' },
         ]
       },
+      { text: 'Card', link: '/components/card' },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },
