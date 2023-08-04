@@ -20,7 +20,7 @@ then you need these components so that [BsAppbar](/components/appbar) and
 
 ```vue
 <template>
-  <bs-app-container class="bg-grey-400" style="height: 300px">
+  <bs-app-container class="bg-grey-400 rounded" style="height: 300px">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"

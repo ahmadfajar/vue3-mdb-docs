@@ -17,6 +17,8 @@ a handful of color variations, sizes, states, and more.
 classes internally, and made some modifications to meet the 
 [Google Material Design 3](https://m3.material.io/components/all-buttons) specifications.
 
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+
 ::: BlockVue {title="Basic Buttons Example"}
 
 ```html
@@ -50,12 +52,12 @@ applied to the `color` property.
 :::
 
 
-## Button State
+## States
 
-`<bs-button>` component has four state: `default`, `active`, `disabled` and `readonly`.
+`<bs-button>` component has states: `active`, `disabled` and `readonly`.
 Use their respective property to enable the state.
 
-::: BlockVue {title="Button's State Example"}
+::: BlockVue {title="Button States Example"}
 
 ```html
 <div class="my-demo-wrapper row row-cols-auto g-3 justify-content-center">
@@ -110,12 +112,12 @@ based on Google **Material Design 3** specifications.
 This style is the default button's style and its appearance is like Material Design 3 - 
 [Filled Button](https://m3.material.io/components/buttons/specs#0b1b7bd2-3de8-431a-afa1-d692e2e18b0d). 
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Filled Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button>Default</bs-button>
@@ -166,7 +168,7 @@ by defining the `tonal` property explicitly.
 ::: BlockVue {title="Filled Tonal Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button tonal>
@@ -214,12 +216,12 @@ You can create button with elevated style like Material Design 3 -
 [Elevated Button](https://m3.material.io/components/buttons/specs#0eea2a85-b4d7-4c74-b08e-98410b9412c7) 
 by defining the `raised` property explicitly.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Elevated Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button raised>
@@ -269,7 +271,7 @@ and sets the `pill` property to `false`.
 ::: BlockVue {title="Rounded Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button :pill="false" rounded>
@@ -318,7 +320,7 @@ You can create button with rectangle style by setting the `pill` property to `fa
 ::: BlockVue {title="Rectangle Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button :pill="false">
@@ -366,12 +368,12 @@ You can create button with outlined style like Material Design 3 -
 [Outlined Button](https://m3.material.io/components/buttons/specs#de72d8b1-ba16-4cd7-989e-e2ad3293cf63) 
 by defining the `outlined` property explicitly.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Outlined Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button outlined>
@@ -419,12 +421,12 @@ You can create button with flat style like Material Design 3 -
 [Text Button](https://m3.material.io/components/buttons/specs#899b9107-0127-4a01-8f4c-87f19323a1b4) 
 by defining the `flat` property explicitly.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Flat Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col">
       <bs-button flat>
@@ -474,7 +476,7 @@ effect. Example below will shows you how to do it.
 ::: BlockVue {title="Button Styles Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-1 row-cols-md-auto g-3 justify-content-center">
     <div class="col text-center">
       <bs-button :pill="false" raised rounded>
@@ -516,16 +518,17 @@ effect. Example below will shows you how to do it.
 ## Icon
 
 `<bs-button>` can have an icon inside it. The icon can be positioned on the `left` side 
-(before text) or on the `right` side (after text). Use any valid Google Material icon name, 
-see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons)
-for details.
+(before text) or on the `right` side (after text) using `icon-position` property
+and use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) 
+name for the `icon` property. And to use a custom icon, use the `icon` slot and 
+omit the `icon` property.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Icon Inside Button Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto justify-content-center g-3">
     <div class="col">
       <bs-button 
@@ -538,7 +541,7 @@ for details.
     <div class="col">
       <bs-button 
         color="default-color" 
-        icon="shopping_cart" 
+        icon="shopping_cart_outlined" 
         icon-position="right"
       >
         Icon Right
@@ -551,7 +554,7 @@ for details.
 
 ::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) 
-is removed from the component's bundle, and replaced with dynamic loading Google Material Icons.
+is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
 :::
 
 ### Rotating an icon {class="pt-lg-3"}
@@ -562,7 +565,7 @@ property to rotate the icon, but do not use both property together.
 ::: BlockVue {title="Rotating Button's Icon Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-1 row-cols-sm-auto justify-content-center g-3">
     <div class="col text-center">
       <bs-button color="default-color" icon="shopping_cart" icon-flip="horizontal">
@@ -602,12 +605,13 @@ property to rotate the icon, but do not use both property together.
 ### Animating an icon {class="pt-lg-3"}
 
 `<bs-button>` also has built-in animations for icon, which are: `spin` and `pulse`.
+Example below, demonstrate the built-in icon animation and the use of `icon` slot.
 
 ::: BlockVue {title="Animating Button's Icon Example"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <div class="row row-cols-1 row-cols-md-auto justify-content-center g-3">
       <div class="col text-center">
         <bs-button color="default-color" icon="rotate_right" icon-spin>
@@ -620,7 +624,7 @@ property to rotate the icon, but do not use both property together.
         </bs-button>
       </div>
       <div class="col text-center">
-        <bs-button color="default-color">
+        <bs-button color="default-color" icon-size="20">
           <template #icon>
             <bs-icon-spinner size="20" spin></bs-icon-spinner>
           </template>
@@ -628,7 +632,7 @@ property to rotate the icon, but do not use both property together.
         </bs-button>
       </div>
       <div class="col text-center">
-        <bs-button color="default-color" icon-position="right">
+        <bs-button color="default-color" icon-size="20" icon-position="right">
           <template #icon>
             <bs-icon-spinner size="20" pulse></bs-icon-spinner>
           </template>
@@ -648,7 +652,7 @@ property to rotate the icon, but do not use both property together.
 ::: BlockVue {title="Sizing Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto g-3 justify-content-center">
     <div class="col d-flex align-items-center">
       <bs-button size="xs">Extra Small</bs-button>
@@ -738,7 +742,7 @@ the `mode` property with value `icon`, `<bs-button>` will be rendered as icon bu
 ::: BlockVue {title="Icon Buttons Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto justify-content-center g-3">
     <div class="col d-flex align-items-center">
       <bs-button 
@@ -867,7 +871,7 @@ on the screen using css helper or make your own css to adjust its position.
 ::: BlockVue {title="FAB Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto justify-content-center g-3">
     <div class="col d-flex align-items-center">
       <bs-button 
@@ -945,7 +949,7 @@ on the screen using css helper or make your own css to adjust its position.
 ::: BlockVue {title="Extended FAB Example"}
 
 ```html
-<div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
   <div class="row row-cols-auto justify-content-center g-3">
     <div class="col d-flex align-items-center">
       <bs-button
@@ -1044,12 +1048,12 @@ on the screen using css helper or make your own css to adjust its position.
 `<bs-button>` can be grouped as series of buttons on a single line called _button group_ 
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button-group/).
 
-<SmallNote color="teal">Updated since v2.0.4</SmallNote>
+<SmallNote color="teal">Updated on v2.0.4</SmallNote>
 
 ::: BlockVue {title="Button Group Example"}
 
 ```html
-<div class="my-demo-wrapper bg-white w-100 rounded-4 p-3">
+<div class="my-demo-wrapper bg-white w-100 rounded-3 p-3">
   <div class="d-flex justify-content-center">
     <div class="btn-group" role="group" aria-label="Button group pill">
       <bs-button color="primary">Left</bs-button>
@@ -1104,7 +1108,7 @@ You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-4 p-3">
+  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-3">
     <div class="d-flex justify-content-center">
       <div class="btn-group" role="group" aria-label="Nested with dropdown menus">
         <bs-button color="primary">1</bs-button>
@@ -1136,7 +1140,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
 ::: BlockVue {title="Button Toolbar Example"}
 
 ```html
-<div class="my-demo-wrapper bg-white w-100 rounded-4 p-3">
+<div class="my-demo-wrapper bg-white w-100 rounded-3 p-3">
   <div class="d-flex justify-content-center">
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with bs-button groups">
       <div class="btn-group me-2" role="group" aria-label="First group">
@@ -1284,9 +1288,13 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ## CSS Variables
 
+The component css variables inherited from 
+[Bootstrap buttons](https://getbootstrap.com/docs/5.2/components/buttons/#css) 
+css variables with some modifications and additions.
+
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-```css
+```scss
 --bs-btn-font-family: #{$body-font-family};
 --bs-btn-font-size: 1rem;
 --bs-btn-font-weight: 400;
@@ -1327,9 +1335,9 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ### Icon button
 
-Most css variables are inherit from button css variables.
+Most css variables are inherited from button css variables.
 
-```css
+```scss
 --bs-btn-border-radius: 50%;
 --bs-btn-line-height: 2.25rem;
 --bs-btn-lg-line-height: 3.5rem;

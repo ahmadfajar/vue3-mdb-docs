@@ -6,18 +6,20 @@ outline: [2, 3]
 
 
 ::: lead
-**BsAlert** is a component that provides contextual feedback messages for typical user actions with the
-handful of available and flexible alert messages. With the right use of colors, they add some emotional
-weight of information, ranging from a simple warning to critical system failure or from an operation
-success to neutral information.
+**BsAlert** is a component that provides contextual feedback messages for typical 
+user actions with the handful of available and flexible alert messages. With the 
+right use of colors, they add some emotional weight of information, ranging from 
+a simple warning to critical system failure or from an operation success to 
+neutral information.
 :::
 
 
 ## Overview
 
-By default, `<bs-alert>` is set to primary color. You can use `color` property to change its color and
-add some emotional weight. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be 
-applied to the `color` property.
+By default, `<bs-alert>` is set to primary color. You can use `color` property to 
+change its color and add some emotional weight.
+Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
+can be applied to the `color` property.
 
 
 ::: BlockVue {title="Alert Example"}
@@ -91,7 +93,7 @@ Use `variant` property to create contextual alert with predefined icon. Addition
 you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`. See 
 [Google Material Icon's](https://fonts.google.com/icons?icon.set=Material+Icons) for details.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Contextual Alert Example"}
 
@@ -128,7 +130,7 @@ Custom icon can be enabled by using the `icon` property. Use any valid Google Ma
 icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons)
 for details. The icon is loaded dynamically from Google Fonts site.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Alert's Custom Icon Example"}
 
@@ -217,8 +219,8 @@ add a close `x` button.
 ### Controlling dismissible alert {class="pt-3"}
 
 Use the `v-model` directive to create two-way data bindings on the `model-value` 
-property as in `v-model="showAlert"`. This is useful to control the dismissible, 
-because when user closes the alert, your variable will be updated. 
+property as in `v-model="showAlert"`. This is useful to control the dismissible
+alert, because when the alert is closed, the variable will be updated. 
 
 
 ::: BlockVue {title="Controlling Dismissible Alert Example" clientOnly="true" file="./docs/components/scripts/alert.js"}
@@ -292,9 +294,13 @@ function closeAlert() {
 
 ## CSS Variables
 
+The component css variables inherited from 
+[Bootstrap alerts](https://getbootstrap.com/docs/5.2/components/alerts/#css) 
+css variables with some modifications.
+
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-```css
+```scss
 --bs-alert-bg: #{$alert-bg-color};
 --bs-alert-border-color: #{$alert-border-color};
 --bs-alert-border: 1px solid var(--bs-alert-border-color);
@@ -325,7 +331,7 @@ function closeAlert() {
 | icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
-| icon-variant  | `String`  | `'filled'` | Use predefined icon style. Valid values are: `outlined`, `filled`, `round`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-variant  | `String`  | `'filled'` | Use predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
 | model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |

@@ -138,7 +138,7 @@ the `size` property explicitly. Numbers will get converted to pixel. Any other v
 the units (such as `px`, `em`, or `rem`). You can also create an avatar with different height and 
 width by explicitly define the `height` and `width` property.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 
 ::: BlockVue {title="Sizing Avatar Example"}

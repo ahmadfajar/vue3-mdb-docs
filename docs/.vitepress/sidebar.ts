@@ -43,6 +43,12 @@ export const sidebar = [
         ]
       },
       { text: 'Card', link: '/components/card' },
+      {
+        text: 'Chips',
+        items: [
+          { text: 'Chip', link: '/components/chip' },
+        ]
+      },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },

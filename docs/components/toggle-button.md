@@ -25,13 +25,13 @@ can add attributes like `readonly`, or `disabled` and it will react to them to g
 best experience. You can also use `v-model` directive to create two-way data bindings 
 on the `model-value` property. This is useful to control or maintain the `model-value` property.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Toggle Buttons Example" file="./docs/components/scripts/toggle-button-1.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <h5 class="mb-4">What are you drinking?</h5>
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Normal state</label>
@@ -98,7 +98,7 @@ With the help of slot `icon` you can add dynamic checked icon.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <div class="row">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
@@ -145,7 +145,7 @@ const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
@@ -211,13 +211,13 @@ based on Google **Material Design 3** specifications. Example below show various
 origin style variants and demonstrate how to put an icon inside the `<bs-toggle-button>`
 and change the icon dynamically like segmented buttons behavior.
 
-<SmallNote color="teal">Updated since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Toggle Buttons Style Variants" file="./docs/components/scripts/toggle-button-4.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-4">
+  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Filled</label>
@@ -350,7 +350,11 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
               :items="categories"
               color="deep-purple"
               outlined
-            ></bs-toggle-button>
+            >
+            <template #icon="item">
+              <bs-icon-svg v-if="item.value === selectedCategory" icon="check" />
+            </template>
+            </bs-toggle-button>
             <bs-list-view 
               class="mt-3" 
               style="--md-tile-padding-x: .5rem"
@@ -446,7 +450,7 @@ const albums = [
 
 ## CSS Variables
 
-The component css variables are inherit from [BsButton](/components/button#css-variables) css variables.
+The component css variables inherited from [BsButton](/components/button#css-variables) css variables.
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 

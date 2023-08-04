@@ -440,12 +440,12 @@ to the cards.
 
 ## CSS Variables
 
-The component css variables are inherit from 
-[Bootstrap](https://getbootstrap.com/docs/5.2/components/card/#css) css variables.
+The component css variables inherited from 
+[Bootstrap cards](https://getbootstrap.com/docs/5.2/components/card/#css) css variables.
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-```css
+```scss
 --bs-card-spacer-y: 1rem;
 --bs-card-spacer-x: 1rem;
 --bs-card-title-spacer-y: 0.5rem;
@@ -466,7 +466,7 @@ The component css variables are inherit from
 
 <p class="pt-2"><SmallNote color="teal">Added since v2.0.4</SmallNote></p>
 
-```css
+```scss
 --bs-card-media-bg: rgba(0, 0, 0, .54);
 --bs-card-media-color: rgba(255, 255, 255, .8);
 --bs-card-media-title-font-size: 1.5rem;
