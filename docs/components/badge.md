@@ -253,7 +253,7 @@ link or button. Or even create rounded badge without a count for a more generic 
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
+| default | The outlet slot used to place the main content. |
 
 </div>
   </BsTab>

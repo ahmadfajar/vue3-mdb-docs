@@ -70,7 +70,7 @@ Example below, shows you basic usage of `<bs-ripple>`.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
+| default | The outlet slot used to place the main content. |
 
 </div>
   </BsTab>

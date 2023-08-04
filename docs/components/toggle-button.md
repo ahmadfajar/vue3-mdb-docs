@@ -493,8 +493,8 @@ The component css variables are inherit from [BsButton](/components/button#css-v
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
-| icon    | (`item: TInputOptionItem`) | The outlet slot used to render custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
-| label   | (`item: TInputOptionItem`) | The outlet slot used to render custom label. <BsBadge color="info">v2.0.1</BsBadge> |
+| icon    | (`item: TInputOptionItem`) | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
+| label   | (`item: TInputOptionItem`) | The outlet slot used to place custom label. <BsBadge color="info">v2.0.1</BsBadge> |
 
 </div>
   </BsTab>

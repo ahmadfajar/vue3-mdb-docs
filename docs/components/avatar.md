@@ -314,7 +314,7 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render custom content. <BsBadge color="info">v2.0.0</BsBadge> |
+| default | The outlet slot used to place custom content. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

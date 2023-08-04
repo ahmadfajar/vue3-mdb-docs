@@ -1386,8 +1386,8 @@ Most css variables are inherit from button css variables.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
-| icon | The outlet slot used to render custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
+| default | The outlet slot used to place the main content. |
+| icon | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
 
 </div>
   </BsTab>

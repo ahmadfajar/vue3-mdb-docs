@@ -349,8 +349,8 @@ function closeAlert() {
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
-| icon    | The outlet slot used to render the custom icon. <BsBadge color="info">v2.0.0</BsBadge> |
+| default | The outlet slot used to place the main content. |
+| icon    | The outlet slot used to place the custom icon. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

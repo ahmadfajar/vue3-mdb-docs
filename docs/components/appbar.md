@@ -98,7 +98,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
+| default | The outlet slot used to place the main content. |
 
 </div>
   </BsTab>
@@ -115,7 +115,7 @@ may contains buttons, menus and others.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the main content. |
+| default | The outlet slot used to place the main content. |
 
 </div>
   </BsTab>
@@ -129,9 +129,9 @@ Lightweight component to put page title on **Appbar**.
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
-| Property    | Type        | Default     | Description |
-|-------------|-------------|-------------|-------------|
-| title  | `String` | | The text to display. |
+| Property  | Type     | Default | Description |
+|-----------|----------|---------|-------------|
+| title     | `String` |         | The text to display. |
 
 </div>
   </BsTab>
@@ -140,7 +140,7 @@ Lightweight component to put page title on **Appbar**.
 
 | Name    | Description  |
 |---------|--------------|
-| default | The outlet slot used to render the custom content. |
+| default | The outlet slot used to place the custom content. |
 
 </div>
   </BsTab>
