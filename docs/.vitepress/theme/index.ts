@@ -1,5 +1,5 @@
-// import 'bootstrap/dist/css/bootstrap.css';
-import './myBootstrap.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+// import './myBootstrap.scss';
 
 import Theme from 'vitepress/theme';
 // import { h } from 'vue';

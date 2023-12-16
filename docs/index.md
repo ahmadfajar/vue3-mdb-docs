@@ -27,7 +27,7 @@ features:
 ---
 
 <script setup>
-import { onBeforeMount } from 'vue';
+import { onBeforeMount, onUnmounted } from 'vue';
 import { useData } from 'vitepress'
 
 onBeforeMount(() => {
@@ -35,6 +35,9 @@ onBeforeMount(() => {
   site.value.appearance = false;
   isDark.value = true;
   // localStorage.setItem('vitepress-theme-appearance', 'dark');
-  document.documentElement.classList.add('dark');
+  document.documentElement.classList.add('dark', 'vpdoc-home');
+});
+onUnmounted(() => {
+  document.documentElement.classList.remove('vpdoc-home');
 });
 </script>

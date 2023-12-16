@@ -169,6 +169,14 @@ const openStackBlitz = () => {
     justify-content: center;
     padding: 1.5rem;
 
+    .md-side-drawer {
+      .nav {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
     @media (min-width: 590px) {
       border-bottom-left-radius: var(--doc-example-border-radius);
       border-bottom-right-radius: var(--doc-example-border-radius);

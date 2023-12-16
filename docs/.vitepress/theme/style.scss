@@ -440,8 +440,6 @@
   }
 
   .VPFooter {
-    background-color: darken(#1e1134, 4%);
-
     .message,
     .copyright {
       color: var(--doc-custom-text-2);
@@ -474,8 +472,6 @@
  * -------------------------------------------------------------------------- 
  */
 .VPHome {
-  background-color: #1e1134;
-
   .VPButton {
     &.medium {
       border-radius: 25px;
@@ -524,5 +520,18 @@
         position: absolute;
       }
     }
+  }
+}
+
+.vpdoc-home {
+  --vp-c-bg: #1e1134;
+
+  .VPNavBar {
+    --vp-nav-bg-color: #1a102c;
+  }
+
+  .VPFooter {
+    --vp-c-bg: #1a102c;
+    --vp-c-gutter: #08050d;
   }
 }

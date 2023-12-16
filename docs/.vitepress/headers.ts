@@ -16,7 +16,7 @@ export const headMeta: HeadConfig[] = [
       href: '/img/favicon.png',
       type: 'image/png'
     }
-  ]
+  ],
   // [
   //   'link',
   //   {

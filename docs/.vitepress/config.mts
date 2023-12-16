@@ -1,6 +1,6 @@
 import { load } from 'cheerio';
 import container from 'markdown-it-container';
-import Utils from 'markdown-it/lib/common/utils';
+import * as Utils from 'markdown-it/lib/common/utils';
 import type Token from 'markdown-it/lib/token';
 import fs from 'node:fs';
 import { defineConfig } from 'vitepress';

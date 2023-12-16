@@ -47,6 +47,7 @@ export const sidebar = [
         text: 'Chips',
         items: [
           { text: 'Chip', link: '/components/chip' },
+          { text: 'Chip Group', link: '/components/chip-group' },
         ]
       },
       { text: 'Side Drawer', link: '/components/side-drawer' },
