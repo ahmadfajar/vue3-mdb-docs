@@ -81,7 +81,7 @@ function toggleSideDrawer(value: boolean) {
 ### BsAppContainer {#bs-app-container}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -91,7 +91,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -102,10 +102,10 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContainer {#bs-container class="pt-lg-3"}
+### BsContainer {#bs-container class="mt-lg-5"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-container">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -115,7 +115,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Events">
+  <BsTab label="Events" url="#bs-container">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -124,7 +124,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-container">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -135,10 +135,10 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContent {#bs-content class="pt-lg-3"}
+### BsContent {#bs-content class="mt-lg-5"}
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-content">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -148,7 +148,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-content">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

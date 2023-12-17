@@ -771,7 +771,7 @@ function toggleDismissibleChip(value: boolean) {
 ## API Reference
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
@@ -802,7 +802,7 @@ function toggleDismissibleChip(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Events">
+  <BsTab label="Events" url="#api-reference">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -813,7 +813,7 @@ function toggleDismissibleChip(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

@@ -481,7 +481,7 @@ The component css variables inherited from
 ### BsCard {#bs-card}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property       | Type      | Default | Description |
@@ -497,7 +497,7 @@ The component css variables inherited from
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -509,12 +509,12 @@ The component css variables inherited from
 </BsTabs>
 
 
-### BsCardHeader {#bs-card-header class="pt-lg-3"}
+### BsCardHeader {#bs-card-header class="mt-lg-5"}
 
 The component for displaying card header.
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-card-header">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -523,7 +523,7 @@ The component for displaying card header.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-card-header">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -534,12 +534,12 @@ The component for displaying card header.
   </BsTab>
 </BsTabs>
 
-### BsCardFooter {#bs-card-footer class="pt-lg-3"}
+### BsCardFooter {#bs-card-footer class="mt-lg-5"}
 
 The component for displaying card footer.
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-card-footer">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -548,7 +548,7 @@ The component for displaying card footer.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-card-footer">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -559,12 +559,12 @@ The component for displaying card footer.
   </BsTab>
 </BsTabs>
 
-### BsCardMedia {#bs-card-media class="pt-lg-3"}
+### BsCardMedia {#bs-card-media class="mt-lg-5"}
 
 The component for displaying image with description inside a card. 
 
 <BsTabs v-model="tabs4active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-card-media">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type      | Default | Description |
@@ -575,7 +575,7 @@ The component for displaying image with description inside a card.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-card-media">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -586,12 +586,12 @@ The component for displaying image with description inside a card.
   </BsTab>
 </BsTabs>
 
-### BsCardBody {#bs-card-body class="pt-lg-3"}
+### BsCardBody {#bs-card-body class="mt-lg-5"}
 
 The container for card contents.
 
 <BsTabs v-model="tabs5active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-card-body">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -600,7 +600,7 @@ The container for card contents.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-card-body">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -611,12 +611,12 @@ The container for card contents.
   </BsTab>
 </BsTabs>
 
-### BsCardContent {#bs-card-content class="pt-lg-3"}
+### BsCardContent {#bs-card-content class="mt-lg-5"}
 
 The component for displaying text inside a card content. This component helps style consistency of text.
 
 <BsTabs v-model="tabs6active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#bs-card-content">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type     | Default | Description |
@@ -626,7 +626,7 @@ The component for displaying text inside a card content. This component helps st
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#bs-card-content">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

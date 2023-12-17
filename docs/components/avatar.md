@@ -287,7 +287,7 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 ## API Reference
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property      | Type        | Default  | Description |
@@ -309,7 +309,7 @@ use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

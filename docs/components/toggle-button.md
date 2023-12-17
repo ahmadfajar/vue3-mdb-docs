@@ -458,7 +458,7 @@ The component css variables inherited from [BsButton](/components/button#css-var
 ## API Reference
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
@@ -483,16 +483,16 @@ The component css variables inherited from [BsButton](/components/button#css-var
 
 </div>
   </BsTab>
-  <BsTab label="Events">
+  <BsTab label="Events" url="#api-reference">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | (`value: string/number/boolean/array`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | (`value`: `String`/`Number`/`Boolean`/`Array`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments | Description |
@@ -505,7 +505,7 @@ The component css variables inherited from [BsButton](/components/button#css-var
 </BsTabs>
 
 
-### TInputOptionItem {class="pt-lg-3"}
+### TInputOptionItem {class="mt-lg-5"}
 
 The Input item has properties as described below:
 
@@ -514,18 +514,18 @@ The Input item has properties as described below:
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| value <Badge type="danger">required</Badge> | `string`/`number`/`boolean` | The item value. |
-| label <Badge type="danger">required</Badge> | `string` | The item label. |
-| icon      | `string`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| iconFlip  | `string`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
-| iconPulse | `boolean` | Apply ***pulse*** animation to the icon. |
-| iconSize  | `number`  | Render the icon at predefined size in pixel. |
-| iconSpin  | `boolean` | Apply ***spin*** animation to the icon. |
-| iconRotation | `number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| id       | `string`   | Item `<input>` element ID. |
-| name     | `string`   | Item `<input>` element name. It is used when `multiple` is `true`. |
-| disabled | `boolean`  | Item `<input>` element state. |
-| readonly | `boolean`  | Item `<input>` element state. |
+| value <Badge type="danger">required</Badge> | `String`/`Number`/`Boolean` | The item value. |
+| label <Badge type="danger">required</Badge> | `String` | The item label. |
+| icon      | `String`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
+| iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
+| iconSize  | `Number`  | Render the icon at predefined size in pixel. |
+| iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
+| iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
+| id       | `String`   | Html `<input>` element ID. |
+| name     | `String`   | Html `<input>` element name. It is used when `multiple` is `true`. |
+| disabled | `Boolean`  | Html `<input>` element state. |
+| readonly | `Boolean`  | Html `<input>` element state. |
 
 </div>
 </div>

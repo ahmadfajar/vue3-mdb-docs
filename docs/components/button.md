@@ -1358,7 +1358,7 @@ Most css variables are inherited from button css variables.
 ## API Reference
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props">
+  <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
@@ -1389,7 +1389,7 @@ Most css variables are inherited from button css variables.
 
 </div>
   </BsTab>
-  <BsTab label="Slots">
+  <BsTab label="Slots" url="#api-reference">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
