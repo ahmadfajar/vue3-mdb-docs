@@ -16,6 +16,7 @@ export const sidebar = [
       { text: 'Alert', link: '/components/alert' },
       {
         text: 'Animations',
+        collapsed: true,
         items: [
           {
             text: 'Mask Loader',
@@ -37,6 +38,7 @@ export const sidebar = [
       { text: 'Badge', link: '/components/badge' },
       {
         text: 'Buttons',
+        collapsed: true,
         items: [
           { text: 'Button', link: '/components/button' },
           { text: 'Toggle Button', link: '/components/toggle-button' },
@@ -45,6 +47,7 @@ export const sidebar = [
       { text: 'Card', link: '/components/card' },
       {
         text: 'Chips',
+        collapsed: true,
         items: [
           { text: 'Chip', link: '/components/chip' },
           { text: 'Chip Group', link: '/components/chip-group' },

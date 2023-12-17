@@ -12,5 +12,5 @@ next:
 # Reference
 
 ::: lead
-**Table of Contents** in this section.
+**Table of Contents** on this section.
 :::

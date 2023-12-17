@@ -6,6 +6,37 @@ All release notes can be found through [GitHub](https://github.com/ahmadfajar/vu
 and can be viewed below for your convenience.
 :::
 
+## v2.0.4
+
+Released: November 25, 2023
+
+### Features & Improvements
+
+- **BsBadge**: add property `outlined`.
+- **BsButton**: 
+  - Add property `tonal` to enable **Filled Tonal** button style variant.
+  - Improve `background-color`, `border-color`, `color`, `box-shadow` on various button state
+    (like: `hover`, `active`, `focus`, etc) and style variants.
+  - Improve `padding` on text button style variant to meet **Google Material 
+    Design 3 - Text Button** style.
+- **BsMaskLoader**: refactor property `variant` to `type`, and change its valid 
+  values to: `linear`, `linear-alt`, `spinner`, `grow`.
+- **BsChip**, **BsChipGroup**: add property `imgPaddingOff` and improve css styles.
+- **BsToggleButton**: add property `tonal`.
+
+### Bug Fixes
+
+- **BsAppContainer**, **BsContainer**, **BsContent**, **BsAppbar**, **BsSideDrawer**: 
+  fix bug unable to get element size on non-SPA environment.
+- **BsAppbar**, **BsSideDrawer**: fix onResize event arguments.
+- **BsAvatar**, **BsIcon**: fix property conflict when calculating component's dimension.
+- **BsBadge**: fix `badge-label` css.
+- **BsButton**, **BsChip**: when `href` attribute is defined component didn't render as `<a>` element. 
+- **BsListNavItem**: fix item could not resolve route path that caused wrong active item when page reloaded.
+- **BSSideDrawer**: fix `marginTop` and height.
+- **BsModel**: remove data from body when performing DELETE request, fix dynamic properties reactivity issue.
+- **Resize**, **Scroll** directive: fix wrong callback arguments. 
+
 
 ## v2.0.3
 
