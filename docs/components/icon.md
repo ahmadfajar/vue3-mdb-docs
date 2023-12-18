@@ -2,7 +2,7 @@
 
 ::: lead
 **BsIcon** is small, and a lightweight component. It can be used inside almost
-any component. **BsIcon** load SVG icon from
+any component or html element. **BsIcon** load SVG icon from
 [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) dynamically.
 :::
 

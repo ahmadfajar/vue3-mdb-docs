@@ -132,19 +132,24 @@ next:
     content within lists or page layouts.
     </div>
   </a>
-  <a href="icon" class="list-group-item list-group-item-action">
-    <h5>Icon</h5>
-    <div class="mt-2 mb-1">
-    Small and lightweight component which can be used inside almost any component.
+  <div class="list-group-item">
+    <div class="h5 mb-4">Icons:</div>
+    <div class="list-group">
+      <a href="icon" class="list-group-item list-group-item-action">
+        <h5>Icon</h5>
+        <div class="mt-2 mb-1">
+        Small and lightweight component which can be used inside almost any component or html element.
+        </div>
+      </a>
+      <a href="toggle-icon" class="list-group-item list-group-item-action">
+        <h5>Toggle Icon</h5>
+        <div class="mt-2 mb-1">
+        Small and lightweight component which is used to toggle two different icon. It can be 
+        used inside almost any component or html element.
+        </div>
+      </a>
     </div>
-  </a>
-  <a href="icon-toggle" class="list-group-item list-group-item-action">
-    <h5>Icon Toggle</h5>
-    <div class="mt-2 mb-1">
-    Small and lightweight component which is used to toggle two different icon. It can be 
-    used inside almost any component or html element.
-    </div>
-  </a>
+  </div>
   <a href="image-holder" class="list-group-item list-group-item-action">
     <h5>Image Holder</h5>
     <div class="mt-2 mb-1">
