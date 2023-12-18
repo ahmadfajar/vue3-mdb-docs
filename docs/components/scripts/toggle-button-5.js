@@ -48,7 +48,8 @@ const app = createVueMdb({
 
     return {
       selectedCategory,
-      categories
+      categories,
+      albums,
     };
   }
 });

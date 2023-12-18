@@ -346,7 +346,7 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
         <bs-button color="light-grey" mode="icon" icon="search" flat></bs-button>
       </bs-appbar>
       <bs-container>
-        <bs-card class="rounded-top-0">
+        <bs-card class="rounded-top-0 w-100">
           <bs-card-body class="d-flex flex-column pb-1">
             <bs-toggle-button
               v-model="selectedCategory"
