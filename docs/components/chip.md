@@ -536,29 +536,29 @@ property explicitly.
   <div class="my-demo-wrapper bg-white rounded-3 p-4 w-100">
     <div class="d-flex justify-content-center mb-2">
       <bs-dropdown-menu placement="bottom-right">
-        <bs-chip href="#">
+        <bs-chip>
           Chip Action <span class="caret-down ms-2"></span>
         </bs-chip>
         <template #content>
           <bs-list-view>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">First Action</a>
-              <a class="dropdown-item" href="#">Second Action</a>
-              <a class="dropdown-item" href="#">Third Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">First Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Second Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Third Action</a>
             </div>
           </bs-list-view>
         </template>
       </bs-dropdown-menu>
       <bs-dropdown-menu placement="bottom-right">
-        <bs-chip color="default-color" icon="shopping_cart_outlined" href="#">
+        <bs-chip color="default-color" icon="shopping_cart_outlined">
           Chip Action <span class="caret-down ms-2"></span>
         </bs-chip>
         <template #content>
           <bs-list-view>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">First Action</a>
-              <a class="dropdown-item" href="#">Second Action</a>
-              <a class="dropdown-item" href="#">Third Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">First Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Second Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Third Action</a>
             </div>
           </bs-list-view>
         </template>
@@ -566,29 +566,29 @@ property explicitly.
     </div>
     <div class="d-flex justify-content-center">
       <bs-dropdown-menu placement="bottom-right">
-        <bs-chip href="#" outlined>
+        <bs-chip outlined>
           Chip Action <span class="caret-down ms-2"></span>
         </bs-chip>
         <template #content>
           <bs-list-view>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">First Action</a>
-              <a class="dropdown-item" href="#">Second Action</a>
-              <a class="dropdown-item" href="#">Third Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">First Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Second Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Third Action</a>
             </div>
           </bs-list-view>
         </template>
       </bs-dropdown-menu>
       <bs-dropdown-menu placement="bottom-right">
-        <bs-chip color="default-color" icon="shopping_cart_outlined" href="#" outlined>
+        <bs-chip color="default-color" icon="shopping_cart_outlined" outlined>
           Chip Action <span class="caret-down ms-2"></span>
         </bs-chip>
         <template #content>
           <bs-list-view>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">First Action</a>
-              <a class="dropdown-item" href="#">Second Action</a>
-              <a class="dropdown-item" href="#">Third Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">First Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Second Action</a>
+              <a class="dropdown-item" href="#dropdown-menus">Third Action</a>
             </div>
           </bs-list-view>
         </template>
