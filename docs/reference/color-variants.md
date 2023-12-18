@@ -28,7 +28,7 @@ Background color can be applied to any html element by using the CSS classname `
 :::
 
 
-### Border color variants
+### Border color variants {class="mt-lg-5"}
 
 Border color can be applied to any html element by using the CSS classname `border-{color-name}`.
 
@@ -42,7 +42,7 @@ Border color can be applied to any html element by using the CSS classname `bord
 :::
 
 
-### Text color variants
+### Text color variants {class="mt-lg-5"}
 
 Text color can be applied to any html element by using the CSS classname `text-{color-name}`.
 
@@ -106,7 +106,7 @@ to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
 
-### RGBA color variants
+### RGBA color variants {class="mt-lg-5"}
 
 The base color of the above color variants can also be used to produce an **RGBA background color**.
 
