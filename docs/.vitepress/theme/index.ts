@@ -1,6 +1,3 @@
-// import 'bootstrap/dist/css/bootstrap.css';
-// import './myBootstrap.scss';
-// import 'vue-mdbootstrap/styles';
 import Theme from 'vitepress/theme';
 import { type App } from 'vue';
 import * as _plugins from 'vue-mdbootstrap';

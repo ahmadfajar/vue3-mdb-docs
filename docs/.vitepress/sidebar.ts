@@ -53,6 +53,14 @@ export const sidebar = [
           { text: 'Chip Group', link: '/components/chip-group' },
         ]
       },
+      {
+        text: 'Icons',
+        collapsed: true,
+        items: [
+          { text: 'Icon', link: '/components/icon' },
+          { text: 'Toggle Icon', link: '/components/toggle-icon' },
+        ]
+      },
       { text: 'Side Drawer', link: '/components/side-drawer' },
     ]
   },

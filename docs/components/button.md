@@ -1118,9 +1118,9 @@ You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
           <template #content>
             <bs-list-view>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">First Action</a>
-                <a class="dropdown-item" href="#">Second Action</a>
-                <a class="dropdown-item" href="#">Third Action</a>
+                <a class="dropdown-item" href="#with-dropdown-menus">First Action</a>
+                <a class="dropdown-item" href="#with-dropdown-menus">Second Action</a>
+                <a class="dropdown-item" href="#with-dropdown-menus">Third Action</a>
               </div>
             </bs-list-view>
           </template>
@@ -1149,12 +1149,12 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
         <bs-button color="primary">3</bs-button>
         <bs-button color="primary">4</bs-button>
       </div>
-      <div class="btn-group me-2" role="group" aria-label="Second group">
+      <div class="btn-group pt-2 pt-md-0 me-2" role="group" aria-label="Second group">
         <bs-button color="blue">5</bs-button>
         <bs-button color="blue">6</bs-button>
         <bs-button color="blue">7</bs-button>
       </div>
-      <div class="btn-group" role="group" aria-label="Third group">
+      <div class="btn-group pt-2 pt-md-0" role="group" aria-label="Third group">
         <bs-button color="info">8</bs-button>
       </div>
     </div>
@@ -1167,12 +1167,12 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
         <bs-button color="default-color" :pill="false" rounded>3</bs-button>
         <bs-button color="default-color" :pill="false" rounded>4</bs-button>
       </div>
-      <div class="btn-group me-2" role="group" aria-label="Second group">
+      <div class="btn-group pt-2 pt-md-0 me-2" role="group" aria-label="Second group">
         <bs-button color="secondary-color" :pill="false" rounded>5</bs-button>
         <bs-button color="secondary-color" :pill="false" rounded>6</bs-button>
         <bs-button color="secondary-color" :pill="false" rounded>7</bs-button>
       </div>
-      <div class="btn-group" role="group" aria-label="Third group">
+      <div class="btn-group pt-2 pt-md-0" role="group" aria-label="Third group">
         <bs-button color="secondary-color" :pill="false" rounded>8</bs-button>
       </div>
     </div>

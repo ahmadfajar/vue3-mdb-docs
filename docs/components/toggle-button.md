@@ -25,6 +25,9 @@ can add attributes like `readonly`, or `disabled` and it will react to them to g
 best experience. You can also use `v-model` directive to create two-way data bindings 
 on the `model-value` property. This is useful to control or maintain the `model-value` property.
 
+For backward compatibility, `<bs-button-toggle>` can still be used, but is deprecated 
+and will be removed in the future.
+
 <SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="Toggle Buttons Example" file="./docs/components/scripts/toggle-button-1.js"}

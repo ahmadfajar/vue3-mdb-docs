@@ -17,11 +17,26 @@ export const headMeta: HeadConfig[] = [
       type: 'image/png'
     }
   ],
+  [
+    'script',
+    {
+      async: '',
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-K3RHJL1XDE',
+    }
+  ],
+  [
+    'script',
+    {},
+    `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3RHJL1XDE');`
+  ],
   // [
   //   'link',
   //   {
   //     rel: "preload stylesheet",
-  //     href: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css",
+  //     href: "https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle.min.css",
   //     crossorigin: "anonymous"
   //   }
   // ],
@@ -29,8 +44,7 @@ export const headMeta: HeadConfig[] = [
     'link',
     {
       rel: "preload stylesheet",
-      href: "https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle.min.css",
-      crossorigin: "anonymous"
+      href: "/assets/bundle.min.css"
     }
   ],
 ];
