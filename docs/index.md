@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+titleTemplate: Vue.js UI Component Library
 hero:
   name: Vue MDBootstrap
   text: Vue.js UI Component Library

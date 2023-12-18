@@ -15,7 +15,7 @@ bundler or built common web page by using resources from the CDN.
  
 <div class="pt-2"></div>
 
-- [Vue.js](https://vuejs.org) `v3.3` is required, `v3.3.x` (*latest*) is recommended
+- [Vue.js](https://vuejs.org) `v3.3.x` is required
 - [Bootstrap](https://getbootstrap.com) `v5.2` is required, `v5.2.3` is recommended
 - [Vue Router](https://router.vuejs.org/) `v4.x` is optional, and is required for building SPA using module bundler 
 - [Pinia](https://pinia.vuejs.org/) is optional, and is required for building SPA using module bundler 
@@ -66,7 +66,7 @@ const app = createVueMdb(App);
 app.use(router).mount('#app');
 ```
 
-#### Individual Components {class="mt-5"}
+#### Individual Components {class="mt-lg-5"}
 
 There are cases in your project that you only need some components of ***Vue MDBootstrap*** 
 and for this you can add them as follows:
@@ -132,7 +132,7 @@ Use code below at the HTML `<head>` section to load the Bootstrap css framework.
 ```
 
 
-### Using CDN Resources {class="pt-3"}
+### Using CDN Resources {class="mt-lg-5"}
 
 You can get the latest version of Vue MDBootstrap directly from 
 [unpkg](https://unpkg.com/) or [jsdelivr](https://www.jsdelivr.com/package/npm/vue-mdbootstrap).

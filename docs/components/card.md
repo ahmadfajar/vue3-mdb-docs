@@ -120,7 +120,7 @@ property to specify a text for the image's `alt` attribute.
 ```
 :::
 
-### Positioning an image {class="pt-lg-3"}
+### Positioning an image {class="mt-lg-5"}
 
 `.card-img-start` places an image at the left side of the card and `.card-img-end` 
 places an image at the right side of the card.
@@ -174,7 +174,7 @@ places an image at the right side of the card.
 ```
 :::
 
-### Image with description {class="pt-lg-3"}
+### Image with description {class="mt-lg-5"}
 
 Additionally, use `<bs-card-media>`to add description to the image with *title/subtitle*.
 Place `<bs-card-media>` after opening the `<bs-card>`'s tag to place the image at the top 
@@ -273,7 +273,7 @@ See [Reference - Color Variants](/reference/color-variants) for more information
 ```
 :::
 
-### Border {class="pt-lg-3"}
+### Border {class="mt-lg-5"}
 
 Use [border utilities](/reference/color-variants#border-color-variants) to change 
 just the `border-color` of a card. Note that you can put `.text-{color}` classes 
@@ -363,7 +363,7 @@ with equal width and height columns. Card groups start off stacked and use
 ```
 :::
 
-### Card grids {class="pt-lg-3"}
+### Card grids {class="mt-lg-5"}
 
 Use the Bootstrap grid system and its 
 [.row-cols classes](https://getbootstrap.com/docs/5.2/layout/grid/#row-columns) 
@@ -462,7 +462,7 @@ The component css variables inherited from
 
 ```
 
-### BsCardMedia {#css-card-media class="pt-lg-3"}
+### BsCardMedia {#css-card-media class="mt-lg-5"}
 
 <p class="pt-2"><SmallNote color="teal">Added since v2.0.4</SmallNote></p>
 

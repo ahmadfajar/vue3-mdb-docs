@@ -300,7 +300,7 @@ function toggleSideDrawer3(value: boolean) {
 :::
 
 
-### Clipped Side Drawer
+### Clipped Side Drawer {class="mt-lg-5"}
 
 ::: BlockVue {title="Clipped Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-4.js"}
 

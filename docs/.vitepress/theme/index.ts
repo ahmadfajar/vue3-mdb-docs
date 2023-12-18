@@ -1,10 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 // import './myBootstrap.scss';
-
+// import 'vue-mdbootstrap/styles';
 import Theme from 'vitepress/theme';
 import { type App } from 'vue';
 import * as _plugins from 'vue-mdbootstrap';
-import 'vue-mdbootstrap/styles';
 import DocBlockExample from '../../../components/DocBlockExample.vue';
 import ColorPalette from '../../../components/ColorPalette.vue';
 import SmallNote from '../../../components/SmallNote.vue';

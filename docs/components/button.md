@@ -157,7 +157,7 @@ This style is the default button's style and its appearance is like Material Des
 ```
 :::
 
-### Filled Tonal {class="pt-lg-3"}
+### Filled Tonal {class="mt-lg-5"}
 
 You can create button with filled tonal style like Material Design 3 - 
 [Filled Tonal Button](https://m3.material.io/components/buttons/specs#158f0a18-67fb-4ac4-9d22-cc4d1adc4579) 
@@ -210,7 +210,7 @@ by defining the `tonal` property explicitly.
 ```
 :::
 
-### Filled Elevated {class="pt-lg-3"}
+### Filled Elevated {class="mt-lg-5"}
 
 You can create button with elevated style like Material Design 3 - 
 [Elevated Button](https://m3.material.io/components/buttons/specs#0eea2a85-b4d7-4c74-b08e-98410b9412c7) 
@@ -263,7 +263,7 @@ by defining the `raised` property explicitly.
 ```
 :::
 
-### Filled Rounded {class="pt-lg-3"}
+### Filled Rounded {class="mt-lg-5"}
 
 You can create button with rounded style by defining the `rounded` property explicitly 
 and sets the `pill` property to `false`.
@@ -313,7 +313,7 @@ and sets the `pill` property to `false`.
 ```
 :::
 
-### Filled Rectangle {class="pt-lg-3"}
+### Filled Rectangle {class="mt-lg-5"}
 
 You can create button with rectangle style by setting the `pill` property to `false`.
 
@@ -362,7 +362,7 @@ You can create button with rectangle style by setting the `pill` property to `fa
 ```
 :::
 
-### Outlined {class="pt-lg-3"}
+### Outlined {class="mt-lg-5"}
 
 You can create button with outlined style like Material Design 3 - 
 [Outlined Button](https://m3.material.io/components/buttons/specs#de72d8b1-ba16-4cd7-989e-e2ad3293cf63) 
@@ -415,7 +415,7 @@ by defining the `outlined` property explicitly.
 ```
 :::
 
-### Flat {class="pt-lg-3"}
+### Flat {class="mt-lg-5"}
 
 You can create button with flat style like Material Design 3 - 
 [Text Button](https://m3.material.io/components/buttons/specs#899b9107-0127-4a01-8f4c-87f19323a1b4) 
@@ -468,7 +468,7 @@ by defining the `flat` property explicitly.
 ```
 :::
 
-### Combination {class="pt-lg-3"}
+### Combination {class="mt-lg-5"}
 
 Other than those styles above, some styles can be combine to create another 
 effect. Example below will shows you how to do it.
@@ -557,7 +557,7 @@ As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=g
 is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
 :::
 
-### Rotating an icon {class="pt-lg-3"}
+### Rotating an icon {class="mt-lg-5"}
 
 Additionally, you can also rotate the icon to some extent. Use `icon-flip` property or `icon-rotation` 
 property to rotate the icon, but do not use both property together.
@@ -602,7 +602,7 @@ property to rotate the icon, but do not use both property together.
 ```
 :::
 
-### Animating an icon {class="pt-lg-3"}
+### Animating an icon {class="mt-lg-5"}
 
 `<bs-button>` also has built-in animations for icon, which are: `spin` and `pulse`.
 Example below, demonstrate the built-in icon animation and the use of `icon` slot.
@@ -1098,7 +1098,7 @@ by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button
 ```
 :::
 
-### With dropdown menus {class="pt-lg-3"}
+### With dropdown menus {class="mt-lg-5"}
 
 You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
 
@@ -1132,7 +1132,7 @@ You can add dropdown menus mixed with a series of buttons inside `.btn-group`.
 ```
 :::
 
-### Button toolbar {class="pt-lg-3"}
+### Button toolbar {class="mt-lg-5"}
 
 `<bs-button>` can also be combined as sets of button groups called **button toolbar**
 by utilizing [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/button-group/#button-toolbar).
@@ -1219,7 +1219,7 @@ The following are a collection of examples that demonstrate more advanced use of
 ```
 :::
 
-### Join video conference {class="pt-lg-3"}
+### Join video conference {class="mt-lg-5"}
 
 ::: BlockVue {title="Button Advanced Example"}
 

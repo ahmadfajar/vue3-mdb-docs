@@ -51,7 +51,7 @@ Alert with default style variant will have appearance like **Bootstrap** alert.
 ```
 :::
 
-### Solid {class="pt-3"}
+### Solid {class="mt-lg-5"}
 
 Use `filled` property to enable the alert variant with **solid fill style**.
 
@@ -70,7 +70,7 @@ Use `filled` property to enable the alert variant with **solid fill style**.
 :::
 
 
-### Outlined {class="pt-3"}
+### Outlined {class="mt-lg-5"}
 
 Use `outlined` property to enable the alert variant with **outline style**.
 
@@ -216,7 +216,7 @@ add a close `x` button.
 :::
 
 
-### Controlling dismissible alert {class="pt-3"}
+### Controlling dismissible alert {class="mt-lg-5"}
 
 Use the `v-model` directive to create two-way data bindings on the `model-value` 
 property as in `v-model="showAlert"`. This is useful to control the dismissible

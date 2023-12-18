@@ -105,7 +105,7 @@ a larger border-radius and a slight larger padding.
 ::: 
 
 
-### Label {class="pt-3"}
+### Label {class="mt-lg-5"}
 
 Sets the `type` property of `<bs-badge>` to `label` to make badges little larger 
 than normal with a slight larger padding. 
@@ -125,7 +125,7 @@ than normal with a slight larger padding.
 :::
 
 
-### Outlined {class="pt-3"}
+### Outlined {class="mt-lg-5"}
 
 Define the `outlined` property explicitly to create outline badges. Additionally 
 you can combine with the `type` property to create an outline _Pill badge_ or outline 

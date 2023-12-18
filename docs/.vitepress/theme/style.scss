@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
 /**
  * Colors
  * -------------------------------------------------------------------------- 
@@ -270,11 +272,14 @@
 }
 
 .doc-api-reference {
-  --md-tabs-content-padding: 0;
   margin: 3rem -1.5rem 0;
 
-  .tab-pane {
-    width: 100%;
+  &.md-tabs {
+    --md-tabs-content-padding: 0;
+
+    .tab-pane {
+      width: 100%;
+    }
   }
 
   .doc-table-responsive {
@@ -447,6 +452,12 @@
   }
 }
 
+body {
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+}
+
 .VPDoc,
 .VPDocFooter,
 .VPHome,
@@ -454,6 +465,20 @@
 .VPSidebarItem {
   .container {
     --bs-gutter-x: 0;
+  }
+}
+
+.VPDoc,
+.VPLocalNavOutlineDropdown {
+  .outline-link,
+  .top-link {
+    text-decoration: none;
+  }
+}
+
+.VPNavScreen {
+  .VPNavScreenMenuLink {
+    text-decoration: none;
   }
 }
 
@@ -534,10 +559,7 @@
       font-weight: 500;
       line-height: 46px;
       padding: 0 24px;
-
-      &:hover {
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
   }
 

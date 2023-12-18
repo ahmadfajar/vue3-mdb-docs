@@ -11,7 +11,7 @@ import { sidebar } from './sidebar';
 export default defineConfig({
   title: 'Vue MDBootstrap',
   description: 'Vue.js UI Component Library',
-  // base: '/vmdb-doc/',
+  // base: '/vuemdb-doc/',
   // appearance: false,
   cleanUrls: true,
   head: headMeta,
@@ -82,7 +82,7 @@ export default defineConfig({
             const styles = doc('style').html();
 
             const stackblitz = {
-              html: resultHtml.replaceAll('="/img', '="https://vue-mdbootstrap.fajarconsultant.com/img'),
+              html: resultHtml.replaceAll('="/img', '="https://ahmadfajar.github.io/img'),
               script: jscript,
               style: styles?.trim(),
               title: title,

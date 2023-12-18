@@ -20,7 +20,7 @@ centered beside any adjoining plain text. It also can be used as children of oth
 ::: BlockVue {title="Basic Avatar Example"}
 
 ```html
-<div class="row row-cols-auto">
+<div class="my-demo-wrapper row row-cols-auto">
   <div class="col">
     <bs-avatar img-src="/img/kitty-2.jpg" />
   </div>
@@ -73,7 +73,7 @@ and *Square* (default). Example below will shows you how to enable *Circle* and 
 :::
 
 
-### Border {class="pt-3"}
+### Border {class="mt-lg-5"}
 
 `<bs-avatar>` can also have border. Use `border` property and `border-color` property 
 to adjust border thickness and its color. 
@@ -171,7 +171,7 @@ width by explicitly define the `height` and `width` property.
 ## Animation 
 
 You can apply animation such as _spin_ or _pulse_ on avatar icon. Because 
-actually **BsAvatar** uses [BsIcon](/components/icon) internally.
+actually **BsAvatar** uses **BsIcon** internally.
 
 ::: BlockVue {title="Animate Avatar's Icon Example" file="./docs/components/scripts/avatar.js"}
 
@@ -236,7 +236,7 @@ The following is an example that demonstrate more advanced use of the `<bs-avata
 ### Inside Other Component  
 
 `<bs-avatar>` can also be used inside other component. Example below, shows you how to
-use `<bs-avatar>` inside [BsListTile](/components/list-tile) component.
+use `<bs-avatar>` inside **BsListTile** component.
 
 ::: BlockVue {title="Avatar Inside Other Component" file="./docs/components/scripts/avatar.js"}
 

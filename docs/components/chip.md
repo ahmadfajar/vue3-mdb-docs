@@ -101,7 +101,7 @@ based on Google **Material Design 3** specifications.
 :::
 
 
-### Rounded Pill {class="pt-lg-3"}
+### Rounded Pill {class="mt-lg-5"}
 
 You can create chip with rounded-pill style by defining the `pill` property explicitly.
 
@@ -119,7 +119,7 @@ You can create chip with rounded-pill style by defining the `pill` property expl
 ```
 :::
 
-### Outlined {class="pt-lg-3"}
+### Outlined {class="mt-lg-5"}
 
 You can create chip with outlined style by defining the `outlined` property explicitly.
 
@@ -262,7 +262,7 @@ As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=g
 is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
 :::
 
-### Rotating an icon {class="pt-lg-3"}
+### Rotating an icon {class="mt-lg-5"}
 
 Additionally, you can also rotate the icon to some extent. Use `icon-flip` property or `icon-rotation` 
 property to rotate the icon, but do not use both property together.
@@ -309,7 +309,7 @@ property to rotate the icon, but do not use both property together.
 ```
 :::
 
-### Animating an icon {class="pt-lg-3"}
+### Animating an icon {class="mt-lg-5"}
 
 `<bs-chip>` also has built-in animations for icon, which are: `spin` and `pulse`.
 Example below, demonstrate the built-in icon animation and the use of `icon` slot.
@@ -438,7 +438,7 @@ can define the `img-circle` property explicitly to create circle shape avatar st
 ```
 :::
 
-### Adjusting avatar size {class="pt-lg-3"}
+### Adjusting avatar size {class="mt-lg-5"}
 
 Avatar size can be adjusted to match the chip height by eliminating the margin 
 around the avatar. This can be achieved by defining the `img-padding-off` 
@@ -673,7 +673,7 @@ the chip has been dismissed.
 :::
 
 
-### Controlling dismissible chip {class="pt-lg-3"}
+### Controlling dismissible chip {class="mt-lg-5"}
 
 Use the `v-model` directive to create two-way data bindings on the `model-value` 
 property as in `v-model="showDismissibleChip"`. This is useful to control the 

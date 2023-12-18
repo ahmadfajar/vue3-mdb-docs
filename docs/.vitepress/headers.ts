@@ -13,16 +13,24 @@ export const headMeta: HeadConfig[] = [
     'link',
     {
       rel: 'icon',
-      href: '/img/favicon.png',
+      href: 'https://ahmadfajar.github.io/img/favicon.png',
       type: 'image/png'
     }
   ],
   // [
   //   'link',
   //   {
-  //     rel: "stylesheet",
+  //     rel: "preload stylesheet",
   //     href: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css",
   //     crossorigin: "anonymous"
   //   }
   // ],
+  [
+    'link',
+    {
+      rel: "preload stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle.min.css",
+      crossorigin: "anonymous"
+    }
+  ],
 ];
