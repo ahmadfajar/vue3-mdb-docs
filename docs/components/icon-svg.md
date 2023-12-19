@@ -8,13 +8,13 @@
 
 ## Overview
 
-`<bs-icon-svg-svg>` embed SVG inline, inside an html element. This component is also
+`<bs-icon-svg>` embed SVG inline, inside an html element. This component is also
 used internally by [BsIcon](/components/icon) and [BsToggleIcon](/components/toggle-icon).
 
-`<bs-icon-svg-svg>` use icon's name as in
+`<bs-icon-svg>` use icon's name as in
 [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons).
-`<bs-icon-svg-svg>` has four icon variants: `filled` (_default_), `outlined`, `rounded`,
-and `sharp`. Use `width` and `height` property to sets the icon size, otherwise 
+`<bs-icon-svg>` has four icon variants: _Filled_ (default), _Outlined_, _Rounded_,
+and _Sharp_. Use `width` and `height` property to sets the icon size, otherwise 
 default size will be used.
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
@@ -195,9 +195,9 @@ property to rotate the icon, but do not use both property together.
 
 ## Animation
 
-`<bs-icon-svg>` also has built-in animations, which are: `spin` and `pulse`.
+`<bs-icon-svg>` also has built-in animations, which are: _Spin_ and _Pulse_.
 
-::: BlockVue {title="Icon Animation Example"}
+::: BlockVue {title="IconSVG Animation Example"}
 
 ```html
 <div class="w-100 p-3 bg-white rounded-3">

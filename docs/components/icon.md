@@ -10,8 +10,9 @@ any component or html element. **BsIcon** loads icon from
 ## Overview
 
 The icon's name used by `<bs-icon>` is the same as in Google Material Icons.
-`<bs-icon>` has four icon variants: `filled` (*default*), `outlined`, `rounded`, 
-and `sharp`. Use `size` property to sets the icon size, otherwise default size will be used.
+`<bs-icon>` has four icon variants: _Filled_ (default), _Outlined_, _Rounded_,
+and _Sharp_. Use `size` property to sets the icon size, otherwise default size 
+will be used.
 
 <SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
@@ -122,7 +123,7 @@ property to rotate the icon, but do not use both property together.
 
 ## Animation
 
-`<bs-icon>` also has built-in animations, which are: `spin` and `pulse`.
+`<bs-icon>` also has built-in animations, which are: _Spin_ and _Pulse_.
 
 ::: BlockVue {title="Icon Animation Example"}
 
