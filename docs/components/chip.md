@@ -66,12 +66,12 @@ also render as `<a>` element by providing `href` attribute value.
 
 ```html
 <div class="my-demo-wrapper bg-white rounded-3 p-4 w-100 text-center">
-  <bs-chip href="#">Default</bs-chip>
-  <bs-chip color="primary" href="#">Primary</bs-chip>
-  <bs-chip color="success" href="#">Success</bs-chip>
-  <bs-chip color="danger" href="#">Danger</bs-chip>
-  <bs-chip color="warning" href="#">Warning</bs-chip>
-  <bs-chip color="info" href="#">Info</bs-chip>
+  <bs-chip href="#element-type">Default</bs-chip>
+  <bs-chip color="primary" href="#element-type">Primary</bs-chip>
+  <bs-chip color="success" href="#element-type">Success</bs-chip>
+  <bs-chip color="danger" href="#element-type">Danger</bs-chip>
+  <bs-chip color="warning" href="#element-type">Warning</bs-chip>
+  <bs-chip color="info" href="#element-type">Info</bs-chip>
 </div>
 ```
 :::
@@ -784,19 +784,19 @@ function toggleDismissibleChip(value: boolean) {
 | href          | `String`  |  | Render as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
 | icon          | `String`  |  | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. <p>If the value has suffix `_outlined`, `_filled`, `_rounded`, or `_sharp` then the suffix takes precedence over the `icon-variant` property. <BsBadge color="info">v2.0.4</BsBadge></p> |
 | icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
-| icon-position | `String`  | `'left'` | The icon placement. Valid values are: `left` (before text), `right` (after text). |
+| icon-position | `String`  | `'left'` | The icon placement. Valid values are: `left` (before text), `right` (after text). <BsBadge color="info">v2.0.3</BsBadge> |
 | icon-pulse    | `Boolean` | `false` | Apply ***pulse*** animation to the icon. |
 | icon-rotation | `Number`  |  | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply ***spin*** animation to the icon. |
 | icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
 | img-circle    | `Boolean` | `false` | Apply **circle** shape to the avatar image. |
 | img-padding <Badge type="warning">deprecated</Badge> | `Boolean`  | `true` | Use `img-padding-off` property instead. |
-| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. |
+| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="info">v2.0.4</BsBadge> |
 | img-src    | `String`  |    | Enable avatar image and sets the image location url. |
 | model-value <Badge type="tip">v-model</Badge> | `Boolean` | `true` | The component state: ***show*** or ***hide***. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge>. |
 | outlined   | `Boolean` | `false` | Enable ***outlined*** chip style. |
 | pill       | `Boolean` | `false` | Enable ***rounded-pill*** chip style. |
-| readonly   | `Boolean` | `false` | The component state. |
+| readonly   | `Boolean` | `false` | The component state. <BsBadge color="info">v2.0.3</BsBadge> |
 | ripple-off | `Boolean` | `false` | Disable _ripple_ effect. Ripple effect is automatically disabled when `click` event or `href` property is not defined. |
 | size       | `String`  |   | Create the component with predefined size. Valid values are: `sm` (small), `lg` (large). |
 
@@ -808,8 +808,8 @@ function toggleDismissibleChip(value: boolean) {
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Triggers when the close (`x`) button is clicked or chip has been dismissed. |
-| update:active      | (`value: boolean`) | Triggers when the chip is dismissed and update the `active` property. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value: boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:active      | (`value`: `Boolean`) | Triggers when the chip is dismissed and update the `active` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | (`value`: `Boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

@@ -21,7 +21,7 @@ and will be removed in the future.
 
 ::: BlockVue {title="ToggleIcon Example" file="./docs/components/scripts/toggle-icon.js"}
 
-```html
+```vue
 <template>
   <div class="w-100 p-4 bg-white rounded-3">
     <div class="input-group">
