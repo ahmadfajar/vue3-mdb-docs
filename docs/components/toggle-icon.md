@@ -1,10 +1,12 @@
 # Toggle Icon
 
 ::: lead
-**BsToggleIcon** is a lightweight component which is used to toggle two different icon. It can be used
-inside almost any component or html element. **BsToggleIcon** load SVG icon from
-[Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) dynamically.
+**BsToggleIcon** is a lightweight component which is used to toggle two different 
+icon. It can be used inside almost any component or html element. **BsToggleIcon** 
+load icon from [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) 
+dynamically.
 :::
+
 
 ## Overview
 

@@ -58,6 +58,8 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: 'Icon', link: '/components/icon' },
+          { text: 'Icon Spinner', link: '/components/icon-spinner' },
+          { text: 'Icon SVG', link: '/components/icon-svg' },
           { text: 'Toggle Icon', link: '/components/toggle-icon' },
         ]
       },

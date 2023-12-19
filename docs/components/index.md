@@ -141,6 +141,24 @@ next:
         Small and lightweight component which can be used inside almost any component or html element.
         </div>
       </a>
+      <a href="icon-spinner" class="list-group-item list-group-item-action">
+        <h5>
+        Icon Spinner 
+        <BsBadge color="info" class="ms-2" style="--bs-badge-font-size: .7rem">v2.0.0</BsBadge>
+        </h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is used for displaying loading indicator.
+        </div>
+      </a>
+      <a href="icon-svg" class="list-group-item list-group-item-action">
+        <h5>
+        Icon SVG 
+        <BsBadge color="info" class="ms-2" style="--bs-badge-font-size: .7rem">v2.0.0</BsBadge>
+        </h5>
+        <div class="mt-2 mb-1">
+        A lightweight component that load an icon from Google Material Icons dynamically.
+        </div>
+      </a>
       <a href="toggle-icon" class="list-group-item list-group-item-action">
         <h5>Toggle Icon</h5>
         <div class="mt-2 mb-1">
