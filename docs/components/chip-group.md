@@ -361,13 +361,13 @@ The Chip's item has properties as described below:
 | disabled | `Boolean`  | `<BsChip>` element state. |
 | dismissible | `Boolean`  | Enable dismissible `<BsChip>`. |
 | href   | `String`  | Render `<BsChip>` as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
-| imgSrc | `String`  | Avatar image source url. |
 | icon      | `String`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | iconVariant | `String`  | Predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp` |
+| imgSrc | `String`  | `<BsChip>` avatar image source url. |
 
 </div>
 </div>
