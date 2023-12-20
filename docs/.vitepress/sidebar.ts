@@ -5,6 +5,7 @@ export const sidebar = [
     items: [
       { text: 'About', link: '/about' },
       { text: 'Getting Started', link: '/getting-started' },
+      { text: 'Sponsor', link: '/sponsor' },
       { text: 'Release Notes', link: '/release-notes' },
       // { text: 'Markdown Examples', link: '/markdown-examples' }
     ]

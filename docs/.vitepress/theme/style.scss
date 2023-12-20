@@ -156,6 +156,17 @@
     }
   }
 
+  &._sponsor {
+    a.btn {
+      --bs-btn-hover-color: var(--vp-c-brand-lighter);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--bs-btn-hover-color);
+      }
+    }
+  }
+
   .custom-block {
     > .custom-block-title {
       display: flex;
@@ -225,6 +236,7 @@
 
         .nav-link {
           color: var(--bs-nav-link-color);
+          font-weight: 400;
 
           &.active {
             color: var(--bs-nav-pills-link-active-color);
@@ -570,6 +582,7 @@ body {
 
     .title {
       color: var(--doc-custom-text-1);
+      font-size: 18px;
     }
 
     .details {
@@ -610,6 +623,18 @@ body {
 
   .VPFooter {
     --vp-c-bg: #1a102c;
-    --vp-c-gutter: #08050d;
+    --vp-c-gutter: #0e0817;
+  }
+
+  .sponsors {
+    margin-top: 4rem;
+
+    .btn-outline-orange {
+      --bs-btn-font-weight: 400;
+      --bs-btn-active-bg: rgba(255, 157, 13, 0.75);
+      --bs-btn-active-color: white;
+      --bs-btn-hover-bg: rgba(251, 166, 39, 0.7);
+      --bs-btn-hover-color: white; // #f7b149;
+    }
   }
 }

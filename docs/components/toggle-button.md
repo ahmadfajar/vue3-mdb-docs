@@ -214,7 +214,7 @@ based on Google **Material Design 3** specifications. Example below show various
 origin style variants and demonstrate how to put an icon inside the `<bs-toggle-button>`
 and change the icon dynamically like segmented buttons behavior.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.0.1</SmallNote>
 
 ::: BlockVue {title="Toggle Buttons Style Variants" file="./docs/components/scripts/toggle-button-4.js"}
 

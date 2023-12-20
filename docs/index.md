@@ -26,6 +26,15 @@ features:
     details: 'Well-crafted UI components and built according to the <a href="https://m3.material.io/" target="_blank">Google Material Design 3</a> specifications.'
 ---
 
+
+<div class="sponsors d-flex justify-content-center">
+<div class="sponsor-button">
+<BsButton color="orange" size="lg" href="https://github.com/sponsors/ahmadfajar" target="__blank" outlined>
+Become Our Sponsor
+</BsButton>
+</div>
+</div>
+
 <script setup>
 import { onBeforeMount, onUnmounted } from 'vue';
 import { useData } from 'vitepress'
