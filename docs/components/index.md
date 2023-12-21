@@ -46,26 +46,6 @@ next:
       </a>
     </div>
   </div>
-  <a href="container" class="list-group-item list-group-item-action">
-    <h5>App Container</h5>
-    <div class="mt-2 mb-1">
-    A lightweight components which is used as layout container for your application.
-    </div>
-  </a>
-  <a href="appbar" class="list-group-item list-group-item-action">
-    <h5>Appbar</h5>
-    <div class="mt-2 mb-1">
-    A lightweight component which is placed at the top of the page as a container for page 
-    title, logo, menus, and action buttons.
-    </div>
-  </a>
-  <a href="avatar" class="list-group-item list-group-item-action">
-    <h5>Avatar</h5>
-    <div class="mt-2 mb-1">
-    A component which are typically used to display a user profile as a picture, icon, 
-    or short text. 
-    </div>
-  </a>
   <a href="badge" class="list-group-item list-group-item-action">
     <h5>Badge</h5>
     <div class="mt-2 mb-1">
@@ -118,6 +98,30 @@ next:
       </a>
     </div>
   </div>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Container & Navigation:</div>
+    <div class="list-group">
+      <a href="container" class="list-group-item list-group-item-action">
+        <h5>App Container</h5>
+        <div class="mt-2 mb-1">
+        A lightweight components which is used as layout container for your application.
+        </div>
+      </a>
+      <a href="appbar" class="list-group-item list-group-item-action">
+        <h5>Appbar</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is placed at the top of the page as a container for page 
+        title, logo, menus, and action buttons.
+        </div>
+      </a>
+      <a href="side-drawer" class="list-group-item list-group-item-action">
+        <h5>Side Drawer</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component's container which may contains application navigation, logo and others.
+        </div>
+      </a>
+    </div>
+  </div>
   <a href="datetime-picker" class="list-group-item list-group-item-action">
     <h5>DateTime Picker</h5>
     <div class="mt-2 mb-1">
@@ -133,8 +137,15 @@ next:
     </div>
   </a>
   <div class="list-group-item">
-    <div class="h5 mb-4">Icons:</div>
+    <div class="h5 mb-4">Image & Icons:</div>
     <div class="list-group">
+      <a href="avatar" class="list-group-item list-group-item-action">
+        <h5>Avatar</h5>
+        <div class="mt-2 mb-1">
+        A component which are typically used to display a user profile as a picture, icon, 
+        or short text. 
+        </div>
+      </a>
       <a href="icon" class="list-group-item list-group-item-action">
         <h5>Icon</h5>
         <div class="mt-2 mb-1">
@@ -159,6 +170,13 @@ next:
         A lightweight component that load an icon from Google Material Icons dynamically.
         </div>
       </a>
+      <a href="image-holder" class="list-group-item list-group-item-action">
+        <h5>Image Holder</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is primarily used to create SVG shape to visualize 
+        image placeholder.
+        </div>
+      </a>
       <a href="toggle-icon" class="list-group-item list-group-item-action">
         <h5>Toggle Icon</h5>
         <div class="mt-2 mb-1">
@@ -168,13 +186,6 @@ next:
       </a>
     </div>
   </div>
-  <a href="image-holder" class="list-group-item list-group-item-action">
-    <h5>Image Holder</h5>
-    <div class="mt-2 mb-1">
-    A lightweight component which is primarily used to create SVG shape to visualize 
-    image placeholder.
-    </div>
-  </a>
   <a href="lightbox" class="list-group-item list-group-item-action">
     <h5>Lighbox</h5>
     <div class="mt-2 mb-1">

@@ -48,11 +48,11 @@ container for page title, logo, menus, and action buttons which is usually known
           <template #content>
             <bs-list-view>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">First Action</a>
-                <a class="dropdown-item" href="#">Second Action</a>
-                <a class="dropdown-item" href="#">Third Action</a>
+                <a class="dropdown-item" href="#with-button-and-menus">First Action</a>
+                <a class="dropdown-item" href="#with-button-and-menus">Second Action</a>
+                <a class="dropdown-item" href="#with-button-and-menus">Third Action</a>
                 <bs-divider></bs-divider>
-                <a class="dropdown-item" href="#">Another Action</a>
+                <a class="dropdown-item" href="#with-button-and-menus">Another Action</a>
               </div>
             </bs-list-view>
           </template>

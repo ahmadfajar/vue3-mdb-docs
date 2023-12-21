@@ -6,7 +6,7 @@ export const sidebar = [
       { text: 'About', link: '/about' },
       { text: 'Getting Started', link: '/getting-started' },
       { text: 'Sponsor', link: '/sponsor' },
-      { text: 'Release Notes', link: '/release-notes' },
+      { text: 'Release Notes', link: '/release-notes' }
       // { text: 'Markdown Examples', link: '/markdown-examples' }
     ]
   },
@@ -33,16 +33,13 @@ export const sidebar = [
           }
         ]
       },
-      { text: 'App Container', link: '/components/container' },
-      { text: 'Appbar', link: '/components/appbar' },
-      { text: 'Avatar', link: '/components/avatar' },
       { text: 'Badge', link: '/components/badge' },
       {
         text: 'Buttons',
         collapsed: true,
         items: [
           { text: 'Button', link: '/components/button' },
-          { text: 'Toggle Button', link: '/components/toggle-button' },
+          { text: 'Toggle Button', link: '/components/toggle-button' }
         ]
       },
       { text: 'Card', link: '/components/card' },
@@ -51,27 +48,35 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: 'Chip', link: '/components/chip' },
-          { text: 'Chip Group', link: '/components/chip-group' },
+          { text: 'Chip Group', link: '/components/chip-group' }
         ]
       },
       {
-        text: 'Icons',
+        text: 'Container & Navigation',
         collapsed: true,
         items: [
+          { text: 'App Container', link: '/components/container' },
+          { text: 'Appbar', link: '/components/appbar' },
+          { text: 'Side Drawer', link: '/components/side-drawer' }
+        ]
+      },
+      {
+        text: 'Image & Icons',
+        collapsed: true,
+        items: [
+          { text: 'Avatar', link: '/components/avatar' },
           { text: 'Icon', link: '/components/icon' },
           { text: 'Icon Spinner', link: '/components/icon-spinner' },
           { text: 'Icon SVG', link: '/components/icon-svg' },
-          { text: 'Toggle Icon', link: '/components/toggle-icon' },
+          { text: 'Image Placeholder', link: '/components/image-holder' },
+          { text: 'Toggle Icon', link: '/components/toggle-icon' }
         ]
-      },
-      { text: 'Side Drawer', link: '/components/side-drawer' },
+      }
     ]
   },
   {
     text: 'Reference',
     collapsed: true,
-    items: [
-      { text: 'Color Variants', link: '/reference/color-variants' },
-    ]
+    items: [{ text: 'Color Variants', link: '/reference/color-variants' }]
   }
 ];
