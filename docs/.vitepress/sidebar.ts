@@ -71,7 +71,15 @@ export const sidebar = [
           { text: 'Image Placeholder', link: '/components/image-holder' },
           { text: 'Toggle Icon', link: '/components/toggle-icon' }
         ]
-      }
+      },
+      {
+        text: 'Miscellaneous',
+        collapsed: true,
+        items: [
+          { text: 'Divider', link: '/components/divider' },
+          { text: 'Subheader', link: '/components/subheader' },
+        ]
+      },
     ]
   },
   {

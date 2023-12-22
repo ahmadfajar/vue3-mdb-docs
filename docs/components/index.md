@@ -222,4 +222,21 @@ next:
     an element.
     </div>
   </a>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Miscellaneous:</div>
+    <div class="list-group">
+      <a href="divider" class="list-group-item list-group-item-action">
+        <h5>Divider</h5>
+        <div class="mt-2 mb-1">
+        Small and lightweight component which is primarily used to separate content within lists or layouts.
+        </div>
+      </a>
+      <a href="subheader" class="list-group-item list-group-item-action">
+        <h5>Subheader</h5>
+        <div class="mt-2 mb-1">
+        Small and lightweight component which is used as lists title.
+        </div>
+      </a>
+    </div>
+  </div>
 </div>

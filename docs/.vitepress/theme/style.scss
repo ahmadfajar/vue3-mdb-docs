@@ -1,6 +1,27 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
 /**
+ * Scrollbar
+ * -------------------------------------------------------------------------- 
+ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #a0a0a0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/**
  * Colors
  * -------------------------------------------------------------------------- 
  */
@@ -254,11 +275,8 @@
 
     .md-divider {
       --md-divider-margin-y: 0.25rem;
+      border-width: 0;
       margin: var(--md-divider-margin-y) 0;
-
-      &.divider--light {
-        --md-divider-color: rgba(125, 125, 125, 0.75);
-      }
     }
 
     .md-side-drawer-inner .nav {
@@ -425,6 +443,18 @@
   --doc-example-toolbar-bg: #242424;
   --doc-example-content-bg: #1c1d1e;
 
+  ::-webkit-scrollbar-track {
+    background: #3a3c46;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #62636a;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca0ae;
+  }
+  
   .NotFound {
     .link {
       &:hover {

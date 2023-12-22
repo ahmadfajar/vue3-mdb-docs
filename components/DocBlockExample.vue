@@ -190,4 +190,14 @@ const openStackBlitz = () => {
     margin: 1.75rem 0;
   }
 }
+
+.dark {
+  .doc-example-container {
+    > .doc-toolbar {
+      .btn-flat-secondary {
+        --bs-btn-hover-color: #a5a7a9;
+      }
+    }
+  }
+}
 </style>
