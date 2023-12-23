@@ -129,13 +129,6 @@ next:
     can be used to create customized date picker inputs.
     </div>
   </a>
-  <a href="divider" class="list-group-item list-group-item-action">
-    <h5>Divider</h5>
-    <div class="mt-2 mb-1">
-    Small and lightweight component which is primarily used to manage and separate 
-    content within lists or page layouts.
-    </div>
-  </a>
   <div class="list-group-item">
     <div class="h5 mb-4">Image & Icons:</div>
     <div class="list-group">
@@ -198,13 +191,6 @@ next:
     <div class="mt-2 mb-1">
     A popup container which are typically used for displaying lists of links and actions in 
     a dropdown menu format.
-    </div>
-  </a>
-  <a href="subheader" class="list-group-item list-group-item-action">
-    <h5>Subheader</h5>
-    <div class="mt-2 mb-1">
-    Small and lightweight component which is primarily used to manage and separate content 
-    within lists or page layouts.
     </div>
   </a>
   <a href="tabs" class="list-group-item list-group-item-action">

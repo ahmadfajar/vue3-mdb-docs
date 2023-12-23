@@ -252,6 +252,10 @@
         }
       }
 
+      a.md-list-tile {
+        text-decoration: none;
+      }
+      
       .nav-item {
         --bs-nav-link-hover-color: var(--vp-c-brand-2);
 
@@ -271,6 +275,10 @@
           }
         }
       }
+    }
+
+    .mobi-card {
+      max-width: 400px;
     }
 
     .md-divider {

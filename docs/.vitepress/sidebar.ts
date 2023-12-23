@@ -57,6 +57,7 @@ export const sidebar = [
         items: [
           { text: 'App Container', link: '/components/container' },
           { text: 'Appbar', link: '/components/appbar' },
+          { text: 'List Nav', link: '/components/list-nav' },
           { text: 'Side Drawer', link: '/components/side-drawer' }
         ]
       },

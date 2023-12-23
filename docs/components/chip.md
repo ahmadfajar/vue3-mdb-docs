@@ -718,23 +718,23 @@ function toggleDismissibleChip(value: boolean) {
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-chip-border-radius: #{$chip-border-radius};
 --md-chip-border-width: 0;
 --md-chip-font-weight: 400;
 
---md-chip-gutter-x: #{$padding-sm};
---md-chip-gutter-y: #{$padding-xs};
---md-chip-padding-x: #{$padding-base};
+--md-chip-gutter-x: 0.5rem;
+--md-chip-gutter-y: 0.25rem;
+--md-chip-padding-x: 1rem;
 --md-chip-padding-y: 0;
 
 --md-chip-avatar-margin-left: -0.675rem;
---md-chip-avatar-margin-right: #{$padding-sm};
---md-chip-icon-margin-left: #{-$padding-sm};
---md-chip-icon-margin-right: #{$padding-sm};
---md-chip-dismiss-btn-margin-left: #{$padding-sm};
+--md-chip-avatar-margin-right: 0.5rem;
+--md-chip-icon-margin-left: -0.5rem;
+--md-chip-icon-margin-right: 0.5rem;
+--md-chip-dismiss-btn-margin-left: 0.5rem;
 --md-chip-dismiss-btn-margin-right: -0.75rem;
 
 --md-chip-disabled-bg: #{lighten($gray-500, 15%)};

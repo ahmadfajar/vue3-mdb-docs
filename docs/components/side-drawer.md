@@ -38,25 +38,25 @@ You also can change the component's color using the `color` property and use any
       <div class="p-2">
         <div class="nav nav-pills flex-column">
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex active">
+            <a href="#overview" class="nav-link d-flex active">
               <bs-icon icon="home_outlined"></bs-icon>
               <span class="ps-3">Home</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#overview" class="nav-link d-flex">
               <bs-icon icon="view_list_outlined"></bs-icon>
               <span class="ps-3">Orders</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#overview" class="nav-link d-flex">
               <bs-icon icon="redeem_outlined"></bs-icon>
               <span class="ps-3">Rewards</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#overview" class="nav-link d-flex">
               <bs-icon icon="account_circle_outlined"></bs-icon>
               <span class="ps-3">Profile</span>
             </a>
@@ -111,25 +111,25 @@ function toggleSideDrawer1(value: boolean) {
       <div class="p-2">
         <div class="nav nav-pills flex-column">
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex active">
+            <a href="#location" class="nav-link d-flex active">
               <bs-icon icon="home_outlined"></bs-icon>
               <span class="ps-3">Home</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#location" class="nav-link d-flex">
               <bs-icon icon="view_list_outlined"></bs-icon>
               <span class="ps-3">Orders</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#location" class="nav-link d-flex">
               <bs-icon icon="redeem_outlined"></bs-icon>
               <span class="ps-3">Rewards</span>
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#location" class="nav-link d-flex">
               <bs-icon icon="account_circle_outlined"></bs-icon>
               <span class="ps-3">Profile</span>
             </a>
@@ -195,7 +195,7 @@ state using the `mini-width` property.
       <div class="p-2">
         <div class="nav nav-pills flex-column">
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex active">
+            <a href="#mini-side-drawer" class="nav-link d-flex active">
               <bs-icon icon="home_outlined"></bs-icon>
               <transition name="fade">
                 <span v-if="!miniSideDrawer1" class="ps-3">Home</span>
@@ -203,7 +203,7 @@ state using the `mini-width` property.
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="view_list_outlined"></bs-icon>
               <transition name="fade">
                 <span v-if="!miniSideDrawer1" class="ps-3">Orders</span>
@@ -211,7 +211,7 @@ state using the `mini-width` property.
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="redeem_outlined"></bs-icon>
               <transition name="fade">
                 <span v-if="!miniSideDrawer1" class="ps-3">Rewards</span>
@@ -219,7 +219,7 @@ state using the `mini-width` property.
             </a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link d-flex">
+            <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="account_circle_outlined"></bs-icon>
               <transition name="fade">
                 <span v-if="!miniSideDrawer1" class="ps-3">Profile</span>
@@ -276,10 +276,10 @@ The following are a collection of examples that demonstrate more advanced use of
       <bs-divider></bs-divider>
       <bs-list-view>
         <bs-list-nav>
-          <bs-list-nav-item icon="inbox" label="Inbox"></bs-list-nav-item>
-          <bs-list-nav-item icon="bookmarks" label="Important"></bs-list-nav-item>
-          <bs-list-nav-item icon="send" label="Sent"></bs-list-nav-item>
-          <bs-list-nav-item icon="description" label="Drafts"></bs-list-nav-item>
+          <bs-list-nav-item icon="inbox" label="Inbox" url="#use-with-appbar"></bs-list-nav-item>
+          <bs-list-nav-item icon="bookmarks" label="Important" url="#use-with-appbar"></bs-list-nav-item>
+          <bs-list-nav-item icon="send" label="Sent" url="#use-with-appbar"></bs-list-nav-item>
+          <bs-list-nav-item icon="description" label="Drafts" url="#use-with-appbar"></bs-list-nav-item>
         </bs-list-nav>
       </bs-list-view>
     </bs-side-drawer>
@@ -329,10 +329,10 @@ function toggleSideDrawer3(value: boolean) {
       </div>
       <bs-list-view>
         <bs-list-nav>
-          <bs-list-nav-item icon="inbox" label="Inbox"></bs-list-nav-item>
-          <bs-list-nav-item icon="bookmarks" label="Important"></bs-list-nav-item>
-          <bs-list-nav-item icon="send" label="Sent"></bs-list-nav-item>
-          <bs-list-nav-item icon="description" label="Drafts"></bs-list-nav-item>
+          <bs-list-nav-item icon="inbox" label="Inbox" url="#clipped-side-drawer"></bs-list-nav-item>
+          <bs-list-nav-item icon="bookmarks" label="Important" url="#clipped-side-drawer"></bs-list-nav-item>
+          <bs-list-nav-item icon="send" label="Sent" url="#clipped-side-drawer"></bs-list-nav-item>
+          <bs-list-nav-item icon="description" label="Drafts" url="#clipped-side-drawer"></bs-list-nav-item>
         </bs-list-nav>
       </bs-list-view>
     </bs-side-drawer>
