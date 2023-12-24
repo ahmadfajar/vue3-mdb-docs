@@ -14,9 +14,6 @@ dynamically.
 `<bs-toggle-icon>` has four icon variants: `filled` (_default_), `outlined`, `rounded`,
 and `sharp`. Use `size` property to sets the icon size, otherwise default size will be used.
 
-For backward compatibility, `<bs-icon-toggle>` can still be used, but is deprecated
-and will be removed in the future.
-
 <SmallNote color="teal">Updated on v2.0.0</SmallNote>
 
 ::: BlockVue {title="ToggleIcon Example" file="./docs/components/scripts/toggle-icon.js"}
@@ -32,7 +29,7 @@ and will be removed in the future.
         aria-label="password"
       />
       <div class="input-group-text">
-        <bs-icon-toggle
+        <bs-toggle-icon
           icon="visibility"
           toggle-icon="visibility_off"
           v-model="passwordToggled"
@@ -49,6 +46,10 @@ const passwordToggled = ref(false);
 const inputType = computed(() => passwordToggled.value ? 'text' : 'password');
 </script>
 ```
+:::
+
+::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+The `<bs-icon-toggle>` tag still works, but has been deprecated since v2.0.0.
 :::
 
 
