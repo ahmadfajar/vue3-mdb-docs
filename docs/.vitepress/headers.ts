@@ -17,21 +17,21 @@ export const headMeta: HeadConfig[] = [
       type: 'image/png'
     }
   ],
-  [
-    'script',
-    {
-      async: '',
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-K3RHJL1XDE',
-    }
-  ],
-  [
-    'script',
-    {},
-    `window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-K3RHJL1XDE');`
-  ],
+  // [
+  //   'script',
+  //   {
+  //     async: '',
+  //     src: 'https://www.googletagmanager.com/gtag/js?id=G-K3RHJL1XDE',
+  //   }
+  // ],
+  // [
+  //   'script',
+  //   {},
+  //   `window.dataLayer = window.dataLayer || [];
+  //   function gtag(){dataLayer.push(arguments);}
+  //   gtag('js', new Date());
+  //   gtag('config', 'G-K3RHJL1XDE');`
+  // ],
   // [
   //   'link',
   //   {

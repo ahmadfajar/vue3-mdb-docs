@@ -57,5 +57,12 @@
       @extend %heading;
       @include font-size($h6-font-size);
     }
+
+    @include media-breakpoint-up(md) {
+      .rounded-md-3 {
+        @include border-radius(var(--#{$prefix}border-radius-lg))
+      }
+    }
+    
   }
 }

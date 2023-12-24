@@ -81,10 +81,10 @@ container for page title, logo, menus, and action buttons which is usually known
 
 ## API Reference
 
-### BsAppbar
+### BsAppbar {#api-appbar}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+  <BsTab label="Props" url="#api-appbar">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -98,7 +98,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events" url="#api-appbar">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -107,7 +107,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots" url="#api-appbar">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -118,13 +118,13 @@ container for page title, logo, menus, and action buttons which is usually known
   </BsTab>
 </BsTabs>
 
-### BsAppbarItems {class="mt-lg-5"}
+### BsAppbarItems {#api-appbar-items class="mt-lg-5"}
 
 Optional component to create a component's container inside `<bs-appbar>` which 
 may contains buttons, menus and others.
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Slots" url="#bsappbaritems">
+  <BsTab label="Slots" url="#api-appbar-items">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -135,12 +135,12 @@ may contains buttons, menus and others.
   </BsTab>
 </BsTabs>
 
-### BsAppbarTitle {class="mt-lg-5"}
+### BsAppbarTitle {#api-appbar-title class="mt-lg-5"}
 
 Lightweight component to put page title on **Appbar**.
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#bsappbartitle">
+  <BsTab label="Props" url="#api-appbar-title">
     <div class="doc-table-responsive doc-table-props">
 
 | Property  | Type     | Default | Description |
@@ -149,7 +149,7 @@ Lightweight component to put page title on **Appbar**.
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#bsappbartitle">
+  <BsTab label="Slots" url="#api-appbar-title">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

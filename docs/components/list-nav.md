@@ -90,7 +90,7 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants
+Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) 
 and [Material Color](/reference/color-variants#material-colors) variants can be
 applied to the `color` property.
 :::
@@ -141,6 +141,8 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 `item-border-variant` property of `<bs-list-view>` component with value: `left`, `right`,
 `left-right`, `top`, `bottom`, or `top-bottom`.
 
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
+
 ::: BlockVue {title="ListNav Padding Example"}
 
 ```html
@@ -170,13 +172,15 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 :::
 
 
-### Item style {class="mt-lg-5"}
+### Rounded style {class="mt-lg-5"}
 
-Additionaly, we can also add additional style appearance to the active navigation's menu.
+Additionaly, we can also add additional style appearance to the navigation's menu.
 There are two built-in style appearance, which are: **Rounded** and **Rounded Pill**.
 To achieve this, sets the `item-rounded` property of `<bs-list-view>` explicitly to
 create _rounded style_, or `item-rounded-pill` to create _rounded pill style_ to an
 active navigation menu.
+
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="ListNav Item Style Example"}
 
@@ -230,60 +234,60 @@ to customize the indentation from the left side.
     </bs-appbar>
     <bs-list-view>
       <bs-list-nav>
-        <bs-list-nav-item icon="widgets" label="Attractions" url="#nested-navigation">
+        <bs-list-nav-item icon="widgets" label="Attractions" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
             <bs-list-nav-item label="Topic 2" disabled></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 3" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 3" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="restaurant" label="Dining" url="#nested-navigation">
+        <bs-list-nav-item icon="restaurant" label="Dining" url="#nested-navigation-1">
           <bs-list-nav child>
             <bs-list-nav-item label="Breakfast" disabled></bs-list-nav-item>
-            <bs-list-nav-item label="Sushi" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Pizza" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Sushi" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Pizza" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="school" label="Education" url="#nested-navigation">
+        <bs-list-nav-item icon="school" label="Education" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 2" url="#nested-navigation">
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 2" url="#nested-navigation-1">
               <bs-list-nav child>
-                <bs-list-nav-item label="Topic 2.1" url="#nested-navigation"></bs-list-nav-item>
-                <bs-list-nav-item label="Topic 2.2" url="#nested-navigation"></bs-list-nav-item>
-                <bs-list-nav-item label="Topic 2.3" url="#nested-navigation"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.1" url="#nested-navigation-1"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.2" url="#nested-navigation-1"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.3" url="#nested-navigation-1"></bs-list-nav-item>
               </bs-list-nav>
             </bs-list-nav-item>
-            <bs-list-nav-item label="Topic 3" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 3" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="people" label="Family" url="#nested-navigation">
+        <bs-list-nav-item icon="people" label="Family" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 2" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 2" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="medication" label="Health" url="#nested-navigation">
+        <bs-list-nav-item icon="medication" label="Health" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 2" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 3" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 2" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 3" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="warehouse" label="Office" url="#nested-navigation">
+        <bs-list-nav-item icon="warehouse" label="Office" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 2" url="#nested-navigation"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 2" url="#nested-navigation-1"></bs-list-nav-item>
           </bs-list-nav>
         </bs-list-nav-item>
-        <bs-list-nav-item icon="redeem" label="Promotions" url="#nested-navigation">
+        <bs-list-nav-item icon="redeem" label="Promotions" url="#nested-navigation-1">
           <bs-list-nav child>
-            <bs-list-nav-item label="Topic 1" url="#nested-navigation"></bs-list-nav-item>
-            <bs-list-nav-item label="Topic 2" url="#nested-navigation">
+            <bs-list-nav-item label="Topic 1" url="#nested-navigation-1"></bs-list-nav-item>
+            <bs-list-nav-item label="Topic 2" url="#nested-navigation-1">
               <bs-list-nav child>
-                <bs-list-nav-item label="Topic 2.1" url="#nested-navigation"></bs-list-nav-item>
-                <bs-list-nav-item label="Topic 2.2" url="#nested-navigation"></bs-list-nav-item>
-                <bs-list-nav-item label="Topic 2.3" url="#nested-navigation"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.1" url="#nested-navigation-1"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.2" url="#nested-navigation-1"></bs-list-nav-item>
+                <bs-list-nav-item label="Topic 2.3" url="#nested-navigation-1"></bs-list-nav-item>
               </bs-list-nav>
             </bs-list-nav-item>
           </bs-list-nav>
@@ -370,13 +374,13 @@ navigation menus.
 
 ### Inside Side Drawer {class="mt-lg-5"}
 
-`<bs-list-nav>` can also be used inside `<bs-side-drawer>` to side navigation menus.
+`<bs-list-nav>` can also be used inside `<bs-side-drawer>` to create side navigation menus.
 
 ::: BlockVue {title="ListNav Inside SideDrawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-1.js"}
 
 ```vue
 <template>
-  <bs-app-container class="bg-blue-grey lighten-3 rounded-3" style="height: 500px;">
+  <bs-app-container class="light-mode bg-blue-grey lighten-3 rounded-md-3" style="height: 500px;">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
@@ -400,54 +404,53 @@ navigation menus.
       <bs-divider></bs-divider>
       <bs-list-view>
         <bs-list-nav>
-          <bs-list-nav-item icon="inbox" label="Inbox" url="#inside-side-drawer">
+          <bs-list-nav-item icon="inbox" label="Inbox" url="#side-drawer">
             <bs-list-nav child>
-              <bs-list-nav-item label="Primary" url="#inside-side-drawer"></bs-list-nav-item>
-              <bs-list-nav-item label="Social" url="#inside-side-drawer"></bs-list-nav-item>
-              <bs-list-nav-item label="Promotions" url="#inside-side-drawer"></bs-list-nav-item>
-              <bs-list-nav-item label="Updates" url="#inside-side-drawer"></bs-list-nav-item>
+              <bs-list-nav-item label="Primary" url="#side-drawer"></bs-list-nav-item>
+              <bs-list-nav-item label="Social" url="#side-drawer"></bs-list-nav-item>
+              <bs-list-nav-item label="Promotions" url="#side-drawer"></bs-list-nav-item>
+              <bs-list-nav-item label="Updates" url="#side-drawer"></bs-list-nav-item>
             </bs-list-nav>
           </bs-list-nav-item>
           <bs-list-nav-item
             icon="bookmarks"
             label="Important"
-            url="#inside-side-drawer"
+            url="#side-drawer"
           ></bs-list-nav-item>
-          <bs-list-nav-item icon="send" label="Sent" url="#inside-side-drawer"></bs-list-nav-item>
+          <bs-list-nav-item icon="send" label="Sent" url="#side-drawer"></bs-list-nav-item>
           <bs-list-nav-item
             icon="description"
             label="Drafts"
-            url="#inside-side-drawer"
+            url="#side-drawer"
           ></bs-list-nav-item>
         </bs-list-nav>
         <bs-divider></bs-divider>
-        <bs-list-tile url="#inside-side-drawer">
-          <bs-list-tile-leading icon="email"></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>All Mail</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action>
-            <bs-badge type="pill" variant="secondary">102</bs-badge>
-          </bs-list-tile-action>
-        </bs-list-tile>
-        <bs-list-tile url="#inside-side-drawer">
-          <bs-list-tile-leading icon="delete"></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Trash</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action>
-            <bs-badge type="pill" variant="secondary">12</bs-badge>
-          </bs-list-tile-action>
-        </bs-list-tile>
-        <bs-list-tile url="#inside-side-drawer">
-          <bs-list-tile-leading icon="gpp_maybe"></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Spam</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action>
-            <bs-badge type="pill" variant="secondary">8</bs-badge>
-          </bs-list-tile-action>
-        </bs-list-tile>
+        <bs-list-nav>
+          <bs-list-nav-item 
+            icon="email" 
+            label="All Mail" 
+            badge="102" 
+            badge-type="pill" 
+            badge-variant="secondary"
+            url="#side-drawer"
+          ></bs-list-nav-item>
+          <bs-list-nav-item
+            icon="delete"
+            label="Trash"
+            badge="12" 
+            badge-type="pill" 
+            badge-variant="secondary"
+            url="#side-drawer"
+          ></bs-list-nav-item>
+          <bs-list-nav-item
+            icon="gpp_maybe"
+            label="Spam"
+            badge="8" 
+            badge-type="pill" 
+            badge-variant="secondary"
+            url="#side-drawer"
+          ></bs-list-nav-item>
+        </bs-list-nav>
       </bs-list-view>
     </bs-side-drawer>
     <bs-container app></bs-container>
@@ -471,7 +474,7 @@ function toggleSideDrawer1(value: boolean) {
 
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
-### List View
+### List View {#css-list-view}
 
 ```scss
 --md-listview-padding-x: 0;
@@ -480,7 +483,7 @@ function toggleSideDrawer1(value: boolean) {
 
 ```
 
-### List Nav
+### List Nav {#css-list-nav}
 
 ```scss
 --md-nav-item-padding-x: 1rem;
@@ -488,44 +491,46 @@ function toggleSideDrawer1(value: boolean) {
 --md-nav-item-line-height: normal;
 --md-nav-item-font-size: 1rem;
 --md-nav-item-font-weight: 400;
---md-nav-item-active-font-weight: 500;
 --md-nav-item-color: #{$tile-title-color};
 --md-nav-item-divider-color: #{$divider-color};
 --md-nav-item-icon-color: #{$tile-leading-color};
 --md-nav-item-expanded-bg: #{$nav-item-expanded-bg};
---md-nav-item-hover-bg: #{$tile-hover-bg};
+
 --md-nav-item-active-bg: #{$tile-active-bg};
 --md-nav-item-active-color: #{$tile-active-title-color};
 --md-nav-item-active-icon-color: #{$tile-active-leading-icon-color};
+--md-nav-item-active-font-weight: 500;
+
 --md-nav-item-disable-color: #{$tile-disable-title-color};
 --md-nav-item-disable-icon-color: #{$tile-disable-leading-color};
+--md-nav-item-hover-bg: #{$tile-hover-bg};
 
 ```
 
 
 ## API Reference
 
-### BsListView {#bs-list-view}
+### BsListView {#api-list-view}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+  <BsTab label="Props" url="#api-list-view">
     <div class="doc-table-responsive doc-table-props">
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
 | color         | `String`    | `'white'` | ListView color appearance. |
 | individual-state  | `Boolean` | `false`   | The ListView doesn't manage each ListTile's state. <bs-badge color="info">v2.0.0</bs-badge> |
-| item-rounded      | `Boolean` | `false`   | Apply _rounded style_ to the _ListNavItem_ or _ListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
-| item-rounded-pill | `Boolean` | `false`   | Apply _rounded pill style_ to the _ListNavItem_ or _ListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
+| item-rounded      | `Boolean` | `false`   | Apply _rounded style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
+| item-rounded-pill | `Boolean` | `false`   | Apply _rounded pill style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-border-variant | `String` |  | Give border around the active item. Valid values are: `left`, `right`, `left-right`, `top`, `bottom`, `top-bottom`. <bs-badge color="info">v2.0.0</bs-badge> |
-| model-value <Badge type="tip">v-model</Badge> | `ComponentInternalInstance` |    | Property that hold the ListView's active item object instance. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `IListItem` |    | Property that hold the ListView's active item object instance. <BsBadge color="info">v2.0.0</BsBadge> |
 | overflow-hidden | `Boolean` | `false`   | Apply css `'overflow-hidden'` or not. |
-| single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. |
+| single-expand   | `Boolean` | `true`    | If `false` then more than one item can be expanded. Only applicable to _BsListNav_. |
 | space-around    | `String`  |   | Give padding around each item. Valid values are: `both`, `left`, `right`. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events" url="#api-list-view">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -535,7 +540,7 @@ function toggleSideDrawer1(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots" url="#api-list-view">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -547,10 +552,10 @@ function toggleSideDrawer1(value: boolean) {
 </BsTabs>
 
 
-### BsListNav {#bs-list-nav class="mt-lg-5"}
+### BsListNav {#api-list-nav class="mt-lg-5"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#bs-list-nav">
+  <BsTab label="Props" url="#api-list-nav">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -559,7 +564,7 @@ function toggleSideDrawer1(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#bs-list-nav">
+  <BsTab label="Slots" url="#api-list-nav">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -571,10 +576,10 @@ function toggleSideDrawer1(value: boolean) {
 </BsTabs>
 
 
-### BsListNavItem {#bs-list-nav-item class="mt-lg-5"}
+### BsListNavItem {#api-list-nav-item class="mt-lg-5"}
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#bs-list-nav-item">
+  <BsTab label="Props" url="#api-list-nav-item">
     <div class="doc-table-responsive doc-table-props">
 
 | Property   | Type      | Default | Description |
@@ -585,7 +590,7 @@ function toggleSideDrawer1(value: boolean) {
 | badge-color   | `String` |  | The badge color appearance. <BsBadge color="info">v2.0.0</BsBadge> |
 | badge-type    | `String` |  | Create Badge with `pill` or `label` style. <BsBadge color="info">v2.0.0</BsBadge> |
 | badge-variant | `String` |  | The badge variant, valid values: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`. |
-| border-off    | `Boolean` | `false` | Remove border style that have been applied via _ListView_ to this _ListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
+| border-off    | `Boolean` | `false` | Remove border style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
 | depth      | `Number`  |  | Item depth level in tree hierarchy (zero based level). |
 | disabled   | `Boolean` | `false` | Component state. |
 | icon       | `String`  |         | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
@@ -594,18 +599,18 @@ function toggleSideDrawer1(value: boolean) {
 | icon-rotation | `Number` |       | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-size  | `Number`/`String` |  | Render the icon at predefined size in pixel.  |
 | icon-spin  | `Boolean` | `false` | Apply **spin** animation to the icon. |
-| id         | `Sting`   |  | This component ID. <BsBadge color="info">v2.0.0</BsBadge> |
+| id         | `Sting`   |  | Sets the component `ID`. This property value is auto generate. <BsBadge color="info">v2.0.0</BsBadge> |
 | indent     | `Number`  |  | Text indentation from left side. |
 | label <Badge type="danger">required</Badge> | `String` |  | The text label to display. |
 | path        | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
-| pill-off    | `Boolean` | `false` | Remove _rounded pill_ style that have been applied via _ListView_ to this _ListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
+| pill-off    | `Boolean` | `false` | Remove _rounded pill_ style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
 | ripple-off  | `Boolean` | `false` | Disabled ripple effect. |
-| rounded-off | `Boolean` | `false` | Remove _rounded_ style that have been applied via _ListView_ to this _ListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
+| rounded-off | `Boolean` | `false` | Remove _rounded_ style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
 | url         | `String`  |  | Absolute or relative URL for the navigation target, when [vue-router](https://router.vuejs.org/) doesn't exists. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#bs-list-nav-item">
+  <BsTab label="Events" url="#api-list-nav-item">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -615,7 +620,7 @@ function toggleSideDrawer1(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#bs-list-nav-item">
+  <BsTab label="Slots" url="#api-list-nav-item">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

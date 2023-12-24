@@ -73,6 +73,7 @@ export const sidebar = [
           { text: 'Toggle Icon', link: '/components/toggle-icon' }
         ]
       },
+      { text: 'List Tile', link: '/components/list-tile' },
       {
         text: 'Miscellaneous',
         collapsed: true,

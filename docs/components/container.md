@@ -78,10 +78,10 @@ function toggleSideDrawer(value: boolean) {
 
 ## API Reference
 
-### BsAppContainer {#bs-app-container}
+### BsAppContainer {#api-app-container}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+  <BsTab label="Props" url="#api-app-container">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -91,7 +91,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots" url="#api-app-container">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -102,10 +102,10 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContainer {#bs-container class="mt-lg-5"}
+### BsContainer {#api-container class="mt-lg-5"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#bs-container">
+  <BsTab label="Props" url="#api-container">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -115,7 +115,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#bs-container">
+  <BsTab label="Events" url="#api-container">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
@@ -124,7 +124,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#bs-container">
+  <BsTab label="Slots" url="#api-container">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -135,10 +135,10 @@ function toggleSideDrawer(value: boolean) {
   </BsTab>
 </BsTabs>
 
-### BsContent {#bs-content class="mt-lg-5"}
+### BsContent {#api-content class="mt-lg-5"}
 
 <BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#bs-content">
+  <BsTab label="Props" url="#api-content">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -148,7 +148,7 @@ function toggleSideDrawer(value: boolean) {
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#bs-content">
+  <BsTab label="Slots" url="#api-content">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

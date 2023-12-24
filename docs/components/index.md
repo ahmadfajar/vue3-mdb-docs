@@ -114,6 +114,13 @@ next:
         title, logo, menus, and action buttons.
         </div>
       </a>
+      <a href="list-nav" class="list-group-item list-group-item-action">
+        <h5>List Nav</h5>
+        <div class="mt-2 mb-1">
+        A component used for displaying a series of item and mainly used for navigation. 
+        It can contain an icon, nested items, and provides a consistent styling for organizing the items.
+        </div>
+      </a>
       <a href="side-drawer" class="list-group-item list-group-item-action">
         <h5>Side Drawer</h5>
         <div class="mt-2 mb-1">
@@ -184,6 +191,14 @@ next:
     <div class="mt-2 mb-1">
     A modal image gallery component. It works with a series of images and includes support 
     for previous/next controls, indicators and toolbar buttons.
+    </div>
+  </a>
+  <a href="list-tile" class="list-group-item list-group-item-action">
+    <h5>List Tile</h5>
+    <div class="mt-2 mb-1">
+    A component used to display information. It can contain an image, content, 
+    actions, subheaders and much more. BsListTile represents content in such a way 
+    which makes it easy to identify a specific item in a collection.
     </div>
   </a>
   <a href="menu" class="list-group-item list-group-item-action">
