@@ -130,22 +130,22 @@ next:
     </div>
   </div>
   <a href="datetime-picker" class="list-group-item list-group-item-action">
-    <h5>DateTime Picker</h5>
+    <h5>Date Picker</h5>
     <div class="mt-2 mb-1">
     A component that generates a calendar style date selection widget, which 
     can be used to create customized date picker inputs.
     </div>
   </a>
+  <a href="dropdown-menu" class="list-group-item list-group-item-action">
+    <h5>Dropdown Menu</h5>
+    <div class="mt-2 mb-1">
+    A popup container which are typically used for displaying lists of links and 
+    actions in a dropdown menu style.
+    </div>
+  </a>
   <div class="list-group-item">
-    <div class="h5 mb-4">Image & Icons:</div>
+    <div class="h5 mb-4">Icons:</div>
     <div class="list-group">
-      <a href="avatar" class="list-group-item list-group-item-action">
-        <h5>Avatar</h5>
-        <div class="mt-2 mb-1">
-        A component which are typically used to display a user profile as a picture, icon, 
-        or short text. 
-        </div>
-      </a>
       <a href="icon" class="list-group-item list-group-item-action">
         <h5>Icon</h5>
         <div class="mt-2 mb-1">
@@ -170,13 +170,6 @@ next:
         A lightweight component that load an icon from Google Material Icons dynamically.
         </div>
       </a>
-      <a href="image-holder" class="list-group-item list-group-item-action">
-        <h5>Image Holder</h5>
-        <div class="mt-2 mb-1">
-        A lightweight component which is primarily used to create SVG shape to visualize 
-        image placeholder.
-        </div>
-      </a>
       <a href="toggle-icon" class="list-group-item list-group-item-action">
         <h5>Toggle Icon</h5>
         <div class="mt-2 mb-1">
@@ -186,13 +179,32 @@ next:
       </a>
     </div>
   </div>
-  <a href="lightbox" class="list-group-item list-group-item-action">
-    <h5>Lighbox</h5>
-    <div class="mt-2 mb-1">
-    A modal image gallery component. It works with a series of images and includes support 
-    for previous/next controls, indicators and toolbar buttons.
+  <div class="list-group-item">
+    <div class="h5 mb-4">Image:</div>
+    <div class="list-group">
+      <a href="avatar" class="list-group-item list-group-item-action">
+        <h5>Avatar</h5>
+        <div class="mt-2 mb-1">
+        A component which are typically used to display a user profile as a picture, icon, 
+        or short text. 
+        </div>
+      </a>
+      <a href="image-holder" class="list-group-item list-group-item-action">
+        <h5>Image Holder</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is primarily used to create SVG shape to visualize 
+        image placeholder.
+        </div>
+      </a>
+      <a href="lightbox" class="list-group-item list-group-item-action">
+        <h5>Lighbox</h5>
+        <div class="mt-2 mb-1">
+        A modal image gallery component. It works with a series of images and includes support 
+        for previous/next controls, indicators and toolbar buttons.
+        </div>
+      </a>
     </div>
-  </a>
+  </div>
   <a href="list-tile" class="list-group-item list-group-item-action">
     <h5>List Tile</h5>
     <div class="mt-2 mb-1">
@@ -201,11 +213,10 @@ next:
     which makes it easy to identify a specific item in a collection.
     </div>
   </a>
-  <a href="menu" class="list-group-item list-group-item-action">
-    <h5>Menu</h5>
+  <a href="popover" class="list-group-item list-group-item-action">
+    <h5>Popover</h5>
     <div class="mt-2 mb-1">
-    A popup container which are typically used for displaying lists of links and actions in 
-    a dropdown menu format.
+    A lightweight component which is used as a popup container.
     </div>
   </a>
   <a href="tabs" class="list-group-item list-group-item-action">

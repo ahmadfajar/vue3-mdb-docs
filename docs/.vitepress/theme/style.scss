@@ -27,8 +27,8 @@
  * -------------------------------------------------------------------------- 
  */
 :root {
-  // --vp-c-brand-1: #646cff;
-  --vp-c-brand-2: #747bff;
+  --vp-c-brand-1: #8b4fda;
+  --vp-c-brand-2: #5c12a1;
   --vp-c-brand-lighter: #9499ff;
   --vp-c-brand-lightest: #bcc0ff;
   --vp-c-brand-dark: #535bf2;
@@ -37,6 +37,7 @@
   --vp-c-mute: rgba(239, 239, 239, 0.8);
   --vp-c-yellow-soft: rgba(234, 179, 8, 0.1);
   --vp-code-color: var(--bs-code-color);
+  --vp-badge-tip-text: #8b4fda;
 }
 
 /**
@@ -180,7 +181,7 @@
 
   &._sponsor {
     a.btn {
-      --bs-btn-hover-color: var(--vp-c-brand-lighter);
+      --bs-btn-hover-color: var(--vp-c-brand-2);
       text-decoration: none;
 
       &:hover {
@@ -429,10 +430,11 @@
 .dark {
   --vp-c-bg: #252529;
   --vp-c-bg-soft: #212121;
-  --vp-c-brand-1: #8ce2fc;
-  --vp-c-brand-2: #b052b0;
+  --vp-c-brand-1: #70d99e;
+  --vp-c-brand-2: #38ab6a; // #b052b0;
   --vp-c-brand-lighter: #{lighten(#621d62, 45%)};
   --vp-c-mute: #313136;
+  --vp-badge-tip-text: #be92f7;
   --vp-button-brand-bg: #880e4f;
   --vp-button-brand-border: #6d124d;
   --vp-button-brand-hover-bg: #b11166;
@@ -596,6 +598,10 @@ body {
   .VPSidebarItem {
     &.collapsible:not(.has-active) {
       > .item {
+        > .text {
+          color: var(--vp-c-text-2);
+        }
+
         &:hover {
           > .text {
             color: var(--vp-c-brand-lighter);

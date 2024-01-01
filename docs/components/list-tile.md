@@ -196,23 +196,25 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
 
 ```vue
 <template>
-  <bs-card class="mobi-card bg-stylish-color text-white m-3 m-md-0" shadow>
-    <bs-list-view color="stylish-color">
-      <bs-subheader dark>Today</bs-subheader>
-      <bs-list-tile v-for="item in listItems1">
-        <bs-list-tile-leading :img-src="item.avatar" size="36" circle></bs-list-tile-leading>
-        <bs-list-tile-content multi-line>
-          <bs-list-tile-title class="fw-semibold">{{ item.title }}</bs-list-tile-title>
-          <bs-list-tile-subtitle :raw-html="item.subtitle"></bs-list-tile-subtitle>
-        </bs-list-tile-content>
-      </bs-list-tile>
-    </bs-list-view>
-    <bs-divider dark></bs-divider>
-    <bs-card-body>
-      <bs-card-content type="subtitle">Another Content Title</bs-card-content>
-      <bs-card-content>{{ content }}</bs-card-content>
-    </bs-card-body>
-  </bs-card>
+  <div class="my-demo-wrapper w-100">
+    <bs-card class="mobi-card bg-stylish-color text-white mx-md-auto" shadow>
+      <bs-list-view color="stylish-color">
+        <bs-subheader dark>Today</bs-subheader>
+        <bs-list-tile v-for="item in listItems1">
+          <bs-list-tile-leading :img-src="item.avatar" size="36" circle></bs-list-tile-leading>
+          <bs-list-tile-content multi-line>
+            <bs-list-tile-title class="fw-semibold">{{ item.title }}</bs-list-tile-title>
+            <bs-list-tile-subtitle :raw-html="item.subtitle"></bs-list-tile-subtitle>
+          </bs-list-tile-content>
+        </bs-list-tile>
+      </bs-list-view>
+      <bs-divider dark></bs-divider>
+      <bs-card-body>
+        <bs-card-content type="subtitle">Another Content Title</bs-card-content>
+        <bs-card-content>{{ content }}</bs-card-content>
+      </bs-card-body>
+    </bs-card>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -655,50 +657,52 @@ The following are a collection of examples that demonstrate more advanced use of
 ::: BlockVue {title="ListTile Advanced Example"}
 
 ```html
-<bs-card class="mobi-card mx-md-auto m-3 m-md-0" shadow>
-  <bs-card-media title="Jonathan Smith">
-    <img src="https://picsum.photos/id/91/600/350.jpg?blur=2" alt="image" />
-  </bs-card-media>
-  <bs-list-view>
-    <bs-list-tile>
-      <bs-list-tile-leading class="text-info" icon="phone"> </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title class="fw-semibold">0821-5555-1234</bs-list-tile-title>
-        <bs-list-tile-subtitle class="text-muted"> Mobile | Indonesia </bs-list-tile-subtitle>
-      </bs-list-tile-content>
-    </bs-list-tile>
-    <bs-list-tile>
-      <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title class="fw-semibold"> +6221-4444-6789</bs-list-tile-title>
-        <bs-list-tile-subtitle class="text-muted">Work | Indonesia</bs-list-tile-subtitle>
-      </bs-list-tile-content>
-    </bs-list-tile>
-    <bs-divider left-indent="60"></bs-divider>
-    <bs-list-tile>
-      <bs-list-tile-leading class="text-info" icon="email"></bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title class="fw-semibold"> jonathan.smith@company.com </bs-list-tile-title>
-        <bs-list-tile-subtitle class="text-muted">Work</bs-list-tile-subtitle>
-      </bs-list-tile-content>
-    </bs-list-tile>
-    <bs-list-tile>
-      <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title class="fw-semibold"> jonathan.smith212@example.com </bs-list-tile-title>
-        <bs-list-tile-subtitle class="text-muted">Personal</bs-list-tile-subtitle>
-      </bs-list-tile-content>
-    </bs-list-tile>
-    <bs-divider left-indent="60"></bs-divider>
-    <bs-list-tile>
-      <bs-list-tile-leading class="text-info" icon="place"> </bs-list-tile-leading>
-      <bs-list-tile-content>
-        <bs-list-tile-title class="fw-semibold">1400 Main Street</bs-list-tile-title>
-        <bs-list-tile-subtitle class="text-muted">Jakarta, Indonesia</bs-list-tile-subtitle>
-      </bs-list-tile-content>
-    </bs-list-tile>
-  </bs-list-view>
-</bs-card>
+<div class="my-demo-wrapper w-100">
+  <bs-card class="mobi-card mx-md-auto" shadow>
+    <bs-card-media title="Jonathan Smith">
+      <img src="https://picsum.photos/id/91/600/350.jpg?blur=2" alt="image" />
+    </bs-card-media>
+    <bs-list-view>
+      <bs-list-tile>
+        <bs-list-tile-leading class="text-info" icon="phone"> </bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title class="fw-semibold">0821-5555-1234</bs-list-tile-title>
+          <bs-list-tile-subtitle class="text-muted"> Mobile | Indonesia </bs-list-tile-subtitle>
+        </bs-list-tile-content>
+      </bs-list-tile>
+      <bs-list-tile>
+        <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title class="fw-semibold"> +6221-4444-6789</bs-list-tile-title>
+          <bs-list-tile-subtitle class="text-muted">Work | Indonesia</bs-list-tile-subtitle>
+        </bs-list-tile-content>
+      </bs-list-tile>
+      <bs-divider left-indent="60"></bs-divider>
+      <bs-list-tile>
+        <bs-list-tile-leading class="text-info" icon="email"></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title class="fw-semibold"> jonathan.smith@company.com </bs-list-tile-title>
+          <bs-list-tile-subtitle class="text-muted">Work</bs-list-tile-subtitle>
+        </bs-list-tile-content>
+      </bs-list-tile>
+      <bs-list-tile>
+        <bs-list-tile-leading class="md-has-icon" size="24"></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title class="fw-semibold"> jonathan.smith212@example.com </bs-list-tile-title>
+          <bs-list-tile-subtitle class="text-muted">Personal</bs-list-tile-subtitle>
+        </bs-list-tile-content>
+      </bs-list-tile>
+      <bs-divider left-indent="60"></bs-divider>
+      <bs-list-tile>
+        <bs-list-tile-leading class="text-info" icon="place"> </bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title class="fw-semibold">1400 Main Street</bs-list-tile-title>
+          <bs-list-tile-subtitle class="text-muted">Jakarta, Indonesia</bs-list-tile-subtitle>
+        </bs-list-tile-content>
+      </bs-list-tile>
+    </bs-list-view>
+  </bs-card>
+</div>
 ```
 :::
 
@@ -994,7 +998,7 @@ $font-size-base: 1rem;
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
-| color         | `String`    | `'white'` | ListView color appearance. |
+| color         | `String`    | `'white'` | ListView color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) or [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | individual-state  | `Boolean` | `false`   | The ListView doesn't manage each ListTile's state. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded      | `Boolean` | `false`   | Apply _rounded style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded-pill | `Boolean` | `false`   | Apply _rounded pill style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |

@@ -61,19 +61,27 @@ export const sidebar = [
           { text: 'Side Drawer', link: '/components/side-drawer' }
         ]
       },
+      { text: 'Dropdown Menu', link: '/components/dropdown-menu' },
       {
-        text: 'Image & Icons',
+        text: 'Icons',
         collapsed: true,
         items: [
-          { text: 'Avatar', link: '/components/avatar' },
           { text: 'Icon', link: '/components/icon' },
           { text: 'Icon Spinner', link: '/components/icon-spinner' },
           { text: 'Icon SVG', link: '/components/icon-svg' },
-          { text: 'Image Placeholder', link: '/components/image-holder' },
           { text: 'Toggle Icon', link: '/components/toggle-icon' }
         ]
       },
+      {
+        text: 'Image',
+        collapsed: true,
+        items: [
+          { text: 'Avatar', link: '/components/avatar' },
+          { text: 'Image Placeholder', link: '/components/image-holder' },
+        ]
+      },
       { text: 'List Tile', link: '/components/list-tile' },
+      { text: 'Popover', link: '/components/popover' },
       {
         text: 'Miscellaneous',
         collapsed: true,

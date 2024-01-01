@@ -22,7 +22,7 @@ allowing developers to modify and contribute to its development if they choose t
 ## Flexible components
 
 Every component in Vue MDBootstrap is built according to the [Google Material Design 3](https://m3.material.io/) 
-specifications and comes with hundreds of customization options suitable for most style or design; 
+specifications and comes with many customization options suitable for most style or design; 
 even though it’s not Material Design. Our UI components leverage the world's most popular css 
 framework - *Bootstrap v5*, which can help you build responsive apps faster and mobile friendly.
 
