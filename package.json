@@ -16,11 +16,11 @@
   "devDependencies": {
     "@stackblitz/sdk": "^1.9.0",
     "@types/markdown-it-container": "^2.0.9",
-    "@types/node": "^20.10.5",
+    "@types/node": "^20.10.6",
     "cheerio": "^1.0.0-rc.12",
     "markdown-it": "^14.0.0",
     "markdown-it-container": "^4.0.0",
-    "vitepress": "^1.0.0-rc.32",
+    "vitepress": "^1.0.0-rc.35",
     "vue-mdbootstrap": "^2.0.4"
   },
   "scripts": {
@@ -29,6 +29,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "peerDependencies": {
-    "vue": "^3.3.12"
+    "vue": "^3.4.5"
   }
 }

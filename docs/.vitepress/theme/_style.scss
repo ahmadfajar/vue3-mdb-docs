@@ -41,6 +41,25 @@
 }
 
 /**
+ * Z-Indexes
+ * -------------------------------------------------------------------------- 
+ */
+:root {
+  // --vp-z-index-footer: 10;
+  --vp-z-index-layout-top: 1040;
+  --vp-z-index-local-nav: 1000;
+  --vp-z-index-nav: 1001;
+  --vp-z-index-backdrop: 1050;
+  --vp-z-index-sidebar: 1060;
+
+  @media (min-width: 960px) {
+    --vp-z-index-local-nav: 1020;
+    --vp-z-index-nav: 1030;
+    --vp-z-index-sidebar: 1025;
+  }
+}
+
+/**
  * Component: Button
  * -------------------------------------------------------------------------- 
  */
@@ -89,12 +108,11 @@
   --vp-custom-block-tip-text: var(--vp-c-brand-darker);
   --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-warning-border: #b5a775;
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
   --vp-custom-block-danger-code-bg: var(--vp-c-brand-dimm);
-  --vp-custom-block-info-code-bg: var(--vp-c-code-dimm);
-  --vp-custom-block-details-code-bg: var(--vp-c-code-dimm);
-  --vp-z-index-nav: 1030;
-  --vp-z-index-sidebar: 1031;
+  --vp-custom-block-info-code-bg: var(--vp-code-bg);
+  --vp-custom-block-details-code-bg: var(--vp-code-bg);
   --doc-text-code-dt: #f28f64;
 }
 
@@ -103,7 +121,7 @@
  * -------------------------------------------------------------------------- 
  */
 .DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand) !important;
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
 /**
@@ -418,11 +436,12 @@
 
 .NotFound {
   .link {
+    text-decoration: none;
+
     &:hover {
       background-color: var(--vp-c-brand-dimm);
       color: var(--vp-c-brand-darker);
       border-color: var(--vp-c-brand-darker);
-      text-decoration: none;
     }
   }
 }
@@ -444,12 +463,11 @@
   --vp-custom-block-tip-text: #55d8ad;
   --vp-custom-block-tip-bg: var(--vp-c-green-soft);
   --vp-custom-block-tip-code-bg: rgba(16, 185, 129, 0.1);
+  --vp-custom-block-warning-border: #807346;
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
   --vp-custom-block-danger-border: var(--vp-c-red-3);
   --vp-custom-block-danger-code-bg: rgba(244, 63, 94, 0.1);
-  --vp-custom-block-info-code-bg: var(--vp-c-mute-light);
-  --vp-custom-block-details-code-bg: var(--vp-c-mute-light);
-  --vp-code-color: #94faf7; // #fefebb; var(--vp-text-mute);
+  --vp-code-color: #94faf7; // #fefebb;
   --doc-example-border-color: #484848;
   --doc-example-toolbar-bg: #242424;
   --doc-example-content-bg: #1c1d1e;

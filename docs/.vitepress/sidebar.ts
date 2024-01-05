@@ -83,6 +83,14 @@ export const sidebar = [
       { text: 'List Tile', link: '/components/list-tile' },
       { text: 'Popover', link: '/components/popover' },
       {
+        text: 'Progress Control',
+        collapsed: true,
+        items: [
+          { text: 'Progress', link: '/components/progress' },
+          { text: 'Progress Bar', link: '/components/progressbar' },
+        ]
+      },
+      {
         text: 'Miscellaneous',
         collapsed: true,
         items: [
