@@ -260,7 +260,7 @@ applied to the `color` property.
 
 ### Manage by ListView
 
-If property `url="#input-control"`, `url` or `path` of `<bs-list-tile>` is defined explicitly,
+If property `navigable`, `url` or `path` of `<bs-list-tile>` is defined explicitly,
 then the active state of `<bs-list-tile>` can be manage automatically by
 `<bs-list-view>` component when `<bs-list-tile>` is clicked.
 
@@ -281,7 +281,7 @@ then the active state of `<bs-list-tile>` can be manage automatically by
       <bs-list-view>
         <bs-subheader>Summer Recipes</bs-subheader>
         <template v-for="(item, index) in listItems2" :key="item.title">
-          <bs-list-tile :disabled="item.disabled" url="#manage-by-list-view">
+          <bs-list-tile :disabled="item.disabled" navigable>
             <bs-list-tile-leading
               :img-src="item.photo"
               :size="{ height: 56, width: 85 }"
@@ -383,7 +383,7 @@ property of the `<bs-list-view>` component explicitly.
           <bs-list-tile
             v-model:active="item.active"
             :disabled="item.disabled"
-            url="#individual-state"
+            navigable
           >
             <bs-list-tile-leading
               :img-src="item.photo"
@@ -752,7 +752,7 @@ setting page layout.
         </bs-list-tile>
         <bs-divider></bs-divider>
         <bs-subheader>General</bs-subheader>
-        <bs-list-tile url="#input-control" @click.stop="toggleEnableNotification()">
+        <bs-list-tile navigable @click.stop="toggleEnableNotification()">
           <bs-list-tile-action>
             <bs-checkbox
               :model-value="enableNotification"
@@ -767,7 +767,7 @@ setting page layout.
             </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
-        <bs-list-tile url="#input-control" @click.stop="toggleEnableSound()">
+        <bs-list-tile navigable @click.stop="toggleEnableSound()">
           <bs-list-tile-action>
             <bs-checkbox
               :model-value="enableSound"
@@ -782,7 +782,7 @@ setting page layout.
             </bs-list-tile-subtitle>
           </bs-list-tile-content>
         </bs-list-tile>
-        <bs-list-tile url="#input-control" @click.stop="toggleEnableWidget()">
+        <bs-list-tile navigable @click.stop="toggleEnableWidget()">
           <bs-list-tile-action>
             <bs-checkbox
               :model-value="enableWidget"
@@ -824,10 +824,6 @@ function toggleEnableWidget() {
 }
 </script>
 ```
-:::
-
-::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Property `url="#input-controls"` can be replaced with `navigable` property.
 :::
 
 

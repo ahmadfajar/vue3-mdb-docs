@@ -14,7 +14,7 @@ next:
 **Table of Contents** on this section.
 :::
 
-<div class="list-group mt-4">
+<div class="list-group md-shadow mt-4">
   <a href="alert" class="list-group-item list-group-item-action">
     <h5>Alert</h5>
     <div class="mt-2 mb-1">
@@ -219,6 +219,24 @@ next:
     A lightweight component which is used as a popup container.
     </div>
   </a>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Progress Control:</div>
+    <div class="list-group">
+      <a href="progress" class="list-group-item list-group-item-action">
+        <h5>Progresss</h5>
+        <div class="mt-2 mb-1">
+        A component which are typically used to visualize the data loading progress.
+        </div>
+      </a>
+      <a href="progressbar" class="list-group-item list-group-item-action">
+        <h5>Progress Bar</h5>
+        <div class="mt-2 mb-1">
+        Bootstrap progress bar's component featuring support for animated background 
+        and text labels which are typically used for displaying simple progress bar.
+        </div>
+      </a>
+    </div>
+  </div>
   <a href="tabs" class="list-group-item list-group-item-action">
     <h5>Tabs</h5>
     <div class="mt-2 mb-1">

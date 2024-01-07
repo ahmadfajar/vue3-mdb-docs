@@ -60,11 +60,11 @@ to `buffer` to enable the buffer mode.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-4 p-4">
+  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
     <bs-progress v-model="progress2" :buffer="buffer1" mode="buffer"></bs-progress>
-    <div class="mt-4 mb-2">Value: {{ progress2 }}%</div>
+    <div class="mt-4 mb-2">Value: <b>{{ progress2 }}%</b></div>
     <input v-model.number="progress2" class="form-range" type="range" />
-    <div class="my-2">Buffer: {{ buffer1 }}%</div>
+    <div class="my-2">Buffer: <b>{{ buffer1 }}%</b></div>
     <input v-model.number="buffer1" class="form-range" type="range" />
   </div>
 </template>
@@ -87,16 +87,16 @@ Use `height` property to sets the _Bar_ progress thickness.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-4 p-4">
+  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
     <bs-progress v-model="progress3" :height="thickness1" mode="determinate"></bs-progress>
-    <div class="my-4">
-      <div class="mb-2">Value: {{ progress3 }}%</div>
-      <input v-model.number="progress3" class="form-range" type="range" />
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-8 mt-4">
       <bs-numeric-field v-model="thickness1" min-value="2" max-value="50" filled>
         <label class="col-md-4 col-form-label">Thickness: </label>
       </bs-numeric-field>
+    </div>
+    <div class="mt-4">
+      <div class="mb-2">Value: <b>{{ progress3 }}%</b></div>
+      <input v-model.number="progress3" class="form-range" type="range" />
     </div>
   </div>
 </template>
@@ -229,9 +229,9 @@ onBeforeUnmount(() => {
 | diameter | `Number` | `60`    | Spinner diameter value. |
 | height   | `Number` | `5`     | Progress bar thickness. |
 | mode     | `String` | `'indeterminate'` | Progress control mode, valid values are: `determinate`, `indeterminate`, `buffer`. |
+| model-value <Badge type="tip">v-model</Badge> | `Number` | `0` | The value monitored by `v-model` to control the progress value. <BsBadge color="info">v2.0.0</BsBadge> |
 | stroke   | `Number` | `6`     | Spinner thickness. |
 | type     | `String` | `'bar'` | ProgressControl type, valid values are: `spinner`, `bar`. |
-| model-value <Badge type="tip">v-model</Badge> | `Number` | `0` | The value monitored by `v-model` to control the progress value. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
