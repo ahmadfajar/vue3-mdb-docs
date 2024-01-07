@@ -255,7 +255,7 @@ The component css variables inherited from
 
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
-| color    | `String` | | The component color appearance. Any of [MDBootstrap Colors](reference/color-variants#mdbootstrap-colors) variant or [Material Color](/reference/color-variants#material-colors) variants can be applied. |
+| color    | `String` | | The component color appearance. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variant or [Material Color](/reference/color-variants#material-colors) variants can be applied. |
 | height   | `Number` | | Progress bar thickness. |
 | model-value <Badge type="tip">v-model</Badge> | `Number` | `0` | The value monitored by `v-model` to control the progress bar value. |
 | rounded  | `Boolean` | `true`  | Set to `false` to remove the rounded border on the side of the progress bar. |

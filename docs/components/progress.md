@@ -225,7 +225,7 @@ onBeforeUnmount(() => {
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
 | buffer   | `Number` | `0`     | Progress bar buffer length. |
-| color    | `String` | `'primary'` | The component color appearance. Any of [MDBootstrap Colors](reference/color-variants#mdbootstrap-colors) variant can be applied. |
+| color    | `String` | `'primary'` | The component color appearance. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variant can be applied. |
 | diameter | `Number` | `60`    | Spinner diameter value. |
 | height   | `Number` | `5`     | Progress bar thickness. |
 | mode     | `String` | `'indeterminate'` | Progress control mode, valid values are: `determinate`, `indeterminate`, `buffer`. |
