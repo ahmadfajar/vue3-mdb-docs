@@ -717,6 +717,15 @@ body {
   .sponsors {
     margin-top: 4rem;
 
+    .btn {
+      color: var(--bs-btn-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--bs-btn-hover-color);
+      }
+    }
+
     .btn-outline-orange {
       --bs-btn-font-weight: 400;
       --bs-btn-active-bg: rgba(255, 157, 13, 0.75);

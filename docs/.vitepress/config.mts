@@ -1,7 +1,7 @@
 import { load } from 'cheerio';
 import container from 'markdown-it-container';
-import * as Utils from 'markdown-it/lib/common/utils';
-import type Token from 'markdown-it/lib/token';
+import * as Utils from 'markdown-it/lib/common/utils.mjs';
+import type Token from 'markdown-it/lib/token.mjs';
 import fs from 'node:fs';
 import { defineConfig } from 'vitepress';
 import { headMeta } from './headers';

@@ -6,6 +6,61 @@ All release notes can be found through [GitHub](https://github.com/ahmadfajar/vu
 and can be viewed below for your convenience.
 :::
 
+
+## v2.0.6
+
+Released: April 11, 2024
+
+### Bug Fixes
+
+- **BsTabs**: fix tab alignment not working properly on horizontal tabs.
+- **BsChipField**: fix input field width.
+
+
+## v2.0.5
+
+Released: April 8, 2024
+
+### Features & Improvements
+
+- Add memory **CacheManager**.
+- **AbstractStore**, **BsStore**, **BsModel**: improve data-model processing and 
+  make property `restUrl` writable.
+- **BsButton**: 
+  - Improve css styles when `dropdown-toggle` and `tonal` property is defined.
+  - improve css styles on `xs` (extra-small) button size.
+- **BsCombobox**: 
+  - Improve popover display placement coordinates.
+  - Improve chain loading dataset when `parentValue` is defined.
+- **BsIcon**, **BsIconSvg**: cache loaded icon using CacheManager to improve performance. 
+- **BsNumericField**: improve classic form field styles.
+- **BsListbox**: add property `autoload` to turn-off the autoloading dataset from remote source.
+- **BsListTile**: improvement when the `navigable` property is defined.
+- **BsPopover**: improve display placement coordinates.
+- **BsTabs**: 
+  - Improve padding on small-screen device. 
+  - Support sliding on horizontal tabs when the sum of tabs width exceed the container width. 
+- **BsTextArea**, **BsTextField**, **BsChipField**, **BsCombobox**, **BsNumericField**, 
+  **BsDateTimeField** : move the placement of the validation icon to always be on the right at the end
+- Improve TypeScript definition.
+
+### Bug Fixes
+
+- **BsButton**: fix border style on `flat` button variant.
+- **BsCheckboxGroup**, **BsRadioGroup**: bug fix when `column` props is defined.
+- **BsListbox**: fix searchbox visibility.
+- **BsListNavItem**: fix incorrect html tag when component is disabled.
+- **BsTabs**: 
+  - Fix `tabClass` property for custom css is not applied.
+  - Fix activeTab not sync when `modelValue` is changed programmatically.
+- **BsNumericField**: fix `maxValue` and `minValue` property didn't work properly.
+- **BsTextField**: fix field value doesn't change immediately when the `type` property is `password`.
+- **BsTextArea**, **BsTextField**, **BsChipField**, **BsCombobox**, **BsNumericField**, **BsDateTimeField**: 
+  - Fix validation integration using external validator.
+  - Fix `validationIcon` property doesn't work properly.
+  - Fix `outlined` property conflict with `filled` property when both property are present.
+
+
 ## v2.0.4
 
 Released: November 25, 2023
