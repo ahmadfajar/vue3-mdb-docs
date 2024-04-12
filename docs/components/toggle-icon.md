@@ -73,7 +73,7 @@ The `<bs-icon-toggle>` tag still works, but has been deprecated since v2.0.0.
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | (`value`: `Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

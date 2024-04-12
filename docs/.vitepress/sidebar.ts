@@ -80,6 +80,14 @@ export const sidebar = [
           { text: 'Image Placeholder', link: '/components/image-holder' },
         ]
       },
+      {
+        text: 'Input Controls',
+        collapsed: true,
+        items: [
+          { text: 'Text Area', link: '/components/textarea' },
+          { text: 'Text Field', link: '/components/textfield' },
+        ]
+      },
       { text: 'List Tile', link: '/components/list-tile' },
       { text: 'Popover', link: '/components/popover' },
       {

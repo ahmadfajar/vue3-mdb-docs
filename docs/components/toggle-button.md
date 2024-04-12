@@ -488,7 +488,7 @@ The component css variables inherited from [BsButton](/components/button#css-var
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | (`value`: `String`/`Number`/`Boolean`/`Array`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String`/`Number`/`Boolean`/`Array`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -497,15 +497,15 @@ The component css variables inherited from [BsButton](/components/button#css-var
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
-| icon    | (`item: TInputOptionItem`) | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
-| label   | (`item: TInputOptionItem`) | The outlet slot used to place custom label. <BsBadge color="info">v2.0.1</BsBadge> |
+| icon    | ( item:`TInputOptionItem`) | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
+| label   | ( item:`TInputOptionItem`) | The outlet slot used to place custom label. <BsBadge color="info">v2.0.1</BsBadge> |
 
 </div>
   </BsTab>
 </BsTabs>
 
 
-### TInputOptionItem {class="mt-lg-5"}
+### TInputOptionItem {#api-tinput-option-item class="mt-lg-5"}
 
 The Input item has properties as described below:
 

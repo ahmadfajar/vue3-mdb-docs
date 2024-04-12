@@ -95,7 +95,7 @@ with specific value, such as `button`, `submit`, or `reset`.
     <bs-button type="reset" color="secondary">Reset</bs-button>
   </div>
   <div class="col text-center">
-    <bs-button href="#" color="blue">Link</bs-button>
+    <bs-button href="#element-type" color="blue">Link</bs-button>
   </div>
 </div>
 ```

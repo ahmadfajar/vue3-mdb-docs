@@ -535,8 +535,8 @@ function toggleSideDrawer1(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change  | (`value`: `IListItem`, `oldValue`: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value`: `IListItem`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| change  | ( value:`IListItem`, oldValue: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`IListItem`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -615,8 +615,8 @@ function toggleSideDrawer1(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| click  | (`value`: `Event`) | Fired when a non-disabled _ListNavItem_ is clicked.  |
-| update:active | (`value`: `Boolean`) | Fired when this component's state is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| click  | ( evt:`Event`) | Fired when a non-disabled _ListNavItem_ is clicked.  |
+| update:active | ( value:`Boolean`) | Fired when this component's state is updated. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

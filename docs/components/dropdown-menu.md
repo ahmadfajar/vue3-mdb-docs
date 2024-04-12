@@ -314,7 +314,7 @@ const show1 = ref(false);
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Fired when **dropdown menu** is closed. |
-| update:open | (`value: boolean`) | Used to update the `open` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:open | ( state:`Boolean`) | Used to update the `open` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

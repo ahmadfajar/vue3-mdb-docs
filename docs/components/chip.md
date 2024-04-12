@@ -808,8 +808,8 @@ function toggleDismissibleChip(value: boolean) {
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Triggers when the close (`x`) button is clicked or chip has been dismissed. |
-| update:active      | (`value`: `Boolean`) | Triggers when the chip is dismissed and update the `active` property. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value`: `Boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:active      | ( value:`Boolean`) | Triggers when the chip is dismissed and update the `active` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`Boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

@@ -521,7 +521,7 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 | placement   | `String`  | `'bottom-left'` | **Popover** display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | space       | `Number` |  | Number of pixel to shift the **Popover** display position. |
 | transition  | `String`  | `'scale'` | Transition animation when show the Popover. This animation is effected by `placement` property. |
-| trigger <Badge type="danger">required</Badge> | `HTMLElement`  |  | HTML element to calculate the **Popover** display position. |
+| trigger <Badge type="danger">required</Badge> | `HTMLElement`/`String`  |  | HTML element or element ID which is used to activate and calculate this **Popover** display position. |
 
 </div>
   </BsTab>
@@ -531,7 +531,7 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Fired when **Popover** is closed. |
-| update:open | (`value: boolean`) | Used to update the `open` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:open | ( state:`Boolean`) | Used to update the `open` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

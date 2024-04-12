@@ -168,14 +168,14 @@ Quickly provide actionable badges with hover and focus states by specifying the
 
 ```html
 <div class="my-demo-wrapper">
-  <bs-badge tag="a" variant="primary" href="#">Primary</bs-badge>
-  <bs-badge tag="a" variant="secondary" href="#">Secondary</bs-badge>
-  <bs-badge tag="a" variant="success" href="#">Success</bs-badge>
-  <bs-badge tag="a" variant="danger" href="#">Danger</bs-badge>
-  <bs-badge tag="a" variant="warning" href="#">Warning</bs-badge>
-  <bs-badge tag="a" variant="info" href="#">Info</bs-badge>
-  <bs-badge tag="a" variant="light" href="#">light</bs-badge>
-  <bs-badge tag="a" variant="dark" href="#">dark</bs-badge>
+  <bs-badge tag="a" variant="primary" href="#actionable-badges">Primary</bs-badge>
+  <bs-badge tag="a" variant="secondary" href="#actionable-badges">Secondary</bs-badge>
+  <bs-badge tag="a" variant="success" href="#actionable-badges">Success</bs-badge>
+  <bs-badge tag="a" variant="danger" href="#actionable-badges">Danger</bs-badge>
+  <bs-badge tag="a" variant="warning" href="#actionable-badges">Warning</bs-badge>
+  <bs-badge tag="a" variant="info" href="#actionable-badges">Info</bs-badge>
+  <bs-badge tag="a" variant="light" href="#actionable-badges">light</bs-badge>
+  <bs-badge tag="a" variant="dark" href="#actionable-badges">dark</bs-badge>
 </div>
 ```
 :::

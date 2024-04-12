@@ -43,7 +43,7 @@ export const headMeta: HeadConfig[] = [
   [
     'link',
     {
-      rel: "preload stylesheet",
+      rel: "stylesheet",
       href: "/assets/bundle.min.css"
     }
   ],

@@ -179,7 +179,7 @@ can be applied to the `color` property.
     <div class="d-flex justify-content-center mt-5">
       <bs-progress class="me-4" color="orange" diameter="80" type="spinner"></bs-progress>
       <bs-progress
-        v-model="spinner1"
+        v-model="progress1"
         color="danger"
         diameter="80"
         stroke="10"
@@ -194,7 +194,6 @@ can be applied to the `color` property.
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
 const progress1 = ref<number>(10);
-const spinner1 = ref<number>(70);
 const timer = ref<number>();
 
 onMounted(() => {

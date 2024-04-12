@@ -1011,8 +1011,8 @@ $font-size-base: 1rem;
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change  | (`value`: `IListItem`, `oldValue`: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value`: `IListItem`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| change  | ( value:`IListItem`, `oldValue`: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`IListItem`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -1055,8 +1055,8 @@ $font-size-base: 1rem;
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| click  | (`event`: `event`, `node`: `Element`/`null`) | Fired when a non-disabled ListTile is clicked |
-| update:active | (`value`: `Boolean`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| click  | ( evt:`event`, node:`Element`/`null`) | Fired when a non-disabled ListTile is clicked |
+| update:active | ( value:`Boolean`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -1346,6 +1346,7 @@ function toggleSideDrawer1(value: boolean) {
     --md-tile-action-color: rgba(0, 0, 0, 0.4);
     font-size: 120%;
     font-weight: 200;
+    width: 25px;
   }
 }
 </style>

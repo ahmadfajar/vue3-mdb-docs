@@ -327,9 +327,9 @@ const chipItems2: TChipOptionItem[] = [
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change | (`value`: `TChipValue`/`TChipValue[]`/`null`) | Triggers immediately when the `model-value` property is changed. |
-| item:close         | (`value`: `TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value`: `TChipValue`/`TChipValue[]`/`null`) | Triggers when the `model-value` property is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| change | ( value:`TChipValue`/`TChipValue[]`/`null`) | Triggers immediately when the `model-value` property is changed. |
+| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`TChipValue`/`TChipValue[]`/`null`) | Triggers when the `model-value` property is updated. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -346,7 +346,7 @@ const chipItems2: TChipOptionItem[] = [
 </BsTabs>
 
 
-### TChipOptionItem {class="mt-lg-5"}
+### TChipOptionItem {#api-chip-option-item class="mt-lg-5"}
 
 The Chip's item has properties as described below:
 

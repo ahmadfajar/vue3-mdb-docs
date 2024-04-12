@@ -103,7 +103,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
+| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>

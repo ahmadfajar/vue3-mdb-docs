@@ -4,7 +4,6 @@ const { createVueMdb } = VueMdb;
 const app = createVueMdb({
   setup() {
     const progress1 = ref(10);
-    const spinner1 = ref(70);
     const timer = ref();
 
     onMounted(() => {
@@ -24,7 +23,6 @@ const app = createVueMdb({
 
     return {
       progress1,
-      spinner1,
       timer
     };
   }

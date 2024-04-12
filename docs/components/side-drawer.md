@@ -381,8 +381,8 @@ function toggleSideDrawer4(value: boolean) {
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize  | (`target: HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:open | (`state: boolean`) | Triggers when the component becomes visible or invisible. Use this event to update the `open` property or just use the shortcut `v-model:open`. |
+| resize  | ( target:`HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:open | ( state:`Boolean`) | Triggers when the component becomes visible or invisible. Use this event to update the `open` property or just use the shortcut `v-model:open`. |
 
 </div>
   </BsTab>

@@ -346,7 +346,7 @@ css variables with some modifications.
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Trigger when the component becomes invisible. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | (`value`: `Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
