@@ -171,7 +171,7 @@ width by explicitly define the `height` and `width` property.
 ## Animation 
 
 You can apply animation such as _spin_ or _pulse_ on avatar icon. Because 
-actually **BsAvatar** uses [BsIcon](/components/icon) internally.
+actually **BsAvatar** uses [BsIcon](/components/icons/icon) internally.
 
 ::: BlockVue {title="Animate Avatar's Icon Example" file="./docs/components/scripts/avatar.js"}
 

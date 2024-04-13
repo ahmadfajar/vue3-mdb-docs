@@ -83,7 +83,7 @@ const buffer1 = ref<number>(50);
 
 Use `height` property to sets the _Bar_ progress thickness.
 
-::: BlockVue {title="Progress Bar Thickness Example" file="./docs/components/scripts/progress-3.js"}
+::: BlockVue {clientOnly="true" title="Progress Bar Thickness Example" file="./docs/components/scripts/progress-3.js"}
 
 ```vue
 <template>

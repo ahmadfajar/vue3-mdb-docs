@@ -5,7 +5,7 @@ outline: [2, 3]
 # Chip Group
 
 ::: lead
-**BsChipGroup** extends the [BsChip](/components/chip) component by providing groupable functionality.
+**BsChipGroup** extends the [BsChip](/components/chips/chip) component by providing groupable functionality.
 It is used for creating groups of selections using chips.
 :::
 

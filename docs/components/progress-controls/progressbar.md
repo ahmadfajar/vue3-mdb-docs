@@ -114,7 +114,7 @@ const positionSrc: TDataSource = {
 
 The progress bar thickness can be adjust by using the `height` property.
 
-::: BlockVue {title="ProgressBar Thickness Example" file="./docs/components/scripts/progressbar-3.js"}
+::: BlockVue {clientOnly="true" title="ProgressBar Thickness Example" file="./docs/components/scripts/progressbar-3.js"}
 
 ```vue
 <template>

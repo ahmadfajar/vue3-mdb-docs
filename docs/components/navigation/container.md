@@ -9,8 +9,8 @@ outline: [2, 3]
 **App Container** is a lightweight components which is used as layout container for your
 application. If you intend to build an app with *Vue MDBootstrap* as the main UI components, 
 and the app layouts such as Navigation Bar and SideBar will use Vue MDBootstrap, 
-then you need these components so that [BsAppbar](/components/appbar) and 
-[BsSideDrawer](/components/side-drawer) components can work properly.
+then you need these components so that [BsAppbar](/components/navigation/appbar) and 
+[BsSideDrawer](/components/navigation/side-drawer) components can work properly.
 :::
 
 

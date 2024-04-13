@@ -8,8 +8,8 @@
 ## Overview
 
 Some components use `<bs-popover>` internally, such as [BsDropdownMenu](/components/dropdown-menu),
-[BsCombobox](/components/combobox), [BsDateTimeField](/components/datetime-field),
-[BsSearchField](/components/search-field). Example below, shows you basic usage of `<bs-popover>`.
+[BsCombobox](/components/input/combobox), [BsDateTimeField](/components/datetime-field),
+[BsSearchField](/components/input/search-field). Example below, shows you basic usage of `<bs-popover>`.
 
 ::: BlockVue {title="Popover Example" file="./docs/components/scripts/popover-1.js"}
 

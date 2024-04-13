@@ -15,7 +15,7 @@ switching views, or sorting elements.
 ## Overview 
 
 **BsToggleButton** component shares the same style variants as 
-[BsButton](/components/button#style-variants). And if you like Google Material 
+[BsButton](/components/buttons/button#style-variants). And if you like Google Material 
 Design 3 - [Segmented Button](https://m3.material.io/components/segmented-buttons/overview)
 style, you can choose a style variant that meet the ***Material Design 3 - 
 Segmented Button*** specifications. 
@@ -450,7 +450,7 @@ const albums = [
 
 ## CSS Variables
 
-The component css variables inherited from [BsButton](/components/button#css-variables) css variables.
+The component css variables inherited from [BsButton](/components/buttons/button#css-variables) css variables.
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 

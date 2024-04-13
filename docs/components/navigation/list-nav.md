@@ -47,7 +47,7 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-See [BsIcon](/components/icon) to learn more about how to apply the **Google Material Icons**
+See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Icons**
 to `icon` property.
 :::
 
