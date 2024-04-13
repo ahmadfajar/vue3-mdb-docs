@@ -205,6 +205,23 @@ next:
       </a>
     </div>
   </div>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Input Controls:</div>
+    <div class="list-group">
+      <a href="input/textarea" class="list-group-item list-group-item-action">
+        <h5>Text Area</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter a large amounts of text into an UI. 
+        </div>
+      </a>
+      <a href="input/textfield" class="list-group-item list-group-item-action">
+        <h5>Text Field</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter text into an UI.
+        </div>
+      </a>
+    </div>
+  </div>
   <a href="list-tile" class="list-group-item list-group-item-action">
     <h5>List Tile</h5>
     <div class="mt-2 mb-1">

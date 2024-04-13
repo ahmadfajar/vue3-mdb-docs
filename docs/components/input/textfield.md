@@ -6,7 +6,7 @@ outline: [2, 3]
 
 
 :::lead
-**BsTextField** is a component which is used to place collecting user provided information.
+**BsTextField** is a component that let users enter text into an UI.
 :::
 
 
@@ -17,7 +17,7 @@ attributes like `required`, `readonly`, or `disabled` and it will react to them 
 the best experience. You can also use `v-model` directive to create two-way data bindings
 on the `model-value` property.
 
-::: BlockVue {title="Classic Text Field Example"}
+::: BlockVue {title="Basic Text Field Example"}
 
 ```html
 <div class="bg-white rounded-3 p-4 w-100">
@@ -52,7 +52,7 @@ Do not use the `model-value` property when using `v-model`.
 
 ## Style Variants
 
-You can style the `<bs-text-field>` to your own preference or use a style variant 
+You can style `<bs-text-field>` to your own preference or use a style variant 
 based on Google **Material Design 2** or **Material Design 3** specifications. 
 
 ### Default
@@ -71,7 +71,7 @@ by using `floating-label` property explicitly.
   </div>
   <div class="mb-3">
     <bs-text-field floating-label>
-      <label>Field Label</label>
+      <label>Floating Label</label>
     </bs-text-field>
   </div>
   <div class="mb-2">
@@ -86,8 +86,8 @@ by using `floating-label` property explicitly.
 
 ### Filled {class="mt-lg-5"}
 
-Use `filled` property explicitly to enable `<BsTextField>` with **solid fill style**.
-And when combined with `floating-label` property, `<BsTextField>` will have a style 
+Use `filled` property explicitly to enable `<bs-text-field>` with **solid fill style**.
+And when combined with `floating-label` property, `<bs-text-field>` will have a style 
 that follows the Google **Material Design 3** specifications.
 
 ::: BlockVue {title="Filled Text Field Example"}
@@ -102,7 +102,7 @@ that follows the Google **Material Design 3** specifications.
   <hr />
   <div class="mb-3">
     <bs-text-field filled floating-label>
-      <label>Field Label</label>
+      <label>Floating Label</label>
     </bs-text-field>
   </div>
   <div class="mb-2">
@@ -118,8 +118,8 @@ that follows the Google **Material Design 3** specifications.
 
 ### Outlined {class="mt-lg-5"}
 
-Use `outlined` property explicitly to enable `<BsTextField>` with **outline style**.
-And when combined with `floating-label` property, `<BsTextField>` will have a style 
+Use `outlined` property explicitly to enable `<bs-text-field>` with **outline style**.
+And when combined with `floating-label` property, `<bs-text-field>` will have a style 
 that follows the Google **Material Design 3** specifications.
 
 ::: BlockVue {title="Outline Text Field Example"}
@@ -134,7 +134,7 @@ that follows the Google **Material Design 3** specifications.
   <hr />
   <div class="mb-4">
     <bs-text-field outlined floating-label>
-      <label>Field Label</label>
+      <label>Floating Label</label>
     </bs-text-field>
   </div>
   <div class="mb-2">
@@ -150,7 +150,7 @@ that follows the Google **Material Design 3** specifications.
 
 ### Rounded Filled {class="mt-lg-5"}
 
-Combine `filled` property and `rounded` property explicitly to enable `<BsTextField>` with 
+Combine `filled` property and `rounded` property explicitly to enable `<bs-text-field>` with 
 **rounded pill solid style**.
 
 <SmallNote color="teal">Added since v2.0.5</SmallNote>
@@ -167,7 +167,7 @@ Combine `filled` property and `rounded` property explicitly to enable `<BsTextFi
   <hr />
   <div class="mb-3">
     <bs-text-field filled floating-label rounded>
-      <label>Field Label</label>
+      <label>Floating Label</label>
     </bs-text-field>
   </div>
   <div class="mb-2">
@@ -183,7 +183,7 @@ Combine `filled` property and `rounded` property explicitly to enable `<BsTextFi
 
 ### Rounded Outlined {class="mt-lg-5"}
 
-Combine `outlined` property and `rounded` property explicitly to enable `<BsTextField>` with 
+Combine `outlined` property and `rounded` property explicitly to enable `<bs-text-field>` with 
 **rounded pill outline style**.
 
 <SmallNote color="teal">Added since v2.0.5</SmallNote>
@@ -200,7 +200,7 @@ Combine `outlined` property and `rounded` property explicitly to enable `<BsText
   <hr />
   <div class="mb-4">
     <bs-text-field outlined floating-label rounded>
-      <label>Field Label</label>
+      <label>Floating Label</label>
     </bs-text-field>
   </div>
   <div class="mb-2">
@@ -214,7 +214,7 @@ Combine `outlined` property and `rounded` property explicitly to enable `<BsText
 ::: 
 
 
-## Browser Autocomplete {class="mt-lg-5"}
+## Browser Autocomplete
 
 The `autocomplete` property gives you the option to enable browser to predict the user input.
 
@@ -238,7 +238,7 @@ The `autocomplete` property gives you the option to enable browser to predict th
 ::: 
 
 
-## Datalist Support {class="mt-lg-5"}
+## Datalist Support
 
 Datalist is a native HTML tag of `<datalist>` that contains a list of `<option>` tags. By assigning 
 an **ID** to the datalist tag, the list can be references from a text field by defining the 
@@ -274,7 +274,7 @@ auto-complete, allowing existing values to be chosen, or new values to be entere
 :::
 
 
-## Clearable {class="mt-lg-5"}
+## Clearable
 
 Define the `clear-button` property explicitly, so that the field value can be cleared easily. 
 
@@ -306,9 +306,9 @@ const fieldValue2 = ref<string>();
 :::
 
 
-## Help Text {class="mt-lg-5"}
+## Help Text
 
-The `help-text` property on `<BsTextField>` adds the provided string beneath the text field.
+The `help-text` property on `<bs-text-field>` adds the provided string beneath the text field.
 Using `persistent-help-text` will keeps the help text visible even when the text field is not focused.
 
 ::: BlockVue {title="Text Field with help text example"}
@@ -318,7 +318,7 @@ Using `persistent-help-text` will keeps the help text visible even when the text
   <div class="row row-cols-1 row-cols-lg-2">
     <div class="col">
       <div class="mb-3">
-        <bs-text-field :persistent-help-text="false" value="Grocery delivery"
+        <bs-text-field :persistent-help-text="false" model-value="Grocery delivery"
           help-text="For example, flowers or used cars" floating-label>
           <label>Product or Service</label>
         </bs-text-field>
@@ -333,7 +333,7 @@ Using `persistent-help-text` will keeps the help text visible even when the text
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field :persistent-help-text="false" value="Grocery delivery"
+        <bs-text-field :persistent-help-text="false" model-value="Grocery delivery"
           help-text="For example, flowers or used cars" floating-label filled>
           <label>Product or Service</label>
         </bs-text-field>
@@ -348,7 +348,7 @@ Using `persistent-help-text` will keeps the help text visible even when the text
     </div>
     <div class="col">
       <div class="mb-2">
-        <bs-text-field :persistent-help-text="false" value="Grocery delivery"
+        <bs-text-field :persistent-help-text="false" model-value="Grocery delivery"
           help-text="For example, flowers or used cars" floating-label outlined>
           <label>Product or Service</label>
         </bs-text-field>
@@ -367,10 +367,10 @@ Using `persistent-help-text` will keeps the help text visible even when the text
 ::: 
 
 
-## Icons {class="mt-lg-5"}
+## Icons
 
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
-provides the ability to add icon to `<BsTextField>`.
+provides the ability to add icon to `<bs-text-field>`.
 
 ::: BlockVue {title="Text Field with icons example"}
 
@@ -466,6 +466,226 @@ provides the ability to add icon to `<BsTextField>`.
 ``` 
 ::: 
 
+::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) 
+is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
+:::
+
+
+## Usage Example
+
+The following is an example that demonstrate more advanced use of the `<bs-text-field>` 
+with form validation.
+
+::: BlockVuelidate {clientOnly="true" title="Text Field advanced example" file="./docs/components/scripts/textfield-2.js"}
+```vue
+<template>
+  <bs-app-container class="my-demo-wrapper mobi-card mx-auto">
+    <bs-card class="rounded-3" shadow>
+      <bs-appbar class="bg-indigo rounded-3 rounded-bottom-0">
+        <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
+        <bs-appbar-title class="text-white" title="Sign Up"></bs-appbar-title>
+        <bs-spacer></bs-spacer>
+        <bs-button color="light-grey" icon="more_vert" mode="icon" flat></bs-button>
+      </bs-appbar>
+      <bs-card-body>
+        <form novalidate>
+          <div class="mb-3 mt-3">
+            <bs-text-field
+              v-model="member.fullName"
+              :validator="fullnameValidator"
+              action-icon-variant="filled"
+              prepend-icon="person"
+              outlined
+              floating-label
+              required
+              validation-icon
+            >
+              <label>Your Name</label>
+            </bs-text-field>
+          </div>
+          <div class="mb-3">
+            <bs-text-field
+              v-model="member.emailAddress"
+              :validator="emailValidator"
+              action-icon-variant="filled"
+              prepend-icon="email"
+              outlined
+              floating-label
+              required
+              validation-icon
+            >
+              <label>Your Email</label>
+            </bs-text-field>
+          </div>
+          <div class="mb-3">
+            <bs-text-field
+              v-model="member.password"
+              :validator="passwordValidator"
+              action-icon-variant="filled"
+              prepend-icon="key"
+              type="password"
+              outlined
+              floating-label
+              required
+              validation-icon
+            >
+              <label>Password</label>
+            </bs-text-field>
+          </div>
+          <div class="mb-4">
+            <bs-text-field
+              v-model="member.confirm"
+              :validator="confirmValidator"
+              action-icon-variant="filled"
+              prepend-icon="key"
+              type="password"
+              outlined
+              floating-label
+              required
+              validation-icon
+            >
+              <label>Confirm Password</label>
+            </bs-text-field>
+          </div>
+          <div class="d-grid gap-3">
+            <bs-button color="indigo" @click="submit($notification)">
+              <div
+                v-if="loading"
+                class="spinner-border"
+                role="status"
+                style="width: 24px; height: 24px; border-width: 3px"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <span v-else>Create account</span>
+            </bs-button>
+            <bs-button class="ms-0" color="indigo" tonal>
+              <img src="/img/google-logo.svg" style="width: 22px; height:22px" />
+              <span class="ps-2">Sign up with Google</span>
+            </bs-button>
+            <div class="text-grey-600 mb-2" style="font-size: 12px">
+              By submitting your information, you agree to our 
+              <a href="#usage-example">Term & Conditions</a> 
+              and <a href="#usage-example">Privacy Policy</a>.
+            </div>
+          </div>
+        </form>
+      </bs-card-body>
+    </bs-card>
+    <bs-notification></bs-notification>
+  </bs-app-container>
+</template>
+
+<script lang="ts" setup>
+import type { Validation } from "@vuelidate/core";
+import { email, required, sameAs } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
+import type { Ref, ComputedRef } from "vue";
+import { computed, reactive, ref, unref } from "vue";
+import { Helper, type INotificationProvider } from "vue-mdbootstrap";
+
+const loading = ref(false);
+const member = reactive({
+  fullName: null,
+  emailAddress: null,
+  password: null,
+  confirm: null,
+});
+const password = computed(() => member.password);
+const memberRules = {
+  fullName: { required },
+  emailAddress: { required, email },
+  password: { required },
+  confirm: { required, equalTo: sameAs(password) },
+};
+
+function requiredFieldValidator(
+  validator: Ref<Validation>,
+  field: string
+): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean };
+  messages: { required: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)[field];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: { required: obj.required.$message },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+    },
+  }));
+}
+
+function emailFieldValidator(validator: Ref<Validation>): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean; email: boolean };
+  messages: { required: string; email: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)['emailAddress'];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: {
+      required: obj.required.$message,
+      email: "Email address format is invalid.",
+    },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+      email: unref(obj.email.$invalid),
+    },
+  }));
+}
+
+function confirmPasswordValidator(validator: Ref<Validation>): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean; equalTo: boolean };
+  messages: { required: string; equalTo: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)['confirm'];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: {
+      required: obj.required.$message,
+      equalTo: "Password doesn't match.",
+    },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+      equalTo: unref(obj.equalTo.$invalid),
+    },
+  }));
+}
+
+const v$ = useVuelidate(memberRules, member);
+const fullnameValidator = requiredFieldValidator(v$, "fullName");
+const passwordValidator = requiredFieldValidator(v$, "password");
+const confirmValidator = confirmPasswordValidator(v$);
+const emailValidator = emailFieldValidator(v$);
+
+function submit(notification: INotificationProvider) {
+  const validator = unref(v$);
+  validator.$touch();
+
+  if (!validator.$invalid) {
+    loading.value = true;
+    Helper.defer(() => {
+      loading.value = false;
+      notification.success("Data has been submitted.");
+    }, 1000);
+  }
+}
+</script>
+```
+:::
 
 ## CSS Variables
 
@@ -478,11 +698,11 @@ provides the ability to add icon to `<BsTextField>`.
 --md-field-border-color: currentColor;
 --md-field-border-width: 1px;
 --md-field-control-height: 3.5rem;
+--md-field-label-color: currentColor;
 --md-field-padding-start: 1rem;
 --md-field-padding-end: 1rem;
 --md-field-padding-top: 1.625rem;
---md-field-padding-bottom: .375rem;
---md-field-label-color: currentColor;
+--md-field-padding-bottom: 0.375rem;
 --md-field-floating-label-color: var(--md-field-label-color);
 
 // global css variables
@@ -502,10 +722,10 @@ provides the ability to add icon to `<BsTextField>`.
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String`  | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon  | `String`  |         | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer | `String` |     | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| autocomplete | `Boolean`/`String` | `false` | Sets browsers **_autocomplete_** predictions on/off. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
+| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| autocomplete | `Boolean`/`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
 | datalist     | `String`  |         | Target `<datalist>` element **ID**. |
@@ -523,15 +743,15 @@ provides the ability to add icon to `<BsTextField>`.
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | password-toggle      | `Boolean` | `true` | Enable toggle password field. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
-| placeholder  | `String` |       | Sets the field placeholder. |
-| prepend-icon | `String` |       | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| placeholder  | `String` |        | Sets the field placeholder. |
+| prepend-icon | `String` |        | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
 | prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | rounded     | `Boolean` | `false` | Create the component with **_rounded-pill style_** appearance. <BsBadge color="info">v2.0.5</BsBadge> |
 | type        | `String`  | `'text'`| Sets `<input>` element `type` attribute. Valid values are: `text`, `password`, `email`, `url`, `tel`. |
 | validation-icon | `Boolean`  | `false`| Display validation icon or not, when this field has been validated. <BsBadge color="info">v2.0.0</BsBadge> |
-| validator | `TValidator` | | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |
+| validator | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -540,11 +760,11 @@ provides the ability to add icon to `<BsTextField>`.
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| blur    | ( evt: `FocusEvent`)    | Triggers when cursor leave the `<input>` element. |
+| blur    | ( evt:`FocusEvent`)    | Triggers when cursor leave the `<input>` element. |
 | clear   |   | Fired after this field value is cleared. |
-| focus   | ( evt: `FocusEvent`)    | Triggers when cursor entered the `<input>` element. |
-| keydown | ( evt: `KeyboardEvent`) | Triggers when cursor is still in the `<input>` element and keyboard key is pressed. |
-| update:model-value | ( value: `String`/`Number`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| focus   | ( evt:`FocusEvent`)    | Triggers when cursor entered the `<input>` element. |
+| keydown | ( evt:`KeyboardEvent`) | Triggers when cursor is still in the `<input>` element and keyboard key is pressed. |
+| update:model-value | ( value:`String`/`Number`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -574,19 +794,130 @@ The validator configuration option has properties as described below:
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| validators | `Record`<`String`,`Boolean`> | External validator plugin validation result. |
-| messages | `Record`<`String`,`Boolean`> | Validation message for each validation types. |
-| hasError | `Boolean` | An indicator that tells the field value pass the validation or not. |
-| dirty | `Boolean` | Value comes from validator plugin that indicate the field is dirty or not. |
+| validators | `Record<String`,`Boolean>` | External validator plugin validation result. |
+| messages   | `Record<String`,`String>` | Validation message for each validation types. |
+| hasError   | `Boolean` | An indicator that tells the field value pass the validation or not. |
+| dirty      | `Boolean` | Value comes from validator plugin that indicate the field is dirty or not. |
 
 All properties is mandatory. 
 </div>
 </div>
 
+::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">NOTE</span>
+**Vue MDBootstrap** does not include form validation by default, we leave that up 
+to the 3rd party form validation plugin. As of now, [Vuelidate](https://vuelidate-next.netlify.app/) 
+has been fully tested with our component library.
+:::
+
+
 <script lang="ts" setup>
-import { ref } from 'vue';
+import type { Validation } from "@vuelidate/core";
+import { email, required, sameAs } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
+import type { Ref, ComputedRef } from "vue";
+import { computed, reactive, ref, unref } from "vue";
+import { Helper, type INotificationProvider } from "vue-mdbootstrap";
 
 const tabs1active = ref(0);
 const fieldValue1 = ref<string>();
 const fieldValue2 = ref<string>();
+
+const loading = ref(false);
+const member = reactive({
+  fullName: null,
+  emailAddress: null,
+  password: null,
+  confirm: null,
+});
+const password = computed(() => member.password);
+const memberRules = {
+  fullName: { required },
+  emailAddress: { required, email },
+  password: { required },
+  confirm: { required, equalTo: sameAs(password) },
+};
+
+function requiredFieldValidator(
+  validator: Ref<Validation>,
+  field: string
+): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean };
+  messages: { required: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)[field];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: { required: obj.required.$message },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+    },
+  }));
+}
+
+function emailFieldValidator(validator: Ref<Validation>): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean; email: boolean };
+  messages: { required: string; email: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)['emailAddress'];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: {
+      required: obj.required.$message,
+      email: "Email address format is invalid.",
+    },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+      email: unref(obj.email.$invalid),
+    },
+  }));
+}
+
+function confirmPasswordValidator(validator: Ref<Validation>): ComputedRef<{
+  dirty: boolean;
+  validators: { required: boolean; equalTo: boolean };
+  messages: { required: string; equalTo: string };
+  hasError: boolean;
+}> {
+  const obj = unref(validator)['confirm'];
+
+  return computed(() => ({
+    hasError: unref(obj.$error),
+    messages: {
+      required: obj.required.$message,
+      equalTo: "Password doesn't match.",
+    },
+    dirty: unref(obj.$dirty),
+    validators: {
+      required: unref(obj.required.$invalid),
+      equalTo: unref(obj.equalTo.$invalid),
+    },
+  }));
+}
+
+const v$ = useVuelidate(memberRules, member);
+const fullnameValidator = requiredFieldValidator(v$, "fullName");
+const passwordValidator = requiredFieldValidator(v$, "password");
+const confirmValidator = confirmPasswordValidator(v$);
+const emailValidator = emailFieldValidator(v$);
+
+function submit(notification: INotificationProvider) {
+  const validator = unref(v$);
+  validator.$touch();
+
+  if (!validator.$invalid) {
+    loading.value = true;
+    Helper.defer(() => {
+      loading.value = false;
+      notification.success("Data has been submitted.");
+    }, 1000);
+  }
+}
 </script>

@@ -84,8 +84,8 @@ export const sidebar = [
         text: 'Input Controls',
         collapsed: true,
         items: [
-          { text: 'Text Area', link: '/components/textarea' },
-          { text: 'Text Field', link: '/components/textfield' },
+          { text: 'Text Area', link: '/components/input/textarea' },
+          { text: 'Text Field', link: '/components/input/textfield' },
         ]
       },
       { text: 'List Tile', link: '/components/list-tile' },

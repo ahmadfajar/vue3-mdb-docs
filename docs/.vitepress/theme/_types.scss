@@ -58,6 +58,12 @@
       @include font-size($h6-font-size);
     }
 
+    .card {
+      a {
+        color: var(--bs-link-color);
+      }
+    }
+    
     .btn {
       text-decoration: none;
     }

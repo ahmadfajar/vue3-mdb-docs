@@ -29,6 +29,7 @@
  * -------------------------------------------------------------------------- 
  */
 :root {
+  --vp-c-bg-1: #f0f0f0;
   --vp-c-brand-1: #8b4fda;
   --vp-c-brand-2: #5c12a1;
   --vp-c-brand-lighter: #9499ff;
@@ -198,6 +199,10 @@
         text-decoration: none;
       }
     }
+  }
+
+  th {
+    background-color: var(--vp-c-bg-1);
   }
 
   &._sponsor {
@@ -451,6 +456,7 @@
 .dark {
   --vp-c-bg: #252529;
   --vp-c-bg-soft: #212121;
+  --vp-c-bg-1: #1f1f1f;
   --vp-c-brand-1: #70d99e;
   --vp-c-brand-2: #38ab6a; // #b052b0;
   --vp-c-brand-lighter: #{lighten(#621d62, 45%)};
@@ -519,8 +525,6 @@
         text-decoration: underline dotted;
 
         &:hover {
-          color: inherit;
-          // font-weight: 600;
           text-decoration: underline;
         }
       }

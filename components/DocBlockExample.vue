@@ -5,6 +5,7 @@ import { Helper } from 'vue-mdbootstrap';
 
 declare type TStackBlitzProps = {
   html: string;
+  headers?: string[];
   script?: string;
   style?: string;
   title: string;
@@ -19,17 +20,17 @@ const props = defineProps({
   } as Prop<TStackBlitzProps>
 });
 
-const stackblitzOpts = ref(props.stackblitz);
+const stackblitzOpts = props.stackblitz;
 const sourceVisible = ref(false);
 const tooltipText = computed(() => (sourceVisible.value ? 'Hide code' : 'View code'));
 const cdnBaseUri = 'https://cdn.jsdelivr.net/npm/';
 
-const openStackBlitz = () => {
+function openStackBlitz() {
   if (!stackblitzOpts) {
     return;
   }
 
-  const headers = [
+  let headers = [
     `<link href="${cdnBaseUri}bootstrap@5.2.3/dist/css/bootstrap.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous"/>',
     `<link href="${cdnBaseUri}vue-mdbootstrap@2/dist/bundle.min.css"` +
@@ -41,8 +42,12 @@ const openStackBlitz = () => {
     '<scr' +
       `ipt src="${cdnBaseUri}vue-mdbootstrap@2/dist/vue-mdb.umd.min.js"` +
       ' crossorigin="anonymous"></scr' +
-      'ipt>\n'
+      'ipt>'
   ];
+
+  if (stackblitzOpts.headers) {
+    headers = headers.concat(stackblitzOpts.headers);
+  }
 
   let jscript: string | undefined;
   // const importVue = 'const { computed, onMounted, ref, shallowRef, watch } = Vue;\n';
@@ -50,24 +55,24 @@ const openStackBlitz = () => {
   const createVApp = 'const app = createVueMdb();\n';
   const mountVApp = 'app.mount("#app");\n';
 
-  if (Helper.isEmpty(stackblitzOpts.value?.script)) {
+  if (Helper.isEmpty(stackblitzOpts.script)) {
     jscript = importVMdb + createVApp + mountVApp;
   } else {
-    jscript = stackblitzOpts.value?.script;
+    jscript = stackblitzOpts.script;
   }
 
-  const content = stackblitzOpts.value?.html ?? '';
+  const content = stackblitzOpts.html ?? '';
 
   sdk.openProject(
     {
-      title: stackblitzOpts.value?.title || 'Vue MDBootstrap example',
-      description: stackblitzOpts.value?.description || 'Vue MDBootstrap example project',
+      title: stackblitzOpts.title || 'Vue MDBootstrap example',
+      description: stackblitzOpts.description || 'Vue MDBootstrap example project',
       template: 'html',
       files: {
         'index.html':
           headers.join('\n') +
-          '<style>\n' +
-          (stackblitzOpts.value?.style || '.my-demo-wrapper { width: 100%; padding: 1rem; }') +
+          '\n<style>\n' +
+          (stackblitzOpts.style || '.my-demo-wrapper { width: 100%; padding: 1rem; }') +
           '\n</style>\n\n' +
           '<div id="app">\n' +
           content +
@@ -89,7 +94,7 @@ const openStackBlitz = () => {
       openFile: 'index.html'
     }
   );
-};
+}
 </script>
 
 <template>
@@ -132,8 +137,8 @@ const openStackBlitz = () => {
 :root {
   --doc-example-border-color: var(--bs-gray-400); // #cbcbcb;
   --doc-example-border-radius: calc(var(--bs-border-radius) + 2px);
-  --doc-example-toolbar-bg: var(--bs-gray-100); // #f6f5f5;
-  --doc-example-content-bg: var(--bs-gray-200); // #dfdfdf;
+  --doc-example-toolbar-bg: var(--bs-gray-100);   // #f6f5f5;
+  --doc-example-content-bg: var(--bs-gray-200);   // #dfdfdf;
 }
 
 .doc-example-container {
