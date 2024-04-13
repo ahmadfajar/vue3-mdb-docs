@@ -9,7 +9,7 @@
 ## Overview
 
 `<bs-icon-svg>` embed SVG inline, inside an html element. This component is also
-used internally by [BsIcon](/components/icon) and [BsToggleIcon](/components/toggle-icon).
+used internally by [BsIcon](/components/icons/icon) and [BsToggleIcon](/components/icons/toggle-icon).
 
 `<bs-icon-svg>` use icon's name as in
 [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons).
