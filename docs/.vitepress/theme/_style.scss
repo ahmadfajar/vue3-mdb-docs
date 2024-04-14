@@ -115,6 +115,7 @@
   --vp-custom-block-warning-border: #b5a775;
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
   --vp-custom-block-danger-code-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-info-border: var(--vp-c-default-1);
   --vp-custom-block-info-code-bg: var(--vp-code-bg);
   --vp-custom-block-details-code-bg: var(--vp-code-bg);
   --doc-text-code-dt: #f28f64;
@@ -222,6 +223,7 @@
       align-items: center;
     }
 
+    &.info,
     &.tip,
     &.warning {
       border-left-width: 5px;

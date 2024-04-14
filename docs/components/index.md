@@ -208,16 +208,22 @@ next:
   <div class="list-group-item">
     <div class="h5 mb-4">Input Controls:</div>
     <div class="list-group">
-      <a href="/components/input/textarea" class="list-group-item list-group-item-action">
-        <h5>Text Area</h5>
+      <a href="/components/input/checkbox" class="list-group-item list-group-item-action">
+        <h5>Checkbox</h5>
         <div class="mt-2 mb-1">
-        A component that let users enter a large amounts of text into an UI. 
+        A component that let users select one or more items from a list, or turn an item on or off.
         </div>
       </a>
       <a href="/components/input/textfield" class="list-group-item list-group-item-action">
         <h5>Text Field</h5>
         <div class="mt-2 mb-1">
         A component that let users enter text into an UI.
+        </div>
+      </a>
+      <a href="/components/input/textarea" class="list-group-item list-group-item-action">
+        <h5>TextArea Field</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter a large amounts of text into an UI. 
         </div>
       </a>
     </div>

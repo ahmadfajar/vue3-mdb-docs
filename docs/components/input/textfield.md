@@ -5,7 +5,7 @@ outline: [2, 3]
 # Text Field
 
 
-:::lead
+::: lead
 **BsTextField** is a component that let users enter text into an UI.
 :::
 
@@ -228,7 +228,7 @@ The `autocomplete` property gives you the option to enable browser to predict th
     </bs-text-field>
   </div>
   <div class="mb-2">
-    <bs-text-field autocomplete="email" filled floating-label>
+    <bs-text-field autocomplete="email" type="email" filled floating-label>
       <label>Email</label>
     </bs-text-field>
   </div>
@@ -510,6 +510,7 @@ with form validation.
               :validator="emailValidator"
               action-icon-variant="filled"
               prepend-icon="email"
+              type="email"
               outlined
               floating-label
               required

@@ -2,9 +2,9 @@
 outline: [2, 3]
 ---
 
-# Text Area
+# TextArea Field
 
-:::lead
+::: lead
 **BsTextArea** is a component that let users enter a large amounts of text into an UI.
 :::
 
@@ -473,6 +473,7 @@ with form validation.
           <bs-text-field
             v-model="contact.email"
             :validator="emailValidator"
+            type="email"
             filled
             floating-label
             required
