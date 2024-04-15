@@ -220,6 +220,12 @@ next:
         A component that let users select one option from a set of options.
         </div>
       </a>
+      <a href="/components/input/switch" class="list-group-item list-group-item-action">
+        <h5>Switch</h5>
+        <div class="mt-2 mb-1">
+        A component that let users toggle the selection of an item on or off.
+        </div>
+      </a>
       <a href="/components/input/textfield" class="list-group-item list-group-item-action">
         <h5>Text Field</h5>
         <div class="mt-2 mb-1">

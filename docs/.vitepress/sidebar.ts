@@ -86,6 +86,7 @@ export const sidebar = [
         items: [
           { text: 'Checkbox', link: '/components/input/checkbox' },
           { text: 'Radio Button', link: '/components/input/radio' },
+          { text: 'Switch', link: '/components/input/switch' },
           { text: 'Text Field', link: '/components/input/textfield' },
           { text: 'TextArea Field', link: '/components/input/textarea' },
         ]

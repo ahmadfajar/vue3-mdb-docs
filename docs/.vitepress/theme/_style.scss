@@ -391,10 +391,12 @@
   .doc-table-props {
     > table {
       td {
-        &:nth-child(2),
         &:nth-child(3) {
           white-space: nowrap;
+        }
 
+        &:nth-child(2),
+        &:nth-child(3) {
           > code {
             --vp-code-color: var(--doc-text-code-dt);
             background-color: transparent;

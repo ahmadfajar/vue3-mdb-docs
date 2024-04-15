@@ -473,10 +473,10 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | multiple | `Boolean` | `false` | Enable multiple selection mode. The default is single selection mode. |
 | name     | `String`  |   | The `<input>` element name. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** toggle button style. |
-| pill     | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. |
+| pill     | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
 | raised   | `Boolean` | `false` | Enable ***elevated*** toggle button style. |
 | readonly | `Boolean` | `false` | The component state. |
-| rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. |
+| rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
 | size     | `String`  |   | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
 | toggle-color | `String`  |   | The selected button color (optional). Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <BsBadge color="info">v2.0.4</BsBadge> |

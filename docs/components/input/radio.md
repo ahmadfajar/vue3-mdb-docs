@@ -214,14 +214,15 @@ applied to the `color` property.
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
 ```scss
---md-radio-color: currentColor;
---md-radio-active-color: #{$color};
 --md-radio-margin: .5rem 1rem .5rem 0;
 --md-radio-size: 20px;
 --md-radio-stroke: 2px;
 --md-radio-touch-size: 40px;
 --md-radio-disabled-bg: transparent;
 --md-radio-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
+
+--md-radio-color: currentColor;
+--md-radio-active-color: #{$color};
 
 ```
 
@@ -251,6 +252,7 @@ applied to the `color` property.
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
+| checked | ( state:`Boolean`) | Triggers after the radio button state changed. <BsBadge color="info">v2.0.0</BsBadge> |
 | update:model-value | ( value:`String`/`Number`/`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>

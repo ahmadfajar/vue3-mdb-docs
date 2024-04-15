@@ -478,6 +478,7 @@ The following is an example that demonstrate more advanced use of the `<bs-text-
 with form validation.
 
 ::: BlockVuelidate {clientOnly="true" title="Text Field advanced example" file="./docs/components/scripts/textfield-2.js"}
+
 ```vue
 <template>
   <bs-app-container class="my-demo-wrapper mobi-card mx-auto">
@@ -699,12 +700,12 @@ function submit(notification: INotificationProvider) {
 --md-field-border-color: currentColor;
 --md-field-border-width: 1px;
 --md-field-control-height: 3.5rem;
+--md-field-floating-label-color: var(--md-field-label-color);
 --md-field-label-color: currentColor;
 --md-field-padding-start: 1rem;
 --md-field-padding-end: 1rem;
 --md-field-padding-top: 1.625rem;
 --md-field-padding-bottom: 0.375rem;
---md-field-floating-label-color: var(--md-field-label-color);
 
 // global css variables
 --md-field-primary-indicator-rgb: 98, 0, 238;

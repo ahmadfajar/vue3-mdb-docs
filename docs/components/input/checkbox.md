@@ -213,8 +213,6 @@ applied to the `color` property.
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
 ```scss
---md-checkbox-bg: #{$color};
---md-checkbox-color: #{$checked-color};
 --md-checkbox-disabled-bg: transparent;
 --md-checkbox-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
 --md-checkbox-border-radius: .25rem;
@@ -223,6 +221,9 @@ applied to the `color` property.
 --md-checkbox-stroke: 2px;
 --md-checkbox-touch-size: 40px;
 --md-checkbox-indeterminate-width: 12px;
+
+--md-checkbox-bg: #{$color};
+--md-checkbox-color: #{$checked-color};
 
 ```
 
@@ -253,6 +254,7 @@ applied to the `color` property.
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
+| checked | ( state:`Boolean`) | Triggers after the checkbox state changed. <BsBadge color="info">v2.0.0</BsBadge> |
 | update:model-value | ( value:`String`/`Number`/`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>

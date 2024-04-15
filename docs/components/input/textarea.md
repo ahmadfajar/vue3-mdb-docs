@@ -638,12 +638,12 @@ function cancel() {
 --md-field-border-color: currentColor;
 --md-field-border-width: 1px;
 --md-field-control-height: 3rem;
+--md-field-floating-label-color: var(--md-field-label-color);
 --md-field-label-color: currentColor;
 --md-field-padding-start: 1rem;
 --md-field-padding-end: 1rem;
 --md-field-padding-top: 1.875rem;
 --md-field-padding-bottom: 0.375rem;
---md-field-floating-label-color: var(--md-field-label-color);
 
 // global css variables
 --md-field-primary-indicator-rgb: 98, 0, 238;
