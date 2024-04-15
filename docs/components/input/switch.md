@@ -6,13 +6,13 @@ outline: [2, 3]
 
 
 ::: lead
-**bs-switch** is a component that let users toggle the selection of an item on or off.
+**BsSwitch** is a component that let users toggle the selection of an item on or off.
 :::
 
 
 ## Overview
 
-**bs-switch** component mimics the HTML5 `<input type="checkbox">` behaviour. This means 
+**BsSwitch** component mimics the HTML5 `<input type="checkbox">` behaviour. This means 
 that you can add attributes like `required`, `readonly`, or `disabled` and it will react 
 to them to give the best experience. You can also use `v-model` directive to create two-way 
 data bindings on the `model-value` property.
@@ -274,11 +274,13 @@ applied to the `color` property.
 :::
 
 
-## Icon
+## Thumb Icon
 
 Use `checkoff-icon` or `checked-icon` property explicitly to enable icon on `<bs-switch>` thumb.
 
-::: BlockVue {title="Switch color variants example" file="./docs/components/scripts/switch-7.js"}
+<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
+
+::: BlockVue {title="Switch thumb icon example" file="./docs/components/scripts/switch-7.js"}
 
 ```vue
 <template>
