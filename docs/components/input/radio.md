@@ -2,71 +2,72 @@
 outline: [2, 3]
 ---
 
-# Checkbox
+# Radio Button
 
 
 ::: lead
-**BsCheckbox** is a component that let users select one or more items from a list, 
-or turn an item on or off.
+**BsRadio** is a component that let users select one option from a set of options.
 :::
-
 
 ## Overview
 
-**BsCheckbox** component mimics the HTML5 `<input type="checkbox">` element. This means 
+**BsRadio** component mimics the HTML5 `<input type="radio">` element. This means 
 that you can add attributes like `required`, `readonly`, or `disabled` and it will react 
 to them to give the best experience. You can also use `v-model` directive to create two-way 
 data bindings on the `model-value` property.
 
 
-::: BlockVue {title="Checkbox Example" file="./docs/components/scripts/checkbox-1.js"}
+::: BlockVue {title="Radio Button Example" file="./docs/components/scripts/radio-1.js"}
 
 ```vue
 <template>
   <div class="w-100 bg-white rounded-3 p-4">
     <div class="mb-3">
-      <bs-checkbox value="accepted" v-model="checkbox1">
-        Accept the terms and use
-      </bs-checkbox>
+      <div class="col-form-label">Select an option</div>
+      <div v-for="idx in 3" :key="'option-' + idx">
+        <bs-radio :value="idx" v-model="radio1">
+          Option {{ idx }}
+        </bs-radio>
+      </div>
     </div>
-    <div>Value: <b>{{ checkbox1 }}</b></div>
+    <div>Value: <b>{{ radio1 }}</b></div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const checkbox1 = ref<string>();
+const radio1 = ref<number>();
 </script>
 ```
 :::
 
 
-## Checkbox Group
+## Radio Group
 
-**BsCheckboxGroup** is a collection of **BsCheckbox**. Rather than create multiple 
-`<bs-checkbox>`, it's better to create single `<bs-checkbox-group>`. `<bs-checkbox-group>` 
+**BsRadioGroup** is a collection of **BsRadio**. Rather than create multiple 
+`<bs-radio>`, it's better to create single `<bs-radio-group>`. `<bs-radio-group>` 
 can be integrated with external validator plugin such as 
 [Vuelidate](https://vuelidate-next.netlify.app/). 
 
 
-::: BlockVue {title="Checkbox Group Example" file="./docs/components/scripts/checkbox-2.js"}
+::: BlockVue {title="Radio Group Example" file="./docs/components/scripts/radio-2.js"}
 
 ```vue
 <template>
   <bs-card class="w-100" border-off>
     <bs-card-body>
-      <bs-checkbox-group v-model="selectedFavoriteColors" :items="favoriteColors">
-        <label class="col-12 col-form-label">Please select colors</label>
-      </bs-checkbox-group>
-      <p class="mt-3">Selected colors: <b>{{ selectedFavoriteColors }}</b></p>
+      <bs-radio-group v-model="selectedFavoriteColor" :items="favoriteColors">
+        <label class="col-12 col-form-label">Select a color</label>
+      </bs-radio-group>
+      <p class="mt-3">Selected color: <b>{{ selectedFavoriteColor }}</b></p>
       <hr />
       <div class="mb-3">
-        <bs-checkbox-group v-model="selectedFavoriteFruits" :items="favoriteFruits">
-          <label class="col-md-3 col-form-label">Select fruits</label>
-        </bs-checkbox-group>
+        <bs-radio-group v-model="selectedFavoriteFruit" :items="favoriteFruits">
+          <label class="col-md-3 col-form-label">Select a fruit</label>
+        </bs-radio-group>
       </div>
-      <div>Selected fruits: <b>{{ selectedFavoriteFruits }}</b></div>
+      <div>Selected fruit: <b>{{ selectedFavoriteFruit }}</b></div>
     </bs-card-body>
   </bs-card>
 </template>
@@ -74,8 +75,8 @@ can be integrated with external validator plugin such as
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const selectedFavoriteColors = ref<string[]>([]);
-const selectedFavoriteFruits = ref<string[]>([]);
+const selectedFavoriteColor = ref<string>();
+const selectedFavoriteFruit = ref<string>();
 
 const favoriteColors = [
   { value: "red", label: "Red" },
@@ -95,7 +96,7 @@ const favoriteFruits = [
 :::
 
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
-`<bs-checkbox-group>` will be displayed in **_one column_** if the media query matches 
+`<bs-radio-group>` will be displayed in **_one column_** if the media query matches 
 `(max-width: 575px)`. And if the media query matches `(min-width: 576px)` it will try
 to fit up to **_four columns_**.
 :::
@@ -103,30 +104,30 @@ to fit up to **_four columns_**.
 
 ### Multi Column {class="mt-lg-5"}
 
-With `<bs-checkbox-group>`, collection of `<bs-checkbox>` can be arranged in multi-columns. 
-When the number of `<bs-checkbox>` exceed the number of maximum columns, then the remaining 
-`<bs-checkbox>` will be placed on the next row.
+With `<bs-radio-group>`, collection of `<bs-radio>` can be arranged in multi-columns. 
+When the number of `<bs-radio>` exceed the number of maximum columns, then the remaining 
+`<bs-radio>` will be placed on the next row.
 
 <SmallNote color="teal" class="mt-lg-4">Updated on v2.0.0</SmallNote>
 
-::: BlockVue {title="Checkbox Group Multicolumn Example" file="./docs/components/scripts/checkbox-3.js"}
+::: BlockVue {title="Radio Group Multicolumn Example" file="./docs/components/scripts/radio-3.js"}
 
 ```vue
 <template>
   <div class="w-100 bg-white rounded-3 p-4">
     <div class="mb-3">
-      <bs-checkbox-group v-model="selectedItems" :items="dummyItems" column="3">
+      <bs-radio-group v-model="selectedItem" :items="dummyItems" column="3">
         <label class="col-md-3 col-form-label">Multi Column</label>
-      </bs-checkbox-group>
+      </bs-radio-group>
     </div>
-    <div>Selected items: <b>{{ selectedItems }}</b></div>
+    <div>Selected item: <b>{{ selectedItem }}</b></div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const selectedItems = ref<number[]>([]);
+const selectedItem = ref<number>();
 const dummyItems = [
   { value: 1, label: "Item 1" },
   { value: 2, label: "Item 2" },
@@ -150,29 +151,29 @@ if the media query matches `(min-width: 768px)`, it will be displayed in
 
 ## Colors
 
-Use `color` property to change `<bs-checkbox>` or `<bs-checkbox-group>` color appearance.
-Additionally, you can set each checkbox of `<bs-checkbox-group>` to have different color.
+Use `color` property to change `<bs-radio>` or `<bs-radio-group>` color appearance.
+Additionally, you can set each radio of `<bs-radio-group>` to have different color.
 
-::: BlockVue {title="Checkbox Color Style Example" file="./docs/components/scripts/checkbox-4.js"}
+::: BlockVue {title="Radio Color Style Example" file="./docs/components/scripts/radio-4.js"}
 
 ```vue
 <template>
   <div class="w-100 bg-white rounded-3 p-4">
     <div class="mb-3">
-      <bs-checkbox-group
-        v-model="selectedFruits"
+      <bs-radio-group
+        v-model="selectedFruit"
         :items="favoriteFruits"
-        color="primary"
+        color="deep-purple"
         column="2"
       >
         <label class="col-md-3 col-form-label">Single color</label>
-      </bs-checkbox-group>
+      </bs-radio-group>
     </div>
     <hr />
     <div>
-      <bs-checkbox-group v-model="selectedColors" :items="colorsItems" column="2">
+      <bs-radio-group v-model="selectedColor" :items="colorsItems" column="2">
         <label class="col-md-3 col-form-label">Different Color</label>
-      </bs-checkbox-group>
+      </bs-radio-group>
     </div>
   </div>
 </template>
@@ -180,8 +181,8 @@ Additionally, you can set each checkbox of `<bs-checkbox-group>` to have differe
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const selectedColors = ref<string[]>([]);
-const selectedFruits = ref<string[]>([]);
+const selectedColor = ref<string>();
+const selectedFruit = ref<string>();
 
 const colorsItems = [
   { value: "red", label: "Red", color: "red" },
@@ -213,25 +214,23 @@ applied to the `color` property.
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
 ```scss
---md-checkbox-bg: #{$color};
---md-checkbox-color: #{$checked-color};
---md-checkbox-disabled-bg: transparent;
---md-checkbox-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
---md-checkbox-border-radius: .25rem;
---md-checkbox-margin: .5rem 1rem .5rem 0;
---md-checkbox-size: 20px;
---md-checkbox-stroke: 2px;
---md-checkbox-touch-size: 40px;
---md-checkbox-indeterminate-width: 12px;
+--md-radio-color: currentColor;
+--md-radio-active-color: #{$color};
+--md-radio-margin: .5rem 1rem .5rem 0;
+--md-radio-size: 20px;
+--md-radio-stroke: 2px;
+--md-radio-touch-size: 40px;
+--md-radio-disabled-bg: transparent;
+--md-radio-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
 
 ```
 
 ## API Reference
 
-### BsCheckbox {#api-checkbox}
+### BsRadio {#api-radio}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-checkbox">
+  <BsTab label="Props" url="#api-radio">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
@@ -239,8 +238,7 @@ applied to the `color` property.
 | color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | disabled    | `Boolean` | `false`     | Enable/disable the component and the `<input>` element. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
-| indeterminate | `Boolean`  | `false` | Sets an indeterminate state for the checkbox. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Boolean` |  | The checkbox value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Boolean` |  | The radio button value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
 | name        | `String`  |  | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
@@ -248,7 +246,7 @@ applied to the `color` property.
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-checkbox">
+  <BsTab label="Events" url="#api-radio">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
@@ -257,7 +255,7 @@ applied to the `color` property.
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-checkbox">
+  <BsTab label="Slots" url="#api-radio">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -269,22 +267,21 @@ applied to the `color` property.
 </BsTabs>
 
 
-### BsCheckboxGroup {#api-checkbox-group class="mt-lg-5"}
+### BsRadioGroup {#api-radio-group class="mt-lg-5"}
 
 <BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-checkbox-group">
+  <BsTab label="Props" url="#api-radio-group">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
-| column      | `Number`  |  | Sets the maximum number of columns to display the checkbox.<BsBadge color="info">v2.0.0</BsBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
+| column      | `Number`  |  | Sets the maximum number of columns to display the radio button.<BsBadge color="info">v2.0.0</BsBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
 | disabled    | `Boolean` | `false`     | Enable/disable the component. |
 | external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
 | help-text   | `String`  |          | The help text to display below the component. |
-| indeterminate | `Boolean` | `false` | Sets default indeterminate state for the checkbox. |
-| items <Badge type="danger">required</Badge> | `TCheckboxProps[]` |  | The configuration option to construct the `<bs-checkbox>`. |
-| model-value <Badge type="tip">v-model</Badge> | `String[]`/`Number[]` |  | The component value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
+| items <Badge type="danger">required</Badge> | `TRadioProps[]` |  | The configuration option to construct the `<bs-radio>`. |
+| model-value <Badge type="tip">v-model</Badge> | `String`/`Number` |  | The component value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
 | name        | `String`  |  | Sets default `<input>` element `name` attribute. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
@@ -293,16 +290,16 @@ applied to the `color` property.
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-checkbox-group">
+  <BsTab label="Events" url="#api-radio-group">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| update:model-value | ( value:`String[]`/`Number[]`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String`/`Number`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-checkbox-group">
+  <BsTab label="Slots" url="#api-radio-group">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -314,23 +311,22 @@ applied to the `color` property.
 </BsTabs>
 
 
-### TCheckboxProps {#api-tcheckbox-props class="mt-lg-5"}
+### TRadioProps {#api-tradio-props class="mt-lg-5"}
 
-The _TCheckboxProps_ has properties as described below:
+The _TRadioProps_ has properties as described below:
 
 <div class="doc-api-reference mt-0">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| value <Badge type="danger">required</Badge> | `String`/`Number` | The `<bs-checkbox>` value. |
-| label <Badge type="danger">required</Badge> | `String` | The `<bs-checkbox>` label. |
-| color    | `String`  | The `<bs-checkbox>` color appearance. |
-| disabled | `Boolean` | Create `<bs-checkbox>` in disabled state. |
-| readonly | `Boolean` | Create `<bs-checkbox>` in readonly state. |
-| id       | `String`  | Sets the `<bs-checkbox>` element `ID` attribute. This property value is auto generates. |
-| name     | `Boolean` | Sets the `<bs-checkbox>` element `name` attribute. |
-| indeterminate | `Boolean` | Sets an indeterminate state for the `<bs-checkbox>`. |
+| value <Badge type="danger">required</Badge> | `String`/`Number` | The `<bs-radio>` value. |
+| label <Badge type="danger">required</Badge> | `String` | The `<bs-radio>` label. |
+| color    | `String`  | The `<bs-radio>` color appearance. |
+| disabled | `Boolean` | Create `<bs-radio>` in disabled state. |
+| readonly | `Boolean` | Create `<bs-radio>` in readonly state. |
+| id       | `String`  | Sets the `<bs-radio>` element `ID` attribute. This property value is auto generates. |
+| name     | `Boolean` | Sets the `<bs-radio>` element `name` attribute. |
 
 </div>
 </div>
@@ -341,12 +337,12 @@ import { ref } from "vue";
 
 const tabs1active = ref(0);
 const tabs2active = ref(0);
-const checkbox1 = ref<string>();
-const selectedColors = ref<string[]>([]);
-const selectedFruits = ref<string[]>([]);
-const selectedItems = ref<number[]>([]);
-const selectedFavoriteColors = ref<string[]>([]);
-const selectedFavoriteFruits = ref<string[]>([]);
+const radio1 = ref<number>();
+const selectedColor = ref<string>();
+const selectedFruit = ref<string>();
+const selectedFavoriteColor = ref<string>();
+const selectedFavoriteFruit = ref<string>();
+const selectedItem = ref<number>();
 
 const colorsItems = [
   { value: "red", label: "Red", color: "red" },
@@ -374,5 +370,4 @@ const favoriteFruits = [
   { value: "Pineapple", label: "Pineapple" },
   { value: "Grape", label: "Grape" },
 ];
-
 </script>
