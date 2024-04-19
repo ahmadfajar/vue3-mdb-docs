@@ -214,6 +214,12 @@ next:
         A component that let users select one or more items from a list, or turn an item on or off.
         </div>
       </a>
+      <a href="/components/input/numeric-field" class="list-group-item list-group-item-action">
+        <h5>Numeric Field</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter numeric text into an UI.
+        </div>
+      </a>
       <a href="/components/input/radio" class="list-group-item list-group-item-action">
         <h5>Radio Button</h5>
         <div class="mt-2 mb-1">

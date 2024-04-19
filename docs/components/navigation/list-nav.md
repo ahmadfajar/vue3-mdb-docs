@@ -89,11 +89,7 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
 ```
 :::
 
-::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) 
-and [Material Color](/reference/color-variants#material-colors) variants can be
-applied to the `color` property.
-:::
+<!-- @include: @/components/colors-tip.md -->
 
 
 ### Outer padding {class="mt-lg-5"}

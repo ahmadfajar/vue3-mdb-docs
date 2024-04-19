@@ -33,11 +33,7 @@ triggers action.
 ```
 :::
 
-::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
-applied to the `color` property.
-:::
+<!-- @include: @/components/colors-tip.md -->
 
 
 ## States
@@ -257,10 +253,8 @@ omit the `icon` property.
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) 
-is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
-:::
+<!-- @include: @/components/fontawesome-warn.md -->
+
 
 ### Rotating an icon {class="mt-lg-5"}
 

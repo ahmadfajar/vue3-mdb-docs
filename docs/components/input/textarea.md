@@ -433,10 +433,7 @@ provides the ability to add icon to `<bs-text-area>`.
 ``` 
 ::: 
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-As of Vue MDBootstrap v2.0, [FontAwesome Icon](https://fontawesome.com/icons?d=gallery&s=solid&m=free) 
-is removed from the component's bundle, and replaced with dynamic loading of Google Material Icons.
-:::
+<!-- @include: @/components/fontawesome-warn.md -->
 
 
 ## Usage Example
@@ -722,30 +719,7 @@ function cancel() {
   </BsTab>
 </BsTabs>
 
-
-### TValidator {#api-tvalidator class="mt-lg-5"}
-
-The validator configuration option has properties as described below:
-
-<div class="doc-api-reference mt-0">
-<div class="doc-table-responsive doc-table-3cols">
-
-| Property | Type      | Description |
-|----------|-----------|-------------|
-| validators | `Record<String`,`Boolean>` | External validator plugin validation result. |
-| messages   | `Record<String`,`String>`  | Validation message for each validation types. |
-| hasError   | `Boolean` | An indicator that tells the field value pass the validation or not. |
-| dirty      | `Boolean` | Value comes from validator plugin that indicate the field is dirty or not. |
-
-All properties is mandatory. 
-</div>
-</div>
-
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">NOTE</span>
-**Vue MDBootstrap** does not include form validation by default, we leave that up 
-to the 3rd party form validation plugin. As of now, [Vuelidate](https://vuelidate-next.netlify.app/) 
-has been fully tested with our component library.
-:::
+<!-- @include: @/components/input/validator.md -->
 
 
 <script lang="ts" setup>
