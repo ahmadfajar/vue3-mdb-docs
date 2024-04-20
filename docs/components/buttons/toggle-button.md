@@ -58,7 +58,7 @@ on the `model-value` property. This is useful to control or maintain the `model-
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
-const selectedDrink = ref();
+const selectedDrink = ref<string>();
 const drinks: TInputOptionItem[] = [
   {
     value: "tea",
@@ -112,7 +112,7 @@ With the help of slot `icon` you can add dynamic checked icon.
 import { ref, type Ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
-const favoriteDrink = ref();
+const favoriteDrink = ref<string>();
 const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
   {
     value: "tea",
@@ -165,8 +165,8 @@ const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
-const favoriteDrink1 = ref([]);
-const favoriteDrink2 = ref([]);
+const favoriteDrink1 = ref<string[]>([]);
+const favoriteDrink2 = ref<string[]>([]);
 const favoriteDrinks: TInputOptionItem[] = [
   {
     value: "tea",
@@ -226,9 +226,9 @@ and change the icon dynamically like segmented buttons behavior.
       </div>
     </div>
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Filled Rounded</label>
+      <label class="col-md-3 col-form-label">Filled Elevated</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather2" :items="weathers" color="deep-purple" :pill="false" rounded>
+        <bs-toggle-button v-model="selectedWeather2" :items="weathers" color="deep-purple" raised>
           <template #icon="item">
             <bs-icon-svg :icon="item?.value === selectedWeather2 ? 'check' : item.icon" />
           </template>
@@ -236,9 +236,9 @@ and change the icon dynamically like segmented buttons behavior.
       </div>
     </div>
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Filled Rectangle</label>
+      <label class="col-md-3 col-form-label">Filled Tonal</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather3" :items="weathers" color="deep-purple" :pill="false">
+        <bs-toggle-button v-model="selectedWeather3" :items="weathers" color="deep-purple" tonal>
           <template #icon="item">
             <bs-icon-svg :icon="item?.value === selectedWeather3 ? 'check' : item.icon" />
           </template>
@@ -246,9 +246,9 @@ and change the icon dynamically like segmented buttons behavior.
       </div>
     </div>
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Filled Elevated</label>
+      <label class="col-md-3 col-form-label">Outlined</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather4" :items="weathers" color="deep-purple" raised>
+        <bs-toggle-button v-model="selectedWeather4" :items="weathers" color="deep-purple" outlined>
           <template #icon="item">
             <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon" />
           </template>
@@ -256,31 +256,11 @@ and change the icon dynamically like segmented buttons behavior.
       </div>
     </div>
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Filled Tonal</label>
-      <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather5" :items="weathers" color="deep-purple" tonal>
-          <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon" />
-          </template>
-        </bs-toggle-button>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Outlined</label>
-      <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather6" :items="weathers" color="deep-purple" outlined>
-          <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather6 ? 'check' : item.icon" />
-          </template>
-        </bs-toggle-button>
-      </div>
-    </div>
-    <div class="row mb-3">
       <label class="col-md-3 col-form-label">Flat</label>
       <div class="col-md">
-        <bs-toggle-button v-model="selectedWeather7" :items="weathers" color="deep-purple" flat>
+        <bs-toggle-button v-model="selectedWeather5" :items="weathers" color="deep-purple" flat>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather7 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon" />
           </template>
         </bs-toggle-button>
       </div>
@@ -292,13 +272,136 @@ and change the icon dynamically like segmented buttons behavior.
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
-const selectedWeather1 = ref();
-const selectedWeather2 = ref();
-const selectedWeather3 = ref();
-const selectedWeather4 = ref();
-const selectedWeather5 = ref();
-const selectedWeather6 = ref();
-const selectedWeather7 = ref();
+const selectedWeather1 = ref<string>();
+const selectedWeather2 = ref<string>();
+const selectedWeather3 = ref<string>();
+const selectedWeather4 = ref<string>();
+const selectedWeather5 = ref<string>();
+
+const weathers: TInputOptionItem[] = [
+  {
+    value: "sunny",
+    label: "Sunny",
+    icon: "wb_sunny",
+  },
+  {
+    value: "rain",
+    label: "Rain",
+    icon: "wb_cloudy",
+  },
+  {
+    value: "heavy-rain",
+    label: "Heavy Rain",
+    icon: "thunderstorm",
+  },
+];
+</script>
+```
+:::
+
+
+### Combination {class="mt-lg-5"}
+
+::: BlockVue {title="Toggle Buttons Style Variants" file="./docs/components/scripts/toggle-button-6.js"}
+
+```vue
+<template>
+  <div class="w-100 p-3 bg-white rounded-3">
+    <h5 class="mb-4">How is the weather today?</h5>
+    <div class="row mb-3">
+      <label class="col-md-3 col-form-label">Filled Round</label>
+      <div class="col-md">
+        <bs-toggle-button 
+          v-model="selectedWeather6" 
+          :items="weathers" 
+          :pill="false" 
+          color="deep-purple" 
+          rounded
+        >
+          <template #icon="item">
+            <bs-icon-svg :icon="item?.value === selectedWeather6 ? 'check' : item.icon" />
+          </template>
+        </bs-toggle-button>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-form-label">Filled Rectangle</label>
+      <div class="col-md">
+        <bs-toggle-button 
+          v-model="selectedWeather7" 
+          :items="weathers" 
+          :pill="false"
+          color="deep-purple" 
+        >
+          <template #icon="item">
+            <bs-icon-svg :icon="item?.value === selectedWeather7 ? 'check' : item.icon" />
+          </template>
+        </bs-toggle-button>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-form-label">Filled Round Tonal</label>
+      <div class="col-md">
+        <bs-toggle-button 
+          v-model="selectedWeather8" 
+          :items="weathers" 
+          :pill="false" 
+          color="deep-purple" 
+          rounded 
+          tonal
+        >
+          <template #icon="item">
+            <bs-icon-svg :icon="item?.value === selectedWeather8 ? 'check' : item.icon" />
+          </template>
+        </bs-toggle-button>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-form-label">Outlined Round</label>
+      <div class="col-md">
+        <bs-toggle-button 
+          v-model="selectedWeather9" 
+          :items="weathers" 
+          :pill="false" 
+          color="deep-purple" 
+          outlined 
+          rounded
+        >
+          <template #icon="item">
+            <bs-icon-svg :icon="item?.value === selectedWeather9 ? 'check' : item.icon" />
+          </template>
+        </bs-toggle-button>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-md-3 col-form-label">Flat Round</label>
+      <div class="col-md">
+        <bs-toggle-button 
+          v-model="selectedWeather10" 
+          :items="weathers" 
+          :pill="false" 
+          color="deep-purple" 
+          flat 
+          rounded
+        >
+          <template #icon="item">
+            <bs-icon-svg :icon="item?.value === selectedWeather10 ? 'check' : item.icon" />
+          </template>
+        </bs-toggle-button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+import type { TInputOptionItem } from "vue-mdbootstrap";
+
+const selectedWeather6 = ref<string>();
+const selectedWeather7 = ref<string>();
+const selectedWeather9 = ref<string>();
+const selectedWeather9 = ref<string>();
+const selectedWeather10 = ref<string>();
 
 const weathers: TInputOptionItem[] = [
   {
@@ -385,7 +488,7 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
-const selectedCategory = ref("Songs");
+const selectedCategory = ref<string>("Songs");
 const categories: TInputOptionItem[] = [
   {
     value: "Songs",
@@ -537,17 +640,21 @@ The Input item has properties as described below:
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const favoriteDrink = ref();
-const favoriteDrink1 = ref([]);
-const favoriteDrink2 = ref([]);
-const selectedDrink = ref();
-const selectedWeather1 = ref();
-const selectedWeather2 = ref();
-const selectedWeather3 = ref();
-const selectedWeather4 = ref();
-const selectedWeather5 = ref();
-const selectedWeather6 = ref();
-const selectedWeather7 = ref();
+const favoriteDrink = ref<string>();
+const favoriteDrink1 = ref<string[]>([]);
+const favoriteDrink2 = ref<string[]>([]);
+const selectedDrink = ref<string>();
+const selectedWeather1 = ref<string>();
+const selectedWeather2 = ref<string>();
+const selectedWeather3 = ref<string>();
+const selectedWeather4 = ref<string>();
+const selectedWeather5 = ref<string>();
+const selectedWeather6 = ref<string>();
+const selectedWeather7 = ref<string>();
+const selectedWeather8 = ref<string>();
+const selectedWeather9 = ref<string>();
+const selectedWeather10 = ref<string>();
+
 const selectedCategory = ref("Songs");
 const tabs1active = ref(0);
 
