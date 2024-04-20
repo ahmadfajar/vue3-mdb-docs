@@ -204,6 +204,50 @@ const favoriteFruits = [
 <!-- @include: @/components/colors-tip.md -->
 
 
+## Custom Checkbox
+
+The following is an example that demonstrate how to customize checkbox appearance via css variables.
+
+<SmallNote color="teal" class="mt-lg-4">Added since v2.0.7</SmallNote>
+
+::: BlockVue {title="Custom Checkbox Example" file="./docs/components/scripts/checkbox-1.js"}
+
+```vue
+<template>
+  <div class="w-100 bg-white rounded-3 p-4 rounded-checkboxes">
+    <div class="mb-3">
+      <bs-checkbox value="accepted" v-model="checkbox1" color="deep-purple">
+        Accept the terms and use
+      </bs-checkbox>
+    </div>
+    <div>Value: <b>{{ checkbox1 }}</b></div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const checkbox1 = ref<string>();
+</script>
+
+<style>
+.rounded-checkboxes .md-checkbox {
+  --md-checkbox-border-radius: 50%;
+  --md-checkbox-size: 24px;
+  --md-checkbox-checkmark-height: 12px; 
+  --md-checkbox-checkmark-width: 6px; 
+  --md-checkbox-checkmark-pos-x: 7px; 
+  --md-checkbox-checkmark-pos-y: 3px;
+}
+.rounded-checkboxes .md-checkbox:not(.checked) {
+  --md-checkbox-state-bg: #d0d0d0;
+  --md-checkbox-state-color: #808080;
+}
+</style>
+```
+:::
+
+
 ## CSS Variables
 
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
@@ -217,9 +261,15 @@ const favoriteFruits = [
 --md-checkbox-stroke: 2px;
 --md-checkbox-touch-size: 40px;
 --md-checkbox-indeterminate-width: 12px;
+--md-checkbox-checkmark-height: 13px; 
+--md-checkbox-checkmark-width: 7px; 
+--md-checkbox-checkmark-pos-x: 4px; 
+--md-checkbox-checkmark-pos-y: 0;
 
---md-checkbox-bg: #{$color};
---md-checkbox-color: #{$checked-color};
+--md-checkbox-bg: #{$color};             // background color when checked
+--md-checkbox-color: #{$checked-color};  // border color when checked
+--md-checkbox-state-bg: transparent;     // background color when checked or un-checked
+--md-checkbox-state-color: currentColor; // border color when checked or un-checked
 
 ```
 
@@ -374,3 +424,21 @@ const favoriteFruits = [
 ];
 
 </script>
+
+<style lang="scss">
+.rounded-checkboxes {
+  .md-checkbox {
+    --md-checkbox-border-radius: 50%;
+    --md-checkbox-size: 24px;
+    --md-checkbox-checkmark-height: 12px; 
+    --md-checkbox-checkmark-width: 6px; 
+    --md-checkbox-checkmark-pos-x: 7px; 
+    --md-checkbox-checkmark-pos-y: 3px;
+
+    &:not(.checked) {
+      --md-checkbox-state-bg: #d0d0d0;
+      --md-checkbox-state-color: #808080;
+    }
+  }
+}
+</style>
