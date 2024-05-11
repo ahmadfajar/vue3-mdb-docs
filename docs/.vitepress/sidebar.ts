@@ -85,6 +85,7 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: 'Checkbox', link: '/components/input/checkbox' },
+          { text: 'Listbox', link: '/components/input/listbox' },
           { text: 'Numeric Field', link: '/components/input/numeric-field' },
           { text: 'Radio Button', link: '/components/input/radio' },
           { text: 'Switch', link: '/components/input/switch' },

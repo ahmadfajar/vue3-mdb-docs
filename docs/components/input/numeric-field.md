@@ -547,7 +547,7 @@ with form validation.
               v-model="person.gender" 
               :items="genders" 
               color="deep-purple" 
-              outlined
+              tonal
             >
               <template #icon="item">
                 <bs-icon-svg v-if="item?.value === person.gender" icon="check" />

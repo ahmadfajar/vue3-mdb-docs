@@ -15,7 +15,7 @@ bundler or built common web page by using resources from the CDN.
  
 <div class="pt-2"></div>
 
-- [Vue.js](https://vuejs.org) `v3.3.x` is required
+- [Vue.js](https://vuejs.org) `v3.x` is required, `v3.4.x` is recommended
 - [Bootstrap](https://getbootstrap.com) `v5.2` is required, `v5.2.3` is recommended
 - [Vue Router](https://router.vuejs.org/) `v4.x` is optional, and is required for building SPA using module bundler 
 - [Pinia](https://pinia.vuejs.org/) is optional, and is required for building SPA using module bundler 
