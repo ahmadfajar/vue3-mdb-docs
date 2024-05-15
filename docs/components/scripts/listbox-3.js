@@ -1,4 +1,4 @@
-const { ref } = Vue;
+const { onUnmounted, ref } = Vue;
 const { BsStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
@@ -17,6 +17,10 @@ const app = createVueMdb({
         },
       }),
     };
+
+    onUnmounted(() => {
+      statesCA1.proxy.destroy();
+    });    
 
     return { listbox3, statesCA1 };
   },

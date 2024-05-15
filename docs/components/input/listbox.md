@@ -32,11 +32,11 @@ create two-way data bindings on the `model-value` property.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource, TDataListSchemaProps } from "vue-mdbootstrap";
 import { BsArrayStore } from "vue-mdbootstrap";
 
-const listbox1 = ref<number | undefined>();
+const listbox1 = ref<number>();
 const peopleSrc1: TDataSource = {
   proxy: new BsArrayStore(
     [
@@ -55,6 +55,10 @@ const peopleSrc1: TDataSource = {
   ),
   schema: { displayField: "name", valueField: "id" } as TDataListSchemaProps,
 };
+
+onUnmounted(() => {
+  peopleSrc1.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -64,7 +68,7 @@ Do not use the `model-value` property when using `v-model`.
 :::
 
 
-## Multi-Select Support
+## Multiple Selection
 
 `<bs-listbox>` support multiple selection. Multiple selection mode feature can be enabled using the 
 `multiple` property explicitly.
@@ -82,11 +86,11 @@ Do not use the `model-value` property when using `v-model`.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource, TDataListSchemaProps } from "vue-mdbootstrap";
 import { BsArrayStore } from "vue-mdbootstrap";
 
-const listbox2 = ref<number[] | undefined>();
+const listbox2 = ref<number[]>();
 const peopleSrc1: TDataSource = {
   proxy: new BsArrayStore(
     [
@@ -105,6 +109,10 @@ const peopleSrc1: TDataSource = {
   ),
   schema: { displayField: "name", valueField: "id" } as TDataListSchemaProps,
 };
+
+onUnmounted(() => {
+  peopleSrc1.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -132,11 +140,11 @@ In multiple selection mode, the checkbox can be enabled via `use-checkbox` prope
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource } from "vue-mdbootstrap";
 import { BsStore } from "vue-mdbootstrap";
 
-const listbox3 = ref<string[] | undefined>();
+const listbox3 = ref<string[]>();
 const statesCA1: TDataSource = {
   proxy: new BsStore({
     idProperty: 'value',
@@ -150,6 +158,10 @@ const statesCA1: TDataSource = {
     },
   }),
 };
+
+onUnmounted(() => {
+  statesCA1.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -182,11 +194,11 @@ defined, then default value will be used.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource } from "vue-mdbootstrap";
 import { BsStore } from "vue-mdbootstrap";
 
-const listbox4 = ref<string[] | undefined>();
+const listbox4 = ref<string[]>();
 const statesCA2: TDataSource = {
   proxy: new BsStore({
     idProperty: 'value',
@@ -200,6 +212,10 @@ const statesCA2: TDataSource = {
     },
   }),
 };
+
+onUnmounted(() => {
+  statesCA2.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -214,7 +230,7 @@ applied to the `checkbox-color` property.
 ## Image Support
 
 `<bs-listbox>` component supports displaying images or avatars. This feature can be
-enabled using the `show-image` property explicitly and use `imageField` property on 
+enabled using the `show-image` property explicitly and use the `imageField` property on 
 the configuration schema to point to the image field in the datasource. By default, 
 the value of property `imageField` is set to `image`.
 
@@ -236,11 +252,11 @@ the value of property `imageField` is set to `image`.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource, TDataListSchemaProps } from "vue-mdbootstrap";
 import { BsArrayStore } from "vue-mdbootstrap";
 
-const listbox5 = ref<number | undefined>();
+const listbox5 = ref<number>();
 const peopleSrc2: TDataSource = {
   proxy: new BsArrayStore(
     [
@@ -291,6 +307,10 @@ const peopleSrc2: TDataSource = {
   ),
   schema: { displayField: "name", valueField: "id", imageField: "avatar" } as TDataListSchemaProps,
 };
+
+onUnmounted(() => {
+  peopleSrc2.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -321,11 +341,11 @@ And use `rounded-image` or `circle-image` property to change its shape.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource, TDataListSchemaProps } from "vue-mdbootstrap";
 import { BsArrayStore } from "vue-mdbootstrap";
 
-const listbox6 = ref<number | undefined>();
+const listbox6 = ref<number>();
 const peopleSrc2: TDataSource = {
   proxy: new BsArrayStore(
     [
@@ -376,6 +396,10 @@ const peopleSrc2: TDataSource = {
   ),
   schema: { displayField: "name", valueField: "id", imageField: "avatar" } as TDataListSchemaProps,
 };
+
+onUnmounted(() => {
+  peopleSrc2.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -413,11 +437,11 @@ template `option-item` slot.
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource } from "vue-mdbootstrap";
 import { BsStore } from "vue-mdbootstrap";
 
-const listbox7 = ref<number | undefined>();
+const listbox7 = ref<number>();
 const productSrc: TDataSource = {
   proxy: new BsStore({
     idProperty: 'ProductID',
@@ -431,6 +455,10 @@ const productSrc: TDataSource = {
   }),
   schema: { displayField: 'ProductName', valueField: 'ProductID' },
 };
+
+onUnmounted(() => {
+  productSrc.proxy.destroy();
+});
 </script>
 ```
 :::
@@ -459,12 +487,12 @@ const productSrc: TDataSource = {
 |----------|-----------|----------|-------------|
 | autoload          | `Boolean` | `true`  | Autoload data from the configured `dataSource`, default is `true`. <BsBadge color="info">v2.0.5</BsBadge> |
 | borderless        | `Boolean` | `false` | Hide the Listbox container borders. |
-| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. |
+| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | checkbox-position | `String`  | `'left'`  | Sets the Listbox checkbox position. Valid values are: `left`, `right`. |
-| circle-image      | `Boolean` | `false`   | Display image with **_circle_** shape for each Listbox item that has image property. |
+| circle-image      | `Boolean` | `false`   | Display image with **_circle_** shape for each item that has image property. |
 | color             | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
-| data-source <Badge type="danger">required</Badge> | `TDataSource` | | Sets this component's data source configuration. |
-| disabled          | `Boolean` | `false`   | This component's state. |
+| data-source <Badge type="danger">required</Badge> | `TDataSource` | | Sets the data source configuration. |
+| disabled          | `Boolean` | `false`   | Put the component in _disabled_ state and sets the `<select>` element `disabled` attribute. |
 | empty-data-message | `String` | `'No data to display.'` | Sets the **_no data message_** when the Listbox is empty. |
 | image-size        | `Number`  | `48`    | Define the image size for each Listbox items when `show-image` is enabled. |
 | item-separator    | `Boolean` | `false` | Show or hide the Listbox item separator. |
@@ -474,8 +502,8 @@ const productSrc: TDataSource = {
 | model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Array` |  | Monitored by `v-model` to maintain this field value. |
 | multiple      | `Boolean` | `false` | Enable/disable multi selection mode. |
 | not-found-message | `String` | `'Data not found.'` | Sets the **_not found message_** when searching returns no result. |
-| readonly      | `Boolean` | `false` | This component's state. |
-| rounded-image | `Boolean` | `false` | Display image with **_rounded_** shape for each Listbox item that has image property. |
+| readonly      | `Boolean` | `false` | Put the component in _readonly_ state and sets the `<select>` element `readonly` attribute. |
+| rounded-image | `Boolean` | `false` | Display image with **_rounded_** shape for each item that has image property. |
 | search-label  | `String`  | `'Search...'` | The search box text label. |
 | search-text <Badge type="tip">v-model</Badge> | `String` |      | Monitored by `v-model` to maintain the search box keyword. |
 | show-image   | `Boolean` | `false` | Show or hide image if Listbox item's object contains `image` property. |
@@ -514,18 +542,18 @@ const productSrc: TDataSource = {
 
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onUnmounted, ref } from "vue";
 import type { TDataSource, TDataListSchemaProps } from 'vue-mdbootstrap';
 import { BsArrayStore, BsStore } from 'vue-mdbootstrap';
 
 const tabs1active = ref(0);
-const listbox1 = ref<number | undefined>();
-const listbox2 = ref<number[] | undefined>();
-const listbox3 = ref<string[] | undefined>();
-const listbox4 = ref<string[] | undefined>();
-const listbox5 = ref<number | undefined>();
-const listbox6 = ref<number | undefined>();
-const listbox7 = ref<number | undefined>();
+const listbox1 = ref<number>();
+const listbox2 = ref<number[]>();
+const listbox3 = ref<string[]>();
+const listbox4 = ref<string[]>();
+const listbox5 = ref<number>();
+const listbox6 = ref<number>();
+const listbox7 = ref<number>();
 
 const peopleSrc1: TDataSource = {
   proxy: new BsArrayStore(
@@ -638,4 +666,12 @@ const productSrc: TDataSource = {
   }),
   schema: { displayField: 'ProductName', valueField: 'ProductID' },
 };
+
+onUnmounted(() => {
+  peopleSrc1.proxy.destroy();
+  peopleSrc2.proxy.destroy();
+  productSrc.proxy.destroy();
+  statesCA1.proxy.destroy();
+  statesCA2.proxy.destroy();
+});
 </script>

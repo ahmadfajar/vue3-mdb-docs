@@ -214,6 +214,12 @@ next:
         A component that let users select one or more items from a list, or turn an item on or off.
         </div>
       </a>
+      <a href="/components/input/combobox" class="list-group-item list-group-item-action">
+        <h5>Combobox</h5>
+        <div class="mt-2 mb-1">
+        A component that let users select one or more items from a displayed list.
+        </div>
+      </a>
       <a href="/components/input/listbox" class="list-group-item list-group-item-action">
         <h5>Listbox</h5>
         <div class="mt-2 mb-1">

@@ -284,7 +284,7 @@ const favoriteFruits = [
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| validator   | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> <p>More details, see [Text Field - TValidator](/components/input/textfield#api-tvalidator)</p> |
+| validator   | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> <p>More details, see [Text Field - TValidator](/components/input/textfield#api-validator)</p> |
 
 </div>
   </BsTab>

@@ -1,4 +1,4 @@
-const { ref } = Vue;
+const { onUnmounted, ref } = Vue;
 const { BsArrayStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
@@ -54,6 +54,10 @@ const app = createVueMdb({
       ),
       schema: { displayField: 'name', valueField: 'id', imageField: 'avatar' },
     };
+
+    onUnmounted(() => {
+      peopleSrc2.proxy.destroy();
+    });
 
     return { listbox5, peopleSrc2 };
   },

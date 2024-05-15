@@ -3,7 +3,7 @@ const { BsArrayStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
   setup() {
-    const listbox6 = ref();
+    const employee14 = ref();
     const peopleSrc2 = {
       proxy: new BsArrayStore(
         [
@@ -59,7 +59,7 @@ const app = createVueMdb({
       peopleSrc2.proxy.destroy();
     });
 
-    return { listbox6, peopleSrc2 };
+    return { employee14, peopleSrc2 };
   },
 });
 

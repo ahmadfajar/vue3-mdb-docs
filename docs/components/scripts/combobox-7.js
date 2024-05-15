@@ -3,15 +3,15 @@ const { BsStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
   setup() {
-    const listbox4 = ref();
-    const statesCA2 = {
+    const state4 = ref();
+    const statesUS4 = {
       proxy: new BsStore({
         idProperty: 'value',
         dataProperty: 'data',
         totalProperty: 'total',
         remoteSort: false,
         remoteFilter: false,
-        filters: [{ property: 'country', value: 'CA', operator: 'eq' }],
+        filters: [{ property: 'country', value: 'US', operator: 'eq' }],
         restProxy: {
           browse: 'https://ahmadfajar.github.io/data/states.json',
         },
@@ -19,10 +19,10 @@ const app = createVueMdb({
     };
 
     onUnmounted(() => {
-      statesCA2.proxy.destroy();
-    });    
+      statesUS4.proxy.destroy();
+    });
 
-    return { listbox4, statesCA2 };
+    return { state4, statesUS4 };
   },
 });
 

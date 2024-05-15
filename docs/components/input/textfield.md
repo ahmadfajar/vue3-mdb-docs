@@ -308,8 +308,9 @@ const fieldValue2 = ref<string>();
 
 ## Help Text
 
-The `help-text` property on `<bs-text-field>` adds the provided string beneath the text field.
-Using `persistent-help-text` will keeps the help text visible even when the text field is not focused.
+The `help-text` property on `<bs-text-field>` adds an help text beneath the text field.
+And sets the `persistent-help-text` property to `false` will make the help text 
+visible only when the text field is focused.
 
 ::: BlockVue {title="Text Field with help text example"}
 

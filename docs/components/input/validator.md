@@ -1,4 +1,4 @@
-### TValidator {#api-tvalidator class="mt-lg-5"}
+### TValidator {#api-validator class="mt-lg-5"}
 
 The validator configuration option has properties as described below:
 
@@ -12,7 +12,7 @@ The validator configuration option has properties as described below:
 | hasError   | `Boolean` | An indicator that tells the field value pass the validation or not. |
 | dirty      | `Boolean` | Value comes from validator plugin that indicate the field is dirty or not. |
 
-All properties is mandatory. 
+All properties are mandatory. 
 </div>
 </div>
 

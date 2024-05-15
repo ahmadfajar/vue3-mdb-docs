@@ -274,9 +274,9 @@ To disable this feature, explicitly define the `no-resize` property.
 
 ## Help Text
 
-The `help-text` property on `<bs-text-area>` adds the provided string beneath the TextArea 
-field. Using `persistent-help-text` will keeps the help text visible even when the TextArea 
-field is not focused.
+The `help-text` property on `<bs-text-area>` adds an help text beneath the TextArea field.
+And sets the `persistent-help-text` property to `false` will make the help text 
+visible only when the TextArea field is focused.
 
 ::: BlockVue {title="Text Area with help text example"}
 

@@ -3,7 +3,18 @@ const { BsArrayStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
   setup() {
-    const listbox2 = ref();
+    const employee19 = ref();
+    const employee20 = ref();
+    const employee21 = ref();
+    const employee22 = ref();
+    const employee23 = ref();
+    const employee24 = ref();
+    const employee25 = ref();
+    const employee26 = ref();
+    const employee27 = ref();
+    const employee28 = ref();
+    const employee29 = ref();
+    const employee30 = ref();
     const peopleSrc1 = {
       proxy: new BsArrayStore(
         [
@@ -25,9 +36,24 @@ const app = createVueMdb({
 
     onUnmounted(() => {
       peopleSrc1.proxy.destroy();
-    });    
+    });
 
-    return { listbox2, peopleSrc1 };
+    return {
+      employee19,
+      employee20,
+      employee21,
+      employee22,
+      employee23,
+      employee24,
+      employee25,
+      employee25,
+      employee26,
+      employee27,
+      employee28,
+      employee29,
+      employee30,
+      peopleSrc1,
+    };
   },
 });
 

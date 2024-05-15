@@ -317,8 +317,9 @@ const fieldValue1 = ref<number>();
 
 ## Help Text
 
-The `help-text` property on `<bs-numeric-field>` adds the provided string beneath the field.
-Using `persistent-help-text` will keeps the help text visible even when the field is not focused.
+The `help-text` property on `<bs-numeric-field>` adds an help text beneath the numeric field.
+And sets the `persistent-help-text` property to `false` will make the help text 
+visible only when the numeric field is focused.
 
 ::: BlockVue {title="Numeric Field with help text example"}
 
