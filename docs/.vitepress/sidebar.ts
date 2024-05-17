@@ -85,13 +85,14 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: 'Checkbox', link: '/components/input/checkbox' },
-          { text: 'Combobox', link: '/components/input/combobox' },
-          { text: 'Listbox', link: '/components/input/listbox' },
-          { text: 'Numeric Field', link: '/components/input/numeric-field' },
           { text: 'Radio Button', link: '/components/input/radio' },
           { text: 'Switch', link: '/components/input/switch' },
+          { text: 'Listbox', link: '/components/input/listbox' },
+          { text: 'Combobox', link: '/components/input/combobox' },
           { text: 'Text Field', link: '/components/input/textfield' },
           { text: 'TextArea Field', link: '/components/input/textarea' },
+          { text: 'Numeric Field', link: '/components/input/numeric-field' },
+          { text: 'Chip Field', link: '/components/input/chipfield' },
         ]
       },
       { text: 'List Tile', link: '/components/list-tile' },

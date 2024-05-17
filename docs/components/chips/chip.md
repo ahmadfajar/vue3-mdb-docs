@@ -6,7 +6,7 @@ outline: [2, 3]
 
 ::: lead
 **BsChip** is a component which is used to convey small pieces of information to 
-create arbitrary items, like categories or tags, help enter information, make 
+create arbitrary items, like _categories_ or _tags_, help enter information, make 
 selections, filter content, or trigger actions.
 :::
 

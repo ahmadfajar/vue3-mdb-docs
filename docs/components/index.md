@@ -214,24 +214,6 @@ next:
         A component that let users select one or more items from a list, or turn an item on or off.
         </div>
       </a>
-      <a href="/components/input/combobox" class="list-group-item list-group-item-action">
-        <h5>Combobox</h5>
-        <div class="mt-2 mb-1">
-        A component that let users select one or more items from a displayed list.
-        </div>
-      </a>
-      <a href="/components/input/listbox" class="list-group-item list-group-item-action">
-        <h5>Listbox</h5>
-        <div class="mt-2 mb-1">
-        A component that let users select one or more items from a displayed list.
-        </div>
-      </a>
-      <a href="/components/input/numeric-field" class="list-group-item list-group-item-action">
-        <h5>Numeric Field</h5>
-        <div class="mt-2 mb-1">
-        A component that let users enter numeric text into an UI.
-        </div>
-      </a>
       <a href="/components/input/radio" class="list-group-item list-group-item-action">
         <h5>Radio Button</h5>
         <div class="mt-2 mb-1">
@@ -244,6 +226,18 @@ next:
         A component that let users toggle the selection of an item on or off.
         </div>
       </a>
+      <a href="/components/input/listbox" class="list-group-item list-group-item-action">
+        <h5>Listbox</h5>
+        <div class="mt-2 mb-1">
+        A component that let users select one or more items from a displayed list.
+        </div>
+      </a>
+      <a href="/components/input/combobox" class="list-group-item list-group-item-action">
+        <h5>Combobox</h5>
+        <div class="mt-2 mb-1">
+        A component that let users select one or more items from a displayed list.
+        </div>
+      </a>
       <a href="/components/input/textfield" class="list-group-item list-group-item-action">
         <h5>Text Field</h5>
         <div class="mt-2 mb-1">
@@ -254,6 +248,19 @@ next:
         <h5>TextArea Field</h5>
         <div class="mt-2 mb-1">
         A component that let users enter a large amounts of text into an UI. 
+        </div>
+      </a>
+      <a href="/components/input/numeric-field" class="list-group-item list-group-item-action">
+        <h5>Numeric Field</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter numeric text into an UI.
+        </div>
+      </a>
+      <a href="/components/input/chipfield" class="list-group-item list-group-item-action">
+        <h5>Chip Field</h5>
+        <div class="mt-2 mb-1">
+        A component that let users enter arbitrary items, like <em>categories</em> or <em>tags</em> 
+        into an UI to convey a small pieces of information.
         </div>
       </a>
     </div>
