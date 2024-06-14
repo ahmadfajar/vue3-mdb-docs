@@ -46,6 +46,8 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 ```
 :::
 
+<!-- @include: @/components/fontawesome-warn.md -->
+
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
 See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Icons**
 to `icon` property.
@@ -102,7 +104,7 @@ To create the padding, sets the `space-around` property of the `<bs-list-view>` 
 
 ```html
 <bs-app-container class="mobi-card mx-auto p-3 p-md-0">
-  <bs-card class="bg-special-color" shadow>
+  <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
@@ -143,7 +145,7 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 
 ```html
 <bs-app-container class="mobi-card mx-auto p-3 p-md-0">
-  <bs-card class="bg-special-color" shadow>
+  <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
@@ -182,7 +184,7 @@ active navigation menu.
 
 ```html
 <bs-app-container class="mobi-card mx-auto p-3 p-md-0">
-  <bs-card class="bg-special-color" shadow>
+  <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>

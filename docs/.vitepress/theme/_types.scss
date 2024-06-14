@@ -1,7 +1,7 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
 
 // hr {
 //   margin: $hr-margin-y 0;
@@ -14,46 +14,52 @@
 // Typography
 %heading {
   font-family: $headings-font-family;
-  font-style: $headings-font-style;
+  font-style:  $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .doc-example-container {
   > .doc-block-content {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
-    
-    h1, .h1 {
+
+    h1,
+    .h1 {
       @extend %heading;
       @include font-size($h1-font-size);
     }
-  
-    h2, .h2 {
+
+    h2,
+    .h2 {
       @extend %heading;
       @include font-size($h2-font-size);
       border-top: 0;
       padding-top: 0;
     }
-  
-    h3, .h3 {
+
+    h3,
+    .h3 {
       @extend %heading;
       @include font-size($h3-font-size);
     }
-  
-    h4, .h4 {
+
+    h4,
+    .h4 {
       @extend %heading;
       @include font-size($h4-font-size);
     }
-  
-    h5, .h5 {
+
+    h5,
+    .h5 {
       @extend %heading;
       @include font-size($h5-font-size);
     }
-  
-    h6, .h6 {
+
+    h6,
+    .h6 {
       @extend %heading;
       @include font-size($h6-font-size);
     }
@@ -62,17 +68,126 @@
       a {
         color: var(--bs-link-color);
       }
+
+      > .md-appbar {
+        border-top-left-radius: var(--bs-card-inner-border-radius);
+        border-top-right-radius: var(--bs-card-inner-border-radius);
+      }
     }
-    
+
     .btn {
       text-decoration: none;
     }
 
-    @include media-breakpoint-up(md) {
-      .rounded-md-3 {
-        @include border-radius(var(--#{$prefix}border-radius-lg))
+    a.btn {
+      color: initial;
+      font-weight: initial;
+
+      &:hover {
+        text-decoration: none;
       }
     }
-    
+
+    a.md-list-tile {
+      text-decoration: none;
+    }
+
+    .nav > .nav-item {
+      --bs-nav-link-hover-color: var(--vp-c-brand-2);
+
+      .nav-link {
+        color: var(--bs-nav-link-color);
+        font-weight: 400;
+
+        &.active {
+          color: var(--bs-nav-pills-link-active-color);
+        }
+
+        &:hover,
+        &:focus {
+          &:not(.active) {
+            color: var(--bs-nav-link-hover-color);
+          }
+        }
+      }
+    }
+
+    .md-tabs  {
+      > .nav:not(.nav-material):not(.nav-modern) {
+        --bs-nav-link-color: rgba(69, 64, 98, 0.86);
+        --bs-nav-link-hover-color: rgb(var(--md-field-primary-indicator-rgb));
+  
+        a.nav-item {
+          color: var(--bs-nav-link-color);
+  
+          &.active {
+            color: var(--bs-nav-tabs-link-active-color);
+          }
+
+          &:hover {
+            color: var(--bs-nav-link-hover-color);
+          }
+        }
+      }
+
+      > .nav-pills {
+        list-style: none;
+        margin: 0;
+
+        .nav-link {
+          color: var(--bs-nav-link-color);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--bs-nav-link-hover-color);
+          }
+
+          &.active {
+            color: var(--bs-nav-pills-link-active-color);
+          }
+        }
+
+        .nav-item + .nav-item {
+          margin-top: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .rounded-md-3 {
+        @include border-radius(var(--#{$prefix}border-radius-lg));
+      }
+    }
   }
+
+  .mobi-card {
+    max-width: 400px;
+  }
+
+  .md-divider {
+    --md-divider-margin-y: 0.25rem;
+    border-width: 0;
+    margin: var(--md-divider-margin-y) 0;
+  }
+
+  .md-side-drawer-inner .nav {
+    --bs-nav-link-padding-x: 0.5rem;
+  }
+
+  .md-list-nav {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    .md-nav-item {
+      > .md-nav-item-inner {
+        color: var(--md-nav-item-state-color);
+      }
+
+      ~ .md-nav-item {
+        margin-top: 0;
+      }
+    }
+  }
+
 }
