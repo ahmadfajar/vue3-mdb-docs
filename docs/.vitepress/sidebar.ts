@@ -97,6 +97,13 @@ export const sidebar = [
         ]
       },
       { text: 'List Tile', link: '/components/list-tile' },
+      { text: 'Pickers', 
+        collapsed: true,
+        items: [
+          { text: 'Color Picker', link: '/components/pickers/color-picker' },
+          { text: 'Date Picker', link: '/components/pickers/date-picker' },
+        ] 
+      },
       { text: 'Popover', link: '/components/popover' },
       {
         text: 'Progress Control',

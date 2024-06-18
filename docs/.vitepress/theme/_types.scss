@@ -112,6 +112,14 @@
       }
     }
 
+    .md-datepicker {
+      .md-datepicker-body {
+        table {
+          margin: 0;
+        }
+      }
+    }
+
     .md-tabs  {
       > .nav:not(.nav-material):not(.nav-modern) {
         --bs-nav-link-color: rgba(69, 64, 98, 0.86);

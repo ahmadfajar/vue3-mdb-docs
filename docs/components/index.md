@@ -127,15 +127,14 @@ next:
         A lightweight component's container which may contains application navigation, logo and others.
         </div>
       </a>
+      <a href="/components/navigation/tabs" class="list-group-item list-group-item-action">
+        <h5>Tabs</h5>
+        <div class="mt-2 mb-1">
+        A component used for creating a pseudo-navigation for a page.
+        </div>
+      </a>
     </div>
   </div>
-  <a href="datetime-picker" class="list-group-item list-group-item-action">
-    <h5>Date Picker</h5>
-    <div class="mt-2 mb-1">
-    A component that generates a calendar style date selection widget, which 
-    can be used to create customized date picker inputs.
-    </div>
-  </a>
   <a href="dropdown-menu" class="list-group-item list-group-item-action">
     <h5>Dropdown Menu</h5>
     <div class="mt-2 mb-1">
@@ -273,6 +272,26 @@ next:
     which makes it easy to identify a specific item in a collection.
     </div>
   </a>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Pickers:</div>
+    <div class="list-group">
+      <a href="/components/pickers/color-picker" class="list-group-item list-group-item-action">
+        <h5>
+        Color Picker
+        <BsBadge color="info" class="ms-2" style="--bs-badge-font-size: .7rem">v2.0.0</BsBadge>
+        </h5>
+        <div class="mt-2 mb-1">
+        A component that generates a color selection widget.
+        </div>
+      </a>
+      <a href="/components/pickers/date-picker" class="list-group-item list-group-item-action">
+        <h5>Date Picker</h5>
+        <div class="mt-2 mb-1">
+        A component that generates a calendar style date selection widget.
+        </div>
+      </a>
+    </div>
+  </div>
   <a href="popover" class="list-group-item list-group-item-action">
     <h5>Popover</h5>
     <div class="mt-2 mb-1">
@@ -297,14 +316,6 @@ next:
       </a>
     </div>
   </div>
-  <a href="tabs" class="list-group-item list-group-item-action">
-    <h5>Tabs</h5>
-    <div class="mt-2 mb-1">
-    A component which is used for hiding content behind a selectable item. They can 
-    be used as a pseudo-navigation for a page, where the tabs are links and the 
-    tab-items are the content.
-    </div>
-  </a>
   <a href="tooltip" class="list-group-item list-group-item-action">
     <h5>Tooltip</h5>
     <div class="mt-2 mb-1">
