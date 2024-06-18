@@ -224,13 +224,13 @@ const picker8 = ref<string>();
 <SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
 
 ```scss
---md-datepiker-border-radius: .375rem;
---md-datepiker-padding-x: 1rem;
---md-datepiker-padding-y: 1rem;
---md-datepiker-header-color: #fff;
---md-datepiker-table-header-color: #6c757d;
---md-datepiker-title-font-size: 1.8rem;
---md-datepiker-subtitle-font-size: 1.25rem;
+--md-datepicker-border-radius: .375rem;
+--md-datepicker-padding-x: 1rem;
+--md-datepicker-padding-y: 1rem;
+--md-datepicker-header-color: #fff;
+--md-datepicker-table-header-color: #6c757d;
+--md-datepicker-title-font-size: 1.8rem;
+--md-datepicker-subtitle-font-size: 1.25rem;
 
 ```
 
