@@ -5,6 +5,8 @@
 [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) dynamically.
 :::
 
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
+
 
 ## Overview
 
@@ -17,7 +19,6 @@ used internally by [BsIcon](/components/icons/icon) and [BsToggleIcon](/componen
 and _Sharp_. Use `width` and `height` property to sets the icon size, otherwise 
 default size will be used.
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Basic IconSVG Example"}
 

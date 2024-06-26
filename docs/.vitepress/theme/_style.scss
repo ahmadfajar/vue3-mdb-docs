@@ -696,3 +696,9 @@ body {
     }
   }
 }
+
+.md-color-picker {
+  .md-color-picker-input-label {
+    color: var(--bs-body-color);
+  }
+}

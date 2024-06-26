@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ## Overview
 
-`<bs-combobox>` uses [BsListbox](/components/input/listbox) and [BsPopover](/components/popover) 
+`<bs-combobox>` uses [BsListbox](/components/input/listbox) and [BsPopover](/components/container/popover) 
 components internally and mimics like HTML combobox: `<select>` element. This means 
 that you can add attributes like `readonly`, `disabled`, `required` and it will react 
 to them to give the best experience. You can also use `v-model` directive to create 

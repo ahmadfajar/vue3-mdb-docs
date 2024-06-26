@@ -8,7 +8,7 @@ lists of links and actions in a dropdown menu style.
 
 ## Overview
 
-`<bs-dropdown-menu>` uses [BsPopover](/components/popover) internally. Because its
+`<bs-dropdown-menu>` uses [BsPopover](/components/container/popover) internally. Because its
 unique concept as popup container, `<bs-dropdown-menu>` can also be used to display
 other components.
 

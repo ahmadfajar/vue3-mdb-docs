@@ -4,6 +4,8 @@
 **BsIconSpinner** is a lightweight component which is used for displaying loading indicator.
 :::
 
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
+
 
 ## Overview
 
@@ -11,8 +13,6 @@
 It can be used inside almost any component or html element. `<bs-icon-spinner>` has
 two built-in animations, which are: _Spin_ and _Pulse_. These animation can be enabled via 
 property `spin` or `pulse`, but do not use both property together.
-
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ::: BlockVue {title="Icon Spinner Example"}
 

@@ -268,7 +268,6 @@ const picker8 = ref<string>();
 </BsTabs>
 
 
-
 <script lang="ts" setup>
 import { ref } from 'vue';
 

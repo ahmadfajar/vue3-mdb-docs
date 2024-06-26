@@ -42,7 +42,7 @@ export const sidebar = [
           { text: 'Toggle Button', link: '/components/buttons/toggle-button' }
         ]
       },
-      { text: 'Card', link: '/components/card' },
+      
       {
         text: 'Chips',
         collapsed: true,
@@ -52,14 +52,14 @@ export const sidebar = [
         ]
       },
       {
-        text: 'Container & Navigation',
+        text: 'Container',
         collapsed: true,
         items: [
-          { text: 'App Container', link: '/components/navigation/container' },
-          { text: 'Appbar', link: '/components/navigation/appbar' },
-          { text: 'List Nav', link: '/components/navigation/list-nav' },
-          { text: 'Side Drawer', link: '/components/navigation/side-drawer' },
-          { text: 'Tabs', link: '/components/navigation/tabs' },
+          { text: 'App Container', link: '/components/container/container' },
+          { text: 'Appbar', link: '/components/container/appbar' },
+          { text: 'Card', link: '/components/container/card' },
+          { text: 'Popover', link: '/components/container/popover' },
+          { text: 'Side Drawer', link: '/components/container/side-drawer' },
         ]
       },
       { text: 'Dropdown Menu', link: '/components/dropdown-menu' },
@@ -104,7 +104,14 @@ export const sidebar = [
           { text: 'Date Picker', link: '/components/pickers/date-picker' },
         ] 
       },
-      { text: 'Popover', link: '/components/popover' },
+      {
+        text: 'Navigation',
+        collapsed: true,
+        items: [
+          { text: 'List Nav', link: '/components/navigation/list-nav' },
+          { text: 'Tabs', link: '/components/navigation/tabs' },
+        ]
+      },
       {
         text: 'Progress Control',
         collapsed: true,

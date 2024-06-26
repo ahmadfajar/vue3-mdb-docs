@@ -72,13 +72,6 @@ next:
       </a>
     </div>
   </div>
-  <a href="card" class="list-group-item list-group-item-action">
-    <h5>Card</h5>
-    <div class="mt-2 mb-1">
-    A flexible and extensible content container. It includes sub-component for headers, 
-    footers, and content with variety background colors, and powerful display options.
-    </div>
-  </a>
   <div class="list-group-item">
     <div class="h5 mb-4">Chips:</div>
     <div class="list-group">
@@ -99,38 +92,38 @@ next:
     </div>
   </div>
   <div class="list-group-item">
-    <div class="h5 mb-4">Container & Navigation:</div>
+    <div class="h5 mb-4">Container:</div>
     <div class="list-group">
-      <a href="/components/navigation/container" class="list-group-item list-group-item-action">
+      <a href="/components/container/container" class="list-group-item list-group-item-action">
         <h5>App Container</h5>
         <div class="mt-2 mb-1">
         A lightweight components which is used as layout container for your application.
         </div>
       </a>
-      <a href="/components/navigation/appbar" class="list-group-item list-group-item-action">
+      <a href="/components/container/appbar" class="list-group-item list-group-item-action">
         <h5>Appbar</h5>
         <div class="mt-2 mb-1">
         A lightweight component which is placed at the top of the page as a container for page 
         title, logo, menus, and action buttons.
         </div>
       </a>
-      <a href="/components/navigation/list-nav" class="list-group-item list-group-item-action">
-        <h5>List Nav</h5>
+      <a href="/components/container/card" class="list-group-item list-group-item-action">
+        <h5>Card</h5>
         <div class="mt-2 mb-1">
-        A component used for displaying a series of item and mainly used for navigation. 
-        It can contain an icon, nested items, and provides a consistent styling for organizing the items.
+        A flexible and extensible content container. It includes sub-component for headers, 
+        footers, and content with variety background colors, and powerful display options.
         </div>
       </a>
-      <a href="/components/navigation/side-drawer" class="list-group-item list-group-item-action">
+      <a href="/components/container/popover" class="list-group-item list-group-item-action">
+        <h5>Popover</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is used as a popup container.
+        </div>
+      </a>
+      <a href="/components/container/side-drawer" class="list-group-item list-group-item-action">
         <h5>Side Drawer</h5>
         <div class="mt-2 mb-1">
         A lightweight component's container which may contains application navigation, logo and others.
-        </div>
-      </a>
-      <a href="/components/navigation/tabs" class="list-group-item list-group-item-action">
-        <h5>Tabs</h5>
-        <div class="mt-2 mb-1">
-        A component used for creating a pseudo-navigation for a page.
         </div>
       </a>
     </div>
@@ -273,6 +266,24 @@ next:
     </div>
   </a>
   <div class="list-group-item">
+    <div class="h5 mb-4">Navigation:</div>
+    <div class="list-group">
+      <a href="/components/navigation/list-nav" class="list-group-item list-group-item-action">
+        <h5>List Nav</h5>
+        <div class="mt-2 mb-1">
+        A component used for displaying a series of item and mainly used for navigation. 
+        It can contain an icon, nested items, and provides a consistent styling for organizing the items.
+        </div>
+      </a>
+      <a href="/components/navigation/tabs" class="list-group-item list-group-item-action">
+        <h5>Tabs</h5>
+        <div class="mt-2 mb-1">
+        A component used for creating a pseudo-navigation for a page.
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="list-group-item">
     <div class="h5 mb-4">Pickers:</div>
     <div class="list-group">
       <a href="/components/pickers/color-picker" class="list-group-item list-group-item-action">
@@ -292,12 +303,6 @@ next:
       </a>
     </div>
   </div>
-  <a href="popover" class="list-group-item list-group-item-action">
-    <h5>Popover</h5>
-    <div class="mt-2 mb-1">
-    A lightweight component which is used as a popup container.
-    </div>
-  </a>
   <div class="list-group-item">
     <div class="h5 mb-4">Progress Control:</div>
     <div class="list-group">
