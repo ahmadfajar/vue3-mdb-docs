@@ -16,12 +16,12 @@
   "devDependencies": {
     "@stackblitz/sdk": "^1.10.0",
     "@types/markdown-it-container": "^2.0.10",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.9",
     "bootstrap": "5.2.3",
     "cheerio": "^1.0.0-rc.12",
     "markdown-it": "^14.1.0",
     "markdown-it-container": "^4.0.0",
-    "sass": "^1.77.5",
+    "sass": "^1.77.6",
     "vitepress": "^1.2.3"
   },
   "scripts": {
@@ -29,12 +29,10 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "peerDependencies": {
-    "vue": "^3.4.27"
-  },
   "dependencies": {
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
+    "vue": "^3.4.31",
     "vue-mdbootstrap": "^2.0.8"
   }
 }

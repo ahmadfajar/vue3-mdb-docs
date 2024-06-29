@@ -219,7 +219,10 @@ next:
         </div>
       </a>
       <a href="/components/input/listbox" class="list-group-item list-group-item-action">
-        <h5>Listbox</h5>
+        <h5>
+        Listbox
+        <BsBadge color="info" class="ms-2" style="--bs-badge-font-size: .7rem">v2.0.0</BsBadge>
+        </h5>
         <div class="mt-2 mb-1">
         A component that let users select one or more items from a displayed list.
         </div>
@@ -292,7 +295,7 @@ next:
         <BsBadge color="info" class="ms-2" style="--bs-badge-font-size: .7rem">v2.0.0</BsBadge>
         </h5>
         <div class="mt-2 mb-1">
-        A component that generates a color selection widget.
+        A component that allow users to select a color using a variety of input methods.
         </div>
       </a>
       <a href="/components/pickers/date-picker" class="list-group-item list-group-item-action">
