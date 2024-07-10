@@ -14,7 +14,7 @@ application navigation, logo and others.
 ## Overview
 
 **BsSideDrawer** is usually used to house your application navigation. It works
-well with [BsAppbar](/components/navigation/appbar) and can automatically adapt to the screen size. 
+well with [BsAppbar](/components/container/appbar) and can automatically adapt to the screen size. 
 You also can change the component's color using the `color` property and use any 
 [color variants](/reference/color-variants) as you like.
 
