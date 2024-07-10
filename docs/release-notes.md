@@ -7,6 +7,23 @@ and can be viewed below for your convenience.
 :::
 
 
+## v2.0.9
+
+Released: July 10, 2024
+
+### Improvements
+
+- **BsDatePicker**: landscape mode now works on medium-screen size.
+- **BsStore**: remote filter can have mixed logic of **and/or** via filter options.
+
+### Bug Fixes
+
+- **BsColorPicker**: fix color thumb strange behaviour on VitePress.
+- **BsDatePicker**: fix picker element hover size.
+- **BsDateTimeField**: prevent closing popup DatePicker when time element is clicked.
+- **BsTab**: fix `icon-flip`, `icon-pulse`, `icon-spin`, `icon-rotation` properties not working properly.
+
+
 ## v2.0.8
 
 Released: May 18, 2024

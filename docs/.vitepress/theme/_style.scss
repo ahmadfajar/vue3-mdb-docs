@@ -702,3 +702,13 @@ body {
     color: var(--bs-body-color);
   }
 }
+
+.md-datepicker {
+  .md-datepicker-body {
+    &.bg-white {
+      > .md-datepicker-nav {
+        color: var(--bs-body-color);
+      }
+    }
+  }
+}

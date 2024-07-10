@@ -94,6 +94,7 @@ export const sidebar = [
           { text: 'TextArea Field', link: '/components/input/textarea' },
           { text: 'Numeric Field', link: '/components/input/numeric-field' },
           { text: 'Chip Field', link: '/components/input/chipfield' },
+          { text: 'DateTime Field', link: '/components/input/datetime-field' },
         ]
       },
       { text: 'List Tile', link: '/components/list-tile' },

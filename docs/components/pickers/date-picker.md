@@ -54,6 +54,10 @@ const picker2 = ref<string>();
 ```
 :::
 
+::: info <BsIcon icon="info_outlined" /> <span class="ms-2 h6 mb-0">INFO</span>
+Landscape orientation only works on medium screen size and above. 
+:::
+
 
 ## Color Style
 
