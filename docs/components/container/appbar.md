@@ -19,12 +19,12 @@ container for page title, logo, menus, and action buttons which is usually known
 ::: BlockVue {title="Appbar Example"}
 
 ```html
-<bs-app-container>
+<bs-app>
   <bs-appbar class="bg-indigo" shadow>
     <bs-button color="light-grey" mode="icon" icon="menu" flat></bs-button>
     <bs-appbar-title class="text-white" title="Page Title"> </bs-appbar-title>
   </bs-appbar>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -35,7 +35,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 ```vue
 <template>
-  <bs-app-container>
+  <bs-app>
     <bs-appbar class="bg-indigo" shadow>
       <bs-button color="light-grey" mode="icon" icon="menu" flat></bs-button>
       <bs-appbar-title class="text-white" title="Page Title"></bs-appbar-title>
@@ -59,7 +59,7 @@ container for page title, logo, menus, and action buttons which is usually known
         </bs-dropdown-menu>
       </bs-appbar-items>
     </bs-appbar>
-  </bs-app-container>
+  </bs-app>
 </template>
 ```
 :::

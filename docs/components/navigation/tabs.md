@@ -158,7 +158,7 @@ for example: `active-class="border-yellow active"`.
 
 ```vue
 <template>
-  <bs-app-container class="rounded-md-3 bg-white">
+  <bs-app class="rounded-md-3 bg-white">
     <bs-appbar class="bg-pink darken-3">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Page Title" class="text-white"></bs-appbar-title>
@@ -179,7 +179,7 @@ for example: `active-class="border-yellow active"`.
         {{ loremTab }}
       </bs-tab>
     </bs-tabs>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -213,7 +213,7 @@ Tab color.
 
 ```vue
 <template>
-  <bs-app-container class="rounded-md-3 bg-white">
+  <bs-app class="rounded-md-3 bg-white">
     <bs-appbar class="bg-default-color-dark">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Page Title" class="text-white"></bs-appbar-title>
@@ -234,7 +234,7 @@ Tab color.
         {{ loremTab }}
       </bs-tab>
     </bs-tabs>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -556,7 +556,7 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 --md-tabs-placement-right-shadow: -1px 0px 5px rgba(0, 0, 0, 0.2),-2px 0px 2px rgba(0, 0, 0, 0.14),-3px 0px 1px -2px rgba(0, 0, 0, 0.12);
 
 
-// Bootstrap Tabs variant
+// Bootstrap Tabs style variant
 --bs-nav-tabs-border-color: #dee2e6;
 --bs-nav-tabs-border-radius: 0.375rem;
 --bs-nav-tabs-border-width: 1px;
@@ -569,15 +569,14 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 --md-tabs-nav-margin-x: 1rem;
 --md-tabs-nav-margin-y: 0.5rem;
 
-// Bootstrap Pill variant
+// Bootstrap Pill style variant
 --bs-nav-pills-border-radius: 0.375rem;
 --bs-nav-pills-link-active-bg: rgb(var(--md-field-primary-indicator-rgb));
 --bs-nav-pills-link-active-color: #fff;
 
-// Bootstrap Tabs/Pill variant
+// Bootstrap Tabs and Pill style variant
 --bs-nav-link-color: rgba(69, 64, 98, 0.86);
 --bs-nav-link-hover-color: rgb(var(--md-field-primary-indicator-rgb))
-
 
 // Material style variant
 --md-tabs-material-padding: 1.125rem 1.5rem 1rem 1.5rem;
@@ -591,7 +590,7 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 --md-tabs-modern-padding: 0.625rem 1.25rem;
 --md-tabs-modern-active-bgcolor: rgba(0, 0, 0, 0.2);
 
-// Material/Modern style variant
+// Material and Modern style variant
 --md-tabs-item-color: rgba(255, 255, 255, 0.6);
 --md-tabs-item-active-color: #fff;
 --md-tabs-item-hover-color: rgba(255, 255, 255, 0.8);

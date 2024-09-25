@@ -1219,7 +1219,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ```html
 <div class="my-demo-wrapper">
-  <bs-app-container class="rounded-3" style="max-width: 400px">
+  <bs-app class="rounded-3" style="max-width: 400px">
     <bs-appbar class="bg-default-color">
       <bs-button color="light-grey" icon="arrow_back" mode="icon" flat />
       <bs-appbar-title class="text-white" title="Join Conference" />
@@ -1274,7 +1274,7 @@ The following are a collection of examples that demonstrate more advanced use of
         </bs-card-body>
       </bs-card>
     </bs-container>
-  </bs-app-container>
+  </bs-app>
 </div>
 ```
 :::

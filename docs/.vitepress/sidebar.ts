@@ -20,10 +20,6 @@ export const sidebar = [
         collapsed: true,
         items: [
           {
-            text: 'Mask Loader',
-            link: '/components/animations/mask-loader'
-          },
-          {
             text: 'Ripple',
             link: '/components/animations/ripple'
           },
@@ -42,7 +38,6 @@ export const sidebar = [
           { text: 'Toggle Button', link: '/components/buttons/toggle-button' }
         ]
       },
-      
       {
         text: 'Chips',
         collapsed: true,
@@ -58,7 +53,6 @@ export const sidebar = [
           { text: 'App Container', link: '/components/container/container' },
           { text: 'Appbar', link: '/components/container/appbar' },
           { text: 'Card', link: '/components/container/card' },
-          { text: 'Popover', link: '/components/container/popover' },
           { text: 'Side Drawer', link: '/components/container/side-drawer' },
         ]
       },
@@ -98,13 +92,6 @@ export const sidebar = [
         ]
       },
       { text: 'List Tile', link: '/components/list-tile' },
-      { text: 'Pickers', 
-        collapsed: true,
-        items: [
-          { text: 'Color Picker', link: '/components/pickers/color-picker' },
-          { text: 'Date Picker', link: '/components/pickers/date-picker' },
-        ] 
-      },
       {
         text: 'Navigation',
         collapsed: true,
@@ -112,6 +99,24 @@ export const sidebar = [
           { text: 'List Nav', link: '/components/navigation/list-nav' },
           { text: 'Tabs', link: '/components/navigation/tabs' },
         ]
+      },
+      {
+        text: 'Overlays',
+        collapsed: true,
+        items: [
+          { text: 'Overlay', link: '/components/overlays/overlay' },
+          { text: 'Mask Loader', link: '/components/overlays/mask-loader' },
+          { text: 'Popover', link: '/components/overlays/popover' },
+          { text: 'Modal', link: '/components/overlays/modal' },
+          { text: 'Lightbox', link: '/components/overlays/lightbox' },
+        ]
+      },
+      { text: 'Pickers', 
+        collapsed: true,
+        items: [
+          { text: 'Color Picker', link: '/components/pickers/color-picker' },
+          { text: 'Date Picker', link: '/components/pickers/date-picker' },
+        ] 
       },
       {
         text: 'Progress Control',

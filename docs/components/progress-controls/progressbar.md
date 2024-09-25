@@ -298,7 +298,7 @@ The following is an example that demonstrate more advanced use of `<bs-progress-
 
 ```vue
 <template>
-  <bs-app-container class="my-demo-wrapper mobi-card mx-auto">
+  <bs-app class="my-demo-wrapper mobi-card mx-auto">
     <bs-card class="rounded-3" shadow>
       <bs-appbar class="bg-indigo rounded-3 rounded-bottom-0">
         <bs-appbar-title class="text-white" title="Dashboard - Revenue"></bs-appbar-title>
@@ -357,7 +357,7 @@ The following is an example that demonstrate more advanced use of `<bs-progress-
         </div>
       </bs-card-body>
     </bs-card>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>

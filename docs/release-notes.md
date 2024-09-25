@@ -7,6 +7,53 @@ and can be viewed below for your convenience.
 :::
 
 
+## v2.0.12
+
+Released: September 20, 2024
+
+### Features & Improvements
+
+- **BsLightbox**: improve image loading using preloader
+- **BsSideDrawer**: improve collapse animation if used together with `<BsAppbar>`.
+
+
+## v2.0.11
+
+Released: September 08, 2024
+
+### Features & Improvements
+
+- **BsListNavItem**, **BsListTile**, **BsTab**, **BsTabItem**:
+  - Add `path-name` and `location` properties to better accommodate the `<RouterLink>` property.
+- **BsListNavItem**, **BsListTile**: improve route matcher
+- **BsSideDrawer**: improvement when there are multiple `<BsApp>` and `<BsSideDrawer>` instances.
+- Replace `<BsAppContainer>` with `<BsApp>` and marked `<BsAppContainer>` as deprecated.
+
+### Bug Fixes
+
+- **BsModel**: fixed bug when the `toObject` method was overridden and its return 
+  value did not have a field that was mentioned by the `idProperty` property.
+
+
+## v2.0.10
+
+Released: August 12, 2024
+
+### Features & Improvements
+
+- **BsProgressBar**: 
+  - Add properties: `label`, `label-alignment`, `label-position` and `inner-cls`.
+  - Replace property: `rounded` with `rounded-off`.
+- **BsTextField**, **BsNumericField**: add properties `prefix` and `suffix`.
+- **BsChip**: improve UI border-radius to comply material design spec.
+- **BsDateTimeField**: prevents DatePicker from being displayed when the field is in read-only state.
+- **BsStore**: add `expression` property on `TFilterOption` configuration.
+
+### Bug Fixes
+
+- **BsModel**: fix error when destroyed from BsStore.
+
+
 ## v2.0.9
 
 Released: July 10, 2024

@@ -320,7 +320,7 @@ use `label-class` property to fine tune the field label with css classes.
 
 ```vue
 <template>
-  <bs-app-container class="my-demo-wrapper mobi-card mx-auto">
+  <bs-app class="my-demo-wrapper mobi-card mx-auto">
     <bs-card class="rounded-3" shadow>
       <bs-appbar class="bg-indigo rounded-3 rounded-bottom-0">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
@@ -386,7 +386,7 @@ use `label-class` property to fine tune the field label with css classes.
       </bs-card-body>
     </bs-card>
     <bs-notification></bs-notification>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>

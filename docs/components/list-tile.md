@@ -47,7 +47,7 @@ below, to learn how to display image with title and icon correctly.
 
 ```vue
 <template>
-  <bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+  <bs-app class="mobi-card mx-auto p-3 p-md-0">
     <bs-card shadow>
       <bs-appbar class="bg-purple darken-3 rounded-3 rounded-bottom-0">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -83,7 +83,7 @@ below, to learn how to display image with title and icon correctly.
         </bs-list-tile>
       </bs-list-view>
     </bs-card>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -266,7 +266,7 @@ then the active state of `<bs-list-tile>` can be manage automatically by
 
 ```vue
 <template>
-  <bs-app-container class="mx-auto p-3 p-md-0" style="max-width: 450px">
+  <bs-app class="mx-auto p-3 p-md-0" style="max-width: 450px">
     <bs-card shadow>
       <bs-appbar class="bg-default-color-dark rounded-3 rounded-bottom-0">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -297,7 +297,7 @@ then the active state of `<bs-list-tile>` can be manage automatically by
         </template>
       </bs-list-view>
     </bs-card>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -365,7 +365,7 @@ property of the `<bs-list-view>` component explicitly.
 
 ```vue
 <template>
-  <bs-app-container class="mx-auto p-3 p-md-0" style="max-width: 450px">
+  <bs-app class="mx-auto p-3 p-md-0" style="max-width: 450px">
     <bs-card shadow>
       <bs-appbar class="bg-default-color-dark rounded-3 rounded-bottom-0">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -400,7 +400,7 @@ property of the `<bs-list-view>` component explicitly.
         </template>
       </bs-list-view>
     </bs-card>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -470,7 +470,7 @@ Valid values for the `space-around` property are: `left`, `right` or `both`.
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="bg-special-color" shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -515,7 +515,7 @@ Valid values for the `space-around` property are: `left`, `right` or `both`.
       </bs-list-tile>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -531,7 +531,7 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="bg-special-color" shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -576,7 +576,7 @@ We can also give a border to the active navigation's menu. To achieve this, sets
       </bs-list-tile>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -594,7 +594,7 @@ active navigation menu.
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="bg-special-color" shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -639,7 +639,7 @@ active navigation menu.
       </bs-list-tile>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -716,7 +716,7 @@ setting page layout.
 
 ```vue
 <template>
-  <bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+  <bs-app class="mobi-card mx-auto p-3 p-md-0">
     <bs-card shadow>
       <bs-appbar class="bg-default-color rounded-top" shadow>
         <bs-button color="light-grey" icon="menu" mode="icon" flat></bs-button>
@@ -795,7 +795,7 @@ setting page layout.
         </bs-list-tile>
       </bs-list-view>
     </bs-card>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -831,7 +831,7 @@ function toggleEnableWidget() {
 
 ```vue
 <template>
-  <bs-app-container class="bg-blue-grey lighten-3 rounded-md-3" style="height: 500px;">
+  <bs-app class="bg-blue-grey lighten-3 rounded-md-3" style="height: 500px;">
     <bs-appbar class="bg-default-color-dark" clipped-left shadow>
       <bs-button
         color="light-grey"
@@ -909,7 +909,7 @@ function toggleEnableWidget() {
       </bs-list-view>
     </bs-side-drawer>
     <bs-container app></bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">

@@ -25,12 +25,6 @@ next:
   <div class="list-group-item">
     <div class="h5 mb-4">Animations:</div>
     <div class="list-group">
-      <a href="/components/animations/mask-loader" class="list-group-item list-group-item-action">
-        <h5>Mask Loader</h5>
-        <div class="mt-2 mb-1">
-        A component which are typically used for displaying a loading progress with backdrop overlay.
-        </div>
-      </a>
       <a href="/components/animations/ripple" class="list-group-item list-group-item-action">
         <h5>Ripple</h5>
         <div class="mt-2 mb-1">
@@ -114,12 +108,6 @@ next:
         footers, and content with variety background colors, and powerful display options.
         </div>
       </a>
-      <a href="/components/container/popover" class="list-group-item list-group-item-action">
-        <h5>Popover</h5>
-        <div class="mt-2 mb-1">
-        A lightweight component which is used as a popup container.
-        </div>
-      </a>
       <a href="/components/container/side-drawer" class="list-group-item list-group-item-action">
         <h5>Side Drawer</h5>
         <div class="mt-2 mb-1">
@@ -186,13 +174,6 @@ next:
         <div class="mt-2 mb-1">
         A lightweight component which is primarily used to create SVG shape to visualize 
         image placeholder.
-        </div>
-      </a>
-      <a href="/components/image/lightbox" class="list-group-item list-group-item-action">
-        <h5>Lighbox</h5>
-        <div class="mt-2 mb-1">
-        A modal image gallery component. It works with a series of images and includes support 
-        for previous/next controls, indicators and toolbar buttons.
         </div>
       </a>
     </div>
@@ -289,6 +270,36 @@ next:
         <h5>Tabs</h5>
         <div class="mt-2 mb-1">
         A component used for creating a pseudo-navigation for a page.
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="h5 mb-4">Overlays:</div>
+    <div class="list-group">
+      <a href="/components/overlays/overlay" class="list-group-item list-group-item-action">
+        <h5>Overlay</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component for displaying a backdrop overlay.
+        </div>
+      </a>
+      <a href="/components/overlays/mask-loader" class="list-group-item list-group-item-action">
+        <h5>Mask Loader</h5>
+        <div class="mt-2 mb-1">
+        A component which are typically used for displaying a loading progress with backdrop overlay.
+        </div>
+      </a>
+      <a href="/components/overlays/popover" class="list-group-item list-group-item-action">
+        <h5>Popover</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component which is used as a popup container.
+        </div>
+      </a>
+      <a href="/components/overlays/lightbox" class="list-group-item list-group-item-action">
+        <h5>Lighbox</h5>
+        <div class="mt-2 mb-1">
+        A modal image gallery component. It works with a series of images and includes support 
+        for previous/next controls, indicators and toolbar buttons.
         </div>
       </a>
     </div>

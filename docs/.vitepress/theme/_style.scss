@@ -652,11 +652,11 @@ body {
         border-radius: 12px;
         content: '';
         inset: 0;
+        position: absolute;
         -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: destination-out;
         // mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         // mask-composite: destination-out;
-        position: absolute;
       }
     }
   }

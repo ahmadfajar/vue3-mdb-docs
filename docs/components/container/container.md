@@ -6,12 +6,14 @@ outline: [2, 3]
 
 
 ::: lead
-**App Container** is a lightweight components which is used as layout container for your
-application. If you intend to build an app with *Vue MDBootstrap* as the main UI components, 
-and the app layouts such as Navigation Bar and SideBar will use Vue MDBootstrap, 
+**BsApp** is a lightweight components which is used for your application containment. 
+If you intend to build an app with *Vue MDBootstrap* as the main UI components, 
+and the app layouts such as Navigation Bar and SideBar will be using Vue MDBootstrap, 
 then you need these components so that [BsAppbar](/components/container/appbar) and 
 [BsSideDrawer](/components/container/side-drawer) components can work properly.
 :::
+
+<SmallNote color="teal">Updated since v2.0.11</SmallNote>
 
 
 ## Basic Usage
@@ -20,7 +22,7 @@ then you need these components so that [BsAppbar](/components/container/appbar) 
 
 ```vue
 <template>
-  <bs-app-container class="bg-grey-400 rounded" style="height: 300px">
+  <bs-app class="bg-grey-400 rounded" style="height: 300px">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
@@ -60,7 +62,7 @@ then you need these components so that [BsAppbar](/components/container/appbar) 
         <!-- Your content goes here -->
       </bs-content>
     </bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
@@ -75,10 +77,14 @@ function toggleSideDrawer(value: boolean) {
 ```
 :::
 
+::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
+:::
+
 
 ## API Reference
 
-### BsAppContainer {#api-app-container}
+### BsApp {#api-app}
 
 <BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
   <BsTab label="Props" url="#api-app-container">

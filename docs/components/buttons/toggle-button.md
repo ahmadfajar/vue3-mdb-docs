@@ -434,7 +434,7 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
 ```vue
 <template>
   <div class="my-demo-wrapper">
-    <bs-app-container class="rounded-3" style="max-width: 450px">
+    <bs-app class="rounded-3" style="max-width: 450px">
       <bs-appbar class="bg-default-color">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Your Downloads"></bs-appbar-title>
@@ -480,7 +480,7 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
           </bs-card-body>
         </bs-card>
       </bs-container>
-    </bs-app-container>
+    </bs-app>
   </div>
 </template>
 

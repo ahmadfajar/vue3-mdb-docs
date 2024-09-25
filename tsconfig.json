@@ -1,8 +1,22 @@
 {
-  "include": ["env.d.ts", "docs/**/*.vue", "components/**/*.vue", "components/**/*.ts"],
-  "exclude": ["docs/**/__tests__/*", "components/**/__tests__/*"],
+  "include": [
+    "env.d.ts",
+    "docs/**/*.mts",
+    "docs/**/*.ts",
+    "components/**/*.ts",
+    "components/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules",
+    "docs/**/__tests__/*",
+    "components/**/__tests__/*"
+  ],
   "compilerOptions": {
+    "target": "ESNext",
     "module": "ESNext",
+    "lib": [
+      "ES2022",
+    ],
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     // Required in Vue projects
@@ -12,18 +26,11 @@
     "noImplicitThis": true,
     "strict": true,
     "verbatimModuleSyntax": true,
-    "target": "ESNext",
     "useDefineForClassFields": true,
-
     // Recommended
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "composite": true,
-    "baseUrl": ".",
-    "lib": [
-      "ES2021",
-      "ESNext.String"
-    ]
   }
 }

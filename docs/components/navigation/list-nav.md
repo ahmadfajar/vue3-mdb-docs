@@ -21,7 +21,7 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 ::: BlockVue {title="ListNav Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card shadow>
     <bs-appbar class="bg-purple darken-3 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -42,7 +42,7 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -66,7 +66,7 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
 ::: BlockVue {title="ListNav Color Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="bg-special-color" shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -87,7 +87,7 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -103,7 +103,7 @@ To create the padding, sets the `space-around` property of the `<bs-list-view>` 
 ::: BlockVue {title="ListNav Padding Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -128,7 +128,7 @@ To create the padding, sets the `space-around` property of the `<bs-list-view>` 
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -144,7 +144,7 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 ::: BlockVue {title="ListNav Padding Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -165,7 +165,7 @@ We can also give a border to the active navigation's menu. To achieve this, sets
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -183,7 +183,7 @@ active navigation menu.
 ::: BlockVue {title="ListNav Item Style Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card shadow>
     <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -204,7 +204,7 @@ active navigation menu.
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -222,7 +222,7 @@ to customize the indentation from the left side.
 ::: BlockVue {title="Nested Navigation Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="rounded-3" shadow>
     <bs-appbar class="bg-purple darken-3 rounded-top" shadow>
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
@@ -293,7 +293,7 @@ to customize the indentation from the left side.
       </bs-list-nav>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -306,7 +306,7 @@ navigation menus.
 ::: BlockVue {title="ListNav mixed with ListTile Example"}
 
 ```html
-<bs-app-container class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card mx-auto p-3 p-md-0">
   <bs-card class="rounded-3" shadow>
     <bs-appbar class="bg-deep-purple darken-2 rounded-top">
       <bs-button color="light-grey" icon="menu" mode="icon" flat> </bs-button>
@@ -365,7 +365,7 @@ navigation menus.
       </bs-list-tile>
     </bs-list-view>
   </bs-card>
-</bs-app-container>
+</bs-app>
 ```
 :::
 
@@ -378,7 +378,7 @@ navigation menus.
 
 ```vue
 <template>
-  <bs-app-container class="light-mode bg-blue-grey lighten-3 rounded-md-3" style="height: 500px;">
+  <bs-app class="light-mode bg-blue-grey lighten-3 rounded-md-3" style="height: 500px;">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
@@ -452,7 +452,7 @@ navigation menus.
       </bs-list-view>
     </bs-side-drawer>
     <bs-container app></bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">

@@ -23,7 +23,7 @@ You also can change the component's color using the `color` property and use any
 
 ```vue
 <template>
-  <bs-app-container class="rounded-3" style="height: 350px;">
+  <bs-app class="rounded-3" style="height: 350px;">
     <bs-side-drawer v-model:open="openSideDrawer1" shadow>
       <div class="d-flex align-items-center p-3">
         <img
@@ -69,7 +69,7 @@ You also can change the component's color using the `color` property and use any
         <bs-button @click="toggleSideDrawer1(openSideDrawer1)">TOGGLE</bs-button>
       </bs-content>
     </bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
@@ -96,7 +96,7 @@ function toggleSideDrawer1(value: boolean) {
 
 ```vue
 <template>
-  <bs-app-container class="rounded-3" style="height: 350px;">
+  <bs-app class="rounded-3" style="height: 350px;">
     <bs-side-drawer v-model:open="openSideDrawer2" position="right" shadow>
       <div class="d-flex align-items-center p-3">
         <img
@@ -142,7 +142,7 @@ function toggleSideDrawer1(value: boolean) {
         <bs-button @click="toggleSideDrawer2(openSideDrawer2)">TOGGLE</bs-button>
       </bs-content>
     </bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
@@ -161,25 +161,25 @@ function toggleSideDrawer2(value: boolean) {
 ## Mini Side Drawer
 
 **BsSideDrawer** also support mini size. Sets the `mini` property to `true` to
-minimize Side Drawer. You can adjust the width of `<bs-side-drawer>` on minimize 
-state using the `mini-width` property.
+enable the mini Side Drawer. You can adjust the width of `<bs-side-drawer>` on 
+minimize state using the `mini-width` property.
 
 ::: BlockVue {title="Mini Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-5.js"}
 
 ```vue
 <template>
-  <bs-app-container class="rounded-3" style="height: 350px;">
-    <bs-side-drawer :mini="miniSideDrawer1">
+  <bs-app class="rounded-3" style="height: 350px;">
+    <bs-side-drawer v-model:open="miniSideDrawer1" mini>
       <div class="d-flex flex-row align-items-center p-2" style="width: 250px">
         <img
           class="rounded-circle md-link"
           src="/img/kitty-2.jpg"
           alt="image"
           style="width: 40px; height: 40px"
-          @click="miniSideDrawer1 = false"
+          @click="miniSideDrawer1 = true"
         />
         <transition name="fade">
-          <div v-if="!miniSideDrawer1" class="h4 mb-0 ps-3 d-flex flex-fill">
+          <div v-if="miniSideDrawer1" class="h4 mb-0 ps-3 d-flex flex-fill">
             Kitty Doe
           </div>
         </transition>
@@ -188,7 +188,7 @@ state using the `mini-width` property.
           icon="chevron_left"
           mode="icon"
           flat
-          @click="miniSideDrawer1 = true"
+          @click="miniSideDrawer1 = false"
         />
       </div>
       <bs-divider/></bs-divider>
@@ -198,7 +198,7 @@ state using the `mini-width` property.
             <a href="#mini-side-drawer" class="nav-link d-flex active">
               <bs-icon icon="home_outlined"></bs-icon>
               <transition name="fade">
-                <span v-if="!miniSideDrawer1" class="ps-3">Home</span>
+                <span v-if="miniSideDrawer1" class="ps-3">Home</span>
               </transition>
             </a>
           </div>
@@ -206,7 +206,7 @@ state using the `mini-width` property.
             <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="view_list_outlined"></bs-icon>
               <transition name="fade">
-                <span v-if="!miniSideDrawer1" class="ps-3">Orders</span>
+                <span v-if="miniSideDrawer1" class="ps-3">Orders</span>
               </transition>
             </a>
           </div>
@@ -214,7 +214,7 @@ state using the `mini-width` property.
             <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="redeem_outlined"></bs-icon>
               <transition name="fade">
-                <span v-if="!miniSideDrawer1" class="ps-3">Rewards</span>
+                <span v-if="miniSideDrawer1" class="ps-3">Rewards</span>
               </transition>
             </a>
           </div>
@@ -222,7 +222,7 @@ state using the `mini-width` property.
             <a href="#mini-side-drawer" class="nav-link d-flex">
               <bs-icon icon="account_circle_outlined"></bs-icon>
               <transition name="fade">
-                <span v-if="!miniSideDrawer1" class="ps-3">Profile</span>
+                <span v-if="miniSideDrawer1" class="ps-3">Profile</span>
               </transition>
             </a>
           </div>
@@ -230,13 +230,13 @@ state using the `mini-width` property.
       </div>
     </bs-side-drawer>
     <bs-container class="bg-blue-grey darken-3" app></bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const miniSideDrawer1 = ref(true);
+const miniSideDrawer1 = ref(false);
 </script>
 ```
 :::
@@ -252,7 +252,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ```vue
 <template>
-  <bs-app-container class="bg-blue-grey lighten-3 rounded-3" style="height: 400px;">
+  <bs-app class="bg-blue-grey lighten-3 rounded-3" style="height: 400px;">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
@@ -284,7 +284,7 @@ The following are a collection of examples that demonstrate more advanced use of
       </bs-list-view>
     </bs-side-drawer>
     <bs-container app></bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
@@ -306,7 +306,7 @@ function toggleSideDrawer3(value: boolean) {
 
 ```vue
 <template>
-  <bs-app-container class="bg-blue-grey lighten-3 rounded-3" style="height: 400px;">
+  <bs-app class="bg-blue-grey lighten-3 rounded-3" style="height: 400px;">
     <bs-appbar shadow>
       <bs-button
         color="secondary"
@@ -337,7 +337,7 @@ function toggleSideDrawer3(value: boolean) {
       </bs-list-view>
     </bs-side-drawer>
     <bs-container app></bs-container>
-  </bs-app-container>
+  </bs-app>
 </template>
 
 <script setup lang="ts">
@@ -405,7 +405,7 @@ const openSideDrawer1 = ref(true);
 const openSideDrawer2 = ref(true);
 const openSideDrawer3 = ref(true);
 const openSideDrawer4 = ref(true);
-const miniSideDrawer1 = ref(true);
+const miniSideDrawer1 = ref(false);
 const tabs1active = ref(0);
 
 function toggleSideDrawer1(value: boolean) {
