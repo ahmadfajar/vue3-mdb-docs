@@ -7,6 +7,23 @@ and can be viewed below for your convenience.
 :::
 
 
+## v2.0.13
+
+Released: September 27, 2024
+
+### Features & Improvements
+
+- **BsButton**: improve UI to better comply material design spec.
+- Class **Helper**: improve `uuid` generation performance.
+
+### Bug Fixes
+
+- **BsListTile**: fixed bug **BsListTileSubtitle** text overlapped with **BsListTileAction**
+  if multiline property of **BsListTileContent** was active and in ripple animation state.
+- **BsModal**, **BsLightbox**: fixed bug closing programmatically didn't revert 
+  document scrolling to original.
+
+
 ## v2.0.12
 
 Released: September 20, 2024

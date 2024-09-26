@@ -11,7 +11,7 @@ Some components use `<bs-popover>` internally, such as [BsDropdownMenu](/compone
 [BsCombobox](/components/input/combobox), [BsDateTimeField](/components/input/datetime-field),
 [BsSearchField](/components/input/search-field). Example below, shows you basic usage of `<bs-popover>`.
 
-::: BlockVue {title="Popover Example" file="./docs/components/scripts/popover-1.js"}
+::: BlockVue {clientOnly="true" title="Popover Example" file="./docs/components/scripts/popover-1.js"}
 
 ```vue
 <template>
@@ -75,7 +75,7 @@ Use `placement` property to change default `<bs-popover>` display placement. Val
 placement values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, 
 `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`.
 
-::: BlockVue {title="Popover Placement Example" file="./docs/components/scripts/popover-2.js"}
+::: BlockVue {clientOnly="true" title="Popover Placement Example" file="./docs/components/scripts/popover-2.js"}
 
 ```vue
 <template>

@@ -1,7 +1,3 @@
----
-outline: [2, 3]
----
-
 # Mask Loader
 
 
@@ -13,9 +9,10 @@ progress with backdrop overlay.
 
 ## Overview
 
-**BsMaskLoader** can be used to obscure parent element. With this you can provide
-information to User that the application is busy performing a background task. Example
-below will shows you how to use the `<bs-mask-loader>`.
+**BsMaskLoader** uses `<bs-overlay>` and `<bs-progress>` component internally and 
+can be used to obscure parent element. With this you can provide information to 
+User that the application is busy performing a background task. Example below will 
+shows you how to use the `<bs-mask-loader>` component.
 
 ::: BlockVue {title="Mask Loader Example" file="./docs/components/scripts/mask-loader-1.js"}
 

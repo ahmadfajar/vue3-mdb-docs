@@ -152,7 +152,7 @@ function openStackBlitz() {
     background-color: var(--doc-example-toolbar-bg);
     border-bottom: 1px solid var(--doc-example-border-color);
     position: relative;
-    padding: 0.25rem 1rem;
+    padding: 0.375rem 1rem;
 
     @media (min-width: 590px) {
       border-top-left-radius: var(--doc-example-border-radius);

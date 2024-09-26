@@ -160,16 +160,16 @@ next:
     </div>
   </div>
   <div class="list-group-item">
-    <div class="h5 mb-4">Image:</div>
+    <div class="h5 mb-4">Images:</div>
     <div class="list-group">
-      <a href="/components/image/avatar" class="list-group-item list-group-item-action">
+      <a href="/components/images/avatar" class="list-group-item list-group-item-action">
         <h5>Avatar</h5>
         <div class="mt-2 mb-1">
         A component which are typically used to display a user profile as a picture, icon, 
         or short text. 
         </div>
       </a>
-      <a href="/components/image/image-holder" class="list-group-item list-group-item-action">
+      <a href="/components/images/image-holder" class="list-group-item list-group-item-action">
         <h5>Image Holder</h5>
         <div class="mt-2 mb-1">
         A lightweight component which is primarily used to create SVG shape to visualize 
@@ -277,10 +277,10 @@ next:
   <div class="list-group-item">
     <div class="h5 mb-4">Overlays:</div>
     <div class="list-group">
-      <a href="/components/overlays/overlay" class="list-group-item list-group-item-action">
-        <h5>Overlay</h5>
+      <a href="/components/overlays/lightbox" class="list-group-item list-group-item-action">
+        <h5>Lighbox</h5>
         <div class="mt-2 mb-1">
-        A lightweight component for displaying a backdrop overlay.
+        A modal image gallery component that is used to display a collection of images.
         </div>
       </a>
       <a href="/components/overlays/mask-loader" class="list-group-item list-group-item-action">
@@ -289,17 +289,23 @@ next:
         A component which are typically used for displaying a loading progress with backdrop overlay.
         </div>
       </a>
+      <a href="/components/overlays/modal" class="list-group-item list-group-item-action">
+        <h5>Modal</h5>
+        <div class="mt-2 mb-1">
+        A popup dialog component that brings information to the user. It also provides actions through
+        the action buttons to prompt the user for input or to ask for a decision. 
+        </div>
+      </a>
+      <a href="/components/overlays/overlay" class="list-group-item list-group-item-action">
+        <h5>Overlay</h5>
+        <div class="mt-2 mb-1">
+        A lightweight component for displaying a backdrop overlay.
+        </div>
+      </a>
       <a href="/components/overlays/popover" class="list-group-item list-group-item-action">
         <h5>Popover</h5>
         <div class="mt-2 mb-1">
         A lightweight component which is used as a popup container.
-        </div>
-      </a>
-      <a href="/components/overlays/lightbox" class="list-group-item list-group-item-action">
-        <h5>Lighbox</h5>
-        <div class="mt-2 mb-1">
-        A modal image gallery component. It works with a series of images and includes support 
-        for previous/next controls, indicators and toolbar buttons.
         </div>
       </a>
     </div>

@@ -56,15 +56,17 @@ Use their respective property to enable the state.
 ::: BlockVue {title="Button States Example"}
 
 ```html
-<div class="my-demo-wrapper row row-cols-auto g-3 justify-content-center">
-  <div class="col">
-    <bs-button color="primary" active>Active</bs-button>
-  </div>
-  <div class="col">
-    <bs-button color="primary" readonly>Readonly</bs-button>
-  </div>
-  <div class="col">
-    <bs-button color="primary" disabled>Disabled</bs-button>
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="row row-cols-auto g-3 justify-content-center">
+    <div class="col">
+      <bs-button color="primary" active>Active</bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="primary" readonly>Readonly</bs-button>
+    </div>
+    <div class="col">
+      <bs-button color="primary" disabled>Disabled</bs-button>
+    </div>
   </div>
 </div>
 ```
@@ -80,7 +82,8 @@ with specific value, such as `button`, `submit`, or `reset`.
 ::: BlockVue {title="Buttons Element Example"}
 
 ```html
-<div class="my-demo-wrapper row row-cols-2 row-cols-md-auto g-3">
+<div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="row row-cols-auto g-3 justify-content-center">
   <div class="col text-center">
     <bs-button type="button">Button</bs-button>
   </div>
@@ -92,6 +95,7 @@ with specific value, such as `button`, `submit`, or `reset`.
   </div>
   <div class="col text-center">
     <bs-button href="#element-type" color="blue">Link</bs-button>
+  </div>
   </div>
 </div>
 ```

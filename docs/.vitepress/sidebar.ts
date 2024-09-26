@@ -68,11 +68,11 @@ export const sidebar = [
         ]
       },
       {
-        text: 'Image',
+        text: 'Images',
         collapsed: true,
         items: [
-          { text: 'Avatar', link: '/components/image/avatar' },
-          { text: 'Image Placeholder', link: '/components/image/image-holder' },
+          { text: 'Avatar', link: '/components/images/avatar' },
+          { text: 'Image Placeholder', link: '/components/images/image-holder' },
         ]
       },
       {
@@ -104,11 +104,11 @@ export const sidebar = [
         text: 'Overlays',
         collapsed: true,
         items: [
-          { text: 'Overlay', link: '/components/overlays/overlay' },
-          { text: 'Mask Loader', link: '/components/overlays/mask-loader' },
-          { text: 'Popover', link: '/components/overlays/popover' },
-          { text: 'Modal', link: '/components/overlays/modal' },
           { text: 'Lightbox', link: '/components/overlays/lightbox' },
+          { text: 'Mask Loader', link: '/components/overlays/mask-loader' },
+          { text: 'Modal', link: '/components/overlays/modal' },
+          { text: 'Overlay', link: '/components/overlays/overlay' },
+          { text: 'Popover', link: '/components/overlays/popover' },
         ]
       },
       { text: 'Pickers', 
