@@ -14,7 +14,7 @@ of input methods.
 
 ## Usage 
 
-::: BlockVue {title="ColorPicker Example" file="./docs/components/scripts/color-picker-1.js"}
+::: BlockVue {clientOnly="true" title="ColorPicker Example" file="./docs/components/scripts/color-picker-1.js"}
 
 ```vue
 <template>
@@ -38,7 +38,7 @@ const mode1 = ref<TColorPickerMode>();
 
 Use the `swatches` property to display an array of color swatches that users can pick from.
 
-::: BlockVue {title="ColorPicker Swatches Example" file="./docs/components/scripts/color-picker-2.js"}
+::: BlockVue {clientOnly="true" title="ColorPicker Swatches Example" file="./docs/components/scripts/color-picker-2.js"}
 
 ```vue
 <template>
@@ -84,9 +84,9 @@ const swatches = [
 
 ## Popup Dialog
 
-`<bs-color-picker>` can be displayed as a popup dialog and use [BsPopover](/components/container/popover) internally.
+`<bs-color-picker>` can be displayed as a popup dialog and use [BsPopover](/components/overlays/popover) internally.
 
-::: BlockVue {title="Popup ColorPicker Example" file="./docs/components/scripts/color-picker-3.js"}
+::: BlockVue {clientOnly="true" title="Popup ColorPicker Example" file="./docs/components/scripts/color-picker-3.js"}
 
 ```vue
 <template>
