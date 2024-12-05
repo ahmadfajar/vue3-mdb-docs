@@ -77,7 +77,7 @@ const drinks: TInputOptionItem[] = [
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 The `<bs-button-toggle>` tag still works, but has been deprecated since v2.0.0.
 :::
 

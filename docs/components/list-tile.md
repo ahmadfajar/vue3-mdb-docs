@@ -178,7 +178,7 @@ const content =
 ```
 :::
 
-::: warning <BsIcon icon="report_problem_outlined" class="text-warning" /> <span class="ms-2 h6 mb-0">Security Warning</span>
+::: warning <BsIcon icon="warning" class="text-warning" /> <span class="ms-2 h6 mb-0">Security Warning</span>
 Dynamically rendering arbitrary HTML on your website can be very dangerous because
 it can easily lead to XSS vulnerabilities. Only use `raw-html` property on trusted
 content and never on user-provided content.

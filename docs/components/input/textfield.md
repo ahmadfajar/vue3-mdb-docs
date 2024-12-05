@@ -45,7 +45,7 @@ create two-way data bindings on the `model-value` property.
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Do not use the `model-value` property when using `v-model`.
 :::
 
@@ -264,7 +264,7 @@ auto-complete, allowing existing values to be chosen, or new values to be entere
 ```
 ::: 
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
 * Datalists work in conjunction with the browser's built in auto-complete, displaying datalist 
   options first, followed by auto-complete options.
 * Datalists cannot be applied to input fields with type `password`, or `range`.
@@ -371,7 +371,14 @@ visible only when the text field is focused.
 ## Icons
 
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
-provides the ability to add icon to `<bs-text-field>`.
+provides the ability to add icon to `<bs-text-field>`. 
+
+Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ::: BlockVue {title="Text Field with icons example"}
 
@@ -380,14 +387,14 @@ provides the ability to add icon to `<bs-text-field>`.
   <div class="row row-cols-1 row-cols-lg-2">
     <div class="col">
       <div class="mb-3">
-        <bs-text-field prepend-icon="person" floating-label>
+        <bs-text-field prepend-icon="person_filled" floating-label>
           <label>Prepend</label>
         </bs-text-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field append-icon="person" floating-label>
+        <bs-text-field append-icon="person_filled" floating-label>
           <label>Append</label>
         </bs-text-field>
       </div>
@@ -408,14 +415,14 @@ provides the ability to add icon to `<bs-text-field>`.
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field prepend-icon="person" floating-label filled>
+        <bs-text-field prepend-icon="person_filled" floating-label filled>
           <label>Prepend</label>
         </bs-text-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field append-icon="person" floating-label filled>
+        <bs-text-field append-icon="person_filled" floating-label filled>
           <label>Append</label>
         </bs-text-field>
       </div>
@@ -436,14 +443,14 @@ provides the ability to add icon to `<bs-text-field>`.
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field prepend-icon="person" floating-label outlined>
+        <bs-text-field prepend-icon="person_filled" floating-label outlined>
           <label>Prepend</label>
         </bs-text-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-text-field append-icon="person" floating-label outlined>
+        <bs-text-field append-icon="person_filled" floating-label outlined>
           <label>Append</label>
         </bs-text-field>
       </div>
@@ -467,7 +474,67 @@ provides the ability to add icon to `<bs-text-field>`.
 ``` 
 ::: 
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
+
+
+## Prefixes and Suffixes
+
+The **prefix** and **suffix** properties allows you to prepend and append inline non-modifiable 
+text _before_ or _after_ the input field.
+
+<SmallNote color="teal">Added since v2.0.10</SmallNote>
+
+::: BlockVue {title="Text Field with prefixes and suffixes example"}
+
+```html
+<div class="bg-white rounded-3 p-4 w-100">
+  <div class="row row-cols-1 row-cols-lg-2">
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field prefix="www." prepend-icon="public" floating-label>
+          <label>Website</label>
+        </bs-text-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field suffix="@example.com" prepend-icon="email" floating-label>
+          <label>Email Address</label>
+        </bs-text-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field prefix="www." prepend-icon="public" floating-label filled>
+          <label>Website</label>
+        </bs-text-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field suffix="@example.com" prepend-icon="email" floating-label filled>
+          <label>Email Address</label>
+        </bs-text-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field prefix="www." prepend-icon="public" floating-label outlined>
+          <label>Website</label>
+        </bs-text-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-text-field suffix="@example.com" prepend-icon="email" floating-label outlined>
+          <label>Email Address</label>
+        </bs-text-field>
+      </div>
+    </div>
+  </div>
+</div>
+``` 
+::: 
 
 
 ## Usage Example
@@ -480,8 +547,8 @@ with form validation.
 ```vue
 <template>
   <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card class="rounded-3" shadow>
-      <bs-appbar class="bg-indigo rounded-3 rounded-bottom-0">
+    <bs-card shadow>
+      <bs-appbar class="bg-indigo">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Sign Up"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -690,7 +757,7 @@ function submit(notification: INotificationProvider) {
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal" class="mt-lg-4">Updated on v2.0.10</SmallNote>
 
 ```scss
 --md-field-active-border-color: rgb(var(--md-field-active-indicator));
@@ -705,6 +772,7 @@ function submit(notification: INotificationProvider) {
 --md-field-padding-end: 1rem;
 --md-field-padding-top: 1.625rem;
 --md-field-padding-bottom: 0.375rem;
+--md-field-inline-text-font-weight: 500;
 
 // global css variables
 --md-field-primary-indicator-rgb: 98, 0, 238;
@@ -723,9 +791,9 @@ function submit(notification: INotificationProvider) {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | autocomplete | `Boolean`/`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
@@ -745,11 +813,13 @@ function submit(notification: INotificationProvider) {
 | password-toggle      | `Boolean` | `true` | Enable toggle password field. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | placeholder  | `String` |        | Sets the field placeholder. |
-| prepend-icon | `String` |        | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| prefix       | `String` |        | Prepend inline non-modifiable text before the input field. <BsBadge color="info">v2.0.10</BsBadge> |
+| prepend-icon | `String` |        | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String` |  | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | rounded     | `Boolean` | `false` | Create the component with **_rounded-pill style_** appearance. <BsBadge color="info">v2.0.5</BsBadge> |
+| suffix      | `String`  |         | Append inline non-modifiable text after the input field. <BsBadge color="info">v2.0.10</BsBadge> |
 | type        | `String`  | `'text'`| Sets `<input>` element `type` attribute. Valid values are: `text`, `password`, `email`, `url`, `tel`. |
 | validation-icon | `Boolean`  | `false`| Display validation icon or not, when this field has been validated. <BsBadge color="info">v2.0.0</BsBadge> |
 | validator | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |

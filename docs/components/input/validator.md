@@ -16,7 +16,7 @@ All properties are mandatory.
 </div>
 </div>
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">NOTE</span>
+::: info <BsIcon icon="info" /><span class="ms-2 h6 mb-0">NOTE</span>
 **Vue MDBootstrap** does not include form validation by default, we leave that up 
 to the 3rd party form validation plugin. As of now, [Vuelidate](https://vuelidate-next.netlify.app/) 
 has been fully tested with our component library.

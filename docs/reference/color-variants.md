@@ -71,7 +71,7 @@ can be applied to html element, see: applying [background](#background-color-var
 [border](#border-color-variants), and [text](#text-color-variants) color variants above. 
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Starting from **version 2.1.0**, **Vue MDBootstrap** only provides minimal color 
 variants in its main bundle (`dist/bundle.css` and `dist/bundle.min.css`) to reduce 
 the file size. Other color variants are distributed in `dist/bundle-color.css` and 

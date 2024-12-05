@@ -72,7 +72,7 @@ onUnmounted(() => {
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Do not use the `model-value` property when using `v-model`.
 :::
 
@@ -1100,6 +1100,13 @@ onUnmounted(() => {
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
 provides the ability to add icon to `<bs-combobox>`.
 
+Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+
 ::: BlockVue {clientOnly="true" title="Combobox with icons example" file="./docs/components/scripts/combobox-14.js"}
 
 ```vue
@@ -1111,7 +1118,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee19"
             :data-source="peopleSrc1"
-            prepend-icon="person"
+            prepend-icon="person_filled"
             floating-label
           >
             <label>Prepend</label>
@@ -1123,7 +1130,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee20"
             :data-source="peopleSrc1"
-            append-icon="person"
+            append-icon="person_filled"
             floating-label
           >
             <label>Append</label>
@@ -1159,7 +1166,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee23"
             :data-source="peopleSrc1"
-            prepend-icon="person"
+            prepend-icon="person_filled"
             floating-label
             filled
           >
@@ -1172,7 +1179,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee24"
             :data-source="peopleSrc1"
-            append-icon="person"
+            append-icon="person_filled"
             floating-label
             filled
           >
@@ -1211,7 +1218,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee27"
             :data-source="peopleSrc1"
-            prepend-icon="person"
+            prepend-icon="person_filled"
             floating-label
             outlined
           >
@@ -1224,7 +1231,7 @@ provides the ability to add icon to `<bs-combobox>`.
           <bs-combobox
             v-model="employee28"
             :data-source="peopleSrc1"
-            append-icon="person"
+            append-icon="person_filled"
             floating-label
             outlined
           >
@@ -1305,7 +1312,7 @@ onUnmounted(() => {
 ``` 
 ::: 
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
 
 
 ## Usage Example
@@ -1318,15 +1325,16 @@ with form validation.
 ```vue
 <template>
   <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card class="rounded-3" shadow>
-      <bs-appbar class="bg-default-color rounded-3 rounded-bottom-0">
+    <bs-card shadow>
+      <bs-appbar class="bg-default-color">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Edit Contact"></bs-appbar-title>
         <bs-spacer></bs-spacer>
         <bs-button color="light-grey" icon="more_vert" mode="icon" flat></bs-button>
       </bs-appbar>
+      <form novalidate>
       <bs-card-body class="border-bottom">
-        <div class="mb-3 mt-3">
+        <div class="my-3">
           <bs-text-field
             v-model="contact.fullName"
             :validator="fullnameValidator"
@@ -1392,6 +1400,7 @@ with form validation.
         </bs-button>
         <bs-button color="default-color" tonal @click="cancel()">Clear</bs-button>
       </bs-card-body>
+      </form>
     </bs-card>
     <bs-notification></bs-notification>
   </bs-app>
@@ -1545,9 +1554,9 @@ onUnmounted(() => {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | autofocus            | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | check-option-color <Badge type="warning">deprecated</Badge>    | `String` | | Use `checkbox-color` instead. |
 | check-option-position <Badge type="warning">deprecated</Badge> | `String` | | Use `checkbox-position` instead. |
@@ -1586,8 +1595,8 @@ onUnmounted(() => {
 | placeholder          | `String`  |        | Sets the field placeholder. |
 | popover-max-height <Badge type="warning">deprecated</Badge> | `Number`  |  | Use `listbox-max-height` instead.|
 | popover-min-width <Badge type="warning">deprecated</Badge>  | `Number`  |  | Use `listbox-min-width` instead. |
-| prepend-icon       | `String`     |  | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| prepend-icon-outer | `String`     |  | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| prepend-icon       | `String` |   | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String` |   | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly           | `Boolean`    | `false` | Put the component in _readonly_ state and sets the `<select>` element `readonly` attribute. |
 | required           | `Boolean`    | `false` | Sets `<select>` element `required` attribute. |
 | rounded-image      | `Boolean`    | `false` | Display image with **_rounded_** shape for each item that has image property. |

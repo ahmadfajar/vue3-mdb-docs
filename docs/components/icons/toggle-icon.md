@@ -77,7 +77,7 @@ const inputType2 = computed(() => passwordToggled2.value ? 'text' : 'password');
 
 <!-- @include: @/components/icon-migration-info.md -->
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 The `<bs-icon-toggle>` tag still works, but has been deprecated since v2.0.0.
 :::
 

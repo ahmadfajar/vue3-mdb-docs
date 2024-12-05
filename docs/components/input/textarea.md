@@ -48,7 +48,7 @@ const myText = ref<string>('Lorem ipsum dolor sit amet, consectetur adipiscing e
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Do not use the `model-value` property when using `v-model`.
 :::
 
@@ -339,6 +339,13 @@ visible only when the TextArea field is focused.
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
 provides the ability to add icon to `<bs-text-area>`.
 
+Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+
 ::: BlockVue {title="Text Area with icons example"}
 
 ```html
@@ -433,7 +440,7 @@ provides the ability to add icon to `<bs-text-area>`.
 ``` 
 ::: 
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
 
 
 ## Usage Example
@@ -659,9 +666,9 @@ function cancel() {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> | 
 | auto-grow    | `Boolean` | `false` | Enable/disable `<textarea>` element to auto grow. |
 | autocomplete | `Boolean`/`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when this component is mounted. |
@@ -678,9 +685,9 @@ function cancel() {
 | no-resize   | `Boolean` | `false`  | Disable resizing the `<textarea>` element. When set, the browser's resize handle will be disabled which prevents the user from changing the height of the `<textarea>` element. |
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | persistent-help-text | `Boolean`   | `true` | Keeps help text visible when the component is not focused. |
-| placeholder  | `String` |       | Sets the field placeholder. |
-| prepend-icon | `String` |       | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| prepend-icon-outer | `String` | | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| placeholder  | `String` |        | Sets the field placeholder. |
+| prepend-icon | `String` |        | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String` |  | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<textarea>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<textarea>` element `required` attribute. |
 | row-height  | `Number`  |         | Sets `<textarea>` height in pixel. |

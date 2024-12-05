@@ -42,7 +42,7 @@ Additionally, you can use keyboard **UP/DOWN** arrow to increment or decrement t
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Do not use the `model-value` property when using `v-model`.
 :::
 
@@ -382,6 +382,13 @@ visible only when the numeric field is focused.
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
 provides the ability to add icon to `<bs-numeric-field>`.
 
+Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+
 
 ::: BlockVue {clientOnly="true" title="Numeric Field with icons example"}
 
@@ -390,84 +397,84 @@ provides the ability to add icon to `<bs-numeric-field>`.
   <div class="row row-cols-1 row-cols-lg-2">
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon="person" floating-label>
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label>
           <label>Prepend</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon="person" floating-label>
+        <bs-numeric-field append-icon="bug_report_filled" floating-label>
           <label>Append</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon-outer="person" floating-label>
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label>
           <label>Prepend Outer</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon-outer="person" floating-label>
+        <bs-numeric-field append-icon-outer="bug_report" floating-label>
           <label>Append Outer</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon="person" floating-label filled>
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label filled>
           <label>Prepend</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon="person" floating-label filled>
+        <bs-numeric-field append-icon="bug_report_filled" floating-label filled>
           <label>Append</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon-outer="person" floating-label filled>
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label filled>
           <label>Prepend Outer</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon-outer="person" floating-label filled>
+        <bs-numeric-field append-icon-outer="bug_report" floating-label filled>
           <label>Append Outer</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon="person" floating-label outlined>
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label outlined>
           <label>Prepend</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon="person" floating-label outlined>
+        <bs-numeric-field append-icon="bug_report_filled" floating-label outlined>
           <label>Append</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field prepend-icon-outer="person" floating-label outlined>
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label outlined>
           <label>Prepend Outer</label>
         </bs-numeric-field>
       </div>
     </div>
     <div class="col">
       <div class="mb-3">
-        <bs-numeric-field append-icon-outer="person" floating-label outlined>
+        <bs-numeric-field append-icon-outer="bug_report" floating-label outlined>
           <label>Append Outer</label>
         </bs-numeric-field>
       </div>
@@ -477,7 +484,67 @@ provides the ability to add icon to `<bs-numeric-field>`.
 ``` 
 ::: 
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
+
+
+## Prefixes and Suffixes
+
+The **prefix** and **suffix** properties allows you to prepend and append inline non-modifiable 
+text _before_ or _after_ the input field.
+
+<SmallNote color="teal">Added since v2.0.10</SmallNote>
+
+::: BlockVue {title="Text Field with prefixes and suffixes example"}
+
+```html
+<div class="bg-white rounded-3 p-4 w-100">
+  <div class="row row-cols-1 row-cols-lg-2">
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field prefix="$" prepend-icon="smartphone" floating-label>
+          <label>Unit price</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label>
+          <label>Weight</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field prefix="$" prepend-icon="smartphone" floating-label filled>
+          <label>Unit price</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label filled>
+          <label>Weight</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field prefix="$" prepend-icon="smartphone" floating-label outlined>
+          <label>Unit price</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label outlined>
+          <label>Weight</label>
+        </bs-numeric-field>
+      </div>
+    </div>
+  </div>
+</div>
+``` 
+::: 
 
 
 ## Usage Example
@@ -490,8 +557,8 @@ with form validation.
 ```vue
 <template>
   <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card class="rounded-3" shadow>
-      <bs-appbar class="bg-default-color rounded-3 rounded-bottom-0">
+    <bs-card shadow>
+      <bs-appbar class="bg-default-color">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Contact Details"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -701,7 +768,7 @@ function clear() {
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal" class="mt-lg-4">Updated on v2.0.10</SmallNote>
 
 ```scss
 --md-field-active-border-color: rgb(var(--md-field-active-indicator));
@@ -716,6 +783,7 @@ function clear() {
 --md-field-padding-end: 1rem;
 --md-field-padding-top: 1.625rem;
 --md-field-padding-bottom: 0.375rem;
+--md-field-inline-text-font-weight: 500;
 
 // global css variables
 --md-field-primary-indicator-rgb: 98, 0, 238;
@@ -734,11 +802,11 @@ function clear() {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-button | `Boolean` | `false` | Enable and shows the *Plus-Minus* action buttons which is used to increment/decrement the numeric value. |
+| action-button        | `Boolean`   | `false`   | Enable and shows the *Plus-Minus* action buttons which is used to increment/decrement the numeric value. |
 | action-button-placement | `String` | `'right'` | Sets the *Plus-Minus* action buttons placement, valid values: `left`, `right` and `both`. |
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | autocomplete | `Boolean`/`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
@@ -758,14 +826,16 @@ function clear() {
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | placeholder  | `String` |        | Sets the field placeholder. |
-| prepend-icon | `String` |        | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| prepend-icon-outer | `String` |  | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| prefix       | `String` |        | Prepend inline non-modifiable text before the input field. <BsBadge color="info">v2.0.10</BsBadge> |
+| prepend-icon | `String` |        | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String` |  | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | rounded     | `Boolean` | `false` | Create the component with **_rounded-pill style_** appearance. <BsBadge color="info">v2.0.5</BsBadge> |
 | spin-button | `Boolean` | `true`  | Enable and shows the *Spin Buttons* which is used to **_increment/decrement_** the numeric value. |
 | spin-button-placement | `String`  | `'right'` | Sets the *Spin Buttons* placement, valid values: `left` and `right`. |
 | step        | `Number`  | `1.0`   | Sets the **_increment/decrement_** steps value. |
+| suffix      | `String`  |         | Append inline non-modifiable text after the input field. <BsBadge color="info">v2.0.10</BsBadge> |
 | use-grouping | `Boolean` | `true` | Format the displayed numeric value with digit grouping. |
 | validation-icon | `Boolean`  | `false`| Display validation icon or not, when this field has been validated. <BsBadge color="info">v2.0.0</BsBadge> |
 | validator | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |

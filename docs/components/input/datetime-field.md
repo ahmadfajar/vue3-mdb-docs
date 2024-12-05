@@ -50,7 +50,7 @@ const dateField1 = ref();
 :::
 
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 Do not use the `model-value` property when using `v-model`.
 :::
 
@@ -614,6 +614,13 @@ const dateField26 = ref();
 The properties `prepend-icon`, `prepend-icon-outer`, `append-icon` and `append-icon-outer` 
 provides the ability to add icon to `<bs-date-time-field>`.
 
+Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+
 ::: BlockVue {clientOnly="true" title="DateTime Field with icons example" file="./docs/components/scripts/datetime-field-16.js"}
 
 ```vue
@@ -622,7 +629,7 @@ provides the ability to add icon to `<bs-date-time-field>`.
     <div class="row row-cols-1 row-cols-lg-2">
       <div class="col">
         <div class="mb-3">
-          <bs-date-time-field v-model="dateField27" prepend-icon="person" 
+          <bs-date-time-field v-model="dateField27" prepend-icon="person_filled" 
             clear-button floating-label>
             <label>Prepend</label>
           </bs-date-time-field>
@@ -654,7 +661,7 @@ provides the ability to add icon to `<bs-date-time-field>`.
       </div>
       <div class="col">
         <div class="mb-3">
-          <bs-date-time-field v-model="dateField28" prepend-icon="person" 
+          <bs-date-time-field v-model="dateField28" prepend-icon="person_filled" 
             clear-button floating-label filled>
             <label>Prepend</label>
           </bs-date-time-field>
@@ -686,7 +693,7 @@ provides the ability to add icon to `<bs-date-time-field>`.
       </div>
       <div class="col">
         <div class="mb-3">
-          <bs-date-time-field v-model="dateField29" prepend-icon="person" 
+          <bs-date-time-field v-model="dateField29" prepend-icon="person_filled" 
             clear-button floating-label outlined>
             <label>Prepend</label>
           </bs-date-time-field>
@@ -730,7 +737,11 @@ const dateField29 = ref();
 ```
 :::
 
-<!-- @include: @/components/fontawesome-warn.md -->
+::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span> 
+The default icon of `<bs-date-time-field>` can be change via `append-icon` property.
+:::
+
+<!-- @include: @/components/icon-migration-info.md -->
 
 
 ## Usage Example
@@ -743,8 +754,8 @@ with form validation.
 ```vue
 <template>
   <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card class="rounded-3" shadow>
-      <bs-appbar class="bg-default-color rounded-3 rounded-bottom-0">
+    <bs-card shadow>
+      <bs-appbar class="bg-default-color">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Contact Details"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -968,9 +979,9 @@ function cancel() {
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `filled`. `rounded`, `sharp`. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-icon          | `String` |  | Sets icon to display on inner right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| append-icon-outer    | `String` |  | Sets icon to display on outer right side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | autofocus      | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | clear-button   | `Boolean` | `false` | Sets **auto show** the clear button. |
 | disabled       | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
@@ -997,8 +1008,8 @@ function cancel() {
 | picker-transition  | `String`  | `'scale'` | Transition animation when showing the Date picker. This animation is effected by `picker-placement` property. <BsBadge color="info">v2.0.0</BsBadge> |
 | picker-width       | `Number`  | `300`   | The Date picker container width in pixels. <BsBadge color="info">v2.0.0</BsBadge> |
 | placeholder        | `String`  |         | Sets the field placeholder. |
-| prepend-icon       | `String`  |         | Sets icon to display on inner left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
-| prepend-icon-outer | `String`  |         | Sets icon to display on outer left side. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| prepend-icon       | `String`  |         | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String`  |         | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly           | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required           | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
 | transition <Badge type="warning">deprecated</Badge>  | `String`  |  | Use `picker-transition` instead. |

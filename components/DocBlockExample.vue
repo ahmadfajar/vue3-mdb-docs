@@ -112,7 +112,7 @@ function openStackBlitz() {
         <div class="toolbar-item">
           <ClientOnly>
             <BsTooltip v-if="stackblitz" content="Run on StackBlitz" placement="top">
-              <BsButton icon="bolt" color="secondary" mode="icon" flat @click="openStackBlitz()" />
+              <BsButton icon="electric_bolt" color="secondary" mode="icon" flat @click="openStackBlitz()" />
             </BsTooltip>
             <BsTooltip :content="tooltipText" placement="top">
               <BsButton

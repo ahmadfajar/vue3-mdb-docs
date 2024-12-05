@@ -306,6 +306,7 @@ const galleryItems3 = [
 | toolbar          | `TLightboxToolbarItems` |  | Configure the toolbar buttons. Defaults value: `{'download': false, 'zoom': true, 'rotate': true, 'info': true, 'delete': true, 'menubar': false, 'close': true}` |
 | transition       | `String` | `'slide-top-bottom'` | Transition animation name when showing the active image. Available transitions are: `fade`, `scale`, `slide-fade`, `slide-fade-reverse`, `slide-bottom-top`, `slide-top-bottom`, `slide-left-right`, `slide-right-left`. |
 | transition-mode  | `String` |  | Controls the timing sequence of leaving/entering transitions. Available modes are `out-in` and `in-out`. |
+| z-index          | `Number` |  | Insert inline css style `z-index` to control the component positioning on the html layers. <BsBadge color="info">v2.0.15</BsBadge> |
 
 </div>
   </BsTab>

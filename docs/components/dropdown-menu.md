@@ -52,7 +52,7 @@ other components.
 ```
 :::
 
-::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 
 - The contents for the `<bs-dropdown-menu>` needs to be placed inside the `content` slot.
 - The `<bs-menu>` tag still works, but has been deprecated since v2.0.0.
