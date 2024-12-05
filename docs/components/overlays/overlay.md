@@ -2,7 +2,7 @@
 
 
 ::: lead
-**BsOverlay** is lightweight component for displaying a backdrop overlay.
+**BsOverlay** is a lightweight component for displaying a backdrop overlay.
 :::
 
 

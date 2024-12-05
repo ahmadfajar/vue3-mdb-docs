@@ -1,9 +1,7 @@
-@import 'bootstrap/dist/css/bootstrap.css';
+@use 'sass:color';
 
-/**
- * Scrollbar
- * -------------------------------------------------------------------------- 
- */
+// Scrollbar
+//-------------------------------------------------------------------------- 
 @media (min-width: 960px) {
   ::-webkit-scrollbar {
     width: 8px;
@@ -24,10 +22,8 @@
   }
 }
 
-/**
- * Colors
- * -------------------------------------------------------------------------- 
- */
+// Colors
+//-------------------------------------------------------------------------- 
 :root {
   --vp-c-bg-1: #f0f0f0;
   --vp-c-brand-1: #8b4fda;
@@ -44,10 +40,8 @@
   --vp-badge-tip-text: #8b4fda;
 }
 
-/**
- * Z-Indexes
- * -------------------------------------------------------------------------- 
- */
+// Z-Indexes
+//-------------------------------------------------------------------------- 
 :root {
   // --vp-z-index-footer: 10;
   --vp-z-index-layout-top: 1040;
@@ -63,10 +57,8 @@
   }
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- 
- */
+// Component: Button
+//-------------------------------------------------------------------------- 
 :root {
   --vp-button-brand-border: var(--vp-c-brand-2);
   --vp-button-brand-text: var(--vp-c-white);
@@ -79,10 +71,8 @@
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
 }
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- 
- */
+// Component: Home
+//-------------------------------------------------------------------------- 
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
@@ -102,10 +92,8 @@
   }
 }
 
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- 
- */
+// Component: Custom Block
+//-------------------------------------------------------------------------- 
 :root {
   --vp-code-line-height: 1.4;
   --vp-custom-block-tip-border: var(--vp-c-brand);
@@ -121,18 +109,14 @@
   --doc-text-code-dt: #f28f64;
 }
 
-/**
- * Component: Algolia
- * -------------------------------------------------------------------------- 
- */
+// Component: Algolia
+//-------------------------------------------------------------------------- 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-/**
- * Overridden styles
- * -------------------------------------------------------------------------- 
- */
+// Overridden styles
+//-------------------------------------------------------------------------- 
 .small {
   font-size: 81%;
 }
@@ -404,14 +388,14 @@
   --vp-c-bg-1: #1f1f1f;
   --vp-c-brand-1: #70d99e;
   --vp-c-brand-2: #38ab6a; // #b052b0;
-  --vp-c-brand-lighter: #{lighten(#621d62, 45%)};
+  --vp-c-brand-lighter: #{color.adjust(#621d62, $lightness: 45%)}; // #{lighten(#621d62, 45%)};
   --vp-c-mute: #313136;
   --vp-badge-tip-text: #be92f7;
   --vp-button-brand-bg: #880e4f;
   --vp-button-brand-border: #6d124d;
   --vp-button-brand-hover-bg: #b11166;
   --vp-button-brand-hover-border: #b11166;
-  --vp-button-alt-text: #{darken(#fff, 25%)};
+  --vp-button-alt-text: #{color.adjust(#fff, $lightness: -25%)}; // #{darken(#fff, 25%)};
   --vp-custom-block-tip-border: var(--vp-c-green-3);
   --vp-custom-block-tip-text: #55d8ad;
   --vp-custom-block-tip-bg: var(--vp-c-green-soft);
@@ -608,10 +592,8 @@ body {
   }
 }
 
-/**
- * Independent styles, not themeable
- * -------------------------------------------------------------------------- 
- */
+// Independent styles, not themeable
+//-----------------------------------
 .VPHome {
   .VPButton {
     &.medium {
@@ -653,10 +635,10 @@ body {
         content: '';
         inset: 0;
         position: absolute;
+        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask-composite: destination-out;
         -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: destination-out;
-        // mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        // mask-composite: destination-out;
       }
     }
   }

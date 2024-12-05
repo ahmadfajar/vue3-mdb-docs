@@ -48,12 +48,11 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 :::
 
 
-<!-- @include: @/components/fontawesome-warn.md -->
-
 ::: info <BsIcon icon="info_outlined" /> <span class="ms-2 h6 mb-0">INFO</span>
-- The `url` property in the example above is optional and can be ignored.
-- See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Icons**
-to `icon` property.
+- The `url` property in the example above is optional and can be ignored. 
+- See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Symbols**
+to the `icon` property. 
+- Since Vue MDBootstrap v2.1.0, [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are replaced with [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols). 
 :::
 
 
@@ -454,12 +453,16 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 To change the icon position use `icon-position` property and use `icon-size` to change
 the icon size. If you set this property, each tab item will have the same icon position and size.
 
+Additionally, you can sets `icon-variant` property to `outlined` (_default_), `rounded`, `sharp`, 
+`filled`, `outlined_filled`, `rounded_filled`, or `sharp_filled` to set the icon 
+style variant. See [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) for details. 
+
 ::: BlockVue {title="Tabs Icons Example" file="./docs/components/scripts/tabs-10.js"}
 
 ```vue
 <template>
   <div class="my-demo-wrapper">
-    <bs-card border-off>
+    <bs-card shadow>
       <bs-tabs 
         v-model="demoTabs10" 
         variant="material" 
@@ -505,7 +508,7 @@ only the icon.
 ```vue
 <template>
   <div class="my-demo-wrapper">
-    <bs-card border-off>
+    <bs-card shadow>
       <bs-tabs 
         v-model="demoTabs11" 
         variant="material" 
@@ -658,13 +661,17 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 | active-class | `String`  |  | Optional css class name for active Tab item which is used to overrides the `active-class` property of `<bs-tabs>`. |
 | aria-label   | `String`  |  | Generate `aria-labelledby` attribute. |
 | disabled     | `Boolean` | `false` | The Tab state, enabled or disabled. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon         | `String`  |  | The icon to display inside Tab item component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon         | `String`  |  | <div style="min-width:425px"> The icon to display inside Tab item component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip    | `String`  |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon-rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon-pulse   | `Boolean` | `false` | Apply **_pulse_** animation to the icon. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon-spin    | `Boolean` | `false` | Apply **_spin_** animation to the icon. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-spin    | `Boolean` | `false` | Apply **_spin_** animation to the icon. <BsBadge color="info">v2.0.0</BsBadge> | 
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
 | id           | `String`  |  | The Tab `ID` attribute. This property value is auto generates. |
 | label        | `String`  |  | The Tab label. |
+| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path        | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path-name   | `String`  |  | The path name for the navigation target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
 | path         | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
 | url          | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
 

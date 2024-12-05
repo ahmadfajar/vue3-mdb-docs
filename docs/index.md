@@ -35,14 +35,15 @@ Become Our Sponsor
 </div>
 </div>
 
-<script setup>
+<script setup lang="ts">
 import { onBeforeMount, onUnmounted } from 'vue';
 import { useData } from 'vitepress'
 
+const { site, isDark } = useData();
+site.value.appearance = false;
+isDark.value = true;
+
 onBeforeMount(() => {
-  const { site, isDark } = useData();
-  site.value.appearance = false;
-  isDark.value = true;
   // localStorage.setItem('vitepress-theme-appearance', 'dark');
   document.documentElement.classList.add('dark', 'vpdoc-home');
 });

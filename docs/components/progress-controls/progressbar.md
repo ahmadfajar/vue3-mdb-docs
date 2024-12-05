@@ -299,8 +299,8 @@ The following is an example that demonstrate more advanced use of `<bs-progress-
 ```vue
 <template>
   <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card class="rounded-3" shadow>
-      <bs-appbar class="bg-indigo rounded-3 rounded-bottom-0">
+    <bs-card shadow>
+      <bs-appbar class="bg-indigo">
         <bs-appbar-title class="text-white" title="Dashboard - Revenue"></bs-appbar-title>
         <bs-spacer></bs-spacer>
         <bs-button color="light-grey" icon="more_vert" mode="icon" flat></bs-button>
@@ -371,6 +371,16 @@ const singapore = ref<number>(61);
 
 <style>
 .my-demo-wrapper { width: 100%; padding: 1rem; }
+.mobi-card { max-width: 400px; }
+.mobi-card > .card > .md-appbar {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+}
+.md-list-tile-action.rating {
+  --md-tile-action-color: rgba(0, 0, 0, 0.4);
+  font-size: 120%;
+  font-weight: 300;
+}
 .dashboard-widgets .md-progress-wrapper + .value-label {
   font-size: .8rem;
   font-weight: 600;

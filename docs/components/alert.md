@@ -90,32 +90,33 @@ Use `outlined` property to enable the alert variant with **outline style**.
 ## Contextual Alert
 
 Use `variant` property to create contextual alert with predefined icon. Additionally, 
-you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`. See 
-[Google Material Icon's](https://fonts.google.com/icons?icon.set=Material+Icons) for details.
+you can sets `icon-variant` property to `outlined` (_default_), `rounded`, `sharp`, 
+`filled`, `outlined_filled`, `rounded_filled`, or `sharp_filled` to set the icon 
+style variant. See [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) for details.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ::: BlockVue {title="Contextual Alert Example"}
 
 ```html
 <div class="my-demo-wrapper w-100">
-  <bs-alert variant="success" filled>
+  <bs-alert variant="success" icon-variant="filled" filled>
     Aww yeah, you successfully read this alert message. This is an example how to 
     construct a predefined contextual <b>Success Alert</b>.
   </bs-alert>
-  <bs-alert variant="info" filled>
+  <bs-alert variant="info" icon-variant="filled" filled>
     Aww yeah, you successfully read this alert message. This is an example how to 
     construct a predefined contextual <b>Info Alert</b>.
   </bs-alert>
-  <bs-alert variant="danger" filled>
-    Aww yeah, you successfully read this alert message. This is an example how to 
-    construct a predefined contextual <b>Danger Alert</b>.
-  </bs-alert>
-  <bs-alert variant="warning" icon-variant="sharp" filled>
+  <bs-alert variant="warning" icon-variant="sharp_filled" filled>
     Aww yeah, you successfully read this alert message. This is an example how to 
     construct a predefined contextual <b>Warning Alert</b>.
   </bs-alert>
-  <bs-alert variant="help" icon-variant="outlined" filled>
+  <bs-alert variant="danger" icon-variant="sharp" filled>
+    Aww yeah, you successfully read this alert message. This is an example how to 
+    construct a predefined contextual <b>Danger Alert</b>.
+  </bs-alert>
+  <bs-alert variant="help" filled>
     Aww yeah, you successfully read this alert message. This is an example how to 
     construct a predefined contextual <b>Help Alert</b>.
   </bs-alert>
@@ -126,11 +127,14 @@ you can sets `icon-variant` property to `outlined`, `filled`, `round` or `sharp`
 
 ## Custom Icon
 
-Custom icon can be enabled by using the `icon` property. Use any valid Google Material 
-icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons)
-for details. The icon is loaded dynamically from Google Fonts site.
+Custom icon can be enabled by using the `icon` property and is loaded dynamically 
+from Google Fonts site. Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon style variant. Suffix 
+will take precedence over `icon-variant` property.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ::: BlockVue {title="Alert's Custom Icon Example"}
 
@@ -140,7 +144,7 @@ for details. The icon is loaded dynamically from Google Fonts site.
     Aww yeah, you successfully read this alert message. This is an example 
     how to construct alert with custom icon.
   </bs-alert>
-  <bs-alert color="orange" icon="help_center">
+  <bs-alert color="orange" icon="help_center_filled">
     Aww yeah, you successfully read this alert message. This is an example 
     how to construct alert with custom icon.
   </bs-alert>
@@ -148,7 +152,7 @@ for details. The icon is loaded dynamically from Google Fonts site.
     Aww yeah, you successfully read this alert message. This is an example 
     how to construct alert with custom icon.
   </bs-alert>
-  <bs-alert color="blue" icon="notifications">
+  <bs-alert color="blue" icon="notifications_rounded_filled">
     Aww yeah, you successfully read this alert message. This is an example 
     how to construct alert with custom icon.
   </bs-alert>
@@ -160,6 +164,8 @@ for details. The icon is loaded dynamically from Google Fonts site.
 ```
 :::
 
+<!-- @include: @/components/icon-migration-info.md -->
+
 
 ## Additional Contents
 
@@ -170,7 +176,7 @@ which will be styled with the appropriate color matching the variant.
 
 ```html
 <div class="my-demo-wrapper w-100">
-  <bs-alert filled variant="success">
+  <bs-alert filled variant="success" icon-variant="filled">
     <h5 class="mt-2">Well done!</h5>
     <p>
       Aww yeah, you successfully read this alert message. This is an example
@@ -197,19 +203,19 @@ add a close `x` button.
 ```html
 <div class="my-demo-wrapper w-100">
   <bs-alert color="primary" dismissible>
-    Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
+    Click the close button over there. <bs-icon-fontawesome icon="hand-pointer" rotate="90" />
   </bs-alert>
   <bs-alert color="info" dismissible>
-    Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
+    Click the close button over there. <bs-icon-fontawesome icon="hand-pointer" rotate="90" />
   </bs-alert>
   <bs-alert color="success" dismissible>
-    Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
+    Click the close button over there. <bs-icon-fontawesome icon="hand-pointer" rotate="90" />
   </bs-alert>
   <bs-alert color="danger" outlined dismissible>
-    Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
+    Click the close button over there. <bs-icon-fontawesome icon="hand-pointer" rotate="90" />
   </bs-alert>
   <bs-alert color="warning" outlined dismissible>
-    Click the close button over there. <bs-icon icon="pan_tool_alt" rotate="90" />
+    Click the close button over there. <bs-icon-fontawesome icon="hand-pointer" rotate="90" />
   </bs-alert>
 </div>
 ```
@@ -325,13 +331,13 @@ css variables with some modifications.
 | color       | `String`    | `'primary'`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon        | `String`    |             | The icon to display inside the component. Use any valid Google Material icon name, see [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) for details. |
+| icon        | `String`    |             | <div style="min-width:425px"> The icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number`  |         | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
 | icon-type <Badge type="warning">deprecated</Badge> | `String`  |  | Use `variant` property instead. |
-| icon-variant  | `String`  | `'filled'` | Use predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /><br />See [Contextual Alert](#contextual-alert) section for details.  |
 | model-value <Badge type="tip">v-model</Badge>  | `Boolean` | `true` | Component state to show or hide the component. This property is monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | outlined    | `Boolean`   | `false`  | Create outline alert style. |
 | transition  | `String`    | `'fade'` | Animation transition to use when the component becomes visible or invisible. |

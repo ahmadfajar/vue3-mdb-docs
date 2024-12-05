@@ -184,15 +184,25 @@ You can create chip with outlined style by defining the `outlined` property expl
 :::
 
 
-## Icon
+## Icon 
 
 `<bs-chip>` can have an icon inside it. The icon can be positioned on the `left` side 
-(before text) or on the `right` side (after text) using `icon-position` property
-and use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) 
-name for the `icon` property. And to use a custom icon, use the `icon` slot and 
-omit the `icon` property.
+(before text) or on the `right` side (after text) using `icon-position` property.
 
-<SmallNote color="teal">Updated on v2.0.4</SmallNote>
+Use `icon` property to display an icon and sets the value to a valid android icon 
+name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon variant. 
+
+Beside using suffix, property `icon-variant` can also be used to set the icon variant. 
+Valid values are: `outlined` (_default_), `rounded`, `sharp`, `filled`, `outlined_filled`, 
+`rounded_filled`, and `sharp_filled`. Suffix will take precedence over `icon-variant` property.
+
+Additionally custom icon can also be displayed using the `icon` slot and the 
+`icon` property must be omitted. 
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ::: BlockVue {title="Chip's Icon Example"}
 
@@ -253,7 +263,7 @@ omit the `icon` property.
 ```
 :::
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
 
 
 ### Rotating an icon {class="mt-lg-5"}
@@ -315,12 +325,12 @@ Example below, demonstrate the built-in icon animation and the use of `icon` slo
   <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <div class="row row-cols-1 row-cols-md-auto justify-content-center g-2 mb-2">
       <div class="col text-center">
-        <bs-chip color="default-color" icon="rotate_right" icon-spin>
+        <bs-chip color="default-color" icon="refresh" icon-spin>
           Spin Animation
         </bs-chip>
       </div>
       <div class="col text-center">
-        <bs-chip color="default-color" icon="rotate_right" icon-pulse>
+        <bs-chip color="default-color" icon="star" icon-pulse>
           Pulse Animation
         </bs-chip>
       </div>
@@ -776,13 +786,13 @@ function toggleDismissibleChip(value: boolean) {
 | disabled      | `Boolean` | `false` | The component state. |
 | dismissible   | `Boolean` | `false` | When defined, display the close (`x`) button to dismiss/hide the component. |
 | href          | `String`  |  | Render as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
-| icon          | `String`  |  | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. <p>If the value has suffix `_outlined`, `_filled`, `_rounded`, or `_sharp` then the suffix takes precedence over the `icon-variant` property. <BsBadge color="info">v2.0.4</BsBadge></p> |
+| icon          | `String`  |  | <div style="min-width:425px"> Icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip     | `String`  |  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | icon-position | `String`  | `'left'` | The icon placement. Valid values are: `left` (before text), `right` (after text). <BsBadge color="info">v2.0.3</BsBadge> |
 | icon-pulse    | `Boolean` | `false` | Apply ***pulse*** animation to the icon. |
 | icon-rotation | `Number`  |  | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply ***spin*** animation to the icon. |
-| icon-variant  | `String`  |  | Use predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp`. See [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) for details. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /><br />See [Icon](#icon) section for details. |
 | img-circle    | `Boolean` | `false` | Apply **circle** shape to the avatar image. |
 | img-padding <Badge type="warning">deprecated</Badge> | `Boolean`  | `true` | Use `img-padding-off` property instead. |
 | img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="info">v2.0.4</BsBadge> |

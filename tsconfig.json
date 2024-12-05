@@ -1,16 +1,20 @@
 {
   "include": [
     "env.d.ts",
-    "docs/**/*.mts",
-    "docs/**/*.ts",
     "components/**/*.ts",
     "components/**/*.vue",
+    "docs/**/*.mts",
+    "docs/**/*.ts",
+    "docs/**/*.md",
   ],
   "exclude": [
     "node_modules",
     "docs/**/__tests__/*",
     "components/**/__tests__/*"
   ],
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"],
+  },
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -32,5 +36,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "composite": true,
-  }
+  },
 }

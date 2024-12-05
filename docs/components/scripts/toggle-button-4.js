@@ -12,7 +12,7 @@ const app = createVueMdb({
       {
         value: 'rain',
         label: 'Rain',
-        icon: 'wb_cloudy'
+        icon: 'rainy'
       },
       {
         value: 'heavy-rain',

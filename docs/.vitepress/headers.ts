@@ -47,4 +47,11 @@ export const headMeta: HeadConfig[] = [
       href: "/assets/bundle.min.css"
     }
   ],
+  [
+    'link',
+    {
+      rel: "stylesheet",
+      href: "/assets/bundle-color.min.css"
+    }
+  ],
 ];

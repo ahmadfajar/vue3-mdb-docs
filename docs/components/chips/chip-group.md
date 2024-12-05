@@ -311,7 +311,7 @@ const chipItems2: TChipOptionItem[] = [
 | img-circle    | `Boolean` | `false` | Create chip item's avatar with circle shape. |
 | img-padding <Badge type="warning">deprecated</Badge> | `Boolean`  | `true` | Use `img-padding-off` property instead. |
 | img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="info">v2.0.4</BsBadge> |
-| items         | `TChipOptionItem[]` |  | The data source to create the `<BsChip>`. |
+| items         | `TChipOptionItem[]` |  | The data source to create the collection of `<BsChip>`. |
 | model-value <Badge type="tip">v-model</Badge> | `TChipValue`/`TChipValue[]`/`null` |  | The value monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
 | multiple     | `Boolean`  | `false`  | Allow multiple selection or not. |
 | outlined     | `Boolean`  | `false` | Enable ***outlined*** chip style. |
@@ -361,12 +361,12 @@ The Chip's item has properties as described below:
 | disabled | `Boolean`  | `<BsChip>` element state. |
 | dismissible | `Boolean`  | Enable dismissible `<BsChip>`. |
 | href   | `String`  | Render `<BsChip>` as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
-| icon      | `String`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the `<BsChip>`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| iconVariant | `String`  | Predefined icon style. Valid values are: `outlined`, `filled`, `rounded`, `sharp` |
+| iconVariant | `String`  | Predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
 | imgSrc | `String`  | `<BsChip>` avatar image source url. |
 
 </div>

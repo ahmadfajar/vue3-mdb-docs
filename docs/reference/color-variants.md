@@ -11,6 +11,7 @@ aid you in creating an inviting and color-consistent design. When using Vue MDBo
 components, these variants refers to their **color-name**, rather than by the underlying CSS classname.
 :::
 
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ## Applying Color Variants
 
@@ -70,6 +71,30 @@ can be applied to html element, see: applying [background](#background-color-var
 [border](#border-color-variants), and [text](#text-color-variants) color variants above. 
 :::
 
+::: warning <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+Starting from **version 2.1.0**, **Vue MDBootstrap** only provides minimal color 
+variants in its main bundle (`dist/bundle.css` and `dist/bundle.min.css`) to reduce 
+the file size. Other color variants are distributed in `dist/bundle-color.css` and 
+`dist/bundle-color.min.css`. 
+
+Color variants that includes in the main bundle are: _`default`_, _`primary`_, _`secondary`_, 
+_`info`_, _`success`_, _`warning`_, _`danger`_, _`grey`_, _`light-grey`_, _`light`_, _`dark`_, 
+_`black`_, and _`white`_. 
+
+You can get the distribution with the following code:  
+
+```ts
+// file: main.ts or main.js
+
+// Import components css stylesheet with minimum color variants
+import 'vue-mdbootstrap/styles';
+
+// Optional, import other color variants
+import 'vue-mdbootstrap/color-styles';
+
+```
+:::
+
 
 ## Material Colors
 
@@ -80,6 +105,11 @@ These color variants can be applied on some UI components via its property, such
 without `bg-` prefix. They also can be applied to html element, see: applying 
 [background](#background-color-variants), [border](#border-color-variants), and 
 [text](#text-color-variants) color variants above.
+:::
+
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+Starting from **version 2.1.0** these color variants are no longer included in 
+the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle-color.min.css`.
 :::
 
 
@@ -100,11 +130,15 @@ to an UI component, use its _CSS classname_ on component's `class` property.
 <ColorPalette palette="fullColor" class="py-3"></ColorPalette>
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
-These color variants can only be applied as the background color of an html element, see: applying
-[background color variants](#background-color-variants) above. If wanted to apply
-to an UI component, use its _CSS classname_ on component's `class` property.
+These color variants can only be applied as the background color of an html element,
+see: applying [background color variants](#background-color-variants) above.
+If wanted to apply to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+Starting from **version 2.1.0** these color variants are no longer included in 
+the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle-color.min.css`.
+:::
 
 ### RGBA color variants {class="mt-lg-5"}
 
@@ -131,7 +165,12 @@ The base color of the above color variants can also be used to produce an **RGBA
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
-These RGBA color variants can only be applied as the background color of an html element, see: applying
-[background color variants](#background-color-variants) above. If wanted to apply
-to an UI component, use its _CSS classname_ on component's `class` property.
+These RGBA color variants can only be applied as the background color of an html 
+element, see: applying [background color variants](#background-color-variants) above.
+If wanted to apply to an UI component, use its _CSS classname_ on component's `class` property.
+:::
+
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+Starting from **version 2.1.0** these color variants are no longer included in 
+the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle-color.min.css`.
 :::

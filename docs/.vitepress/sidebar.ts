@@ -62,6 +62,7 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: 'Icon', link: '/components/icons/icon' },
+          { text: 'Icon Font Awesome', link: '/components/icons/icon-fontawesome' },
           { text: 'Icon Spinner', link: '/components/icons/icon-spinner' },
           { text: 'Icon SVG', link: '/components/icons/icon-svg' },
           { text: 'Toggle Icon', link: '/components/icons/toggle-icon' }
@@ -82,12 +83,12 @@ export const sidebar = [
           { text: 'Checkbox', link: '/components/input/checkbox' },
           { text: 'Radio Button', link: '/components/input/radio' },
           { text: 'Switch', link: '/components/input/switch' },
-          { text: 'Listbox', link: '/components/input/listbox' },
-          { text: 'Combobox', link: '/components/input/combobox' },
           { text: 'Text Field', link: '/components/input/textfield' },
           { text: 'TextArea Field', link: '/components/input/textarea' },
           { text: 'Numeric Field', link: '/components/input/numeric-field' },
           { text: 'Chip Field', link: '/components/input/chipfield' },
+          { text: 'Listbox', link: '/components/input/listbox' },
+          { text: 'Combobox', link: '/components/input/combobox' },
           { text: 'DateTime Field', link: '/components/input/datetime-field' },
         ]
       },

@@ -47,9 +47,9 @@ below, to learn how to display image with title and icon correctly.
 
 ```vue
 <template>
-  <bs-app class="mobi-card mx-auto p-3 p-md-0">
+  <bs-app class="mobi-card my-demo-wrapper mx-auto">
     <bs-card shadow>
-      <bs-appbar class="bg-purple darken-3 rounded-3 rounded-bottom-0">
+      <bs-appbar class="bg-purple darken-3">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
         <bs-appbar-title title="Chats" class="text-white"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -266,9 +266,9 @@ then the active state of `<bs-list-tile>` can be manage automatically by
 
 ```vue
 <template>
-  <bs-app class="mx-auto p-3 p-md-0" style="max-width: 450px">
+  <bs-app class="mobi-card my-demo-wrapper mx-auto">
     <bs-card shadow>
-      <bs-appbar class="bg-default-color-dark rounded-3 rounded-bottom-0">
+      <bs-appbar class="bg-default-color-dark">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
         <bs-appbar-title title="My Recipes" class="text-white"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -344,6 +344,15 @@ const listItems2 = ref([
 </script>
 
 <style>
+.my-demo-wrapper {
+  max-width: 100%;
+  padding: 1rem;
+}
+.mobi-card { max-width: 400px; }
+.mobi-card > .card > .md-appbar {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+}
 .md-list-tile-action.rating {
   --md-tile-action-color: rgba(0, 0, 0, 0.4);
   font-size: 120%;
@@ -365,9 +374,9 @@ property of the `<bs-list-view>` component explicitly.
 
 ```vue
 <template>
-  <bs-app class="mx-auto p-3 p-md-0" style="max-width: 450px">
+  <bs-app class="mobi-card my-demo-wrapper mx-auto">
     <bs-card shadow>
-      <bs-appbar class="bg-default-color-dark rounded-3 rounded-bottom-0">
+      <bs-appbar class="bg-default-color-dark">
         <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
         <bs-appbar-title title="My Recipes" class="text-white"></bs-appbar-title>
         <bs-spacer></bs-spacer>
@@ -447,6 +456,15 @@ const listItems2 = ref([
 </script>
 
 <style>
+.my-demo-wrapper {
+  max-width: 100%;
+  padding: 1rem;
+}
+.mobi-card { max-width: 400px; }
+.mobi-card > .card > .md-appbar {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+}
 .md-list-tile-action.rating {
   --md-tile-action-color: rgba(0, 0, 0, 0.4);
   font-size: 120%;
@@ -470,9 +488,9 @@ Valid values for the `space-around` property are: `left`, `right` or `both`.
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card class="bg-special-color" shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -531,9 +549,9 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card class="bg-special-color" shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -594,9 +612,9 @@ active navigation menu.
 ::: BlockVue {title="ListTile Navigation Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card class="bg-special-color" shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -716,9 +734,9 @@ setting page layout.
 
 ```vue
 <template>
-  <bs-app class="mobi-card mx-auto p-3 p-md-0">
+  <bs-app class="mobi-card my-demo-wrapper mx-auto">
     <bs-card shadow>
-      <bs-appbar class="bg-default-color rounded-top" shadow>
+      <bs-appbar class="bg-default-color" shadow>
         <bs-button color="light-grey" icon="menu" mode="icon" flat></bs-button>
         <bs-appbar-title title="Setting" class="text-white"></bs-appbar-title>
       </bs-appbar>
@@ -1037,8 +1055,10 @@ $font-size-base: 1rem;
 | border-off   | `Boolean` | `false` | Remove border style that have been applied via _BsListView_ to this _BsListTile_. <BsBadge color="info">v2.0.0</BsBadge> |
 | disabled     | `Boolean` | `false` | This Component state. |
 | id           | `Sting`   |  | Sets the component `ID`. This property value is auto generate. <BsBadge color="info">v2.0.0</BsBadge> |
+| location     | `RouteLocationAsRelativeGeneric` |  | <div style="min-width:325px">The navigation location target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. </div> |
 | navigable    | `Boolean` | `false` | Explicitly define this propperty when you want to use ListTile as navigation or menu item. |
-| path         | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
+| path         | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path-name    | `String`  |  | The path name for the navigation target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
 | pill-off     | `Boolean` | `false` | Remove _rounded pill_ style that have been applied via _BsListView_ to this _BsListTile_. <BsBadge color="info">v2.0.0</BsBadge> |
 | ripple-off   | `Boolean` | `false` | Enabled or disabled ripple effect. |
 | rounded-off  | `Boolean` | `false` | Remove _rounded_ style that have been applied via _BsListView_ to this _BsListTile_. <BsBadge color="info">v2.0.0</BsBadge> |
@@ -1109,12 +1129,13 @@ inside this component.
 |----------|-----------|---------|-------------|
 | center   | `Boolean` | `false` | Centers the item inside this component vertically. |
 | circle   | `Boolean` | `false` | Display image with **circle** shape. |
-| icon     | `String`  |         | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon     | `String`  |         | <div style="min-width:425px"> Icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip     | `String`  |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`.  |
 | icon-pulse    | `Boolean` | `false` | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number`  |         | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean` | `false` | Apply **spin** animation to the icon. |
-| img-src  | `String`    |            | Sets the image url. |
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
+| img-src  | `String`    |            | Sets the source image url. |
 | rounded  | `Boolean`   | `false`    | Display image with **rounded** shape. If `circle` and `rounded` are not set, then the image shape will become `square`. |
 | size     | `Number`/`String`/`Object` | `48` | Shortcut to display image with equal _width_ and _height_. Or defined as `Object` with `width` and `height` as its field, to create a fine tune image size. |
 

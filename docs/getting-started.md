@@ -45,8 +45,8 @@ yarn add vue-mdbootstrap@next
 
 Create Vue application and mount at `#app` entry point.
 
-```js
-// file: main.js
+```ts
+// file: main.ts or main.js
 
 // Import global function to register the components and create Vue application
 import { createVueMdb } from 'vue-mdbootstrap';
@@ -58,8 +58,11 @@ import App from '@/App.vue';
 // read vue-router manual on how to setup the navigation
 import router from '@/router'; 
 
-// Import components css stylesheet 
+// Import components css stylesheet with minimum color variants
 import 'vue-mdbootstrap/styles';
+
+// Optional, import other color variants
+// import 'vue-mdbootstrap/color-styles';
 
 // Main code start here...
 const app = createVueMdb(App);
@@ -71,8 +74,8 @@ app.use(router).mount('#app');
 There are cases in your project that you only need some components of ***Vue MDBootstrap*** 
 and for this you can add them as follows:
 
-```js
-// file: main.js
+```ts
+// file: main.ts or main.js
 
 import { createApp } from 'vue';
 
@@ -82,8 +85,11 @@ import { BsButtonPlugin } from 'vue-mdbootstrap';
 // Import main component or page layout
 import App from '@/App.vue';
 
-// Import components css stylesheet 
+// Import components css stylesheet with minimum color variants
 import 'vue-mdbootstrap/styles';
+
+// Optional, import other color variants
+// import 'vue-mdbootstrap/color-styles';
 
 // Your main code
 const app = createApp(App);
@@ -96,8 +102,8 @@ app.mount('#app');
 
 You can also register all the UI components manually.
 
-```js
-// file: main.js
+```ts
+// file: main.ts or main.js
 
 import { createApp } from 'vue';
 
@@ -107,8 +113,11 @@ import * as _plugins from 'vue-mdbootstrap';
 // Import main component or page layout
 import App from '@/App.vue';
 
-// Import components css stylesheet 
+// Import components css stylesheet with minimum color variants
 import 'vue-mdbootstrap/styles';
+
+// Optional, import other color variants
+// import 'vue-mdbootstrap/color-styles';
 
 // Your main code
 const app = createApp(App);

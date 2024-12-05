@@ -7,6 +7,68 @@ and can be viewed below for your convenience.
 :::
 
 
+## v2.1.1
+
+Released: December 04, 2024
+
+### Improvements
+
+- **BsColorPicker**: rename property `outlineModeButton` to `modeButtonOutlined`. 
+- Rename component **BsFontAwesome** to **BsIconFontawesome** for consistency.
+- Improve typescript doc comments.
+
+### Bug Fixes
+
+- **BsTooltip**: fixed bug inconsistent arrow color.
+
+
+## v2.1.0
+
+Released: December 03, 2024
+
+### Features & Improvements
+
+- Migrate **Google Material Icons** to **[Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)**.
+  This migration improve icon naming consistency, clarity and reduce the bundle size.
+- Migrate scss files from legacy SASS to modern SASS.
+- Reduce the number of color variants for each component on main css file
+  (comply to [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+  colors with some addition) and put other color variants on different css file. This action
+  greatly reduces the size of the main css file.
+- New components: **BsFontAwesome**, **BsBreadcrumb** and **BsImageUploader**. 
+- **BsIcon**, **BsIconSvg**, **BsToggleIcon**: 
+  - Improve `icon` property to better accommodate **_Google Material Symbols_**.
+  - Add new property `filled` to better accommodate **_Google Material Symbols_**.
+- **BsAlert**, **BsChip**, **BsChipGroup**:
+  - Improve `icon` property to better accommodate **_Google Material Symbols_**. 
+  - Improve `icon-variant` property to better accommodate **_Google Material Symbols_**.
+  - Change the default value of the `icon-variant` property to `outlined`.
+- **BsAvatar**, **BsTab**, **BsListTileLeading**, **BsListNavItem**, **BsButton**, **BsToggleButton**, **BsToggleField**:
+  - Add new property `icon-variant` to better accommodate **_Google Material Symbols_**.
+  - Improve `icon` property to better accommodate **_Google Material Symbols_**.
+- **BsChipField**, **BsTextArea**, **BsTextField**, **BsNumericField**, **BsDateTimeField**, **BsCombobox**:
+  - Improve properties: `append-icon`, `append-icon-outer`, `prepend-icon`, `prepend-icon-outer`
+    and `action-icon-variant` to better accommodate **_Google Material Symbols_**.
+
+
+## v2.0.15
+
+Released: November 14, 2024
+
+### Features & Improvements
+
+- **BsLightbox**: add `z-index` property to control component stacking within HTML layers.
+- **BsPopover**: improve UI display positioning.
+- **BsTooltip**: 
+  - Add new properties: `activator` and `arrow-off`.
+  - Improve UI performance and css variables.
+
+### Bug Fixes
+
+- **BsArrayStore**: fixed bug loading state was not updated when method _load_ 
+  was called without argument.
+
+
 ## v2.0.13
 
 Released: September 27, 2024

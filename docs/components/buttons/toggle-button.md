@@ -287,7 +287,7 @@ const weathers: TInputOptionItem[] = [
   {
     value: "rain",
     label: "Rain",
-    icon: "wb_cloudy",
+    icon: "rainy",
   },
   {
     value: "heavy-rain",
@@ -412,7 +412,7 @@ const weathers: TInputOptionItem[] = [
   {
     value: "rain",
     label: "Rain",
-    icon: "wb_cloudy",
+    icon: "rainy",
   },
   {
     value: "heavy-rain",
@@ -424,6 +424,8 @@ const weathers: TInputOptionItem[] = [
 ```
 :::
 
+<!-- @include: @/components/icon-migration-info.md -->
+
 
 ## Usage Example
 
@@ -433,55 +435,51 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
-    <bs-app class="rounded-3" style="max-width: 450px">
+  <bs-app class="mobi-card my-demo-wrapper mx-auto">
+    <bs-card border-off shadow>
       <bs-appbar class="bg-default-color">
         <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
         <bs-appbar-title class="text-white" title="Your Downloads"></bs-appbar-title>
         <bs-spacer></bs-spacer>
         <bs-button color="light-grey" mode="icon" icon="search" flat></bs-button>
       </bs-appbar>
-      <bs-container>
-        <bs-card class="rounded-top-0 w-100">
-          <bs-card-body class="d-flex flex-column pb-1">
-            <bs-toggle-button
-              v-model="selectedCategory"
-              :items="categories"
-              color="deep-purple"
-              outlined
-            >
-            <template #icon="item">
-              <bs-icon-svg v-if="item.value === selectedCategory" icon="check" />
-            </template>
-            </bs-toggle-button>
-            <bs-list-view 
-              class="mt-3" 
-              style="--md-tile-padding-x: .5rem"
-            > 
-              <bs-list-tile 
-                v-for="item in albums" 
-                :key="item.title" 
-                class="bg-purple lighten-5 rounded-3 mb-2 my-album-tile"
-              >
-                <bs-list-tile-leading :img-src="item.cover" rounded></bs-list-tile-leading>
-                <bs-list-tile-content>
-                  <bs-list-tile-title>
-                    {{ item.title }}
-                  </bs-list-tile-title>
-                  <bs-list-tile-subtitle>
-                    {{ item.size }}
-                  </bs-list-tile-subtitle>
-                </bs-list-tile-content>
-                <bs-list-tile-action center>
-                  <bs-button color="secondary" icon="play_circle" mode="icon" flat />
-                </bs-list-tile-action>
-              </bs-list-tile>
-            </bs-list-view>
-          </bs-card-body>
-        </bs-card>
-      </bs-container>
-    </bs-app>
-  </div>
+      <bs-card-body class="d-flex flex-column pb-1">
+        <bs-toggle-button
+          v-model="selectedCategory"
+          :items="categories"
+          color="deep-purple"
+          outlined
+        >
+        <template #icon="item">
+          <bs-icon-svg v-if="item.value === selectedCategory" icon="check" />
+        </template>
+        </bs-toggle-button>
+        <bs-list-view 
+          class="mt-3" 
+          style="--md-tile-padding-x: .5rem"
+        > 
+          <bs-list-tile 
+            v-for="item in albums" 
+            :key="item.title" 
+            class="bg-purple lighten-5 rounded-3 mb-2 my-album-tile"
+          >
+            <bs-list-tile-leading :img-src="item.cover" rounded></bs-list-tile-leading>
+            <bs-list-tile-content>
+              <bs-list-tile-title>
+                {{ item.title }}
+              </bs-list-tile-title>
+              <bs-list-tile-subtitle>
+                {{ item.size }}
+              </bs-list-tile-subtitle>
+            </bs-list-tile-content>
+            <bs-list-tile-action center>
+              <bs-button color="secondary" icon="play_circle" mode="icon" flat />
+            </bs-list-tile-action>
+          </bs-list-tile>
+        </bs-list-view>
+      </bs-card-body>
+    </bs-card>
+  </bs-app>
 </template>
 
 <script lang="ts" setup>
@@ -534,7 +532,15 @@ const albums = [
 
 <style>
 .my-demo-wrapper {
-  padding: 24px;
+  max-width: 100%;
+  padding: 1rem;
+}
+.mobi-card { 
+  max-width: 400px; 
+}
+.mobi-card > .card > .md-appbar {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
 }
 .md-list-tile.my-album-tile {
   --md-tile-subtitle-color: #6c757d; 
@@ -565,7 +571,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | disabled | `Boolean` | `false`  | The component state. |
 | color    | `String`  | `'default'` | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** toggle button style. |
-| icon-position | `String` | `'left'` | The icon placement. Valid values are: `left` (before text), `right` (after text). |
+| icon-position | `String` | `'left'` | <div style="min-width:325px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
 | id       | `String`  |   | Sets the component `ID`. This property value is auto generate. |
 | items    | `TInputOptionItem[]` |   | Collection of input item properties. |
 | model-value <Badge type="tip">v-model</Badge>  | `String`/`Number`/`Boolean`/`Array` | | Value monitored by `v-model` that represents the selected value. <BsBadge color="info">v2.0.0</BsBadge> |
@@ -615,16 +621,17 @@ The Input item has properties as described below:
 |----------|-----------|-------------|
 | value <Badge type="danger">required</Badge> | `String`/`Number`/`Boolean` | The item value. |
 | label <Badge type="danger">required</Badge> | `String` | The item label. |
-| icon      | `String`  | The icon to display inside the button. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| id       | `String`   | Html `<input>` element ID. |
+| name     | `String`   | Html `<input>` element name. It is used when `multiple` is `true`. |
+| disabled | `Boolean`  | Html `<input>` element state. |
+| readonly | `Boolean`  | Html `<input>` element state. |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the button. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSize  | `Number`  | Render the icon at predefined size in pixel. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| id       | `String`   | Html `<input>` element ID. |
-| name     | `String`   | Html `<input>` element name. It is used when `multiple` is `true`. |
-| disabled | `Boolean`  | Html `<input>` element state. |
-| readonly | `Boolean`  | Html `<input>` element state. |
+| iconVariant | `String` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
 
 </div>
 </div>
@@ -709,7 +716,7 @@ const weathers: TInputOptionItem[] = [
   {
     value: "rain",
     label: "Rain",
-    icon: "wb_cloudy",
+    icon: "rainy",
   },
   {
     value: "heavy-rain",

@@ -518,12 +518,22 @@ effect. Example below will shows you how to do it.
 ## Icon
 
 `<bs-button>` can have an icon inside it. The icon can be positioned on the `left` side 
-(before text) or on the `right` side (after text) using `icon-position` property
-and use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) 
-name for the `icon` property. And to use a custom icon, use the `icon` slot and 
-omit the `icon` property.
+(before text) or on the `right` side (after text) using `icon-position` property. 
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+Use `icon` property to display an icon and sets the value to a valid android icon 
+name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
+`_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
+`_filled` and `_outlined_filled` will display the same icon variant. 
+
+Beside using suffix, property `icon-variant` can also be used to set the icon variant. 
+Valid values are: `outlined` (_default_), `rounded`, `sharp`, `filled`, `outlined_filled`, 
+`rounded_filled`, and `sharp_filled`. Suffix will take precedence over `icon-variant` property.
+
+Additionally custom icon can also be displayed using the `icon` slot and the 
+`icon` property must be omitted.
+
+<SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 ::: BlockVue {title="Icon Inside Button Example"}
 
@@ -541,7 +551,7 @@ omit the `icon` property.
     <div class="col">
       <bs-button 
         color="default-color" 
-        icon="shopping_cart_outlined" 
+        icon="shopping_cart_filled" 
         icon-position="right"
       >
         Icon Right
@@ -552,7 +562,7 @@ omit the `icon` property.
 ```
 :::
 
-<!-- @include: @/components/fontawesome-warn.md -->
+<!-- @include: @/components/icon-migration-info.md -->
 
 
 ### Rotating an icon {class="mt-lg-5"}
@@ -612,12 +622,12 @@ Example below, demonstrate the built-in icon animation and the use of `icon` slo
   <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
     <div class="row row-cols-1 row-cols-md-auto justify-content-center g-3">
       <div class="col text-center">
-        <bs-button color="default-color" icon="rotate_right" icon-spin>
+        <bs-button color="default-color" icon="refresh" icon-spin>
           Spin Animation
         </bs-button>
       </div>
       <div class="col text-center">
-        <bs-button color="default-color" icon="rotate_right" icon-pulse>
+        <bs-button color="default-color" icon="star" icon-pulse>
           Pulse Animation
         </bs-button>
       </div>
@@ -814,7 +824,7 @@ the `mode` property with value `icon`, `<bs-button>` will be rendered as icon bu
   <div class="row row-cols-auto justify-content-center g-3 pt-3">
     <div class="col d-flex align-items-center">
       <bs-button 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         icon-size="14" 
         mode="icon" 
         size="xs" 
@@ -823,7 +833,7 @@ the `mode` property with value `icon`, `<bs-button>` will be rendered as icon bu
     </div>
     <div class="col d-flex align-items-center">
       <bs-button 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         icon-size="18" 
         mode="icon" 
         color="primary" 
@@ -833,7 +843,7 @@ the `mode` property with value `icon`, `<bs-button>` will be rendered as icon bu
     </div>
     <div class="col d-flex align-items-center">
       <bs-button 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         mode="icon" 
         color="success" 
         flat 
@@ -841,7 +851,7 @@ the `mode` property with value `icon`, `<bs-button>` will be rendered as icon bu
     </div>
     <div class="col">
       <bs-button
-        icon="shopping_cart"
+        icon="shopping_cart_filled"
         icon-size="32"
         mode="icon"
         color="default-color"
@@ -874,7 +884,7 @@ on the screen using css helper or make your own css to adjust its position.
     <div class="col d-flex align-items-center">
       <bs-button 
         color="secondary-color" 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         icon-size="18" 
         mode="fab" 
         size="xs" 
@@ -883,7 +893,7 @@ on the screen using css helper or make your own css to adjust its position.
     <div class="col d-flex align-items-center">
       <bs-button 
         color="primary" 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         icon-size="24" 
         mode="fab" 
         size="sm" 
@@ -906,7 +916,7 @@ on the screen using css helper or make your own css to adjust its position.
     <div class="col d-flex align-items-center">
       <bs-button 
         color="secondary-color" 
-        icon="shopping_cart" 
+        icon="shopping_cart_filled" 
         icon-size="18" 
         mode="fab" 
         size="xs" 
@@ -915,7 +925,7 @@ on the screen using css helper or make your own css to adjust its position.
     </div>
     <div class="col d-flex align-items-center">
       <bs-button
-        icon="shopping_cart"
+        icon="shopping_cart_filled"
         icon-size="24"
         mode="fab"
         color="primary"
@@ -1222,64 +1232,61 @@ The following are a collection of examples that demonstrate more advanced use of
 ::: BlockVue {title="Button Advanced Example"}
 
 ```html
-<div class="my-demo-wrapper">
-  <bs-app class="rounded-3" style="max-width: 400px">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
+  <bs-card border-off shadow>
     <bs-appbar class="bg-default-color">
-      <bs-button color="light-grey" icon="arrow_back" mode="icon" flat />
-      <bs-appbar-title class="text-white" title="Join Conference" />
+      <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
+      <bs-appbar-title class="text-white" title="Join Conference"></bs-appbar-title>
     </bs-appbar>
-    <bs-container>
-      <bs-card class="rounded-top-0">
-        <div class="p-2 position-relative">
-          <img src="/img/conference-room.jpg" alt="" class="rounded-3" />
-          <div class="position-absolute bottom-0 start-0 end-0 m-3">
-            <div class="d-flex justify-content-between">
-              <bs-button 
-                color="default-color" 
-                icon="more_horiz" 
-                mode="icon" 
-                size="sm" 
-              />
-              <bs-button 
-                color="dark" 
-                icon="mic_none" 
-                mode="icon" 
-                icon-size="20" 
-                size="sm" 
-                flat 
-                active 
-              />
-              <bs-button 
-                color="dark" 
-                icon="videocam_outlined" 
-                icon-size="20" 
-                mode="icon" 
-                size="sm" 
-                flat 
-                active 
-              />
-            </div>
-          </div>
+    <div class="p-2 position-relative">
+      <img src="/img/conference-room.jpg" alt="" class="img-fluid rounded-3" />
+      <div class="position-absolute bottom-0 start-0 end-0 m-3">
+        <div class="d-flex justify-content-between">
+          <bs-button 
+            color="default-color" 
+            icon="more_horiz" 
+            mode="icon" 
+            size="sm" 
+          ></bs-button>
+          <bs-button 
+            color="dark" 
+            icon="mic_none" 
+            mode="icon" 
+            icon-size="20" 
+            size="sm" 
+            flat 
+            active 
+          ></bs-button>
+          <bs-button 
+            color="dark" 
+            icon="videocam_outlined" 
+            icon-size="20" 
+            mode="icon" 
+            size="sm" 
+            flat 
+            active 
+          ></bs-button>
         </div>
-        <bs-card-body class="text-center">
-          <bs-card-content type="title">Etiqutte for the Internet</bs-card-content>
-          <bs-card-content>Two persons has joined.</bs-card-content>
-          <div class="d-flex justify-content-center pt-3">
-            <bs-button color="default-color">Join now</bs-button>
-            <bs-button 
-              color="default-color" 
-              icon="present_to_all" 
-              icon-size="20" 
-              tonal
-            >
-              Present
-            </bs-button>
-          </div>
-        </bs-card-body>
-      </bs-card>
-    </bs-container>
-  </bs-app>
-</div>
+      </div>
+    </div>
+    <bs-card-body class="text-center">
+      <bs-card-content type="title">Etiqutte for the Internet</bs-card-content>
+      <bs-card-content>Two persons has joined.</bs-card-content>
+      <div class="d-flex justify-content-center pt-3">
+        <bs-button color="default-color">Join now</bs-button>
+        <bs-button 
+          color="default-color" 
+          icon="present_to_all" 
+          icon-size="20" 
+          tonal
+        >
+          Present
+        </bs-button>
+      </div>
+    </bs-card-body>
+  </bs-card>
+</bs-app>
+
 ```
 :::
 
@@ -1367,13 +1374,14 @@ Most css variables are inherited from button css variables.
 | dropdown-toggle | `Boolean` | `false` | Render as `dropdown` button when used inside `<bs-dropdown-menu>` component. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |
-| icon     | `String`  |  | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon     | `String`  |  | <div style="min-width:425px"> Icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip     | `String`  |   | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | icon-position | `String`  | `'left'` | The icon placement. Valid values are: `left` (before text), `right` (after text). |
 | icon-pulse    | `Boolean` | `false` | Apply ***pulse*** animation to the icon. |
 | icon-rotation | `Number`  |   | Rotate the icon. Valid values are: `90`, `180`, `270`. |
 | icon-size     | `Number`  |   | Render the icon at predefined size in pixel. |
 | icon-spin     | `Boolean` | `false` | Apply ***spin*** animation to the icon. |
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> <br /><br />See [Icon](#icon) section for details. |
 | mode     | `String`  | `'default'` | Create the component with spesific style variant. Valid values are: `default`, `icon`, `fab`. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** button style. |
 | pill     | `Boolean` | `true`  | Enable ***rounded-pill*** button style. |

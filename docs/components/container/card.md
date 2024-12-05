@@ -276,8 +276,8 @@ See [Reference - Color Variants](/reference/color-variants) for more information
 ### Border {class="mt-lg-5"}
 
 Use [border utilities](/reference/color-variants#border-color-variants) to change 
-just the `border-color` of a card. Note that you can put `.text-{color}` classes 
-on the `<bs-card>` or child component as shown below.
+just the `border-color` of a card. Additionally you can also put `.text-{color}` 
+classes on the `<bs-card>` or child component as shown below.
 
 ::: BlockVue {title="Card border color example"}
 

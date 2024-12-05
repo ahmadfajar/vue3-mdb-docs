@@ -36,6 +36,8 @@ function openStackBlitz() {
       ' rel="stylesheet" crossorigin="anonymous"/>',
     `<link href="${unPkgcom}vue-mdbootstrap@2/dist/bundle.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous">',
+    `<link href="${unPkgcom}vue-mdbootstrap@2/dist/bundle-color.min.css"` +
+      ' rel="stylesheet" crossorigin="anonymous">',
     '<scr' +
       `ipt src="${cdnBaseUri}vue@3/dist/vue.global.prod.js"` +
       ' crossorigin="anonymous"></scr' +
@@ -63,6 +65,11 @@ function openStackBlitz() {
   }
 
   const content = stackblitzOpts.html ?? '';
+  const defStyles = '.my-demo-wrapper { width: 100%; padding: 1rem; }\n' + 
+  '.mobi-card { max-width: 400px; }\n' +
+  '.mobi-card > .card > .md-appbar {\n' + 
+  '  border-top-left-radius: var(--bs-card-inner-border-radius);\n' + 
+  '  border-top-right-radius: var(--bs-card-inner-border-radius);\n}';
 
   sdk.openProject(
     {
@@ -73,7 +80,7 @@ function openStackBlitz() {
         'index.html':
           headers.join('\n') +
           '\n<style>\n' +
-          (stackblitzOpts.style || '.my-demo-wrapper { width: 100%; padding: 1rem; }') +
+          (stackblitzOpts.style || defStyles) +
           '\n</style>\n\n' +
           '<div id="app">\n' +
           content +

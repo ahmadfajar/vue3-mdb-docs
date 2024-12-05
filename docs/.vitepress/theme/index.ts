@@ -4,6 +4,8 @@ import * as _plugins from 'vue-mdbootstrap';
 import DocBlockExample from '../../../components/DocBlockExample.vue';
 import ColorPalette from '../../../components/ColorPalette.vue';
 import SmallNote from '../../../components/SmallNote.vue';
+
+import './bootstrap.css';
 import './_style.scss';
 import './_types.scss';
 

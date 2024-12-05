@@ -12,64 +12,63 @@ The following is an example that demonstrate how to use the `<bs-subheader>`.
 ::: BlockVue {title="Subheader Example"}
 
 ```html
-<div class="w-100 p-3 p-md-0">
-  <div class="col-md-8 mx-auto">
-    <bs-card shadow>
-      <bs-list-view>
-        <bs-subheader>Today</bs-subheader>
-        <bs-list-tile>
-          <bs-list-tile-leading img-src="/img/1.jpg" circle></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Jason Oner</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action center>
-            <bs-icon class="text-secondary" icon="chat" />
-          </bs-list-tile-action>
-        </bs-list-tile>
-        <bs-list-tile>
-          <bs-list-tile-leading img-src="/img/2.jpg" circle></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Ranee Carlson</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action center>
-            <bs-icon class="text-secondary" icon="chat" />
-          </bs-list-tile-action>
-        </bs-list-tile>
-        <bs-list-tile>
-          <bs-list-tile-leading img-src="/img/3.jpg" circle></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Cindy Baker</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action center>
-            <bs-icon class="text-secondary" icon="chat" />
-          </bs-list-tile-action>
-        </bs-list-tile>
-      </bs-list-view>
-      <bs-divider></bs-divider>
-      <bs-list-view>
-        <bs-subheader>History</bs-subheader>
-        <bs-list-tile>
-          <bs-list-tile-leading img-src="/img/4.jpg" circle></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Ali Connors</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action center>
-            <bs-icon class="text-secondary" icon="chat" />
-          </bs-list-tile-action>
-        </bs-list-tile>
-        <bs-list-tile>
-          <bs-list-tile-leading img-src="/img/5.jpg" circle></bs-list-tile-leading>
-          <bs-list-tile-content>
-            <bs-list-tile-title>Travis Howard</bs-list-tile-title>
-          </bs-list-tile-content>
-          <bs-list-tile-action center>
-            <bs-icon class="text-secondary" icon="chat" />
-          </bs-list-tile-action>
-        </bs-list-tile>
-      </bs-list-view>
-    </bs-card>
-  </div>
+<div class="mobi-card my-demo-wrapper w-100 mx-auto">
+  <bs-card shadow>
+    <bs-list-view>
+      <bs-subheader>Today</bs-subheader>
+      <bs-list-tile>
+        <bs-list-tile-leading img-src="/img/1.jpg" circle></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title>Jason Oner</bs-list-tile-title>
+        </bs-list-tile-content>
+        <bs-list-tile-action center>
+          <bs-icon class="text-secondary" icon="chat" />
+        </bs-list-tile-action>
+      </bs-list-tile>
+      <bs-list-tile>
+        <bs-list-tile-leading img-src="/img/2.jpg" circle></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title>Ranee Carlson</bs-list-tile-title>
+        </bs-list-tile-content>
+        <bs-list-tile-action center>
+          <bs-icon class="text-secondary" icon="chat" />
+        </bs-list-tile-action>
+      </bs-list-tile>
+      <bs-list-tile>
+        <bs-list-tile-leading img-src="/img/3.jpg" circle></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title>Cindy Baker</bs-list-tile-title>
+        </bs-list-tile-content>
+        <bs-list-tile-action center>
+          <bs-icon class="text-secondary" icon="chat" />
+        </bs-list-tile-action>
+      </bs-list-tile>
+    </bs-list-view>
+    <bs-divider></bs-divider>
+    <bs-list-view>
+      <bs-subheader>History</bs-subheader>
+      <bs-list-tile>
+        <bs-list-tile-leading img-src="/img/4.jpg" circle></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title>Ali Connors</bs-list-tile-title>
+        </bs-list-tile-content>
+        <bs-list-tile-action center>
+          <bs-icon class="text-secondary" icon="chat" />
+        </bs-list-tile-action>
+      </bs-list-tile>
+      <bs-list-tile>
+        <bs-list-tile-leading img-src="/img/5.jpg" circle></bs-list-tile-leading>
+        <bs-list-tile-content>
+          <bs-list-tile-title>Travis Howard</bs-list-tile-title>
+        </bs-list-tile-content>
+        <bs-list-tile-action center>
+          <bs-icon class="text-secondary" icon="chat" />
+        </bs-list-tile-action>
+      </bs-list-tile>
+    </bs-list-view>
+  </bs-card>
 </div>
+
 ```
 :::
 

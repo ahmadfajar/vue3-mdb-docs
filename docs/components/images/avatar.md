@@ -296,11 +296,12 @@ use `<bs-avatar>` inside **BsListTile** component.
 | border-color  | `String`    |          | The component border's color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge color="info">v2.0.3</BsBadge> |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | height        | `Number`/`String` |    | The component's height in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon          | `String`    |          | The icon to display as avatar. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon          | `String`    |          | <div style="min-width:425px">The icon to display as avatar. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property.</div> |
 | icon-flip     | `String`    |          | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse    | `Boolean`   | `false`  | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number`    |          | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-spin     | `Boolean`   | `false`  | Apply **spin** animation to the icon. |
+| icon-variant  | `String`    | `'outlined'` | Use predefined icon style. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
 | img-src       | `String`    |          | Set the image location or image url to be displayed as avatar. |
 | rounded       | `Boolean`   | `false`  | Create avatar with **rounded** shape. If `circle` and `rounded` are not set, then avatar shape will become `square`. |
 | size          | `Number`/`String` | `48` | The component's size in pixel. If using unit, valid units are: `px`, `rem`, `em`. |

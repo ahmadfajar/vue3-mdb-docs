@@ -21,9 +21,9 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 ::: BlockVue {title="ListNav Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card shadow>
-    <bs-appbar class="bg-purple darken-3 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-purple darken-3">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -46,12 +46,12 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 ```
 :::
 
-<!-- @include: @/components/fontawesome-warn.md -->
-
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
 See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Icons**
 to `icon` property.
 :::
+
+<!-- @include: @/components/icon-migration-info.md --> 
 
 
 ## Styling
@@ -66,9 +66,9 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
 ::: BlockVue {title="ListNav Color Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card class="bg-special-color" shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -103,9 +103,9 @@ To create the padding, sets the `space-around` property of the `<bs-list-view>` 
 ::: BlockVue {title="ListNav Padding Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -144,9 +144,9 @@ We can also give a border to the active navigation's menu. To achieve this, sets
 ::: BlockVue {title="ListNav Padding Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -183,9 +183,9 @@ active navigation menu.
 ::: BlockVue {title="ListNav Item Style Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
   <bs-card shadow>
-    <bs-appbar class="bg-orange darken-1 rounded-3 rounded-bottom-0">
+    <bs-appbar class="bg-orange darken-1">
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Menus" class="text-white"></bs-appbar-title>
     </bs-appbar>
@@ -222,9 +222,9 @@ to customize the indentation from the left side.
 ::: BlockVue {title="Nested Navigation Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
-  <bs-card class="rounded-3" shadow>
-    <bs-appbar class="bg-purple darken-3 rounded-top" shadow>
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
+  <bs-card shadow>
+    <bs-appbar class="bg-purple darken-3" shadow>
       <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
       <bs-appbar-title title="Topics" class="text-white"></bs-appbar-title>
       <bs-spacer></bs-spacer>
@@ -306,9 +306,9 @@ navigation menus.
 ::: BlockVue {title="ListNav mixed with ListTile Example"}
 
 ```html
-<bs-app class="mobi-card mx-auto p-3 p-md-0">
-  <bs-card class="rounded-3" shadow>
-    <bs-appbar class="bg-deep-purple darken-2 rounded-top">
+<bs-app class="mobi-card my-demo-wrapper mx-auto">
+  <bs-card shadow>
+    <bs-appbar class="bg-deep-purple darken-2">
       <bs-button color="light-grey" icon="menu" mode="icon" flat> </bs-button>
       <bs-appbar-title title="Mail" class="text-white"></bs-appbar-title>
       <bs-spacer></bs-spacer>
@@ -591,16 +591,19 @@ function toggleSideDrawer1(value: boolean) {
 | border-off    | `Boolean` | `false` | Remove border style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
 | depth      | `Number`  |  | Item depth level in tree hierarchy (zero based level). |
 | disabled   | `Boolean` | `false` | Component state. |
-| icon       | `String`  |         | Icon to display inside the component. Use any valid [Google Material Icon](https://fonts.google.com/icons?icon.set=Material+Icons) name. |
+| icon       | `String`  |         | <div style="min-width:390px"> Icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip  | `String`  |         | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | icon-pulse | `Boolean` | `false` | Apply **pulse** animation to the icon. |
 | icon-rotation | `Number` |       | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | icon-size  | `Number`/`String` |  | Render the icon at predefined size in pixel.  |
 | icon-spin  | `Boolean` | `false` | Apply **spin** animation to the icon. |
-| id         | `Sting`   |  | Sets the component `ID`. This property value is auto generate. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
+| id         | `String`  |  | Sets the component `ID`. This property value is auto generate. <BsBadge color="info">v2.0.0</BsBadge> |
 | indent     | `Number`  |  | Text indentation from left side. |
 | label <Badge type="danger">required</Badge> | `String` |  | The text label to display. |
-| path        | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
+| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path        | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path-name   | `String`  |  | The path name for the navigation target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
 | pill-off    | `Boolean` | `false` | Remove _rounded pill_ style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |
 | ripple-off  | `Boolean` | `false` | Disabled ripple effect. |
 | rounded-off | `Boolean` | `false` | Remove _rounded_ style that have been applied via _BsListView_ to this _BsListNavItem_. <BsBadge color="info">v2.0.0</BsBadge> |

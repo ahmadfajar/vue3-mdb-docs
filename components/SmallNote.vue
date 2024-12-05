@@ -14,7 +14,8 @@ const classes = computed(() => ({
 <template>
   <small
     :class="classes"
-    class="d-inline-flex px-2 py-1 md-fw-semibold border border-opacity-10 rounded-3"
+    class="d-inline-flex py-1 md-fw-semibold border border-opacity-10 rounded-3"
+    style="padding-left: 0.75rem; padding-right: 0.75rem;"
   >
     <slot />
   </small>
