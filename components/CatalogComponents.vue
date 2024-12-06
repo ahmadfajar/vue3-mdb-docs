@@ -124,16 +124,14 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemTitle title="Icon" />
           <ListGroupItemContent>
             Small and lightweight component which can be used inside almost any component or html
-            element and the icon is loaded from
-            <strong>Google Material Symbols</strong> dynamically.
+            element and the icon is loaded from <strong>Google Material Symbols</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/icon-fontawesome">
           <ListGroupItemTitle title="Icon Font Awesome" badge="v2.1.0" />
           <ListGroupItemContent>
             Small and lightweight component which can be used inside almost any component or html
-            element and the icon is loaded from
-            <strong>Font Awesome</strong> dynamically.
+            element and the icon is loaded from <strong>Font Awesome</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/icon-spinner">
@@ -146,8 +144,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemTitle title="Icon SVG" badge="v2.0.0" />
           <ListGroupItemContent>
             A lightweight component which is primarily used to embed SVG icon inline inside an html
-            element and the SVG icon is loaded from
-            <strong>Google Material Symbols</strong> dynamically.
+            element and the SVG icon is loaded from <strong>Google Material Symbols</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/toggle-icon">
