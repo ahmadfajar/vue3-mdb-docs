@@ -14,9 +14,9 @@ and validation. It is primarily used to visualize choices with different approac
 
 ## Overview
 
-**BsToggleField** component internally uses [BsToggleButton](/components/buttons/toggle-field)
+**BsToggleField** component internally uses [BsToggleButton](/components/buttons/toggle-button)
 but with validation capabilities. This means the component shares the same style variants as 
-[BsToggleButton](/components/buttons/toggle-field). 
+[BsToggleButton](/components/buttons/toggle-button). 
 
 **BsToggleField** component mimics the HTML5 `<input>` element. This means that you 
 can add attributes like `required`, `readonly`, or `disabled` and it will react to them to 
