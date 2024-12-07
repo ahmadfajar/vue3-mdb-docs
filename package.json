@@ -1,6 +1,6 @@
 {
   "name": "vue-mdbootstrap-docs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Vue MDBootstrap Documentation",
   "author": {
     "name": "Ahmad Fajar",
@@ -22,7 +22,7 @@
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
     "vue": "^3.5.13",
-    "vue-mdbootstrap": "^2.1.1"
+    "vue-mdbootstrap": "^2.1.2"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.11.0",
