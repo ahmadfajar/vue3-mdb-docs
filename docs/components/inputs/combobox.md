@@ -11,7 +11,7 @@ outline: [2, 3]
 
 ## Overview
 
-**BsCombobox** uses [BsListbox](/components/input/listbox) and [BsPopover](/components/overlays/popover) 
+**BsCombobox** uses [BsListbox](/components/inputs/listbox) and [BsPopover](/components/overlays/popover) 
 components internally and mimics like HTML combobox: `<select>` element. This means 
 that you can add attributes like `readonly`, `disabled`, `required` and it will react 
 to them to give the best experience. You can also use `v-model` directive to create 
@@ -1644,7 +1644,7 @@ onUnmounted(() => {
   </BsTab>
 </BsTabs>
 
-<!-- @include: @/components/input/validator.md -->
+<!-- @include: @/components/inputs/validator.md -->
 
 
 <script lang="ts" setup>

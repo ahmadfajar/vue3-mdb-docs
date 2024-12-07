@@ -726,7 +726,7 @@ function cancel() {
   </BsTab>
 </BsTabs>
 
-<!-- @include: @/components/input/validator.md -->
+<!-- @include: @/components/inputs/validator.md -->
 
 
 <script lang="ts" setup>

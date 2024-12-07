@@ -207,70 +207,70 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Input Controls:" />
       <ListGroup>
-        <ListGroupItem href="input/checkbox">
+        <ListGroupItem href="inputs/checkbox">
           <ListGroupItemTitle title="Checkbox" />
           <ListGroupItemContent>
             A component that let users select one or more items from a list, or turn an item on or
             off.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/radio">
+        <ListGroupItem href="inputs/radio">
           <ListGroupItemTitle title="Radio Button" />
           <ListGroupItemContent>
             A component that let users select one option from a set of options.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/switch">
+        <ListGroupItem href="inputs/switch">
           <ListGroupItemTitle title="Switch" />
           <ListGroupItemContent>
             A component that let users toggle the selection of an item on or off.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/textfield">
+        <ListGroupItem href="inputs/textfield">
           <ListGroupItemTitle title="Text Field" />
           <ListGroupItemContent>
             A component that let users enter text into an UI.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/textarea">
+        <ListGroupItem href="inputs/textarea">
           <ListGroupItemTitle title="TextArea Field" />
           <ListGroupItemContent>
             A component that let users enter a large amounts of text into an UI.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/numeric-field">
+        <ListGroupItem href="inputs/numeric-field">
           <ListGroupItemTitle title="Numeric Field" />
           <ListGroupItemContent>
             A component that let users enter numeric text into an UI.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/chipfield">
+        <ListGroupItem href="inputs/chipfield">
           <ListGroupItemTitle title="Chip Field" />
           <ListGroupItemContent>
             A component that let users enter arbitrary items, like <em>categories</em> or
             <em>tags</em> into an UI to convey a small pieces of information.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/listbox">
+        <ListGroupItem href="inputs/listbox">
           <ListGroupItemTitle title="Listbox" badge="v2.0.0" />
           <ListGroupItemContent>
             A component that let users select one or more items from a displayed list.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/combobox">
+        <ListGroupItem href="inputs/combobox">
           <ListGroupItemTitle title="Combobox" />
           <ListGroupItemContent>
             A component that let users select one or more items from a displayed list.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/datetime-field">
+        <ListGroupItem href="inputs/datetime-field">
           <ListGroupItemTitle title="DateTime Field" />
           <ListGroupItemContent>
             A fully featured date selection component that let users select a date, time, month,
             year, or datetime.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="input/toggle-field">
+        <ListGroupItem href="inputs/toggle-field">
           <ListGroupItemTitle title="Toggle Field" />
           <ListGroupItemContent>
             TODO: Toggle Field description.

@@ -599,7 +599,7 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
   </BsTab>
 </BsTabs>
 
-<!-- @include: @/components/input/validator.md -->
+<!-- @include: @/components/inputs/validator.md -->
 
 
 <script lang="ts" setup>
