@@ -5,7 +5,8 @@ outline: [2, 3]
 # Combobox
 
 ::: lead
-**BsCombobox** is a component that let users select one or more items from a displayed list.
+**BsCombobox** is a form field component that let users select one or more items 
+from a dropdown displayed list.
 :::
 
 

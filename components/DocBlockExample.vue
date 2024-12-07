@@ -67,7 +67,7 @@ function openStackBlitz() {
   const content = stackblitzOpts.html ?? '';
   const defStyles = '.my-demo-wrapper { width: 100%; padding: 1rem; }\n' + 
   '.mobi-card { max-width: 400px; }\n' +
-  '.mobi-card > .card > .md-appbar {\n' + 
+  '.card > .md-appbar {\n' + 
   '  border-top-left-radius: var(--bs-card-inner-border-radius);\n' + 
   '  border-top-right-radius: var(--bs-card-inner-border-radius);\n}';
 

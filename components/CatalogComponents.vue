@@ -260,7 +260,8 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="inputs/combobox">
           <ListGroupItemTitle title="Combobox" />
           <ListGroupItemContent>
-            A component that let users select one or more items from a displayed list.
+            A form field component that let users select one or more items from a dropdown displayed
+            list.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="inputs/datetime-field">
@@ -273,7 +274,8 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="inputs/toggle-field">
           <ListGroupItemTitle title="Toggle Field" />
           <ListGroupItemContent>
-            TODO: Toggle Field description.
+            A form field component with a group of buttons with toggle capabilities and validation.
+            It is primarily used to visualize choices with different approach.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>
@@ -322,9 +324,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         </ListGroupItem>
         <ListGroupItem href="overlays/notification">
           <ListGroupItemTitle title="Notification" />
-          <ListGroupItemContent>
-            TODO: Notification component's description.
-          </ListGroupItemContent>
+          <ListGroupItemContent> TODO: Notification component's description. </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="overlays/overlay">
           <ListGroupItemTitle title="Overlay" />
@@ -341,8 +341,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="overlays/tooltip">
           <ListGroupItemTitle title="Tooltip" />
           <ListGroupItemContent>
-            A component which is useful for conveying information when user hovers over an
-            element.
+            A component which is useful for conveying information when user hovers over an element.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>

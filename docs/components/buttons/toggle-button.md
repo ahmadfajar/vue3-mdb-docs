@@ -31,7 +31,7 @@ on the `model-value` property. This is useful to control or maintain the `model-
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="w-100 p-3 bg-white rounded-3">
     <h5 class="mb-4">What are you drinking?</h5>
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Normal state</label>
@@ -59,6 +59,7 @@ import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
 const selectedDrink = ref<string>();
+// Never assign a datasource to multiple <bs-toggle-button>
 const drinks: TInputOptionItem[] = [
   {
     value: "tea",
@@ -78,7 +79,9 @@ const drinks: TInputOptionItem[] = [
 :::
 
 ::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-The `<bs-button-toggle>` tag still works, but has been deprecated since v2.0.0.
+- The `<bs-button-toggle>` tag still works, but has been deprecated since v2.0.0.
+- Never assign a datasource to multiple `<bs-toggle-button>`. It may cause a bug or
+  duplicate ID attribute.
 :::
 
 <!-- @include: @/components/colors-tip.md -->
@@ -94,7 +97,7 @@ With the help of slot `icon` you can add dynamic checked icon.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="w-100 p-3 bg-white rounded-3">
     <div class="row">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
@@ -109,11 +112,11 @@ With the help of slot `icon` you can add dynamic checked icon.
 </template>
 
 <script lang="ts" setup>
-import { ref, type Ref } from "vue";
+import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
 const favoriteDrink = ref<string>();
-const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
+const favoriteDrinks: TInputOptionItem[] = [
   {
     value: "tea",
     label: "Tea",
@@ -126,7 +129,7 @@ const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
     value: "beer",
     label: "Beer",
   },
-]);
+];
 </script>
 ```
 :::
@@ -141,19 +144,27 @@ const favoriteDrinks: Ref<TInputOptionItem[]> = ref([
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="w-100 p-3 bg-white rounded-3">
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
-        <bs-toggle-button v-model="favoriteDrink1" :items="favoriteDrinks" color="default-color" multiple />
+        <bs-toggle-button 
+          v-model="favoriteDrink1" 
+          :items="favoriteDrinks" 
+          color="default-color" 
+          multiple></bs-toggle-button>
       </div>
     </div>
     <div class="row">
       <label class="col-md-3 col-form-label">Favorite Coffee</label>
       <div class="col-md">
-        <bs-toggle-button v-model="favoriteDrink2" :items="favoriteCoffees" color="default-color" multiple>
+        <bs-toggle-button 
+          v-model="favoriteDrink2" 
+          :items="favoriteCoffees" 
+          color="default-color" 
+          multiple>
           <template #icon="item">
-            <bs-icon-svg v-if="favoriteDrink2.includes(item?.value)" icon="check" />
+            <bs-icon-svg v-if="favoriteDrink2.includes(item?.value)" icon="check"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -204,8 +215,8 @@ const favoriteCoffees: TInputOptionItem[] = [
 
 You can style the `<bs-toggle-button>` component to your own preference or use a style variant 
 based on Google **Material Design 3** specifications. Example below show various 
-origin style variants and demonstrate how to put an icon inside the `<bs-toggle-button>`
-and change the icon dynamically like segmented buttons behavior.
+built-in style variants and demonstrate how to put an icon inside the `<bs-toggle-button>`
+and change the icon dynamically like a segmented buttons behaves.
 
 <SmallNote color="teal">Updated on v2.0.1</SmallNote>
 
@@ -213,14 +224,14 @@ and change the icon dynamically like segmented buttons behavior.
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 p-3 bg-white rounded-3">
+  <div class="w-100 p-3 bg-white rounded-3">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Filled</label>
       <div class="col-md">
         <bs-toggle-button v-model="selectedWeather1" :items="weathers" color="deep-purple">
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather1 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather1 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -230,7 +241,7 @@ and change the icon dynamically like segmented buttons behavior.
       <div class="col-md">
         <bs-toggle-button v-model="selectedWeather2" :items="weathers" color="deep-purple" raised>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather2 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather2 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -240,7 +251,7 @@ and change the icon dynamically like segmented buttons behavior.
       <div class="col-md">
         <bs-toggle-button v-model="selectedWeather3" :items="weathers" color="deep-purple" tonal>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather3 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather3 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -250,7 +261,7 @@ and change the icon dynamically like segmented buttons behavior.
       <div class="col-md">
         <bs-toggle-button v-model="selectedWeather4" :items="weathers" color="deep-purple" outlined>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -260,7 +271,7 @@ and change the icon dynamically like segmented buttons behavior.
       <div class="col-md">
         <bs-toggle-button v-model="selectedWeather5" :items="weathers" color="deep-purple" flat>
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -278,6 +289,7 @@ const selectedWeather3 = ref<string>();
 const selectedWeather4 = ref<string>();
 const selectedWeather5 = ref<string>();
 
+// Never assign a datasource to multiple <bs-toggle-button>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -319,7 +331,7 @@ const weathers: TInputOptionItem[] = [
           rounded
         >
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather6 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather6 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -334,7 +346,7 @@ const weathers: TInputOptionItem[] = [
           color="deep-purple" 
         >
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather7 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather7 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -351,7 +363,7 @@ const weathers: TInputOptionItem[] = [
           tonal
         >
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather8 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather8 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -368,7 +380,7 @@ const weathers: TInputOptionItem[] = [
           rounded
         >
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather9 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather9 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -385,7 +397,7 @@ const weathers: TInputOptionItem[] = [
           rounded
         >
           <template #icon="item">
-            <bs-icon-svg :icon="item?.value === selectedWeather10 ? 'check' : item.icon" />
+            <bs-icon-svg :icon="item?.value === selectedWeather10 ? 'check' : item.icon"></bs-icon-svg>
           </template>
         </bs-toggle-button>
       </div>
@@ -403,6 +415,7 @@ const selectedWeather9 = ref<string>();
 const selectedWeather9 = ref<string>();
 const selectedWeather10 = ref<string>();
 
+// Never assign a datasource to multiple <bs-toggle-button>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -568,22 +581,22 @@ The component css variables inherited from [BsButton](/components/buttons/button
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| disabled | `Boolean` | `false`  | The component state. |
-| color    | `String`  | `'default'` | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
-| flat     | `Boolean` | `false`  | Enable ***flat*** toggle button style. |
+| disabled | `Boolean` | `false`      | The component state. |
+| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| flat     | `Boolean` | `false`      | Enable ***flat*** toggle button style. |
 | icon-position | `String` | `'left'` | <div style="min-width:325px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
-| id       | `String`  |   | Sets the component `ID`. This property value is auto generate. |
+| id       | `String`  |              | Sets the component `ID`. This property value is auto generate. |
 | items    | `TInputOptionItem[]` |   | Collection of input item properties. |
-| model-value <Badge type="tip">v-model</Badge>  | `String`/`Number`/`Boolean`/`Array` | | Value monitored by `v-model` that represents the selected value. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge>  | `String`/`Number`/`Array` | | Value monitored by `v-model` that represents the selected value. <BsBadge color="info">v2.0.0</BsBadge> |
 | multiple | `Boolean` | `false` | Enable multiple selection mode. The default is single selection mode. |
-| name     | `String`  |   | The `<input>` element name. |
+| name     | `String`  |         | The `<input>` element name. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** toggle button style. |
 | pill     | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
 | raised   | `Boolean` | `false` | Enable ***elevated*** toggle button style. |
 | readonly | `Boolean` | `false` | The component state. |
 | rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
-| size     | `String`  |   | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |   | The selected button color (optional). Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| size     | `String`  |         | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
+| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
 | tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <BsBadge color="info">v2.0.4</BsBadge> |
 
 </div>
@@ -631,7 +644,7 @@ The Input item has properties as described below:
 | iconSize  | `Number`  | Render the icon at predefined size in pixel. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| iconVariant | `String` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
+| iconVariant  | `String` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
 
 </div>
 </div>
@@ -646,6 +659,7 @@ The Input item has properties as described below:
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { TInputOptionItem } from "vue-mdbootstrap";
 
 const favoriteDrink = ref<string>();
 const favoriteDrink1 = ref<string[]>([]);
@@ -665,7 +679,7 @@ const selectedWeather10 = ref<string>();
 const selectedCategory = ref("Songs");
 const tabs1active = ref(0);
 
-const drinkTypes = [
+const drinkTypes: TInputOptionItem[] = [
   {
     value: "tea",
     label: "Tea",
@@ -679,7 +693,7 @@ const drinkTypes = [
     label: "Beer",
   },
 ];
-const favoriteDrinks = [
+const favoriteDrinks: TInputOptionItem[] = [
   {
     value: "tea",
     label: "Tea",
@@ -693,7 +707,7 @@ const favoriteDrinks = [
     label: "Beer",
   },
 ];
-const favoriteCoffees: Ref<TInputOptionItem[]> = ref([
+const favoriteCoffees: TInputOptionItem[] = [
   {
     value: "Americano",
     label: "Americano",
@@ -706,7 +720,7 @@ const favoriteCoffees: Ref<TInputOptionItem[]> = ref([
     value: "Cappuccino",
     label: "Cappuccino",
   },
-]);
+];
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",

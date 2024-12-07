@@ -32,14 +32,6 @@ export const headMeta: HeadConfig[] = [
   //   gtag('js', new Date());
   //   gtag('config', 'G-K3RHJL1XDE');`
   // ],
-  // [
-  //   'link',
-  //   {
-  //     rel: "preload stylesheet",
-  //     href: "https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle.min.css",
-  //     crossorigin: "anonymous"
-  //   }
-  // ],
   [
     'link',
     {
