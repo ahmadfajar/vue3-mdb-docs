@@ -128,7 +128,8 @@ style variant. See [Google Material Symbols](https://fonts.google.com/icons?icon
 ## Custom Icon
 
 Custom icon can be enabled by using the `icon` property and is loaded dynamically 
-from Google Fonts site. Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
+from Google Fonts site. Use any valid android icon name from 
+[Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) 
 with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. Suffix 

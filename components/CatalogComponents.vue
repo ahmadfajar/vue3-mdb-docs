@@ -7,13 +7,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
 
 <template>
   <ListGroup class="md-shadow mt-4">
-    <ListGroupItem href="alert">
-      <ListGroupItemTitle title="Alert" />
-      <ListGroupItemContent>
-        A component that provides contextual feedback messages for typical user actions with the
-        handful of available and flexible alert messages.
-      </ListGroupItemContent>
-    </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Animations:" />
       <ListGroup>
@@ -31,13 +24,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>
-    </ListGroupItem>
-    <ListGroupItem href="badge">
-      <ListGroupItemTitle title="Badge" />
-      <ListGroupItemContent>
-        A lightweight component which can be used for adaptive tagging such as adding context to
-        just about any content.
-      </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Buttons:" />
@@ -110,12 +96,72 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         </ListGroupItem>
       </ListGroup>
     </ListGroupItem>
-    <ListGroupItem href="dropdown-menu">
-      <ListGroupItemTitle title="Dropdown Menu" />
-      <ListGroupItemContent>
-        A popup container which are typically used for displaying lists of links and actions in a
-        dropdown menu style.
-      </ListGroupItemContent>
+    <ListGroupItem>
+      <ListGroupItemTitle tag="div" class="h5 mb-4" title="Elements:" />
+      <ListGroup>
+        <ListGroupItem href="elements/alert">
+          <ListGroupItemTitle title="Alert" />
+          <ListGroupItemContent>
+            A component that provides contextual feedback messages for typical user actions with the
+            handful of available and flexible alert messages.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/avatar">
+          <ListGroupItemTitle title="Avatar" />
+          <ListGroupItemContent>
+            A component which are typically used to display a user profile as a picture, icon, or
+            short text.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/badge">
+          <ListGroupItemTitle title="Badge" />
+          <ListGroupItemContent>
+            A lightweight component which can be used for adaptive tagging such as adding context to
+            just about any content.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/breadcrumb">
+          <ListGroupItemTitle title="Breadcrumb" badge="v2.1.0" />
+          <ListGroupItemContent>
+            A component that indicate the current page's location within a navigational hierarchy.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/divider">
+          <ListGroupItemTitle title="Divider" />
+          <ListGroupItemContent>
+            Small and lightweight component which is primarily used to separate content within lists
+            or layouts.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/dropdown-menu">
+          <ListGroupItemTitle title="Dropdown Menu" />
+          <ListGroupItemContent>
+            A popup container which are typically used for displaying lists of links and actions in
+            a dropdown menu style.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/image-holder">
+          <ListGroupItemTitle title="Image Holder" />
+          <ListGroupItemContent>
+            A lightweight component which is primarily used to create SVG shape to visualize image
+            placeholder.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/list-tile">
+          <ListGroupItemTitle title="List Tile" />
+          <ListGroupItemContent>
+            A component used to display information. It can contain an image, content, actions,
+            subheaders and much more. BsListTile represents content in such a way which makes it
+            easy to identify a specific item in a collection.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="elements/subheader">
+          <ListGroupItemTitle title="Subheader" />
+          <ListGroupItemContent>
+            Small and lightweight component which is used as lists title.
+          </ListGroupItemContent>
+        </ListGroupItem>
+      </ListGroup>
     </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Icons:" />
@@ -124,7 +170,8 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemTitle title="Icon" />
           <ListGroupItemContent>
             Small and lightweight component which can be used inside almost any component or html
-            element and the icon is loaded from <strong>Google Material Symbols</strong> dynamically.
+            element and the icon is loaded from
+            <strong>Google Material Symbols</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/icon-fontawesome">
@@ -144,7 +191,8 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemTitle title="Icon SVG" badge="v2.0.0" />
           <ListGroupItemContent>
             A lightweight component which is primarily used to embed SVG icon inline inside an html
-            element and the SVG icon is loaded from <strong>Google Material Symbols</strong> dynamically.
+            element and the SVG icon is loaded from
+            <strong>Google Material Symbols</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/toggle-icon">
@@ -152,25 +200,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemContent>
             Small and lightweight component which is used to toggle two different icon. It can be
             used inside almost any component or html element.
-          </ListGroupItemContent>
-        </ListGroupItem>
-      </ListGroup>
-    </ListGroupItem>
-    <ListGroupItem>
-      <ListGroupItemTitle tag="div" class="h5 mb-4" title="Images:" />
-      <ListGroup>
-        <ListGroupItem href="images/avatar">
-          <ListGroupItemTitle title="Avatar" />
-          <ListGroupItemContent>
-            A component which are typically used to display a user profile as a picture, icon, or
-            short text.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="images/image-holder">
-          <ListGroupItemTitle title="Image Holder" />
-          <ListGroupItemContent>
-            A lightweight component which is primarily used to create SVG shape to visualize image
-            placeholder.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>
@@ -241,15 +270,13 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             year, or datetime.
           </ListGroupItemContent>
         </ListGroupItem>
+        <ListGroupItem href="input/toggle-field">
+          <ListGroupItemTitle title="Toggle Field" />
+          <ListGroupItemContent>
+            TODO: Toggle Field description.
+          </ListGroupItemContent>
+        </ListGroupItem>
       </ListGroup>
-    </ListGroupItem>
-    <ListGroupItem href="list-tile">
-      <ListGroupItemTitle title="List Tile" />
-      <ListGroupItemContent>
-        A component used to display information. It can contain an image, content, actions,
-        subheaders and much more. BsListTile represents content in such a way which makes it easy to
-        identify a specific item in a collection.
-      </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Navigation:" />
@@ -293,6 +320,12 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             through the action buttons to prompt the user for input or to ask for a decision.
           </ListGroupItemContent>
         </ListGroupItem>
+        <ListGroupItem href="overlays/notification">
+          <ListGroupItemTitle title="Notification" />
+          <ListGroupItemContent>
+            TODO: Notification component's description.
+          </ListGroupItemContent>
+        </ListGroupItem>
         <ListGroupItem href="overlays/overlay">
           <ListGroupItemTitle title="Overlay" />
           <ListGroupItemContent>
@@ -308,7 +341,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="overlays/tooltip">
           <ListGroupItemTitle title="Tooltip" />
           <ListGroupItemContent>
-            A component which is useful for conveying information when a user hovers over an
+            A component which is useful for conveying information when user hovers over an
             element.
           </ListGroupItemContent>
         </ListGroupItem>
@@ -345,24 +378,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemContent>
             Bootstrap progress bar's component featuring support for animated background and text
             labels which are typically used for displaying simple progress bar.
-          </ListGroupItemContent>
-        </ListGroupItem>
-      </ListGroup>
-    </ListGroupItem>
-    <ListGroupItem>
-      <ListGroupItemTitle tag="div" class="h5 mb-4" title="Miscellaneous:" />
-      <ListGroup>
-        <ListGroupItem href="others/divider">
-          <ListGroupItemTitle title="Divider" />
-          <ListGroupItemContent>
-            Small and lightweight component which is primarily used to separate content within lists
-            or layouts.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="others/subheader">
-          <ListGroupItemTitle title="Subheader" />
-          <ListGroupItemContent>
-            Small and lightweight component which is used as lists title.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>

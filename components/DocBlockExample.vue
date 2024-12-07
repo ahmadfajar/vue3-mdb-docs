@@ -127,11 +127,13 @@ function openStackBlitz() {
         </div>
       </div>
     </div>
-    <BsExpandTransition>
-      <div v-if="sourceVisible" class="doc-block-code">
-        <slot />
-      </div>
-    </BsExpandTransition>
+    <ClientOnly>
+      <BsExpandTransition>
+        <div v-if="sourceVisible" class="doc-block-code">
+          <slot />
+        </div>
+      </BsExpandTransition>
+    </ClientOnly>
     <div class="doc-block-content">
       <ClientOnly v-if="clientOnly">
         <slot name="content" />

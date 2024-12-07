@@ -10,8 +10,10 @@ when `click` or `touch` event occured.
 ## Overview
 
 `<bs-ripple>` can be placed inside almost any element or component. Numerous components use 
-`<bs-ripple>` internally, such as [BsButton](/components/buttons/button), [BsListTile](/components/list-tile), 
-[BsListNavItem](/components/navigation/list-nav), **BsTab**. 
+`<bs-ripple>` internally, such as [BsButton](/components/buttons/button), 
+[BsListTile](/components/elements/list-tile), [BsListNavItem](/components/navigation/list-nav), 
+[BsTab](/components/navigation/tabs). 
+
 Example below, shows you basic usage of `<bs-ripple>`.
 
 ::: BlockVue {title="Ripple Example"}

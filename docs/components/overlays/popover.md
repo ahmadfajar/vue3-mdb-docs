@@ -7,7 +7,8 @@
 
 ## Overview
 
-Some components use `<bs-popover>` internally, such as [BsDropdownMenu](/components/dropdown-menu),
+Some components use `<bs-popover>` internally, such as 
+[BsDropdownMenu](/components/elements/dropdown-menu),
 [BsCombobox](/components/input/combobox), [BsDateTimeField](/components/input/datetime-field),
 [BsSearchField](/components/input/search-field). Example below, shows you basic usage of `<bs-popover>`.
 

@@ -7,7 +7,7 @@ outline: [2, 3]
 ::: lead
 **BsListNav** is a component used for displaying a series of item and mainly used for navigation.
 It can contain an icon, nested items, and provides a consistent styling for organizing the items. But
-doesn't have the flexibility like [BsListTile](/components/list-tile).
+doesn't have the flexibility like [BsListTile](/components/elements/list-tile).
 :::
 
 

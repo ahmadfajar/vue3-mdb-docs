@@ -14,7 +14,6 @@ export const sidebar = [
     text: 'Components',
     collapsed: true,
     items: [
-      { text: 'Alert', link: '/components/alert' },
       {
         text: 'Animations',
         collapsed: true,
@@ -29,7 +28,6 @@ export const sidebar = [
           }
         ]
       },
-      { text: 'Badge', link: '/components/badge' },
       {
         text: 'Buttons',
         collapsed: true,
@@ -50,13 +48,27 @@ export const sidebar = [
         text: 'Container',
         collapsed: true,
         items: [
-          { text: 'App Container', link: '/components/container/container' },
+          { text: 'App', link: '/components/container/container' },
           { text: 'Appbar', link: '/components/container/appbar' },
           { text: 'Card', link: '/components/container/card' },
           { text: 'Side Drawer', link: '/components/container/side-drawer' },
         ]
       },
-      { text: 'Dropdown Menu', link: '/components/dropdown-menu' },
+      {
+        text: 'Elements',
+        collapsed: true,
+        items: [
+          { text: 'Alert', link: '/components/elements/alert' },
+          { text: 'Avatar', link: '/components/elements/avatar' },
+          { text: 'Badge', link: '/components/elements/badge' },
+          { text: 'Breadcrumb', link: '/components/elements/breadcrumb' },
+          { text: 'Divider', link: '/components/elements/divider' },
+          { text: 'Dropdown Menu', link: '/components/elements/dropdown-menu' },
+          { text: 'Image Placeholder', link: '/components/elements/image-holder' },
+          { text: 'List Tile', link: '/components/elements/list-tile' },
+          { text: 'Subheader', link: '/components/elements/subheader' },
+        ]
+      },
       {
         text: 'Icons',
         collapsed: true,
@@ -66,14 +78,6 @@ export const sidebar = [
           { text: 'Icon Spinner', link: '/components/icons/icon-spinner' },
           { text: 'Icon SVG', link: '/components/icons/icon-svg' },
           { text: 'Toggle Icon', link: '/components/icons/toggle-icon' }
-        ]
-      },
-      {
-        text: 'Images',
-        collapsed: true,
-        items: [
-          { text: 'Avatar', link: '/components/images/avatar' },
-          { text: 'Image Placeholder', link: '/components/images/image-holder' },
         ]
       },
       {
@@ -90,9 +94,9 @@ export const sidebar = [
           { text: 'Listbox', link: '/components/input/listbox' },
           { text: 'Combobox', link: '/components/input/combobox' },
           { text: 'DateTime Field', link: '/components/input/datetime-field' },
+          { text: 'Toggle Field', link: '/components/input/toggle-field' },
         ]
       },
-      { text: 'List Tile', link: '/components/list-tile' },
       {
         text: 'Navigation',
         collapsed: true,
@@ -108,8 +112,10 @@ export const sidebar = [
           { text: 'Lightbox', link: '/components/overlays/lightbox' },
           { text: 'Mask Loader', link: '/components/overlays/mask-loader' },
           { text: 'Modal', link: '/components/overlays/modal' },
+          { text: 'Notification', link: '/components/overlays/notification' },
           { text: 'Overlay', link: '/components/overlays/overlay' },
           { text: 'Popover', link: '/components/overlays/popover' },
+          { text: 'Tooltip', link: '/components/overlays/tooltip' },
         ]
       },
       { text: 'Pickers', 
@@ -125,14 +131,6 @@ export const sidebar = [
         items: [
           { text: 'Progress', link: '/components/progress-controls/progress' },
           { text: 'Progress Bar', link: '/components/progress-controls/progressbar' },
-        ]
-      },
-      {
-        text: 'Miscellaneous',
-        collapsed: true,
-        items: [
-          { text: 'Divider', link: '/components/others/divider' },
-          { text: 'Subheader', link: '/components/others/subheader' },
         ]
       },
     ]
