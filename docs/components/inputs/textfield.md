@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that let users enter text into an UI. 
 ---
 
 # Text Field

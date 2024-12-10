@@ -1,3 +1,7 @@
+---
+description: Small and lightweight component which is used as lists title. 
+--- 
+
 # Subheader
 
 :::lead

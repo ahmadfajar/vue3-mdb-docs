@@ -1,7 +1,11 @@
+---
+description: An icon component that is normally used for displaying loading indicator. 
+--- 
+
 # Icon Spinner
 
 ::: lead
-**BsIconSpinner** is a lightweight component which is used for displaying loading indicator.
+**BsIconSpinner** is an icon component that is normally used for displaying loading indicator.
 :::
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>

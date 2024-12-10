@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component for actions in form, dialog, and more. Includes support for a handful of color variations, sizes, states, and more. 
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that let users enter arbitrary items, like categories or tags into an UI to convey a small pieces of information. 
 ---
 
 # Chip Field

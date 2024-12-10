@@ -1,3 +1,7 @@
+---
+description: A popup dialog component that brings information to the user. It also provides actions through the action buttons to prompt the user for input or to ask for a decision. 
+--- 
+
 # Modal
 
 

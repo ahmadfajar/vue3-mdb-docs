@@ -184,7 +184,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="icons/icon-spinner">
           <ListGroupItemTitle title="Icon Spinner" badge="v2.0.0" />
           <ListGroupItemContent>
-            A lightweight component which is used for displaying loading indicator.
+            An icon component that is normally used for displaying loading indicator.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="icons/icon-svg">
@@ -324,7 +324,9 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         </ListGroupItem>
         <ListGroupItem href="overlays/notification">
           <ListGroupItemTitle title="Notification" />
-          <ListGroupItemContent> TODO: Notification component's description. </ListGroupItemContent>
+          <ListGroupItemContent>
+            A lightweight push notification component that display a notification message to user.
+          </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="overlays/overlay">
           <ListGroupItemTitle title="Overlay" />
@@ -375,7 +377,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         <ListGroupItem href="progress-controls/progressbar">
           <ListGroupItemTitle title="Progress Bar" badge="v2.0.0" />
           <ListGroupItemContent>
-            Bootstrap progress bar's component featuring support for animated background and text
+            Bootstrap progress bar component featuring support for animated background and text
             labels which are typically used for displaying simple progress bar.
           </ListGroupItemContent>
         </ListGroupItem>

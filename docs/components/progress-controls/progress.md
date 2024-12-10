@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component which are typically used to visualize the data loading progress. 
 ---
 
 # Progress

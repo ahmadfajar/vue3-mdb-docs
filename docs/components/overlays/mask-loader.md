@@ -1,3 +1,7 @@
+---
+description: A component which are typically used for displaying a loading progress with backdrop overlay.
+--- 
+
 # Mask Loader
 
 

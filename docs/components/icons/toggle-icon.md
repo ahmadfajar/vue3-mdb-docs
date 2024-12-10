@@ -1,3 +1,7 @@
+---
+description: Small and lightweight component which is used to toggle two different icon. 
+--- 
+
 # Toggle Icon
 
 ::: lead

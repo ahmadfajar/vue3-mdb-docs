@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component used to display information. It can contain an image, content, actions, subheaders and much more. BsListTile represents content in such a way which makes it easy to identify a specific item in a collection. 
 ---
 
 # List Tile

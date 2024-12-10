@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component used for displaying a series of item and mainly used for navigation. It can contain an icon, nested items, and provides a consistent styling for organizing the items. 
 ---
 
 # List Nav

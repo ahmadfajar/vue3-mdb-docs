@@ -1,3 +1,7 @@
+---
+description: Small and lightweight component which is used to show ripple animation when click or touch event occured. 
+--- 
+
 # Ripple
 
 

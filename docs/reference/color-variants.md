@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: Explains various color classes and variants provided by Vue MDBootstrap.
 ---
 
 # Color Variants
@@ -12,6 +13,7 @@ components, these variants refers to their **color-name**, rather than by the un
 :::
 
 <SmallNote color="teal">Updated on v2.1.0</SmallNote>
+
 
 ## Applying Color Variants
 
@@ -139,6 +141,7 @@ If wanted to apply to an UI component, use its _CSS classname_ on component's `c
 Starting from **version 2.1.0** these color variants are no longer included in 
 the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle-color.min.css`.
 :::
+
 
 ### RGBA color variants {class="mt-lg-5"}
 

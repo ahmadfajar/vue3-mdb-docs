@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A lightweight component which is primarily used to create SVG shape to visualize image placeholder. 
 ---
 
 # Image Placeholder

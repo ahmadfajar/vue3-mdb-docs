@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A lightweight component which is placed at the top of the page as a container for page title, logo, menus, and action buttons. 
 ---
 
 # Appbar

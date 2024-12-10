@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that indicate the current page's location within a navigational hierarchy. 
 ---
 
 # Breadcrumb

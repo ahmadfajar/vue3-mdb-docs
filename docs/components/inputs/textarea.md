@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that let users enter a large amounts of text into an UI. 
 ---
 
 # TextArea Field

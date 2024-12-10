@@ -1,3 +1,7 @@
+---
+description: A popup container which are typically used for displaying lists of links and actions in a dropdown menu style. 
+--- 
+
 # Dropdown Menu
 
 :::lead

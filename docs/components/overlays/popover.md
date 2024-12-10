@@ -1,3 +1,7 @@
+---
+description: A lightweight component which is used as a popup container. 
+--- 
+
 # Popover
 
 :::lead

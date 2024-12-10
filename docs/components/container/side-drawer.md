@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A lightweight component's container which may contains application navigation, logo and others. 
 ---
 
 # Side Drawer

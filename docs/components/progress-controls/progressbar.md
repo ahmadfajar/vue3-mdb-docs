@@ -1,11 +1,12 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: Bootstrap progress bar component featuring support for animated background and text labels which are typically used for displaying simple progress bar. 
 ---
 
 # Progress Bar
 
 :::lead
-**BsProgressBar** is bootstrap progress bar's component featuring support for
+**BsProgressBar** is bootstrap progress bar component featuring support for
 animated background and text labels which are typically used for displaying
 simple progress bar.
 :::

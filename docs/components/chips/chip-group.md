@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component which extends the BsChip's component by providing groupable functionality. It is used for creating groups of selections using chips. 
 ---
 
 # Chip Group

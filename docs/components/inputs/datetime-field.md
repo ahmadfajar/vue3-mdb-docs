@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A fully featured date selection component that let users select a date, time, month, year, or datetime. 
 ---
 
 # DateTime Field

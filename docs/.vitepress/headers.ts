@@ -6,7 +6,7 @@ export const headMeta: HeadConfig[] = [
     {
       name: 'keywords',
       content:
-        'Vue MDBootstrap, MDBootstrap, Vue Component, Vuejs Component, Vuejs UI Component Library, Vuejs UI Component, Bootstrap Component, Vue Material Design, Vuejs Material Design, Vuejs, Vue, Bootstrap, Material Design'
+        'Vue MDBootstrap, MDBootstrap, Vue Component, Vuejs Component, Vue Component Library, Vuejs Component Library, Vuejs UI Component Library, Vuejs UI Component, Bootstrap Component, Vue Material Design, Vuejs Material Design, Vuejs, Vue, Bootstrap, Material Design'
     }
   ],
   [

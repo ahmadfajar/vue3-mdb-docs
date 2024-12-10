@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component which are typically used to display a user profile as a picture, icon, or short text. 
 ---
 
 # Avatar

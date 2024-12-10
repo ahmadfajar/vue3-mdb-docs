@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A form field component that let users select one or more items from a dropdown displayed list. 
 ---
 
 # Combobox
@@ -12,11 +13,12 @@ from a dropdown displayed list.
 
 ## Overview
 
-**BsCombobox** uses [BsListbox](/components/inputs/listbox) and [BsPopover](/components/overlays/popover) 
-components internally and mimics like HTML combobox: `<select>` element. This means 
-that you can add attributes like `readonly`, `disabled`, `required` and it will react 
-to them to give the best experience. You can also use `v-model` directive to create 
-two-way data bindings on the `model-value` property.
+**BsCombobox** uses [BsListbox](/components/inputs/listbox) and 
+[BsPopover](/components/overlays/popover) components internally and mimics like 
+HTML combobox: `<select>` element. This means that you can add attributes like 
+`readonly`, `disabled`, `required` and it will react to them to give the best 
+experience. You can also use `v-model` directive to create two-way data bindings 
+on the `model-value` property.
 
 ::: BlockVue {clientOnly="true" title="Basic Combobox Example" file="./docs/components/scripts/combobox-1.js"}
 

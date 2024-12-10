@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that generates a calendar style date selection widget. 
 ---
 
 # Date Picker

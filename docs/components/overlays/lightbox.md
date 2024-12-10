@@ -1,3 +1,7 @@
+---
+description: A modal image gallery component that is used to display a collection of images.
+--- 
+
 # Lightbox
 
 

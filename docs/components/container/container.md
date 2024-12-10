@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A lightweight components which is used as layout container for your application. 
 ---
 
 # App Container

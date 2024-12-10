@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component used for creating a pseudo-navigation for a page. 
 ---
 
 # Tabs

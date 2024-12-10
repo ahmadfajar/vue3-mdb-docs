@@ -1,3 +1,7 @@
+---
+description: A component which is useful for conveying information when user hovers over an element. 
+--- 
+
 # Tooltip
 
 ::: lead

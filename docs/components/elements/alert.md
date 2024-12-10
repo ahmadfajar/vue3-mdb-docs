@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component that provides contextual feedback messages for typical user actions with the handful of available and flexible alert messages. 
 ---
 
 # Alert

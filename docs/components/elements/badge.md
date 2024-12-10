@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A lightweight component which can be used for adaptive tagging such as adding context to just about any content. 
 ---
 
 # Badge

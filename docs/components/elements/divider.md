@@ -1,3 +1,7 @@
+---
+description: Small and lightweight component which is primarily used to separate content within lists or layouts. 
+---
+
 # Divider
 
 :::lead

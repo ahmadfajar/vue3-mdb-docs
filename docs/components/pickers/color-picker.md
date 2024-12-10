@@ -1,5 +1,5 @@
 ---
-outline: [2, 3]
+description: A component that allow users to select a color using a variety of input methods. 
 ---
 
 # Color Picker

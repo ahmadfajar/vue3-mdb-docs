@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A component which is used to convey small pieces of information to create arbitrary items, like categories or tags. 
 ---
 
 # Chip

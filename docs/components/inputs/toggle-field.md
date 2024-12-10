@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A form field component with a group of buttons with toggle capabilities and validation. It is primarily used to visualize choices with different approach. 
 ---
 
 

@@ -1,3 +1,7 @@
+---
+description: A lightweight component for displaying a backdrop overlay. 
+--- 
+
 # Overlay
 
 

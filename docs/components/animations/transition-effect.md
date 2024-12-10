@@ -1,3 +1,7 @@
+---
+description: A Transition animations effect that will make an UI feel great. 
+--- 
+
 # Transition Effects
 
 

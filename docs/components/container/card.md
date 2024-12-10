@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A flexible and extensible content container. It includes sub-component for headers, footers, and content with variety background colors, and powerful display options. 
 ---
 
 # Card

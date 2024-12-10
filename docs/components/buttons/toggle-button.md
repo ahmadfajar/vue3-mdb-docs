@@ -1,5 +1,6 @@
 ---
-outline: [2, 3]
+outline: [2, 3] 
+description: A group of buttons with toggle capabilities. It is primarily used to visualize choices with different approaches. 
 ---
 
 

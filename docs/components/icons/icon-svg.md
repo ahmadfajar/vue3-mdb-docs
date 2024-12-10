@@ -1,8 +1,13 @@
+---
+description: A lightweight component which is primarily used to embed SVG icon inline inside an html element and the SVG icon is loaded from Google Material Symbols dynamically. 
+--- 
+
 # Icon SVG
 
 ::: lead
-**BsIconSvg** is a lightweight component that loads an icon from
-[Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) dynamically.
+**BsIconSvg** is a lightweight component which is primarily used to embed SVG icon 
+inline inside an html element and the SVG icon is loaded from 
+[Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) dynamically. 
 :::
 
 <SmallNote color="teal">Updated on v2.1.0</SmallNote>

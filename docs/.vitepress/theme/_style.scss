@@ -357,6 +357,19 @@
     }
   }
 
+  .doc-table-2cols {
+    > table {
+      td {
+        &:first-child {
+          > code {
+            --vp-code-color: var(--doc-text-code-dt);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
   @media (min-width: 590px) {
     margin: 3rem 0 0;
 

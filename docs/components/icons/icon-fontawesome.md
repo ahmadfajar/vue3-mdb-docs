@@ -1,3 +1,7 @@
+---
+description: Small and lightweight component which can be used inside almost any component or html element and the icon is loaded from Font Awesome dynamically. 
+--- 
+
 # Icon Font Awesome
 
 ::: lead
