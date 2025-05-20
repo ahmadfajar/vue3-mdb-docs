@@ -79,7 +79,7 @@ The following is an example that demonstrate how to use the `<bs-subheader>`.
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-subheader-font-size: 1rem;

@@ -280,7 +280,7 @@ using the `iconOff` property via its configuration option when creating new noti
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-3">Updated on v2.1.3</SmallNote>
+<SmallNote color="teal">Updated on v2.1.3</SmallNote>
 
 ```scss
 --md-notification-background-color: #16181b;

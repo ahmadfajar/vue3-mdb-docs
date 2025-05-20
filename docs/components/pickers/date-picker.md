@@ -226,7 +226,7 @@ const picker8 = ref<string>();
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-datepicker-border-radius: .375rem;

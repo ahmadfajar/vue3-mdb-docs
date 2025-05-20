@@ -8,6 +8,7 @@ description: Static utility helper class for working with colors.
 Static utility helper class for working with colors. 
 :::
 
+<SmallNote color="teal">Since v2.0.0</SmallNote>
 
 **Example**
 

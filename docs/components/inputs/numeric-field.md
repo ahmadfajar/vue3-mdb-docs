@@ -769,7 +769,7 @@ function clear() {
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-lg-4">Updated on v2.0.10</SmallNote>
+<SmallNote color="teal">Updated on v2.0.10</SmallNote>
 
 ```scss
 --md-field-active-border-color: rgb(var(--md-field-active-indicator));

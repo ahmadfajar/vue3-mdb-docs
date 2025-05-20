@@ -77,7 +77,7 @@ A tooltip can be aligned to any of the four sides of the activator element.
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-3">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-tooltip-arrow-width: 0.8rem;

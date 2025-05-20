@@ -8,6 +8,7 @@ description: Static utility helper class for working with strings.
 Static utility helper class for working with strings.
 :::
 
+<SmallNote color="teal">Since v2.0.0</SmallNote>
 
 **Example**
 

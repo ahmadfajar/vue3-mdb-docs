@@ -465,7 +465,7 @@ onUnmounted(() => {
 :::
 
 
-## CSS Variables {class="mb-lg-5"}
+## CSS Variables 
 
 ```scss
 --md-searchbox-padding-x: 0.75rem;

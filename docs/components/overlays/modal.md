@@ -227,7 +227,7 @@ const scrollableModalVisible = ref(false);
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-lg-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-modal-background: #fff;

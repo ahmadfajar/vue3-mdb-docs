@@ -75,7 +75,7 @@ The following is an example that demonstrate how to use the `<bs-divider>`.
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-4">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-divider-height: 1px;

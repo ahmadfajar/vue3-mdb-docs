@@ -68,7 +68,7 @@ container for page title, logo, menus, and action buttons which is usually known
 
 ## CSS Variables
 
-<SmallNote color="teal" class="mt-3">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added since v2.0.0</SmallNote>
 
 ```scss
 --md-appbar-bg: #fff;
