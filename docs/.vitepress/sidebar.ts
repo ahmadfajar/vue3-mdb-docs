@@ -91,10 +91,11 @@ export const sidebar = [
           { text: 'TextArea Field', link: '/components/inputs/textarea' },
           { text: 'Numeric Field', link: '/components/inputs/numeric-field' },
           { text: 'Chip Field', link: '/components/inputs/chipfield' },
-          { text: 'Listbox', link: '/components/inputs/listbox' },
           { text: 'Combobox', link: '/components/inputs/combobox' },
+          { text: 'Listbox', link: '/components/inputs/listbox' },
           { text: 'DateTime Field', link: '/components/inputs/datetime-field' },
           { text: 'Toggle Field', link: '/components/inputs/toggle-field' },
+          { text: 'Search Field', link: '/components/inputs/search-field' },
         ]
       },
       {
@@ -138,6 +139,20 @@ export const sidebar = [
   {
     text: 'Reference',
     collapsed: true,
-    items: [{ text: 'Color Variants', link: '/reference/color-variants' }]
+    items: [
+      { text: 'Global API', link: '/reference/global-api' },
+      { 
+        text: 'Utility Classes', 
+        collapsed: true,
+        items: [
+          { text: 'Color', link: '/reference/color-class' },
+          { text: 'Helper', link: '/reference/helper-class' },
+          { text: 'StringHelper', link: '/reference/stringhelper-class' },
+          { text: 'PopupManager', link: '/reference/popupmanager-class' },
+        ]
+      },
+      { text: 'Color Variants', link: '/reference/color-variants' },
+      { text: 'Shadows', link: '/reference/shadows' }
+    ]
   }
 ];

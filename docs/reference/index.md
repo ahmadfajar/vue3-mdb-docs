@@ -4,8 +4,8 @@ prev:
   link: '/components/'
 
 next:
-  text: 'Color Variants'
-  link: '/reference/color-variants'
+  text: 'Global API'
+  link: '/reference/global-api'
 ---
 
 

@@ -251,17 +251,17 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             <em>tags</em> into an UI to convey a small pieces of information.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="inputs/listbox">
-          <ListGroupItemTitle title="Listbox" badge="v2.0.0" />
-          <ListGroupItemContent>
-            A component that let users select one or more items from a displayed list.
-          </ListGroupItemContent>
-        </ListGroupItem>
         <ListGroupItem href="inputs/combobox">
           <ListGroupItemTitle title="Combobox" />
           <ListGroupItemContent>
             A form field component that let users select one or more items from a dropdown displayed
             list.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/listbox">
+          <ListGroupItemTitle title="Listbox" badge="v2.0.0" />
+          <ListGroupItemContent>
+            A component that let users select one or more items from a displayed list.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="inputs/datetime-field">
@@ -276,6 +276,12 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemContent>
             A form field component with a group of buttons with toggle capabilities and validation.
             It is primarily used to visualize choices with different approach.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/search-field">
+          <ListGroupItemTitle title="Search Field" />
+          <ListGroupItemContent>
+            A component that let users enter search keyword into an UI.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>

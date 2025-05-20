@@ -75,7 +75,7 @@ function makeStackblitzOpts(params: TParseResult) {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Vue MDBootstrap',
-  description: 'Vue.js UI Component Library',
+  description: 'Bootstrap 5 Material Design Components for Vue.js 3 - Vue.js UI Component Library',
   // base: '/vuemdb-doc/',
   // appearance: false,
   cleanUrls: true,

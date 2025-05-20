@@ -7,6 +7,58 @@ and can be viewed below for your convenience.
 :::
 
 
+## v2.1.7
+
+Released: February 03, 2025
+
+### Bug Fixes
+
+- **BsTextArea**: fixed bug could not determine its height when `auto-grow` and `readonly`
+  were enabled and the `model-value` wasn't empty.
+
+
+## v2.1.6
+
+Released: February 01, 2025
+
+### Improvements
+
+- **BsButton**: 
+  - Improve inner element spacing and padding when `dropdown-toggle` is enabled.
+  - Improve spacing between icon and caret when `default-slot` is **empty** or
+    **undefined** and `dropdown-toggle` is enabled.
+- **BsTooltip**: improve show or hide animation timing.
+
+### Bug Fixes
+
+- **BsTab**: fixed bug that caused `v-if` to not work as expected.
+
+
+## v2.1.5
+
+Released: December 30, 2024
+
+### Improvements
+
+- **BsTooltip**: improve arrow positioning when activator width greater than tooltip width.
+- **AxiosPlugin**: 
+  - Expose `$http.patch` method. 
+  - Detect form object for data provided to the `$http.post`, `$http.patch`, `$http.put` 
+    methods and execute appropriate axios method.
+
+
+## v2.1.4
+
+Released: December 28, 2024
+
+### Improvements
+
+- **BsTooltip**: 
+  - Prevent displaying tooltip beyond the screen viewport by shifting its 
+    coordinates or reversing its placement. 
+  - Automatically adjust arrow positioning. 
+
+
 ## v2.1.3
 
 Released: December 10, 2024
