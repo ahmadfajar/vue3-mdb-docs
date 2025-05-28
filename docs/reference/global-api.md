@@ -1,5 +1,5 @@
 ---
-description: Explains global API provided by the library.
+description: Explains global API provided by the Vue MDBootstrap.
 ---
 
 # Global API
@@ -133,6 +133,7 @@ const response = await http?.get("<api-url>");
 
 ### Instance Method {#usehttpservice-methods class="mb-4"}
 
+<div class="doc-api">
 <ul>
 <li>get() 
 
@@ -142,7 +143,9 @@ interface IHttpService {
 }
 ```
 
-Send _HTTP GET_ to the remote server. 
+Send _HTTP GET_ to the remote service.
+
+**Details**:
 * `url`: the API url
 * `data`: the data to be sent <span class="text-muted">(optional)</span>
 * `options`: Additional options <span class="text-muted">(optional)</span> 
@@ -156,7 +159,9 @@ interface IHttpService {
 } 
 ```
 
-Send _HTTP PATCH_ to the remote server. 
+Send _HTTP PATCH_ to the remote service. 
+
+**Details**:
 * `url`: the API url
 * `data`: the data to be sent 
 * `options`: Additional options <span class="text-muted">(optional)</span>
@@ -170,7 +175,9 @@ interface IHttpService {
 } 
 ```
 
-Send _HTTP POST_ to the remote server. 
+Send _HTTP POST_ to the remote service. 
+
+**Details**:
 * `url`: the API url
 * `data`: the data to be sent 
 * `options`: Additional options <span class="text-muted">(optional)</span>
@@ -184,7 +191,9 @@ interface IHttpService {
 } 
 ```
 
-Send _HTTP PUT_ to the remote server. 
+Send _HTTP PUT_ to the remote service. 
+
+**Details**:
 * `url`: the API url
 * `data`: the data to be sent 
 * `options`: Additional options <span class="text-muted">(optional)</span>
@@ -198,13 +207,16 @@ interface IHttpService {
 } 
 ```
 
-Send _HTTP DELETE_ to the remote server. 
+Send _HTTP DELETE_ to the remote service. 
+
+**Details**:
 * `url`: the API url
 * `data`: the data to be sent <span class="text-muted">(optional)</span>
 * `options`: Additional options <span class="text-muted">(optional)</span>
 
 </li>
 </ul>
+</div>
 
 ## useVueMdbService 
 

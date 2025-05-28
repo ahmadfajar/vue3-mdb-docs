@@ -223,6 +223,12 @@
     }
   }
 
+  .doc-api {
+    ul > li > code:nth-child(1) {
+      color: #E36209;
+    }
+  }
+
   .list-group {
     --bs-list-group-bg: rgb(242, 245, 248);
     --bs-list-group-action-hover-bg: rgb(218, 223, 229);
@@ -463,6 +469,12 @@
       background-color: #3f51b5 !important;
     }
 
+    .doc-api {
+      ul > li > code:nth-child(1) {
+        color: #FFAB70;
+      }
+    }
+
     .list-group {
       --bs-list-group-color: wheat;
       --bs-list-group-action-color: var(--vp-c-text-2);
@@ -476,7 +488,7 @@
 
     .list-group-item {
       > .list-group {
-        --bs-list-group-bg: rgba(67, 70, 80, 0.6);
+        --bs-list-group-bg: rgba(62, 72, 78, 0.6);
       }
     }
 

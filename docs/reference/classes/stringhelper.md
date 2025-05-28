@@ -20,6 +20,8 @@ const result = StringHelper.titleCase(str);
 // result: Hello, Good Morning
 ```
 
+<div class="doc-api">
+
 ## isEndWith 
 
 ```ts
@@ -30,7 +32,9 @@ class StringHelper {
 
 Determines whether a string ends with any of the specified string or not. Returns 
 `true` if any of the given strings in the collection is found at the end of the string, 
-otherwise `false`.
+otherwise `false`. 
+
+**Details**:
 * `source`: The input string to evaluate.
 * `searches`: Collection of string to search at the end of string.
 
@@ -43,7 +47,9 @@ class StringHelper {
 ``` 
 
 Simple function to transform the input string into *Title Case*. Returns new `string` 
-that has been transform to *Title Case*.
+that has been transform to *Title Case*. 
+
+**Details**:
 * `text`: The input string to transform
 
 ## camelCase 
@@ -56,7 +62,9 @@ class StringHelper {
 
 Simple function to transform the input string into 
 [camelCase](https://en.wikipedia.org/wiki/Letter_case#Camel_case). Returns new `string` that 
-has been transform to *camelCase*.
+has been transform to *camelCase*. 
+
+**Details**:
 * `text`: The input string to transform
 
 ## kebabCase 
@@ -70,6 +78,8 @@ class StringHelper {
 Simple function to transform the input string into 
 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case). 
 Returns new `string` that has been transform to *kebab-case*.
+
+**Details**:
 * `text`: The input string to transform
 
 ## padLeft 
@@ -82,7 +92,9 @@ class StringHelper {
 
 Pads the input string with a given string (possibly repeated) so that the resulting 
 string reaches a given length. The padding is applied from the start (left) of the 
-input string. Returns new `string` that has been padded on the left side.
+input string. Returns new `string` that has been padded on the left side. 
+
+**Details**:
 * `str`: The string to pad.
 * `maxLength`: The length of the resulting string once the current string has been 
   padded. If this parameter is smaller than the current string's length, the current 
@@ -101,7 +113,9 @@ class StringHelper {
 
 Pads the input string with a given string (possibly repeated) so that the resulting 
 string reaches a given length. The padding is applied from the end (right) of the 
-input string. Returns new `string` that has been padded on the right side.
+input string. Returns new `string` that has been padded on the right side. 
+
+**Details**:
 * `str`: The string to pad.
 * `maxLength`: The length of the resulting string once the current string has been 
   padded. If this parameter is smaller than the current string's length, the current 
@@ -119,7 +133,9 @@ class StringHelper {
 }
 ``` 
 
-Create an array of chunked strings. Returns array of chunked strings.
+Create an array of chunked strings. Returns array of chunked strings. 
+
+**Details**:
 * `source`: The input string to be processed.
 * `size`: The number of characters within a chunk.
 
@@ -134,9 +150,12 @@ class StringHelper {
 Replace special characters from the given `source` with encoded chars. 
 
 Double quote will always be encoded to html entity unless `excludeDblQuote` is 
-set to `true`.
+set to `true`. 
+
+**Details**:
 * `source`: The input string to encode.
 * `excludeDblQuote`: Optional, don't convert double quote to html entity.
 * `chars`: Optional, special characters to encode.
 * `replaces`: Optional, the encoded characters or replacement characters for the given `chars`.
 
+</div>

@@ -14,3 +14,5 @@ next:
 ::: lead
 **Table of Contents** on this section.
 :::
+
+<CatalogReferences />

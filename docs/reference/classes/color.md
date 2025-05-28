@@ -19,6 +19,8 @@ const result = Color.rgbaToString({r: 102, g: 132, b: 145, a: 0.45});
 // result: rgba(102, 132, 145, 0.45)
 ```
 
+<div class="doc-api">
+
 ## hslaToHsva
 
 ```ts
@@ -28,6 +30,8 @@ class Color {
 ``` 
 
 Convert HSLA to HSVA and returns HSVA color value.
+
+**Details**:
 * `color`: The HSLA color value
 
 ## hslaToString 
@@ -39,6 +43,8 @@ class Color {
 ```
 
 Convert HSL/HSLA color to string and returns CSS color string.
+
+**Details**:
 * `color`: The HSLA color value
 
 ## hsvaToHsla 
@@ -50,6 +56,8 @@ class Color {
 ```
 
 Convert HSVA to HSLA and returns HSLA color value.
+
+**Details**:
 * `color`: The HSVA color value
 
 ## hsvaToRgba 
@@ -60,7 +68,9 @@ class Color {
 }
 ```
 
-Convert HSVA to RGBA and returns RGBA color value.
+Convert HSVA to RGBA and returns RGBA color value. 
+
+**Details**:
 * `color`: The HSVA color value
 
 ## hexToRgba 
@@ -71,7 +81,9 @@ class Color {
 }
 ```
 
-Convert CSS HEX color to RGBA color and returns RGBA color value.
+Convert CSS HEX color to RGBA color and returns RGBA color value. 
+
+**Details**:
 * `color`: The css HEX color value
 
 ## rgbaToHex 
@@ -83,6 +95,8 @@ class Color {
 ```
 
 Convert RGB/RGBA color to CSS HEX color format and returns CSS HEX color value.
+
+**Details**:
 * `color`: The RGB/RGBA color value
 
 ## rgbaToHsva 
@@ -94,6 +108,8 @@ class Color {
 ```
 
 Convert RGBA to HSVA and returns HSVA color value.
+
+**Details**:
 * `color`: The RGBA color value
 
 ## rgbaToString 
@@ -105,6 +121,8 @@ class Color {
 ```
 
 Convert RGB/RGBA color to string and returns CSS color string.
+
+**Details**:
 * `color`: The RGB/RGBA color value
 
 ## rgbaFromString 
@@ -116,6 +134,8 @@ class Color {
 ```
 
 Parse a string to RGBA and returns RGBA color value.
+
+**Details**:
 * `canvasCtx`: The canvas rendering context
 * `source`: String representing a color.
 
@@ -128,6 +148,8 @@ class Color {
 ```
 
 Get brightness level from RGBA color and returns brightness level.
+
+**Details**:
 * `color`: The RGB/RGBA color value
 
 ## shadeColor  
@@ -142,5 +164,8 @@ Darken or lighten the input color. Use negative `lightness` value to darken the
 input color or otherwise to lighten the input color. Returns color result in CSS 
 HEX color format. 
 
+**Details**:
 * `color`: The color to darken or lighten
 * `lightness`: The lightness level
+
+</div>

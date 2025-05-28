@@ -142,17 +142,26 @@ export const sidebar = [
     items: [
       { text: 'Global API', link: '/reference/global-api' },
       { 
-        text: 'Utility Classes', 
+        text: 'Data API', 
         collapsed: true,
         items: [
-          { text: 'Color', link: '/reference/color-class' },
-          { text: 'Helper', link: '/reference/helper-class' },
-          { text: 'StringHelper', link: '/reference/stringhelper-class' },
-          { text: 'PopupManager', link: '/reference/popupmanager-class' },
+          { text: 'BsModel', link: '/reference/data/model' },
+          { text: 'BsStore', link: '/reference/data/store' },
+          { text: 'BsArrayStore', link: '/reference/data/array-store' },
         ]
       },
       { text: 'Color Variants', link: '/reference/color-variants' },
-      { text: 'Shadows', link: '/reference/shadows' }
+      { text: 'Shadows', link: '/reference/shadows' },
+      { 
+        text: 'Utility Classes', 
+        collapsed: true,
+        items: [
+          { text: 'Color', link: '/reference/classes/color' },
+          { text: 'Helper', link: '/reference/classes/helper' },
+          { text: 'StringHelper', link: '/reference/classes/stringhelper' },
+          { text: 'PopupManager', link: '/reference/classes/popupmanager' },
+        ]
+      },
     ]
   }
 ];

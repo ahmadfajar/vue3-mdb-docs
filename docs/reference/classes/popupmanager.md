@@ -8,6 +8,7 @@ description: Singleton instance that help manage the popup elements.
 Singleton instance that help manage the popup elements. 
 :::
 
+<div class="doc-api">
 
 ## add
 
@@ -18,6 +19,8 @@ class PopupManager {
 ```
 
 Add any vue component instance that has `TPopupOptions` as its property to the PopupManager. 
+
+**Details**:
 * `instance`: The component instance to manage
 * `props`: The overlay property options
 * `active`: Reference to the component state
@@ -32,6 +35,8 @@ class PopupManager {
 ```
 
 Remove component instance that already exists in the PopupManager's data store. 
+
+**Details**:
 * `instance`: The component to remove
 
 
@@ -45,6 +50,8 @@ class PopupManager {
 
 Find an instance of a component in the PopupManager's data store and return 
 its position index. 
+
+**Details**:
 * `instance`: The component instance to search
 
 
@@ -58,6 +65,8 @@ class PopupManager {
 
 Find component instance, trigger `close` event if it is found and remove it from 
 the PopupManager's data store. 
+
+**Details**:
 * `instance`: The component instance to search
 * `active`: Reference to the component state
 * `message`: Message explaining the closure
@@ -85,3 +94,5 @@ class PopupManager {
 
 Enable scrolling to the document body. This method is automatically called by `remove()` 
 method if the given component instance has overlay.
+
+</div>
