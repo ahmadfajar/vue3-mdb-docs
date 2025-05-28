@@ -750,7 +750,7 @@ Shortcut function to register `loaded` event listener.
     <div class="pt-3 px-3 px-lg-0">
 
 ```ts
-interface IBsStore {
+class BsStore {
   constructor(config: TDataStoreConfig, adapter?: AxiosInstance | null);
 }
 

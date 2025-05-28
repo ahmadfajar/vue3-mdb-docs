@@ -547,7 +547,7 @@ Shortcut function to register `loaded` event listener.
     <div class="pt-3 px-3 px-lg-0">
 
 ```ts
-interface IArrayStore {
+class BsArrayStore {
   constructor(data: unknown[], config?: TDataStoreConfig);
 }
 
