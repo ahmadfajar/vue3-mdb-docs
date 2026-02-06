@@ -3,6 +3,10 @@
 @use 'sass:meta';
 @use 'sass:string';
 
+@function sass-if($condition, $valueTrue, $valueFalse) {
+  @return if(sass($condition): $valueTrue; else: $valueFalse);
+}
+
 // SCSS RFS mixin
 //
 // Automated responsive values for font sizes, paddings, margins and much more
@@ -56,32 +60,39 @@ $enable-rfs: true !default;
 $rfs-base-value-unit: math.unit($rfs-base-value);
 
 @function divide($dividend, $divisor, $precision: 10) {
-  $sign: if($dividend > 0 and $divisor > 0 or $dividend < 0 and $divisor < 0, 1, -1);
+  $sign: sass-if($dividend > 0 and $divisor > 0 or $dividend < 0 and $divisor < 0, 1, -1);
   $dividend: math.abs($dividend);
   $divisor: math.abs($divisor);
+
   @if $dividend == 0 {
     @return 0;
   }
+
   @if $divisor == 0 {
     @error "Cannot divide by 0";
   }
+
   $remainder: $dividend;
   $result: 0;
   $factor: 10;
+
   @while ($remainder > 0 and $precision >= 0) {
     $quotient: 0;
     @while ($remainder >= $divisor) {
       $remainder: $remainder - $divisor;
       $quotient: $quotient + 1;
     }
+    
     $result: $result * 10 + $quotient;
     $factor: $factor * .1;
     $remainder: $remainder * 10;
     $precision: $precision - 1;
+
     @if ($precision < 0 and $remainder >= $divisor * 5) {
       $result: $result + 1;
     }
   }
+
   $result: $result * $factor * $sign;
   $dividend-unit: math.unit($dividend);
   $divisor-unit: math.unit($divisor);
@@ -91,9 +102,11 @@ $rfs-base-value-unit: math.unit($rfs-base-value);
     "em": 1em,
     "%": 1%
   );
+  
   @if ($dividend-unit != $divisor-unit and map.has-key($unit-map, $dividend-unit)) {
     $result: $result * map.get($unit-map, $dividend-unit);
   }
+
   @return $result;
 }
 
@@ -117,9 +130,9 @@ $rfs-breakpoint-unit-cache: math.unit($rfs-breakpoint);
 }
 
 // Calculate the media query value
-$rfs-mq-value: if($rfs-breakpoint-unit == px, #{$rfs-breakpoint}px, #{divide($rfs-breakpoint, $rfs-rem-value)}#{$rfs-breakpoint-unit});
-$rfs-mq-property-width: if($rfs-mode == max-media-query, max-width, min-width);
-$rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height);
+$rfs-mq-value: sass-if($rfs-breakpoint-unit == px, #{$rfs-breakpoint}px, #{divide($rfs-breakpoint, $rfs-rem-value)}#{$rfs-breakpoint-unit});
+$rfs-mq-property-width: sass-if($rfs-mode == max-media-query, max-width, min-width);
+$rfs-mq-property-height: sass-if($rfs-mode == max-media-query, max-height, min-height);
 
 // Internal mixin used to determine which media query needs to be used
 @mixin _rfs-media-query {
@@ -194,7 +207,7 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
 // Helper function to get the formatted non-responsive value
 @function rfs-value($values) {
   // Convert to list
-  $values: if(meta.type-of($values) != list, ($values,), $values);
+  $values: sass-if(meta.type-of($values) != list, ($values,), $values);
 
   $val: '';
 
@@ -205,15 +218,15 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
     }
     @else {
       // Cache $value unit
-      $unit: if(meta.type-of($value) == "number", math.unit($value), false);
+      $unit: sass-if(meta.type-of($value) == "number", math.unit($value), false);
 
       @if $unit == px {
         // Convert to rem if needed
-        $val: $val + ' ' + if($rfs-unit == rem, #{divide($value, $value * 0 + $rfs-rem-value)}rem, $value);
+        $val: $val + ' ' + sass-if($rfs-unit == rem, #{divide($value, $value * 0 + $rfs-rem-value)}rem, $value);
       }
       @else if $unit == rem {
         // Convert to px if needed
-        $val: $val + ' ' + if($rfs-unit == px, #{divide($value, $value * 0 + 1) * $rfs-rem-value}px, $value);
+        $val: $val + ' ' + sass-if($rfs-unit == px, #{divide($value, $value * 0 + 1) * $rfs-rem-value}px, $value);
       }
       @else {
         // If $value isn't a number (like inherit) or $value has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
@@ -229,7 +242,7 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
 // Helper function to get the responsive value calculated by RFS
 @function rfs-fluid-value($values) {
   // Convert to list
-  $values: if(meta.type-of($values) != list, ($values,), $values);
+  $values: sass-if(meta.type-of($values) != list, ($values,), $values);
 
   $val: '';
 
@@ -241,7 +254,7 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
 
     @else {
       // Cache $value unit
-      $unit: if(meta.type-of($value) == "number", math.unit($value), false);
+      $unit: sass-if(meta.type-of($value) == "number", math.unit($value), false);
 
       // If $value isn't a number (like inherit) or $value has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
       @if not $unit or $unit != px and $unit != rem {
@@ -250,11 +263,11 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
 
       @else {
         // Remove unit from $value for calculations
-        $value: divide($value, $value * 0 + if($unit == px, 1, divide(1, $rfs-rem-value)));
+        $value: divide($value, $value * 0 + sass-if($unit == px, 1, divide(1, $rfs-rem-value)));
 
         // Only add the media query if the value is greater than the minimum value
         @if math.abs($value) <= $rfs-base-value or not $enable-rfs {
-          $val: $val + ' ' +  if($rfs-unit == rem, #{divide($value, $rfs-rem-value)}rem, #{$value}px);
+          $val: $val + ' ' +  sass-if($rfs-unit == rem, #{divide($value, $rfs-rem-value)}rem, #{$value}px);
         }
         @else {
           // Calculate the minimum value
@@ -264,19 +277,19 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
           $value-diff: math.abs($value) - $value-min;
 
           // Base value formatting
-          $min-width: if($rfs-unit == rem, #{divide($value-min, $rfs-rem-value)}rem, #{$value-min}px);
+          $min-width: sass-if($rfs-unit == rem, #{divide($value-min, $rfs-rem-value)}rem, #{$value-min}px);
 
           // Use negative value if needed
-          $min-width: if($value < 0, -$min-width, $min-width);
+          $min-width: sass-if($value < 0, -$min-width, $min-width);
 
           // Use `vmin` if two-dimensional is enabled
-          $variable-unit: if($rfs-two-dimensional, vmin, vw);
+          $variable-unit: sass-if($rfs-two-dimensional, vmin, vw);
 
           // Calculate the variable width between 0 and $rfs-breakpoint
           $variable-width: #{divide($value-diff * 100, $rfs-breakpoint)}#{$variable-unit};
 
           // Return the calculated value
-          $val: $val + ' calc(' + $min-width + if($value < 0, ' - ', ' + ') + $variable-width + ')';
+          $val: $val + ' calc(' + $min-width + sass-if($value < 0, ' - ', ' + ') + $variable-width + ')';
         }
       }
     }
@@ -298,14 +311,14 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
     }
     @else {
       @include _rfs-rule {
-        #{$property}: if($rfs-mode == max-media-query, $val, $fluidVal);
+        #{$property}: sass-if($rfs-mode == max-media-query, $val, $fluidVal);
 
         // Include safari iframe resize fix if needed
-        min-width: if($rfs-safari-iframe-resize-bug-fix, (0 * 1vw), null);
+        min-width: sass-if($rfs-safari-iframe-resize-bug-fix, (0 * 1vw), null);
       }
 
       @include _rfs-media-query-rule {
-        #{$property}: if($rfs-mode == max-media-query, $fluidVal, $val);
+        #{$property}: sass-if($rfs-mode == max-media-query, $fluidVal, $val);
       }
     }
   }

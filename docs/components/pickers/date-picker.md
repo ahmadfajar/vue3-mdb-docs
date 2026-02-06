@@ -88,8 +88,8 @@ const picker3 = ref<string>();
 
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
+and [Material Color](/reference/colors#material-colors) variants can be
 be applied to the `<bs-date-picker>` component. 
 :::
 
@@ -248,14 +248,14 @@ const picker8 = ref<string>();
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | full-width   | `Boolean` | `false` | Display Date picker in 100% width or occupy its parent element width. |
-| header-color | `String`  | `'primary'` | Date picker header panel background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| header-color | `String`  | `'primary'` | Date picker header panel background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | header-panel | `Boolean` | `true`  | Show or hide header panel. |
 | landscape    | `Boolean` | `false` | Display Date picker in landscape orientation. |
 | locale       | `String`  |  | Default locale to be used. Default value is using browser's locale. |
 | mode         | `String`  | `'date'`| DateTime picker view mode, valid values are: `date`, `month`, `year`, `time` or `datetime`. <BsBadge color="info">v2.0.0</BsBadge> |
 | model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Date` |  | Monitored by `v-model` to maintain the component's value. The value must be convertible to datetime. <BsBadge color="info">v2.0.0</BsBadge><div class="pt-3">The initial value can be: <ol><li>From an ISO 8601 valid string.</li><li>From a number of seconds since the epoch (meaning since 1 January 1970 00:00:00 UTC).</li></ol></div> |
 | readonly     | `Boolean` | `false` | Put Date picker in readonly state. |
-| surface-color | `String` | `'white'` | Date picker container background color. <BsBadge color="info">v2.0.0</BsBadge> <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| surface-color | `String` | `'white'` | Date picker container background color. <BsBadge color="info">v2.0.0</BsBadge> <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | view-mode <Badge type="warning">deprecated</Badge> | `String`  | | Use `mode` property instead. |
 | width        | `Number`  | `300`  | Date picker's container width in pixels. |
 

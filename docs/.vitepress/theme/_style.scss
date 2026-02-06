@@ -1,7 +1,7 @@
 @use 'sass:color';
 
 // Scrollbar
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 @media (min-width: 960px) {
   ::-webkit-scrollbar {
     width: 8px;
@@ -23,7 +23,7 @@
 }
 
 // Colors
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 :root {
   --vp-c-bg-1: #f0f0f0;
   --vp-c-brand-1: #8b4fda;
@@ -41,7 +41,7 @@
 }
 
 // Z-Indexes
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 :root {
   // --vp-z-index-footer: 10;
   --vp-z-index-layout-top: 1040;
@@ -58,7 +58,7 @@
 }
 
 // Component: Button
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 :root {
   --vp-button-brand-border: var(--vp-c-brand-2);
   --vp-button-brand-text: var(--vp-c-white);
@@ -72,7 +72,7 @@
 }
 
 // Component: Home
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
@@ -93,7 +93,7 @@
 }
 
 // Component: Custom Block
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 :root {
   --vp-code-line-height: 1.4;
   --vp-custom-block-tip-border: var(--vp-c-brand);
@@ -102,21 +102,25 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-dimm);
   --vp-custom-block-warning-border: #b5a775;
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
+  --vp-custom-block-danger-border: #d98f9b;
   --vp-custom-block-danger-code-bg: var(--vp-c-brand-dimm);
   --vp-custom-block-info-border: var(--vp-c-default-1);
   --vp-custom-block-info-code-bg: var(--vp-code-bg);
   --vp-custom-block-details-code-bg: var(--vp-code-bg);
+  --vp-custom-block-note-border: #cbcce0;
+  --vp-custom-block-important-border: #b49fe2;
+  --vp-custom-block-caution-border: #e5b1b9;
   --doc-text-code-dt: #f28f64;
 }
 
 // Component: Algolia
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
 // Overridden styles
-//-------------------------------------------------------------------------- 
+//--------------------------------------------------------------------------
 .small {
   font-size: 81%;
 }
@@ -203,15 +207,19 @@
   }
 
   .custom-block {
+    &:not(.github-alert) {
+      &.info,
+      &.tip,
+      &.danger,
+      &.details,
+      &.warning {
+        border-left-width: 5px;
+      }
+    }
+
     > .custom-block-title {
       display: flex;
       align-items: center;
-    }
-
-    &.info,
-    &.tip,
-    &.warning {
-      border-left-width: 5px;
     }
 
     a {
@@ -225,7 +233,7 @@
 
   .doc-api {
     ul > li > code:nth-child(1) {
-      color: #E36209;
+      color: #e36209;
     }
   }
 
@@ -435,6 +443,9 @@
   --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
   --vp-custom-block-danger-border: var(--vp-c-red-3);
   --vp-custom-block-danger-code-bg: rgba(244, 63, 94, 0.1);
+  --vp-custom-block-note-border: #393c41;
+  --vp-custom-block-important-border: #4e475f;
+  --vp-custom-block-caution-border: #603b45;
   --vp-code-color: #94faf7; // #fefebb;
   --vp-code-block-bg: #161618;
   --doc-example-border-color: #484848;
@@ -471,7 +482,7 @@
 
     .doc-api {
       ul > li > code:nth-child(1) {
-        color: #FFAB70;
+        color: #ffab70;
       }
     }
 
@@ -672,9 +683,13 @@ body {
         content: '';
         inset: 0;
         position: absolute;
-        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        mask:
+          linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
         mask-composite: destination-out;
-        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
         -webkit-mask-composite: destination-out;
       }
     }

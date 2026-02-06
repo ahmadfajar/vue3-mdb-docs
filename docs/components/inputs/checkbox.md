@@ -284,7 +284,7 @@ const checkbox1 = ref<string>();
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | disabled    | `Boolean` | `false`     | Enable/disable the component and the `<input>` element. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | indeterminate | `Boolean`  | `false` | Sets an indeterminate state for the checkbox. |
@@ -326,7 +326,7 @@ const checkbox1 = ref<string>();
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | column      | `Number`  |  | Sets the maximum number of columns to display the checkbox.<BsBadge color="info">v2.0.0</BsBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
 | disabled    | `Boolean` | `false`     | Enable/disable the component. |
 | external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |

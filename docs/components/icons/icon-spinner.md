@@ -42,7 +42,7 @@ property `spin` or `pulse`, but do not use both property together.
 
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
-| color    | `String` |         | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color    | `String` |         | The component color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | pulse    | `Boolean`| `false` | Apply **pulse** animation. |
 | spin     | `Boolean`| `false` | Apply **spin** animation. |
 | size     | `Number` | `24`    | The icon size. |

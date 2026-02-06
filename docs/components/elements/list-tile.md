@@ -350,7 +350,7 @@ const listItems2 = ref([
   padding: 1rem;
 }
 .mobi-card { max-width: 400px; }
-.mobi-card > .card > .md-appbar {
+.card > .md-appbar {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
@@ -462,7 +462,7 @@ const listItems2 = ref([
   padding: 1rem;
 }
 .mobi-card { max-width: 400px; }
-.mobi-card > .card > .md-appbar {
+.card > .md-appbar {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
@@ -1009,7 +1009,7 @@ $font-size-base: 1rem;
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
-| color         | `String`    | `'white'` | ListView color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) or [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color         | `String`    | `'white'` | ListView color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. |
 | individual-state  | `Boolean` | `false`   | The ListView doesn't manage each ListTile's state. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded      | `Boolean` | `false`   | Apply _rounded style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded-pill | `Boolean` | `false`   | Apply _rounded pill style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |

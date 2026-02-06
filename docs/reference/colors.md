@@ -3,7 +3,7 @@ outline: [2, 3]
 description: Explains various color classes and variants provided by Vue MDBootstrap.
 ---
 
-# Color Variants
+# Colors
 
 ::: lead
 **Vue MDBootstrap** provides color classes that follow commonly used colors and derived from
@@ -15,9 +15,9 @@ components, these variants refers to their **color-name**, rather than by the un
 <SmallNote color="teal">Updated on v2.1.0</SmallNote>
 
 
-## Applying Color Variants
+## Applying Color
 
-### Background color variants
+### Background color
 
 Background color can be applied to any html element by using the CSS classname `bg-{color-name}`.
 
@@ -31,7 +31,7 @@ Background color can be applied to any html element by using the CSS classname `
 :::
 
 
-### Border color variants {class="mt-lg-5"}
+### Border color {class="mt-lg-5"}
 
 Border color can be applied to any html element by using the CSS classname `border-{color-name}`.
 
@@ -45,7 +45,7 @@ Border color can be applied to any html element by using the CSS classname `bord
 :::
 
 
-### Text color variants {class="mt-lg-5"}
+### Text color {class="mt-lg-5"}
 
 Text color can be applied to any html element by using the CSS classname `text-{color-name}`.
 
@@ -69,8 +69,8 @@ Text color can be applied to any html element by using the CSS classname `text-{
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants except for `white` and `black` color variants can be applied 
 on some UI components via its property, such as `color` without `bg-` prefix. They also 
-can be applied to html element, see: applying [background](#background-color-variants), 
-[border](#border-color-variants), and [text](#text-color-variants) color variants above. 
+can be applied to html element, see: applying [background](#background-color), 
+[border](#border-color), and [text](#text-color) color variants above. 
 :::
 
 ::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
@@ -105,8 +105,8 @@ import 'vue-mdbootstrap/color-styles';
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can be applied on some UI components via its property, such as `color` 
 without `bg-` prefix. They also can be applied to html element, see: applying 
-[background](#background-color-variants), [border](#border-color-variants), and 
-[text](#text-color-variants) color variants above.
+[background](#background-color), [border](#border-color), and 
+[text](#text-color) color variants above.
 :::
 
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
@@ -121,8 +121,8 @@ the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These grey color variants can only be applied to html element, see: applying
-[background](#background-color-variants), [border](#border-color-variants), and
-[text](#text-color-variants) color variants above. If wanted to apply
+[background](#background-color), [border](#border-color), and
+[text](#text-color) color variants above. If wanted to apply
 to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
@@ -133,7 +133,7 @@ to an UI component, use its _CSS classname_ on component's `class` property.
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can only be applied as the background color of an html element,
-see: applying [background color variants](#background-color-variants) above.
+see: applying [background color variants](#background-color) above.
 If wanted to apply to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 
@@ -143,7 +143,7 @@ the main bundle, but are distributed in `dist/bundle-color.css` and `dist/bundle
 :::
 
 
-### RGBA color variants {class="mt-lg-5"}
+## RGBA Colors {class="mt-lg-5"}
 
 The base color of the above color variants can also be used to produce an **RGBA background color**.
 
@@ -169,7 +169,7 @@ The base color of the above color variants can also be used to produce an **RGBA
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These RGBA color variants can only be applied as the background color of an html 
-element, see: applying [background color variants](#background-color-variants) above.
+element, see: applying [background color variants](#background-color) above.
 If wanted to apply to an UI component, use its _CSS classname_ on component's `class` property.
 :::
 

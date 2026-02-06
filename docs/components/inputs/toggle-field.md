@@ -61,7 +61,7 @@ import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
 const selectedDrink = ref<string>();
-// Never assign a datasource to multiple <bs-toggle-field>
+// Never assign single datasource to multiple <bs-toggle-field>
 const drinks: TInputOptionItem[] = [
   {
     value: "tea",
@@ -81,8 +81,8 @@ const drinks: TInputOptionItem[] = [
 :::
 
 ::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-- The `<bs-field-toggle-field>` tag still works, but has been deprecated since v2.0.0.
-- Never assign a datasource to multiple `<bs-toggle-field>`. It may cause a bug or
+- The `<bs-button-toggle-field>` tag still works, but has been deprecated since v2.0.0.
+- Never assign single datasource to multiple `<bs-toggle-field>`. It may cause a bug or
   duplicate ID attribute.
 :::
 
@@ -274,7 +274,7 @@ const selectedWeather3 = ref<string>();
 const selectedWeather4 = ref<string>();
 const selectedWeather5 = ref<string>();
 
-// Never assign a datasource to multiple <bs-toggle-field>
+// Never assign single datasource to multiple <bs-toggle-field>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -389,7 +389,7 @@ const selectedWeather9 = ref<string>();
 const selectedWeather9 = ref<string>();
 const selectedWeather10 = ref<string>();
 
-// Never assign a datasource to multiple <bs-toggle-field>
+// Never assign single datasource to multiple <bs-toggle-field>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -709,7 +709,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | disabled | `Boolean` | `false`      | The component state. |
 | external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
 | flat          | `Boolean` | `false` | Enable ***flat*** toggle button style. |
@@ -727,7 +727,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | readonly | `Boolean` | `false` | The component state. |
 | rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
 | size     | `String`  |         | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <BsBadge color="info">v2.0.4</BsBadge> |
 | validator | `TValidator` |     | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |
 

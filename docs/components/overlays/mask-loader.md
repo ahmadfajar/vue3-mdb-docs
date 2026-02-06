@@ -132,8 +132,8 @@ const showGrow = ref(false);
 
 You can change the **Loader** size simply by changing the `spinner-diameter` property value.
 And specify the value of the `spinner-color` property to change its color. Any 
-[MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and 
-[Material Color](/reference/color-variants#material-colors) variants can be applied 
+[MDBootstrap Color](/reference/colors#mdbootstrap-colors) and 
+[Material Color](/reference/colors#material-colors) variants can be applied 
 to the `spinner-color` property. Additionally you can set the value of the `overlay-color` 
 property to change the backdrop overlay color.
 
@@ -247,7 +247,7 @@ const showGrowLoader = ref(false);
 | overlay-color   | `String`  | `'#000'` | Backdrop overlay color in hex color formatted value. |
 | overlay-opacity | `Number`  | `0.5` | Backdrop overlay opacity value. |
 | show <Badge type="danger">required</Badge> | `Boolean` | `false` | The component state, `show` or `hide`. |
-| spinner-color | `String` | `'primary'` | The spinner color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| spinner-color | `String` | `'primary'` | The spinner color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) and [Material Color](/reference/colors#material-colors) variants can be used. |
 | spinner-diameter  | `Number` | `36` | The spinner diameter. |
 | spinner-thickness | `Number` | `5` | The spinner thickness. Only valid for `linear` and `linear-alt` variants. |
 | spinner-type <Badge type="warning">deprecated</Badge> | `String` |  | Use `type` property instead. |

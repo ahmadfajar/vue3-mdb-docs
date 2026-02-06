@@ -17,7 +17,7 @@ application navigation, logo and others.
 **BsSideDrawer** is usually used to house your application navigation. It works
 well with [BsAppbar](/components/container/appbar) and can automatically adapt to the screen size. 
 You also can change the component's color using the `color` property and use any 
-[color variants](/reference/color-variants) as you like.
+[color variants](/reference/colors) as you like.
 
 
 ::: BlockVue {title="Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-1.js"}
@@ -362,7 +362,7 @@ function toggleSideDrawer4(value: boolean) {
 
 | Property    | Type      | Default     | Description |
 |-------------|-----------|-------------|-------------|
-| color       | `String`  | `'white'`   | Sets the component colors. Any [color variants](/reference/color-variants) can be used. |
+| color       | `String`  | `'white'`   | Sets the component colors. Any [color variants](/reference/colors) can be used. |
 | clipped     | `Boolean` | `false`     | Cut off the top edge of the component. |
 | fixed-layout | `Boolean` | `false`    | Sets the component position fixed on the left or right side even when scrolling the page. <BsBadge color="info">v2.0.0</BsBadge> |
 | mini        | `Boolean` | `false`     | The component minimize state. |

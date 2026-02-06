@@ -294,7 +294,7 @@ use `<bs-avatar>` inside **BsListTile** component.
 | Property      | Type        | Default  | Description |
 |---------------|-------------|----------|-------------|
 | border        | `String`    |          | Apply border to the component. <BsBadge color="info">v2.0.3</BsBadge> |
-| border-color  | `String`    |          | The component border's color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) and [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge color="info">v2.0.3</BsBadge> |
+| border-color  | `String`    |          | The component border's color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) and [Material Color](/reference/colors#material-colors) variants can be used. <BsBadge color="info">v2.0.3</BsBadge> |
 | circle        | `Boolean`   | `false`  | Create avatar with **circle** shape. |
 | height        | `Number`/`String` |    | The component's height in pixel. If using unit, valid units are: `px`, `rem`, `em`. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon          | `String`    |          | <div style="min-width:425px">The icon to display as avatar. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property.</div> |

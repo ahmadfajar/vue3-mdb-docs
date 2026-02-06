@@ -220,7 +220,7 @@ bottom of the card.
 ### Background and color 
 
 `<bs-card>` include various options for customizing its background and color.
-See [Reference - Color Variants](/reference/color-variants) for more information.
+See [Reference - Color Variants](/reference/colors) for more information.
 
 ::: BlockVue {title="Card background color example"}
 
@@ -276,7 +276,7 @@ See [Reference - Color Variants](/reference/color-variants) for more information
 
 ### Border {class="mt-lg-5"}
 
-Use [border utilities](/reference/color-variants#border-color-variants) to change 
+Use [border utilities](/reference/colors#border-color-variants) to change 
 just the `border-color` of a card. Additionally you can also put `.text-{color}` 
 classes on the `<bs-card>` or child component as shown below.
 

@@ -19,7 +19,7 @@ neutral information.
 
 By default, `<bs-alert>` is set to primary color. You can use `color` property to 
 change its color and add some emotional weight.
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
 can be applied to the `color` property.
 
 
@@ -330,7 +330,7 @@ css variables with some modifications.
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| color       | `String`    | `'primary'`   | Sets the component colors. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants can be used. |
+| color       | `String`    | `'primary'`   | Sets the component colors. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants can be used. |
 | dismissible | `Boolean`   | `false`     | When set, display the close button to dismiss/hide the component |
 | filled      | `Boolean`   | `false`     | Create alert variant with solid fill style. <BsBadge color="info">v2.0.0</BsBadge> |
 | icon        | `String`    |             | <div style="min-width:425px"> The icon to display inside the component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |

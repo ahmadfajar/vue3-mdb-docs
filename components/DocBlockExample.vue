@@ -34,16 +34,16 @@ function openStackBlitz() {
   let headers = [
     `<link href="${cdnBaseUri}bootstrap@5.2.3/dist/css/bootstrap.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous"/>',
-    `<link href="${unPkgcom}vue-mdbootstrap@2/dist/bundle.min.css"` +
+    `<link href="${unPkgcom}vue-mdbootstrap@2.1.7/dist/bundle.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous">',
-    `<link href="${unPkgcom}vue-mdbootstrap@2/dist/bundle-color.min.css"` +
+    `<link href="${unPkgcom}vue-mdbootstrap@2.1.7/dist/bundle-color.min.css"` +
       ' rel="stylesheet" crossorigin="anonymous">',
     '<scr' +
       `ipt src="${cdnBaseUri}vue@3/dist/vue.global.prod.js"` +
       ' crossorigin="anonymous"></scr' +
       'ipt>',
     '<scr' +
-      `ipt src="${unPkgcom}vue-mdbootstrap@2/dist/vue-mdb.umd.min.js"` +
+      `ipt src="${unPkgcom}vue-mdbootstrap@2.1.7/dist/vue-mdb.umd.min.js"` +
       ' crossorigin="anonymous"></scr' +
       'ipt>'
   ];

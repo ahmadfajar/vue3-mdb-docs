@@ -197,7 +197,7 @@ const loremTab = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
 
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any valid [color variants](/reference/color-variants) can be applied to the `color` property.
+Any valid [color variants](/reference/colors) can be applied to the `color` property.
 :::
 
 
@@ -252,7 +252,7 @@ const loremTab = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
 
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any valid [color variants](/reference/color-variants) can be applied to the `color` property.
+Any valid [color variants](/reference/colors) can be applied to the `color` property.
 :::
 
 
@@ -615,7 +615,7 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 |---------------|----------|------------|-------------|
 | active-class  | `String` | `'active'` | Optional css class name for active Tab item. |
 | alignment     | `String` | `'left'`   | Tabs alignment. Valid values: `left` <span class="text-muted fst-italic">(deprecated)</span>, `right` <span class="text-muted fst-italic">(deprecated)</span>, `start`, `end`, `center`, `justified`. <BsBadge color="info">v2.0.0</BsBadge> |
-| color         | `String` |  | The tabs color style for tabs variant: `modern` and `material`. Any [Color Variants](/reference/color-variants) can be used. |
+| color         | `String` |  | The tabs color style for tabs variant: `modern` and `material`. Any [Color Variants](/reference/colors) can be used. |
 | content-class | `String` |  | Optional css class name for Tab content. |
 | content-transition | `String` | `'fade'` | Tab content display animation transition. Valid values: `fade`, `slide-fade`, `slide-fade-reverse`, `popover`. |
 | flex          | `Boolean` | `false`  | Create Tabs with flex styles. Only valid for `tabs` or `pills` variant. |

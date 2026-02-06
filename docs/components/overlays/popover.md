@@ -515,7 +515,7 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 
 | Property | Type     | Default   | Description |
 |----------|----------|-----------|-------------|
-| color       | `String` | `'white'` | **Popover** background color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) or [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge color="info">v2.0.0</BsBadge> |
+| color       | `String` | `'white'` | **Popover** background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. <BsBadge color="info">v2.0.0</BsBadge> |
 | cover       | `Boolean` | `false` | Display **Popover** at a position that covers the activator. |
 | esc-close   | `Boolean` | `true`  | Close the **Popover** when **ESC** key is pressed. |
 | open <Badge type="tip">v-model</Badge> | `Boolean` | `false` | **Popover** state: **show** or **hide**. |

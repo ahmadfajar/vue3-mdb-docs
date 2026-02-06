@@ -782,8 +782,8 @@ function toggleDismissibleChip(value: boolean) {
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | active        | `Boolean` | `false` | The component state. |
-| active-class  | `String`  |  | Custom css class to apply when the Chip is in active state. See [Color Variants](/reference/color-variants) for more information. |
-| color         | `String`  | `'grey'`| The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| active-class  | `String`  |  | Custom css class to apply when the Chip is in active state. See [Color Variants](/reference/colors) for more information. |
+| color         | `String`  | `'grey'`| The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | disabled      | `Boolean` | `false` | The component state. |
 | dismissible   | `Boolean` | `false` | When defined, display the close (`x`) button to dismiss/hide the component. |
 | href          | `String`  |  | Render as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |

@@ -296,7 +296,7 @@ const show1 = ref(false);
 
 | Property | Type     | Default   | Description |
 |----------|----------|-----------|-------------|
-| color       | `String` | `'white'` | The dropdown menu background color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) or [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color       | `String` | `'white'` | The dropdown menu background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. |
 | content-click-close | `Boolean` | `true` | Close or hide dropdown menu when content clicked. |
 | cover       | `Boolean` | `false` | Display dropdown menu at a position that covers the activator. |
 | disabled    | `Boolean` | `false` | Completely disable the dropdown menu and prevents it from displaying. |

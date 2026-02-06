@@ -373,7 +373,7 @@ const singapore = ref<number>(61);
 <style>
 .my-demo-wrapper { width: 100%; padding: 1rem; }
 .mobi-card { max-width: 400px; }
-.mobi-card > .card > .md-appbar {
+.card > .md-appbar {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
@@ -424,7 +424,7 @@ The component css variables inherited from
 
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
-| color    | `String` | | The control bar color appearance. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variant or [Material Color](/reference/color-variants#material-colors) variants can be applied. |
+| color    | `String` | | The control bar color appearance. Any of [MDBootstrap Colors](/reference/colors#mdbootstrap-colors) variant or [Material Color](/reference/colors#material-colors) variants can be applied. |
 | height   | `Number` | | Progress bar thickness. |
 | inner-cls   | `String` | | Optional, control bar css classes. <BsBadge color="info">v2.0.10</BsBadge> |
 | label   | `String` | | The ProgressBar text label. <BsBadge color="info">v2.0.10</BsBadge> |

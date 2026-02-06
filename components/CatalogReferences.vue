@@ -36,10 +36,10 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
         </ListGroupItem>
       </ListGroup>
     </ListGroupItem>
-    <ListGroupItem href="color-variants">
-      <ListGroupItemTitle title="Color Variants" />
+    <ListGroupItem href="colors">
+      <ListGroupItemTitle title="Colors" />
       <ListGroupItemContent>
-        Various color classes and variants provided by Vue MDBootstrap.
+        Various color classes provided by Vue MDBootstrap.
       </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem href="shadows">
@@ -51,7 +51,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Utility Classes:" />
       <ListGroup>
-        <ListGroupItem href="classes/model">
+        <ListGroupItem href="classes/color">
           <ListGroupItemTitle title="Color" />
           <ListGroupItemContent>
             Static utility helper class for working with colors.

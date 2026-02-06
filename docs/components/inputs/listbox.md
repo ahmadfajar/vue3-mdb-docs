@@ -222,8 +222,8 @@ onUnmounted(() => {
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
+and [Material Color](/reference/colors#material-colors) variants can be
 applied to the `checkbox-color` property.
 :::
 
@@ -488,10 +488,10 @@ onUnmounted(() => {
 |----------|-----------|----------|-------------|
 | autoload          | `Boolean` | `true`  | Autoload data from the configured `dataSource`, default is `true`. <BsBadge color="info">v2.0.5</BsBadge> |
 | borderless        | `Boolean` | `false` | Hide the Listbox container borders. |
-| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | checkbox-position | `String`  | `'left'`  | Sets the Listbox checkbox position. Valid values are: `left`, `right`. |
 | circle-image      | `Boolean` | `false`   | Display image with **_circle_** shape for each item that has image property. |
-| color             | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color             | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | data-source <Badge type="danger">required</Badge> | `TDataSource` | | Sets the data source configuration. |
 | disabled          | `Boolean` | `false`   | Put the component in _disabled_ state and sets the `<select>` element `disabled` attribute. |
 | empty-data-message | `String` | `'No data to display.'` | Sets the **_no data message_** when the Listbox is empty. |

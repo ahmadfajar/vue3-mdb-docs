@@ -177,16 +177,16 @@ const picker3Show = ref<boolean>(false);
 | Property     | Type      | Default | Description |
 |--------------|-----------|---------|-------------|
 | activator       | `Element`/`String` |  | Display this ColorPicker as a popup dialog and calculate its display position from the activator element. <div class="pt-3">Leave it `undefined` to display persistent/inline ColorPicker.</div> |
-| container-color | `String`  | `'white'` | This ColorPicker container background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| container-color | `String`  | `'white'` | This ColorPicker container background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | cover           | `Boolean` | `false`   | Display ColorPicker at a position that covers the activator element. |
 | hide-alpha      | `Boolean` | `false`   | Hide alpha slider and alpha input field. |
 | hide-inputs       | `Boolean` | `false` | Hide the input fields. |
 | hide-mode-button  | `Boolean` | `false` | Hide toggle mode buttons. |
 | input-label-class | `String`/`String[]` |  | Optional css classname to apply to the input field label. |
 | mode <Badge type="tip">v-model</Badge> | `String` |  | This ColorPicker mode. Valid values: `HEX`, `RGB`, `HSL`. |
-| mode-button-color | `String` | `'grey'` | Default the toggle mode button color style. <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| mode-button-color | `String` | `'grey'` | Default the toggle mode button color style. <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | mode-button-outlined   | `Boolean`  | `false` | Render the toggle mode buttons with outlined style. |
-| mode-button-toggle-color | `String` |  | Color to apply to the active button. <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| mode-button-toggle-color | `String` |  | Color to apply to the active button. <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | model-value <Badge type="tip">v-model</Badge> | `String` |  | Monitored by `v-model` to maintain the component's value. |
 | open <Badge type="tip">v-model</Badge> | `Boolean`  | `false` | This ColorPicker popup state: `show` or `hide`. Only works if activator element is defined. |
 | placement           | `String`   | `'bottom-left'` | This ColorPicker display placement when property `activator` is defined. |

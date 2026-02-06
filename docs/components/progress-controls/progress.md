@@ -167,7 +167,7 @@ const spinner1 = ref<number>(70);
 ## Colors
 
 You can change the color of _Bar_ or _Spinner_ progress using the `color` property.
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants
 can be applied to the `color` property.
 
 ::: BlockVue {title="Progress Colors Example" file="./docs/components/scripts/progress-5.js"}
@@ -225,7 +225,7 @@ onBeforeUnmount(() => {
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
 | buffer   | `Number` | `0`     | Progress bar buffer length. |
-| color    | `String` | `'primary'` | The component color appearance. Any of [MDBootstrap Colors](/reference/color-variants#mdbootstrap-colors) variant can be applied. |
+| color    | `String` | `'primary'` | The component color appearance. Any of [MDBootstrap Colors](/reference/colors#mdbootstrap-colors) variant can be applied. |
 | diameter | `Number` | `60`    | Spinner diameter value. |
 | height   | `Number` | `5`     | Progress bar thickness. |
 | mode     | `String` | `'indeterminate'` | Progress control mode, valid values are: `determinate`, `indeterminate`, `buffer`. |

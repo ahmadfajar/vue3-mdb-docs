@@ -457,8 +457,8 @@ const dateField18 = ref();
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
+and [Material Color](/reference/colors#material-colors) variants can be
 be applied to the `header-color` and `picker-color` property. 
 :::
 
@@ -991,7 +991,7 @@ function cancel() {
 | filled         | `Boolean` | `false` | Create the component with **_solid fill style_** appearance. See [Google Material Design](https://m3.material.io/components/text-fields/overview) for details. |
 | flat           | `Boolean` | `false` | Create the component with **_flat style_** appearance, and removes the borders. The component appearance will be styled like plain text. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://m3.material.io/components/text-fields/overview) for details. |
-| header-color   | `String`  |         | The Date picker header panel background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| header-color   | `String`  |         | The Date picker header panel background color. <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | header-panel   | `Boolean` | `true`  | Display Date picker header panel or not. |
 | help-text      | `String`  |         | The help text to display below the field component. |
 | id             | `String`  |         | Sets `<input>` element `ID` attribute. This property value is auto generates. |
@@ -1003,7 +1003,7 @@ function cancel() {
 | outlined      | `Boolean` | `false` | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
 | picker-cls         | `String`/`String[]`  | `'rounded shadow'` | Additional Popover css classes. |
-| picker-color       | `String`  | `'bottom-left'` | The Date picker container background color. <BsBadge color="info">v2.0.0</BsBadge> <div class="pt-3">Any of [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used.</div> |
+| picker-color       | `String`  | `'bottom-left'` | The Date picker container background color. <BsBadge color="info">v2.0.0</BsBadge> <div class="pt-3">Any of [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | picker-mode        | `String`  | `'date'` | The Date picker view mode, valid values are: `date`, `month`, `year` or `time`. <BsBadge color="info">v2.0.0</BsBadge> |
 | picker-placement   | `String`  | `'bottom-left'` | The Date picker popup display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | picker-transition  | `String`  | `'scale'` | Transition animation when showing the Date picker. This animation is effected by `picker-placement` property. <BsBadge color="info">v2.0.0</BsBadge> |

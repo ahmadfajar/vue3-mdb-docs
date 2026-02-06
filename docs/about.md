@@ -32,7 +32,6 @@ framework - *Bootstrap v5*, which can help you build responsive apps faster and 
 The online documentation consists of the following sections:
 
 - [Components](/components/) - Visual component library documentation
-- [Directives](/directives/) - Custom directive documentation
 - [Reference](/reference/) - Additional resources documentation
 
 

@@ -154,8 +154,8 @@ The chip items can also be styled. The guide below shows you how to style the ch
 ### Chips Color {class="mt-lg-5"}
 
 The chip's color can be set using the `chip-color` property. Any color variant from 
-[MDBootstrap colors](/reference/color-variants#mdbootstrap-colors) and 
-[Material colors](/reference/color-variants#material-colors) can be applied 
+[MDBootstrap colors](/reference/colors#mdbootstrap-colors) and 
+[Material colors](/reference/colors#material-colors) can be applied 
 to the `<bs-chip-field>`.
 
 ::: BlockVue {title="Chip Field color style"}

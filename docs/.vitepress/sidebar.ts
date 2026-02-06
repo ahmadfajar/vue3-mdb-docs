@@ -150,7 +150,7 @@ export const sidebar = [
           { text: 'BsArrayStore', link: '/reference/data/array-store' },
         ]
       },
-      { text: 'Color Variants', link: '/reference/color-variants' },
+      { text: 'Colors', link: '/reference/colors' },
       { text: 'Shadows', link: '/reference/shadows' },
       { 
         text: 'Utility Classes', 

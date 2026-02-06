@@ -305,8 +305,8 @@ const chipItems2: TChipOptionItem[] = [
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| active-class  | `String`  |  | Custom css class to apply when the chip's item is in `active` state. See [Color Variants](/reference/color-variants) for more information. |
-| color         | `String`  | `'grey'`| Default chip's item color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| active-class  | `String`  |  | Custom css class to apply when the chip's item is in `active` state. See [Color Variants](/reference/colors) for more information. |
+| color         | `String`  | `'grey'`| Default chip's item color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | checked-icon  | `Boolean` | `false` | Enable filter chip mode and show checked icon on the selected chip. |
 | column        | `Boolean` | `false` | Enable multi rows if total width of items beyond the container width. |
 | img-circle    | `Boolean` | `false` | Create chip item's avatar with circle shape. |

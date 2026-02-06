@@ -66,7 +66,7 @@ appearance of a badge. If no variant is specified, the `color` property is used.
 :::
 
 If you wish to use color different variation, you can change its appearance by explicitly 
-define the value of `color` property. Any [color variants](/reference/color-variants) 
+define the value of `color` property. Any [color variants](/reference/colors) 
 can be applied to the `color` property.
 
 ::: BlockVue {title="Badge Colors Example"}
@@ -130,8 +130,8 @@ than normal with a slight larger padding.
 
 Define the `outlined` property explicitly to create outline badges. Additionally 
 you can combine with the `type` property to create an outline _Pill badge_ or outline 
-_Label badge_. Currently outline badges only support [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) 
-variant and [Material Color](/reference/color-variants#material-colors) variant.
+_Label badge_. Currently outline badges only support [MDBootstrap Color](/reference/colors#mdbootstrap-colors) 
+variant and [Material Color](/reference/colors#material-colors) variant.
 
 <SmallNote color="teal">Added since v2.0.4</SmallNote>
 

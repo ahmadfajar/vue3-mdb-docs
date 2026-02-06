@@ -60,7 +60,7 @@ import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
 const selectedDrink = ref<string>();
-// Never assign a datasource to multiple <bs-toggle-button>
+// Never assign single datasource to multiple <bs-toggle-button>
 const drinks: TInputOptionItem[] = [
   {
     value: "tea",
@@ -81,7 +81,7 @@ const drinks: TInputOptionItem[] = [
 
 ::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
 - The `<bs-button-toggle>` tag still works, but has been deprecated since v2.0.0.
-- Never assign a datasource to multiple `<bs-toggle-button>`. It may cause a bug or
+- Never assign single datasource to multiple `<bs-toggle-button>`. It may cause a bug or
   duplicate ID attribute.
 :::
 
@@ -290,7 +290,7 @@ const selectedWeather3 = ref<string>();
 const selectedWeather4 = ref<string>();
 const selectedWeather5 = ref<string>();
 
-// Never assign a datasource to multiple <bs-toggle-button>
+// Never assign single datasource to multiple <bs-toggle-button>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -416,7 +416,7 @@ const selectedWeather9 = ref<string>();
 const selectedWeather9 = ref<string>();
 const selectedWeather10 = ref<string>();
 
-// Never assign a datasource to multiple <bs-toggle-button>
+// Never assign single datasource to multiple <bs-toggle-button>
 const weathers: TInputOptionItem[] = [
   {
     value: "sunny",
@@ -552,7 +552,7 @@ const albums = [
 .mobi-card { 
   max-width: 400px; 
 }
-.mobi-card > .card > .md-appbar {
+.card > .md-appbar {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
@@ -583,7 +583,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | disabled | `Boolean` | `false`      | The component state. |
-| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | flat     | `Boolean` | `false`      | Enable ***flat*** toggle button style. |
 | icon-position | `String` | `'left'` | <div style="min-width:325px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
 | id       | `String`  |              | Sets the component `ID`. This property value is auto generate. |
@@ -597,7 +597,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | readonly | `Boolean` | `false` | The component state. |
 | rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
 | size     | `String`  |         | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <BsBadge color="info">v2.0.4</BsBadge> |
 
 </div>

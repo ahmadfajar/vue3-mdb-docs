@@ -517,7 +517,7 @@ function toggleSideDrawer1(value: boolean) {
 
 | Property      | Type        | Default   | Description |
 |---------------|-------------|-----------|-------------|
-| color         | `String`    | `'white'` | ListView color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) or [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color         | `String`    | `'white'` | ListView color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. |
 | individual-state  | `Boolean` | `false`   | The ListView doesn't manage each ListTile's state. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded      | `Boolean` | `false`   | Apply _rounded style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |
 | item-rounded-pill | `Boolean` | `false`   | Apply _rounded pill style_ to the _BsListNavItem_ or _BsListTile_. <bs-badge color="info">v2.0.0</bs-badge> |

@@ -454,7 +454,7 @@ function submit(notification: INotificationProvider) {
 |----------|-----------|----------|-------------|
 | checkoff-icon | `Boolean` | `false`     | Enable the component's thumb icon when the component is on **_unchecked_** state. <BsBadge color="info">v2.0.0</BsBadge> |
 | checked-icon  | `Boolean` | `false`     | Enable the component's thumb icon when the component is on **_checked_** state. <BsBadge color="info">v2.0.0</BsBadge> |
-| color         | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color         | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | disabled      | `Boolean` | `false`     | Sets the component into disable state and sets the `<input>` element `disabled` attribute. |
 | id            | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | inset-mode    | `Boolean` | `false`     | Sets the switch style appearance to **_Inset style_**. <BsBadge color="info">v2.0.0</BsBadge> |

@@ -545,8 +545,8 @@ onUnmounted(() => {
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
+and [Material Color](/reference/colors#material-colors) variants can be
 applied to the `checkbox-color` property.
 :::
 
@@ -699,8 +699,8 @@ onUnmounted(() => {
 :::
 
 ::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants 
-and [Material Color](/reference/color-variants#material-colors) variants can be
+Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
+and [Material Color](/reference/colors#material-colors) variants can be
 applied to the `chip-color` property.
 :::
 
@@ -1563,9 +1563,9 @@ onUnmounted(() => {
 | autofocus            | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | check-option-color <Badge type="warning">deprecated</Badge>    | `String` | | Use `checkbox-color` instead. |
 | check-option-position <Badge type="warning">deprecated</Badge> | `String` | | Use `checkbox-position` instead. |
-| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. <BsBadge color="info">v2.0.0</BsBadge> |
+| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. <BsBadge color="info">v2.0.0</BsBadge> |
 | checkbox-position | `String`  | `'left'`  | Sets the Listbox checkbox position. Valid values are: `left`, `right`. <BsBadge color="info">v2.0.0</BsBadge> |
-| chip-color        | `String`  | `'grey'`  | The default Chips color to apply. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| chip-color        | `String`  | `'grey'`  | The default Chips color to apply. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | chip-enabled      | `Boolean` | `false`   | Enable/disable **Chip** selection mode for the selected items. |
 | chip-outlined     | `Boolean` | `false`   | Render the Chips with **_outlined_** style. |
 | chip-pill         | `Boolean` | `false`   | Render the Chips with **_rounded-pill_** style. <BsBadge color="info">v2.0.0</BsBadge> |
@@ -1581,7 +1581,7 @@ onUnmounted(() => {
 | id                | `String`  |         | Sets `<select>` element `ID` attribute. This property value is auto generates. |
 | image-size        | `Number`  | `48`    | Define the image size for each Listbox items when `show-image` is enabled. |
 | item-separator    | `Boolean` | `false` | Show or hide the Listbox item separator. |
-| listbox-color     | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| listbox-color     | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | listbox-max-height   | `Number`  | `300`  | Sets the Listbox container maximum height. <BsBadge color="info">v2.0.0</BsBadge> |
 | listbox-min-width    | `Number`  | | Sets the Listbox container minimum width. <BsBadge color="info">v2.0.0</BsBadge> |
 | listbox-search-label | `String`  | `'Search...'` | The search box text label. <BsBadge color="info">v2.0.0</BsBadge> |

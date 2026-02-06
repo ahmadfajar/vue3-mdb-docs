@@ -1371,7 +1371,7 @@ Most css variables are inherited from button css variables.
 |----------|-----------|----------|-------------|
 | active   | `Boolean` | `false`  | The component state. |
 | disabled | `Boolean` | `false`  | The component state. |
-| color    | `String`  | `'default'` | The component color appearance. Any [MDBootstrap Color](/reference/color-variants#mdbootstrap-colors) variants and [Material Color](/reference/color-variants#material-colors) variants can be used. |
+| color    | `String`  | `'default'` | The component color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
 | dropdown-toggle | `Boolean` | `false` | Render as `dropdown` button when used inside `<bs-dropdown-menu>` component. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |
