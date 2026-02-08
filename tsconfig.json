@@ -1,11 +1,47 @@
 {
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "ES2024",
+    ],
+    "paths": {
+      "@cmp/*": ["./components/*"],
+      "@doc/*": ["./docs/*"]
+    },
+    /* Recommended */
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+
+    // Required in Vue projects
+    "allowJs": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "composite": true,
+
+    /* Linting */
+    "strict": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true
+  },
   "include": [
-    "env.d.ts",
     "components/**/*.ts",
     "components/**/*.vue",
     "docs/**/*.mts",
     "docs/**/*.ts",
+    "docs/**/*.vue",
     "docs/**/*.md",
+    "env.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -14,27 +50,5 @@
   ],
   "vueCompilerOptions": {
     "vitePressExtensions": [".md"],
-  },
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": [
-      "ES2022",
-    ],
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    // Required in Vue projects
-    "allowJs": true,
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "noImplicitThis": true,
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "useDefineForClassFields": true,
-    // Recommended
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "composite": true,
-  },
+  }
 }

@@ -3,14 +3,6 @@
 @use './mixins/rfs';
 @use './mixins/variables' as vars;
 
-// hr {
-//   margin: $hr-margin-y 0;
-//   color: $hr-color; // 1
-//   border: 0;
-//   border-top: $hr-border-width solid $hr-border-color;
-//   opacity: $hr-opacity;
-// }
-
 // Shared Typography
 //----------------------
 %heading {

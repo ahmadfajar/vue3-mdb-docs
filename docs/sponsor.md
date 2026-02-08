@@ -43,7 +43,7 @@ us much more if you succeed.
 Thank you to our special sponsor. Your support is greatly appreciated.
 
 <div class="mt-4">
-<BsButton color="light-grey" href="https://github.com/sponsors/ahmadfajar" target="__blank" outlined>
+<BsButton color="secondary" href="https://github.com/sponsors/ahmadfajar" target="__blank" outlined>
 Become a sponsor
 </BsButton>
 </div>

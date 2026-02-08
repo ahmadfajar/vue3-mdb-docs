@@ -85,7 +85,7 @@ export default defineConfig({
     logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/components/', activeMatch: '/components/' },
+      { text: 'Components', link: '/components/', activeMatch: '/components/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
     ],
     sidebar: sidebar,

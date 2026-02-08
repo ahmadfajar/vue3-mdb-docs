@@ -8,8 +8,8 @@ import CatalogComponents from '../../../components/CatalogComponents.vue';
 import CatalogReferences from '../../../components/CatalogReferences.vue';
 
 import './bootstrap.css';
-import './_style.scss';
-import './_types.scss';
+import './main.scss';
+import './styles-block.scss';
 
 export default {
   extends: DefaultTheme,
@@ -23,6 +23,7 @@ export default {
 
     for (const key of Object.keys(_plugins)) {
       if (key.startsWith('Bs') && key.endsWith('Plugin')) {
+        // @ts-ignore
         app.use(_plugins[key]);
       }
     }

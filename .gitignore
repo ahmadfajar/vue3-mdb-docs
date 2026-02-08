@@ -23,11 +23,10 @@ package-lock.json
 yarn.lock
 *.local
 
-/cypress/videos/
-/cypress/screenshots/
 /dist
 /docs/.vitepress/cache
 /docs/.vitepress/dist
+/docs/.vitepress/theme/bootstrap-copy.css
 
 # Editor directories and files
 .vscode/*
