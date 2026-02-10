@@ -2,9 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": [
-      "ES2024",
-    ],
+    "lib": ["ES2024"],
     "paths": {
       "@cmp/*": ["./components/*"],
       "@doc/*": ["./docs/*"]
@@ -35,20 +33,22 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "components/*.ts",
+    "components/*.vue",
     "components/**/*.ts",
     "components/**/*.vue",
+    "docs/.vitepress/*.ts",
+    "docs/.vitepress/*.mts",
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.mts",
     "docs/**/*.mts",
     "docs/**/*.ts",
     "docs/**/*.vue",
     "docs/**/*.md",
     "env.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "docs/**/__tests__/*",
-    "components/**/__tests__/*"
-  ],
+  "exclude": ["node_modules", "docs/**/__tests__/*", "components/**/__tests__/*"],
   "vueCompilerOptions": {
-    "vitePressExtensions": [".md"],
+    "vitePressExtensions": [".md"]
   }
 }

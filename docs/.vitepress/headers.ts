@@ -53,4 +53,11 @@ export const headMeta: HeadConfig[] = [
       href: "/assets/theme-dark.min.css"
     }
   ],
+  [
+    'link',
+    {
+      rel: "stylesheet",
+      href: "/assets/decorator-colors.min.css"
+    }
+  ],
 ];

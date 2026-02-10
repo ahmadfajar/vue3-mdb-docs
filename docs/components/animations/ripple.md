@@ -20,38 +20,40 @@ when `click` or `touch` event occured.
 
 Example below, shows you basic usage of `<bs-ripple>`.
 
-::: BlockVue {title="Ripple Example"}
+::: BlockVue {title="Ripple Overview"}
 
-```html
-<div class="my-demo-wrapper row row-cols-auto justify-content-center">
-  <bs-ripple
-    class="d-flex justify-content-center align-items-center text-bg-secondary border rounded me-3 mb-3"
-    style="width: 150px; height: 150px"
-  >
-    <b>Click Me</b>
-  </bs-ripple>
-  <bs-ripple
-    class="d-flex justify-content-center align-items-center text-bg-primary border rounded me-3 mb-3"
-    style="width: 150px; height: 150px"
-  >
-    <b>Click Me</b>
-  </bs-ripple>
-  <bs-ripple
-    class="d-flex justify-content-center align-items-center text-bg-success border rounded"
-    style="width: 150px; height: 150px"
-    centered
-  >
-    <b>Click Me</b>
-  </bs-ripple>
-</div>
+```vue
+<template>  
+  <div class="demo-wrapper w-full max-w-full flex flex-col flex-sm-row justify-center items-center md-gap-6">
+    <bs-ripple
+      class="flex justify-center items-center text-bg-secondary rounded-4"
+      style="width: 150px; height: 150px"
+    >
+      <b>Click Me</b>
+    </bs-ripple>
+    <bs-ripple
+      class="flex justify-center items-center text-bg-primary rounded-4"
+      style="width: 150px; height: 150px"
+    >
+      <b>Click Me</b>
+    </bs-ripple>
+    <bs-ripple
+      class="flex justify-center items-center text-bg-success rounded-4"
+      style="width: 150px; height: 150px"
+      centered
+    >
+      <b>Click Me</b>
+    </bs-ripple>
+  </div>
+</template>
 ```
 :::
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -63,16 +65,16 @@ Example below, shows you basic usage of `<bs-ripple>`.
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:active | ( state:`Boolean`) | Used to update the `active` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:active | ( state:`Boolean`) | Used to update the `active` property. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

@@ -1,0 +1,23 @@
+.VPDoc {
+  &.has-sidebar {
+    overflow-x: hidden;
+  }
+}
+
+.VPBadge {
+  font-weight: 500;
+}
+
+.small {
+  font-size: 81%;
+}
+
+.border-teal-10 {
+  --md-border-color: oklch(60.5% 0.107 183.385deg / 0.1);
+}
+
+.dark\:text-light\! {
+  &:is(.dark *) {
+    color: oklch(95.815% 0.00011 271.152) !important;
+  }
+}

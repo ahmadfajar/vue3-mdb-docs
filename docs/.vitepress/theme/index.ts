@@ -1,21 +1,24 @@
+import CatalogComponents from '@cmp/CatalogComponents.vue';
+import CatalogReferences from '@cmp/CatalogReferences.vue';
+import ColorPalette from '@cmp/ColorPalette.vue';
+import ShoutBox from '@cmp/ShoutBox.vue';
+import SmallNote from '@cmp/SmallNote.vue';
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import * as _plugins from 'vue-mdbootstrap';
-import DocBlockExample from '../../../components/DocBlockExample.vue';
-import ColorPalette from '../../../components/ColorPalette.vue';
-import SmallNote from '../../../components/SmallNote.vue';
-import CatalogComponents from '../../../components/CatalogComponents.vue';
-import CatalogReferences from '../../../components/CatalogReferences.vue';
 
 import './bootstrap.css';
+import './decorators.scss';
 import './main.scss';
-import './styles-block.scss';
+import './doc-api.scss';
+import './shoutbox.scss';
+// import './styles-block.scss';
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app
-      .component('DocBlockExample', DocBlockExample)
+      .component('ShoutBox', ShoutBox)
       .component('ColorPalette', ColorPalette)
       .component('SmallNote', SmallNote)
       .component('CatalogComponents', CatalogComponents)
@@ -27,5 +30,5 @@ export default {
         app.use(_plugins[key]);
       }
     }
-  }
+  },
 } satisfies Theme;

@@ -299,7 +299,7 @@ const chipItems2: TChipOptionItem[] = [
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
+<BsTabs v-model="tabs1active" variant="material" color="bg-gray-700" class="doc-api-reference">
   <BsTab label="Props" url="#api-reference">
     <div class="doc-table-responsive doc-table-props">
 
@@ -311,15 +311,15 @@ const chipItems2: TChipOptionItem[] = [
 | column        | `Boolean` | `false` | Enable multi rows if total width of items beyond the container width. |
 | img-circle    | `Boolean` | `false` | Create chip item's avatar with circle shape. |
 | img-padding <Badge type="warning">deprecated</Badge> | `Boolean`  | `true` | Use `img-padding-off` property instead. |
-| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="info">v2.0.4</BsBadge> |
+| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.4</BsBadge> |
 | items         | `TChipOptionItem[]` |  | The data source to create the collection of `<BsChip>`. |
-| model-value <Badge type="tip">v-model</Badge> | `TChipValue`/`TChipValue[]`/`null` |  | The value monitored by `v-model`. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `TChipValue`&#124;`TChipValue[]`&#124;`null` |  | The value monitored by `v-model`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
 | multiple     | `Boolean`  | `false`  | Allow multiple selection or not. |
 | outlined     | `Boolean`  | `false` | Enable ***outlined*** chip style. |
 | pill         | `Boolean`  | `false` | Enable ***rounded-pill*** chip style. |
 | size         | `String`   |   | Create chip's item with predefined size. Valid values are: `sm` (small), `lg` (large). |
-| slider-button | `Boolean` | `false` | Show slider's button or not. <BsBadge color="info">v2.0.0</BsBadge> |
-| slider-button-color | `String` | `'secondary'` | Slider button color appearance. <BsBadge color="info">v2.0.0</BsBadge> |
+| slider-button | `Boolean` | `false` | Show slider's button or not. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| slider-button-color | `String` | `'secondary'` | Slider button color appearance. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -328,9 +328,9 @@ const chipItems2: TChipOptionItem[] = [
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change | ( value:`TChipValue`/`TChipValue[]`/`null`) | Triggers immediately when the `model-value` property is changed. |
-| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | ( value:`TChipValue`/`TChipValue[]`/`null`) | Triggers when the `model-value` property is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| change | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers immediately when the `model-value` property is changed. |
+| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| update:model-value | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers when the `model-value` property is updated. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
 
 </div>
   </BsTab>
@@ -339,8 +339,8 @@ const chipItems2: TChipOptionItem[] = [
 
 | Name  | Description  |
 |-------|--------------|
-| text  | The outlet slot used to place the chip's item text. <BsBadge color="info">v2.0.1</BsBadge> |
-| icon  | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
+| text  | The outlet slot used to place the chip's item text. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.1</BsBadge> |
+| icon  | The outlet slot used to place custom icon. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.1</BsBadge> |
 
 </div>
   </BsTab>
@@ -358,16 +358,16 @@ The Chip's item has properties as described below:
 |----------|-----------|-------------|
 | id       | `String`   | `<BsChip>` element ID. |
 | text <Badge type="danger">required</Badge> | `String` | The item text. |
-| value    | `String`/`Number`/`Boolean` | The item value. |
+| value    | `String`&#124;`Number`&#124;`Boolean` | The item value. |
 | disabled | `Boolean`  | `<BsChip>` element state. |
 | dismissible | `Boolean`  | Enable dismissible `<BsChip>`. |
 | href   | `String`  | Render `<BsChip>` as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
-| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the `<BsChip>`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the `<BsChip>`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| iconVariant | `String`  | Predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
+| iconVariant | `String`  | Predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">Updated on v2.1.0</BsBadge> |
 | imgSrc | `String`  | `<BsChip>` avatar image source url. |
 
 </div>

@@ -74,6 +74,8 @@
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(40px);
+  --doc-custom-text-1: oklch(99.729% 0.013 106.774 / 0.86);
+  --doc-custom-text-2: oklch(94.297% 0.01349 286.028 / 0.6);
 }
 
 @media (min-width: 640px) {
@@ -117,10 +119,6 @@
 
 // Overridden styles
 //--------------------------------------------------------------------------
-.small {
-  font-size: 81%;
-}
-
 .vp-doc {
   h1 {
     font-size: calc(1.75rem + 1.15vw);
@@ -187,46 +185,6 @@
     }
   }
 
-  .md-btn {
-    text-decoration: none;
-    background-color: var(--md-btn-bg);
-  }
-
-  th {
-    background-color: var(--vp-c-bg-1);
-  }
-
-  .custom-block {
-    &:not(.github-alert) {
-      &.info,
-      &.tip,
-      &.danger,
-      &.details,
-      &.warning {
-        border-left-width: 5px;
-      }
-    }
-
-    > .custom-block-title {
-      display: flex;
-      align-items: center;
-    }
-
-    a {
-      text-decoration: underline dotted;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .doc-api {
-    ul > li > code:nth-child(1) {
-      color: oklch(64.822% 0.17993 45.857);
-    }
-  }
-
   .list-group {
     --bs-list-group-bg: rgb(242, 245, 248);
     --bs-list-group-action-hover-bg: rgb(218, 223, 229);
@@ -261,12 +219,6 @@
     }
   }
 
-  .md-tabs {
-    .nav-item {
-      text-decoration: none;
-    }
-  }
-
   .md-breadcrumb {
     > .breadcrumb {
       margin: 0;
@@ -275,111 +227,6 @@
       li + li {
         margin-top: 0;
       }
-    }
-  }
-}
-
-.doc-api-reference {
-  margin: 3rem -1.5rem 0;
-
-  &.md-tabs {
-    --md-tabs-content-padding: 0;
-
-    .tab-pane {
-      width: 100%;
-    }
-  }
-
-  .doc-table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-
-    > table {
-      display: table;
-      width: 100%;
-      margin-bottom: 8px;
-    }
-
-    a {
-      font-weight: 400;
-    }
-  }
-
-  .doc-table-props,
-  .doc-table-3cols,
-  .doc-table-2cols {
-    .badge {
-      --bs-badge-border-radius: 0.275rem;
-    }
-
-    > table {
-      td {
-        &:first-child {
-          white-space: nowrap;
-        }
-      }
-
-      th,
-      td {
-        &:last-child {
-          min-width: 280px;
-        }
-      }
-    }
-  }
-
-  .doc-table-props {
-    > table {
-      td {
-        &:nth-child(3) {
-          white-space: nowrap;
-        }
-
-        &:nth-child(2),
-        &:nth-child(3) {
-          > code {
-            --vp-code-color: var(--doc-text-code-dt);
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
-
-  .doc-table-3cols {
-    > table {
-      td {
-        &:nth-child(2) {
-          white-space: nowrap;
-
-          > code {
-            --vp-code-color: var(--doc-text-code-dt);
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
-
-  .doc-table-2cols {
-    > table {
-      td {
-        &:first-child {
-          > code {
-            --vp-code-color: var(--doc-text-code-dt);
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 590px) {
-    margin: 3rem 0 0;
-
-    > .nav {
-      border-radius: var(--bs-border-radius-lg);
     }
   }
 }
@@ -442,11 +289,6 @@
   }
 }
 
-#app {
-  --doc-custom-text-1: oklch(99.729% 0.013 106.774 / 0.86);
-  --doc-custom-text-2: oklch(94.297% 0.01349 286.028 / 0.6);
-}
-
 .VPHomeHero {
   .text {
     font-weight: 500;
@@ -455,12 +297,6 @@
 
   .tagline {
     color: var(--doc-custom-text-2);
-  }
-}
-
-.VPDoc {
-  &.has-sidebar {
-    overflow-x: hidden;
   }
 }
 
@@ -482,7 +318,7 @@
 
       &:hover {
         > .text {
-          color: var(--vp-c-brand-lighter);
+          color: var(--vp-c-brand);
         }
       }
     }
@@ -493,7 +329,7 @@
       > .link {
         &:hover {
           > .text {
-            color: var(--vp-c-brand-lighter);
+            color: var(--vp-c-brand);
           }
         }
       }
@@ -501,12 +337,11 @@
   }
 }
 
-.VPBadge {
-  font-weight: 500;
-}
-
 .dark {
   --background: oklch(0.24 0.01 262.8);
+  --background-secondary: oklch(0.275 0.01 268.32);
+  --background-tertiary: oklch(0.315 0.01 268.32);
+
   --vp-c-bg-soft: oklch(0.25 0.01 268.26);
   --vp-c-bg-1: oklch(21.699% 0.01205 270.848);
   --vp-c-brand-1: oklch(80.66% 0.13012 157.149);
@@ -514,12 +349,14 @@
   --vp-c-brand-lighter: #{color.adjust(#621d62, $lightness: 45%)};
   --vp-c-divier: oklch(0.967 0.003 264.542 / 0.05);
   --vp-c-mute: oklch(31.512% 0.00886 285.829);
+
   --vp-badge-tip-text: oklch(74.026% 0.14797 303.034);
   --vp-button-brand-bg: oklch(41.518% 0.16053 355.669);
   --vp-button-brand-border: oklch(36.637% 0.13712 346.508);
   --vp-button-brand-hover-bg: oklch(50.086% 0.19641 356.486);
   --vp-button-brand-hover-border: oklch(50.086% 0.19641 356.486);
   --vp-button-alt-text: #{color.adjust(#fff, $lightness: -25%)};
+
   --vp-custom-block-tip-border: var(--vp-c-green-3);
   --vp-custom-block-tip-text: oklch(79.824% 0.13136 168.082);
   --vp-custom-block-tip-bg: var(--vp-c-green-soft);
@@ -531,13 +368,11 @@
   --vp-custom-block-note-border: oklch(35.52% 0.0096 260.77);
   --vp-custom-block-important-border: oklch(41.444% 0.04043 297.96);
   --vp-custom-block-caution-border: oklch(39.937% 0.05402 2.21);
+
   --vp-code-tab-bg: oklch(0.15 0 0);
   --vp-code-block-bg: oklch(20.105% 0.00397 285.961);
-  --vp-code-color: oklch(92.222% 0.09589 193.243);
-  --doc-example-border-color: oklch(40.167% 0.00005 271.152);
-  --doc-example-toolbar-bg: oklch(26.05% 0.0058 271.198);
-  --doc-example-content-bg: oklch(25.301% 0.00953 276.703);
-
+  --vp-code-color: oklch(80.897% 0.07286 276.847); // oklch(0.83 0.15 73.53); // oklch(92.222% 0.09589 193.243);
+  
   @media (min-width: 960px) {
     ::-webkit-scrollbar-track {
       background: oklch(35.819% 0.0175 276.531);
@@ -562,16 +397,6 @@
   }
 
   .vp-doc {
-    .badge.bg-info {
-      background-color: #3f51b5 !important;
-    }
-
-    .doc-api {
-      ul > li > code:nth-child(1) {
-        color: oklch(81.113% 0.12418 55.065);
-      }
-    }
-
     .list-group {
       --bs-list-group-color: wheat;
       --bs-list-group-action-color: var(--vp-c-text-2);
@@ -687,10 +512,6 @@
       display: none;
     }
   }
-
-  // .VPContent {
-  //   background-color: oklch(21.677% 0.06642 297.739);
-  // }
 
   .VPFooter {
     --vp-c-gutter: oklch(0.26 0.05 301.65);

@@ -1,0 +1,159 @@
+@use 'vue-mdbootstrap/scss/mixins/css3/borders';
+@use './mixins/rfs';
+@use './mixins/variables' as vars;
+
+// Shared Typography
+//----------------------
+%heading {
+  font-family: vars.$headings-font-family;
+  font-style: vars.$headings-font-style;
+  font-weight: vars.$headings-font-weight;
+  line-height: vars.$headings-line-height;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+:root {
+  --shoutbox-border-color: var(--bs-gray-400);
+  --shoutbox-border-radius: calc(var(--md-radius) * 2);
+  --shoutbox-toolbar-bg: var(--bs-gray-100);
+  --shoutbox-content-bg: var(--background);
+}
+
+.shoutbox-source {
+  > div[class*='language-'] {
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+.shoutbox-content {
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+
+  h1,
+  .h1 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h1-font-size);
+  }
+
+  h2,
+  .h2 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h2-font-size);
+
+    & {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h3,
+  .h3 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h3-font-size);
+  }
+
+  h4,
+  .h4 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h4-font-size);
+  }
+
+  h5,
+  .h5 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h5-font-size);
+  }
+
+  h6,
+  .h6 {
+    @extend %heading;
+    @include rfs.font-size(vars.$h6-font-size);
+  }
+
+  .md-card {
+    a {
+      color: var(--bs-link-color);
+    }
+
+    > .md-appbar {
+      @include borders.top-radius(inherit);
+    }
+  }
+
+  .picked-color {
+    @include borders.radius(50%);
+
+    background-image:
+      repeating-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa),
+      repeating-linear-gradient(45deg, #aaa 25%, #fff 25%, #fff 75%, #aaa 75%, #aaa);
+    background-position:
+      0 0,
+      4px 4px;
+    background-size: 8px 8px;
+    border: 0;
+    padding: 0;
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+
+    &:after {
+      background-color: currentColor;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: block;
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+
+  a.md-list-tile {
+    text-decoration: none;
+  }
+
+  .nav > .nav-item {
+    --bs-nav-link-hover-color: var(--vp-c-brand-2);
+
+    .nav-link {
+      color: var(--bs-nav-link-color);
+      font-weight: 400;
+
+      &.active {
+        color: var(--bs-nav-pills-link-active-color);
+      }
+
+      &:hover,
+      &:focus {
+        &:not(.active) {
+          color: var(--bs-nav-link-hover-color);
+        }
+      }
+    }
+  }
+
+  .md-datepicker {
+    .md-datepicker-body {
+      table {
+        margin: 0;
+      }
+    }
+  }
+
+  .mobi-card {
+    max-width: 420px;
+  }
+}
+
+.dark {
+  --shoutbox-border-color: oklch(0.35 0.02 277.64);
+  --shoutbox-toolbar-bg: oklch(0.26 0.01 259.16);
+}

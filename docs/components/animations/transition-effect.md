@@ -15,12 +15,12 @@ numerous components and elements.
 
 ## Fade
 
-::: BlockVue {title="Fade Transition Example" file="./docs/components/scripts/fade-animation.js"}
+::: BlockVue {title="Transition Effects - Fade" file="./docs/components/animations/js/fade-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="fadeShow = !fadeShow">
+  <div class="demo-wrapper w-full max-w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="fadeShow = !fadeShow">
       Click Me
     </bs-button>
     <transition name="fade">
@@ -47,12 +47,12 @@ const fadeShow = ref(true);
 
 ## Scale
 
-::: BlockVue {title="Scale Transition Example" file="./docs/components/scripts/scale-animation.js"}
+::: BlockVue {title="Transition Effects - Scale" file="./docs/components/animations/js/scale-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="scaleShow = !scaleShow">
+  <div class="demo-wrapper w-full max-w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="scaleShow = !scaleShow">
       Click Me
     </bs-button>
     <transition name="scale">
@@ -79,12 +79,12 @@ const scaleShow = ref(true);
 
 ## Slide Fade
 
-::: BlockVue {title="Slide Fade Transition Example" file="./docs/components/scripts/slide-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Fade" file="./docs/components/animations/js/slide-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideFade = !slideFade">
+  <div class="demo-wrapper w-full relative overflow-hidden" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideFade = !slideFade">
       Click Me
     </bs-button>
     <transition name="slide-fade">
@@ -111,12 +111,12 @@ const slideFade = ref(true);
 
 ## Slide Fade Reverse
 
-::: BlockVue {title="Slide Fade Reverse Transition Example" file="./docs/components/scripts/slide-reverse-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Fade Reverse" file="./docs/components/animations/js/slide-reverse-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideFadeReverse = !slideFadeReverse">
+  <div class="demo-wrapper w-full relative overflow-hidden" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideFadeReverse = !slideFadeReverse">
       Click Me
     </bs-button>
     <transition name="slide-fade-reverse">
@@ -143,12 +143,12 @@ const slideFadeReverse = ref(true);
 
 ## Slide Left-Right
 
-::: BlockVue {title="Slide Left-Right Transition Example" file="./docs/components/scripts/slide-ltr-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Left-Right" file="./docs/components/animations/js/slide-ltr-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideLeftRight = !slideLeftRight">
+  <div class="demo-wrapper w-full relative overflow-hidden" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideLeftRight = !slideLeftRight">
       Click Me
     </bs-button>
     <transition name="slide-left-right">
@@ -175,12 +175,12 @@ const slideLeftRight = ref(false);
 
 ## Slide Right-Left
 
-::: BlockVue {title="Slide Right-Left Transition Example" file="./docs/components/scripts/slide-rtl-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Right-Left" file="./docs/components/animations/js/slide-rtl-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 position-relative overflow-hidden" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideRightLeft = !slideRightLeft">
+  <div class="demo-wrapper w-full relative overflow-hidden" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideRightLeft = !slideRightLeft">
       Click Me
     </bs-button>
     <transition name="slide-right-left">
@@ -207,12 +207,12 @@ const slideRightLeft = ref(false);
 
 ## Slide Top-Bottom
 
-::: BlockVue {title="Slide Top-Bottom Transition Example" file="./docs/components/scripts/slide-ttb-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Top-Bottom" file="./docs/components/animations/js/slide-ttb-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideTopBottom = !slideTopBottom">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideTopBottom = !slideTopBottom">
       Click Me
     </bs-button>
     <transition name="slide-top-bottom">
@@ -239,12 +239,12 @@ const slideTopBottom = ref(false);
 
 ## Slide Bottom-Top
 
-::: BlockVue {title="Slide Bottom-Top Transition Example" file="./docs/components/scripts/slide-btt-animation.js"}
+::: BlockVue {title="Transition Effects - Slide Bottom-Top" file="./docs/components/animations/js/slide-btt-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="slideBottomTop = !slideBottomTop">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="slideBottomTop = !slideBottomTop">
       Click Me
     </bs-button>
     <transition name="slide-bottom-top">
@@ -271,12 +271,12 @@ const slideBottomTop = ref(false);
 
 ## Expand Transition
 
-::: BlockVue {title="Expand Transition Example" file="./docs/components/scripts/expand-animation.js"}
+::: BlockVue {title="Transition Effects - Expand" file="./docs/components/animations/js/expand-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="expandTransition = !expandTransition">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="expandTransition = !expandTransition">
       Click Me
     </bs-button>
     <bs-expand-transition>
@@ -305,12 +305,12 @@ const expandTransition = ref(false);
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-::: BlockVue {title="Rotate Clock Wise Transition Example" file="./docs/components/scripts/rotate-clock-animation.js"}
+::: BlockVue {title="Transition Effects - Rotate Clock Wise" file="./docs/components/animations/js/rotate-clock-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="rotateClockWise = !rotateClockWise">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="rotateClockWise = !rotateClockWise">
       Click Me
     </bs-button>
     <transition name="rotate-clock-wise">
@@ -339,12 +339,12 @@ const rotateClockWise = ref(false);
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-::: BlockVue {title="Rotate Clock Reverse Transition Example" file="./docs/components/scripts/rotate-reverse-animation.js"}
+::: BlockVue {title="Transition Effects - Rotate Clock Reverse Example" file="./docs/components/animations/js/rotate-reverse-animation.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="rotateClockReverse = !rotateClockReverse">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="rotateClockReverse = !rotateClockReverse">
       Click Me
     </bs-button>
     <transition name="rotate-clock-reverse">
@@ -373,11 +373,11 @@ const rotateClockReverse = ref(false);
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-::: BlockVue {title="Roll In-Out Transition Example" file="./docs/components/scripts/roll-in-out-animation.js"}
+::: BlockVue {title="Transition Effects - Roll In-Out" file="./docs/components/animations/js/roll-in-out-animation.js"}
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100" style="min-height: 200px">
-    <bs-button color="indigo" class="mb-3" @click="rollInOut = !rollInOut">
+  <div class="demo-wrapper w-full" style="min-height: 200px">
+    <bs-button class="mb-3" @click="rollInOut = !rollInOut">
       Click Me
     </bs-button>
     <transition name="roll-in-out">
