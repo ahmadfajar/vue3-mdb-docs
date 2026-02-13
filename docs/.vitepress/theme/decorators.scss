@@ -27,3 +27,9 @@
     background-color: oklch(0.42 0.04 101.95 / 0.85);
   }  
 }
+
+.dark\:bg-indigo\/15 {
+  &:is(.dark *) {
+    background-color: oklch(0.54 0.09 288.16 / 0.15);
+  }
+}

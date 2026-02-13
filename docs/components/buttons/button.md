@@ -1479,7 +1479,7 @@ use 'vue-mdbootstrap/scss/mixins/button';
 |----------|-----------|----------|-------------|
 | active   | `Boolean` | `false`  | The component state. |
 | disabled | `Boolean` | `false`  | The component state. |
-| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated on v2.2.0</MdBadge> <br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated on v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | dropdown-toggle | `Boolean` | `false` | Render as ***dropdown button*** when used inside `<bs-dropdown-menu>` component. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |
