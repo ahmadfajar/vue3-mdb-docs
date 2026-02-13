@@ -39,6 +39,8 @@ const tplHeaders = [
     ' rel="stylesheet" crossorigin="anonymous" />',
   `<link href="${unpkgBaseUri}vue-mdbootstrap@2/dist/theme-light.min.css"` +
     ' rel="stylesheet" crossorigin="anonymous" />',
+  `<link href="${unpkgBaseUri}vue-mdbootstrap@2/dist/decorator-colors.min.css"` +
+    ' rel="stylesheet" crossorigin="anonymous" />',
   `<${jsTag} src="${cdnBaseUri}vue@3/dist/vue.global.prod.js" crossorigin="anonymous"></${jsTag}>`,
   `<${jsTag} src="${unpkgBaseUri}vue-mdbootstrap@2/dist/vue-mdb.umd.min.js" crossorigin="anonymous"></${jsTag}>`,
 ];

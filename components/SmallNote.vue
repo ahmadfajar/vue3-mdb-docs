@@ -2,9 +2,7 @@
 import { computed } from 'vue';
 import { useMergeClass } from 'vue-mdbootstrap';
 
-const props = defineProps({
-  color: String
-});
+const props = defineProps<{color: string}>();
 
 const classes = computed(() => ({
   [`bg-rgba-${props.color}-slight`]: props.color,

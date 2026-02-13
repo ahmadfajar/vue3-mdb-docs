@@ -70,7 +70,7 @@ Example below, shows you basic usage of `<bs-ripple>`.
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:active | ( state:`Boolean`) | Used to update the `active` property. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| update:active | ( state:`Boolean`) | Used to update the `active` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

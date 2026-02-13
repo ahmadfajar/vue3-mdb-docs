@@ -223,12 +223,12 @@
 
   .doc-api-reference {
     &.md-tabs {
-      --md-tab-item-color: oklch(88.837% 0.0001 271.152 / 0.6);
-      --md-tab-item-active-color: oklch(100% 0.00011 271.152);
-      --md-tab-item-hover-color: oklch(91.308% 0.00145 285.298);
-      --md-tab-item-disabled-color: oklch(93.403% 0.00011 271.152 / 0.3);
+      --md-tab-item-color: oklch(88.837% 0.0001 271.152deg / 0.6);
+      --md-tab-item-active-color: oklch(100% 0.00011 271.152deg);
+      --md-tab-item-hover-color: oklch(91.308% 0.00145 285.298deg);
+      --md-tab-item-disabled-color: oklch(93.403% 0.00011 271.152deg / 0.3);
 
-      --md-tab-md3-bg-color: oklch(43.41% 0.02 264.32deg);
+      --md-tab-md3-bg-color: oklch(33.41% 0.02 264.32deg);
       --md-tab-md3-indicator-active-color: var(--vp-c-brand); // oklch(94.621% 0.15503 108.256);
     }
   }

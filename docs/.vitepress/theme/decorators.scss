@@ -21,3 +21,9 @@
     color: oklch(95.815% 0.00011 271.152) !important;
   }
 }
+
+.dark\:bg-yellow\/85 {
+  &:is(.dark *) {
+    background-color: oklch(0.42 0.04 101.95 / 0.85);
+  }  
+}

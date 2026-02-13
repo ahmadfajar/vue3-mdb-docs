@@ -1,6 +1,7 @@
 import CatalogComponents from '@cmp/CatalogComponents.vue';
 import CatalogReferences from '@cmp/CatalogReferences.vue';
 import ColorPalette from '@cmp/ColorPalette.vue';
+import MdBadge from '@cmp/MdBadge.vue';
 import ShoutBox from '@cmp/ShoutBox.vue';
 import SmallNote from '@cmp/SmallNote.vue';
 import type { Theme } from 'vitepress';
@@ -19,8 +20,9 @@ export default {
   enhanceApp({ app }) {
     app
       .component('ShoutBox', ShoutBox)
-      .component('ColorPalette', ColorPalette)
       .component('SmallNote', SmallNote)
+      .component('MdBadge', MdBadge)
+      .component('ColorPalette', ColorPalette)
       .component('CatalogComponents', CatalogComponents)
       .component('CatalogReferences', CatalogReferences);
 

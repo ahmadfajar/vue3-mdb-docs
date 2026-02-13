@@ -29,7 +29,6 @@
 
 .shoutbox-content {
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
 
   h1,
   .h1 {
@@ -80,6 +79,10 @@
     > .md-appbar {
       @include borders.top-radius(inherit);
     }
+  }
+
+  .md-divider {
+    margin: var(--md-divider-margin-y) 0;
   }
 
   .picked-color {
@@ -149,7 +152,7 @@
   }
 
   .mobi-card {
-    max-width: 420px;
+    max-width: 400px;
   }
 }
 
