@@ -11,7 +11,7 @@ description: Button is a component for actions in form, dialog, and more. Includ
 a handful of color variations, sizes, states, and more.
 :::
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 
 ## Overview
@@ -154,7 +154,7 @@ You can create button with filled tonal style like Material Design 3 -
 [Filled Tonal Button](https://m3.material.io/components/buttons/specs#31a04913-d070-49c5-9c36-41d551f20096) 
 by defining the `tonal` property explicitly.
 
-<SmallNote color="teal">Added since v2.0.4</SmallNote>
+<SmallNote color="teal">Added in v2.0.4</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Tonal"}
 
@@ -242,6 +242,8 @@ by defining the `raised` property explicitly.
 
 You can create button with rounded style by defining the `rounded` property explicitly.
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 ::: BlockVue {title="Button Style Variants - Rounded"}
 
 ```vue
@@ -284,7 +286,7 @@ You can create button with rounded style by defining the `rounded` property expl
 
 You can create button with rectangle style by defining the `pill-off` property explicitly.
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Rectangle"}
 
@@ -869,7 +871,7 @@ as FAB's button. The only downside is, `<bs-button>` doesn't have the ability to
 automatically position itself on the screen. You have to manually adjust its position 
 on the screen using css helper or make your own css to adjust its position.
 
-<SmallNote color="teal">Added since v2.0.4</SmallNote>
+<SmallNote color="teal">Added in v2.0.4</SmallNote>
 
 ::: BlockVue {title="FAB Buttons"}
 
@@ -1054,7 +1056,7 @@ on the screen using css helper or make your own css to adjust its position.
 `<bs-button>` can be grouped as series of buttons like
 [Google Material Design 3](https://m3.material.io/components/button-groups/overview).
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ::: BlockVue {title="Button Group"}
 
@@ -1324,7 +1326,7 @@ The following are a collection of examples that demonstrate more advanced use of
 As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
 `.md-btn`, `.md-btn-fab`, and `.md-btn-icon` for better customization.
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ```scss
 .md-btn, .md-btn-fab, .md-btn-icon {
@@ -1479,7 +1481,7 @@ use 'vue-mdbootstrap/scss/mixins/button';
 |----------|-----------|----------|-------------|
 | active   | `Boolean` | `false`  | The component state. |
 | disabled | `Boolean` | `false`  | The component state. |
-| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated on v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | dropdown-toggle | `Boolean` | `false` | Render as ***dropdown button*** when used inside `<bs-dropdown-menu>` component. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |

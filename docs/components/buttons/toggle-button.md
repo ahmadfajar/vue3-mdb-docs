@@ -12,7 +12,7 @@ used to visualize options with different approaches, such as selecting options,
 switching views, or sorting elements.
 :::
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## Overview 
 
@@ -91,7 +91,7 @@ const drinks = [
 
 With the help of slot `icon` you can add dynamic checked icon.
 
-<SmallNote color="teal">Added since v2.0.1</SmallNote>
+<SmallNote color="teal">Added in v2.0.1</SmallNote>
 
 ::: BlockVue {title="Toggle Button Checked Icon" file="./docs/components/buttons/js/toggle-button-2.js"}
 
@@ -216,7 +216,7 @@ based on Google **Material Design 3** specifications. Example below show various
 built-in style variants and demonstrate how to put an icon inside the `<bs-toggle-button>`
 and change the icon dynamically like a segmented buttons behaves.
 
-<SmallNote color="teal">Updated on v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ::: BlockVue {title="Toggle Buttons Style Variants" file="./docs/components/buttons/js/toggle-button-4.js"}
 
@@ -537,7 +537,7 @@ const albums = [
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | disabled | `Boolean` | `false`      | The component state. |
-| color    | `String`  | `'default'`  | The component color appearance. <MdBadge color="info">Updated on v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| color    | `String`  | `'default'`  | The component color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | icon-position | `String` | `'left'` | <div style="min-width:370px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
 | icon-size     | `Number` |   | Render the icon at predefined size in pixel. <MdBadge color="info">v2.2.0</MdBadge> |
 | id       | `String`  |              | Sets the component `ID`. This property value is auto generate. |
@@ -552,7 +552,7 @@ const albums = [
 | readonly | `Boolean` | `false` | The component state. |
 | rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <MdBadge color="info">v2.0.0</MdBadge> |
 | size     | `String`  |         | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |     | The selected button color (optional). <MdBadge color="info">Updated on v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| toggle-color | `String`  |     | The selected button color (optional). <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <MdBadge color="info">v2.0.4</MdBadge> |
 
 </div>
@@ -579,7 +579,7 @@ const albums = [
 </BsTabs>
 
 
-### TInputOptionItem {#api-reference-tinput-option-item class="mt-lg-5"}
+### TInputOptionItem {#api-reference-input-option-item class="mt-lg-5"}
 
 <div class="doc-api-reference mt-0">
 <div class="doc-table-responsive doc-table-3cols">
@@ -592,7 +592,7 @@ const albums = [
 | name     | `String`   | Html `<input>` element name. It is used when `multiple` is `true`. |
 | disabled | `Boolean`  | Html `<input>` element state. |
 | readonly | `Boolean`  | Html `<input>` element state. |
-| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the button. <MdBadge color="info">Updated on v2.1.0</MdBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the button. <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSize  | `Number`  | Render the icon at predefined size in pixel. |

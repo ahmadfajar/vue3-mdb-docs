@@ -5,6 +5,8 @@ Vue MDBootstrap comes with standard support for light and dark variants. And can
 customize your application’s default text colors, surfaces, and more. 
 ::: 
 
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
 ## Global CSS Variables 
 
 Since **version 2.2.0**, Vue MDBootstrap has introduced unified global CSS variables to 

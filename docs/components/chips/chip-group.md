@@ -1,15 +1,16 @@
 ---
 outline: [2, 3] 
-description: A component which extends the BsChip's component by providing groupable functionality. It is used for creating groups of selections using chips. 
+description: Chip Group is a component which extends the BsChip's component by providing groupable functionality. It is used for creating groups of selections using chips. 
 ---
 
 # Chip Group
 
 ::: lead
-**BsChipGroup** extends the [BsChip](/components/chips/chip) component by providing groupable functionality.
-It is used for creating groups of selections using chips.
+**BsChipGroup** extends the [BsChip](/components/chips/chip) component by providing 
+groupable functionality. It is used for creating groups of selections using chips.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## Overview
 
@@ -18,13 +19,11 @@ it’s better to create single `<bs-chip-group>`. `<bs-chip-group>` provides **s
 functionality, which will come in handy when working with more chips. The `items`
 property is used as data source to create the chips.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
-
-::: BlockVue {title="ChipGroup Example" file="./docs/components/scripts/chip-group-1.js"}
+::: BlockVue {title="Chip Group Overview" file="./docs/components/chips/js/chip-group-1.js"}
 
 ```vue
 <template>
-  <div class="card p-3 border-0">
+  <div class="demo-wrapper w-full">
     <bs-chip-group v-model="selectedChips1" :items="chipItems1" />
   </div>
 </template>
@@ -41,6 +40,7 @@ const chipItems1: TChipOptionItem[] = [
   { text: 'Foods' }
 ];
 </script>
+
 ```
 :::
 
@@ -50,15 +50,15 @@ const chipItems1: TChipOptionItem[] = [
 If the total width of chip items exceeds the container's width, use `column`
 property to wrap chip items.
 
-::: BlockVue {title="ChipGroup Multi Rows Example" file="./docs/components/scripts/chip-group-2.js"}
+::: BlockVue {title="Chip Group Multi Rows" file="./docs/components/chips/js/chip-group-2.js"}
 
 ```vue
 <template>
-  <div class="card p-3 border-0">
+  <div class="demo-wrapper w-full">
     <bs-chip-group
       v-model="selectedChips2"
       :items="chipItems2"
-      active-class="md-chip-warning active"
+      active-class="chip-default active"
       column
     />
   </div>
@@ -81,6 +81,7 @@ const chipItems2: TChipOptionItem[] = [
   { text: 'Work' }
 ];
 </script>
+
 ```
 :::
 
@@ -90,15 +91,15 @@ const chipItems2: TChipOptionItem[] = [
 By default `<bs-chip-group>` works in single selection mode. Use `multiple` property to
 enable multiple selection mode.
 
-::: BlockVue {title="ChipGroup Multiple Selection Example" file="./docs/components/scripts/chip-group-3.js"}
+::: BlockVue {title="Chip Group Multiple Selection" file="./docs/components/chips/js/chip-group-3.js"}
 
 ```vue
 <template>
-  <div class="card p-3 border-0">
+  <div class="demo-wrapper w-full">
     <bs-chip-group
       v-model="selectedMultiple1"
       :items="chipItems2"
-      active-class="bg-green lighten-3 border-light-green"
+      active-class="chip-primary active"
       column
       multiple
     />
@@ -122,6 +123,7 @@ const chipItems2: TChipOptionItem[] = [
   { text: 'Work' }
 ];
 </script>
+
 ```
 :::
 
@@ -134,34 +136,30 @@ alternative to toggle buttons or checkboxes. Use `checked-icon` property to enab
 feature. Additionally, you can use `active-class` property to change the appearance
 of the selected chips.
 
-::: BlockVue {title="Filter ChipGroup Example" file="./docs/components/scripts/chip-group-4.js"}
+::: BlockVue {title="Filter Chips" file="./docs/components/chips/js/chip-group-4.js"}
 
 ```vue
 <template>
-  <bs-card border-off>
-    <bs-card-body>
-      <div class="lead md-fw-semibold mb-2">Choose amenities</div>
-      <bs-chip-group
-        v-model="selectedAmenities1"
-        :items="amenities1"
-        active-class="md-chip-default-color"
-        checked-icon
-        column
-      />
-    </bs-card-body>
-    <bs-divider></bs-divider>
-    <bs-card-body>
-      <div class="lead md-fw-semibold mb-2">Choose neighborhoods</div>
-      <bs-chip-group
-        v-model="selectedNeighborhoods1"
-        :items="neighborhoods1"
-        color="primary"
-        checked-icon
-        column
-        outlined
-      />
-    </bs-card-body>
-  </bs-card>
+  <div class="demo-wrapper w-full p-3">
+    <div class="h4 mb-3">Choose amenities</div>
+    <bs-chip-group
+      v-model="selectedAmenities1"
+      :items="amenities1"
+      active-class="chip-default active"
+      checked-icon
+      column>
+    </bs-chip-group>
+    <bs-divider class="my-3"></bs-divider>
+    <div class="h4 mb-3">Choose neighborhoods</div>
+    <bs-chip-group
+      v-model="selectedNeighborhoods1"
+      :items="neighborhoods1"
+      color="primary"
+      checked-icon
+      column
+      outlined>
+    </bs-chip-group>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -187,6 +185,7 @@ const neighborhoods1: TChipOptionItem[] = [
   { text: 'Kennedy Park' }
 ];
 </script>
+
 ```
 :::
 
@@ -196,35 +195,32 @@ const neighborhoods1: TChipOptionItem[] = [
 Additionally, each chips can also has avatar. This can be achieved by providing the
 `imgSrc` on the chips data source.
 
-::: BlockVue {title="Filter ChipGroup Example" file="./docs/components/scripts/chip-group-5.js"}
+::: BlockVue {title="Filter Chips - Enabling Avatar" file="./docs/components/chips/js/chip-group-5.js"}
 
 ```vue
 <template>
-  <bs-card border-off>
-    <bs-card-body>
-      <div class="lead md-fw-semibold mb-2">Choose amenities</div>
+    <div class="demo-wrapper w-full p-3">
+      <div class="h4 mb-3">Choose amenities</div>
       <bs-chip-group
         v-model="selectedAmenities2"
         :items="amenities2"
-        active-class="md-chip-deep-purple active"
+        active-class="bg-midnight-haze-400 border border-midnight-haze text-white"
         checked-icon
-        column
-      />
-    </bs-card-body>
-    <bs-divider></bs-divider>
-    <bs-card-body>
-      <div class="lead md-fw-semibold mb-2">Choose neighborhoods</div>
+        column>
+      </bs-chip-group>
+    <bs-divider class="my-3"></bs-divider>
+      <div class="h4 mb-3">Choose neighborhoods</div>
       <bs-chip-group
         v-model="selectedNeighborhoods2"
         :items="neighborhoods2"
-        color="purple"
+        active-class="bg-midnight-haze-400 border border-midnight-haze text-white"
+        color="default"
         checked-icon
         column
         img-circle
-        outlined
-      />
-    </bs-card-body>
-  </bs-card>
+        outlined>
+      </bs-chip-group>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -250,6 +246,7 @@ const neighborhoods2: TChipOptionItem[] = [
   { text: 'Kennedy Park', imgSrc: 'https://ahmadfajar.github.io/img/kitty-1.jpg' }
 ];
 </script>
+
 ```
 :::
 
@@ -261,15 +258,15 @@ but still wants to keep it within a single row. When enabled, it creates a visua
 like slide carousel. _Left and right arrows button_ is provided as a navigation functionality.
 To enable this feature, use the `slider-button` property explicitly.
 
-::: BlockVue {title="Sliding ChipGroup Example" file="./docs/components/scripts/chip-group-6.js"}
+::: BlockVue {title="Chip Group Sliding" file="./docs/components/chips/js/chip-group-6.js"}
 
 ```vue
 <template>
-  <div class="card p-3 border-0">
+  <div class="demo-wrapper w-full">
     <bs-chip-group
       v-model="selectedMultiple2"
       :items="chipItems2"
-      active-class="md-chip-deep-purple active"
+      active-class="chip-default active"
       slider-button
       multiple
     />
@@ -293,61 +290,62 @@ const chipItems2: TChipOptionItem[] = [
   { text: 'Work' }
 ];
 </script>
+
 ```
 :::
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="bg-gray-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | active-class  | `String`  |  | Custom css class to apply when the chip's item is in `active` state. See [Color Variants](/reference/colors) for more information. |
-| color         | `String`  | `'grey'`| Default chip's item color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
+| close-button-color | `String` | | Apply custom color to the **close button**. <MdBadge color="info">v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`. `light` and `dark`. |
+| color         | `String`  | `'secondary'`| The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info` and `light`. |
 | checked-icon  | `Boolean` | `false` | Enable filter chip mode and show checked icon on the selected chip. |
 | column        | `Boolean` | `false` | Enable multi rows if total width of items beyond the container width. |
 | img-circle    | `Boolean` | `false` | Create chip item's avatar with circle shape. |
-| img-padding <Badge type="warning">deprecated</Badge> | `Boolean`  | `true` | Use `img-padding-off` property instead. |
-| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.4</BsBadge> |
+| img-padding-off | `Boolean` | `false` | Adjust avatar size to match the component height by eliminating the margin around the avatar. <MdBadge color="info">v2.0.4</MdBadge> |
 | items         | `TChipOptionItem[]` |  | The data source to create the collection of `<BsChip>`. |
-| model-value <Badge type="tip">v-model</Badge> | `TChipValue`&#124;`TChipValue[]`&#124;`null` |  | The value monitored by `v-model`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `TChipValue`&#124;`TChipValue[]`&#124;`null` |  | The value monitored by `v-model`. <MdBadge color="info">v2.0.0</MdBadge> |
 | multiple     | `Boolean`  | `false`  | Allow multiple selection or not. |
 | outlined     | `Boolean`  | `false` | Enable ***outlined*** chip style. |
 | pill         | `Boolean`  | `false` | Enable ***rounded-pill*** chip style. |
 | size         | `String`   |   | Create chip's item with predefined size. Valid values are: `sm` (small), `lg` (large). |
-| slider-button | `Boolean` | `false` | Show slider's button or not. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
-| slider-button-color | `String` | `'secondary'` | Slider button color appearance. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| slider-button | `Boolean` | `false` | Show slider's button or not. <MdBadge color="info">v2.0.0</MdBadge> |
+| slider-button-color | `String` | `'secondary'` | Slider button color appearance. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | change | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers immediately when the `model-value` property is changed. |
-| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
-| update:model-value | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers when the `model-value` property is updated. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.0</BsBadge> |
+| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers when the `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name  | Description  |
 |-------|--------------|
-| text  | The outlet slot used to place the chip's item text. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.1</BsBadge> |
-| icon  | The outlet slot used to place custom icon. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">v2.0.1</BsBadge> |
+| text  | The outlet slot used to place the chip's item text. <MdBadge color="info">v2.0.1</MdBadge> |
+| icon  | The outlet slot used to place custom icon. <MdBadge color="info">v2.0.1</MdBadge> |
 
 </div>
   </BsTab>
 </BsTabs>
 
 
-### TChipOptionItem {#api-chip-option-item class="mt-lg-5"}
+### TChipOptionItem {#api-reference-chip-option-item class="mt-lg-5"}
 
 The Chip's item has properties as described below:
 
@@ -362,12 +360,12 @@ The Chip's item has properties as described below:
 | disabled | `Boolean`  | `<BsChip>` element state. |
 | dismissible | `Boolean`  | Enable dismissible `<BsChip>`. |
 | href   | `String`  | Render `<BsChip>` as `<a>` element and define its `href` property and apply chip styles to the `<a>` element. |
-| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the `<BsChip>`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the `<BsChip>`. <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| iconVariant | `String`  | Predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="rgba-light-blue-light text-dark dark:text-light!">Updated on v2.1.0</BsBadge> |
+| iconVariant | `String`  | Predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">v2.1.0</MdBadge> |
 | imgSrc | `String`  | `<BsChip>` avatar image source url. |
 
 </div>

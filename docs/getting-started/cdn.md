@@ -4,6 +4,7 @@
 Use CDN resources to use Vue MDBootstrap as web components to build a web page.
 :::
 
+<SmallNote color="teal">Updated on v2.2.0</SmallNote>
 
 ## CDN Links
 

@@ -46,7 +46,7 @@ export default defineConfig({
 
             return openTag + template;
           } else {
-            return `</${componentTag}>\n'`;
+            return `</${componentTag}>\n`;
           }
         },
       });

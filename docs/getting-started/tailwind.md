@@ -6,6 +6,7 @@ and leverage **TailwindCSS v4** CSS framework to build responsive and mobile-fri
 apps faster. 
 ::: 
 
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
 
 ## Install Components
 
