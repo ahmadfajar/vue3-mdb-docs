@@ -179,7 +179,7 @@ ${props.stackblitz.style || tplStyles.join('\n')}
 
 .shoutbox-content {
   background-color: var(--shoutbox-content-bg);
-  padding: 1.5rem;
+  padding: 1.5rem 0.5rem;
 
   .md-side-drawer {
     .nav {
@@ -192,6 +192,7 @@ ${props.stackblitz.style || tplStyles.join('\n')}
   @media (min-width: 590px) {
     border-bottom-left-radius: var(--shoutbox-border-radius);
     border-bottom-right-radius: var(--shoutbox-border-radius);
+    padding: 1.5rem;
   }
 }
 </style>

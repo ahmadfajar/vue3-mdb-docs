@@ -42,8 +42,7 @@ Released: February 02, 2026
 - **BsCardMedia**: 
   - Decouple from Bootstrap card CSS.
   - Add slots: `title` and `subtitle`. 
-- **BsCheckbox**, **BsRadio**, **BsSwitch**, **BsNumericField**, **BsTextField**,
-  **BsTextArea**: 
+- **BsCheckbox**, **BsRadio**, **BsSwitch**: 
   - Provide `data-*` attributes when rendering html.
 - **BsCheckboxGroup**, **BsRadioGroup**: 
   - Add property `persistentHelpOff`.
@@ -105,6 +104,9 @@ Released: February 02, 2026
   - Fix modal is closed when the modal dialog body is clicked.
   - Integrate with global CSS variables.
 - **BsNotification**: improve close button.
+- **BsNumericField**, **BsTextField**, **BsTextArea**: 
+  - Add property `persistentHelpOff`.
+  - Provide `data-*` attributes when rendering html. 
 - **BsPopover**: 
   - Improve animation transition and scroll event.
   - Integrate with global CSS variables.
@@ -130,9 +132,6 @@ Released: February 02, 2026
 - **BsCheckboxGroup**, **BsRadioGroup**, **BsChipField**: 
   - Remove deprecated property `externalValidator`.
 - **BsChip**, **BsChipGroup**: remove deprecated property `imgPadding`.
-- **BsTextArea**, **BsTextField**, **BsToggleField**: 
-  - Remove deprecated property `externalValidator`.
-  - Remove `flat` property.
 - **BsCombobox**: 
   - Remove deprecated properties: `externalValidator`, `checkOptionColor`, `checkOptionPosition`, `popoverMaxHeight`, `popoverMinHeight`.
 - **BsDateTimeField**: 
@@ -150,6 +149,9 @@ Released: February 02, 2026
   - Remove deprecated property: `externalValidator`.
   - Remove properties: `spinButton`, `spinButtonPlacement`, `flat`.
   - Change the type of `actionButton` property to `string` to accommodate **up/down** and **plus/minus** buttons.
+- **BsTextArea**, **BsTextField**, **BsToggleField**: 
+  - Remove deprecated property `externalValidator`.
+  - Remove `flat` property.
 - **BsToggleButton**: remove `flat` property.
 
 
