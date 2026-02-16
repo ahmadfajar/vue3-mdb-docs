@@ -22,7 +22,7 @@ create two-way data bindings on the `model-value` property.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field>
       <label class="col-md-3 col-form-label">Text Field</label>
     </bs-text-field>
@@ -58,7 +58,7 @@ by using `floating-label` property explicitly.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-field>
@@ -85,7 +85,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field filled>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-field>
@@ -113,7 +113,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field outlined>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-field>
@@ -142,7 +142,7 @@ Combine `filled` property and `rounded` property explicitly to enable `<bs-text-
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field filled rounded>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-field>
@@ -171,7 +171,7 @@ Combine `outlined` property and `rounded` property explicitly to enable `<bs-tex
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field outlined rounded>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-field>
@@ -197,7 +197,7 @@ The `autocomplete` property gives you the option to enable browser to predict th
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field autocomplete="name" filled floating-label>
       <label>Full Name</label>
     </bs-text-field>
@@ -222,7 +222,7 @@ auto-complete, allowing existing values to be chosen, or new values to be entere
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field datalist="my-datalist" filled floating-label>
       <label>Sizes</label>
     </bs-text-field>
@@ -256,7 +256,7 @@ Define the `clear-button` property explicitly, so that the field value can be cl
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-field v-model="fieldValue1" clear-button filled floating-label>
       <label>Text Field</label>
     </bs-text-field>
@@ -288,7 +288,7 @@ visible only when the text field is focused.
 
 ```vue
 <template>
-  <div class="w-full p-3 p-sm-0">
+  <div class="w-full p-2">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
@@ -359,7 +359,7 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 
 ```vue
 <template>
-  <div class="w-full p-3 p-sm-0">
+  <div class="w-full p-2">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
@@ -466,7 +466,7 @@ text _before_ or _after_ the input field.
 
 ```vue
 <template>
-  <div class="w-full p-3 p-sm-0">
+  <div class="w-full p-2">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
@@ -527,7 +527,7 @@ with form validation.
 
 ```vue
 <template>
-  <bs-app class="p-3">
+  <bs-app class="p-2">
     <bs-card class="mobi-card mx-auto" shadow>
       <bs-appbar class="bg-indigo">
         <bs-button color="light" icon="arrow_back" mode="icon" flat></bs-button>

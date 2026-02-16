@@ -23,7 +23,7 @@ property is used as data source to create the chips.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <bs-chip-group v-model="selectedChips1" :items="chipItems1" />
   </div>
 </template>
@@ -54,7 +54,7 @@ property to wrap chip items.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <bs-chip-group
       v-model="selectedChips2"
       :items="chipItems2"
@@ -95,7 +95,7 @@ enable multiple selection mode.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <bs-chip-group
       v-model="selectedMultiple1"
       :items="chipItems2"
@@ -140,7 +140,7 @@ of the selected chips.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full p-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <div class="h4 mb-3">Choose amenities</div>
     <bs-chip-group
       v-model="selectedAmenities1"
@@ -199,7 +199,7 @@ Additionally, each chips can also has avatar. This can be achieved by providing 
 
 ```vue
 <template>
-    <div class="demo-wrapper w-full p-3">
+    <div class="demo-wrapper w-full p-sm-2">
       <div class="h4 mb-3">Choose amenities</div>
       <bs-chip-group
         v-model="selectedAmenities2"

@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A form field component with a group of buttons with toggle capabilities and validation. It is primarily used to visualize choices with different approach. 
+description: Toggle Field is a form field component with a group of buttons with toggle capabilities and validation. It is primarily used to visualize choices with different approach. 
 ---
 
 
@@ -26,7 +26,7 @@ on the `model-value` property. This is useful to control or maintain the `model-
 
 <SmallNote color="teal">Updated on v2.0.0</SmallNote> 
 
-::: BlockVue {title="Toggle Field Example" file="./docs/components/scripts/toggle-button-1.js"}
+::: BlockVue {title="Toggle Field Example" file="./docs/components/buttons/js/toggle-button-1.js"}
 
 ```vue
 <template>
@@ -95,7 +95,7 @@ With the help of slot `icon` you can add dynamic checked icon.
 
 <SmallNote color="teal">Added since v2.0.1</SmallNote>
 
-::: BlockVue {title="Toggle Field with checked icon example" file="./docs/components/scripts/toggle-button-2.js"}
+::: BlockVue {title="Toggle Field with checked icon example" file="./docs/components/buttons/js/toggle-button-2.js"}
 
 ```vue
 <template>
@@ -138,7 +138,7 @@ const favoriteDrinks = [
 **BsToggleField** also support multiple selection mode. Use and define the 
 `multiple` property explicitly to enable multiple selection mode. 
 
-::: BlockVue {title="Toggle Field with multiple selection example" file="./docs/components/scripts/toggle-button-3.js"}
+::: BlockVue {title="Toggle Field with multiple selection example" file="./docs/components/buttons/js/toggle-button-3.js"}
 
 ```vue
 <template>
@@ -215,7 +215,7 @@ and change the icon dynamically like a segmented buttons behaves.
 
 <SmallNote color="teal">Updated on v2.0.1</SmallNote>
 
-::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/scripts/toggle-button-4.js"}
+::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/buttons/js/toggle-button-4.js"}
 
 ```vue
 <template>
@@ -298,7 +298,7 @@ const weathers: TInputOptionItem[] = [
 
 ### Combination {class="mt-lg-5"}
 
-::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/scripts/toggle-button-6.js"}
+::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/buttons/js/toggle-button-6.js"}
 
 ```vue
 <template>
@@ -420,7 +420,7 @@ The `help-text` property on `<bs-toggle-field>` adds the provided string beneath
 *Toggle Field*. And sets the `persistent-help-text` property to `false` to make the 
 help text visible when the *Toggle Field* is focused or hovered.
 
-::: BlockVue {title="Toggle Field Help Text" file="./docs/components/scripts/toggle-field-1.js"}
+::: BlockVue {title="Toggle Field Help Text" file="./docs/components/inputs/js/toggle-field-1.js"}
 
 ```vue
 <template>
@@ -501,7 +501,7 @@ const favoriteCoffees: TInputOptionItem[] = [
 The following is an example that demonstrate more advanced use of the `<bs-toggle-field>` 
 with form validation.
 
-::: BlockVuelidate {title="Toggle Field advanced example" file="./docs/components/scripts/toggle-field-2.js"}
+::: BlockVuelidate {title="Toggle Field advanced example" file="./docs/components/inputs/js/toggle-field-2.js"}
 
 ```vue
 <template>
@@ -699,7 +699,7 @@ function submit(notification: INotificationProvider) {
 
 The component css variables inherited from [BsButton](/components/buttons/button#css-variables) css variables.
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## API Reference
 

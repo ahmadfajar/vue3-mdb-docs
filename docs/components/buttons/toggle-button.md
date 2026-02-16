@@ -32,7 +32,7 @@ on the `model-value` property. This is useful to control or maintain the `model-
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">What are you drinking?</h5>
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Normal state</label>
@@ -97,7 +97,7 @@ With the help of slot `icon` you can add dynamic checked icon.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full py-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <div class="row">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
@@ -144,7 +144,7 @@ const favoriteDrinks: TInputOptionItem[] = [
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full py-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <div class="row mb-3">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <div class="col-md">
@@ -222,7 +222,7 @@ and change the icon dynamically like a segmented buttons behaves.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="row mb-4">
       <label class="col-md-3 col-form-label">Filled</label>
@@ -305,7 +305,7 @@ const weathers: TInputOptionItem[] = [
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="row mb-4">
       <label class="col-md-3 col-form-label">Filled Round</label>
@@ -410,7 +410,7 @@ The following is an example that demonstrate more advanced use of the `<bs-toggl
 
 ```vue
 <template>
-  <bs-app class="p-3">
+  <bs-app class="p-2">
     <bs-card class="mobi-card mx-auto" border-off shadow>
       <bs-appbar class="bg-default-color">
         <bs-button color="light" icon="arrow_back" mode="icon" flat></bs-button>
@@ -527,6 +527,12 @@ const albums = [
 ```
 :::
 
+
+## CSS Variables
+
+The component css variables inherited from [BsButton](/components/buttons/button#css-variables) css variables.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## API Reference
 

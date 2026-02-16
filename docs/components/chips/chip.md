@@ -24,7 +24,7 @@ triggers action.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2 p-sm-2">
     <bs-chip color="default">Default</bs-chip>
     <bs-chip color="primary">Primary</bs-chip>
     <bs-chip color="secondary">Secondary</bs-chip>
@@ -69,7 +69,7 @@ also render as `<a>` element by providing `href` attribute value.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2 p-sm-2">
     <bs-chip color="default" href="#element-type">Default</bs-chip>
     <bs-chip color="primary" href="#element-type">Primary</bs-chip>
     <bs-chip color="secondary" href="#element-type">Secondary</bs-chip>
@@ -96,7 +96,7 @@ based on Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2 p-sm-2">
     <bs-chip color="default">Default</bs-chip>
     <bs-chip color="primary">Primary</bs-chip>
     <bs-chip color="secondary">Secondary</bs-chip>
@@ -120,7 +120,7 @@ You can create chip with rounded-pill style by defining the `pill` property expl
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2 p-sm-2">
     <bs-chip color="default" pill>Default</bs-chip>
     <bs-chip color="primary" pill>Primary</bs-chip>
     <bs-chip color="secondary" pill>Secondary</bs-chip>
@@ -143,7 +143,7 @@ You can create chip with outlined style by defining the `outlined` property expl
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-y-2 p-sm-2">
     <bs-chip color="default" outlined>Default</bs-chip>
     <bs-chip color="primary" outlined>Primary</bs-chip>
     <bs-chip color="secondary" outlined>Secondary</bs-chip>
@@ -726,7 +726,7 @@ dismissible chip, because when the chip is closed, the variable will be updated.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex">
+  <div class="demo-wrapper w-full flex p-sm-2">
     <bs-button 
       color="default" 
       style="width: 130px"

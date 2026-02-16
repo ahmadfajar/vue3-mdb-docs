@@ -423,7 +423,7 @@ effect. Example below will shows you how to do it.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-wrap md-gap-5">
+  <div class="demo-wrapper w-full flex flex-wrap md-gap-5 p-sm-2">
     <bs-button raised rounded>Rounded Elevated</bs-button>
     <bs-button color="primary" outlined raised rounded>Outlined Rounded Elevated</bs-button>
     <bs-button color="primary" tonal rounded>Tonal Rounded</bs-button>
@@ -573,7 +573,7 @@ Example below, demonstrate the built-in icon animation and the use of `icon` slo
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full">
+  <div class="demo-wrapper w-full p-sm-2">
     <div class="row row-cols-auto g-3">
       <div class="col flex items-center">
         <bs-button size="xs">Extra Small</bs-button>
@@ -1227,7 +1227,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ```vue
 <template>
-  <div class="demo-wrapper">
+  <div class="demo-wrapper p-2">
     <bs-card 
       class="bg-yellow-50 dark:bg-yellow/85 mobi-card" 
       img-top-src="/img/pork-buns.jpg"
@@ -1263,7 +1263,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ```vue
 <template>
-  <bs-app class="demo-wrapper p-3">
+  <bs-app class="p-2">
     <bs-card class="mobi-card mx-auto" shadow>
       <bs-appbar class="bg-default-color">
         <bs-button color="light" icon="arrow_back" mode="icon" flat></bs-button>

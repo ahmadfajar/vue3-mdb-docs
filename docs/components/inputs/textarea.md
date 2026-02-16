@@ -22,7 +22,7 @@ on the `model-value` property as in `v-model="myText"`.
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <div class="mb-3">
       <bs-text-area v-model="myText">
         <label class="col-md-3 col-form-label">Text Area</label>
@@ -66,7 +66,7 @@ by using `floating-label` property explicitly.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-area>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-area>
@@ -93,7 +93,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-area filled>
       <label class="col-sm-3 col-form-label">Classic Field</label>
     </bs-text-area>
@@ -121,7 +121,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="w-full flex flex-col md-gap-5 p-3">
+  <div class="w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-text-area outlined>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-text-area>
@@ -147,7 +147,7 @@ The `autocomplete` property gives you the option to enable browser to predict th
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area autocomplete="address" filled floating-label>
       <label>Address</label>
     </bs-text-area>
@@ -166,7 +166,7 @@ Define the `clear-button` property explicitly, so that the field value can be cl
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area clear-button filled floating-label>
       <label>Address</label>
     </bs-text-area>
@@ -189,7 +189,7 @@ or shrink to fit the content.
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area v-model="textArea1" auto-grow filled floating-label>
       <label>Field Label</label>
     </bs-text-area>
@@ -215,7 +215,7 @@ of pixels, and the component will have a fixed height.
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area row-height="70" filled floating-label>
       <label>Field Label</label>
     </bs-text-area>
@@ -235,7 +235,7 @@ number of rows. If no value is provided then it will default to `2`.
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area rows="4" filled floating-label>
       <label>Field Label</label>
     </bs-text-area>
@@ -255,7 +255,7 @@ To disable this feature, explicitly define the `no-resize` property.
 
 ```vue
 <template>
-  <div class="w-full p-3">
+  <div class="w-full p-2 p-md-3">
     <bs-text-area rows="3" no-resize filled floating-label>
       <label>Field Label</label>
     </bs-text-area>
@@ -278,7 +278,7 @@ visible only when the TextArea field is focused.
 
 ```vue
 <template>
-  <div class="w-full p-3 p-sm-0">
+  <div class="w-full p-2">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
@@ -348,7 +348,7 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 
 ```vue
 <template>
-  <div class="w-full p-3 p-sm-0">
+  <div class="w-full p-2">
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
@@ -453,7 +453,7 @@ with form validation.
 
 ```vue
 <template>
-  <bs-app class="w-full p-3">
+  <bs-app class="p-2">
     <bs-card class="mobi-card w-full mx-auto" shadow>
       <bs-appbar class="bg-default-color">
         <bs-button color="light" icon="arrow_back" mode="icon" flat></bs-button>
