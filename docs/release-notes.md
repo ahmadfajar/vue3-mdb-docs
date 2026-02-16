@@ -120,8 +120,11 @@ Released: February 02, 2026
   - Decouple from Bootstrap CSS.
   - Add slot `append-header`.
   - Small improvement.
-- **BsToggleButton**, **BsToggleField**: 
+- **BsToggleButton**: 
   - Add properties: `pillOff`, `iconSize`.
+  - Provide `data-*` attributes when rendering HTML.
+- **BsToggleField**: 
+  - Add properties: `pillOff`, `iconSize` and `persistentHelpOff`.
   - Provide `data-*` attributes when rendering HTML.
 - **BsTooltip**: improve animation, inner padding, border radius and CSS variables.
 - **CacheManager**: improve performance using sessionStorage if available
@@ -149,10 +152,18 @@ Released: February 02, 2026
   - Remove deprecated property: `externalValidator`.
   - Remove properties: `spinButton`, `spinButtonPlacement`, `flat`.
   - Change the type of `actionButton` property to `string` to accommodate **up/down** and **plus/minus** buttons.
-- **BsTextArea**, **BsTextField**, **BsToggleField**: 
+  - Mark `persistent-help-text` property as **deprecated**.
+- **BsTextArea**, **BsTextField**: 
   - Remove deprecated property `externalValidator`.
   - Remove `flat` property.
-- **BsToggleButton**: remove `flat` property.
+  - Mark `persistent-help-text` property as **deprecated**.
+- **BsToggleButton**: 
+  - Remove `flat` property.
+  - Mark `pill` property as **deprecated**.
+- **BsToggleField**: 
+  - Remove deprecated property `externalValidator`.
+  - Remove `flat` property.
+  - Mark properties: `persistent-help-text` and `pill` as **deprecated**.
 
 
 ## v2.1.7

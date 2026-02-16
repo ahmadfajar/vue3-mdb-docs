@@ -55,7 +55,7 @@ on the `model-value` property. This is useful to control or maintain the `model-
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
@@ -75,7 +75,8 @@ const drinks: TInputOptionItem[] = [
     label: "Beer",
   },
 ];
-</script>
+</script> 
+
 ```
 :::
 
@@ -92,23 +93,23 @@ const drinks: TInputOptionItem[] = [
 
 With the help of slot `icon` you can add dynamic checked icon.
 
-<SmallNote color="teal">Added since v2.0.1</SmallNote>
+<SmallNote color="teal">Added in v2.0.1</SmallNote>
 
-::: BlockVue {title="Toggle Field with checked icon example" file="./docs/components/buttons/js/toggle-button-2.js"}
+::: BlockVue {title="Toggle Field Checked Icon" file="./docs/components/buttons/js/toggle-button-2.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <bs-toggle-field v-model="favoriteDrink" :items="favoriteDrinks">
       <label class="col-md-3 col-form-label">Favorite Drink</label>
       <template #icon="item">
-        <bs-icon-svg v-if="item?.value === favoriteDrink" icon="check"></bs-icon-svg>
+        <bs-svg-icon v-if="item?.value === favoriteDrink" icon="check"></bs-svg-icon>
       </template>
     </bs-toggle-field>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
@@ -127,7 +128,8 @@ const favoriteDrinks = [
     label: "Beer",
   },
 ];
-</script>
+</script> 
+
 ```
 :::
 
@@ -141,28 +143,22 @@ const favoriteDrinks = [
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
-    <div class="mb-3">
-      <bs-toggle-field 
-        v-model="favoriteDrink1" 
-        :items="favoriteDrinks" 
-        color="default-color" 
-        multiple>
-        <label class="col-md-3 col-form-label">Favorite Drink</label>
-      </bs-toggle-field>  
-    </div>
-    <div class="mb-2">
-      <bs-toggle-field 
-        v-model="favoriteDrink2" 
-        :items="favoriteCoffees" 
-        color="default-color" 
-        multiple>
-        <label class="col-md-3 col-form-label">Favorite Coffee</label>
-        <template #icon="item">
-          <bs-icon-svg v-if="favoriteDrink2.includes(item?.value)" icon="check"></bs-icon-svg>
-        </template>
-      </bs-toggle-field>
-    </div>
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-sm-2">
+    <bs-toggle-field 
+      v-model="favoriteDrink1" 
+      :items="favoriteDrinks" 
+      multiple>
+      <label class="col-md-3 col-form-label">Favorite Drink</label>
+    </bs-toggle-field>  
+    <bs-toggle-field 
+      v-model="favoriteDrink2" 
+      :items="favoriteCoffees" 
+      multiple>
+      <label class="col-md-3 col-form-label">Favorite Coffee</label>
+      <template #icon="item">
+        <bs-svg-icon v-if="favoriteDrink2.includes(item?.value)" icon="check"></bs-svg-icon>
+      </template>
+    </bs-toggle-field>
   </div>
 </template>
 
@@ -201,6 +197,7 @@ const favoriteCoffees: TInputOptionItem[] = [
   },
 ];
 </script>
+
 ```
 :::
 
@@ -212,58 +209,50 @@ based on Google **Material Design 3** specifications. Example below show various
 built-in style variants and demonstrate how to put an icon inside the `<bs-toggle-field>`
 and change the icon dynamically like a segmented buttons behaves.
 
-<SmallNote color="teal">Updated on v2.0.1</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/buttons/js/toggle-button-4.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather1" :items="weathers" color="deep-purple">
+      <bs-toggle-field v-model="selectedWeather1" :items="weathers" color="primary">
         <label class="col-md-3 col-form-label">Filled</label>  
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather1 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather1 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
     <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather2" :items="weathers" color="deep-purple" raised>
+      <bs-toggle-field v-model="selectedWeather2" :items="weathers" color="primary" raised>
         <label class="col-md-3 col-form-label">Filled Elevated</label>  
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather2 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather2 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
     <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather3" :items="weathers" color="deep-purple" tonal>
+      <bs-toggle-field v-model="selectedWeather3" :items="weathers" color="primary" tonal>
         <label class="col-md-3 col-form-label">Filled Tonal</label>
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather3 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather3 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
     <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather4" :items="weathers" color="deep-purple" outlined>
+      <bs-toggle-field v-model="selectedWeather4" :items="weathers" color="primary" outlined>
         <label class="col-md-3 col-form-label">Outlined</label>  
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather4 ? 'check' : item.icon"></bs-icon-svg>
-        </template>
-      </bs-toggle-field>
-    </div>
-    <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather5" :items="weathers" color="deep-purple" flat>
-        <label class="col-md-3 col-form-label">Flat</label>  
-        <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather5 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather4 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
@@ -292,28 +281,27 @@ const weathers: TInputOptionItem[] = [
   },
 ];
 </script>
+
 ```
 :::
 
-### Combination {class="mt-lg-5"}
+### Combination {#style-variants-combination class="mt-lg-5"}
 
-::: BlockVue {title="Toggle Field Style Variants" file="./docs/components/buttons/js/toggle-button-6.js"}
+::: BlockVue {title="Toggle Field Style Variants - Combination" file="./docs/components/buttons/js/toggle-button-6.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">How is the weather today?</h5>
     <div class="mb-3">
       <bs-toggle-field 
         v-model="selectedWeather6" 
         :items="weathers" 
-        :pill="false" 
-        color="deep-purple" 
         rounded
       >
         <label class="col-md-3 col-form-label">Filled Round</label>
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather6 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather6 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
@@ -321,12 +309,11 @@ const weathers: TInputOptionItem[] = [
       <bs-toggle-field 
         v-model="selectedWeather7" 
         :items="weathers" 
-        :pill="false"
-        color="deep-purple" 
+        pill-off
       >
         <label class="col-md-3 col-form-label">Filled Rectangle</label>
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather7 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather7 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
@@ -334,14 +321,12 @@ const weathers: TInputOptionItem[] = [
       <bs-toggle-field 
         v-model="selectedWeather8" 
         :items="weathers" 
-        :pill="false" 
-        color="deep-purple" 
         rounded 
         tonal
       >
         <label class="col-md-3 col-form-label">Filled Round Tonal</label>
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather8 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather8 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
@@ -349,36 +334,19 @@ const weathers: TInputOptionItem[] = [
       <bs-toggle-field 
         v-model="selectedWeather9" 
         :items="weathers" 
-        :pill="false" 
-        color="deep-purple" 
         outlined 
         rounded
       >
-        <label class="col-md-3 col-form-label">Outlined Round</label>
+        <label class="col-md-3 col-form-label">Outlined Rounded</label>
         <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather9 ? 'check' : item.icon"></bs-icon-svg>
-        </template>
-      </bs-toggle-field>
-    </div>
-    <div class="mb-3">
-      <bs-toggle-field 
-        v-model="selectedWeather10" 
-        :items="weathers" 
-        :pill="false" 
-        color="deep-purple" 
-        flat 
-        rounded
-      >
-        <label class="col-md-3 col-form-label">Flat Round</label>
-        <template #icon="item">
-          <bs-icon-svg :icon="item?.value === selectedWeather10 ? 'check' : item.icon"></bs-icon-svg>
+          <bs-svg-icon :icon="item?.value === selectedWeather9 ? 'check' : item?.icon"></bs-svg-icon>
         </template>
       </bs-toggle-field>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
@@ -407,6 +375,7 @@ const weathers: TInputOptionItem[] = [
   },
 ];
 </script>
+
 ```
 :::
 
@@ -416,20 +385,19 @@ const weathers: TInputOptionItem[] = [
 ## Help Text
 
 The `help-text` property on `<bs-toggle-field>` adds the provided string beneath the 
-*Toggle Field*. And sets the `persistent-help-text` property to `false` to make the 
+*Toggle Field*. And define the `persistent-help-off` property explicitly to make the 
 help text visible when the *Toggle Field* is focused or hovered.
 
 ::: BlockVue {title="Toggle Field Help Text" file="./docs/components/inputs/js/toggle-field-1.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">Persistent help text</h5>
     <div class="mb-4">
       <bs-toggle-field 
         v-model="todayWheather" 
         :items="weathers" 
-        color="blue"
         help-text="Select a wheather for today">
         <label class="col-md-3 col-form-label">
           Wheather Today
@@ -437,22 +405,19 @@ help text visible when the *Toggle Field* is focused or hovered.
       </bs-toggle-field>
     </div>
     <h5 class="mb-4">Non-persistent help text</h5>
-    <div class="mb-3">
-      <bs-toggle-field 
-        v-model="selectedCoffee" 
-        :items="favoriteCoffees" 
-        :persistent-help-text="false" 
-        color="deep-purple"
-        help-text="Select one of the options above as your favorite coffee">
-        <label class="col-md-3 col-form-label">
-          Favorite Coffee
-        </label>
-      </bs-toggle-field>
-    </div>
+    <bs-toggle-field 
+      v-model="selectedCoffee" 
+      :items="favoriteCoffees" 
+      persistent-help-off
+      help-text="Select one of the options above as your favorite coffee">
+      <label class="col-md-3 col-form-label">
+        Favorite Coffee
+      </label>
+    </bs-toggle-field>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import type { TInputOptionItem } from "vue-mdbootstrap";
 
@@ -500,17 +465,17 @@ const favoriteCoffees: TInputOptionItem[] = [
 The following is an example that demonstrate more advanced use of the `<bs-toggle-field>` 
 with form validation.
 
-::: BlockVuelidate {title="Toggle Field advanced example" file="./docs/components/inputs/js/toggle-field-2.js"}
+::: BlockVuelidate {title="Toggle Field Usage" file="./docs/components/inputs/js/toggle-field-2.js"}
 
 ```vue
 <template>
-  <bs-app class="my-demo-wrapper mx-auto" style="max-width:460px">
-    <bs-card shadow>
+  <bs-app class="p-2">
+    <bs-card class="mobi-card mx-auto" shadow>
       <bs-appbar class="bg-indigo">
-        <bs-button color="light-grey" icon="arrow_back" mode="icon" flat></bs-button>
-        <bs-appbar-title class="text-white" title="Survey Form"></bs-appbar-title>
+        <bs-button color="light" icon="arrow_back" mode="icon" flat></bs-button>
+        <bs-appbar-title class="text-light" title="Survey Form"></bs-appbar-title>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey" icon="more_vert" mode="icon" flat></bs-button>
+        <bs-button color="light" icon="more_vert" mode="icon" flat></bs-button>
       </bs-appbar>  
       <bs-card-body>
         <form novalidate>
@@ -548,13 +513,14 @@ with form validation.
               v-model="surveyForm.favoriteDrink" 
               :items="favoriteDrinks" 
               :validator="favoriteValidator"
-              color="deep-purple" 
+              color="primary"
+              tonal
               required>
               <label class="col-form-label">Favorite Drink:</label>
               <template #icon="item">
-                <bs-icon-svg 
+                <bs-svg-icon 
                   v-if="item?.value === surveyForm.favoriteDrink" icon="check">
-                </bs-icon-svg>
+                </bs-svg-icon>
               </template>
             </bs-toggle-field>
           </div>
@@ -563,25 +529,23 @@ with form validation.
               v-model="surveyForm.occupation" 
               :items="occupations" 
               :validator="occupationValidator"
-              color="deep-purple" 
+              color="primary"
               column="1" 
               required>
               <label class="col-form-label">Occupation:</label>
             </bs-radio-group>
           </div>
-          <div class="d-grid gap-3">
-            <bs-button color="indigo" @click="submit($notification)">
-              <div
+          <div class="d-grid md-gap-3">
+            <bs-button @click="submit($notification)">
+              <bs-spin-loader
                 v-if="loading"
-                class="spinner-border"
                 role="status"
-                style="width: 24px; height: 24px; border-width: 3px"
-              >
-                <span class="visually-hidden">Loading...</span>
-              </div>
+                size="24"
+                thickness="3">
+              </bs-spin-loader>
               <span v-else>Submit Survey</span>
             </bs-button>
-            <div class="text-grey-600 mb-2" style="font-size: 12px">
+            <div class="text-subtle-secondary mb-2" style="font-size: 12px">
               By submitting your information, you agree to our 
               <a href="#usage-example">Term & Conditions</a> 
               and <a href="#usage-example">Privacy Policy</a>.
@@ -594,7 +558,7 @@ with form validation.
   </bs-app>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import type { Validation } from "@vuelidate/core";
 import { email, required } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
@@ -702,80 +666,79 @@ The component css variables inherited from [BsButton](/components/buttons/button
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color    | `String`  | `'default'`  | The component color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
+| color    | `String`  | `'default'`  | The component color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | disabled | `Boolean` | `false`      | The component state. |
-| external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
-| flat          | `Boolean` | `false` | Enable ***flat*** toggle button style. |
 | help-textc    | `String` |          | The help text to display below the field component. |
-| icon-position | `String` | `'left'` | <div style="min-width:325px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
+| icon-position | `String` | `'left'` | <div style="min-width:375px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
+| icon-size     | `Number` |   | Render the icon at predefined size in pixel. <MdBadge color="info">v2.2.0</MdBadge> |
 | id       | `String`  |              | Sets the component `ID`. This property value is auto generate. |
 | items    | `TInputOptionItem[]` |   | Collection of input item properties. |
-| model-value <Badge type="tip">v-model</Badge>  | `String`/`Number`/`Array` | | Value monitored by `v-model` that represents the selected value. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge>  | `String`&#124;`Number`&#124;`Array` | | Value monitored by `v-model` that represents the selected value. <MdBadge color="info">v2.0.0</MdBadge> |
 | multiple | `Boolean` | `false` | Enable multiple selection mode. The default is single selection mode. |
 | name     | `String`  |         | The `<input>` element name. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** toggle button style. |
-| persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
-| pill     | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
+| pill <Badge type="warning">deprecated</Badge> | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. |
+| pill-off | `Boolean` | `false`  | Disable ***rounded-pill*** button style. <MdBadge color="info">v2.2.0</MdBadge> |
 | raised   | `Boolean` | `false` | Enable ***elevated*** toggle button style. |
 | readonly | `Boolean` | `false` | The component state. |
-| rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <BsBadge color="info">v2.0.0</BsBadge> |
+| rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <MdBadge color="info">v2.0.0</MdBadge> |
 | size     | `String`  |         | Create the component with predefined size. Valid values are: `xs`, `sm`, `lg`. |
-| toggle-color | `String`  |     | The selected button color (optional). Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
-| tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <BsBadge color="info">v2.0.4</BsBadge> |
-| validator | `TValidator` |     | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |
+| toggle-color | `String`  |     | The selected button color (optional). <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| tonal    | `Boolean` | `false` | Enable ***filled tonal*** toggle button style. <MdBadge color="info">v2.0.4</MdBadge> |
+| validator | `TValidator` |     | The configuration options to integrate external validator plugin to validate this field value. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | ( value:`String`/`Number`/`Boolean`/`Array`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
-| icon    | ( item:`TInputOptionItem`) | The outlet slot used to place custom icon. <BsBadge color="info">v2.0.1</BsBadge> |
-| label   | ( item:`TInputOptionItem`) | The outlet slot used to place custom label. <BsBadge color="info">v2.0.1</BsBadge> |
+| icon    | ( item:`TInputOptionItem`) | The outlet slot used to place custom icon. <MdBadge color="info">v2.0.1</MdBadge> |
+| label   | ( item:`TInputOptionItem`) | The outlet slot used to place custom label. <MdBadge color="info">v2.0.1</MdBadge> |
 
 </div>
   </BsTab>
 </BsTabs>
 
 
-### TInputOptionItem {#api-tinput-option-item class="mt-lg-5"}
-
-The Input item has properties as described below:
+### TInputOptionItem {#api-reference-input-option-item class="mt-lg-5"}
 
 <div class="doc-api-reference mt-0">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| value <Badge type="danger">required</Badge> | `String`/`Number`/`Boolean` | The item value. |
+| value <Badge type="danger">required</Badge> | `String`&#124;`Number` | The item value. |
 | label <Badge type="danger">required</Badge> | `String` | The item label. |
 | id       | `String`   | Html `<input>` element ID. |
 | name     | `String`   | Html `<input>` element name. It is used when `multiple` is `true`. |
 | disabled | `Boolean`  | Html `<input>` element state. |
 | readonly | `Boolean`  | Html `<input>` element state. |
-| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the button. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
+| icon      | `String`  | <div style="min-width:425px"> The icon to display inside the button. <MdBadge color="info">Updated on v2.1.0</MdBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `iconVariant` property. </div> |
 | iconFlip  | `String`  | Flip the icon. Valid values are: `horizontal`, `vertical`, `both`. |
 | iconPulse | `Boolean` | Apply ***pulse*** animation to the icon. |
 | iconSize  | `Number`  | Render the icon at predefined size in pixel. |
 | iconSpin  | `Boolean` | Apply ***spin*** animation to the icon. |
 | iconRotation | `Number` | Rotate the icon. Valid values are: `90`, `180`, `270`. |
-| iconVariant | `String` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
+| iconVariant | `String` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">v2.1.0</MdBadge> |
 
 </div>
 </div>
