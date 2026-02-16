@@ -26,7 +26,7 @@ const unpkgBaseUri = 'https://unpkg.com/';
 const jsTag = 'script';
 
 const tplStyles = [
-  '.demo-wrapper { padding: 1rem; }',
+  '.demo-wrapper { padding: 1rem !important; }',
   '.mobi-card { max-width: 420px; }',
   '.md-card > .md-appbar {\n' +
     '  border-top-left-radius: inherit;\n' +

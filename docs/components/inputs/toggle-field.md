@@ -12,6 +12,7 @@ description: Toggle Field is a form field component with a group of buttons with
 and validation. It is primarily used to visualize choices with different approach.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## Overview
 
@@ -24,13 +25,11 @@ can add attributes like `required`, `readonly`, or `disabled` and it will react 
 give the best experience. You can also use `v-model` directive to create two-way data bindings 
 on the `model-value` property. This is useful to control or maintain the `model-value` property.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote> 
-
-::: BlockVue {title="Toggle Field Example" file="./docs/components/buttons/js/toggle-button-1.js"}
+::: BlockVue {title="Toggle Field Overview" file="./docs/components/buttons/js/toggle-button-1.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-3 bg-white rounded-3">
+  <div class="demo-wrapper w-full p-sm-2">
     <h5 class="mb-4">What are you drinking?</h5>
     <div class="mb-3">
       <bs-toggle-field v-model="selectedDrink" :items="drinkTypes">
@@ -86,7 +85,7 @@ const drinks: TInputOptionItem[] = [
   duplicate ID attribute.
 :::
 
-<!-- @include: @/components/colors-tip.md -->
+<!-- @include: @/components/contextual-color-info.md -->
 
 
 ## Checked Icon
