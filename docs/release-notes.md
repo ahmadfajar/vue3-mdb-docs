@@ -52,19 +52,20 @@ Released: February 02, 2026
   - Improve close button.
   - Improve color variants.
 - **BsChipField**: 
-  - Correctly set chips to readonly when the field is in readonly state.
+  - Add property `persistentHelpOff`.
   - Provide `data-*` attributes when rendering HTML.
+  - Correctly set chips to readonly when the field is in readonly state.
 - **BsChipGroup**: add property `closeButtonColor`.
 - **BsColorPicker**: 
   - Add support `oklch` color space.
   - Add `oklch` to toggle button.
-  - Mark `containerColor` property as deprecated and remove its default value.
+  - Mark `containerColor` property as **deprecated** and remove its default value.
   - Enable change the value via input box.
   - Improve swatch container and buttons.
   - Improve sync between color preview and value.
   - Improve exposed methods.
 - **BsCombobox**: 
-  - Add property `itemSeparatorDark`.
+  - Add properties: `itemSeparatorDark`, `persistentHelpOff`.
   - Mark `listboxColor` property as deprecated.
   - Correctly set chips to readonly when the field is in readonly state.
   - Provide `data-*` attributes when rendering HTML.
@@ -78,7 +79,7 @@ Released: February 02, 2026
   - Mark `surfaceColor` property as deprecated and remove its default value.
   - Integrate with global CSS variables.
 - **BsDateTimeField**: 
-  - Add properties: `pickerButton`, `pickerSelectedColor`, `surfaceCls`.
+  - Add properties: `pickerButton`, `pickerSelectedColor`, `surfaceCls`, `persistentHelpOff`.
   - Mark `pickerColor` property as deprecated and remove its default value.
   - Provide `data-*` attributes when rendering HTML.
   - Improve focus state.
@@ -124,7 +125,7 @@ Released: February 02, 2026
   - Add properties: `pillOff`, `iconSize`.
   - Provide `data-*` attributes when rendering HTML.
 - **BsToggleField**: 
-  - Add properties: `pillOff`, `iconSize` and `persistentHelpOff`.
+  - Add properties: `pillOff`, `iconSize`, `persistentHelpOff`.
   - Provide `data-*` attributes when rendering HTML.
 - **BsTooltip**: improve animation, inner padding, border radius and CSS variables.
 - **CacheManager**: improve performance using sessionStorage if available
@@ -134,6 +135,7 @@ Released: February 02, 2026
 - **BsAlert**: remove deprecated properties: `iconType`, `solidFill`.
 - **BsCheckboxGroup**, **BsRadioGroup**, **BsChipField**: 
   - Remove deprecated property `externalValidator`.
+  - Mark `persistent-help-text` property as **deprecated**.
 - **BsChip**, **BsChipGroup**: remove deprecated property `imgPadding`.
 - **BsCombobox**: 
   - Remove deprecated properties: `externalValidator`, `checkOptionColor`, `checkOptionPosition`, `popoverMaxHeight`, `popoverMinHeight`.

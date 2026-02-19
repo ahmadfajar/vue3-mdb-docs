@@ -162,7 +162,7 @@ The `autocomplete` property gives you the option to enable browser to predict th
 
 Define the `clear-button` property explicitly, so that the field value can be cleared easily. 
 
-::: BlockVue {title="TextArea Clearable"}
+::: BlockVue {title="Clearable TextArea"}
 
 ```vue
 <template>
@@ -282,6 +282,13 @@ visible only when the TextArea field is focused.
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
+          <bs-text-area help-text="Enter your profile information" floating-label>
+            <label>Your Profile</label>
+          </bs-text-area>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
           <bs-text-area model-value="Grocery delivery" persistent-help-off
             help-text="For example, flowers or used cars" floating-label>
             <label>Product or Service</label>
@@ -290,7 +297,7 @@ visible only when the TextArea field is focused.
       </div>
       <div class="col">
         <div class="mb-3">
-          <bs-text-area help-text="Enter your profile information" floating-label>
+          <bs-text-area help-text="Enter your profile information" floating-label filled>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
@@ -304,24 +311,17 @@ visible only when the TextArea field is focused.
         </div>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-text-area help-text="Enter your profile information" floating-label filled>
+        <div class="mb-3 mb-md-0">
+          <bs-text-area help-text="Enter your profile information" floating-label outlined>
             <label>Your Profile</label>
           </bs-text-area>
         </div>
       </div>
       <div class="col">
-        <div class="mb-3 mb-md-1">
+        <div class="mb-0">
           <bs-text-area model-value="Grocery delivery" persistent-help-off
             help-text="For example, flowers or used cars" floating-label outlined>
             <label>Product or Service</label>
-          </bs-text-area>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-1">
-          <bs-text-area help-text="Enter your profile information" floating-label outlined>
-            <label>Your Profile</label>
           </bs-text-area>
         </div>
       </div>

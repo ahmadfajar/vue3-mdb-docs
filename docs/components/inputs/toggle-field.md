@@ -388,6 +388,8 @@ The `help-text` property on `<bs-toggle-field>` adds the provided string beneath
 *Toggle Field*. And define the `persistent-help-off` property explicitly to make the 
 help text visible when the *Toggle Field* is focused or hovered.
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 ::: BlockVue {title="Toggle Field Help Text" file="./docs/components/inputs/js/toggle-field-1.js"}
 
 ```vue
@@ -721,7 +723,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 
 ### TInputOptionItem {#api-reference-input-option-item class="mt-lg-5"}
 
-<div class="doc-api-reference mt-0">
+<div class="doc-api-reference mt-2">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Property | Type      | Description |

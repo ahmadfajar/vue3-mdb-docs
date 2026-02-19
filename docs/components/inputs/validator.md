@@ -7,8 +7,8 @@ The validator configuration option has properties as described below:
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| validators | `Record<String`,`Boolean>` | External validator plugin validation result. |
-| messages   | `Record<String`,`String>` | Validation message for each validation types. |
+| validators | `Record<String, Boolean>` | External validator plugin validation result. |
+| messages   | `Record<String, Boolean>` | Validation message for each validation types. |
 | hasError   | `Boolean` | An indicator that tells the field value pass the validation or not. |
 | dirty      | `Boolean` | Value comes from validator plugin that indicate the field is dirty or not. |
 

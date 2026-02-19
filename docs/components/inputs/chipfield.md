@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A component that let users enter arbitrary items, like categories or tags into an UI to convey a small pieces of information. 
+description: Chip Field is a component that let users enter arbitrary items, like categories or tags into an UI to convey a small pieces of information. 
 ---
 
 # Chip Field
@@ -20,32 +20,27 @@ can add attributes like `required`, `readonly`, or `disabled` and it will react 
 them to give the best experience. You can also use `v-model` directive to create 
 two-way data bindings on the `model-value` property.
 
-::: BlockVue {title="Basic Chip Field Example"}
+::: BlockVue {title="Chip Field Overview"}
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="mb-3">
+```vue
+<template>
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-chip-field placeholder="Add tags...">
       <label class="col-md-3 col-form-label">Field Label</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-3">
     <bs-chip-field :model-value="['Sandra', 'Adams']" readonly>
       <label class="col-md-3 col-form-label">State Readonly</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-1">
     <bs-chip-field :model-value="['Sandra', 'Adams']" disabled>
       <label class="col-md-3 col-form-label">State Disabled</label>
     </bs-chip-field>
   </div>
-</div>
+</template>
+
 ```
 :::
 
-::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-Do not use the `model-value` property when using `v-model`.
-:::
+<!-- @include: @/components/model-value-important.md -->
 
 
 ## Style Variants
@@ -53,94 +48,83 @@ Do not use the `model-value` property when using `v-model`.
 You can style `<bs-chip-field>` to your own preference or use a style variant 
 based on Google **Material Design 2** or **Material Design 3** specifications. 
 
-### Default
+### Default {#style-variants-default}
 
 You can style `<bs-chip-field>` that follows Google **Material Design 2** specifications
 by using `floating-label` property explicitly.
 
-::: BlockVue {title="Classic Chip Field Style Variant"}
+::: BlockVue {title="Chip Field Style Variants - Default"}
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="mb-4">
+```vue
+<template>
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-chip-field placeholder="Add tags...">
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-4">
     <bs-chip-field placeholder="Add tags..." floating-label>
       <label>Field Label</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-2">
     <bs-chip-field floating-label>
       <label>Floating Label</label>
     </bs-chip-field>
   </div>
-</div>
+</template>
+
 ```
 :::
 
 
-### Filled {class="mt-lg-5"}
+### Filled {#style-variants-filled class="mt-lg-5"}
 
 Use `filled` property explicitly to enable `<bs-chip-field>` with **solid fill style**.
 And when combined with `floating-label` property, `<bs-chip-field>` will have a style 
 that follows the Google **Material Design 3** specifications.
 
-::: BlockVue {title="Filled Chip Field Style Variant"}
+::: BlockVue {title="Chip Field Style Variants - Filled"}
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="mb-4">
+```vue
+<template>
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-chip-field placeholder="Add tags..." filled>
       <label class="col-md-3 col-form-label pt-md-2">Classic Field</label>
     </bs-chip-field>
-  </div>
-  <hr />
-  <div class="mb-3">
+    <bs-divider></bs-divider>
     <bs-chip-field placeholder="Add tags..." filled floating-label>
       <label>Field Label</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-2">
     <bs-chip-field filled floating-label>
       <label>Floating Label</label>
     </bs-chip-field>
   </div>
-</div>
+</template>
 
 ```
 ::: 
 
 
-### Outlined {class="mt-lg-5"}
+### Outlined {#style-variants-outlined class="mt-lg-5"}
 
 Use `outlined` property explicitly to enable `<bs-chip-field>` with **outline style**.
 And when combined with `floating-label` property, `<bs-chip-field>` will have a style 
 that follows the Google **Material Design 3** specifications.
 
-::: BlockVue {title="Outline Chip Field Style Variant"}
+::: BlockVue {title="Chip Field Style Variants - Outlined"}
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="mb-3">
+```vue
+<template>
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
     <bs-chip-field placeholder="Add tags..." outlined>
       <label class="col-md-3 col-form-label pt-md-3">Classic Field</label>
     </bs-chip-field>
-  </div>
-  <hr />
-  <div class="mb-4">
+    <bs-divider></bs-divider>
     <bs-chip-field placeholder="Add tags..." outlined floating-label>
       <label>Field Label</label>
     </bs-chip-field>
-  </div>
-  <div class="mb-2">
     <bs-chip-field outlined floating-label>
       <label>Floating Label</label>
     </bs-chip-field>
   </div>
-</div>
+</template>
 
 ```
 ::: 
@@ -151,97 +135,102 @@ that follows the Google **Material Design 3** specifications.
 The chip items can also be styled. The guide below shows you how to style the chip items.
 
 
-### Chips Color {class="mt-lg-5"}
+### Chips Color {#chip-styles-chips-color class="mt-lg-5"}
 
-The chip's color can be set using the `chip-color` property. Any color variant from 
-[MDBootstrap colors](/reference/colors#mdbootstrap-colors) and 
-[Material colors](/reference/colors#material-colors) can be applied 
-to the `<bs-chip-field>`.
+Use the `chip-color` property to change the chips color style. Built-in color variants are:
+`default`, `primary`, `secondary` (_default_), `success`, `warning`, `danger`, `info` and `light`.
 
-::: BlockVue {title="Chip Field color style"}
+::: BlockVue {title="Chip Field Styles - Color"}
 
-```html
-<div class="bg-white rounded-3 px-4 py-5 w-100">
-  <bs-chip-field 
-    placeholder="Add tags..." 
-    chip-color="deep-purple" 
-    outlined 
-    floating-label
-  >
-    <label>Field Label</label>
-  </bs-chip-field>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <bs-chip-field 
+      placeholder="Add tags..." 
+      chip-color="default" 
+      outlined 
+      floating-label
+    >
+      <label>Field Label</label>
+    </bs-chip-field>
+  </div>
+</template>
 
 ```
 ::: 
 
 
-### Outlined Chips {class="mt-lg-5"}
+### Outlined Chips {#chip-styles-outlined-chips class="mt-lg-5"}
 
 Use `chip-outlined` property explicitly to create chip items with **_outlined_** shape style.
 
-::: BlockVue {title="Chip Field with outlined chips style"}
+::: BlockVue {title="Chip Field Styles - Outlined Chips"}
 
-```html
-<div class="bg-white rounded-3 px-4 py-5 w-100">
-  <bs-chip-field 
-    placeholder="Add tags..." 
-    chip-color="danger"
-    chip-outlined 
-    outlined 
-    floating-label
-  >
-    <label>Field Label</label>
-  </bs-chip-field>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <bs-chip-field 
+      placeholder="Add tags..." 
+      chip-color="primary"
+      chip-outlined 
+      outlined 
+      floating-label
+    >
+      <label>Field Label</label>
+    </bs-chip-field>
+  </div>
+</template>
 
 ```
 ::: 
 
 
-### Rounded Pill Chips {class="mt-lg-5"}
+### Rounded Pill Chips {#chip-styles-rounded-pill-chips class="mt-lg-5"}
 
 Use `chip-pill` property explicitly to create chip items with **_rounded-pill_** shape style.
 
-::: BlockVue {title="Chip Field with rounded-pill chips style"}
+::: BlockVue {title="Chip Field Styles - Rounded-Pill Chips"}
 
-```html
-<div class="bg-white rounded-3 px-4 py-5 w-100">
-  <bs-chip-field 
-    placeholder="Add tags..." 
-    chip-color="stylish-color"
-    chip-pill 
-    outlined 
-    floating-label
-  >
-    <label>Field Label</label>
-  </bs-chip-field>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <bs-chip-field 
+      placeholder="Add tags..." 
+      chip-color="default"
+      chip-pill 
+      outlined 
+      floating-label
+    >
+      <label>Field Label</label>
+    </bs-chip-field>
+  </div>
+</template>
 
 ```
 ::: 
 
 
-### Outlined Rounded Pill Chips {class="mt-lg-5"}
+### Outlined Rounded Pill Chips {#chip-styles-outlined-rounded-pill-chips class="mt-lg-5"}
 
 Use both `chip-outlined` and `chip-pill` property explicitly to create chip items with 
 **_outlined rounded-pill_** shape style.
 
-::: BlockVue {title="Chip Field with outlined rounded-pill chips style"}
+::: BlockVue {title="Chip Field Styles - Outlined Rounded-Pill Chips"}
 
-```html
-<div class="bg-white rounded-3 px-4 py-5 w-100">
-  <bs-chip-field 
-    placeholder="Add tags..." 
-    chip-color="danger"
-    chip-outlined 
-    chip-pill 
-    outlined 
-    floating-label
-  >
-    <label>Field Label</label>
-  </bs-chip-field>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <bs-chip-field 
+      placeholder="Add tags..." 
+      chip-outlined 
+      chip-pill 
+      outlined 
+      floating-label
+    >
+      <label>Field Label</label>
+    </bs-chip-field>
+  </div>
+</template>
 
 ```
 ::: 
@@ -251,11 +240,11 @@ Use both `chip-outlined` and `chip-pill` property explicitly to create chip item
 
 Define the `clear-button` property explicitly, so that the field value can be cleared easily. 
 
-::: BlockVue {title="Chip Field clearable feature example" file="./docs/components/scripts/chipfield-1.js"}
+::: BlockVue {title="Clearable Chip Field" file="./docs/components/inputs/js/chipfield-1.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 px-4 py-5 w-100">
+  <div class="demo-wrapper w-full p-2 p-md-3">
     <bs-chip-field 
       v-model="fieldValue1" 
       placeholder="Add tag..." 
@@ -281,11 +270,11 @@ const fieldValue1 = ref<string[]>([]);
 
 Define the `chip-deletable` property explicitly, so that existing chip items can be easily deleted.
 
-::: BlockVue {title="Chips Field deletable feature example" file="./docs/components/scripts/chipfield-2.js"}
+::: BlockVue {title="Deletable Chip Field" file="./docs/components/inputs/js/chipfield-2.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 px-4 py-5 w-100">
+  <div class="demo-wrapper w-full p-2 p-md-3">
     <div class="mb-4">
       <bs-chip-field 
         v-model="fieldValue2" 
@@ -314,88 +303,94 @@ const fieldValue2 = ref<string[]>([]);
 
 ## Help Text
 
-The `help-text` property on `<bs-chip-field>` adds an help text beneath the Field.
-And sets the `persistent-help-text` property to `false` will make the help text 
-visible only when the Field is focused.
+The `help-text` property on `<bs-chip-field>` adds an help text beneath the chip field.
+And define the `persistent-help-off` property explicitly to make the help text 
+visible only when the chip field is focused.
 
-::: BlockVue {title="Chip Field with help text example"}
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="row row-cols-1 row-cols-lg-2">
-    <div class="col">
-      <div class="mb-4">
-        <bs-chip-field 
-          :persistent-help-text="false" 
-          help-text="Enter product tags" 
-          placeholder="Add tag..."
-          floating-label>
-          <label>Product Tags</label>
-        </bs-chip-field>
+::: BlockVue {title="Chip Field with Help Text"}
+
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field 
+            help-text="Enter website keywords" 
+            placeholder="Add keyword..."
+            floating-label
+          >
+            <label>Website keywords</label>
+          </bs-chip-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field 
+            help-text="Enter product tags" 
+            placeholder="Add tag..."
+            persistent-help-off 
+            floating-label>
+            <label>Product Tags</label>
+          </bs-chip-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field 
+            help-text="Enter website keywords" 
+            placeholder="Add keyword..."
+            floating-label 
+            filled
+          >
+            <label>Website keywords</label>
+          </bs-chip-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field 
+            help-text="Enter product tags" 
+            placeholder="Add tag..."
+            persistent-help-off 
+            floating-label 
+            filled
+          >
+            <label>Product Tags</label>
+          </bs-chip-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-4 mb-md-0">
+          <bs-chip-field 
+            help-text="Enter website keywords" 
+            placeholder="Add keyword..."
+            floating-label 
+            outlined
+          >
+            <label>Website keywords</label>
+          </bs-chip-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-0">
+          <bs-chip-field 
+            help-text="Enter product tags" 
+            placeholder="Add tag..."
+            persistent-help-off 
+            floating-label 
+            outlined
+          >
+            <label>Product Tags</label>
+          </bs-chip-field>
+        </div>
       </div>
     </div>
-    <div class="col">
-      <div class="mb-4">
-        <bs-chip-field 
-          help-text="Enter website keywords" 
-          placeholder="Add keyword..."
-          floating-label
-        >
-          <label>Website keywords</label>
-        </bs-chip-field>
-      </div>
-    </div>
-    <div class="col">
-      <div class="mb-4">
-        <bs-chip-field :persistent-help-text="false" 
-          help-text="Enter product tags" 
-          placeholder="Add tag..."
-          floating-label 
-          filled
-        >
-          <label>Product Tags</label>
-        </bs-chip-field>
-      </div>
-    </div>
-    <div class="col">
-      <div class="mb-4">
-        <bs-chip-field 
-          help-text="Enter website keywords" 
-          placeholder="Add keyword..."
-          floating-label 
-          filled
-        >
-          <label>Website keywords</label>
-        </bs-chip-field>
-      </div>
-    </div>
-    <div class="col">
-      <div class="mb-4 mb-lg-2">
-        <bs-chip-field 
-          :persistent-help-text="false" 
-          help-text="Enter product tags" 
-          placeholder="Add tag..."
-          floating-label 
-          outlined
-        >
-          <label>Product Tags</label>
-        </bs-chip-field>
-      </div>
-    </div>
-    <div class="col">
-      <div class="mb-4 mb-lg-2">
-        <bs-chip-field 
-          help-text="Enter website keywords" 
-          placeholder="Add keyword..."
-          floating-label 
-          outlined
-        >
-          <label>Website keywords</label>
-        </bs-chip-field>
-      </div>
-    </div>
-  </div>
-</div>  
+  </div> 
+</template>
+
 ``` 
 ::: 
 
@@ -410,99 +405,102 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. 
 
-<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+<SmallNote color="teal">Updated in v2.1.0</SmallNote>
 
-::: BlockVue {title="Chip Field with icons example"}
+::: BlockVue {title="Chip Field with Icon"}
 
-```html
-<div class="bg-white rounded-3 p-4 w-100">
-  <div class="row row-cols-1 row-cols-lg-2">
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon="person_filled" floating-label>
-          <label>Prepend</label>
-        </bs-chip-field>
+```vue
+<template>
+  <div class="demo-wrapper w-full p-2 p-md-3">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <div class="mb-3">
+          <bs-chip-field prepend-icon="person_filled" floating-label>
+            <label>Prepend</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon="person_filled" floating-label>
-          <label>Append</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-3">
+          <bs-chip-field append-icon="person_filled" floating-label>
+            <label>Append</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon-outer="person" floating-label>
-          <label>Prepend Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-3">
+          <bs-chip-field prepend-icon-outer="person" floating-label>
+            <label>Prepend Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon-outer="person" floating-label>
-          <label>Append Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-3">
+          <bs-chip-field append-icon-outer="person" floating-label>
+            <label>Append Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon="person_filled" floating-label filled>
-          <label>Prepend</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field prepend-icon="person_filled" floating-label filled>
+            <label>Prepend</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon="person_filled" floating-label filled>
-          <label>Append</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field append-icon="person_filled" floating-label filled>
+            <label>Append</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon-outer="person" floating-label filled>
-          <label>Prepend Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field prepend-icon-outer="person" floating-label filled>
+            <label>Prepend Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon-outer="person" floating-label filled>
-          <label>Append Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field append-icon-outer="person" floating-label filled>
+            <label>Append Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon="person_filled" floating-label outlined>
-          <label>Prepend</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field prepend-icon="person_filled" floating-label outlined>
+            <label>Prepend</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon="person_filled" floating-label outlined>
-          <label>Append</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4">
+          <bs-chip-field append-icon="person_filled" floating-label outlined>
+            <label>Append</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field prepend-icon-outer="person" floating-label outlined>
-          <label>Prepend Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-4 mb-md-0">
+          <bs-chip-field prepend-icon-outer="person" floating-label outlined>
+            <label>Prepend Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <bs-chip-field append-icon-outer="person" floating-label outlined>
-          <label>Append Outer</label>
-        </bs-chip-field>
+      <div class="col">
+        <div class="mb-0">
+          <bs-chip-field append-icon-outer="person" floating-label outlined>
+            <label>Append Outer</label>
+          </bs-chip-field>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 ``` 
 ::: 
 
@@ -511,90 +509,113 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-field` and global CSS variables for better customization.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ```scss
---md-field-active-border-color: rgb(var(--md-field-active-indicator));
---md-field-active-border-width: 2px;
---md-field-color-bg: currentColor;
---md-field-border-color: currentColor;
---md-field-border-width: 1px;
---md-field-floating-label-color: var(--md-field-label-color);
---md-field-label-color: currentColor;
+.md-field {
+  --md-field-border-width: 1px;
+  --md-field-border-color: #{colors.$gray-400};
+  --md-field-border-radius: #{vars.$text-field-border-radius};
+  --md-field-hover-border-color: currentColor;
+  --md-field-active-border-width: 2px;
+  --md-field-active-border-color: var(--md-field-active-indicator);
+  --md-field-color-bg: currentColor;
+
+  --md-field-outline-bg: transparent;
+  --md-field-outline-hover-bg: transparent;
+  --md-field-outline-focus-bg: transparent;
+  --md-field-outline-border-radius: var(--md-field-border-radius);
+
+  --md-field-control-height: #{vars.$text-field-height};
+  --md-field-label-color: currentColor;
+  --md-field-label-font-weight: var(--font-weight-medium);
+  --md-field-inline-text-font-weight: var(--font-weight-medium);
+  --md-field-floating-label-color: var(--md-field-label-color);
+
+  --md-field-padding-start: #{vars.$text-field-padding-start};
+  --md-field-padding-end: #{vars.$text-field-padding-end};
+  --md-field-padding-top: #{vars.$text-field-padding-top};
+  --md-field-padding-bottom: #{vars.$text-field-padding-bottom};
+  --md-field-classic-padding-top: #{vars.$text-field-classic-padding-top};
+  --md-field-classic-padding-bottom: #{vars.$text-field-classic-padding-bottom};
+}
 
 // global css variables
---md-field-primary-indicator-rgb: 98, 0, 238;
---md-field-primary-indicator: rgb(var(--md-field-primary-indicator-rgb));
---md-field-accent-indicator-rgb: 185,156,225;
---md-field-accent-indicator: rgb(var(--md-field-accent-indicator-rgb));
---md-field-active-indicator: var(--md-field-primary-indicator-rgb);
+--md-field-primary-indicator: oklch(0.458 0.23 304.441);
+--md-field-accent-indicator: oklch(0.743 0.102 303.276);
+--md-field-active-indicator: var(--md-field-primary-indicator);
+--md-field-disabled-opacity: 0.4;
+--md-field-readonly-opacity: 0.55;
 
 ```
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">Updated on v2.1.0</BsBadge> |
-| append-icon          | `String` |  | <div style="min-width:375px">Sets icon to display at the inner right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
-| append-icon-outer    | `String` |  | <div style="min-width:375px">Sets icon to display at the outer right side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
-| autocomplete | `Boolean`/`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">Updated on v2.1.0</MdBadge> |
+| append-icon          | `String` |  | <div style="min-width:400px">Sets icon to display at the inner right side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| append-icon-outer    | `String` |  | <div style="min-width:400px">Sets icon to display at the outer right side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| autocomplete | `Boolean`&#124;`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |
 | autofocus    | `Boolean` | `false` | Autofocus field when this component is mounted. |
 | clear-button | `Boolean` | `false` | Sets **auto show** the clear button. |
-| chip-color   | `String` | `'light-grey'` | The default chips color to apply. |
+| chip-color   | `String` | `'secondary'` | Apply custom chips color. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info` and `light`. |
 | chip-deletable | `Boolean` | `false` | Display the close button on each chip items to delete a chip. |
 | chip-outlined  | `Boolean` | `false` | Create chip items with **_outline_** shape style. |
 | chip-pill      | `Boolean` | `false` | Create chip items with **_rounded-pill_** shape style. |
 | disabled       | `Boolean` | `false` | Enable/disable the component and the `<input>` element. |
-| external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
 | filled       | `Boolean` | `false` | Create the component with **_solid fill style_** appearance. See [Google Material Design](https://m3.material.io/components/text-fields/overview) for details. |
 | floating-label | `Boolean` | `false` | Create the component with floating field label. See [Google Material Design](https://m3.material.io/components/text-fields/overview) for details. |
 | help-text   | `String`  |          | The help text to display below the field component. |
 | id          | `String`  |          | Sets `<input>` element `ID` attribute. This property value is auto generates. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`String[]` |  | Monitored by `v-model` to maintain this field value. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `String`&#124;`String[]` |  | Monitored by `v-model` to maintain this field value. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets `<input>` element `name` attribute. |
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
-| persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | placeholder  | `String` |        | Sets the field placeholder. |
-| prepend-icon | `String` |        | <div style="min-width:375px">Sets icon to display at the inner left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
-| prepend-icon-outer | `String` |  | <div style="min-width:375px">Sets icon to display at the outer left side. <BsBadge color="info">Updated on v2.1.0</BsBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon | `String` |        | <div style="min-width:400px">Sets icon to display at the inner left side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
+| prepend-icon-outer | `String` |  | <div style="min-width:400px">Sets icon to display at the outer left side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets `<input>` element `required` attribute. |
-| validation-icon | `Boolean`  | `false`| Display validation icon or not, when this field has been validated. <BsBadge color="info">v2.0.0</BsBadge> |
-| validator | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> |
+| validation-icon | `Boolean`  | `false`| Display validation icon or not, when this field has been validated. <MdBadge color="info">v2.0.0</MdBadge> |
+| validator | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
 | blur    | ( evt:`FocusEvent`)    | Triggers when this ChipField lost focus. |
 | clear   |   | Triggers after this field value is cleared. |
-| delete-item | ( item:`String`) | Triggers when a chip is deleted from this ChipField. <BsBadge color="info">v2.0.0</BsBadge> |
+| delete-item | ( item:`String`) | Triggers when a chip is deleted from this ChipField. <MdBadge color="info">v2.0.0</MdBadge> |
 | focus   | ( evt:`FocusEvent`)    | Triggers when this ChipField got focused. |
 | keydown | ( evt:`KeyboardEvent`) | Triggers when cursor is still in the `<input>` element and keyboard key is pressed. |
-| update:model-value | ( value:`String`/`String[]`) | Triggers when this ChipField's `model-value` property is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String`&#124;`String[]`) | Triggers when this ChipField's `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
 |-------------|--------------|
 | default       | The outlet slot used to place the field label. |
-| append-inner  | The outlet slot used to place custom icon or component at the inner right side. <BsBadge color="info">v2.0.0</BsBadge> |
-| append-outer  | The outlet slot used to place custom icon or component at the outer right side. <BsBadge color="info">v2.0.0</BsBadge> |
-| help-text     | The outlet slot used for custom help text. <BsBadge color="info">v2.0.0</BsBadge> |
-| prepend-inner | The outlet slot used to place custom icon or component at the inner left side. <BsBadge color="info">v2.0.0</BsBadge> |
-| prepend-outer | The outlet slot used to place custom icon or component at the outer left side. <BsBadge color="info">v2.0.0</BsBadge>|
+| append-inner  | The outlet slot used to place custom icon or component at the inner right side. <MdBadge color="info">v2.0.0</MdBadge> |
+| append-outer  | The outlet slot used to place custom icon or component at the outer right side. <MdBadge color="info">v2.0.0</MdBadge> |
+| help-text     | The outlet slot used for custom help text. <MdBadge color="info">v2.0.0</MdBadge> |
+| prepend-inner | The outlet slot used to place custom icon or component at the inner left side. <MdBadge color="info">v2.0.0</MdBadge> |
+| prepend-outer | The outlet slot used to place custom icon or component at the outer left side. <MdBadge color="info">v2.0.0</MdBadge>|
 
 </div>
   </BsTab>

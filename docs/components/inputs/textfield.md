@@ -252,7 +252,7 @@ auto-complete, allowing existing values to be chosen, or new values to be entere
 
 Define the `clear-button` property explicitly, so that the field value can be cleared easily. 
 
-::: BlockVue {title="Text Field Clearable" file="./docs/components/inputs/js/textfield-1.js"}
+::: BlockVue {title="Clearable Text Field" file="./docs/components/inputs/js/textfield-1.js"}
 
 ```vue
 <template>
@@ -292,6 +292,13 @@ visible only when the text field is focused.
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col">
         <div class="mb-3">
+          <bs-text-field help-text="www.example.com/page" floating-label>
+            <label>Your landing page</label>
+          </bs-text-field>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
           <bs-text-field model-value="Grocery delivery" persistent-help-off
             help-text="For example, flowers or used cars" floating-label>
             <label>Product or Service</label>
@@ -300,7 +307,7 @@ visible only when the text field is focused.
       </div>
       <div class="col">
         <div class="mb-3">
-          <bs-text-field help-text="www.example.com/page" floating-label>
+          <bs-text-field help-text="www.example.com/page" floating-label filled>
             <label>Your landing page</label>
           </bs-text-field>
         </div>
@@ -314,24 +321,17 @@ visible only when the text field is focused.
         </div>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-text-field help-text="www.example.com/page" floating-label filled>
+        <div class="mb-3 mb-md-0">
+          <bs-text-field help-text="www.example.com/page" floating-label outlined>
             <label>Your landing page</label>
           </bs-text-field>
         </div>
       </div>
       <div class="col">
-        <div class="mb-2">
+        <div class="mb-0">
           <bs-text-field model-value="Grocery delivery" persistent-help-off
             help-text="For example, flowers or used cars" floating-label outlined>
             <label>Product or Service</label>
-          </bs-text-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-2">
-          <bs-text-field help-text="www.example.com/page" floating-label outlined>
-            <label>Your landing page</label>
           </bs-text-field>
         </div>
       </div>
