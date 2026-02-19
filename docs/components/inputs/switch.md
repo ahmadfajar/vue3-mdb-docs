@@ -110,16 +110,18 @@ const switch4 = ref<string>();
 
 ### Inset {#style-variants-inset class="mt-lg-5"}
 
-Use `inset-mode` property explicitly to enable **inset fill style** appearance.
+Use the `variant` property and set its value to `inset` to enable the ***Inset*** 
+style appearance. This style variant have an appearance that follows Google 
+**Material Design 3** specifications.
 
-<SmallNote color="teal">Added in v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Switch Button Style Variants - Inset" file="./docs/components/inputs/js/switch-4.js"}
 
 ```vue
 <template>
   <div class="demo-wrapper w-full p-2 px-md-3">
-    <bs-switch v-model="switch5" value="on" inset-mode>
+    <bs-switch v-model="switch5" value="on" variant="inset">
       Power meter : <b>{{ switch5 || 'off' }}</b>
     </bs-switch>
   </div>
@@ -135,19 +137,20 @@ const switch5 = ref<string>();
 :::
 
 
-### Inset Outlined {#style-variants-inset-outlined class="mt-lg-5"}
+### Outline Inset {#style-variants-outline-inset class="mt-lg-5"}
 
-Use `inset-outlined` property explicitly to enable **outline inset fill style** appearance.
-This style variant have an appearance that follows Google **Material Design 3** specifications.
+Use the `variant` property and set its value to `outline-inset` to enable the 
+***Outline Inset*** style appearance. This style variant have an appearance 
+that follows Google **Material Design 3** specifications.
 
-<SmallNote color="teal">Added in v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
-::: BlockVue {title="Switch Button Style Variants - Inset Outlined" file="./docs/components/inputs/js/switch-5.js"}
+::: BlockVue {title="Switch Button Style Variants - Outline Inset" file="./docs/components/inputs/js/switch-5.js"}
 
 ```vue
 <template>
   <div class="demo-wrapper w-full p-2 px-md-3">
-    <bs-switch v-model="switch6" value="on" inset-outlined>
+    <bs-switch v-model="switch6" value="on" variant="outline-inset">
       Power meter : <b>{{ switch6 || 'off' }}</b>
     </bs-switch>
   </div>
@@ -167,7 +170,7 @@ const switch6 = ref<string>();
 
 Use `color` property to change `<bs-switch>` color appearance.
 
-<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Switch Button Colors" file="./docs/components/inputs/js/switch-6.js"}
 
@@ -178,10 +181,10 @@ Use `color` property to change `<bs-switch>` color appearance.
       <bs-switch v-model="switch7" value="on" color="primary"> 
         Color : <b>primary</b> 
       </bs-switch>
-      <bs-switch v-model="switch8" value="on" color="success" inset-mode>
+      <bs-switch v-model="switch8" value="on" color="success" variant="inset">
         Color : <b>success</b>
       </bs-switch>
-      <bs-switch v-model="switch9" value="on" color="warning" inset-outlined>
+      <bs-switch v-model="switch9" value="on" color="warning" variant="outline-inset">
         Color : <b>warning</b>
       </bs-switch>
     </div>
@@ -212,22 +215,22 @@ Use `color` property to change `<bs-switch>` color appearance.
     <bs-divider></bs-divider>
     <div class="row row-cols-1 row-cols-sm-2 my-3">
       <div class="col mb-2">
-        <bs-switch v-model="switch10" value="off" color="success" inset-mode readonly>
+        <bs-switch v-model="switch10" value="off" color="success" variant="inset" readonly>
           Readonly :: OFF
         </bs-switch>
       </div>
       <div class="col mb-2">
-        <bs-switch v-model="switch10" value="on" color="success" inset-mode readonly>
+        <bs-switch v-model="switch10" value="on" color="success" variant="inset" readonly>
           Readonly :: ON
         </bs-switch>
       </div>
       <div class="col mb-2 mb-sm-0">
-        <bs-switch v-model="switch10" value="off" color="success" inset-mode disabled>
+        <bs-switch v-model="switch10" value="off" color="success" variant="inset" disabled>
           Disabled :: OFF
         </bs-switch>
       </div>
       <div class="col">
-        <bs-switch v-model="switch10" value="on" color="success" inset-mode disabled>
+        <bs-switch v-model="switch10" value="on" color="success" variant="inset" disabled>
           Disabled :: ON
         </bs-switch>
       </div>
@@ -235,22 +238,22 @@ Use `color` property to change `<bs-switch>` color appearance.
     <bs-divider></bs-divider>
     <div class="row row-cols-1 row-cols-sm-2 mt-3">
       <div class="col mb-2">
-        <bs-switch v-model="switch10" value="off" color="warning" inset-outlined readonly>
+        <bs-switch v-model="switch10" value="off" color="warning" variant="outline-inset" readonly>
           Readonly :: OFF
         </bs-switch>
       </div>
       <div class="col mb-2">
-        <bs-switch v-model="switch10" value="on" color="warning" inset-outlined readonly>
+        <bs-switch v-model="switch10" value="on" color="warning" variant="outline-inset" readonly>
           Readonly :: ON
         </bs-switch>
       </div>
       <div class="col mb-2 mb-sm-0">
-        <bs-switch v-model="switch10" value="off" color="warning" inset-outlined disabled>
+        <bs-switch v-model="switch10" value="off" color="warning" variant="outline-inset" disabled>
           Disabled :: OFF
         </bs-switch>
       </div>
       <div class="col">
-        <bs-switch v-model="switch10" value="on" color="warning" inset-outlined disabled>
+        <bs-switch v-model="switch10" value="on" color="warning" variant="outline-inset" disabled>
           Disabled :: ON
         </bs-switch>
       </div>
@@ -284,12 +287,12 @@ Use `checkoff-icon` or `checked-icon` property explicitly to enable icon on `<bs
   <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="row row-cols-1 row-cols-sm-2">
       <div class="col mb-2 mb-sm-0">
-        <bs-switch v-model="switch11" value="on" checkoff-icon checked-icon inset-mode>
+        <bs-switch v-model="switch11" value="on" checkoff-icon checked-icon variant="inset">
           Power meter : <b>{{ switch11 || 'off' }}</b>
         </bs-switch>
       </div>
       <div class="col">
-        <bs-switch v-model="switch12" value="on" checked-icon inset-outlined>
+        <bs-switch v-model="switch12" value="on" checked-icon variant="outline-inset">
           Power meter : <b>{{ switch12 || 'off' }}</b>
         </bs-switch>
       </div>
@@ -337,8 +340,8 @@ use `label-class` property to fine tune the field label with css classes.
             label-class="flex-fill"
             label-position="left"
             value="on" 
+            variant="outline-inset"
             checked-icon
-            inset-outlined
           >
             <div>Permission manager</div>
             <div class="text-subtle-secondary" style="font-size: 80%">
@@ -352,8 +355,8 @@ use `label-class` property to fine tune the field label with css classes.
             label-class="flex-fill"
             label-position="left"
             value="on" 
+            variant="outline-inset"
             checked-icon
-            inset-outlined
           >
             <div>Camera access</div>
             <div class="text-subtle-secondary" style="font-size: 80%">
@@ -367,8 +370,8 @@ use `label-class` property to fine tune the field label with css classes.
             label-class="flex-fill"
             label-position="left"
             value="on" 
+            variant="outline-inset"
             checked-icon
-            inset-outlined
           >
             <div>Show Password</div>
           </bs-switch>
@@ -469,8 +472,8 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | color         | `String`  | `'default'` | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled      | `Boolean` | `false`     | Sets the component into disable state and sets the `<input>` element `disabled` attribute. |
 | id            | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
-| inset-mode    | `Boolean` | `false`     | Sets the switch style appearance to **_Inset style_**. <MdBadge color="info">v2.0.0</MdBadge> |
-| inset-outlined | `Boolean` | `false`    | Sets the switch style appearance to **_Inset Outlined style_**. <MdBadge color="info">v2.0.0</MdBadge> |
+| inset-mode <Badge type="warning">deprecated</Badge> | `Boolean` | `false`     | Sets the switch style appearance to ***Inset***. <div class="pt-2">Use `variant` instead.</div> |
+| inset-outlined <Badge type="warning">deprecated</Badge> | `Boolean` | `false`    | Sets the switch style appearance to ***Outline Inset***. <div class="pt-2">Use `variant` instead.</div> |
 | label-class    | `String`&#124;`String[]` |  | Additional css class for the text label. |
 | label-position | `String` | `'right'`   | The switch text label position, valid values are: `left`, `right`. |
 | model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
@@ -478,6 +481,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | readonly    | `Boolean` | `false` | Sets the component into readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
 | value <Badge type="danger">required</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The `<input>` element `value` attribute. |
+| variant     | `String` | `'default'` | Sets the switch style appearance. Valid values are: `default`, `inset` and `outline-inset`. <MdBadge color="info">v2.2.1</MdBadge> |
 
 </div>
   </BsTab>
