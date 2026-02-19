@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A component that let users select one option from a set of options. 
+description: Radio button is a component that let users select one option from a set of options. 
 ---
 
 # Radio Button
@@ -18,11 +18,11 @@ to them to give the best experience. You can also use `v-model` directive to cre
 data bindings on the `model-value` property.
 
 
-::: BlockVue {title="Radio Button Example" file="./docs/components/scripts/radio-1.js"}
+::: BlockVue {title="Radio Button Overview" file="./docs/components/inputs/js/radio-1.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <div class="col-form-label">Select an option</div>
       <div v-for="idx in 3" :key="'option-' + idx">
@@ -40,6 +40,7 @@ import { ref } from "vue";
 
 const radio1 = ref<number>();
 </script>
+
 ```
 :::
 
@@ -52,25 +53,21 @@ can be integrated with external validator plugin such as
 [Vuelidate](https://vuelidate-next.netlify.app/). 
 
 
-::: BlockVue {title="Radio Group Example" file="./docs/components/scripts/radio-2.js"}
+::: BlockVue {title="Radio Group" file="./docs/components/inputs/js/radio-2.js"}
 
 ```vue
 <template>
-  <bs-card class="w-100" border-off>
-    <bs-card-body>
-      <bs-radio-group v-model="selectedFavoriteColor" :items="favoriteColors">
-        <label class="col-12 col-form-label">Select a color</label>
-      </bs-radio-group>
-      <p class="mt-3">Selected color: <b>{{ selectedFavoriteColor }}</b></p>
-      <hr />
-      <div class="mb-3">
-        <bs-radio-group v-model="selectedFavoriteFruit" :items="favoriteFruits">
-          <label class="col-md-3 col-form-label">Select a fruit</label>
-        </bs-radio-group>
-      </div>
-      <div>Selected fruit: <b>{{ selectedFavoriteFruit }}</b></div>
-    </bs-card-body>
-  </bs-card>
+  <div class="demo-wrapper w-full flex flex-col md-gap-3 p-2 px-md-3">
+    <bs-radio-group v-model="selectedFavoriteColor" :items="favoriteColors">
+      <label class="col-12 col-form-label">Select a color</label>
+    </bs-radio-group>
+    <div class="mt-3">Selected color: <b>{{ selectedFavoriteColor }}</b></div>
+    <bs-divider></bs-divider>
+    <bs-radio-group v-model="selectedFavoriteFruit" :items="favoriteFruits">
+      <label class="col-md-3 col-form-label">Select a fruit</label>
+    </bs-radio-group>
+    <div>Selected fruit: <b>{{ selectedFavoriteFruit }}</b></div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -103,19 +100,19 @@ to fit up to **_four columns_**.
 :::
 
 
-### Multi Column {class="mt-lg-5"}
+### Multi Column {#radio-group-multi-column class="mt-lg-5"}
 
 With `<bs-radio-group>`, collection of `<bs-radio>` can be arranged in multi-columns. 
 When the number of `<bs-radio>` exceed the number of maximum columns, then the remaining 
 `<bs-radio>` will be placed on the next row.
 
-<SmallNote color="teal" class="mt-lg-4">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.0.0</SmallNote>
 
-::: BlockVue {title="Radio Group Multicolumn Example" file="./docs/components/scripts/radio-3.js"}
+::: BlockVue {title="Radio Group Multicolumn" file="./docs/components/inputs/js/radio-3.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2 p-md-3">
     <div class="mb-3">
       <bs-radio-group v-model="selectedItem" :items="dummyItems" column="3">
         <label class="col-md-3 col-form-label">Multi Column</label>
@@ -155,27 +152,25 @@ if the media query matches `(min-width: 768px)`, it will be displayed in
 Use `color` property to change `<bs-radio>` or `<bs-radio-group>` color appearance.
 Additionally, you can set each radio of `<bs-radio-group>` to have different color.
 
-::: BlockVue {title="Radio Color Style Example" file="./docs/components/scripts/radio-4.js"}
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
+::: BlockVue {title="Radio Colors" file="./docs/components/inputs/js/radio-4.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
-    <div class="mb-3">
-      <bs-radio-group
-        v-model="selectedFruit"
-        :items="favoriteFruits"
-        color="deep-purple"
-        column="2"
-      >
-        <label class="col-md-3 col-form-label">Single color</label>
-      </bs-radio-group>
-    </div>
-    <hr />
-    <div>
-      <bs-radio-group v-model="selectedColor" :items="colorsItems" column="2">
-        <label class="col-md-3 col-form-label">Different Color</label>
-      </bs-radio-group>
-    </div>
+  <div class="demo-wrapper w-full flex flex-col md-gap-3 p-2 px-md-3">
+    <bs-radio-group
+      v-model="selectedFruit"
+      :items="favoriteFruits"
+      color="primary"
+      column="2"
+    >
+      <label class="col-md-3 col-form-label">Single color</label>
+    </bs-radio-group>
+    <bs-divider></bs-divider>
+    <bs-radio-group v-model="selectedColor" :items="colorsItems" column="2">
+      <label class="col-md-3 col-form-label">Different Color</label>
+    </bs-radio-group>
   </div>
 </template>
 
@@ -185,76 +180,79 @@ import { ref } from "vue";
 const selectedColor = ref<string>();
 const selectedFruit = ref<string>();
 
-const colorsItems = [
-  { value: "red", label: "Red", color: "red" },
-  { value: "green", label: "Green", color: "green" },
-  { value: "blue", label: "Blue", color: "blue" },
-  { value: "purple", label: "Purple", color: "purple" },
-];
-
 const favoriteFruits = [
   { value: "Orange", label: "Orange" },
   { value: "Apple", label: "Apple" },
   { value: "Pineapple", label: "Pineapple" },
   { value: "Grape", label: "Grape" },
 ];
+const colorsItems = [
+  { value: "primary", label: "Primary", color: "primary" },
+  { value: "success", label: "Success", color: "success" },
+  { value: "danger", label: "Danger", color: "danger" },
+  { value: "warning", label: "Warning", color: "warning" },
+];
+
 </script>
 
 ```
 ::: 
 
-<!-- @include: @/components/colors-tip.md -->
-
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-radio` for better customization.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ```scss
---md-radio-margin: .5rem 1rem .5rem 0;
---md-radio-size: 20px;
---md-radio-stroke: 2px;
---md-radio-touch-size: 40px;
---md-radio-disabled-bg: transparent;
---md-radio-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
+.md-radio {
+  --md-radio-size: #{vars.$radio-size};
+  --md-radio-touch-size: #{vars.$radio-touch-size};
+  --md-radio-stroke: #{vars.$radio-stroke};
+  --md-radio-margin: #{vars.$radio-margin};
 
---md-radio-color: currentColor;
---md-radio-active-color: #{$color};
+  --md-radio-color: currentColor;
+  --md-radio-active-color: #{$color};
+  --md-radio-disabled-bg: transparent;
+  --md-radio-disabled-opacity: var(--md-field-disabled-opacity);
+}
 
 ```
 
 ## API Reference
 
-### BsRadio {#api-radio}
+### BsRadio {#api-reference-radio}
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-radio">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
+| color       | `String`  | `'default'` | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled    | `Boolean` | `false`     | Enable/disable the component and the `<input>` element. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Boolean` |  | The radio button value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
+| model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The radio button value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| value <Badge type="danger">required</Badge> | `String`/`Number`/`Boolean` |  | The `<input>` element `value` attribute. |
+| value <Badge type="danger">required</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The `<input>` element `value` attribute. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-radio">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| checked | ( state:`Boolean`) | Triggers after the radio button state changed. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | ( value:`String`/`Number`/`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| checked | ( state:`Boolean`) | Triggers after the radio button state changed. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | ( value:`String`&#124;`Number`&#124;`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-radio">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -266,39 +264,39 @@ const favoriteFruits = [
 </BsTabs>
 
 
-### BsRadioGroup {#api-radio-group class="mt-lg-5"}
+### BsRadioGroup {#api-reference-radio-group class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-radio-group">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
-| column      | `Number`  |  | Sets the maximum number of columns to display the radio button.<BsBadge color="info">v2.0.0</BsBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
+| color       | `String`  |  | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
+| column      | `Number`  |  | Sets the maximum number of columns to display the radio button.<MdBadge color="info">v2.0.0</MdBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
 | disabled    | `Boolean` | `false`     | Enable/disable the component. |
-| external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
 | help-text   | `String`  |          | The help text to display below the component. |
-| items <Badge type="danger">required</Badge> | `TRadioProps[]` |  | The configuration option to construct the `<bs-radio>`. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`Number` |  | The component value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
+| items <Badge type="danger">required</Badge> | `TRadioInputProps[]` |  | The configuration option to construct the `<bs-radio>`. |
+| model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number` |  | The component value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| validator   | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> <p>More details, see [Text Field - TValidator](/components/inputs/textfield#api-validator)</p> |
+| validator   | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <MdBadge color="info">v2.0.0</MdBadge> <div class="pt-3">See [Text Field - TValidator](/components/inputs/textfield#api-validator) for more details.</div> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-radio-group">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| update:model-value | ( value:`String`/`Number`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String`&#124;`Number`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-radio-group">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -310,18 +308,16 @@ const favoriteFruits = [
 </BsTabs>
 
 
-### TRadioProps {#api-tradio-props class="mt-lg-5"}
+### TRadioInputProps {#api-reference-radio-input-props class="mt-lg-5"}
 
-The _TRadioProps_ has properties as described below:
-
-<div class="doc-api-reference mt-0">
+<div class="doc-api-reference mt-2">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| value <Badge type="danger">required</Badge> | `String`/`Number` | The `<bs-radio>` value. |
+| value <Badge type="danger">required</Badge> | `String`&#124;`Number` | The `<bs-radio>` value. |
 | label <Badge type="danger">required</Badge> | `String` | The `<bs-radio>` label. |
-| color    | `String`  | The `<bs-radio>` color appearance. |
+| color    | `String`  | The `<bs-radio>` color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 365px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled | `Boolean` | Create `<bs-radio>` in disabled state. |
 | readonly | `Boolean` | Create `<bs-radio>` in readonly state. |
 | id       | `String`  | Sets the `<bs-radio>` element `ID` attribute. This property value is auto generates. |
@@ -344,10 +340,10 @@ const selectedFavoriteFruit = ref<string>();
 const selectedItem = ref<number>();
 
 const colorsItems = [
-  { value: "red", label: "Red", color: "red" },
-  { value: "green", label: "Green", color: "green" },
-  { value: "blue", label: "Blue", color: "blue" },
-  { value: "purple", label: "Purple", color: "purple" },
+  { value: "primary", label: "Primary", color: "primary" },
+  { value: "success", label: "Success", color: "success" },
+  { value: "danger", label: "Danger", color: "danger" },
+  { value: "warning", label: "Warning", color: "warning" },
 ];
 const dummyItems = [
   { value: 1, label: "Item 1" },

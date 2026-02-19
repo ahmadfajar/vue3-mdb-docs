@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A component that let users select one or more items from a list, or turn an item on or off. 
+description: Checkbox is a component that let users select one or more items from a list, or turn an item on or off. 
 ---
 
 # Checkbox
@@ -20,11 +20,11 @@ to them to give the best experience. You can also use `v-model` directive to cre
 data bindings on the `model-value` property.
 
 
-::: BlockVue {title="Checkbox Example" file="./docs/components/scripts/checkbox-1.js"}
+::: BlockVue {title="Checkbox Overview" file="./docs/components/inputs/js/checkbox-1.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-checkbox value="accepted" v-model="checkbox1">
         Accept the terms and use
@@ -39,6 +39,7 @@ import { ref } from "vue";
 
 const checkbox1 = ref<string>();
 </script>
+
 ```
 :::
 
@@ -51,25 +52,21 @@ can be integrated with external validator plugin such as
 [Vuelidate](https://vuelidate-next.netlify.app/). 
 
 
-::: BlockVue {title="Checkbox Group Example" file="./docs/components/scripts/checkbox-2.js"}
+::: BlockVue {title="Checkbox Group" file="./docs/components/inputs/js/checkbox-2.js"}
 
 ```vue
 <template>
-  <bs-card class="w-100" border-off>
-    <bs-card-body>
-      <bs-checkbox-group v-model="selectedFavoriteColors" :items="favoriteColors">
-        <label class="col-12 col-form-label">Please select colors</label>
+  <div class="demo-wrapper w-full flex flex-col md-gap-3 p-2 px-md-3">
+    <bs-checkbox-group v-model="selectedFavoriteColors" :items="favoriteColors">
+      <label class="col-12 col-form-label">Please select colors</label>
+    </bs-checkbox-group>
+    <div class="mt-3">Selected colors: <b>{{ selectedFavoriteColors }}</b></div>
+    <bs-divider></bs-divider>
+      <bs-checkbox-group v-model="selectedFavoriteFruits" :items="favoriteFruits">
+        <label class="col-md-3 col-form-label">Select fruits</label>
       </bs-checkbox-group>
-      <p class="mt-3">Selected colors: <b>{{ selectedFavoriteColors }}</b></p>
-      <hr />
-      <div class="mb-3">
-        <bs-checkbox-group v-model="selectedFavoriteFruits" :items="favoriteFruits">
-          <label class="col-md-3 col-form-label">Select fruits</label>
-        </bs-checkbox-group>
-      </div>
-      <div>Selected fruits: <b>{{ selectedFavoriteFruits }}</b></div>
-    </bs-card-body>
-  </bs-card>
+    <div>Selected fruits: <b>{{ selectedFavoriteFruits }}</b></div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -102,19 +99,19 @@ to fit up to **_four columns_**.
 :::
 
 
-### Multi Column {class="mt-lg-5"}
+### Multi Column {#checkbox-group-multi-column class="mt-lg-5"}
 
 With `<bs-checkbox-group>`, collection of `<bs-checkbox>` can be arranged in multi-columns. 
 When the number of `<bs-checkbox>` exceed the number of maximum columns, then the remaining 
 `<bs-checkbox>` will be placed on the next row.
 
-<SmallNote color="teal" class="mt-lg-4">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.0.0</SmallNote>
 
-::: BlockVue {title="Checkbox Group Multicolumn Example" file="./docs/components/scripts/checkbox-3.js"}
+::: BlockVue {title="Checkbox Group Multicolumn" file="./docs/components/inputs/js/checkbox-3.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2 p-md-3">
     <div class="mb-3">
       <bs-checkbox-group v-model="selectedItems" :items="dummyItems" column="3">
         <label class="col-md-3 col-form-label">Multi Column</label>
@@ -154,27 +151,25 @@ if the media query matches `(min-width: 768px)`, it will be displayed in
 Use `color` property to change `<bs-checkbox>` or `<bs-checkbox-group>` color appearance.
 Additionally, you can set each checkbox of `<bs-checkbox-group>` to have different color.
 
-::: BlockVue {title="Checkbox Color Style Example" file="./docs/components/scripts/checkbox-4.js"}
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
+::: BlockVue {title="Checkbox Colors" file="./docs/components/inputs/js/checkbox-4.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4">
-    <div class="mb-3">
-      <bs-checkbox-group
-        v-model="selectedFruits"
-        :items="favoriteFruits"
-        color="primary"
-        column="2"
-      >
-        <label class="col-md-3 col-form-label">Single color</label>
-      </bs-checkbox-group>
-    </div>
-    <hr />
-    <div>
-      <bs-checkbox-group v-model="selectedColors" :items="colorsItems" column="2">
-        <label class="col-md-3 col-form-label">Different Color</label>
-      </bs-checkbox-group>
-    </div>
+  <div class="demo-wrapper w-full flex flex-col md-gap-3 p-2 px-md-3">
+    <bs-checkbox-group
+      v-model="selectedFruits"
+      :items="favoriteFruits"
+      color="primary"
+      column="2"
+    >
+      <label class="col-md-3 col-form-label">Single color</label>
+    </bs-checkbox-group>
+    <bs-divider></bs-divider>
+    <bs-checkbox-group v-model="selectedColors" :items="colorsItems" column="2">
+      <label class="col-md-3 col-form-label">Different Color</label>
+    </bs-checkbox-group>
   </div>
 </template>
 
@@ -184,40 +179,38 @@ import { ref } from "vue";
 const selectedColors = ref<string[]>([]);
 const selectedFruits = ref<string[]>([]);
 
-const colorsItems = [
-  { value: "red", label: "Red", color: "red" },
-  { value: "green", label: "Green", color: "green" },
-  { value: "blue", label: "Blue", color: "blue" },
-  { value: "purple", label: "Purple", color: "purple" },
-];
-
 const favoriteFruits = [
   { value: "Orange", label: "Orange" },
   { value: "Apple", label: "Apple" },
   { value: "Pineapple", label: "Pineapple" },
   { value: "Grape", label: "Grape" },
 ];
+
+const colorsItems = [
+  { value: "primary", label: "Primary", color: "primary" },
+  { value: "success", label: "Success", color: "success" },
+  { value: "danger", label: "Danger", color: "danger" },
+  { value: "warning", label: "Warning", color: "warning" },
+];
 </script>
 
 ```
 ::: 
-
-<!-- @include: @/components/colors-tip.md -->
 
 
 ## Custom Checkbox
 
 The following is an example that demonstrate how to customize checkbox appearance via css variables.
 
-<SmallNote color="teal" class="mt-lg-4">Added since v2.0.7</SmallNote>
+<SmallNote color="teal">Added in v2.0.7</SmallNote>
 
-::: BlockVue {title="Custom Checkbox Example" file="./docs/components/scripts/checkbox-1.js"}
+::: BlockVue {title="Custom Checkbox" file="./docs/components/inputs/js/checkbox-1.js"}
 
 ```vue
 <template>
-  <div class="w-100 bg-white rounded-3 p-4 rounded-checkboxes">
+  <div class="demo-wrapper w-full p-2 p-md-3">
     <div class="mb-3">
-      <bs-checkbox value="accepted" v-model="checkbox1" color="deep-purple">
+      <bs-checkbox value="accepted" v-model="checkbox1" class="rounded-checkbox">
         Accept the terms and use
       </bs-checkbox>
     </div>
@@ -232,81 +225,83 @@ const checkbox1 = ref<string>();
 </script>
 
 <style>
-.rounded-checkboxes .md-checkbox {
+.rounded-checkbox {
   --md-checkbox-border-radius: 50%;
   --md-checkbox-size: 24px;
-  --md-checkbox-checkmark-height: 12px; 
-  --md-checkbox-checkmark-width: 6px; 
-  --md-checkbox-checkmark-pos-x: 7px; 
+  --md-checkbox-checkmark-height: 12px;
+  --md-checkbox-checkmark-width: 6px;
+  --md-checkbox-checkmark-pos-x: 7px;
   --md-checkbox-checkmark-pos-y: 3px;
 }
-.rounded-checkboxes .md-checkbox:not(.checked) {
-  --md-checkbox-state-bg: #d0d0d0;
-  --md-checkbox-state-color: #808080;
-}
 </style>
+
 ```
 :::
 
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-checkbox` for better customization.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ```scss
---md-checkbox-disabled-bg: transparent;
---md-checkbox-disabled-opacity: calc(var(--md-field-disabled-opacity) - .2);
---md-checkbox-border-radius: .25rem;
---md-checkbox-margin: .5rem 1rem .5rem 0;
---md-checkbox-size: 20px;
---md-checkbox-stroke: 2px;
---md-checkbox-touch-size: 40px;
---md-checkbox-indeterminate-width: 12px;
---md-checkbox-checkmark-height: 13px; 
---md-checkbox-checkmark-width: 7px; 
---md-checkbox-checkmark-pos-x: 4px; 
---md-checkbox-checkmark-pos-y: 0;
+.md-checkbox {
+  --md-checkbox-size: #{vars.$checkbox-size};
+  --md-checkbox-touch-size: #{vars.$checkbox-touch-size};
+  --md-checkbox-border-radius: #{vars.$radius};
+  --md-checkbox-stroke: #{vars.$checkbox-stroke};
+  --md-checkbox-margin: #{vars.$checkbox-margin};
+  --md-checkbox-indeterminate-width: #{vars.$checkbox-indeterminate-width};
+  --md-checkbox-disabled-opacity: var(--md-field-disabled-opacity);
+  --md-checkbox-checkmark-height: #{vars.$checkbox-checkmark-height};
+  --md-checkbox-checkmark-width: #{vars.$checkbox-checkmark-width};
+  --md-checkbox-checkmark-pos-x: 4px;
+  --md-checkbox-checkmark-pos-y: 0;
 
---md-checkbox-bg: #{$color};             // background color when checked
---md-checkbox-color: #{$checked-color};  // border color when checked
---md-checkbox-state-bg: transparent;     // background color when checked or un-checked
---md-checkbox-state-color: currentColor; // border color when checked or un-checked
+  --md-checkbox-disabled-bg: transparent;
+  --md-checkbox-unchecked-bg: transparent;
+  --md-checkbox-unchecked-color: currentColor;
+  --md-checkbox-checked-bg: #{$color};
+  --md-checkbox-checked-color: #{$checked-color};
+}
 
 ```
 
 ## API Reference
 
-### BsCheckbox {#api-checkbox}
+### BsCheckbox {#api-reference-checkbox}
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-checkbox">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
+| color       | `String`  | `'default'` | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled    | `Boolean` | `false`     | Enable/disable the component and the `<input>` element. |
 | id          | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
 | indeterminate | `Boolean`  | `false` | Sets an indeterminate state for the checkbox. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Boolean` |  | The checkbox value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
-| name        | `String`  |  | Sets the `<input>` element `name` attribute. |
+| model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The checkbox value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
+| name        | `String`  |         | Sets the `<input>` element `name` attribute. |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| value <Badge type="danger">required</Badge> | `String`/`Number`/`Boolean` |  | The `<input>` element `value` attribute. |
+| value <Badge type="danger">required</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The `<input>` element `value` attribute. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-checkbox">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
-| Name    | Arguments         | Description |
-|---------|-------------------|-------------|
-| checked | ( state:`Boolean`) | Triggers after the checkbox state changed. <BsBadge color="info">v2.0.0</BsBadge> |
-| update:model-value | ( value:`String`/`Number`/`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| Name    | Arguments          | Description |
+|---------|--------------------|-------------|
+| checked | ( state:`Boolean`) | Triggers after the checkbox state changed. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | ( value:`String`&#124;`Number`&#124;`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-checkbox">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -318,40 +313,40 @@ const checkbox1 = ref<string>();
 </BsTabs>
 
 
-### BsCheckboxGroup {#api-checkbox-group class="mt-lg-5"}
+### BsCheckboxGroup {#api-reference-checkbox-group class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-checkbox-group">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| color       | `String`  | `'default'` | The component's color appearance. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
-| column      | `Number`  |  | Sets the maximum number of columns to display the checkbox.<BsBadge color="info">v2.0.0</BsBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
-| disabled    | `Boolean` | `false`     | Enable/disable the component. |
-| external-validator <Badge type="warning">deprecated</Badge> | `TValidator` |    | Use `validator` instead. |
-| help-text   | `String`  |          | The help text to display below the component. |
+| color         | `String`  |  | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
+| column        | `Number`  |  | Sets the maximum number of columns to display the checkbox.<MdBadge color="info">v2.0.0</MdBadge> <p>When the number of items exceed the number of columns, then the remaining items will be displayed on the next row.</p>  |
+| disabled      | `Boolean` | `false` | Enable/disable the component. |
+| help-text     | `String`  |         | The help text to display below the component. |
 | indeterminate | `Boolean` | `false` | Sets default indeterminate state for the checkbox. |
-| items <Badge type="danger">required</Badge> | `TCheckboxProps[]` |  | The configuration option to construct the `<bs-checkbox>`. |
-| model-value <Badge type="tip">v-model</Badge> | `String[]`/`Number[]` |  | The component value monitored by `v-model` to maintain checked state. <BsBadge color="info">v2.0.0</BsBadge> |
+| items <Badge type="danger">required</Badge> | `TCheckboxInputProps[]` |  | The configuration option to construct the `<bs-checkbox>`. |
+| model-value <Badge type="tip">v-model</Badge> | `String[]`&#124;`Number[]` |  | The component value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text | `Boolean` | `true` | Keeps help text visible when the component is not focused. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |
-| validator   | `TValidator` |   | The configuration options to integrate external validator plugin to validate this field value. <BsBadge color="info">v2.0.0</BsBadge> <p>More details, see [Text Field - TValidator](/components/inputs/textfield#api-validator)</p> |
+| validator   | `TValidator`  |     | The configuration options to integrate external validator plugin to validate this field value. <MdBadge color="info">v2.0.0</MdBadge> <div class="pt-3">See [Text Field - TValidator](/components/inputs/textfield#api-validator) for more details.</div> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-checkbox-group">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| update:model-value | ( value:`String[]`/`Number[]`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`String[]`&#124;`Number[]`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-checkbox-group">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name        | Description  |
@@ -363,18 +358,16 @@ const checkbox1 = ref<string>();
 </BsTabs>
 
 
-### TCheckboxProps {#api-tcheckbox-props class="mt-lg-5"}
+### TCheckboxInputProps {#api-reference-checkbox-input-props class="mt-lg-5"}
 
-The _TCheckboxProps_ has properties as described below:
-
-<div class="doc-api-reference mt-0">
+<div class="doc-api-reference mt-2">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Property | Type      | Description |
 |----------|-----------|-------------|
-| value <Badge type="danger">required</Badge> | `String`/`Number` | The `<bs-checkbox>` value. |
+| value <Badge type="danger">required</Badge> | `String`&#124;`Number` | The `<bs-checkbox>` value. |
 | label <Badge type="danger">required</Badge> | `String` | The `<bs-checkbox>` label. |
-| color    | `String`  | The `<bs-checkbox>` color appearance. |
+| color    | `String`  | The `<bs-checkbox>` color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled | `Boolean` | Create `<bs-checkbox>` in disabled state. |
 | readonly | `Boolean` | Create `<bs-checkbox>` in readonly state. |
 | id       | `String`  | Sets the `<bs-checkbox>` element `ID` attribute. This property value is auto generates. |
@@ -398,10 +391,10 @@ const selectedFavoriteColors = ref<string[]>([]);
 const selectedFavoriteFruits = ref<string[]>([]);
 
 const colorsItems = [
-  { value: "red", label: "Red", color: "red" },
-  { value: "green", label: "Green", color: "green" },
-  { value: "blue", label: "Blue", color: "blue" },
-  { value: "purple", label: "Purple", color: "purple" },
+  { value: "primary", label: "Primary", color: "primary" },
+  { value: "success", label: "Success", color: "success" },
+  { value: "danger", label: "Danger", color: "danger" },
+  { value: "warning", label: "Warning", color: "warning" },
 ];
 const dummyItems = [
   { value: 1, label: "Item 1" },
@@ -427,19 +420,12 @@ const favoriteFruits = [
 </script>
 
 <style lang="scss">
-.rounded-checkboxes {
-  .md-checkbox {
-    --md-checkbox-border-radius: 50%;
-    --md-checkbox-size: 24px;
-    --md-checkbox-checkmark-height: 12px; 
-    --md-checkbox-checkmark-width: 6px; 
-    --md-checkbox-checkmark-pos-x: 7px; 
-    --md-checkbox-checkmark-pos-y: 3px;
-
-    &:not(.checked) {
-      --md-checkbox-state-bg: #d0d0d0;
-      --md-checkbox-state-color: #808080;
-    }
-  }
+.rounded-checkbox {
+  --md-checkbox-border-radius: 50%;
+  --md-checkbox-size: 24px;
+  --md-checkbox-checkmark-height: 12px;
+  --md-checkbox-checkmark-width: 6px;
+  --md-checkbox-checkmark-pos-x: 7px;
+  --md-checkbox-checkmark-pos-y: 3px;
 }
 </style>
