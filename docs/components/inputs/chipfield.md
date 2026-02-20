@@ -413,89 +413,65 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 <template>
   <div class="demo-wrapper w-full p-2 p-md-3">
     <div class="row row-cols-1 row-cols-md-2">
-      <div class="col">
-        <div class="mb-3">
-          <bs-chip-field prepend-icon="person_filled" floating-label>
-            <label>Prepend</label>
-          </bs-chip-field>
-        </div>
+      <div class="col mb-3">
+        <bs-chip-field prepend-icon="person_filled" floating-label>
+          <label>Prepend</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-3">
+        <bs-chip-field append-icon="person_filled" floating-label>
+          <label>Append</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-3">
+        <bs-chip-field prepend-icon-outer="person" floating-label>
+          <label>Prepend Outer</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-3">
+        <bs-chip-field append-icon-outer="person" floating-label>
+          <label>Append Outer</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field prepend-icon="person_filled" floating-label filled>
+          <label>Prepend</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field append-icon="person_filled" floating-label filled>
+          <label>Append</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field prepend-icon-outer="person" floating-label filled>
+          <label>Prepend Outer</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field append-icon-outer="person" floating-label filled>
+          <label>Append Outer</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field prepend-icon="person_filled" floating-label outlined>
+          <label>Prepend</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4">
+        <bs-chip-field append-icon="person_filled" floating-label outlined>
+          <label>Append</label>
+        </bs-chip-field>
+      </div>
+      <div class="col mb-4 mb-md-0">
+        <bs-chip-field prepend-icon-outer="person" floating-label outlined>
+          <label>Prepend Outer</label>
+        </bs-chip-field>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-chip-field append-icon="person_filled" floating-label>
-            <label>Append</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-chip-field prepend-icon-outer="person" floating-label>
-            <label>Prepend Outer</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-chip-field append-icon-outer="person" floating-label>
-            <label>Append Outer</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field prepend-icon="person_filled" floating-label filled>
-            <label>Prepend</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field append-icon="person_filled" floating-label filled>
-            <label>Append</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field prepend-icon-outer="person" floating-label filled>
-            <label>Prepend Outer</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field append-icon-outer="person" floating-label filled>
-            <label>Append Outer</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field prepend-icon="person_filled" floating-label outlined>
-            <label>Prepend</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4">
-          <bs-chip-field append-icon="person_filled" floating-label outlined>
-            <label>Append</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-4 mb-md-0">
-          <bs-chip-field prepend-icon-outer="person" floating-label outlined>
-            <label>Prepend Outer</label>
-          </bs-chip-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-0">
-          <bs-chip-field append-icon-outer="person" floating-label outlined>
-            <label>Append Outer</label>
-          </bs-chip-field>
-        </div>
+        <bs-chip-field append-icon-outer="person" floating-label outlined>
+          <label>Append Outer</label>
+        </bs-chip-field>
       </div>
     </div>
   </div>
@@ -561,7 +537,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">Updated on v2.1.0</MdBadge> |
+| action-icon-variant  | `String` | `'outlined'` | Sets the action icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">Updated in v2.1.0</MdBadge> |
 | append-icon          | `String` |  | <div style="min-width:400px">Sets icon to display at the inner right side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | append-icon-outer    | `String` |  | <div style="min-width:400px">Sets icon to display at the outer right side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
 | autocomplete | `Boolean`&#124;`String`  | `false` | Sets browsers **_autocomplete_** predictions on/off. |

@@ -24,7 +24,7 @@ Additionally, you can use keyboard **UP/DOWN** arrow to increment or decrement t
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field>
       <label class="col-md-3 col-form-label">Numeric Field</label>
     </bs-numeric-field>
@@ -57,7 +57,7 @@ by using `floating-label` property explicitly.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -84,7 +84,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field filled>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -111,7 +111,7 @@ that follows the Google **Material Design 3** specifications.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field outlined>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -140,7 +140,7 @@ Combine `filled` property and `rounded` property explicitly to enable `<bs-numer
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field filled rounded>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -169,7 +169,7 @@ Combine `outlined` property and `rounded` property explicitly to enable `<bs-num
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field outlined rounded>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -202,7 +202,7 @@ The *Spin* action buttons is the default action buttons. They can be placed on t
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field action-button-placement="left" filled>
       <label class="col-md-3 col-form-label">Classic Field</label>
     </bs-numeric-field>
@@ -234,7 +234,7 @@ to `plus-minus`. They can be placed on the **left**, **right** (*default*) or **
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 p-md-3">
+  <div class="demo-wrapper w-full flex flex-col md-gap-5 p-2 px-md-3">
     <bs-numeric-field 
       action-button="plus-minus" 
       action-button-placement="right" 
@@ -275,7 +275,7 @@ Define the `clear-button` property explicitly, so that the field value can be cl
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full p-2 p-md-3">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <bs-numeric-field v-model="fieldValue1" clear-button filled floating-label>
       <label>Numeric Field</label>
     </bs-numeric-field>
@@ -303,52 +303,40 @@ visible only when the numeric field is focused.
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full p-2 p-md-3">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="row row-cols-1 row-cols-md-2">
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field help-text="Type the product price per-unit" floating-label>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
+      <div class="col mb-3">
+        <bs-numeric-field help-text="Type the product price per-unit" floating-label>
+          <label>Unit Price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field :model-value="123456.789" persistent-help-off
+          help-text="Type the product price per-unit" floating-label>
+          <label>Unit Price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field help-text="Type the product price per-unit" floating-label filled>
+          <label>Unit Price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field :model-value="123456.789" persistent-help-off
+          help-text="Type the product price per-unit" floating-label filled>
+          <label>Unit Price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3 mb-md-0">
+        <bs-numeric-field help-text="Type the product price per-unit" floating-label outlined>
+          <label>Unit Price</label>
+        </bs-numeric-field>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field :model-value="123456.789" persistent-help-off
-            help-text="Type the product price per-unit" floating-label>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field help-text="Type the product price per-unit" floating-label filled>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field :model-value="123456.789" persistent-help-off
-            help-text="Type the product price per-unit" floating-label filled>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3 mb-md-0">
-          <bs-numeric-field help-text="Type the product price per-unit" floating-label outlined>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-0">
-          <bs-numeric-field :model-value="123456.789" persistent-help-off
-            help-text="Type the product price per-unit" floating-label outlined>
-            <label>Unit Price</label>
-          </bs-numeric-field>
-        </div>
+        <bs-numeric-field :model-value="123456.789" persistent-help-off
+          help-text="Type the product price per-unit" floating-label outlined>
+          <label>Unit Price</label>
+        </bs-numeric-field>
       </div>
     </div>
   </div> 
@@ -375,91 +363,67 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full p-2 p-md-3">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="row row-cols-1 row-cols-md-2">
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prepend-icon="bug_report_filled" floating-label>
-            <label>Prepend</label>
-          </bs-numeric-field>
-        </div>
+      <div class="col mb-3">
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label>
+          <label>Prepend</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field append-icon="bug_report_filled" floating-label>
+          <label>Append</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label>
+          <label>Prepend Outer</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field append-icon-outer="bug_report" floating-label>
+          <label>Append Outer</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label filled>
+          <label>Prepend</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field append-icon="bug_report_filled" floating-label filled>
+          <label>Append</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label filled>
+          <label>Prepend Outer</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field append-icon-outer="bug_report" floating-label filled>
+          <label>Append Outer</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field prepend-icon="bug_report_filled" floating-label outlined>
+          <label>Prepend</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field append-icon="bug_report_filled" floating-label outlined>
+          <label>Append</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3 mb-md-0">
+        <bs-numeric-field prepend-icon-outer="bug_report" floating-label outlined>
+          <label>Prepend Outer</label>
+        </bs-numeric-field>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field append-icon="bug_report_filled" floating-label>
-            <label>Append</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prepend-icon-outer="bug_report" floating-label>
-            <label>Prepend Outer</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field append-icon-outer="bug_report" floating-label>
-            <label>Append Outer</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prepend-icon="bug_report_filled" floating-label filled>
-            <label>Prepend</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field append-icon="bug_report_filled" floating-label filled>
-            <label>Append</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prepend-icon-outer="bug_report" floating-label filled>
-            <label>Prepend Outer</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field append-icon-outer="bug_report" floating-label filled>
-            <label>Append Outer</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prepend-icon="bug_report_filled" floating-label outlined>
-            <label>Prepend</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field append-icon="bug_report_filled" floating-label outlined>
-            <label>Append</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3 mb-md-0">
-          <bs-numeric-field prepend-icon-outer="bug_report" floating-label outlined>
-            <label>Prepend Outer</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-0">
-          <bs-numeric-field append-icon-outer="bug_report" floating-label outlined>
-            <label>Append Outer</label>
-          </bs-numeric-field>
-        </div>
+        <bs-numeric-field append-icon-outer="bug_report" floating-label outlined>
+          <label>Append Outer</label>
+        </bs-numeric-field>
       </div>
     </div>
   </div>
@@ -478,53 +442,41 @@ text _before_ or _after_ the input field.
 
 <SmallNote color="teal">Added in v2.0.10</SmallNote>
 
-::: BlockVue {title="Text Field with prefixes and suffixes"}
+::: BlockVue {title="Numeric Field with prefixes and suffixes"}
 
 ```vue
 <template>
-  <div class="demo-wrapper w-full p-2 p-md-3">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="row row-cols-1 row-cols-md-2">
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prefix="$" prepend-icon="payments" floating-label>
-            <label>Unit price</label>
-          </bs-numeric-field>
-        </div>
+      <div class="col mb-3">
+        <bs-numeric-field prefix="$" prepend-icon="payments" floating-label>
+          <label>Unit price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label>
+          <label>Weight</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field prefix="$" prepend-icon="payments" floating-label filled>
+          <label>Unit price</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3">
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label filled>
+          <label>Weight</label>
+        </bs-numeric-field>
+      </div>
+      <div class="col mb-3 mb-md-0">
+        <bs-numeric-field prefix="$" prepend-icon="payments" floating-label outlined>
+          <label>Unit price</label>
+        </bs-numeric-field>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label>
-            <label>Weight</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field prefix="$" prepend-icon="payments" floating-label filled>
-            <label>Unit price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label filled>
-            <label>Weight</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3 mb-md-0">
-          <bs-numeric-field prefix="$" prepend-icon="payments" floating-label outlined>
-            <label>Unit price</label>
-          </bs-numeric-field>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-0">
-          <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label outlined>
-            <label>Weight</label>
-          </bs-numeric-field>
-        </div>
+        <bs-numeric-field suffix="Kg" prepend-icon="person_filled" floating-label outlined>
+          <label>Weight</label>
+        </bs-numeric-field>
       </div>
     </div>
   </div>
