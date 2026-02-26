@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A component that let users select one or more items from a displayed list.
+description: Listbox is a component that let users select one or more items from a displayed list.
 ---
 
 # Listbox
@@ -10,25 +10,26 @@ description: A component that let users select one or more items from a displaye
 **BsListbox** is a component that let users select one or more items from a displayed list.
 :::
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added in v2.0.0</SmallNote>
 
 
 ## Overview
 
-**BsListbox** component mimics the HTML List Box: `<select size="number">` element. 
-This means that you can add attributes like `readonly`, or `disabled` and it will 
-react to them to give the best experience. You can also use `v-model` directive to 
-create two-way data bindings on the `model-value` property.
+**BsListbox** uses [BsListTile](/components/elements/list-tile) component internally 
+and mimics the HTML List Box: `<select size="number">` element. This means that you 
+can add attributes like `readonly`, or `disabled` and it will react to them to give 
+the best experience. You can also use `v-model` directive to create two-way data 
+bindings on the `model-value` property.
 
-::: BlockVue {title="Basic Listbox Example" file="./docs/components/scripts/listbox-1.js"}
+::: BlockVue {title="Listbox Overview" file="./docs/components/inputs/js/listbox-1.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox v-model="listbox1" :data-source="peopleSrc1" max-height="200"></bs-listbox>
     </div>
-    <div>Selected value: <span class="fw-semibold">{{ listbox1 }}</span></div>
+    <div>Selected value: <b>{{ listbox1 }}</b></div>
   </div>
 </template>
 
@@ -61,12 +62,11 @@ onUnmounted(() => {
   peopleSrc1.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
-::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-Do not use the `model-value` property when using `v-model`.
-:::
+<!-- @include: @/components/model-value-important.md -->
 
 
 ## Multiple Selection
@@ -74,15 +74,15 @@ Do not use the `model-value` property when using `v-model`.
 `<bs-listbox>` support multiple selection. Multiple selection mode feature can be enabled using the 
 `multiple` property explicitly.
 
-::: BlockVue {title="Listbox Multi-Select Example" file="./docs/components/scripts/listbox-2.js"}
+::: BlockVue {title="Listbox Multi-Selection" file="./docs/components/inputs/js/listbox-2.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox v-model="listbox2" :data-source="peopleSrc1" max-height="200" multiple></bs-listbox>
     </div>
-    <div>Selected values: <span class="fw-semibold">{{ listbox2 }}</span></div>
+    <div>Selected values: <b>{{ listbox2 }}</b></div>
   </div>
 </template>
 
@@ -115,19 +115,20 @@ onUnmounted(() => {
   peopleSrc1.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
 
-### Using Checkbox {class="mt-lg-5"}
+### Using Checkbox {#multiple-selection-using-checkbox class="mt-lg-5"}
 
 In multiple selection mode, the checkbox can be enabled via `use-checkbox` property.
 
-::: BlockVue {title="Listbox Multi-Select with checkbox example" file="./docs/components/scripts/listbox-3.js"}
+::: BlockVue {title="Listbox Multi-Selection - Using Checkbox" file="./docs/components/inputs/js/listbox-3.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox 
         v-model="listbox3" 
@@ -136,7 +137,7 @@ In multiple selection mode, the checkbox can be enabled via `use-checkbox` prope
         use-checkbox>
       </bs-listbox>
     </div>
-    <div>Selected values: <span class="fw-semibold">{{ listbox3 }}</span></div>
+    <div>Selected values: <b>{{ listbox3 }}</b></div>
   </div>
 </template>
 
@@ -164,33 +165,36 @@ onUnmounted(() => {
   statesCA1.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
 
-### Checkbox Position and Color {class="mt-lg-5"}
+### Checkbox Position and Color {#multiple-selection-checkbox-position-and-color class="mt-lg-5"}
 
 In multiple selection mode, the checkbox color can be changed via `checkbox-color` 
 property and the position can be changed via `checkbox-position` property. Valid 
 values for this property are: `left` (_default_), `right`. If these property is not 
 defined, then default value will be used.
 
-::: BlockVue {title="Listbox Multi-Select with checkbox example" file="./docs/components/scripts/listbox-4.js"}
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
+::: BlockVue {title="Listbox Multi-Selection - Checkbox Position and Color" file="./docs/components/inputs/js/listbox-4.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox 
         v-model="listbox4" 
         :data-source="statesCA2" 
         multiple 
         use-checkbox 
-        checkbox-color="purple" 
+        checkbox-color="primary" 
         checkbox-position="right">
       </bs-listbox>
     </div>
-    <div>Selected values: <span class="fw-semibold">{{ listbox4 }}</span></div>
+    <div>Selected values: <b>{{ listbox4 }}</b></div>
   </div>
 </template>
 
@@ -218,13 +222,8 @@ onUnmounted(() => {
   statesCA2.proxy.destroy();
 });
 </script>
-```
-:::
 
-::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants 
-and [Material Color](/reference/colors#material-colors) variants can be
-applied to the `checkbox-color` property.
+```
 :::
 
 
@@ -235,11 +234,11 @@ enabled using the `show-image` property explicitly and use the `imageField` prop
 the configuration schema to point to the image field in the datasource. By default, 
 the value of property `imageField` is set to `image`.
 
-::: BlockVue {title="Listbox with image example" file="./docs/components/scripts/listbox-5.js"}
+::: BlockVue {title="Listbox Image Support" file="./docs/components/inputs/js/listbox-5.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox 
         v-model="listbox5" 
@@ -248,7 +247,7 @@ the value of property `imageField` is set to `image`.
         show-image>
       </bs-listbox>
     </div>
-    <div>Selected value: <span class="fw-semibold">{{ listbox5 }}</span></div>
+    <div>Selected value: <b">{{ listbox5 }}</b></div>
   </div>
 </template>
 
@@ -313,6 +312,7 @@ onUnmounted(() => {
   peopleSrc2.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
@@ -323,11 +323,11 @@ The size of images can be controlled via `image-size` property. Sets this proper
 to the desired numbers of pixels and the image will displayed according to this value. 
 And use `rounded-image` or `circle-image` property to change its shape.
 
-::: BlockVue {title="Listbox with image example" file="./docs/components/scripts/listbox-6.js"}
+::: BlockVue {title="Listbox Image Size and Shape" file="./docs/components/inputs/js/listbox-6.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox 
         v-model="listbox6" 
@@ -337,7 +337,7 @@ And use `rounded-image` or `circle-image` property to change its shape.
         show-image>
       </bs-listbox>
     </div>
-    <div>Selected value: <span class="fw-semibold">{{ listbox6 }}</span></div>
+    <div>Selected value: <b>{{ listbox6 }}</b></div>
   </div>
 </template>
 
@@ -402,6 +402,7 @@ onUnmounted(() => {
   peopleSrc2.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
@@ -411,21 +412,21 @@ onUnmounted(() => {
 `<bs-listbox>` list items can be organized in different ways by providing the custom 
 template `option-item` slot.
 
-::: BlockVue {title="Listbox with custom template example" file="./docs/components/scripts/listbox-7.js"}
+::: BlockVue {title="Listbox with Custom List Items" file="./docs/components/inputs/js/listbox-7.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 p-4 w-100">
+  <div class="demo-wrapper w-full p-2 px-md-3">
     <div class="mb-3">
       <bs-listbox 
         v-model="listbox7" 
         :data-source="productSrc" 
-        color="info-color-dark"
         item-separator>
+
         <template #option-item="{ item }">
-          <bs-list-tile-title>
-            <span>{{ item.ProductName }}</span>
-            <span class="float-end fw-light small">${{ item.UnitPrice }}</span>
+          <bs-list-tile-title class="flex justify-between">
+            <div>{{ item.ProductName }}</div>
+            <div class="font-weight-light small">${{ item.UnitPrice }}</div>
           </bs-list-tile-title>
           <bs-list-tile-subtitle>
             Stock : {{ item.UnitsInStock }}
@@ -433,7 +434,7 @@ template `option-item` slot.
         </template>
       </bs-listbox>
     </div>
-    <div>Selected value: <span class="fw-semibold">{{ listbox7 }}</span></div>
+    <div>Selected value: <b>{{ listbox7 }}</b></div>
   </div>
 </template>
 
@@ -461,74 +462,88 @@ onUnmounted(() => {
   productSrc.proxy.destroy();
 });
 </script>
+
 ```
 :::
 
 
 ## CSS Variables 
 
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-listbox` for better customization. And since **BsListbox** also uses 
+**BsListTile** internally, it also uses **BsListTile**'s 
+[CSS variables](/components/elements/list-tile#css-variables). 
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 ```scss
---md-searchbox-padding-x: 0.75rem;
---md-searchbox-padding-y: 0.5rem;
---md-searchbox-border-color: #{$gray-500};
---md-searchbox-focused-border-color: #{$default-active-bgcolor};
---md-searchbox-font-size: 14px;
---md-searchbox-text-color: #{$gray-900};
---md-searchbox-focused-shadow-rgba: #{rgba($default-active-bgcolor, 0.2)};
+.md-listbox {
+  --md-listbox-bg: var(--navigation-background);
+  --md-searchbox-bg: #{color.change(colors.$black, $alpha: 0.025)};
+  --md-searchbox-active-bg: #{colors.$white};
+  --md-searchbox-font-size: 14px;
+  --md-searchbox-text-color: currentColor;
+  --md-searchbox-border-color: #{colors.$gray-500};
+  --md-searchbox-focused-border-color: var(--md-field-active-indicator);
+  --md-searchbox-focused-box-shadow: color-mix(in oklch, var(--md-field-active-indicator), transparent 70%);
+  --md-searchbox-padding-x: #{vars.$padding-md - 0.25};
+  --md-searchbox-padding-y: #{vars.$padding-sm};
+}
 
 ```
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
-| Property | Type      | Default  | Description |
-|----------|-----------|----------|-------------|
-| autoload          | `Boolean` | `true`  | Autoload data from the configured `dataSource`, default is `true`. <BsBadge color="info">v2.0.5</BsBadge> |
-| borderless        | `Boolean` | `false` | Hide the Listbox container borders. |
-| checkbox-color    | `String`  | `'default-color'` | Sets the Listbox checkbox color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
-| checkbox-position | `String`  | `'left'`  | Sets the Listbox checkbox position. Valid values are: `left`, `right`. |
-| circle-image      | `Boolean` | `false`   | Display image with **_circle_** shape for each item that has image property. |
-| color             | `String`  | `'white'` | Define the Listbox background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) variants and [Material Color](/reference/colors#material-colors) variants can be used. |
-| data-source <Badge type="danger">required</Badge> | `TDataSource` | | Sets the data source configuration. |
-| disabled          | `Boolean` | `false`   | Put the component in _disabled_ state and sets the `<select>` element `disabled` attribute. |
-| empty-data-message | `String` | `'No data to display.'` | Sets the **_no data message_** when the Listbox is empty. |
-| image-size        | `Number`  | `48`    | Define the image size for each Listbox items when `show-image` is enabled. |
-| item-separator    | `Boolean` | `false` | Show or hide the Listbox item separator. |
-| max-height        | `Number`  | `300`   | Sets the Listbox container maximum height. |
-| min-search-chars  | `Number`  | `2`     | Minimum characters to check before start filtering the Listbox items. |
-| min-search-length | `Number`  | `15`    | Minimum number of items to activate the search box. |
-| model-value <Badge type="tip">v-model</Badge> | `String`/`Number`/`Array` |  | Monitored by `v-model` to maintain this field value. |
-| multiple      | `Boolean` | `false` | Enable/disable multi selection mode. |
-| not-found-message | `String` | `'Data not found.'` | Sets the **_not found message_** when searching returns no result. |
+| Property          | Type      | Default  | Description |
+|-------------------|-----------|----------|-------------|
+| autoload          | `Boolean` | `true`      | Autoload data from the configured `dataSource`, default is `true`. <MdBadge color="info">v2.0.5</MdBadge> |
+| borderless        | `Boolean` | `false`     | Hide the Listbox container borders. |
+| checkbox-color    | `String`  | `'default'` | Sets the Listbox checkbox color. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 400px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
+| checkbox-position | `String`  | `'left'`    | Sets the Listbox checkbox position. Valid values are: `left`, `right`. |
+| circle-image      | `Boolean` | `false`     | Display image with **_circle_** shape for each item that has image property. |
+| color <Badge type="warning">deprecated</Badge>    | `String`      |  | Apply custom color the Listbox background. <div class="pt-3">Use global CSS variable instead.</div>|
+| data-source <Badge type="danger">required</Badge> | `TDataSource` |  | Sets the data source configuration. |
+| disabled            | `Boolean` | `false`   | Put the component in _disabled_ state and sets the `<select>` element `disabled` attribute. |
+| empty-data-message  | `String`  | `'No data to display.'` | Sets the **_no data message_** when the Listbox is empty. |
+| image-size          | `Number`  | `48`    | Define the image size for each Listbox items when `show-image` is enabled. |
+| item-separator      | `Boolean` | `false` | Show or hide the Listbox item separator. |
+| item-separator-dark | `Boolean` | `false` | Set to `TRUE` when Listbox has dark background color (custom background color) and not in dark theme. <MdBadge color="info">v2.2.0</MdBadge> |
+| max-height          | `Number`  | `300`   | Sets the Listbox container maximum height. |
+| min-search-chars    | `Number`  | `2`     | Minimum characters to check before start filtering the Listbox items. |
+| min-search-length   | `Number`  | `15`    | Minimum number of items to activate the search box. |
+| model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number`&#124;`String[]`&#124;`Number[]` |  | Monitored by `v-model` to maintain this field value. |
+| multiple          | `Boolean` | `false` | Enable/disable multi selection mode. |
+| not-found-message | `String`  | `'Data not found.'` | Sets the **_not found message_** when searching returns no result. |
 | readonly      | `Boolean` | `false` | Put the component in _readonly_ state and sets the `<select>` element `readonly` attribute. |
 | rounded-image | `Boolean` | `false` | Display image with **_rounded_** shape for each item that has image property. |
 | search-label  | `String`  | `'Search...'` | The search box text label. |
-| search-text <Badge type="tip">v-model</Badge> | `String` |      | Monitored by `v-model` to maintain the search box keyword. |
+| search-text <Badge type="tip">v-model</Badge> | `String` |   | Monitored by `v-model` to maintain the search box keyword. |
 | show-image   | `Boolean` | `false` | Show or hide image if Listbox item's object contains `image` property. |
 | use-checkbox | `Boolean` | `false` | Use checkbox for multi selection mode. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
-| Name    | Arguments         | Description |
-|---------|-------------------|-------------|
-| data-bind | ( items:`Object[]`) | Triggers after the data has been fetched. |
-| data-error | ( error:`Object`) | Triggers when error loading data items. |
-| data-filter | ( items:`Object[]`) | Triggers after the Listbox data items is filtered. |
-| deselect | ( value:`Object`) | Triggers when an item is deselected. |
-| select | ( value:`Object`) | Triggers when an item is selected. |
-| update:model-value | ( value:`String`/`Number`/`Array`) | Triggers when the Listbox value is updated. |
+| Name        | Arguments           | Description |
+|-------------|---------------------|-------------|
+| data-bind   | ( items:`Object[]`) | Triggers after the data has been fetched. |
+| data-error  | ( error:`Object`)   | Triggers when error loading data items. |
+| data-filter | ( items:`Object[]`) | <div style="min-width: 360px">Triggers after the Listbox data items is filtered.</div> |
+| deselect    | ( value:`Object`)   | Triggers when an item is deselected. |
+| select      | ( value:`Object`)   | Triggers when an item is selected. |
+| update:model-value | ( value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Triggers when the Listbox value is updated. |
 | update:search-text | ( value:`String`) | Triggers when the Listbox search value is updated. |
 | update:selected-value | ( selected:`Object[]`) | Triggers when the Listbox selected value is updated. |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments | Description |

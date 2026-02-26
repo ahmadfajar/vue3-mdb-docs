@@ -67,7 +67,7 @@ Landscape orientation only works on medium screen size and above.
 
 <SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
-::: BlockVue {clientOnly="true" title="DatePicker Color Style" file="./docs/components/pickers/js/date-picker-3.js"}
+::: BlockVue {clientOnly="true" title="DatePicker Custom Color" file="./docs/components/pickers/js/date-picker-3.js"}
 
 ```vue
 <template>

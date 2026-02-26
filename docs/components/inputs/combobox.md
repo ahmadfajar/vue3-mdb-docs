@@ -1452,7 +1452,7 @@ onUnmounted(() => {
 ## CSS Variables
 
 **BsCombobox** is inherited from **BsTextField**, therefore it uses **BsTextField**'s 
-[CSS variables](/components/inputs/textfield#css-variables). And since **BsCombobox** also uses **BsListbox** internally, it also uses **BsListbox**'s [CSS variables](/components/inputs/listbox#css-variables).  
+[CSS variables](/components/inputs/textfield#css-variables). And since **BsCombobox** also uses **BsListbox** internally, it also uses **BsListbox**'s [CSS variables](/components/inputs/listbox#css-variables). 
 
 <SmallNote color="teal" class="mt-lg-3">Updated in v2.2.0</SmallNote>
 
