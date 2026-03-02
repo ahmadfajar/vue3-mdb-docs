@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A lightweight component which is placed at the top of the page as a container for page title, logo, menus, and action buttons. 
+description: Appbar is a lightweight component which is placed at the top of the page as a container for page title, logo, menus, and action buttons which is usually known as Navigation Bar. 
 ---
 
 # Appbar
@@ -17,35 +17,37 @@ container for page title, logo, menus, and action buttons which is usually known
 
 ### Basic usage
 
-::: BlockVue {title="Appbar Example"}
+::: BlockVue {title="Appbar Basic Usage"}
 
-```html
-<bs-app>
-  <bs-appbar class="bg-indigo" shadow>
-    <bs-button color="light-grey" mode="icon" icon="menu" flat></bs-button>
-    <bs-appbar-title class="text-white" title="Page Title"> </bs-appbar-title>
-  </bs-appbar>
-</bs-app>
+```vue
+<template>
+  <bs-app>
+    <bs-appbar class="bg-indigo" shadow>
+      <bs-button color="light" mode="icon" icon="menu" flat></bs-button>
+      <bs-appbar-title class="text-light" title="Page Title"> </bs-appbar-title>
+    </bs-appbar>
+  </bs-app>
+</template>
 ```
 :::
 
 
 ### With button and menus
 
-::: BlockVue {title="Appbar Example" clientOnly="true"}
+::: BlockVue {title="Appbar with Buttons and Menus" clientOnly="true"}
 
 ```vue
 <template>
   <bs-app>
     <bs-appbar class="bg-indigo" shadow>
-      <bs-button color="light-grey" mode="icon" icon="menu" flat></bs-button>
-      <bs-appbar-title class="text-white" title="Page Title"></bs-appbar-title>
+      <bs-button color="light" mode="icon" icon="menu" flat></bs-button>
+      <bs-appbar-title class="text-light" title="Page Title"></bs-appbar-title>
       <bs-spacer></bs-spacer>
       <bs-appbar-items>
-        <bs-button icon="search" mode="icon" color="light-grey" flat></bs-button>
-        <bs-button icon="notifications_outlined" mode="icon" color="light-grey" flat></bs-button>
+        <bs-button icon="search" mode="icon" color="light" flat></bs-button>
+        <bs-button icon="notifications_outlined" mode="icon" color="light" flat></bs-button>
         <bs-dropdown-menu class="ml-2" placement="bottom-right" space="3">
-          <bs-button icon="more_vert" mode="icon" color="light-grey" flat></bs-button>
+          <bs-button icon="more_vert" mode="icon" color="light" flat></bs-button>
           <template #content>
             <bs-list-view>
               <div class="dropdown-menu">
@@ -68,47 +70,65 @@ container for page title, logo, menus, and action buttons which is usually known
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-appbar` and global CSS variables for better customization.
 
-```scss
---md-appbar-bg: #fff;
---md-appbar-color: #212121;
---md-appbar-height: 64px;
---md-appbar-margin: 0.5rem 0.75rem 0.5rem 1rem;
---md-appbar-title-font-size: 1.5rem;
---md-appbar-title-font-weight: 400;
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
+::: code-group
+
+```scss [Local CSS]
+.md-appbar {
+  --md-appbar-bg: var(--appbar-background);
+  --md-appbar-color: var(--appbar-foreground);
+  --md-appbar-height: var(--appbar-height, 4rem);
+  --md-appbar-padding: #{vars.$padding-sm (vars.$padding-md - 0.25) vars.$padding-sm vars.$padding-md};
+  --md-appbar-title-font-size: 1.5rem;
+  --md-appbar-title-font-weight: var(--font-weight-normal) ;
+}
 
 ```
 
+```css [Global CSS]
+:root {
+  --appbar-background: var(--background);
+  --appbar-foreground: var(--foreground);
+  --appbar-height: 4rem;
+}
+
+```
+:::
+
+
 ## API Reference
 
-### BsAppbar {#api-appbar}
+### BsAppbar {#api-reference-appbar}
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-appbar">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | clipped-left  | `Boolean`  | `false`  | Cut off the left side of the component. Use this property if [BsSideDrawer](/components/container/side-drawer) is on the left. |
-| clipped-right | `Boolean`  | `false`  | Cut off the right side of the component. Use this property if [BsSideDrawer](/components/container/side-drawer) is on the right. <BsBadge color="info">v2.0.0</BsBadge> |
+| clipped-right | `Boolean`  | `false`  | Cut off the right side of the component. Use this property if [BsSideDrawer](/components/container/side-drawer) is on the right. <MdBadge color="info">v2.0.0</MdBadge> |
 | fixed-top  | `Boolean`  | `false`  | Place the component fixed at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. |
-| sticky-top | `Boolean`  | `false`  | Stick the component at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. <BsBadge color="info">v2.0.3</BsBadge> |
+| sticky-top | `Boolean`  | `false`  | Stick the component at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. <MdBadge color="info">v2.0.3</MdBadge> |
 | shadow | `Boolean`  | `false`  | Add shadow effect to the component. |
-| tag | `String`  | `'nav'`  | Html tag used to render the component. |
+| tag | `String`  | `'header'`  | Html tag used to render the component. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-appbar">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
+| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-appbar">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -119,13 +139,13 @@ container for page title, logo, menus, and action buttons which is usually known
   </BsTab>
 </BsTabs>
 
-### BsAppbarItems {#api-appbar-items class="mt-lg-5"}
+### BsAppbarItems {#api-reference-appbar-items class="mt-lg-5"}
 
 Optional component to create a component's container inside `<bs-appbar>` which 
 may contains buttons, menus and others.
 
-<BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Slots" url="#api-appbar-items">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -136,12 +156,12 @@ may contains buttons, menus and others.
   </BsTab>
 </BsTabs>
 
-### BsAppbarTitle {#api-appbar-title class="mt-lg-5"}
+### BsAppbarTitle {#api-reference-appbar-title class="mt-lg-5"}
 
 Lightweight component to put page title on **Appbar**.
 
-<BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-appbar-title">
+<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property  | Type     | Default | Description |
@@ -150,7 +170,7 @@ Lightweight component to put page title on **Appbar**.
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-appbar-title">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |

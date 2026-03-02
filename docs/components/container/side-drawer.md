@@ -20,7 +20,7 @@ You also can change the component's color using the `color` property and use any
 [color variants](/reference/colors) as you like.
 
 
-::: BlockVue {title="Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-1.js"}
+::: BlockVue {title="Side Drawer Example" clientOnly="true" file="./docs/components/container/js/side-drawer-1.js"}
 
 ```vue
 <template>
@@ -93,7 +93,7 @@ function toggleSideDrawer1(value: boolean) {
 
 <SmallNote color="teal">Added since v2.0.0</SmallNote>
 
-::: BlockVue {title="Side Drawer Location Example" clientOnly="true" file="./docs/components/scripts/side-drawer-2.js"}
+::: BlockVue {title="Side Drawer Location Example" clientOnly="true" file="./docs/components/container/js/side-drawer-2.js"}
 
 ```vue
 <template>
@@ -165,7 +165,7 @@ function toggleSideDrawer2(value: boolean) {
 enable the mini Side Drawer. You can adjust the width of `<bs-side-drawer>` on 
 minimize state using the `mini-width` property.
 
-::: BlockVue {title="Mini Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-5.js"}
+::: BlockVue {title="Mini Side Drawer Example" clientOnly="true" file="./docs/components/container/js/side-drawer-5.js"}
 
 ```vue
 <template>
@@ -249,7 +249,7 @@ The following are a collection of examples that demonstrate more advanced use of
 
 ### Use With Appbar
 
-::: BlockVue {title="Side Drawer with Appbar Example" clientOnly="true" file="./docs/components/scripts/side-drawer-3.js"}
+::: BlockVue {title="Side Drawer with Appbar Example" clientOnly="true" file="./docs/components/container/js/side-drawer-3.js"}
 
 ```vue
 <template>
@@ -303,7 +303,7 @@ function toggleSideDrawer3(value: boolean) {
 
 ### Clipped Side Drawer {class="mt-lg-5"}
 
-::: BlockVue {title="Clipped Side Drawer Example" clientOnly="true" file="./docs/components/scripts/side-drawer-4.js"}
+::: BlockVue {title="Clipped Side Drawer Example" clientOnly="true" file="./docs/components/container/js/side-drawer-4.js"}
 
 ```vue
 <template>

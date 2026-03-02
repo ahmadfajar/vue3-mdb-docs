@@ -34,6 +34,6 @@ or [TailwindCSS](/getting-started/tailwind) framework, but not both.
 ### Using CDN resources
 
 With this method you can only use [Bootstrap](/getting-started/cdn) CSS framework. 
-TailwindCSS is not recommended to be used on production website. Please read the 
+TailwindCSS is not recommended to be used on production website. Please read the tailwind
 [official website](https://tailwindcss.com/docs/installation/play-cdn) for more information.
 

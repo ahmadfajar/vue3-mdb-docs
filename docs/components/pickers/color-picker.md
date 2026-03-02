@@ -99,6 +99,7 @@ const swatches = [
   <div class="demo-wrapper">
     <bs-button
       ref="pickerActivator"
+      color="secondary"
       title="Click to display color picker"
       dropdown-toggle
       @click="pickerShow = !pickerShow"

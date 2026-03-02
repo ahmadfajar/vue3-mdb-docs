@@ -22,6 +22,16 @@
   }
 }
 
+// Layout z-index
+//--------------------------------------------------------------------------
+:root {
+  --vp-z-index-local-nav: 1020;
+  --vp-z-index-nav: 1030;
+  --vp-z-index-layout-top: 1040;
+  --vp-z-index-backdrop: 1050;
+  --vp-z-index-sidebar: 1060;
+}
+
 // Colors
 //--------------------------------------------------------------------------
 :root {
@@ -87,6 +97,7 @@
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: blur(72px);
+    --vp-z-index-sidebar: 1025;
   }
 }
 
@@ -369,9 +380,9 @@
   --vp-custom-block-important-border: oklch(41.444% 0.04043 297.96);
   --vp-custom-block-caution-border: oklch(39.937% 0.05402 2.21);
 
-  --vp-code-tab-bg: oklch(0.15 0 0);
+  --vp-code-tab-bg: oklch(0.3 0.02 264.21); // oklch(0.15 0 0);
   --vp-code-block-bg: oklch(20.105% 0.00397 285.961);
-  --vp-code-color: oklch(80.897% 0.07286 276.847); // oklch(0.83 0.15 73.53); // oklch(92.222% 0.09589 193.243);
+  --vp-code-color: oklch(80.897% 0.07286 276.847);
   
   @media (min-width: 960px) {
     ::-webkit-scrollbar-track {

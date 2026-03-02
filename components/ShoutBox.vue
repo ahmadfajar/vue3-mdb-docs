@@ -27,6 +27,7 @@ const jsTag = 'script';
 
 const tplStyles = [
   '.demo-wrapper { padding: 1rem !important; }',
+  '.app-vh { height: 100vh !important; border-radius: 0 !important; }',
   '.mobi-card { max-width: 420px; }',
   '.md-card > .md-appbar {\n' +
     '  border-top-left-radius: inherit;\n' +

@@ -710,7 +710,9 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 <SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
-```scss
+::: code-group
+
+```scss [Local CSS]
 .md-field {
   --md-field-border-width: 1px;
   --md-field-border-color: #{colors.$gray-400};
@@ -739,19 +741,25 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
   --md-field-classic-padding-bottom: #{vars.$text-field-classic-padding-bottom};
 }
 
-// global css variables
---md-field-primary-indicator: oklch(0.458 0.23 304.441);
---md-field-accent-indicator: oklch(0.743 0.102 303.276);
---md-field-active-indicator: var(--md-field-primary-indicator);
---md-field-button-active-bg: oklch(0.154 0 89.876 / 0.25);
---md-field-button-hover-bg: oklch(0.431 0 89.876 / 0.2);
---md-field-button-hover-color: oklch(0.209 0 89.876);
---md-field-button-color: currentColor;
---md-field-disabled-opacity: 0.4;
---md-field-readonly-opacity: 0.55;
---md-caret-size: 5px;
-
 ```
+
+```css [Global CSS]
+:root {
+  --md-field-primary-indicator: oklch(0.458 0.23 304.441);
+  --md-field-accent-indicator: oklch(0.743 0.102 303.276);
+  --md-field-active-indicator: var(--md-field-primary-indicator);
+  --md-field-button-active-bg: oklch(0.154 0 89.876 / 0.25);
+  --md-field-button-hover-bg: oklch(0.431 0 89.876 / 0.2);
+  --md-field-button-hover-color: oklch(0.209 0 89.876);
+  --md-field-button-color: currentColor;
+  --md-field-disabled-opacity: 0.4;
+  --md-field-readonly-opacity: 0.55;
+  --md-caret-size: 5px;
+}
+
+``` 
+::: 
+
 
 ## API Reference
 

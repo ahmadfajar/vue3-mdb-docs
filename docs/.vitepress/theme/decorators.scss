@@ -22,10 +22,16 @@
   }
 }
 
+.dark\:bg-gray-900\/70 {
+  &:is(.dark *) {
+    background-color: oklch(0.26 0.02 238.11 / 0.7);
+  }
+}
+
 .dark\:bg-yellow\/85 {
   &:is(.dark *) {
     background-color: oklch(0.42 0.04 101.95 / 0.85);
-  }  
+  }
 }
 
 .dark\:bg-indigo\/15 {

@@ -1,5 +1,12 @@
 @use 'vue-mdbootstrap/scss/variables' as vars;
 
+.vp-code-group .tabs label::after {
+    bottom: 0px;
+    height: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
 .vp-doc {
   th {
     background-color: var(--vp-c-bg-1);
@@ -55,7 +62,7 @@
     --md-tab-md3-padding: 1.25rem 1.25rem 1rem;
 
     .tab-sliding {
-      border-bottom: thin solid var(--border-translucent);
+      border-bottom: thin solid transparent;
     }
   }
 

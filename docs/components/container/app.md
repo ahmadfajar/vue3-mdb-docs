@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A lightweight components which is used as layout container for your application. 
+description: App container is a lightweight components which is used for your application containment. 
 ---
 
 # App Container
@@ -14,29 +14,31 @@ then you need these components so that [BsAppbar](/components/container/appbar) 
 [BsSideDrawer](/components/container/side-drawer) components can work properly.
 :::
 
-<SmallNote color="teal">Updated since v2.0.11</SmallNote>
+<SmallNote color="teal">Updated in v2.0.11</SmallNote>
 
 
 ## Basic Usage
 
-::: BlockVue {title="App Container Example" clientOnly="true" file="./docs/components/scripts/container.js"}
+::: BlockVue {title="App Usage" clientOnly="true" file="./docs/components/container/js/container.js"}
 
 ```vue
 <template>
-  <bs-app class="bg-grey-400 rounded" style="height: 300px">
+  <bs-app 
+    class="app-vh bg-gray-500 dark:bg-gray-900/70 rounded-3 md-shadow-1" 
+    style="height: 300px">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
         icon="menu"
         mode="icon"
         flat
-        @click="toggleSideDrawer(openSideDrawer)"
-      ></bs-button>
+        @click="toggleSideDrawer(openSideDrawer)">
+      </bs-button>
       <bs-appbar-title title="Page Title"></bs-appbar-title>
     </bs-appbar>
-    <bs-side-drawer v-model:open="openSideDrawer" class="border-end" width="200">
+    <bs-side-drawer v-model:open="openSideDrawer" class="border-e" width="200">
       <div class="p-2">
-        <div class="nav nav-pills flex-column">
+        <div class="nav nav-pills flex-col">
           <div class="nav-item">
             <a href="#" class="nav-link d-flex active">
               <bs-icon icon="home_outlined"></bs-icon>
@@ -85,20 +87,20 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 
 ## API Reference
 
-### BsApp {#api-app}
+### BsApp {#api-reference-app}
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-app-container">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| id          | `String`    |  | Sets the element `ID` attribute. This property value is auto generate. |
-| viewport-height | `Boolean` | `false` | Sets the component height equal to document viewport height. <BsBadge color="info">v2.0.0</BsBadge> |
+| id              | `String`  |  | Sets the element `ID` attribute. This property value is auto generate. |
+| viewport-height | `Boolean` | `false` | Sets the component height equal to document viewport height. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-app-container">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -109,29 +111,29 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
   </BsTab>
 </BsTabs>
 
-### BsContainer {#api-container class="mt-lg-5"}
+### BsContainer {#api-reference-container class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-container">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | app  | `Boolean` | `false` | Mount the component as part of application container or just ordinary container. If mounted as part of application container, then it will adapt to `BsSideDrawer` and `BsAppbar` size. |
-| tag  | `String`  | `'div'`   | Html tag used to render the component. |
+| tag  | `String`  | `'div'` | Html tag used to render the component. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-container">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <BsBadge color="info">v2.0.0</BsBadge> |
+| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-container">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -142,20 +144,20 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
   </BsTab>
 </BsTabs>
 
-### BsContent {#api-content class="mt-lg-5"}
+### BsContent {#api-reference-content class="mt-lg-5"}
 
-<BsTabs v-model="tabs3active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-content">
+<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
-| app  | `Boolean` | `false` | If `true`, then the component will be wrapped by `BsContainer`. |
+| app  | `Boolean` | `false`  | If `true`, then the component will be wrapped by `BsContainer`. |
 | tag  | `String`  | `'main'` | Html tag used to render the component. |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-content">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
