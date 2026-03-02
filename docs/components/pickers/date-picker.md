@@ -241,6 +241,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
   --md-datepicker-padding-x: #{vars.$padding-md};
   --md-datepicker-padding-y: #{vars.$padding-md};
   --md-datepicker-bg: var(--background-tertiary);
+  --md-datepicker-color: var(--foreground);
   --md-datepicker-header-color: #{colors.$white};
   --md-datepicker-header-font-weight: var(--font-weight-medium);
   --md-datepicker-table-header-color: #{colors.$gray-500};

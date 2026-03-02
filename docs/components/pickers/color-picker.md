@@ -22,6 +22,7 @@ of input methods.
     <bs-color-picker 
       v-model="color1" 
       v-model:mode="mode1" 
+      mode-button-tonal
       class="shadow">
     </bs-color-picker>
   </div>
@@ -112,6 +113,7 @@ const swatches = [
       v-model:mode="pickerMode" 
       v-model:open="pickerShow"
       :activator="pickerActivator?.$el"
+      mode-button-tonal
       class="shadow">
     </bs-color-picker>
   </div>
@@ -216,8 +218,9 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | input-label-class | `String`&#124;`String[]` |  | Optional css classname to apply to the input field label. |
 | mode <Badge type="tip">v-model</Badge> | `String` |  | This ColorPicker mode. Valid values: `HEX`, `RGB`, `HSL`, `OKLCH`. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | mode-button-color | `String` | `'secondary'` | Apply custom color to the toggle button. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`.</div> |
-| mode-button-outlined   | `Boolean`  | `false` | Render the toggle mode buttons with outlined style. |
-| mode-button-toggle-color | `String` |  | Color to apply to the active button. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`.</div> |
+| mode-button-outlined     | `Boolean` | `false` | Render the toggle mode buttons with ***outlined*** style. <div class="pt-3">See [Button Style Variants](/components/buttons/button#style-variants-outlined)</div> |
+| mode-button-toggle-color | `String`  |  | Color to apply to the active button. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`.</div> |
+| mode-button-tonal        | `Boolan`  | `false` | Render the toggle mode buttons with ***filled tonal*** style. <MdBadge color="info">v2.2.1</MdBadge> <div class="pt-3">See [Button Style Variants](/components/buttons/button#style-variants-tonal)</div>|
 | model-value <Badge type="tip">v-model</Badge> | `String` |  | Monitored by `v-model` to maintain the component's value. |
 | open <Badge type="tip">v-model</Badge> | `Boolean`  | `false` | This ColorPicker popup state: `show` or `hide`. Only works if activator element is defined. |
 | placement           | `String`   | `'bottom-left'` | This ColorPicker display placement when property `activator` is defined. |

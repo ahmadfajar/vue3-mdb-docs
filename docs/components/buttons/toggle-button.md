@@ -146,7 +146,7 @@ const favoriteDrinks: TInputOptionItem[] = [
 <template>
   <div class="demo-wrapper w-full p-sm-2">
     <div class="row mb-3">
-      <label class="col-md-3 col-form-label">Favorite Drink</label>
+      <label class="col-md-3 col-form-label">Favorite Drinks</label>
       <div class="col-md">
         <bs-toggle-button 
           v-model="favoriteDrink1" 
@@ -155,7 +155,7 @@ const favoriteDrinks: TInputOptionItem[] = [
       </div>
     </div>
     <div class="row">
-      <label class="col-md-3 col-form-label">Favorite Coffee</label>
+      <label class="col-md-3 col-form-label">Favorite Coffees</label>
       <div class="col-md">
         <bs-toggle-button 
           v-model="favoriteDrink2" 

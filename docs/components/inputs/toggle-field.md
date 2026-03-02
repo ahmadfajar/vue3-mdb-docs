@@ -148,13 +148,13 @@ const favoriteDrinks = [
       v-model="favoriteDrink1" 
       :items="favoriteDrinks" 
       multiple>
-      <label class="col-md-3 col-form-label">Favorite Drink</label>
+      <label class="col-md-3 col-form-label">Favorite Drinks</label>
     </bs-toggle-field>  
     <bs-toggle-field 
       v-model="favoriteDrink2" 
       :items="favoriteCoffees" 
       multiple>
-      <label class="col-md-3 col-form-label">Favorite Coffee</label>
+      <label class="col-md-3 col-form-label">Favorite Coffees</label>
       <template #icon="item">
         <bs-svg-icon v-if="favoriteDrink2.includes(item?.value)" icon="check"></bs-svg-icon>
       </template>
@@ -234,7 +234,7 @@ and change the icon dynamically like a segmented buttons behaves.
       </bs-toggle-field>
     </div>
     <div class="mb-3">
-      <bs-toggle-field v-model="selectedWeather3" :items="weathers" color="primary" tonal>
+      <bs-toggle-field v-model="selectedWeather3" :items="weathers" color="secondary" tonal>
         <label class="col-md-3 col-form-label">Filled Tonal</label>
         <template #icon="item">
           <bs-svg-icon :icon="item?.value === selectedWeather3 ? 'check' : item?.icon"></bs-svg-icon>
