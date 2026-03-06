@@ -28,6 +28,7 @@ container for page title, logo, menus, and action buttons which is usually known
     </bs-appbar>
   </bs-app>
 </template>
+
 ```
 :::
 
@@ -64,6 +65,7 @@ container for page title, logo, menus, and action buttons which is usually known
     </bs-appbar>
   </bs-app>
 </template>
+
 ```
 :::
 

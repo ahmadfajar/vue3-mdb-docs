@@ -154,6 +154,10 @@
   .mobi-card {
     max-width: 425px;
   }
+
+  hr:not(.md-divider) {
+    border-top: var(--bs-border-width) solid;
+  }
 }
 
 .dark {

@@ -77,6 +77,7 @@ function toggleSideDrawer(value: boolean) {
   openSideDrawer.value = !value;
 }
 </script>
+
 ```
 :::
 
