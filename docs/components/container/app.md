@@ -24,7 +24,7 @@ then you need these components so that [BsAppbar](/components/container/appbar) 
 ```vue
 <template>
   <bs-app 
-    class="app-vh bg-gray-500 dark:bg-gray-900/70 rounded-3 md-shadow-1" 
+    class="app-vh bg-gray-500 dark:bg-gray-900/70 rounded md-shadow-1" 
     style="height: 300px">
     <bs-appbar clipped-left shadow>
       <bs-button

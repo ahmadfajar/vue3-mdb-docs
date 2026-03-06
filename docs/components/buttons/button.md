@@ -3,8 +3,8 @@ outline: [2, 3]
 description: Button is a component for actions in form, dialog, and more. Includes support for a handful of color variations, sizes, states, and more. 
 ---
 
-
 # Button
+
 
 ::: lead
 **BsButton** is a component for actions in form, dialog, and more with support for 
@@ -57,7 +57,15 @@ specifications. Featuring with many options, making it easy to adjust to your ne
 ```
 :::
 
-<!-- @include: @/components/contextual-color-info.md -->
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+- **BsButton** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/buttons/) 
+  classes. However, since v2.2.0, **BsButton** no longer uses Bootstrap CSS. This improvement 
+  allows **BsButton** to continue working smoothly with the TailwindCSS framework.
+- The bundle only provide contextual color variants. It is located
+  at `dist/theme-light.css` and `dist/theme-dark.css` files. If the component style
+  and color doesn't suit to your needs, you can customize it using the component's 
+  CSS variables or use the provided SASS mixins. 
+:::
 
 
 ## States
