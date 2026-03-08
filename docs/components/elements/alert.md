@@ -18,7 +18,7 @@ neutral information.
 
 ## Overview
 
-By default, `<bs-alert>` is set to primary color. You can use `color` property to 
+By default, `<bs-alert>` is set to default color. You can use `color` property to 
 change its color and add some emotional weight.
 
 ::: BlockVue {title="Alert Overview"}

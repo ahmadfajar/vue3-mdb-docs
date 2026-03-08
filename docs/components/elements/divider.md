@@ -1,5 +1,5 @@
 ---
-description: Small and lightweight component which is primarily used to separate content within lists or layouts. 
+description: Divider is small and lightweight component which is primarily used to separate content within lists or layouts. 
 ---
 
 # Divider
@@ -14,12 +14,12 @@ content within lists or layouts.
 
 The following is an example that demonstrate how to use the `<bs-divider>`.
 
-::: BlockVue {title="Divider Example"}
+::: BlockVue {title="Divider Usage"}
 
-```html
-<div class="card w-100 p-3 border-0">
-  <div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-3 mb-md-0">
+```vue
+<template>
+  <div class="demo-wrapper w-full row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
       <bs-card shadow>
         <bs-list-view>
           <bs-list-tile>
@@ -68,35 +68,41 @@ The following is an example that demonstrate how to use the `<bs-divider>`.
       </bs-card>
     </div>
   </div>
-</div>
+</template>
+
 ```
 :::
 
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-divider` for better customization.
 
-```scss
---md-divider-height: 1px;
---md-divider-margin-y: 0;
---md-divider-color: rgba($black, 0.25);
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
+```css
+.md-divider {
+  --md-divider-height: 1px;
+  --md-divider-margin-y: 0.25rem;
+  --md-divider-color: oklch(0 0 0 / 0.15);
+}
 
 ```
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property     | Type        | Default  | Description |
 |--------------|-------------|----------|-------------|
 | dark         | `Boolean`   | `false`  | Define explicitly when is placed inside element with dark background. |
-| left-indent  | `Number`/`String` |    | Indentation from left side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
-| right-indent | `Number`/`String` |    | Indentation from right side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
-| thickness    | `Number`/`String` |    | Divider thickness. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
+| left-indent  | `Number`&#124;`String` |    | Indentation from left side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
+| right-indent | `Number`&#124;`String` |    | Indentation from right side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
+| thickness    | `Number`&#124;`String` |    | Divider thickness. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
 
 </div>
   </BsTab>

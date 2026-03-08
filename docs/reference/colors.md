@@ -122,7 +122,7 @@ import 'vue-mdbootstrap/styles-color';
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can only be applied as the background color of an html element,
-see: applying [background color variants](#background-color) above.
+see: applying [background color](#background-color) above.
 :::
 
 
@@ -132,7 +132,7 @@ see: applying [background color variants](#background-color) above.
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can only be applied as the background color of an html element,
-see: applying [background color variants](#background-color) above.
+see: applying [background color](#background-color) above.
 :::
 
 ### RGBA Colors {class="mt-lg-5"}
@@ -161,5 +161,5 @@ The [Main colors](#main-colors) can also be used to produce an **RGBA background
 
 ::: tip <BsIcon icon="tips_and_updates" /><span class="ms-2 h6 mb-0">TIP</span>
 These color variants can only be applied as the background color of an html element,
-see: applying [background color variants](#background-color) above.
+see: applying [background color](#background-color) above.
 :::

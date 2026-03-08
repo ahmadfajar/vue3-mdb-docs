@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A lightweight component which can be used for adaptive tagging such as adding context to just about any content. 
+description: Badge is a lightweight component which can be used for adaptive tagging such as adding context to just about any content. 
 ---
 
 # Badge
@@ -11,151 +11,177 @@ description: A lightweight component which can be used for adaptive tagging such
 adding context to just about any content.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## Overview
 
-**BsBadge** uses [Boostrap CSS](https://getbootstrap.com/docs/5.2/components/badge/) classes
-internally and can scale to match the size of the immediate parent element by using relative font sizing.
+**BsBadge** is a lightweight component and can scale to match the size of the immediate parent element by using relative font sizing.
 
-::: BlockVue {title="Basic Badge Example"}
+::: BlockVue {title="Badge Overview"}
 
-```html
-<div class="my-demo-wrapper w-100" style="color: var(--vp-c-neutral)">
-  <h2>Example heading <bs-badge>New</bs-badge></h2>
-  <h3>Example heading <bs-badge>New</bs-badge></h3>
-  <h4>Example heading <bs-badge>New</bs-badge></h4>
-  <h5>Example heading <bs-badge>New</bs-badge></h5>
-  <h6>Example heading <bs-badge>New</bs-badge></h6>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper w-full px-2">
+    <h2>Example heading <bs-badge>New</bs-badge></h2>
+    <h3>Example heading <bs-badge>New</bs-badge></h3>
+    <h4>Example heading <bs-badge>New</bs-badge></h4>
+    <h5>Example heading <bs-badge>New</bs-badge></h5>
+    <h6>Example heading <bs-badge>New</bs-badge></h6>
+  </div>
+</template>
+
 ```
 :::
 
 **BsBadge** can be used as part of links or button to provide a counter.
 
-::: BlockVue {title="Badge Inside Button Example"}
+::: BlockVue {title="Badge Inside Button"}
 
-```html
-<bs-button color="primary">
-  Notifications 
-  <bs-badge variant="light" class="ms-2">9</bs-badge>
-</bs-button>
+```vue
+<template>
+  <bs-button color="primary">
+    Notifications 
+    <bs-badge variant="light" class="ms-2">9</bs-badge>
+  </bs-button>
+</template>
+
 ```
+:::
+
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+- **BsBadge** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/badge/) 
+  classes. However, since v2.2.0, **BsBadge** no longer uses Bootstrap CSS. This improvement 
+  allows **BsBadge** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+- The bundle only provide contextual color variants. It is located
+  at `dist/theme-light.css` and `dist/theme-dark.css` files. If the component style
+  and color doesn't suit to your needs, you can customize it using the component's 
+  CSS variables or use the provided SASS mixins. 
 :::
 
 
 ## Contextual Badges
 
 Add any of the following variants: `primary`, `secondary`, `success`, `warning`, 
-`danger`, `info`, `light`, or `dark` to the `variant` property to change the 
+`danger`, `info` or `light` to the `variant` property to change the 
 appearance of a badge. If no variant is specified, the `color` property is used.
 
-::: BlockVue {title="Badge Variations Example"}
+::: BlockVue {title="Contextual Badges"}
 
-```html
-<div class="my-demo-wrapper">
-  <bs-badge variant="primary">Primary</bs-badge>
-  <bs-badge variant="secondary">Secondary</bs-badge>
-  <bs-badge variant="success">Success</bs-badge>
-  <bs-badge variant="danger">Danger</bs-badge>
-  <bs-badge variant="warning">Warning</bs-badge>
-  <bs-badge variant="info">Info</bs-badge>
-  <bs-badge variant="light">Light</bs-badge>
-  <bs-badge variant="dark">Dark</bs-badge>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper flex flex-wrap md-gap-2">
+    <bs-badge variant="primary">Primary</bs-badge>
+    <bs-badge variant="secondary">Secondary</bs-badge>
+    <bs-badge variant="success">Success</bs-badge>
+    <bs-badge variant="danger">Danger</bs-badge>
+    <bs-badge variant="warning">Warning</bs-badge>
+    <bs-badge variant="info">Info</bs-badge>
+    <bs-badge variant="light">Light</bs-badge>
+  </div>
+</template>
+
 ```
 :::
 
 If you wish to use color different variation, you can change its appearance by explicitly 
-define the value of `color` property. Any [color variants](/reference/colors) 
+define the value of `color` property. Any [color variants](/reference/colors#additional-colors) 
 can be applied to the `color` property.
 
-::: BlockVue {title="Badge Colors Example"}
+::: BlockVue {title="Badge Colors"}
 
-```html
-<div class="my-demo-wrapper">
-  <bs-badge color="pink">pink</bs-badge>
-  <bs-badge color="purple">purple</bs-badge>
-  <bs-badge color="default-color">default-color</bs-badge>
-  <bs-badge color="secondary-color-dark">secondary-color-dark</bs-badge>
-  <bs-badge color="orange darken-2">orange darken-2</bs-badge>
-  <bs-badge color="lime accent-4">lime accent-4</bs-badge>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper flex flex-wrap md-gap-2">
+    <bs-badge color="pink">pink</bs-badge>
+    <bs-badge color="default-color">default-color</bs-badge>
+    <bs-badge color="secondary-color">secondary-color</bs-badge>
+    <bs-badge color="orange-600">orange-600</bs-badge>
+    <bs-badge color="lime-700">lime-700</bs-badge>
+  </div>
+</template>
+
 ```
 :::
 
 
 ## Style Variants
 
-### Pill
-
-Sets the `type` property of `<bs-badge>` to `pill` to make badges more rounded with 
-a larger border-radius and a slight larger padding.
-
-::: BlockVue {title="Pill Badges Example"}
-
-```html
-<div class="my-demo-wrapper">
-  <bs-badge type="pill" variant="primary">Primary</bs-badge>
-  <bs-badge type="pill" variant="secondary">Secondary</bs-badge>
-  <bs-badge type="pill" variant="success">Success</bs-badge>
-  <bs-badge type="pill" variant="danger">Danger</bs-badge>
-  <bs-badge type="pill" variant="warning">Warning</bs-badge>
-  <bs-badge type="pill" variant="info">Info</bs-badge>
-</div>
-```
-::: 
-
-
-### Label {class="mt-lg-5"}
+### Label {#style-variants-label class="mt-lg-5"}
 
 Sets the `type` property of `<bs-badge>` to `label` to make badges little larger 
 than normal with a slight larger padding. 
 
-::: BlockVue {title="Label Badges Example"}
+::: BlockVue {title="Badge Style Variants - Label"}
 
-```html
-<div class="my-demo-wrapper">
-  <bs-badge type="label" variant="primary">Primary</bs-badge>
-  <bs-badge type="label" variant="secondary">Secondary</bs-badge>
-  <bs-badge type="label" variant="success">Success</bs-badge>
-  <bs-badge type="label" variant="danger">Danger</bs-badge>
-  <bs-badge type="label" variant="warning">Warning</bs-badge>
-  <bs-badge type="label" variant="info">Info</bs-badge>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper flex flex-wrap md-gap-2">
+    <bs-badge type="label" variant="primary">Primary</bs-badge>
+    <bs-badge type="label" variant="secondary">Secondary</bs-badge>
+    <bs-badge type="label" variant="success">Success</bs-badge>
+    <bs-badge type="label" variant="danger">Danger</bs-badge>
+    <bs-badge type="label" variant="warning">Warning</bs-badge>
+    <bs-badge type="label" variant="info">Info</bs-badge>
+    <bs-badge type="label" variant="light">Light</bs-badge>
+  </div>
+</template>
+
 ```
 :::
 
+### Rounded Pill {#style-variants-rounded-pill}
 
-### Outlined {class="mt-lg-5"}
+Sets the `type` property of `<bs-badge>` to `pill` to make badges more rounded with 
+a larger border-radius and a slight larger padding.
+
+::: BlockVue {title="Badge Style Variants - Rounded Pill"}
+
+```vue
+<template>
+  <div class="demo-wrapper flex flex-wrap md-gap-2">
+    <bs-badge type="pill" variant="primary">Primary</bs-badge>
+    <bs-badge type="pill" variant="secondary">Secondary</bs-badge>
+    <bs-badge type="pill" variant="success">Success</bs-badge>
+    <bs-badge type="pill" variant="danger">Danger</bs-badge>
+    <bs-badge type="pill" variant="warning">Warning</bs-badge>
+    <bs-badge type="pill" variant="info">Info</bs-badge>
+    <bs-badge type="pill" variant="light">Light</bs-badge>
+  </div>
+</template>
+
+```
+::: 
+
+### Outlined {#style-variants-outlined class="mt-lg-5"}
 
 Define the `outlined` property explicitly to create outline badges. Additionally 
-you can combine with the `type` property to create an outline _Pill badge_ or outline 
-_Label badge_. Currently outline badges only support [MDBootstrap Color](/reference/colors#mdbootstrap-colors) 
-variant and [Material Color](/reference/colors#material-colors) variant.
+you can combine with the `type` property to create an _Rounded Pill badge_ or _Label badge_ 
+with outlined style. 
 
-<SmallNote color="teal">Added since v2.0.4</SmallNote>
+::: BlockVue {title="Badge Style Variants - Outlined"}
 
-::: BlockVue {title="Outline Badges Example"}
-
-```html
-<div class="my-demo-wrapper flex-column">
-  <div class="mb-3">
-    <bs-badge type="pill" variant="primary" outlined>Primary</bs-badge>
-    <bs-badge type="pill" variant="secondary" outlined>Secondary</bs-badge>
-    <bs-badge type="pill" variant="success" outlined>Success</bs-badge>
-    <bs-badge type="pill" variant="danger" outlined>Danger</bs-badge>
-    <bs-badge type="pill" variant="warning" outlined>Warning</bs-badge>
-    <bs-badge type="pill" variant="info" outlined>Info</bs-badge>
+```vue
+<template>
+  <div class="demo-wrapper">
+    <div class="flex flex-wrap md-gap-2 mb-3">
+      <bs-badge type="pill" variant="primary" outlined>Primary</bs-badge>
+      <bs-badge type="pill" variant="secondary" outlined>Secondary</bs-badge>
+      <bs-badge type="pill" variant="success" outlined>Success</bs-badge>
+      <bs-badge type="pill" variant="danger" outlined>Danger</bs-badge>
+      <bs-badge type="pill" variant="warning" outlined>Warning</bs-badge>
+      <bs-badge type="pill" variant="info" outlined>Info</bs-badge>
+    </div>
+    <div class="flex flex-wrap md-gap-2">
+      <bs-badge type="label" color="purple" outlined>purple</bs-badge>
+      <bs-badge type="label" color="pink" outlined>pink</bs-badge>
+      <bs-badge type="label" color="orange" outlined>orange</bs-badge>
+      <bs-badge type="label" color="lime" outlined>lime</bs-badge>
+      <bs-badge type="label" color="secondary-color" outlined>secondary-color</bs-badge>
+      <bs-badge type="label" color="unique-color" outlined>unique-color</bs-badge>
+    </div>
   </div>
-  <div>
-    <bs-badge type="label" color="purple" outlined>purple</bs-badge>
-    <bs-badge type="label" color="pink" outlined>pink</bs-badge>
-    <bs-badge type="label" color="orange" outlined>orange</bs-badge>
-    <bs-badge type="label" color="lime" outlined>lime</bs-badge>
-    <bs-badge type="label" color="secondary-color" outlined>secondary-color</bs-badge>
-    <bs-badge type="label" color="unique-color" outlined>unique-color</bs-badge>
-  </div>
-</div>
+</template>
+
 ```
 ::: 
 
@@ -165,19 +191,21 @@ variant and [Material Color](/reference/colors#material-colors) variant.
 Quickly provide actionable badges with hover and focus states by specifying the 
 `tag` and `href` property.
 
-::: BlockVue {title="Actionable Badges Example"}
+::: BlockVue {title="Actionable Badges"}
 
-```html
-<div class="my-demo-wrapper">
-  <bs-badge tag="a" variant="primary" href="#actionable-badges">Primary</bs-badge>
-  <bs-badge tag="a" variant="secondary" href="#actionable-badges">Secondary</bs-badge>
-  <bs-badge tag="a" variant="success" href="#actionable-badges">Success</bs-badge>
-  <bs-badge tag="a" variant="danger" href="#actionable-badges">Danger</bs-badge>
-  <bs-badge tag="a" variant="warning" href="#actionable-badges">Warning</bs-badge>
-  <bs-badge tag="a" variant="info" href="#actionable-badges">Info</bs-badge>
-  <bs-badge tag="a" variant="light" href="#actionable-badges">light</bs-badge>
-  <bs-badge tag="a" variant="dark" href="#actionable-badges">dark</bs-badge>
-</div>
+```vue
+<template>
+  <div class="demo-wrapper flex flex-wrap md-gap-2">
+    <bs-badge tag="a" variant="primary" href="#actionable-badges">Primary</bs-badge>
+    <bs-badge tag="a" variant="secondary" href="#actionable-badges">Secondary</bs-badge>
+    <bs-badge tag="a" variant="success" href="#actionable-badges">Success</bs-badge>
+    <bs-badge tag="a" variant="danger" href="#actionable-badges">Danger</bs-badge>
+    <bs-badge tag="a" variant="warning" href="#actionable-badges">Warning</bs-badge>
+    <bs-badge tag="a" variant="info" href="#actionable-badges">Info</bs-badge>
+    <bs-badge tag="a" variant="light" href="#actionable-badges">light</bs-badge>
+  </div>
+</template>
+
 ```
 :::
 
@@ -187,47 +215,79 @@ Quickly provide actionable badges with hover and focus states by specifying the
 Use bootstrap css utilities to modify a badge and position it in the corner of a 
 link or button. Or even create rounded badge without a count for a more generic indicator.
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
-
-::: BlockVue {title="Badge Positioning Example"}
+::: BlockVue {title="Badge Positioning"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper row row-cols-auto">
+  <div class="demo-wrapper row row-cols-auto">
     <div class="col">
-      <button type="button" class="btn btn-primary position-relative p-2 px-3">
+      <bs-button icon="inbox">
         Inbox
-        <bs-badge variant="danger" class="position-absolute top-0 start-100 translate-middle rounded-pill">
+        <bs-badge class="ms-3" color="bg-gray-200 text-dark" style="margin-right: -14px" type="pill">
           99+
-          <span class="visually-hidden">unread messages</span>
         </bs-badge>
-      </button>
-    </div>
-    <div class="px-2"></div>
-    <div class="col">
-      <button type="button" class="btn btn-primary position-relative p-2 px-3">
-        Profile
-        <bs-badge variant="danger" class="position-absolute top-0 start-100 translate-middle p-2 rounded-circle">
-          <span class="visually-hidden">New alerts</span>
-        </bs-badge>
-      </button>
+      </bs-button>
     </div>
     <div class="col">
-      <div class="position-relative">
+      <div class="relative">
         <bs-button icon="notifications_outlined" mode="icon" flat></bs-button>
-        <bs-badge variant="danger" class="position-absolute top-0 start-50 translate-middle-y rounded-pill">
-          9+<span class="visually-hidden">unread messages</span>
+        <bs-badge variant="danger" class="absolute start-100 top-0 translate-middle" type="pill">
+          9+
+        </bs-badge>
+      </div>
+    </div>
+    <div class="col ps-4">
+      <div class="relative">
+        <bs-button flat icon="notifications_filled" mode="icon"></bs-button>
+        <bs-badge variant="danger" class="absolute start-50 top-0 rounded-circle p-2 translate-middle-y">
+          <span class="visually-hidden">New alerts</span>
         </bs-badge>
       </div>
     </div>
   </div>
 </template>
 
-<style>
-.my-demo-wrapper {
-  margin: 30px;
+```
+:::
+
+## CSS Variables
+
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-badge` for better customization.
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+```scss
+.md-badge {
+  --md-badge-border-radius: #{vars.$badge-border-radius};
+  --md-badge-color: #{colors.$white};
+  --md-badge-font-size: #{vars.$badge-font-size};
+  --md-badge-font-weight: var(--font-weight-medium);
+  --md-badge-padding-x: #{vars.$badge-padding-x};
+  --md-badge-padding-y: #{vars.$badge-padding-y};
 }
-</style>
+
+```
+
+### SASS mixins
+
+Sometimes, simply creating a new actionable badge color variants can be overwhelming, 
+as there are too many CSS variables to modify. For cases like this, Vue MDBootstrap 
+provides SASS mixins to help you create new actionable badge color variants.
+
+::: code-group
+
+```scss [Light Theme]
+use 'vue-mdbootstrap/scss/mixins/badge';
+
+@include badge.make-actionable-variant-light($name, $color);
+
+```
+
+```scss [Dark Theme]
+use 'vue-mdbootstrap/scss/mixins/badge';
+
+@include badge.make-actionable-variant-dark($name, $color);
 
 ```
 :::
@@ -235,21 +295,21 @@ link or button. Or even create rounded badge without a count for a more generic 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type     | Default  | Description |
 |----------|----------|----------|-------------|
 | color    | `String` | `'default'` | The badge color appearance. |
-| outlined | `Boolean` | `false` | Create outline badge style. <BsBadge color="info">v2.0.4</BsBadge> |
+| outlined | `Boolean` | `false` | Create outline badge style. <MdBadge color="info">v2.0.4</MdBadge> |
 | tag      | `String` | `'span'` | The html tag is used to render the component. |
 | type     | `String` |   | Create badge with `pill` or `label` style. |
-| variant  | `String` |   | Create contextual badge with [Bootstrap badge color](https://getbootstrap.com/docs/5.2/components/badge/#background-colors). Valid values are: `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light`, `dark`. |
+| variant  | `String` |   | Create contextual badge. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Valid values are: `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light`.</div> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-reference">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
