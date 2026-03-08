@@ -16,7 +16,7 @@ Some components use `<bs-popover>` internally, such as
 [BsCombobox](/components/inputs/combobox), [BsDateTimeField](/components/inputs/datetime-field),
 [BsSearchField](/components/inputs/search-field). Example below, shows you basic usage of `<bs-popover>`.
 
-::: BlockVue {clientOnly="true" title="Popover Example" file="./docs/components/scripts/popover-1.js"}
+::: BlockVue {clientOnly="true" title="Popover Example" file="./docs/components/overlays/js/popover-1.js"}
 
 ```vue
 <template>
@@ -80,7 +80,7 @@ Use `placement` property to change default `<bs-popover>` display placement. Val
 placement values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, 
 `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`.
 
-::: BlockVue {clientOnly="true" title="Popover Placement Example" file="./docs/components/scripts/popover-2.js"}
+::: BlockVue {clientOnly="true" title="Popover Placement Example" file="./docs/components/overlays/js/popover-2.js"}
 
 ```vue
 <template>
@@ -515,12 +515,12 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 
 | Property | Type     | Default   | Description |
 |----------|----------|-----------|-------------|
-| color       | `String` | `'white'` | **Popover** background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. <BsBadge color="info">v2.0.0</BsBadge> |
+| color       | `String` | `'white'` | **Popover** background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. <MdBadge color="info">v2.0.0</MdBadge> |
 | cover       | `Boolean` | `false` | Display **Popover** at a position that covers the activator. |
 | esc-close   | `Boolean` | `true`  | Close the **Popover** when **ESC** key is pressed. |
 | open <Badge type="tip">v-model</Badge> | `Boolean` | `false` | **Popover** state: **show** or **hide**. |
 | overlay       | `Boolean` | `false` | Show backdrop overlay or not. |
-| overlay-click-close | `Boolean` | `true`  | Close the **Popover** when the backdrop overlay is clicked. <BsBadge color="info">v2.0.0</BsBadge> |
+| overlay-click-close | `Boolean` | `true`  | Close the **Popover** when the backdrop overlay is clicked. <MdBadge color="info">v2.0.0</MdBadge> |
 | overlay-color | `String`  | `'#000'`| The backdrop overlay color. |
 | overlay-opacity | `Number` | `0.4` | The backdrop overlay opacity. |
 | placement   | `String`  | `'bottom-left'` | **Popover** display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
@@ -536,7 +536,7 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Fired when **Popover** is closed. |
-| update:open | ( state:`Boolean`) | Used to update the `open` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:open | ( state:`Boolean`) | Used to update the `open` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
