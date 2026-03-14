@@ -1,5 +1,5 @@
 ---
-description: Small and lightweight component which is used to toggle two different icon. 
+description: ToggleIcon is small and lightweight component which is used to toggle two different icon. 
 --- 
 
 # Toggle Icon
@@ -11,7 +11,7 @@ load icon from [Google Material Symbols](https://fonts.google.com/icons?icon.set
 dynamically.
 :::
 
-<SmallNote color="teal">Updated on v2.1.0</SmallNote>
+<SmallNote color="teal">Updated in v2.1.0</SmallNote>
 
 
 ## Overview
@@ -30,11 +30,11 @@ with fill style.
 The `size` property is used to set the icon size. And if not set, the default size 
 will be used.
 
-::: BlockVue {title="ToggleIcon Example" file="./docs/components/scripts/toggle-icon.js"}
+::: BlockVue {title="ToggleIcon Overview" file="./docs/components/scripts/toggle-icon.js"}
 
 ```vue
 <template>
-  <div class="w-100 p-4 bg-white rounded-3">
+  <div class="w-full p-4 bg-white rounded-3">
     <div class="input-group mb-3">
       <input
         :type="inputType1"
@@ -79,35 +79,34 @@ const inputType2 = computed(() => passwordToggled2.value ? 'text' : 'password');
 ```
 :::
 
-<!-- @include: @/components/icon-migration-info.md -->
-
 ::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
-The `<bs-icon-toggle>` tag still works, but has been deprecated since v2.0.0.
+- Since v2.1.0, [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are replaced with [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols).
+- The `<bs-icon-toggle>` tag still works, but has been deprecated since v2.0.0.
 :::
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
-| filled   | `Boolean`| `false` | Use [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with fill style variant. <BsBadge color="info">v2.1.0</BsBadge> |
-| icon <Badge type="danger">required</Badge> | `String` |  | The default icon to display when `model-value` property is `false` or `undefined`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, or `_sharp_filled`.</p> |
-| model-value <Badge type="tip">v-model</Badge> | `Boolean` | `false`  | Value monitored by `v-model` to maintain icon state. <BsBadge color="info">v2.0.0</BsBadge> |
-| size     | `Number` | `24`      | The icon's size. <BsBadge color="info">v2.0.0</BsBadge> |
-| toggle-icon <Badge type="danger">required</Badge> | `String` |  | The icon to display when `model-value` property is `true`. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, or `_sharp_filled`.</p> |
+| filled   | `Boolean`| `false` | Use [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with fill style variant. <MdBadge color="info">v2.1.0</MdBadge> |
+| icon <Badge type="danger">required</Badge> | `String` |  | The default icon to display when `model-value` property is `false` or `undefined`. <MdBadge color="info">Updated in v2.1.0</MdBadge> <div class="pt-3">Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, or `_sharp_filled`.</div> |
+| model-value <Badge type="tip">v-model</Badge> | `Boolean` | `false`  | Value monitored by `v-model` to maintain icon state. <MdBadge color="info">v2.0.0</MdBadge> |
+| size     | `Number` | `24`      | The icon's size. <MdBadge color="info">v2.0.0</MdBadge> |
+| toggle-icon <Badge type="danger">required</Badge> | `String` |  | The icon to display when `model-value` property is `true`. <MdBadge color="info">Updated in v2.1.0</MdBadge> <div class="pt-3">Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, or `_sharp_filled`.</div> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | ( value:`Boolean`) | Used to update the `model-value` property. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

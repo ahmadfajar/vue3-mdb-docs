@@ -89,8 +89,8 @@ export const sidebar = [
         text: 'Icons',
         collapsed: true,
         items: [
-          { text: 'Icon', link: '/components/icons/icon' },
           { text: 'FontAwesome Icon', link: '/components/icons/fontawesome-icon' },
+          { text: 'Icon', link: '/components/icons/icon' },
           { text: 'Spinner Icon', link: '/components/icons/spinner-icon' },
           { text: 'SVG Icon', link: '/components/icons/svg-icon' },
           { text: 'Toggle Icon', link: '/components/icons/toggle-icon' },

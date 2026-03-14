@@ -1,149 +1,132 @@
 ---
-description: Small and lightweight component which can be used inside almost any component or html element and the icon is loaded from Font Awesome dynamically. 
+description: FontawesomeIcon is small and lightweight component which can be used inside almost any component or html element and the icon is loaded from Font Awesome dynamically. 
 --- 
 
-# Icon Font Awesome
+# Font Awesome Icon
 
 ::: lead
-**BsIconFontawesome** is small, and a lightweight component. It can be used inside almost
-any component or html element. **BsIconFontawesome** loads free icons from
-[Font Awesome](https://fontawesome.com/v6/search?o=r&m=free) dynamically.
+**BsFontawesomeIcon** is small and a lightweight component. It can be used inside almost
+any component or html element. **BsFontawesomeIcon** loads *Font Awesome* free icons dynamically.
 :::
 
-<SmallNote color="teal">Added since v2.1.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 
 ## Overview
 
-The icon's name used by **BsIconFontawesome** is the same as in
-[Font Awesome website](https://fontawesome.com/v6/search?o=r&m=free).
-**BsIconFontawesome** has three icon variants, namely: _Solid_ (default), _Regular_, and _Light_.
+The icon's name used by **BsFontawesomeIcon** is the same as in
+[Font Awesome website](https://fontawesome.com/search?ic=free-collection).
+**BsFontawesomeIcon** has three icon variants, namely: _Solid_ (default), _Regular_, and _Brands_.
 
 The `size` property is used to set the icon size. And if not set, the default size
 will be used.
 
-::: BlockVue {title="Basic Icon FontAwesome Example"}
+::: BlockVue {title="FontAwesome Icon Overview"}
 
-```html
-<div class="w-100 p-3 bg-white rounded-3">
-  <div class="row row-cols-1 row-cols-md-2 g-3">
-    <div class="col">
-      <h6 class="mb-3">Solid</h6>
-      <div class="d-flex align-items-center">
-        <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="house" size="36" /></div>
-        <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="circle-user" size="36" /></div>
-        <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="envelope" size="36" /></div>
-        <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="gift" size="36" /></div>
-        <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="thumbs-up" size="36" /></div>
-      </div>
-    </div>
-    <div class="col">
-      <h6 class="mb-3">Regular</h6>
-      <div class="d-flex align-items-center">
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="house" size="36" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="circle-user" size="36" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="envelope" size="36" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="gift" size="36" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="thumbs-up" size="36" variant="regular" />
+```vue
+<template>
+  <div class="demo-wrapper px-2">
+    <div class="row row-cols-1 row-cols-md-2 g-5">
+      <div class="col">
+        <h6 class="mb-3">Solid</h6>
+        <div class="flex items-center md-gap-3">
+          <bs-fontawesome-icon icon="house" size="36"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="circle-user" size="36"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="envelope" size="36"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="gift" size="36"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="thumbs-up" size="36"></bs-fontawesome-icon>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <h6 class="mb-3">Light</h6>
-      <div class="d-flex align-items-center">
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="house" size="36" variant="light" />
+      <div class="col">
+        <h6 class="mb-3">Regular</h6>
+        <div class="flex items-center md-gap-3">
+          <bs-fontawesome-icon icon="house" size="36" variant="regular"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="circle-user" size="36" variant="regular"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="address-book" size="36" variant="regular"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="envelope" size="36" variant="regular"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="thumbs-up" size="36" variant="regular"></bs-fontawesome-icon>
         </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="circle-user" size="36" variant="light" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="envelope" size="36" variant="light" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="gift" size="36" variant="light" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="thumbs-up" size="36" variant="light" />
+      </div>
+      <div class="col">
+        <h6 class="mb-3">Brands</h6>
+        <div class="flex items-center md-gap-3">
+          <bs-fontawesome-icon icon="app-store-ios" size="36" variant="brands"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="atlassian" size="36" variant="brands"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="gitlab" size="36" variant="brands"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="facebook" size="36" variant="brands"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="github" size="36" variant="brands"></bs-fontawesome-icon>
         </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 ```
+:::
+
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+The `<bs-icon-fontawesome>` tag still works, but has been deprecated since v2.2.0.
 :::
 
 
 ## Styling an Icon
 
-`<bs-icon-fontawesome>` can be styles with css class or inline style.
+`<bs-fontawesome-icon>` can be styles with css class or inline style.
 
-::: BlockVue {title="Icon FontAwesome Style Example"}
+::: BlockVue {title="Styling FontAwesome Icon"}
 
-```html
-<div class="w-100 p-3 bg-white rounded-3">
-  <div class="row row-cols-1 row-cols-md-2 g-3">
-    <div class="col">
-      <h6 class="mb-3">Solid</h6>
-      <div class="d-flex align-items-center">
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="house" size="36" class="text-purple" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="circle-user" size="36" class="text-purple" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="gear" size="36" class="text-purple" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="trash-can" size="36" class="text-purple" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="cart-shopping" size="36" class="text-purple" />
+```vue
+<template>
+  <div class="demo-wrapper px-2">
+    <div class="row row-cols-1 row-cols-md-2 g-5">
+      <div class="col">
+        <h6 class="mb-3">Solid</h6>
+        <div class="flex items-center md-gap-3">
+          <bs-fontawesome-icon icon="house" size="36" class="text-purple"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="circle-user" size="36" class="text-purple"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="gear" size="36" class="text-purple"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="trash-can" size="36" class="text-purple"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="cart-shopping" size="36" class="text-purple"></bs-fontawesome-icon>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <h6 class="mb-3">Regular</h6>
-      <div class="d-flex align-items-center">
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="house" size="36" class="text-primary" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome
+      <div class="col">
+        <h6 class="mb-3">Regular</h6>
+        <div class="flex items-center md-gap-3">
+          <bs-fontawesome-icon 
+            icon="house" 
+            size="36" 
+            class="text-primary" 
+            variant="regular"
+          ></bs-fontawesome-icon>
+          <bs-fontawesome-icon
             icon="circle-user"
             size="36"
             class="text-primary"
             variant="regular"
-          />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="gear" size="36" class="text-primary" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome icon="trash-can" size="36" class="text-primary" variant="regular" />
-        </div>
-        <div class="d-inline-flex mx-2">
-          <bs-icon-fontawesome
-            icon="cart-shopping"
+          ></bs-fontawesome-icon>
+          <bs-fontawesome-icon 
+            icon="address-card" size="36" 
+            class="text-primary" 
+            variant="regular"
+          ></bs-fontawesome-icon>
+          <bs-fontawesome-icon
+            icon="trash-can" 
+            size="36" 
+            class="text-primary" 
+            variant="regular"
+          ></bs-fontawesome-icon>
+          <bs-fontawesome-icon
+            icon="truck"
             size="36"
             class="text-primary"
             variant="regular"
-          />
+          ></bs-fontawesome-icon>
         </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 ```
 :::
 
@@ -153,82 +136,79 @@ will be used.
 Additionally, you can also rotate the icon to some extent. Use `flip` property or `rotation`
 property to rotate the icon, but do not use both property together.
 
-::: BlockVue {title="Rotating Icon FontAwesome Example"}
+::: BlockVue {title="Rotating FontAwesome Icon"}
 
-```html
-<div class="w-100 p-3 bg-white rounded-3">
-  <div class="row row-cols-1 row-cols-md-2 g-3 text-center">
-    <div class="col">
-      <h6 class="mb-3">Flip</h6>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="cart-shopping" size="36" flip="horizontal" />
+```vue
+<template>
+  <div class="demo-wrapper px-2">
+    <div class="row row-cols-1 row-cols-sm-2 g-5">
+      <div class="col">
+        <h6 class="mb-3">Flip</h6>
+        <div class="flex md-gap-3">
+          <bs-fontawesome-icon icon="cart-shopping" size="36" flip="horizontal"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="cart-shopping" size="36" flip="vertical"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="cart-shopping" size="36" flip="both"></bs-fontawesome-icon>
+        </div>
       </div>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="cart-shopping" size="36" flip="vertical" />
-      </div>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="cart-shopping" size="36" flip="both" />
-      </div>
-    </div>
-    <div class="col">
-      <h6 class="mb-3">Rotate</h6>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="plane" size="36" rotate="90" />
-      </div>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="plane" size="36" rotate="180" />
-      </div>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="plane" size="36" rotate="270" />
+      <div class="col">
+        <h6 class="mb-3">Rotate</h6>
+        <div class="flex md-gap-3">
+          <bs-fontawesome-icon icon="plane" size="36" rotate="90"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="plane" size="36" rotate="180"></bs-fontawesome-icon>
+          <bs-fontawesome-icon icon="plane" size="36" rotate="270"></bs-fontawesome-icon>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</template>
+
 ```
 :::
 
 ## Animation
 
-`<bs-icon-fontawesome>` also has built-in animations, which are: _Spin_ and _Pulse_.
+`<bs-fontawesome-icon>` also has built-in animations, which are: _Spin_ and _Pulse_.
 
-::: BlockVue {title="Icon FontAwesome Animation Example"}
+::: BlockVue {title="FontAwesome Icon Animation"}
 
-```html
-<div class="w-100 p-3 bg-white rounded-3">
-  <div class="row row-cols-1 row-cols-md-2 g-3 text-center">
-    <div class="col">
-      <h6 class="mb-3">Spin animation</h6>
-      <div class="d-inline-flex mx-2">
-        <bs-icon-fontawesome icon="compass" size="42" variant="regular" spin />
+```vue
+<template>
+  <div class="demo-wrapper w-full px-2">
+    <div class="row row-cols-1 row-cols-sm-2 g-4 text-sm-center">
+      <div class="col">
+        <h6 class="mb-3">Spin animation</h6>
+        <bs-fontawesome-icon icon="compass" size="42" variant="regular" spin />
+      </div>
+      <div class="col">
+        <h6 class="mb-3">Pulse animation</h6>
+        <bs-fontawesome-icon icon="gear" size="42" pulse />
       </div>
     </div>
-    <div class="col">
-      <h6 class="mb-3">Pulse animation</h6>
-      <div class="d-inline-flex mx-2"><bs-icon-fontawesome icon="gear" size="42" pulse /></div>
-    </div>
   </div>
-</div>
+</template>
+
 ```
 :::
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
 | flip     | `String` |         | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. |
 | height   | `Number` | `24`    | The icon's height in pixel. |
-| icon <Badge type="danger">required</Badge> | `String` |  | The icon's name. Use any valid icon name from [Font Awesome website](https://fontawesome.com/v6/search?o=r&m=free). |
+| icon <Badge type="danger">required</Badge> | `String` |  | The icon's name. Use any valid icon name from [Font Awesome website](https://fontawesome.com/search?ic=free-collection). |
 | pulse    | `Boolean`| `false` | Apply **pulse** animation. |
 | rotate   | `Number` |         | Rotate the icon, valid values are: `90`, `180`, `270`. |
 | size     | `Number` |         | Shortcut to create icon with equal height and width. |
 | spin     | `Boolean`| `false` | Apply **spin** animation. |
-| variant  | `String` | `'solid'` | Icon style variant, valid values are: `regular`, `solid`, `light`. |
-| version  | `String` | `'6.7.1'` | Font Awesome vendor version. |
+| svg-class | `String`|  | Apply custom css class to the svg element. <MdBadge color="info">v2.2.0</MdBadge> |
+| variant  | `String` | `'solid'` | Icon style variant, valid values are: `regular`, `solid`, `brands`. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
+| version  | `String` | `'7.2.0'` | Font Awesome vendor version. <MdBadge color="info">Updated in v2.2.1</MdBadge> |
 | width    | `Number` | `24`      | The icon's width in pixel. |
 
 </div>
