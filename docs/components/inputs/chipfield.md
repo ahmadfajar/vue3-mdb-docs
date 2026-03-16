@@ -575,16 +575,16 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| blur    | ( evt:`FocusEvent`)    | Triggers when this ChipField lost focus. |
+| blur    | (evt:`FocusEvent`)    | Triggers when this ChipField lost focus. |
 | clear   |   | Triggers after this field value is cleared. |
-| delete-item | ( item:`String`) | Triggers when a chip is deleted from this ChipField. <MdBadge color="info">v2.0.0</MdBadge> |
-| focus   | ( evt:`FocusEvent`)    | Triggers when this ChipField got focused. |
-| keydown | ( evt:`KeyboardEvent`) | Triggers when cursor is still in the `<input>` element and keyboard key is pressed. |
-| update:model-value | ( value:`String`&#124;`String[]`) | Triggers when this ChipField's `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| delete-item | (item:`String`) | Triggers when a chip is deleted from this ChipField. <MdBadge color="info">v2.0.0</MdBadge> |
+| focus   | (evt:`FocusEvent`)    | Triggers when this ChipField got focused. |
+| keydown | (evt:`KeyboardEvent`) | Triggers when cursor is still in the `<input>` element and keyboard key is pressed. |
+| update:model-value | (value:`String`&#124;`String[]`) | Triggers when this ChipField's `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

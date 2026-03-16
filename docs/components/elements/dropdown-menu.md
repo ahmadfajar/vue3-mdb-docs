@@ -380,12 +380,12 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Fired when **dropdown menu** is closed. |
-| update:open | ( state:`Boolean`) | Used to update the `open` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:open | (state:`Boolean`) | Used to update the `open` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

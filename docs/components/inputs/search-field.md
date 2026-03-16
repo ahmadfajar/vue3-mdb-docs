@@ -196,16 +196,16 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments     | Description |
 |---------|---------------|-------------|
-| blur    | `FocusEvent`  | Triggers when cursor leave the `<input>` element. |
-| focus   | `FocusEvent`  | Triggers when cursor entered the `<input>` element. |
+| blur    | (evt:`FocusEvent`)  | Triggers when cursor leave the `<input>` element. |
+| focus   | (evt:`FocusEvent`)  | Triggers when cursor entered the `<input>` element. |
 | close   |          | Fired when the *Popover* container is hiding. <MdBadge color="info">v2.0.0</MdBadge> |
 | open    |          | Fired when the *Popover* container is show. <MdBadge color="info">Updated in v2.0.0</MdBadge> |
-| search  | `String` | Asks handler to start searching for the given keyword. |
-| update:model-value | `String` | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| search  | (value:`String`) | Asks handler to start searching for the given keyword. |
+| update:model-value | (value:`String`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

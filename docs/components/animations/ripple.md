@@ -66,11 +66,11 @@ Example below, shows you basic usage of `<bs-ripple>`.
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:active | ( state:`Boolean`) | Used to update the `active` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:active | (state:`Boolean`) | Used to update the `active` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

@@ -243,12 +243,12 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| checked | ( state:`Boolean`) | Triggers after the radio button state changed. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:model-value | ( value:`String`&#124;`Number`&#124;`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| checked | (state:`Boolean`) | Triggers after the radio button state changed. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`String`&#124;`Number`&#124;`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
@@ -288,11 +288,11 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| update:model-value | ( value:`String`&#124;`Number`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`String`&#124;`Number`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

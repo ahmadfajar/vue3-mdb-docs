@@ -1516,25 +1516,25 @@ onUnmounted(() => {
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
 | clear   |   | Triggers after this field value is cleared. <MdBadge color="info">v2.0.0</MdBadge> |
 | close   |   | Triggers when the Popover is hiding. |
 | open    |   | Triggers when the Popover is show. |
-| data-bind   | ( items:`Object[]`) | Triggers after the data has been fetched. |
-| data-error  | ( error:`Object`)   | Triggers when error loading data items. |
-| data-filter | ( items:`Object[]`) | Triggers after the listbox data items is filtered. |
-| deselect    | ( value:`Object`)   | Triggers when an item is deselected. |
-| select      | ( value:`Object`)   | Triggers when an item is selected. |
-| update:model-value    | ( value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Triggers when the combobox value is updated. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:selected-value | ( selected:`Object[]`)             | Triggers when the combobox selected value is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| data-bind   | (items:`Object[]`) | Triggers after the data has been fetched. |
+| data-error  | (error:`Object`)   | Triggers when error loading data items. |
+| data-filter | (items:`Object[]`) | Triggers after the listbox data items is filtered. |
+| deselect    | (value:`Object`)   | Triggers when an item is deselected. |
+| select      | (value:`Object`)   | Triggers when an item is selected. |
+| update:model-value    | (value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Triggers when the combobox value is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:selected-value | (selected:`Object[]`)             | Triggers when the combobox selected value is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
   <BsTab label="Slots">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
@@ -1546,7 +1546,7 @@ onUnmounted(() => {
 | help-text      | | The outlet slot used for custom help text. <MdBadge color="info">v2.0.0</MdBadge> |
 | prepend-inner  | | The outlet slot used to place custom icon or component at the inner left side. <MdBadge color="info">v2.0.0</MdBadge> |
 | prepend-outer  | | The outlet slot used to place custom icon or component at the outer left side. <MdBadge color="info">v2.0.0</MdBadge>|
-| option-item    | ( item:`Object`, index:`Number`) | The outlet slot used to customize listbox items appearance. <MdBadge color="info">v2.0.0</MdBadge> |
+| option-item    | (item:`Object`, index:`Number`) | The outlet slot used to customize listbox items appearance. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

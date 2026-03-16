@@ -942,16 +942,16 @@ function cancel() {
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| blur    | ( evt:`FocusEvent`) | Fired when this component lost focus. |
+| blur    | (evt:`FocusEvent`) | Fired when this component lost focus. |
 | clear   |  | Fired after this component value is cleared. |
 | close   |  | Fired when the Date picker is closed or hide. |
-| focus   | ( evt:`FocusEvent`) | Fired when this component got focused. |
+| focus   | (evt:`FocusEvent`) | Fired when this component got focused. |
 | open    |  | Fired when the Date picker popup is open or showed. |
-| update:model-value | ( value:`String`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`String`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

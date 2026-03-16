@@ -406,12 +406,12 @@ As CSS technology evolves, Vue MDBootstrap introduces global CSS variables for b
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name        | Arguments               | Description |
 |-------------|-------------------------|-------------|
-| resize      | ( target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:open | ( state:`Boolean`)      | Triggers when the component becomes visible or invisible. Use this event to update the `open` property or just use the shortcut `v-model:open`. |
+| resize      | (target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:open | (state:`Boolean`)      | Triggers when the component becomes visible or invisible. Use this event to update the `open` property or just use the shortcut `v-model:open`. |
 
 </div>
   </BsTab>

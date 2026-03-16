@@ -886,13 +886,13 @@ use 'vue-mdbootstrap/scss/mixins/chip';
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Triggers when the close (`x`) button is clicked or chip has been dismissed. |
-| update:active      | ( value:`Boolean`) | Triggers when the chip is dismissed and update the `active` property. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:model-value | ( value:`Boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:active      | (value:`Boolean`) | Triggers when the chip is dismissed and update the `active` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`Boolean`) | Triggers when the chip is dismissed and update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

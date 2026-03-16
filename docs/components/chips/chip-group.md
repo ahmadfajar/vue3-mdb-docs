@@ -322,13 +322,13 @@ const chipItems2: TChipOptionItem[] = [
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers immediately when the `model-value` property is changed. |
-| item:close         | ( value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:model-value | ( value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers when the `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| change | (value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers immediately when the `model-value` property is changed. |
+| item:close         | (value:`TChipOptionItem`) | Triggers when the chip's item close (`x`) button is clicked or chip's item has been dismissed. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`TChipValue`&#124;`TChipValue[]`&#124;`null`) | Triggers when the `model-value` property is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

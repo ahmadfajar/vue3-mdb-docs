@@ -122,11 +122,11 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| resize | ( target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
+| resize | (target:`HTMLElement`) | Triggers when the component is resized. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

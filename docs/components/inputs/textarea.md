@@ -728,15 +728,15 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments         | Description |
 |---------|-------------------|-------------|
-| blur    | ( evt:`FocusEvent`)    | Triggers when cursor leave the `<textarea>` element. |
+| blur    | (evt:`FocusEvent`)    | Triggers when cursor leave the `<textarea>` element. |
 | clear   |   | Fired after this field value is cleared. |
-| focus   | ( evt:`FocusEvent`)    | Triggers when cursor entered the `<textarea>` element. |
-| keydown | ( evt:`KeyboardEvent`) | Triggers when cursor is still in the `<textarea>` element and keyboard key is pressed. |
-| update:model-value | ( value:`String`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| focus   | (evt:`FocusEvent`)    | Triggers when cursor entered the `<textarea>` element. |
+| keydown | (evt:`KeyboardEvent`) | Triggers when cursor is still in the `<textarea>` element and keyboard key is pressed. |
+| update:model-value | (value:`String`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

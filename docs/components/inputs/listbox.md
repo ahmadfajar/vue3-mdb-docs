@@ -528,27 +528,27 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name        | Arguments           | Description |
 |-------------|---------------------|-------------|
-| data-bind   | ( items:`Object[]`) | Triggers after the data has been fetched. |
-| data-error  | ( error:`Object`)   | Triggers when error loading data items. |
-| data-filter | ( items:`Object[]`) | <div style="min-width: 360px">Triggers after the Listbox data items is filtered.</div> |
-| deselect    | ( value:`Object`)   | Triggers when an item is deselected. |
-| select      | ( value:`Object`)   | Triggers when an item is selected. |
-| update:model-value | ( value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Triggers when the Listbox value is updated. |
-| update:search-text | ( value:`String`) | Triggers when the Listbox search value is updated. |
-| update:selected-value | ( selected:`Object[]`) | Triggers when the Listbox selected value is updated. |
+| data-bind   | (items:`Object[]`) | Triggers after the data has been fetched. |
+| data-error  | (error:`Object`)   | Triggers when error loading data items. |
+| data-filter | (items:`Object[]`) | <div style="min-width: 360px">Triggers after the Listbox data items is filtered.</div> |
+| deselect    | (value:`Object`)   | Triggers when an item is deselected. |
+| select      | (value:`Object`)   | Triggers when an item is selected. |
+| update:model-value | (value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Triggers when the Listbox value is updated. |
+| update:search-text | (value:`String`) | Triggers when the Listbox search value is updated. |
+| update:selected-value | (selected:`Object[]`) | Triggers when the Listbox selected value is updated. |
 
 </div>
   </BsTab>
   <BsTab label="Slots">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
-| option-item    | ( item:`Object`, index:`Number`) | The outlet slot used to customize listbox items appearance. |
+| option-item    | (item:`Object`, index:`Number`) | The outlet slot used to customize listbox items appearance. |
 | empty-data-msg | | The outlet slot used to place custom message when listbox is empty. |
 | not-found-msg  | | The outlet slot used to place custom message when filtering listbox items returns no result. |
 

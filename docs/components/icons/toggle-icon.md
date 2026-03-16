@@ -102,11 +102,11 @@ const inputType2 = computed(() => passwordToggled2.value ? 'text' : 'password');
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | ( value:`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`Boolean`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

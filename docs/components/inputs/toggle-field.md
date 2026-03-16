@@ -700,21 +700,21 @@ The component css variables inherited from [BsButton](/components/buttons/button
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| update:model-value | ( value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`String`&#124;`Number`&#124;`String[]`&#124;`Number[]`) | Used to update the `model-value` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
   <BsTab label="Slots">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments | Description |
 |---------|-----------|-------------|
-| icon    | ( item:`TInputOptionItem`) | The outlet slot used to place custom icon. <MdBadge color="info">v2.0.1</MdBadge> |
-| label   | ( item:`TInputOptionItem`) | The outlet slot used to place custom label. <MdBadge color="info">v2.0.1</MdBadge> |
+| icon    | (item:`TInputOptionItem`) | The outlet slot used to place custom icon. <MdBadge color="info">v2.0.1</MdBadge> |
+| label   | (item:`TInputOptionItem`) | The outlet slot used to place custom label. <MdBadge color="info">v2.0.1</MdBadge> |
 
 </div>
   </BsTab>
