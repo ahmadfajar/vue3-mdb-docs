@@ -54,7 +54,7 @@ below, to learn how to display image with title and icon correctly.
 ```vue
 <template>
   <bs-app class="demo-wrapper">
-    <bs-card class="mobi-card w-full mx-auto" shadow>
+    <bs-card class="mobi-card w-full mx-auto">
       <bs-appbar class="bg-deep-purple-700">
         <bs-button mode="icon" color="light" icon="menu" flat></bs-button>
         <bs-appbar-title title="Chats" class="text-light"></bs-appbar-title>
@@ -911,7 +911,7 @@ function toggleEnableWidget() {
 
 ```vue
 <template>
-  <bs-app class="app-vh bg-gray-500 dark:bg-gray-900/70 rounded md-shadow-1" style="height: 500px;">
+  <bs-app class="app-vh bg-gray-500 dark:bg-gray-900/70 rounded-3 md-shadow-1" style="height: 500px;">
     <bs-appbar clipped-left shadow>
       <bs-button
         color="secondary"
@@ -965,7 +965,7 @@ function toggleEnableWidget() {
             <bs-list-tile-title>All Mail</bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
-            <bs-badge type="pill" color="secondary">102</bs-badge>
+            <bs-badge type="pill" color="secondary" class="dark:bg-secondary!">102</bs-badge>
           </bs-list-tile-action>
         </bs-list-tile>
         <bs-list-tile url="#inside-side-drawer">
@@ -974,7 +974,7 @@ function toggleEnableWidget() {
             <bs-list-tile-title>Trash</bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
-            <bs-badge type="pill" variant="secondary">12</bs-badge>
+            <bs-badge type="pill" variant="secondary" class="dark:bg-secondary!">12</bs-badge>
           </bs-list-tile-action>
         </bs-list-tile>
         <bs-list-tile url="#inside-side-drawer">
@@ -983,7 +983,7 @@ function toggleEnableWidget() {
             <bs-list-tile-title>Spam</bs-list-tile-title>
           </bs-list-tile-content>
           <bs-list-tile-action>
-            <bs-badge type="pill" variant="secondary">8</bs-badge>
+            <bs-badge type="pill" variant="secondary" class="dark:bg-secondary!">8</bs-badge>
           </bs-list-tile-action>
         </bs-list-tile>
       </bs-list-view>
@@ -1112,7 +1112,7 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 
 ### BsListView {#api-reference-list-view}
 
-<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1154,7 +1154,7 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 
 ### BsListTile {#api-reference-list-tile class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1202,7 +1202,7 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 
 A container for less important parts of item or for actionable component.
 
-<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1231,7 +1231,7 @@ A container for less important parts of item or for actionable component.
 A component for important parts of item. An avatar, image, or icon is usually placed 
 inside this component.
 
-<BsTabs v-model="tabs4active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs4active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1268,7 +1268,7 @@ inside this component.
 A container for item's description. Inside it, you can put component such 
 as `<bs-list-tile-title>` and `<bs-list-tile-subtitle>`.
 
-<BsTabs v-model="tabs5active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs5active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1293,7 +1293,7 @@ as `<bs-list-tile-title>` and `<bs-list-tile-subtitle>`.
 
 ### BsListTileTitle {#api-reference-list-tile-title class="mt-lg-5"}
 
-<BsTabs v-model="tabs6active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs6active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -1317,7 +1317,7 @@ as `<bs-list-tile-title>` and `<bs-list-tile-subtitle>`.
 
 ### BsListTileSubtitle {#api-reference-list-tile-subtitle class="mt-lg-5"}
 
-<BsTabs v-model="tabs7active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs7active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 

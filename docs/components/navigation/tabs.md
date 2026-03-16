@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: A component used for creating a pseudo-navigation for a page. 
+description: Tabs is a component used for creating a pseudo-navigation for a page. 
 ---
 
 # Tabs
@@ -17,19 +17,19 @@ create the navigation container and `<bs-tab>` is used to create the tab-items a
 contents. 
 
 
-::: BlockVue {title="Tabs Example" file="./docs/components/scripts/tabs-1.js"}
+::: BlockVue {title="Tabs Overview" file="./docs/components/navigation/js/tabs-1.js"}
 
 ```vue
 <template>
-  <div class="bg-white rounded-3 py-2 w-100">
+  <div class="demo-wrapper w-full">
     <bs-tabs v-model="demoTabs1">
-      <bs-tab label="Home" icon="home" url="#overview">
+      <bs-tab label="Home" icon="home">
         {{ homeTab }}
       </bs-tab>
-      <bs-tab label="Profile" icon="person" url="#overview">
+      <bs-tab label="Profile" icon="person">
         {{ profileTab }}
       </bs-tab>
-      <bs-tab label="Story" icon="text_snippet" url="#overview">
+      <bs-tab label="Story" icon="text_snippet">
         {{ storyTab }}
       </bs-tab>
     </bs-tabs>
@@ -45,13 +45,13 @@ const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
 </script>
+
 ```
 :::
 
 
 ::: info <BsIcon icon="info_outlined" /> <span class="ms-2 h6 mb-0">INFO</span>
-- The `url` property in the example above is optional and can be ignored. 
-- See [BsIcon](/components/icons/icon) to learn more about how to apply the **Google Material Symbols**
+- See [BsIcon](/components/icons/icon) to learn more about how to apply **Google Material Symbols**
 to the `icon` property. 
 - Since Vue MDBootstrap v2.1.0, [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are replaced with [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols). 
 :::
@@ -59,28 +59,27 @@ to the `icon` property.
 
 ## Style Variants
 
+### Bootstrap Tabs {#style-variants-bootstrap-tabs}
 
-### Bootstrap Tabs
-
-**Bootstrap Tabs style** is default style variant when the `variant` property is not defined.
+**Bootstrap Tabs** style is default style variant when the `variant` property is not defined.
 To explicitly define this style variant, sets `variant` property value of `<bs-tabs>`
-to `'tabs'`. When use inside `<bs-card>` component, sets the `inner-class` property value to 
-`'card-header'` to have an appropriate **_Bootstrap Tabs style_**.
+to `'tabs'`. When use inside `<bs-card>` component, sets the value of `inner-class` property to 
+`'md-card-header'` to have an appropriate **_Bootstrap Tabs style_**.
 
-::: BlockVue {title="Bootstrap Tabs Style Example" file="./docs/components/scripts/tabs-2.js"}
+::: BlockVue {title="Tabs Style Variants - Bootstrap Tabs" file="./docs/components/navigation/js/tabs-2.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
+  <div class="demo-wrapper">
     <bs-card>
-      <bs-tabs v-model="demoTabs2" inner-class="card-header">
-        <bs-tab label="Home" icon="home" url="#bootstrap-tabs">
+      <bs-tabs v-model="demoTabs2" inner-class="md-card-header">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#bootstrap-tabs">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#bootstrap-tabs">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -97,35 +96,36 @@ const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
 </script>
+
 ```
 :::
 
 
-### Bootstrap Pill {class="mt-lg-5"}
+### Bootstrap Pill {#style-variants-bootstrap-pill class="mt-lg-5"}
 
-**Bootstrap Pill style** is another style variant from **Bootstrap**. To use it, sets `variant` 
+**Bootstrap Pill** style is another style variant from **Bootstrap**. To use it, sets `variant` 
 property value of `<bs-tabs>` to `'pills'`. When use inside `<bs-card>` component, sets the 
-`inner-class` property value to `'card-header'` to have an appropriate **_Bootstrap Pill style_**. 
+`inner-class` property value to `'md-card-header'` to have an appropriate **_Bootstrap Pill style_**. 
 
 Additionally, use the `active-class` property on `<bs-tabs>` to customize the active Tab 
 color, for example `active-class="bg-unique active"`. And use the `tab-class` property to 
 customize the inactive Tab color.
 
 
-::: BlockVue {title="Bootstrap Tabs Style Example" file="./docs/components/scripts/tabs-3.js"}
+::: BlockVue {title="Tabs Style Variants - Bootstrap Pill" file="./docs/components/navigation/js/tabs-3.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
+  <div class="demo-wrapper">
     <bs-card>
-      <bs-tabs v-model="demoTabs3" variant="pills" inner-class="card-header">
-        <bs-tab label="Home" icon="home" url="#bootstrap-pill">
+      <bs-tabs v-model="demoTabs3" variant="pills" inner-class="md-card-header">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#bootstrap-pill">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#bootstrap-pill">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -142,11 +142,12 @@ const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
 </script>
+
 ```
 :::
 
 
-### Material {class="mt-lg-5"}
+### Material {#style-variants-material class="mt-lg-5"}
 
 **Material style** variant can be enabled, by setting `variant` property value of `<bs-tabs>` 
 to `'material'` and use the `color` property to have an appropriate tabs color. 
@@ -154,28 +155,28 @@ to `'material'` and use the `color` property to have an appropriate tabs color.
 Additionally, use the `active-class` property to customize the active Tab color and indicator, 
 for example: `active-class="border-yellow active"`.
 
-::: BlockVue {title="Material Tabs Style Example" file="./docs/components/scripts/tabs-4.js"}
+::: BlockVue {title="Tabs Style Variants - Material" file="./docs/components/navigation/js/tabs-4.js"}
 
 ```vue
 <template>
-  <bs-app class="rounded-md-3 bg-white">
-    <bs-appbar class="bg-pink darken-3">
-      <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
-      <bs-appbar-title title="Page Title" class="text-white"></bs-appbar-title>
+  <bs-app class="rounded-3 border">
+    <bs-appbar class="bg-pink-800">
+      <bs-button mode="icon" color="light" icon="menu" flat></bs-button>
+      <bs-appbar-title title="Page Title" class="text-light"></bs-appbar-title>
       <bs-spacer></bs-spacer>
-      <bs-button mode="icon" color="light-grey" icon="more_vert" flat></bs-button>
+      <bs-button mode="icon" color="light" icon="more_vert" flat></bs-button>
     </bs-appbar>
-    <bs-tabs v-model="demoTabs4" variant="material" color="pink darken-3">
-      <bs-tab label="Home" url="#material">
+    <bs-tabs v-model="demoTabs4" variant="material" color="bg-pink-800" class="rounded-0">
+      <bs-tab label="Home">
         {{ homeTab }}
       </bs-tab>
-      <bs-tab label="News" url="#material">
+      <bs-tab label="News">
         {{ profileTab }}
       </bs-tab>
-      <bs-tab label="Videos" url="#material">
+      <bs-tab label="Videos">
         {{ storyTab }}
       </bs-tab>
-      <bs-tab label="Images" url="#material">
+      <bs-tab label="Images">
         {{ loremTab }}
       </bs-tab>
     </bs-tabs>
@@ -201,7 +202,7 @@ Any valid [color variants](/reference/colors) can be applied to the `color` prop
 :::
 
 
-### Modern {class="mt-lg-5"}
+### Modern {#style-variants-modern class="mt-lg-5"}
 
 **Modern style** variant can be enabled, by setting `variant` property value of `<bs-tabs>` 
 to `'modern'` and use the `color` property to have an appropriate tabs color. 
@@ -209,28 +210,28 @@ to `'modern'` and use the `color` property to have an appropriate tabs color.
 Additionally, use the `active-class` property to customize the active Tab color, for example: `active-class="bg-unique active"`. And use the `tab-class` property to customize the inactive 
 Tab color.
 
-::: BlockVue {title="Material Tabs Style Example" file="./docs/components/scripts/tabs-5.js"}
+::: BlockVue {title="Tabs Style Variants - Modern" file="./docs/components/navigation/js/tabs-5.js"}
 
 ```vue
 <template>
-  <bs-app class="rounded-md-3 bg-white">
-    <bs-appbar class="bg-default-color-dark">
-      <bs-button mode="icon" color="light-grey" icon="menu" flat></bs-button>
-      <bs-appbar-title title="Page Title" class="text-white"></bs-appbar-title>
+  <bs-app class="rounded-3 border">
+    <bs-appbar class="bg-indigo">
+      <bs-button mode="icon" color="light" icon="menu" flat></bs-button>
+      <bs-appbar-title title="Page Title" class="text-light"></bs-appbar-title>
       <bs-spacer></bs-spacer>
-      <bs-button mode="icon" color="light-grey" icon="more_vert" flat></bs-button>
+      <bs-button mode="icon" color="light" icon="more_vert" flat></bs-button>
     </bs-appbar>
-    <bs-tabs v-model="demoTabs5" variant="modern" color="default-color-dark">
-      <bs-tab label="Home" icon="home_rounded" url="#modern">
+    <bs-tabs v-model="demoTabs5" variant="modern" color="bg-indigo" class="rounded-0">
+      <bs-tab label="Home" icon="home_rounded">
         {{ homeTab }}
       </bs-tab>
-      <bs-tab label="Profile" icon="person" url="#modern">
+      <bs-tab label="Profile" icon="person">
         {{ profileTab }}
       </bs-tab>
-      <bs-tab label="Story" icon="text_snippet" url="#modern">
+      <bs-tab label="Story" icon="text_snippet">
         {{ storyTab }}
       </bs-tab>
-      <bs-tab label="Gallery" icon="collections" url="#modern">
+      <bs-tab label="Gallery" icon="collections">
         {{ loremTab }}
       </bs-tab>
     </bs-tabs>
@@ -261,33 +262,33 @@ Any valid [color variants](/reference/colors) can be applied to the `color` prop
 The Tabs can be placed at **top**, **bottom**, **left** or **right** side.
 
 
-### Top
+### Top {#tabs-placement-top}
 
 This placement is the **default** tabs position when `tab-position` property is not 
 defined. To explicitly define Tabs placement, sets `tab-position` property value of 
 `<bs-tabs>` to `'top'`. Additionally, you can also set the tabs alignment by setting
 the `alignment` property value.
 
-::: BlockVue {title="Tabs Placement Example" file="./docs/components/scripts/tabs-6.js"}
+::: BlockVue {title="Tabs Placement - Top" file="./docs/components/navigation/js/tabs-6.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
+  <div class="demo-wrapper">
     <bs-card>
       <bs-tabs 
         v-model="demoTabs6" 
         variant="pills" 
-        inner-class="card-header" 
+        inner-class="md-card-header" 
         alignment="center" 
         tab-position="top"
       >
-        <bs-tab label="Home" icon="home" url="#top">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#top">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#top">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -303,37 +304,37 @@ const demoTabs6 = ref(0);
 const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
-
 </script>
+
 ```
 :::
 
 
-### Bottom {class="mt-lg-5"}
+### Bottom {#tabs-placement-bottom class="mt-lg-5"}
 
 To place the tabs at bottom side, sets `tab-position` property value of `<bs-tabs>` 
 to `'bottom'`. Additionally, you can also set the tabs alignment by setting the 
 `alignment` property value.
 
-::: BlockVue {title="Tabs Placement Example" file="./docs/components/scripts/tabs-7.js"}
+::: BlockVue {title="Tabs Placement - Bottom" file="./docs/components/navigation/js/tabs-7.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
+  <div class="demo-wrapper">
     <bs-card>
       <bs-tabs 
         v-model="demoTabs7" 
-        inner-class="card-footer" 
+        inner-class="md-card-footer" 
         alignment="center" 
         tab-position="bottom"
       >
-        <bs-tab label="Home" icon="home" url="#bottom">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#bottom">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#bottom">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -355,31 +356,31 @@ const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they 
 :::
 
 
-### Left {class="mt-lg-5"}
+### Left {#tabs-placement-left class="mt-lg-5"}
 
 To place the tabs at left side, sets `tab-position` property value of `<bs-tabs>` 
 to `'left'`. Additionally, you can also set the tabs alignment by setting the 
 `alignment` property value.
 
-::: BlockVue {title="Tabs Placement Example" file="./docs/components/scripts/tabs-8.js"}
+::: BlockVue {title="Tabs Placement - Left" file="./docs/components/navigation/js/tabs-8.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
-    <bs-card border-off>
+  <div class="demo-wrapper">
+    <bs-card>
       <bs-tabs 
         v-model="demoTabs8" 
         variant="modern"
-        color="unique"
+        color="bg-unique"
         tab-position="left"
       >
-        <bs-tab label="Home" icon="home" url="#left">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#left">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#left">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -395,37 +396,37 @@ const demoTabs8 = ref(0);
 const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
-
 </script>
+
 ```
 :::
 
 
-### Right {class="mt-lg-5"}
+### Right {#tabs-placement-right class="mt-lg-5"}
 
 To place the tabs at left side, sets `tab-position` property value of `<bs-tabs>` 
 to `'right'`. Additionally, you can also set the tabs alignment by setting the 
 `alignment` property value.
 
-::: BlockVue {title="Tabs Placement Example" file="./docs/components/scripts/tabs-9.js"}
+::: BlockVue {title="Tabs Placement - Right" file="./docs/components/navigation/js/tabs-9.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
-    <bs-card border-off>
+  <div class="demo-wrapper">
+    <bs-card>
       <bs-tabs 
         v-model="demoTabs9" 
         variant="modern"
-        color="default-color"
+        color="bg-unique"
         tab-position="right"
       >
-        <bs-tab label="Home" icon="home" url="#right">
+        <bs-tab label="Home" icon="home">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#right">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#right">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -441,15 +442,15 @@ const demoTabs9 = ref(0);
 const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
-
 </script>
+
 ```
 :::
 
 
 ## Icons
 
-### Position And Size
+### Position And Size {#icons-position-and-size}
 
 To change the icon position use `icon-position` property and use `icon-size` to change
 the icon size. If you set this property, each tab item will have the same icon position and size.
@@ -458,26 +459,26 @@ Additionally, you can sets `icon-variant` property to `outlined` (_default_), `r
 `filled`, `outlined_filled`, `rounded_filled`, or `sharp_filled` to set the icon 
 style variant. See [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) for details. 
 
-::: BlockVue {title="Tabs Icons Example" file="./docs/components/scripts/tabs-10.js"}
+::: BlockVue {title="Tabs Icons" file="./docs/components/navigation/js/tabs-10.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
-    <bs-card shadow>
+  <div class="demo-wrapper">
+    <bs-card>
       <bs-tabs 
         v-model="demoTabs10" 
         variant="material" 
-        color="default-color" 
+        color="bg-default-color" 
         icon-position="top" 
         icon-size="36"
       >
-        <bs-tab label="Home" icon="home_rounded" url="#position-and-size">
+        <bs-tab label="Home" icon="home_rounded">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab label="Profile" icon="person" url="#position-and-size">
+        <bs-tab label="Profile" icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab label="Story" icon="text_snippet" url="#position-and-size">
+        <bs-tab label="Story" icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -493,37 +494,37 @@ const demoTabs10 = ref(0);
 const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
-
 </script>
+
 ```
 :::
 
 
-### Icon Only {class="mt-lg-5"}
+### Icon Only {#icons-icon-only class="mt-lg-5"}
 
-Do not sets the `label` property of `<bs-tab>` and sets the `icon` property value to display 
-only the icon.
+Do not set the `label` property of `<bs-tab>` and set the value of `icon` property 
+to the desired icon name to display only the icon.
 
-::: BlockVue {title="Tabs Icons Example" file="./docs/components/scripts/tabs-11.js"}
+::: BlockVue {title="Tabs Icons" file="./docs/components/navigation/js/tabs-11.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">
-    <bs-card shadow>
+  <div class="demo-wrapper">
+    <bs-card>
       <bs-tabs 
         v-model="demoTabs11" 
         variant="material" 
         alignment="center"
-        color="default-color" 
+        color="bg-default-color" 
         icon-size="36"
       >
-        <bs-tab icon="home_rounded" url="#icon-only">
+        <bs-tab icon="home_rounded">
           {{ homeTab }}
         </bs-tab>
-        <bs-tab icon="person" url="#icon-only">
+        <bs-tab icon="person">
           {{ profileTab }}
         </bs-tab>
-        <bs-tab icon="text_snippet" url="#icon-only">
+        <bs-tab icon="text_snippet">
           {{ storyTab }}
         </bs-tab>
       </bs-tabs>
@@ -539,146 +540,205 @@ const demoTabs11 = ref(0);
 const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
 const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
 const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
-
 </script>
+
+```
+:::
+
+
+## Using Extra Slot
+
+Use the `append-header` slot to add additional components to the top right side of the tab.
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+::: BlockVue {title="Tabs Extra Slot" file="./docs/components/navigation/js/tabs-12.js"}
+
+```vue
+<template>
+  <div class="demo-wrapper">
+    <bs-card>
+      <bs-tabs 
+        v-model="demoTabs12" 
+        variant="pills" 
+        inner-class="md-card-header" 
+      >
+        <bs-tab icon="home_rounded" label="Home">
+          {{ homeTab }}
+        </bs-tab>
+        <bs-tab icon="person" label="Profile">
+          {{ profileTab }}
+        </bs-tab>
+        <bs-tab icon="text_snippet" label="Story">
+          {{ storyTab }}
+        </bs-tab>
+
+        <template #append-header>
+          <bs-button class="self-center" color="secondary" flat icon="add" mode="icon"></bs-button>
+        </template>
+      </bs-tabs>
+    </bs-card>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const demoTabs12 = ref(0);
+
+const homeTab = "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.";
+const profileTab = "Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr.";
+const storyTab = "Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog.";
+</script>
+
 ```
 :::
 
 
 ## CSS Variables
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on `.md-tabs` 
+for better customization.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ```scss
---md-tabs-content-padding: 1.25rem;
---md-tabs-item-padding: 0.75rem 1.25rem;
---md-tabs-item-spacing: 0.375rem;
---md-tabs-item-font-weight: 500;
---md-tabs-placement-top-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15),0px 2px 2px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
---md-tabs-placement-bottom-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2),0px -1px 2px rgba(0, 0, 0, 0.14),0px -3px 1px -2px rgba(0, 0, 0, 0.12);
---md-tabs-placement-left-shadow: 1px 0px 5px rgba(0, 0, 0, 0.2),2px 0px 2px rgba(0, 0, 0, 0.14),3px 0px 1px -2px rgba(0, 0, 0, 0.12);
---md-tabs-placement-right-shadow: -1px 0px 5px rgba(0, 0, 0, 0.2),-2px 0px 2px rgba(0, 0, 0, 0.14),-3px 0px 1px -2px rgba(0, 0, 0, 0.12);
+.md-tabs {
+  --md-tab-content-background: inherit;
+  --md-tab-content-padding: #{vars.$padding-md + 0.25};
+  --md-tab-placement-top-shadow: #{vars.$tabs-placement-top-shadow};
+  --md-tab-placement-bottom-shadow: #{vars.$tabs-placement-bottom-shadow};
+  --md-tab-placement-left-shadow: #{vars.$tabs-placement-left-shadow};
+  --md-tab-placement-right-shadow: #{vars.$tabs-placement-right-shadow};
+  --md-tab-spacing: #{vars.$tabs-spacing};
 
+  // Material and Modern style variant
+  --md-tab-item-padding: #{vars.$tabs-item-padding};
+  --md-tab-item-color: #{color.change(colors.$white, $alpha: 0.6)};
+  --md-tab-item-active-color: #{colors.$white};
+  --md-tab-item-hover-color: #{color.change(colors.$white, $alpha: 0.8)};
+  --md-tab-item-disabled-color: #{color.change(colors.$white, $alpha: 0.3)};
+  --md-tab-item-font-weight: var(--font-weight-medium);
+  --md-tab-item-font-size: 0.95rem;
 
-// Bootstrap Tabs style variant
---bs-nav-tabs-border-color: #dee2e6;
---bs-nav-tabs-border-radius: 0.375rem;
---bs-nav-tabs-border-width: 1px;
---bs-nav-tabs-link-active-color: #495057;
---bs-nav-tabs-link-active-bg: #fff;
---bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
---bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
+  // Bootstrap Tabs style variant
+  --md-tab-tabs-background: var(--md-card-cap-bg, #{vars.$card-cap-bg});
+  --md-tab-tabs-border-radius: var(--md-radius, #{vars.$radius-md});
+  --md-tab-tabs-border-color: var(--md-card-border-color, #{vars.$card-border-color});
+  --md-tab-tabs-border-width: var(--md-card-border-width, thin);
+  --md-tab-tabs-active-bg: #{colors.$white};
+  --md-tab-tabs-active-border-color: #{colors.$gray-300};
+  --md-tab-tabs-hover-border-color: oklch(0.92 0 0);
+  --md-tab-tabs-color: #{helper.to-oklch(color.mix(colors.$mdb-default-color, color.change(colors.$gray-800, $alpha: 0.8), 30%, oklch))};
+  --md-tab-tabs-hover-color: var(--md-field-active-indicator);
+  --md-tab-tabs-margin-x: var(--md-card-cap-padding-x, #{vars.$card-cap-padding-x});
+  --md-tab-tabs-margin-y: var(--md-card-cap-padding-y, #{vars.$card-cap-padding-y});
 
---md-tabs-nav-active-border-color: #dee2e6;
---md-tabs-nav-margin-x: 1rem;
---md-tabs-nav-margin-y: 0.5rem;
+  // Bootstrap Pill style variant
+  --md-tab-pills-background: var(--md-card-cap-bg, #{vars.$card-cap-bg});
+  --md-tab-pills-border-radius: var(--md-radius, #{vars.$radius-md});
+  --md-tab-pills-border-color: var(--md-card-border-color, #{vars.$card-border-color});
+  --md-tab-pills-border-width: var(--md-card-border-width, thin);
+  --md-tab-pills-color: #{helper.to-oklch(color.mix(colors.$mdb-default-color, color.change(colors.$gray-800, $alpha: 0.8), 30%, oklch))};
+  --md-tab-pills-active-bg: var(--md-field-active-indicator);
+  --md-tab-pills-active-color: #{colors.$white};
+  --md-tab-pills-hover-color: var(--md-field-active-indicator);
+  --md-tab-pills-margin: #{vars.$tabs-pills-margin};
 
-// Bootstrap Pill style variant
---bs-nav-pills-border-radius: 0.375rem;
---bs-nav-pills-link-active-bg: rgb(var(--md-field-primary-indicator-rgb));
---bs-nav-pills-link-active-color: #fff;
+  // Material style variant
+  --md-tab-material-margin-start: #{vars.$padding-md};
+  --md-tab-material-margin-end: #{vars.$padding-md};
+  --md-tab-material-padding: #{vars.$tabs-material-padding};
+  --md-tab-material-indicator-active-color: #{colors.$white};
+  --md-tab-material-indicator-border: #{vars.$tabs-material-indicator-border};
 
-// Bootstrap Tabs and Pill style variant
---bs-nav-link-color: rgba(69, 64, 98, 0.86);
---bs-nav-link-hover-color: rgb(var(--md-field-primary-indicator-rgb))
-
-// Material style variant
---md-tabs-material-padding: 1.125rem 1.5rem 1rem 1.5rem;
---md-tabs-material-margin-start: 1rem;
---md-tabs-material-margin-end: 1rem;
---md-tabs-material-indicator-active-color: #fff;
---md-tabs-material-indicator-border: 0.2rem;
-
-// Modern style variant
---md-tabs-modern-border-radius: 50rem;
---md-tabs-modern-padding: 0.625rem 1.25rem;
---md-tabs-modern-active-bgcolor: rgba(0, 0, 0, 0.2);
-
-// Material and Modern style variant
---md-tabs-item-color: rgba(255, 255, 255, 0.6);
---md-tabs-item-active-color: #fff;
---md-tabs-item-hover-color: rgba(255, 255, 255, 0.8);
---md-tabs-item-disabled-color: rgba(255, 255, 255, 0.3);
+  // Modern style variant
+  --md-tab-modern-border-radius: var(--md-radius-pill);
+  --md-tab-modern-active-bg: #{color.change(colors.$black, $alpha: 0.2)};
+  --md-tab-modern-margin-horizontal: #{vars.$tabs-modern-margin-horizontal};
+  --md-tab-modern-margin-vertical: #{vars.$tabs-modern-margin-vertical};
+}
 
 ```
 
 
 ## API Reference
 
-### BsTabs {#api-tabs}
+### BsTabs {#api-reference-tabs}
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-tabs">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property      | Type     | Default    | Description |
 |---------------|----------|------------|-------------|
 | active-class  | `String` | `'active'` | Optional css class name for active Tab item. |
-| alignment     | `String` | `'left'`   | Tabs alignment. Valid values: `left` <span class="text-muted fst-italic">(deprecated)</span>, `right` <span class="text-muted fst-italic">(deprecated)</span>, `start`, `end`, `center`, `justified`. <BsBadge color="info">v2.0.0</BsBadge> |
+| alignment     | `String` | `'left'`   | Tabs alignment. Valid values: `left` <span class="text-muted fst-italic">(deprecated)</span>, `right` <span class="text-muted fst-italic">(deprecated)</span>, `start`, `end`, `center`, `justified`. <MdBadge color="info">v2.0.0</MdBadge> |
 | color         | `String` |  | The tabs color style for tabs variant: `modern` and `material`. Any [Color Variants](/reference/colors) can be used. |
 | content-class | `String` |  | Optional css class name for Tab content. |
 | content-transition | `String` | `'fade'` | Tab content display animation transition. Valid values: `fade`, `slide-fade`, `slide-fade-reverse`, `popover`. |
 | flex          | `Boolean` | `false`  | Create Tabs with flex styles. Only valid for `tabs` or `pills` variant. |
 | icon-position | `String`  | `'left'` | Tab item's icon position. Valid values: `left`, `right`, `top`, `bottom`. |
-| icon-size     | `Number`  |  | Tab item icon size. <BsBadge color="info">v2.0.0</BsBadge> |
+| icon-size     | `Number`  |  | Tab item icon size. <MdBadge color="info">v2.0.0</MdBadge> |
 | inner-class   | `String`  |  | Optional css class name for tabs item's container. |
 | tab-class     | `String`  |  | Optional css class name for tab items. |  
 | tab-position  | `String`  | `'top'`  | Tabs position. Valid values: `left`, `right`, `top`, `bottom`. |
-| model-value <Badge type="tip">v-model</Badge> | `Number` |  | Monitored by `v-model` to maintain active tab index. <BsBadge color="info">v2.0.0</BsBadge> |
-| variant       | `String`  | `'tabs'` | Tabs style variant. Valid values: `tabs`, `pills`, `material`, `modern`. |
+| model-value <Badge type="tip">v-model</Badge> | `Number` |  | Monitored by `v-model` to maintain active tab index. <MdBadge color="info">v2.0.0</MdBadge> |
+| variant       | `String`  | `'tabs'` | Tabs style variant. Built-in values are: `tabs`, `pills`, `material`, `modern`. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-tabs">
+  <BsTab label="Events">
     <div class="doc-table-responsive doc-table-3cols">
 
 | Name    | Arguments     | Description |
 |---------|---------------|-------------|
 | change  | ( newTab:`ComponentInternalInstance`, oldTab:`ComponentInternalInstance`, newIndex:`Number`, oldIndex:`Number`) | Fired when active tab is changed. |
-| update:model-value | ( value:`Number`) | Fired when this component's `model-value` is updated. <BsBadge color="info">v2.0.0</BsBadge> |
+| update:model-value | ( value:`Number`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-tabs">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
 |---------|--------------|
 | default | The outlet slot used to place the tab item component. |
+| append-header | The outlet slot used to place the additional component. <MdBadge color="info">v2.2.0</MdBadge> |
 
 </div>
   </BsTab>
 </BsTabs>
 
 
-### BsTab {#api-tab-item class="mt-lg-5"}
+### BsTab {#api-reference-tab-item class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-tab-item">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property     | Type      | Default    | Description |
 |--------------|-----------|------------|-------------|
 | active-class | `String`  |  | Optional css class name for active Tab item which is used to overrides the `active-class` property of `<bs-tabs>`. |
 | aria-label   | `String`  |  | Generate `aria-labelledby` attribute. |
-| disabled     | `Boolean` | `false` | The Tab state, enabled or disabled. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon         | `String`  |  | <div style="min-width:425px"> The icon to display inside Tab item component. <BsBadge color="info">Updated on v2.1.0</BsBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
-| icon-flip    | `String`  |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon-rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon-pulse   | `Boolean` | `false` | Apply **_pulse_** animation to the icon. <BsBadge color="info">v2.0.0</BsBadge> |
-| icon-spin    | `Boolean` | `false` | Apply **_spin_** animation to the icon. <BsBadge color="info">v2.0.0</BsBadge> | 
-| icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <BsBadge color="info">v2.1.0</BsBadge> |
+| disabled     | `Boolean` | `false` | The Tab state, enabled or disabled. <MdBadge color="info">v2.0.0</MdBadge> |
+| icon         | `String`  |  | <div style="min-width:425px"> The icon to display inside Tab item component. <MdBadge color="info">Updated on v2.1.0</MdBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
+| icon-flip    | `String`  |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <MdBadge color="info">v2.0.0</MdBadge> |
+| icon-rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. <MdBadge color="info">v2.0.0</MdBadge> |
+| icon-pulse   | `Boolean` | `false` | Apply **_pulse_** animation to the icon. <MdBadge color="info">v2.0.0</MdBadge> |
+| icon-spin    | `Boolean` | `false` | Apply **_spin_** animation to the icon. <MdBadge color="info">v2.0.0</MdBadge> | 
+| icon-variant | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">v2.1.0</MdBadge> |
 | id           | `String`  |  | The Tab `ID` attribute. This property value is auto generates. |
 | label        | `String`  |  | The Tab label. |
-| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
 | path        | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path-name   | `String`  |  | The path name for the navigation target. <BsBadge color="info">v2.0.11</BsBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path         | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
-| url          | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
+| path-name   | `String`  |  | The path name for the navigation target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| path        | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
+| url         | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
 
 </div>
   </BsTab>
-  <BsTab label="Slots" url="#api-tab-item">
+  <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
 | Name    | Description  |
@@ -711,4 +771,5 @@ const demoTabs8 = ref(0);
 const demoTabs9 = ref(0);
 const demoTabs10 = ref(0);
 const demoTabs11 = ref(0);
+const demoTabs12 = ref(0);
 </script>

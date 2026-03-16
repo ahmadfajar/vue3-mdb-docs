@@ -90,7 +90,7 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 
 ### BsApp {#api-reference-app}
 
-<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -114,7 +114,7 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 
 ### BsContainer {#api-reference-container class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -147,7 +147,7 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 
 ### BsContent {#api-reference-content class="mt-lg-5"}
 
-<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 

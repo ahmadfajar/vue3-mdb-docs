@@ -263,7 +263,7 @@ use `<bs-avatar>` inside **BsListTile** component.
           <bs-list-tile-title>Avatar using external image</bs-list-tile-title>
         </bs-list-tile-content>
         <bs-list-tile-action center>
-          <bs-badge type="pill" color="secondary">22</bs-badge>
+          <bs-badge type="pill" color="secondary" class="dark:bg-secondary!">22</bs-badge>
         </bs-list-tile-action>
       </bs-list-tile>
       <bs-divider></bs-divider>
@@ -275,7 +275,7 @@ use `<bs-avatar>` inside **BsListTile** component.
           <bs-list-tile-title>Avatar using Material Icon</bs-list-tile-title>
         </bs-list-tile-content>
         <bs-list-tile-action center>
-          <bs-badge type="pill" color="secondary">8</bs-badge>
+          <bs-badge type="pill" color="secondary" class="dark:bg-secondary!">8</bs-badge>
         </bs-list-tile-action>
       </bs-list-tile>
       <bs-divider></bs-divider>
@@ -287,7 +287,7 @@ use `<bs-avatar>` inside **BsListTile** component.
           <bs-list-tile-title>This avatar created using ShortText</bs-list-tile-title>
         </bs-list-tile-content>
         <bs-list-tile-action center>
-          <bs-badge type="pill" color="secondary">5</bs-badge>
+          <bs-badge type="pill" color="secondary" class="dark:bg-secondary!">5</bs-badge>
         </bs-list-tile-action>
       </bs-list-tile>
     </bs-list-view>

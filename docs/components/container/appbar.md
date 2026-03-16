@@ -106,7 +106,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ### BsAppbar {#api-reference-appbar}
 
-<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -146,7 +146,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 Optional component to create a component's container inside `<bs-appbar>` which 
 may contains buttons, menus and others.
 
-<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Slots">
     <div class="doc-table-responsive doc-table-2cols">
 
@@ -162,7 +162,7 @@ may contains buttons, menus and others.
 
 Lightweight component to put page title on **Appbar**.
 
-<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs3active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 

@@ -1,29 +1,27 @@
 ---
 outline: [2, 3] 
-description: A component that indicate the current page's location within a navigational hierarchy. 
+description: Breadcrumb is a component which is used indicate the current page's location within a navigational hierarchy. 
 ---
 
 # Breadcrumb
 
 
 ::: lead
-**BsBreadcrumb** is a component that indicate the current page's location within 
+**BsBreadcrumb** is a component which is used indicate the current page's location within 
 a navigational hierarchy.
 :::
 
-<SmallNote color="teal">Added since v2.1.0</SmallNote>
+<SmallNote color="teal">Update in v2.2.0</SmallNote>
 
 ## Overview 
 
-**BsBreadcrumb** is built from [Bootstrap](https://getbootstrap.com/docs/5.2/components/breadcrumb/)
-breadcrumb's component. Although it is a simple breadcrumb, it can be customized
-with many options. 
+**BsBreadcrumb** is simple and lightweight component and can be customized with many options. 
 
-::: BlockVue {title="Breadcrumb Example" file="./docs/components/scripts/breadcrumb-1.js" }
+::: BlockVue {title="Breadcrumb Overview" file="./docs/components/navigation/js/breadcrumb-1.js" }
 
 ```vue
 <template>
-  <div class="rounded-3 py-3 bg-white w-100">
+  <div class="demo-wrapper w-full">
     <bs-breadcrumb :items="items1"></bs-breadcrumb>
   </div>
 </template>
@@ -35,9 +33,15 @@ const items1 = [
   { label: 'Breadcrumb', href: '#' },
 ];
 </script>
+
 ```
 :::
 
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+**BsBreadcrumb** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/breadcrumb/) 
+classes. However, since v2.2.0, **BsBreadcrumb** no longer uses Bootstrap CSS. This improvement 
+allows **BsBreadcrumb** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+:::
 
 ## Icons
 
@@ -50,16 +54,16 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 
 Additionally you can use slot `icon` to display a custom icon.
 
-::: BlockVue {title="Breadcrumb Icon Example" file="./docs/components/scripts/breadcrumb-2.js"}
+::: BlockVue {title="Breadcrumb Icon" file="./docs/components/navigation/js/breadcrumb-2.js"}
 
 ```vue
 <template>
-  <div class="rounded-3 py-3 bg-white w-100">
+  <div class="demo-wrapper w-full">
     <bs-breadcrumb :items="items2" prepend-icon="home_rounded"></bs-breadcrumb>
     <bs-breadcrumb :items="items2" prepend-icon="home_sharp_filled" icon-size="28"></bs-breadcrumb>
     <bs-breadcrumb :items="items2">
       <template #icon>
-        <bs-icon-fontawesome icon="house-user" variant="regular"></bs-icon-fontawesome>
+        <bs-fontawesome-icon icon="house" variant="regular"></bs-fontawesome-icon>
       </template>
     </bs-breadcrumb>
   </div>
@@ -72,6 +76,8 @@ const items2 = [
   { label: 'Breadcrumb', href: '#' },
 ];
 </script>
+
+
 ```
 :::
 
@@ -81,11 +87,11 @@ const items2 = [
 Separator between label can be changed using property `separator`. Use a simple 
 **single character** or **embedded SVG icon** to specify the value of the `separator` property.
 
-::: BlockVue {title="Breadcrumb Separators Example" file="./docs/components/scripts/breadcrumb-3.js"}
+::: BlockVue {title="Breadcrumb Separators" file="./docs/components/navigation/js/breadcrumb-3.js"}
 
 ```vue
 <template>
-  <div class="rounded-3 py-3 bg-white w-100">
+  <div class="demo-wrapper w-full">
     <bs-breadcrumb :items="items3" prepend-icon="home_rounded" separator=">"></bs-breadcrumb>
     <bs-breadcrumb :items="items3" prepend-icon="home_sharp" :separator="svg"></bs-breadcrumb>
   </div>
@@ -105,23 +111,33 @@ const items3 = [
 
 ## CSS Variables
 
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-breadcrumb` for better customization.
+
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 ```scss
---md-breadcrumb-container-padding-x: 1.5rem;
---md-breadcrumb-container-padding-y: 0.75rem;
---md-breadcrumb-separator-color: var(--bs-gray-600);
---md-breadcrumb-icon-color: inherit;
---md-breadcrumb-font-size: inherit;
---md-breadcrumb-label-color: inherit;
---md-breadcrumb-label-active-color: var(--bs-gray-700);
---md-breadcrumb-label-hover-color: var(--bs-link-color);
---md-breadcrumb-line-height: 1.25;
+.md-breadcrumb {
+  --md-breadcrumb-padding-x: #{vars.$breadcrumb-padding-x};
+  --md-breadcrumb-padding-y: #{vars.$breadcrumb-padding-y};
+  --md-breadcrumb-icon-color: inherit;
+  --md-breadcrumb-font-size: inherit;
+  --md-breadcrumb-font-weight: var(--font-weight-medium);
+  --md-breadcrumb-line-height: #{vars.$breadcrumb-line-height};
+
+  --md-breadcrumb-item-color: var(--foreground-subtle);
+  --md-breadcrumb-item-active-color: inherit;
+  --md-breadcrumb-item-hover-color: var(--link-color, #{colors.$primary-color});
+  --md-breadcrumb-item-separator-color: var(--foreground-subtle-tertiary);
+  --md-breadcrumb-item-spacing: #{vars.$breadcrumb-item-spacing};
+}
 
 ```
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property     | Type      | Default  | Description |
@@ -137,7 +153,7 @@ const items3 = [
   </BsTab>
 </BsTabs>
 
-### TBreadcrumb {#api-breadcrumb class="mt-lg-5"}
+### TBreadcrumb {#api-reference-breadcrumb class="mt-lg-5"}
 
 The data object to build breadcrumb data source has the following properties:
 
@@ -147,7 +163,7 @@ The data object to build breadcrumb data source has the following properties:
 | Property | Type      | Description |
 |----------|-----------|-------------|
 | label <Badge type="danger">required</Badge> | `String` | The breadcrumb item label. |
-| href     | `String>` | Absolute or relative URL if not using [vue-router](https://router.vuejs.org/). |
+| href     | `String` | Absolute or relative URL if not using [vue-router](https://router.vuejs.org/). |
 | location | `RouterLinkProps` | The navigation location target. <br /> <br /> This must be an object that satifies the properties of `<RouterLink>` component when using [vue-router](https://router.vuejs.org/). <br /> <br /> This is a shortcut to create a `<RouterLink>` as part of item's label. |
 | path     | `String` | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` as part of item's label. See [vue-router](https://router.vuejs.org/) for more information. |
 | pathName | `String` | The path name for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` as part of item's label. See [vue-router](https://router.vuejs.org/) for more information. |

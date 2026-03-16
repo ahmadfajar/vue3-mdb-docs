@@ -273,7 +273,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ### BsCheckbox {#api-reference-checkbox}
 
-<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
@@ -315,7 +315,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ### BsCheckboxGroup {#api-reference-checkbox-group class="mt-lg-5"}
 
-<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference">
+<BsTabs v-model="tabs2active" variant="md3" class="doc-api-reference" style="margin-top: 2rem">
   <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 

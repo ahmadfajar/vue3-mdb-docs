@@ -144,6 +144,10 @@
     }
   }
 
+  li.md-breadcrumb-item + li.md-breadcrumb-item {
+    margin-top: 0;
+  }
+
   .md-datepicker {
     .md-datepicker-body {
       table {
@@ -164,6 +168,15 @@
     .md-list-tile {
       --md-tile-title-color: oklch(98.894% 0.00531 16.082);
       --md-tile-subtitle-color: oklch(86.378% 0.0001 271.152);
+    }
+
+    .md-list-nav {
+      --md-nav-item-color: oklch(98.894% 0.00531 16.082);
+      --md-nav-item-icon-color: oklch(78.261% 0.00009 271.152);
+      --md-nav-item-active-bg: oklch(30.919% 0.00004 271.152 / 0.5);
+      --md-nav-item-active-color: oklch(93.957% 0.08188 102.597);
+      --md-nav-item-active-icon-color: oklch(98.894% 0.00531 16.082);
+      --md-nav-item-hover-bg: oklch(30.919% 0.00004 271.152 / 0.25);
     }
   }
 }

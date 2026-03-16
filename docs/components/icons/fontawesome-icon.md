@@ -208,7 +208,7 @@ property to rotate the icon, but do not use both property together.
 | spin     | `Boolean`| `false` | Apply **spin** animation. |
 | svg-class | `String`|  | Apply custom css class to the svg element. <MdBadge color="info">v2.2.0</MdBadge> |
 | variant  | `String` | `'solid'` | Icon style variant, valid values are: `regular`, `solid`, `brands`. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
-| version  | `String` | `'7.2.0'` | Font Awesome vendor version. <MdBadge color="info">Updated in v2.2.1</MdBadge> |
+| version  | `String` | `'7.2.0'` | Font Awesome vendor version. <MdBadge color="info">Updated in v2.2.1</MdBadge> <div class="pt-3">Valid value are: `6.5.0`, `6.7.2` and `7.2.0`</div> |
 | width    | `Number` | `24`      | The icon's width in pixel. |
 
 </div>

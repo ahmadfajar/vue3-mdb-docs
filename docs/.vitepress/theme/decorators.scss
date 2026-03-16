@@ -22,6 +22,12 @@
   }
 }
 
+.dark\:bg-secondary\! {
+  &:is(.dark *) {
+    background-color: oklch(0.37 0.01 237.91) !important;
+  }
+}
+
 .dark\:bg-gray-900\/70 {
   &:is(.dark *) {
     background-color: oklch(0.26 0.02 238.11 / 0.7);
