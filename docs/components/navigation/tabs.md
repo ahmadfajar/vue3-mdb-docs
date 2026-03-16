@@ -689,12 +689,12 @@ for better customization.
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments     | Description |
 |---------|---------------|-------------|
-| change  | ( newTab:`ComponentInternalInstance`, oldTab:`ComponentInternalInstance`, newIndex:`Number`, oldIndex:`Number`) | Fired when active tab is changed. |
-| update:model-value | ( value:`Number`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| change  | (newTab:`ComponentInternalInstance`, oldTab:`ComponentInternalInstance`, newIndex:`Number`, oldIndex:`Number`) | Fired when active tab is changed. |
+| update:model-value | (value:`Number`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
@@ -722,7 +722,7 @@ for better customization.
 | active-class | `String`  |  | Optional css class name for active Tab item which is used to overrides the `active-class` property of `<bs-tabs>`. |
 | aria-label   | `String`  |  | Generate `aria-labelledby` attribute. |
 | disabled     | `Boolean` | `false` | The Tab state, enabled or disabled. <MdBadge color="info">v2.0.0</MdBadge> |
-| icon         | `String`  |  | <div style="min-width:425px"> The icon to display inside Tab item component. <MdBadge color="info">Updated on v2.1.0</MdBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
+| icon         | `String`  |  | <div style="min-width:425px"> The icon to display inside Tab item component. <MdBadge color="info">Updated in v2.1.0</MdBadge> <p>Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</p> Suffix will take precedence over `icon-variant` property. </div> |
 | icon-flip    | `String`  |  | Flip the icon, valid values are: `horizontal`, `vertical`, `both`. <MdBadge color="info">v2.0.0</MdBadge> |
 | icon-rotation | `Number` |  | Rotate the icon, valid values are: `90`, `180`, `270`. <MdBadge color="info">v2.0.0</MdBadge> |
 | icon-pulse   | `Boolean` | `false` | Apply **_pulse_** animation to the icon. <MdBadge color="info">v2.0.0</MdBadge> |
@@ -730,9 +730,9 @@ for better customization.
 | icon-variant | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">v2.1.0</MdBadge> |
 | id           | `String`  |  | The Tab `ID` attribute. This property value is auto generates. |
 | label        | `String`  |  | The Tab label. |
-| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path        | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path-name   | `String`  |  | The path name for the navigation target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <MdBadge color="info">v2.0.11</MdBadge> <div class="pt-3">The value must be an object that satisfies the `to` property of the `<RouterLink>` component.</div><div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information.</div> |
+| path        | `String`  |  | The route path for the navigation target. <div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information.</div> |
+| path-name   | `String`  |  | The path name for the navigation target. <MdBadge color="info">v2.0.11</MdBadge> <div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information.</div> |
 | path        | `String`  |  | `<router-link>` property, the route path for the navigation target. See [vue-router](https://router.vuejs.org/) for more information. |
 | url         | `String`  |  | Absolute or relative URL for the navigation target, if doesn't use [vue-router](https://router.vuejs.org/). |
 

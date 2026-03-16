@@ -7,8 +7,9 @@ const app = createVueMdb({
     const galleryItems3 = [
       {
         thumbnail: 'https://unsplash.it/200.jpg?image=259',
-        imageSrc: 'https://unsplash.it/1200/768.jpg?image=259',
+        sourceUrl: 'https://unsplash.it/1200/768.jpg?image=259',
         title: 'Your image title',
+        type: 'image',
       },
     ];
 

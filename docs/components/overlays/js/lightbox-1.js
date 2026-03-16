@@ -8,23 +8,27 @@ const app = createVueMdb({
     const galleryItems1 = [
       {
         thumbnail: 'https://unsplash.it/200.jpg?image=251',
-        imageSrc: 'https://unsplash.it/1200/768.jpg?image=251',
+        sourceUrl: 'https://unsplash.it/1200/768.jpg?image=251',
         title: 'First image title',
+        type: 'image',
       },
       {
         thumbnail: 'https://unsplash.it/200.jpg?image=252',
-        imageSrc: 'https://unsplash.it/1200/768.jpg?image=252',
+        sourceUrl: 'https://unsplash.it/1200/768.jpg?image=252',
         title: 'Second image title',
+        type: 'image',
       },
       {
         thumbnail: 'https://unsplash.it/200.jpg?image=253',
-        imageSrc: 'https://unsplash.it/1200/768.jpg?image=253',
+        sourceUrl: 'https://unsplash.it/1200/768.jpg?image=253',
         title: 'Third image title',
+        type: 'image',
       },
       {
         thumbnail: 'https://unsplash.it/200.jpg?image=254',
-        imageSrc: 'https://unsplash.it/1200/768.jpg?image=254',
+        sourceUrl: 'https://unsplash.it/1200/768.jpg?image=254',
         title: 'Fourth image title',
+        type: 'image',
       },
     ];
 

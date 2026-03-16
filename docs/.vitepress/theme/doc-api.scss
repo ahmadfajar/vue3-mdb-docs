@@ -191,6 +191,7 @@
           > code {
             --vp-code-color: var(--doc-text-code-dt);
             background-color: transparent;
+            padding: 3px;
           }
         }
       }
@@ -204,7 +205,28 @@
           > code {
             --vp-code-color: var(--doc-text-code-dt);
             background-color: transparent;
+            padding: 3px;
           }
+        }
+      }
+    }
+  }
+
+  .table\:font-mono\:col-1 {
+    > table {
+      td {
+        &:first-child {
+          font-family: var(--font-monospace);
+        }
+      }
+    }
+  }
+
+  .table\:font-mono\:col-2 {
+    > table {
+      td {
+        &:nth-child(2) {
+          font-family: var(--font-monospace);
         }
       }
     }

@@ -630,12 +630,12 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| change  | ( value:`IListItem`, oldValue: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <MdBadge color="info">v2.0.0</MdBadge> |
-| update:model-value | ( value:`IListItem`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| change  | (value:`IListItem`, oldValue: `IListItem`) | Fired immediately when this component's mutate its `model-value`. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`IListItem`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
@@ -702,9 +702,9 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 | id         | `String`  |  | Sets the component `ID`. This property value is auto generate. <MdBadge color="info">v2.0.0</MdBadge> |
 | indent     | `Number`  |  | Text indentation from left side. |
 | label <Badge type="danger">required</Badge> | `String` |  | The text label to display. |
-| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> The value must be an object that satisfies the `to` property of the `<RouterLink>` component. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path        | `String`  |  | The route path for the navigation target. <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
-| path-name   | `String`  |  | The path name for the navigation target. <MdBadge color="info">v2.0.11</MdBadge> <br /> <br /> This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. |
+| location    | `RouteLocationAsRelativeGeneric` |  | The navigation location target. <MdBadge color="info">v2.0.11</MdBadge> <div class="pt-3">The value must be an object that satisfies the `to` property of the `<RouterLink>` component.</div><div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information.</div> |
+| path        | `String`  |  | The route path for the navigation target. <div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. </div> |
+| path-name   | `String`  |  | The path name for the navigation target. <MdBadge color="info">v2.0.11</MdBadge> <div class="pt-3">This is a shortcut to create a `<RouterLink>` inside the component. See [vue-router](https://router.vuejs.org/) for more information. </div> |
 | pill-off    | `Boolean` | `false` | Remove _rounded pill_ style that have been applied via _BsListView_ to this _BsListNavItem_. <MdBadge color="info">v2.0.0</MdBadge> |
 | ripple-off  | `Boolean` | `false` | Disabled ripple effect. |
 | rounded-off | `Boolean` | `false` | Remove _rounded_ style that have been applied via _BsListView_ to this _BsListNavItem_. <MdBadge color="info">v2.0.0</MdBadge> |
@@ -713,12 +713,12 @@ use 'vue-mdbootstrap/scss/mixins/listview';
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
-| click  | ( evt:`Event`) | Fired when a non-disabled _ListNavItem_ is clicked.  |
-| update:active | ( value:`Boolean`) | Fired when this component's state is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| click  | (evt:`Event`) | Fired when a non-disabled _ListNavItem_ is clicked.  |
+| update:active | (value:`Boolean`) | Fired when this component's state is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
