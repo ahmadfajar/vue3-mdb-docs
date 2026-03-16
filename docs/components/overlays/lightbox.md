@@ -415,8 +415,8 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | toolbar          | `TLightboxToolbarItems` |  | Configure the toolbar buttons. Defaults value: `{'download': false, 'zoom': true, 'rotate': true, 'info': true, 'delete': true, 'menubar': false, 'close': true}` |
 | transition       | `String` | `'slide-top-bottom'` | Transition animation name when showing the active image. Available transitions are: `fade`, `scale`, `slide-fade`, `slide-fade-reverse`, `slide-bottom-top`, `slide-top-bottom`, `slide-left-right`, `slide-right-left`. |
 | transition-mode  | `String` |  | Controls the timing sequence of leaving/entering transitions. Available modes are `out-in` and `in-out`. |
-| viewer-class     | `String`&#124;`String[]` |  | Additional css class name for active image or video. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
-| viewer-styles    | `Object` |  | Additional css styles for active image or video. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
+| viewer-class     | `String`&#124;`String[]` |  | Additional css class name for active image or video. <MdBadge color="info">v2.2.0</MdBadge> |
+| viewer-styles    | `Object` |  | Additional css styles for active image or video. <MdBadge color="info">v2.2.0</MdBadge> |
 | z-index          | `Number` |  | Insert inline css style `z-index` to control the component positioning on the html layers. <MdBadge color="info">v2.0.15</MdBadge> |
 
 </div>
@@ -453,10 +453,10 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 | Method    | Description  |
 |-----------|--------------|
-| setActive(index:`Number`) | Change the active item. |
-| openAt(index:`Number`)  | Open modal lightbox at the given index. |
-| nextSlide()  | Navigate slide at next to the active item. |
-| prevSlide()  | Navigate slide at prior to the active item. |
+| <span class="text-primary">setActive</span>(index:`Number`) | Change the active item. |
+| <span class="text-primary">openAt</span>(index:`Number`) | Open modal lightbox at the given index. |
+| <span class="text-primary">nextSlide</span>() | Navigate slide at next to the active item. |
+| <span class="text-primary">prevSlide</span>() | Navigate slide at prior to the active item. |
 
 </div>
   </BsTab>
