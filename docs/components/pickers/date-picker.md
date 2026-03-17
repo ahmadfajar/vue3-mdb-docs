@@ -32,6 +32,7 @@ import { ref } from 'vue';
 
 const picker1 = ref<string>();
 </script>
+
 ```
 :::
 
@@ -52,6 +53,7 @@ import { ref } from 'vue';
 
 const picker2 = ref<string>();
 </script>
+
 ```
 :::
 
@@ -277,11 +279,11 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments     | Description |
 |---------|---------------|-------------|
-| update:model-value | ( value:`String`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:model-value | (value:`String`) | Fired when this component's `model-value` is updated. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>

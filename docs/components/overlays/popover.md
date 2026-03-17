@@ -1,11 +1,11 @@
 ---
-description: A lightweight component which is used as a popup container. 
+description: Popover is a lightweight component which is used as a popup container. 
 --- 
 
 # Popover
 
 :::lead
-**BsPopover** is a lightweight component which is used as a popup container.
+**bs-popover** is a lightweight component which is used as a popup container.
 :::
 
 
@@ -16,18 +16,18 @@ Some components use `<bs-popover>` internally, such as
 [BsCombobox](/components/inputs/combobox), [BsDateTimeField](/components/inputs/datetime-field),
 [BsSearchField](/components/inputs/search-field). Example below, shows you basic usage of `<bs-popover>`.
 
-::: BlockVue {clientOnly="true" title="Popover Example" file="./docs/components/overlays/js/popover-1.js"}
+::: BlockVue {clientOnly="true" title="Popover Overview" file="./docs/components/overlays/js/popover-1.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100 text-center">
-    <bs-button ref="activator1" color="primary" dropdown-toggle @click="show1 = !show1">
+  <div class="demo-wrapper w-full text-center">
+    <bs-button ref="activator1" dropdown-toggle @click="show1 = !show1">
       Button Dropdown
     </bs-button>
     <bs-popover
       v-model:open="show1"
       :trigger="activator1?.$el"
-      class="md-shadow-1 rounded"
+      class="md-shadow-1"
       space="3"
     >
       <bs-list-view>
@@ -45,18 +45,18 @@ Some components use `<bs-popover>` internally, such as
         </bs-list-tile>
       </bs-list-view>
       <bs-divider></bs-divider>
-      <div class="p-3 text-dark">
+      <div class="p-3">
         <div class="mb-3">
-          <bs-switch v-model="enableMessage" :value="true" color="purple">
+          <bs-switch v-model="enableMessage" :value="true">
             Enable Messages
           </bs-switch>
         </div>
-        <bs-switch v-model="enableHints" :value="true" color="purple">Enable Hints</bs-switch>
+        <bs-switch v-model="enableHints" :value="true">Enable Hints</bs-switch>
       </div>
       <bs-divider></bs-divider>
-      <div class="p-2 ox-3 text-end">
-        <bs-button color="primary" size="sm" @click="show1 = false">Save</bs-button>
+      <div class="flex justify-end md-gap-2 py-2 px-3">
         <bs-button color="secondary" size="sm" flat @click="show1 = false">Cancel</bs-button>
+        <bs-button color="primary" size="sm" @click="show1 = false">Save</bs-button>
       </div>
     </bs-popover>
   </div>
@@ -80,393 +80,61 @@ Use `placement` property to change default `<bs-popover>` display placement. Val
 placement values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, 
 `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`.
 
-::: BlockVue {clientOnly="true" title="Popover Placement Example" file="./docs/components/overlays/js/popover-2.js"}
+::: BlockVue {clientOnly="true" title="Popover Display Placement" file="./docs/components/overlays/js/popover-2.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100">
-    <div class="row row-cols-1 row-cols-md-2 text-center">
-      <div class="col mb-3">
-        <bs-button ref="activator2" color="primary" dropdown-toggle @click="show2 = !show2">
-          Bottom Left
+  <div class="demo-wrapper w-full">
+    <div class="row row-cols-1 row-cols-sm-2 gy-3">
+      <div
+        v-for="item in placementSrc.dataItems"
+        :key="item.value"
+        class="col flex justify-center"
+      >
+        <bs-button :id="item.id" dropdown-toggle @click="toggleShow(item, item.show)">
+          {{ item.label }}
         </bs-button>
         <bs-popover
-          v-model:open="show2"
-          :trigger="activator2?.$el"
-          placement="bottom-left"
-          class="md-shadow-1 rounded"
+          v-model:open="item.show"
+          :placement="item.value"
+          :trigger="`#${item.id}`"
+          class="md-shadow-1"
           space="3"
         >
           <bs-list-view>
             <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
+              <bs-list-tile-leading img-src="https://ahmadfajar.github.io/img/3.jpg" rounded></bs-list-tile-leading>
               <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
+                <bs-list-tile-title class="font-weight-bold"> Catherine </bs-list-tile-title>
                 <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
               </bs-list-tile-content>
             </bs-list-tile>
           </bs-list-view>
           <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show2 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show2 = false">Cancel</bs-button>
+          <div class="p-3">
+            <bs-switch
+              v-model="item.enableMessage"
+              :value="true"
+              inset-outlined
+              label-class="w-full"
+              label-position="left"
+            >
+              Enable Messages
+            </bs-switch>
+            <bs-switch
+              v-model="item.enableHint"
+              :value="true"
+              inset-outlined
+              label-class="w-full"
+              label-position="left"
+            >
+              Enable Hints
+            </bs-switch>
           </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator4" color="primary" dropdown-toggle @click="show4 = !show4">
-          Bottom Right
-        </bs-button>
-        <bs-popover
-          v-model:open="show4"
-          :trigger="activator4?.$el"
-          placement="bottom-right"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
           <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show4 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show4 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator5" color="primary" dropdown-toggle @click="show5 = !show5">
-          Top Left
-        </bs-button>
-        <bs-popover
-          v-model:open="show5"
-          :trigger="activator5?.$el"
-          placement="top-left"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show5 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show5 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator7" color="primary" dropdown-toggle @click="show7 = !show7">
-          Top Right
-        </bs-button>
-        <bs-popover
-          v-model:open="show7"
-          :trigger="activator7?.$el"
-          placement="top-right"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show7 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show7 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator8" color="primary" dropdown-toggle @click="show8 = !show8">
-          Left Top
-        </bs-button>
-        <bs-popover
-          v-model:open="show8"
-          :trigger="activator8?.$el"
-          placement="left-top"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show8 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show8 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator9" color="primary" dropdown-toggle @click="show9 = !show9">
-          Right Top
-        </bs-button>
-        <bs-popover
-          v-model:open="show9"
-          :trigger="activator9?.$el"
-          placement="right-top"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show9 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show9 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator12" color="primary" dropdown-toggle @click="show12 = !show12">
-          Left Bottom
-        </bs-button>
-        <bs-popover
-          v-model:open="show12"
-          :trigger="activator12?.$el"
-          placement="left-bottom"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show12 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show12 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator13" color="primary" dropdown-toggle @click="show13 = !show13">
-          Right Bottom
-        </bs-button>
-        <bs-popover
-          v-model:open="show13"
-          :trigger="activator13?.$el"
-          placement="right-bottom"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show13 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show13 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator6" color="primary" dropdown-toggle @click="show6 = !show6">
-          Top
-        </bs-button>
-        <bs-popover
-          v-model:open="show6"
-          :trigger="activator6?.$el"
-          placement="top"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show6 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show6 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator3" color="primary" dropdown-toggle @click="show3 = !show3">
-          Bottom
-        </bs-button>
-        <bs-popover
-          v-model:open="show3"
-          :trigger="activator3?.$el"
-          placement="bottom"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show3 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show3 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator10" color="primary" dropdown-toggle @click="show10 = !show10">
-          Left
-        </bs-button>
-        <bs-popover
-          v-model:open="show10"
-          :trigger="activator10?.$el"
-          placement="left"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show10 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show10 = false">Cancel</bs-button>
-          </div>
-        </bs-popover>
-      </div>
-      <div class="col mb-3">
-        <bs-button ref="activator11" color="primary" dropdown-toggle @click="show11 = !show11">
-          Right
-        </bs-button>
-        <bs-popover
-          v-model:open="show11"
-          :trigger="activator11?.$el"
-          placement="right"
-          class="md-shadow-1 rounded"
-          space="3"
-        >
-          <bs-list-view>
-            <bs-list-tile>
-              <bs-list-tile-leading
-                img-src="https://ahmadfajar.github.io/img/2.jpg"
-                rounded
-              ></bs-list-tile-leading>
-              <bs-list-tile-content>
-                <bs-list-tile-title>
-                  <b>John Doe</b>
-                </bs-list-tile-title>
-                <bs-list-tile-subtitle>Going further more...</bs-list-tile-subtitle>
-              </bs-list-tile-content>
-            </bs-list-tile>
-          </bs-list-view>
-          <bs-divider></bs-divider>
-          <div class="p-2 ox-3 text-end">
-            <bs-button color="primary" size="sm" @click="show11 = false">Save</bs-button>
-            <bs-button color="secondary" size="sm" flat @click="show11 = false">Cancel</bs-button>
+          <div class="flex justify-end md-gap-1 p-3">
+            <bs-button color="primary" flat size="sm" @click="item.show = false">Cancel</bs-button>
+            <bs-button color="primary" size="sm" @click="item.show = false">Save</bs-button>
           </div>
         </bs-popover>
       </div>
@@ -475,47 +143,157 @@ placement values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`,
 </template>
 
 <script setup lang="ts">
-import { ref, type ComponentPublicInstance } from 'vue';
+import { onBeforeUnmount } from 'vue';
+import { BsArrayStore, type IBsModel, type TPopoverPosition, useGenerateId } from 'vue-mdbootstrap';
 
-const show2 = ref(false);
-const show3 = ref(false);
-const show4 = ref(false);
-const show5 = ref(false);
-const show6 = ref(false);
-const show7 = ref(false);
-const show8 = ref(false);
-const show9 = ref(false);
-const show10 = ref(false);
-const show11 = ref(false);
-const show12 = ref(false);
-const show13 = ref(false);
-const activator1 = ref<ComponentPublicInstance | null>(null);
-const activator2 = ref<ComponentPublicInstance | null>(null);
-const activator3 = ref<ComponentPublicInstance | null>(null);
-const activator4 = ref<ComponentPublicInstance | null>(null);
-const activator5 = ref<ComponentPublicInstance | null>(null);
-const activator6 = ref<ComponentPublicInstance | null>(null);
-const activator7 = ref<ComponentPublicInstance | null>(null);
-const activator8 = ref<ComponentPublicInstance | null>(null);
-const activator9 = ref<ComponentPublicInstance | null>(null);
-const activator10 = ref<ComponentPublicInstance | null>(null);
-const activator11 = ref<ComponentPublicInstance | null>(null);
-const activator12 = ref<ComponentPublicInstance | null>(null);
-const activator13 = ref<ComponentPublicInstance | null>(null);
+function toggleShow(item: IBsModel, state: boolean): void {
+  item.show = !state;
+}
+
+const placementSrc = new BsArrayStore([
+  {
+    id: useGenerateId(),
+    value: 'bottom-left',
+    label: 'Bottom Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'bottom-right',
+    label: 'Bottom Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'bottom',
+    label: 'Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left',
+    label: 'Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left-top',
+    label: 'Left Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left-bottom',
+    label: 'Left Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right',
+    label: 'Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right-top',
+    label: 'Right Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right-bottom',
+    label: 'Right Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top',
+    label: 'Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top-left',
+    label: 'Top Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top-right',
+    label: 'Top Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+]);
+
+onBeforeUnmount(() => {
+  placementSrc.destroy();
+});
 </script>
+
 ```
 :::
+
+## CSS Variables
+
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
+`.md-popover` and global CSS variables for better customization.
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+::: code-group 
+
+```css [Local CSS]
+.md-popover {
+  --md-popover-bg: var(--background-tertiary);
+  --md-popover-color: var(--foreground-tertiary);
+  --md-popover-border-radius: var(--md-radius);
+}
+
+```
+
+```scss [Global CSS]
+:root {
+  --background-tertiary: #{colors.$white};
+  --foreground-tertiary: #{colors.$neutral-darken-4};
+  --md-radius: #{vars.$radius-md};
+}
+
+```
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type     | Default   | Description |
 |----------|----------|-----------|-------------|
-| color       | `String` | `'white'` | **Popover** background color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) or [Material Color](/reference/colors#material-colors) variants can be used. <MdBadge color="info">v2.0.0</MdBadge> |
+| color <Badge type="warning">deprecated</Badge> | `String` | | **Popover** background color. Use unified global CSS variable instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | cover       | `Boolean` | `false` | Display **Popover** at a position that covers the activator. |
 | esc-close   | `Boolean` | `true`  | Close the **Popover** when **ESC** key is pressed. |
 | open <Badge type="tip">v-model</Badge> | `Boolean` | `false` | **Popover** state: **show** or **hide**. |
@@ -526,17 +304,17 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 | placement   | `String`  | `'bottom-left'` | **Popover** display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | space       | `Number` |  | Number of pixel to shift the **Popover** display position. |
 | transition  | `String`  | `'scale'` | Transition animation when show the Popover. This animation is effected by `placement` property. |
-| trigger <Badge type="danger">required</Badge> | `HTMLElement`/`String`  |  | HTML element or element ID which is used to activate and calculate this **Popover** display position. |
+| trigger <Badge type="danger">required</Badge> | `HTMLElement`&#124;`String`  |  | HTML element or element ID which is used to activate and calculate this **Popover** display position. |
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
-    <div class="doc-table-responsive doc-table-3cols">
+  <BsTab label="Events">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|---------------|-------------|
 | close  |  | Fired when **Popover** is closed. |
-| update:open | ( state:`Boolean`) | Used to update the `open` property. <MdBadge color="info">v2.0.0</MdBadge> |
+| update:open | (state:`Boolean`) | Used to update the `open` property. <MdBadge color="info">v2.0.0</MdBadge> |
 
 </div>
   </BsTab>
@@ -553,35 +331,119 @@ const activator13 = ref<ComponentPublicInstance | null>(null);
 
 
 <script setup lang="ts">
-import { ref, type ComponentPublicInstance } from 'vue';
+import { onBeforeUnmount, ref, type ComponentPublicInstance } from 'vue';
+import { BsArrayStore, type IBsModel, type TPopoverPosition, useGenerateId } from 'vue-mdbootstrap';
 
+const tabs1active = ref(0);
 const enableMessage = ref(false);
 const enableHints = ref(true);
 const show1 = ref(false);
-const show2 = ref(false);
-const show3 = ref(false);
-const show4 = ref(false);
-const show5 = ref(false);
-const show6 = ref(false);
-const show7 = ref(false);
-const show8 = ref(false);
-const show9 = ref(false);
-const show10 = ref(false);
-const show11 = ref(false);
-const show12 = ref(false);
-const show13 = ref(false);
 const activator1 = ref<ComponentPublicInstance | null>(null);
-const activator2 = ref<ComponentPublicInstance | null>(null);
-const activator3 = ref<ComponentPublicInstance | null>(null);
-const activator4 = ref<ComponentPublicInstance | null>(null);
-const activator5 = ref<ComponentPublicInstance | null>(null);
-const activator6 = ref<ComponentPublicInstance | null>(null);
-const activator7 = ref<ComponentPublicInstance | null>(null);
-const activator8 = ref<ComponentPublicInstance | null>(null);
-const activator9 = ref<ComponentPublicInstance | null>(null);
-const activator10 = ref<ComponentPublicInstance | null>(null);
-const activator11 = ref<ComponentPublicInstance | null>(null);
-const activator12 = ref<ComponentPublicInstance | null>(null);
-const activator13 = ref<ComponentPublicInstance | null>(null);
-const tabs1active = ref(0);
+
+function toggleShow(item: IBsModel, state: boolean): void {
+  item.show = !state;
+}
+
+const placementSrc = new BsArrayStore([
+  {
+    id: useGenerateId(),
+    value: 'bottom-left',
+    label: 'Bottom Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'bottom-right',
+    label: 'Bottom Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'bottom',
+    label: 'Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left',
+    label: 'Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left-top',
+    label: 'Left Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'left-bottom',
+    label: 'Left Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right',
+    label: 'Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right-top',
+    label: 'Right Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'right-bottom',
+    label: 'Right Bottom',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top',
+    label: 'Top',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top-left',
+    label: 'Top Left',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+  {
+    id: useGenerateId(),
+    value: 'top-right',
+    label: 'Top Right',
+    show: false,
+    enableHint: false,
+    enableMessage: false,
+  },
+]);
+
+onBeforeUnmount(() => {
+  placementSrc.destroy();
+});
 </script>

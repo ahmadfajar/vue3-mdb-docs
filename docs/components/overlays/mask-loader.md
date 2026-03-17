@@ -1,5 +1,5 @@
 ---
-description: A component which are typically used for displaying a loading progress with backdrop overlay.
+description: MaskLoader is a component which are typically used for displaying a loading progress with backdrop overlay.
 --- 
 
 # Mask Loader
@@ -18,11 +18,11 @@ can be used to obscure parent element. With this you can provide information to
 User that the application is busy performing a background task. Example below will 
 shows you how to use the `<bs-mask-loader>` component.
 
-::: BlockVue {title="Mask Loader Example" file="./docs/components/scripts/mask-loader-1.js"}
+::: BlockVue {title="MaskLoader Overview" file="./docs/components/overlays/js/mask-loader-1.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100">
+  <div class="demo-wrapper w-full">
     <bs-card>
       <bs-card-body>
         <bs-card-content type="title">Content Title</bs-card-content>
@@ -31,7 +31,7 @@ shows you how to use the `<bs-mask-loader>` component.
       </bs-card-body>
       <bs-mask-loader :show="showLoader" />
     </bs-card>
-    <bs-button class="mt-4" color="indigo" @click="showLoader = !showLoader">
+    <bs-button class="mt-4" @click="showLoader = !showLoader">
       Toggle Loader
     </bs-button>
   </div>
@@ -52,13 +52,13 @@ const showLoader = ref(false);
 **BsMaskLoader** comes with **four** type variants, which are: `linear` (*default*), 
 `linear-alt`, `spinner`, and `grow`. This variant can be sets via `variant` property.
 
-<SmallNote color="teal">Updated on v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.0.0</SmallNote>
 
-::: BlockVue {title="Mask Loader Variants Example" file="./docs/components/scripts/mask-loader-2.js"}
+::: BlockVue {title="MaskLoader Variants" file="./docs/components/overlays/js/mask-loader-2.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100">
+  <div class="demo-wrapper w-full">
     <div class="mb-4">
       <bs-card>
         <bs-card-body>
@@ -67,7 +67,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showLinear1" />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showLinear1 = !showLinear1">
+      <bs-button class="mt-4" @click="showLinear1 = !showLinear1">
         Toggle Loader
       </bs-button>
     </div>
@@ -80,7 +80,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showLinear2" type="linear-alt" />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showLinear2 = !showLinear2">
+      <bs-button class="mt-4" @click="showLinear2 = !showLinear2">
         Toggle Loader
       </bs-button>
     </div>
@@ -93,7 +93,7 @@ const showLoader = ref(false);
         </bs-card-body>
         <bs-mask-loader :show="showSpinner" type="spinner" />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showSpinner = !showSpinner">
+      <bs-button class="mt-4" @click="showSpinner = !showSpinner">
         Toggle Loader
       </bs-button>
     </div>
@@ -101,12 +101,12 @@ const showLoader = ref(false);
     <div class="mt-4">
       <bs-card>
         <bs-card-body>
-          <bs-card-content type="title">Grow Loader</bs-card-content>
+          <bs-card-content type="title">Growing Blink Loader</bs-card-content>
           <div class="mt-3">{{ loremIpsum }}</div>
         </bs-card-body>
         <bs-mask-loader :show="showGrow" type="grow" />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showGrow = !showGrow">
+      <bs-button class="mt-4" @click="showGrow = !showGrow">
         Toggle Loader
       </bs-button>
     </div>
@@ -132,16 +132,16 @@ const showGrow = ref(false);
 
 You can change the **Loader** size simply by changing the `spinner-diameter` property value.
 And specify the value of the `spinner-color` property to change its color. Any 
-[MDBootstrap Color](/reference/colors#mdbootstrap-colors) and 
+[Contextual Color](/reference/colors#contextual-colors), [Main Color](/reference/colors#main-colors) and 
 [Material Color](/reference/colors#material-colors) variants can be applied 
 to the `spinner-color` property. Additionally you can set the value of the `overlay-color` 
 property to change the backdrop overlay color.
 
-::: BlockVue {title="Mask Loader Size and Color Example" file="./docs/components/scripts/mask-loader-3.js"}
+::: BlockVue {title="MaskLoader Size and Color" file="./docs/components/overlays/js/mask-loader-3.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper w-100">
+  <div class="demo-wrapper w-full">
     <div class="mb-4">
       <bs-card>
         <bs-card-body>
@@ -156,7 +156,7 @@ property to change the backdrop overlay color.
           spinner-thickness="8"
         />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showLoader1 = !showLoader1">
+      <bs-button class="mt-4" @click="showLoader1 = !showLoader1">
         Toggle Loader
       </bs-button>
     </div>
@@ -171,12 +171,12 @@ property to change the backdrop overlay color.
           :show="showLoader2"
           type="linear-alt"
           overlay-color="#064E40"
-          spinner-color="blue-green"
+          spinner-color="danger"
           spinner-diameter="60"
           spinner-thickness="8"
         />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showLoader2 = !showLoader2">
+      <bs-button class="mt-4" @click="showLoader2 = !showLoader2">
         Toggle Loader
       </bs-button>
     </div>
@@ -195,7 +195,7 @@ property to change the backdrop overlay color.
           spinner-diameter="60"
         />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showSpinnerLoader = !showSpinnerLoader">
+      <bs-button class="mt-4" @click="showSpinnerLoader = !showSpinnerLoader">
         Toggle Loader
       </bs-button>
     </div>
@@ -203,7 +203,7 @@ property to change the backdrop overlay color.
     <div class="mt-4">
       <bs-card>
         <bs-card-body>
-          <bs-card-content type="title">Grow Loader</bs-card-content>
+          <bs-card-content type="title">Growing Blink Loader</bs-card-content>
           <div class="mt-3">{{ loremIpsum }}</div>
         </bs-card-body>
         <bs-mask-loader
@@ -214,7 +214,7 @@ property to change the backdrop overlay color.
           spinner-diameter="60"
         />
       </bs-card>
-      <bs-button class="mt-4" color="indigo" @click="showGrowLoader = !showGrowLoader">
+      <bs-button class="mt-4" @click="showGrowLoader = !showGrowLoader">
         Toggle Loader
       </bs-button>
     </div>
@@ -231,14 +231,19 @@ const showLoader2 = ref(false);
 const showSpinnerLoader = ref(false);
 const showGrowLoader = ref(false);
 </script>
+
 ```
+:::
+
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+`linear-alt` loader can only use [Contextual Color](/reference/colors#contextual-colors) variants.
 :::
 
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property    | Type        | Default     | Description |
@@ -247,13 +252,12 @@ const showGrowLoader = ref(false);
 | overlay-color   | `String`  | `'#000'` | Backdrop overlay color in hex color formatted value. |
 | overlay-opacity | `Number`  | `0.5` | Backdrop overlay opacity value. |
 | show <Badge type="danger">required</Badge> | `Boolean` | `false` | The component state, `show` or `hide`. |
-| spinner-color | `String` | `'primary'` | The spinner color. Any [MDBootstrap Color](/reference/colors#mdbootstrap-colors) and [Material Color](/reference/colors#material-colors) variants can be used. |
+| spinner-color     | `String` | `'primary'` | The spinner color. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Any [Contextual Color](/reference/colors#contextual-colors), [Main Color](/reference/colors#main-colors) and [Material Color](/reference/colors#material-colors) variants can be used.</div> |
 | spinner-diameter  | `Number` | `36` | The spinner diameter. |
-| spinner-thickness | `Number` | `5` | The spinner thickness. Only valid for `linear` and `linear-alt` variants. |
-| spinner-type <Badge type="warning">deprecated</Badge> | `String` |  | Use `type` property instead. |
-| type  | `String` | `'linear'` | The spinner types variant. Available types are: `linear`, `linear-alt`, `spinner`, and `grow`. <BsBadge color="info">v2.0.0</BsBadge> |
-| transition | `String` | `'fade'` | Animation transition to use when the component becomes visible or invisible. |
-| z-index | `Number` | `100` | Sets the inline css-style `z-index` property. |
+| spinner-thickness | `Number` | `5`  | The spinner thickness. Only valid for `linear` and `linear-alt` variants. |
+| type       | `String` | `'linear'` | The spinner types variant. Available types are: `linear`, `linear-alt`, `spinner`, and `grow`. <MdBadge color="info">v2.0.0</MdBadge> |
+| transition | `String` | `'fade'`   | Animation transition to use when the component becomes visible or invisible. |
+| z-index    | `Number` | `100`      | Sets the inline css-style `z-index` property. |
 
 </div>
   </BsTab>

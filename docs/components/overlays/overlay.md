@@ -1,5 +1,5 @@
 ---
-description: A lightweight component for displaying a backdrop overlay. 
+description: Overlay is a lightweight component for displaying a backdrop overlay. 
 --- 
 
 # Overlay
@@ -12,11 +12,11 @@ description: A lightweight component for displaying a backdrop overlay.
 
 ## Basic Usage
 
-::: BlockVue {title="Overlay Example" clientOnly="true" file="./docs/components/scripts/overlay.js"}
+::: BlockVue {title="Overlay Usage" clientOnly="true" file="./docs/components/overlays/js/overlay.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper">  
+  <div class="demo-wrapper">  
     <bs-button color="primary" @click="showOverlay = !showOverlay">Show Overlay</bs-button>
     <Teleport to="body">
       <bs-overlay :show="showOverlay" fixed @click="hideOverlay"></bs-overlay>
@@ -39,8 +39,8 @@ function hideOverlay() {
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type      | Default | Description |
@@ -53,12 +53,12 @@ function hideOverlay() {
 
 </div>
   </BsTab>
-  <BsTab label="Events" url="#api-reference">
-    <div class="doc-table-responsive doc-table-3cols">
+  <BsTab label="Events">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name   | Arguments | Description |
 |--------|-----------|-------------|
-| click  | ( e:`Event`) | Fired when the backdrop overlay is clicked. |
+| click  | (e:`Event`) | Fired when the backdrop overlay is clicked. |
 
 </div>
   </BsTab>

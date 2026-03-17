@@ -35,6 +35,7 @@ import type { TColorPickerMode } from 'vue-mdbootstrap';
 const color1 = ref<string>('#1669de');
 const mode1 = ref<TColorPickerMode>();
 </script>
+
 ```
 :::
 
@@ -85,6 +86,7 @@ const swatches = [
   '#48cae4',
 ];
 </script>
+
 ```
 :::
 
@@ -173,6 +175,7 @@ const pickerShow = ref<boolean>(false);
   pointer-events: none;
 }
 </style>
+
 ```
 :::
 
@@ -232,13 +235,13 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 </div>
   </BsTab>
   <BsTab label="Events">
-    <div class="doc-table-responsive doc-table-3cols">
+    <div class="doc-table-responsive doc-table-3cols table:font-mono:col-2">
 
 | Name    | Arguments     | Description |
 |---------|---------------|-------------|
-| update:model-value | ( value:`String`) | Fired when this component's `model-value` is updated. |
-| update:mode | ( value:`String`) | Fired when the `mode` property is updated. |
-| update:open | ( value:`Boolean`) | Fired when the `open` property is updated. |
+| update:model-value | (value:`String`) | Fired when this component's `model-value` is updated. |
+| update:mode | (value:`String`) | Fired when the `mode` property is updated. |
+| update:open | (value:`Boolean`) | Fired when the `open` property is updated. |
 
 </div>
   </BsTab>
