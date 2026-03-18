@@ -22,6 +22,10 @@ Released: March XX, 2026
     See [Font Awesome](https://fontawesome.com/search?ic=free-collection) free icons documentation for details.
   - Change resource url to github because the official website is now blocked for CDN.
   - Update the value of `version` property to `7.2.0`.
+- **BsProgressBar**: 
+  - make CSS classes more consistent.   
+  - improve CSS variables.
+  - small improvement on rendering HTML.
 - **BsSwitch**: 
   - Add property `variant` to change the component style appearance.
   - Mark properties: `inset-mode` and `inset-outlined` as **deprecated**, 

@@ -117,7 +117,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | fixed-top  | `Boolean`  | `false`  | Place the component fixed at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. |
 | sticky-top | `Boolean`  | `false`  | Stick the component at the top of the page. See [Bootstrap Position](https://getbootstrap.com/docs/5.3/helpers/position/) documentation. <MdBadge color="info">v2.0.3</MdBadge> |
 | shadow | `Boolean`  | `false`  | Add shadow effect to the component. |
-| tag | `String`  | `'header'`  | Html tag used to render the component. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
+| tag | `String`  | `'header'`  | HTML tag used to render the component. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 
 </div>
   </BsTab>

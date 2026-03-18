@@ -30,7 +30,7 @@ with fill style.
 The `size` property is used to set the icon size. And if not set, the default size 
 will be used.
 
-::: BlockVue {title="ToggleIcon Overview" file="./docs/components/scripts/toggle-icon.js"}
+::: BlockVue {title="ToggleIcon Overview" file="./docs/components/icons/js/toggle-icon.js"}
 
 ```vue
 <template>

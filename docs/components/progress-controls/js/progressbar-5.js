@@ -3,7 +3,7 @@ const { BsArrayStore, createVueMdb } = VueMdb;
 
 const app = createVueMdb({
   setup() {
-    const progress7 = ref(70);
+    const progress3 = ref(70);
     const position2 = ref('inside');
     const position2Src = {
       proxy: new BsArrayStore(
@@ -22,7 +22,7 @@ const app = createVueMdb({
     };
 
     return {
-      progress7,
+      progress3,
       position2,
       position2Src
     };

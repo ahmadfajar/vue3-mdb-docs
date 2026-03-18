@@ -140,6 +140,8 @@ const favoriteDrinks: TInputOptionItem[] = [
 **BsToggleButton** also support multiple selection mode. Use and define the 
 `multiple` property explicitly to enable multiple selection mode. 
 
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
+
 ::: BlockVue {title="Toggle Button Multiple Selection" file="./docs/components/buttons/js/toggle-button-3.js"}
 
 ```vue
@@ -543,7 +545,7 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | Property | Type      | Default  | Description |
 |----------|-----------|----------|-------------|
 | disabled | `Boolean` | `false`      | The component state. |
-| color    | `String`  | `'default'`  | The component color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| color    | `String`  | `'default'`  | The component color appearance. <MdBadge color="info">Updated in v2.2.1</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
 | icon-position | `String` | `'left'` | <div style="min-width:370px"> The icon placement. Valid values are: `left` (before text), `right` (after text). </div> |
 | icon-size     | `Number` |   | Render the icon at predefined size in pixel. <MdBadge color="info">v2.2.0</MdBadge> |
 | id       | `String`  |              | Sets the component `ID`. This property value is auto generate. |

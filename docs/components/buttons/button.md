@@ -118,6 +118,8 @@ based on [Google Material Design 3](https://m3.material.io/components/all-button
 This style is the default button's style and its appearance is like Material Design 3 - 
 [Filled Button](https://m3.material.io/components/buttons/specs#7b9ba06e-d393-491b-830e-ae3fe0816d4b). 
 
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
+
 ::: BlockVue {title="Button Style Variants - Filled"}
 
 ```vue
@@ -162,7 +164,7 @@ You can create button with filled tonal style like Material Design 3 -
 [Filled Tonal Button](https://m3.material.io/components/buttons/specs#31a04913-d070-49c5-9c36-41d551f20096) 
 by defining the `tonal` property explicitly.
 
-<SmallNote color="teal">Added in v2.0.4</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Tonal"}
 
@@ -208,6 +210,8 @@ You can create button with elevated style like Material Design 3 -
 [Elevated Button](https://m3.material.io/components/buttons/specs#81e12069-106c-47b5-b148-1cd6077fa3d5) 
 by defining the `raised` property explicitly.
 
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
+
 ::: BlockVue {title="Button Style Variants - Elevated"}
 
 ```vue
@@ -250,7 +254,7 @@ by defining the `raised` property explicitly.
 
 You can create button with rounded style by defining the `rounded` property explicitly.
 
-<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Rounded"}
 
@@ -294,7 +298,7 @@ You can create button with rounded style by defining the `rounded` property expl
 
 You can create button with rectangle style by defining the `pill-off` property explicitly.
 
-<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Rectangle"}
 
@@ -340,6 +344,8 @@ You can create button with outlined style like Material Design 3 -
 [Outlined Button](https://m3.material.io/components/buttons/specs#6757c97e-0ae6-4802-a2d5-9e3b134a7231) 
 by defining the `outlined` property explicitly.
 
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
+
 ::: BlockVue {title="Button Style Variants - Outlined"}
 
 ```vue
@@ -383,6 +389,8 @@ by defining the `outlined` property explicitly.
 You can create button with flat style like Material Design 3 - 
 [Text Button](https://m3.material.io/components/buttons/specs#73f33b9b-346b-480e-8028-f97c81ca293d) 
 by defining the `flat` property explicitly.
+
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ::: BlockVue {title="Button Style Variants - Flat"}
 
@@ -1374,6 +1382,11 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
   --md-btn-focus-shadow-color: #{$focus-shadow-color};
 }
 
+```
+
+### Button {#css-variables-button}
+
+```scss
 .md-btn {
   --md-btn-xs-border-radius: 0.375rem;
   --md-btn-xs-line-height: 1;
@@ -1400,7 +1413,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ```
 
-### Icon button CSS variables
+### Icon button {#css-variables-icon-button}
 
 ```scss
 .md-btn-icon {
@@ -1425,7 +1438,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ```
 
-### FAB button CSS variables
+### FAB button {#css-variables-fab-button}
 
 ```scss
 .md-btn-fab {
@@ -1489,7 +1502,7 @@ use 'vue-mdbootstrap/scss/mixins/button';
 |----------|-----------|----------|-------------|
 | active   | `Boolean` | `false`  | The component state. |
 | disabled | `Boolean` | `false`  | The component state. |
-| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <br/><br/> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`. |
+| color    | `String`  | `'default'` | The component color appearance. <MdBadge color="info">Updated in v2.2.1</MdBadge> <div class="pt-3"> Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`.</div> |
 | dropdown-toggle | `Boolean` | `false` | Render as ***dropdown button*** when used inside `<bs-dropdown-menu>` component. |
 | flat     | `Boolean` | `false`  | Enable ***flat*** button style. |
 | href     | `String`  |      | Render as `<a>` element and define its `href` property and apply button styles to the `<a>` element. |

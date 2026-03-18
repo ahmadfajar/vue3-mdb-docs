@@ -1,39 +1,43 @@
 ---
 outline: [2, 3] 
-description: Bootstrap progress bar component featuring support for animated background and text labels which are typically used for displaying simple progress bar. 
+description: ProgressBar is a component featuring support for animated background and text labels which are typically used for displaying simple progress bar. 
 ---
 
-# Progress Bar
+# ProgressBar
 
 :::lead
-**BsProgressBar** is bootstrap progress bar component featuring support for
-animated background and text labels which are typically used for displaying
-simple progress bar.
+**BsProgressBar** is a component featuring support for animated background and text 
+labels which are typically used for displaying simple progress bar.
 :::
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 
 ## Overview
 
-`<bs-progress-bar>` is built from [Bootstrap](https://getbootstrap.com/docs/5.2/components/progress/)
-progress bar's component. Although it is a simple progress bar, it can be customized
-with many options to make it look beautiful. For example, the `color` property can
-be used to change the bar color. Text label to provide additional information,
-flexible striped bar color and animated striped bar color.
+`<bs-progress-bar>` is a lightweight component for displaying simple progress bar. 
+Although it is simple component, it can be customized with many options to make it 
+look beautiful. For example, the `color` property can be used to change the bar color. 
+Text label to provide additional information, flexible striped bar color and animated 
+striped bar color.
 
-
-::: BlockVue {title="ProgressBar Example" file="./docs/components/scripts/progressbar-1.js"}
+::: BlockVue {title="ProgressBar Overview" file="./docs/components/progress-controls/js/progressbar-1.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2">
     <bs-progress-bar v-model="progress1" color="indigo"></bs-progress-bar>
-    <div class="mt-4">
-      <div class="mb-2">
-        Value: <b>{{ progress1 }}%</b>
-      </div>
-      <input v-model.number="progress1" class="form-range" type="range" />
+    <div class="col-sm-6 mt-4">
+      <bs-numeric-field 
+        v-model="progress1" 
+        filled
+        floating-label 
+        max-value="100" 
+        min-value="0"
+        suffix="%" 
+      >
+        <label>Value</label>
+      </bs-numeric-field>
     </div>
   </div>
 </template>
@@ -43,10 +47,17 @@ import { ref } from 'vue';
 
 const progress1 = ref<number>(25);
 </script>
+
 ```
 :::
 
-<!-- @include: @/components/colors-tip.md -->
+::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
+- **BsProgressBar** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/progress/) 
+  classes. However, since v2.2.0, **BsProgressBar** no longer uses Bootstrap CSS. This improvement 
+  allows **BsProgressBar** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+- The bundle only provide contextual color variants. It is located
+  at `dist/theme-light.css` and `dist/theme-dark.css` files. 
+:::
 
 
 ## Text Label
@@ -54,31 +65,37 @@ const progress1 = ref<number>(25);
 `<bs-progress-bar>` supports text label to provide additional information. It can be created 
 from progress bar value or by providing a custom text label.
 
-### Simple
+### Simple {#text-label-simple}
 
 Here the text label is created from the progress bar value and can be enabled by defining 
 the `show-value` property explicitly and the placement can be change using the
 `value-position` property. The valid values for `value-position` property are `start`, 
 `end`, `top`, `bottom`, `inside` (_default_).
 
-<SmallNote color="teal">Added since v2.0.3</SmallNote>
+<SmallNote color="teal">Added in v2.0.3</SmallNote>
 
-::: BlockVue {title="ProgressBar Label Example" file="./docs/components/scripts/progressbar-2.js"}
+::: BlockVue {title="ProgressBar with Simple Text Label" file="./docs/components/progress-controls/js/progressbar-2.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2">
     <bs-progress-bar v-model="progress2" :value-position="position1" show-value></bs-progress-bar>
-    <div class="col-md-8 mt-4">
-      <bs-combobox v-model="position1" :data-source="position1Src" filled>
-        <label class="col-md-4 col-form-label">Value Position</label>
-      </bs-combobox>
+    <div class="col-sm-6 mt-4">
+      <bs-numeric-field 
+        v-model="progress2" 
+        filled
+        floating-label 
+        max-value="100" 
+        min-value="0"
+        suffix="%" 
+      >
+        <label>Value</label>
+      </bs-numeric-field>
     </div>
-    <div class="mt-4">
-      <div class="mb-2">
-        Value: <b>{{ progress2 }}%</b>
-      </div>
-      <input v-model.number="progress2" class="form-range" type="range" />
+    <div class="col-sm-6 mt-4">
+      <bs-combobox v-model="position1" :data-source="position1Src" filled floating-label>
+        <label>Value Position</label>
+      </bs-combobox>
     </div>
   </div>
 </template>
@@ -110,37 +127,43 @@ const position1Src: TDataSource = {
 :::
 
 
-### Custom {class="mt-lg-5"}
+### Custom {#text-label-custom class="mt-lg-5"}
 
 Here the text label is created from a custom text by providing a simple text to the 
 `label` property. The placement can be change using the `label-position` property.
 The valid values for `label-position` property are `top` (_default_), `bottom`, `start`, `end`.
 
-<SmallNote color="teal">Added since v2.0.10</SmallNote>
+<SmallNote color="teal">Added in v2.0.10</SmallNote>
 
-::: BlockVue {title="ProgressBar Custom Label Example" file="./docs/components/scripts/progressbar-5.js"}
+::: BlockVue {title="ProgressBar with Custom Text Label" file="./docs/components/progress-controls/js/progressbar-5.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2">
     <bs-progress-bar 
-      v-model="progress7" 
+      v-model="progress3" 
       :label-position="position2" 
       color="purple"
       label="Marketing Progress" 
       label-alignment="start" 
       show-value>
     </bs-progress-bar>
-    <div class="col-md-8 mt-4">
-      <bs-combobox v-model="position2" :data-source="position2Src" filled>
-        <label class="col-md-4 col-form-label">Label Position</label>
+    <div class="col-sm-6 mt-4">
+      <bs-combobox v-model="position2" :data-source="position2Src" filled floating-label>
+        <label>Label Position</label>
       </bs-combobox>
     </div>
-    <div class="mt-4">
-      <div class="mb-2">
-        Value: <b>{{ progress7 }}%</b>
-      </div>
-      <input v-model.number="progress7" class="form-range" type="range" />
+    <div class="col-sm-6 mt-4">
+      <bs-numeric-field 
+        v-model="progress3" 
+        filled
+        floating-label 
+        max-value="100" 
+        min-value="0"
+        suffix="%" 
+      >
+        <label>Value</label>
+      </bs-numeric-field>
     </div>
   </div>
 </template>
@@ -150,7 +173,7 @@ import { ref } from 'vue';
 import { BsArrayStore } from 'vue-mdbootstrap';
 import type { TDataSource, TDataListSchemaProps, TProgressBarLabelPosition } from 'vue-mdbootstrap';
 
-const progress7 = ref<number>(80);
+const progress3 = ref<number>(80);
 const position2 = ref<TProgressBarLabelPosition>('top');
 const position2Src: TDataSource = {
   proxy: new BsArrayStore(
@@ -167,30 +190,45 @@ const position2Src: TDataSource = {
   schema: { displayField: 'text', valueField: 'id' } as TDataListSchemaProps
 };
 </script>
+
 ```
 :::
 
 
 ## Styling
 
-### Thickness
+### Thickness {#styling-thickness}
 
 The progress bar thickness can be adjust by using the `height` property.
 
-::: BlockVue {clientOnly="true" title="ProgressBar Thickness Example" file="./docs/components/scripts/progressbar-3.js"}
+::: BlockVue {clientOnly="true" title="ProgressBar Styling - Thickness" file="./docs/components/progress-controls/js/progressbar-3.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
-    <bs-progress-bar v-model="progress3" :height="thickness1"></bs-progress-bar>
-    <div class="col-md-8 mt-4">
-      <bs-numeric-field v-model="thickness1" min-value="2" max-value="50" filled>
-        <label class="col-md-4 col-form-label">Thickness: </label>
+  <div class="demo-wrapper w-full p-2">
+    <bs-progress-bar v-model="progress4" :height="thickness1"></bs-progress-bar>
+    <div class="col-sm-6 mt-4">
+      <bs-numeric-field 
+        v-model="thickness1" 
+        max-value="50" 
+        min-value="2" 
+        filled 
+        floating-label
+      >
+        <label>Thickness: </label>
       </bs-numeric-field>
     </div>
-    <div class="mt-4">
-      <div class="mb-2">Value: <b>{{ progress3 }}%</b></div>
-      <input v-model.number="progress3" class="form-range" type="range" />
+    <div class="col-sm-6 mt-4">
+      <bs-numeric-field 
+        v-model="progress4" 
+        filled
+        floating-label 
+        max-value="100" 
+        min-value="0"
+        suffix="%" 
+      >
+        <label>Value</label>
+      </bs-numeric-field>
     </div>
   </div>
 </template>
@@ -198,34 +236,35 @@ The progress bar thickness can be adjust by using the `height` property.
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const progress3 = ref<number>(25);
+const progress4 = ref<number>(25);
 const thickness1 = ref<number>(5);
 </script>
+
 ```
 :::
 
 
-### Stripes {class="mt-lg-5"}
+### Stripes {#styling-stripes class="mt-lg-5"}
 
 Stripes progress bar can be enabled by defining the `striped` property explicitly and 
 sets the stripes color using the `color` property.
 
 
-::: BlockVue {title="ProgressBar Stripes Example" file="./docs/components/scripts/progressbar-4.js"}
+::: BlockVue {title="ProgressBar Styling - Stripes" file="./docs/components/progress-controls/js/progressbar-4.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2">
     <bs-progress-bar
-      v-model="progress4"
+      v-model="progress5"
       class="mb-2"
       color="danger"
       height="12"
       striped
     ></bs-progress-bar>
-    <bs-progress-bar v-model="progress5" class="mb-2" color="purple" striped></bs-progress-bar>
+    <bs-progress-bar v-model="progress6" class="mb-2" color="purple" striped></bs-progress-bar>
     <bs-progress-bar
-      v-model="progress6"
+      v-model="progress7"
       color="indigo"
       height="18"
       striped
@@ -236,27 +275,28 @@ sets the stripes color using the `color` property.
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const progress4 = ref<number>(50);
-const progress5 = ref<number>(65);
-const progress6 = ref<number>(80);
+const progress5 = ref<number>(50);
+const progress6 = ref<number>(65);
+const progress7 = ref<number>(80);
 </script>
+
 ```
 :::
 
 
-### Animated Stripes {class="mt-lg-5"}
+### Animated Stripes {#styling-animated-stripes class="mt-lg-5"}
 
 Animated stripes progress bar can be enabled by defining the `striped` and
 `striped-animation` property explicitly and sets the stripes color using the `color` property.
 
 
-::: BlockVue {title="ProgressBar Animated Stripes Example" file="./docs/components/scripts/progressbar-4.js"}
+::: BlockVue {title="ProgressBar Styling - Animated Stripes" file="./docs/components/progress-controls/js/progressbar-4.js"}
 
 ```vue
 <template>
-  <div class="my-demo-wrapper bg-white w-100 rounded-3 p-4">
+  <div class="demo-wrapper w-full p-2">
     <bs-progress-bar
-      v-model="progress4"
+      v-model="progress5"
       class="mb-2"
       color="danger"
       height="12"
@@ -264,14 +304,14 @@ Animated stripes progress bar can be enabled by defining the `striped` and
       striped-animation
     ></bs-progress-bar>
     <bs-progress-bar
-      v-model="progress5"
+      v-model="progress6"
       class="mb-2"
       color="purple"
       striped
       striped-animation
     ></bs-progress-bar>
     <bs-progress-bar
-      v-model="progress6"
+      v-model="progress7"
       color="indigo"
       height="18"
       striped
@@ -283,10 +323,11 @@ Animated stripes progress bar can be enabled by defining the `striped` and
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const progress4 = ref<number>(50);
-const progress5 = ref<number>(65);
-const progress6 = ref<number>(80);
+const progress5 = ref<number>(50);
+const progress6 = ref<number>(65);
+const progress7 = ref<number>(80);
 </script>
+
 ```
 :::
 
@@ -295,147 +336,94 @@ const progress6 = ref<number>(80);
 
 The following is an example that demonstrate more advanced use of `<bs-progress-bar>`. 
 
-::: BlockVue {title="ProgressBar Advanced Example" file="./docs/components/scripts/progressbar-6.js"}
+::: BlockVue {title="ProgressBar Advanced Usage" file="./docs/components/progress-controls/js/progressbar-6.js"}
 
 ```vue
 <template>
-  <bs-app class="my-demo-wrapper mobi-card mx-auto">
-    <bs-card shadow>
-      <bs-appbar class="bg-indigo">
-        <bs-appbar-title class="text-white" title="Dashboard - Revenue"></bs-appbar-title>
+  <div class="demo-wrapper w-full">
+    <bs-card class="mobi-card mx-auto">
+      <bs-card-header class="flex items-center bg-indigo text-light">
+        <div class="h4 mb-0">Revenue</div>
         <bs-spacer></bs-spacer>
-        <bs-button color="light-grey" icon="more_vert" mode="icon" flat></bs-button>
-      </bs-appbar>
-      <bs-card-body class="dashboard-widgets">
+        <bs-button color="light" icon="more_vert" mode="icon" flat></bs-button>
+      </bs-card-header>
+      <bs-card-body class="mb-3">
         <bs-card-content type="title">By Location</bs-card-content>
-        <div class="d-flex align-items-end mt-4">
+        <div v-for="item in revenues" :key="item.city" class="flex items-end mt-3">
           <bs-progress-bar
-            v-model="newYork"
-            class="flex-grow-1"
-            color="indigo"
+            :model-value="item.revenue/1000"
+            :label="item.city"
+            class="flex-fill"
             height="12"
-            inner-cls="rounded-end"
-            label="New York"
+            inner-cls="rounded"
             label-alignment="start"
           ></bs-progress-bar>
-          <div class="value-label">{{ newYork }}k</div>
-        </div>
-        <div class="d-flex align-items-end mt-3">
-          <bs-progress-bar
-            v-model="sanFransisco"
-            class="flex-grow-1"
-            color="indigo"
-            height="12"
-            inner-cls="rounded-end"
-            label="San Fransisco"
-            label-alignment="start"
-          ></bs-progress-bar>
-          <div class="value-label">{{ sanFransisco }}k</div>
-        </div>
-        <div class="d-flex align-items-end mt-3">
-          <bs-progress-bar
-            v-model="sydney"
-            class="flex-grow-1"
-            color="indigo"
-            height="12"
-            inner-cls="rounded-end"
-            label="Sydney"
-            label-alignment="start"
-          ></bs-progress-bar>
-          <div class="value-label">{{ sydney }}k</div>
-        </div>
-        <div class="d-flex align-items-end my-3">
-          <bs-progress-bar
-            v-model="singapore"
-            class="flex-grow-1"
-            color="indigo"
-            height="12"
-            inner-cls="rounded-end"
-            label="Singapore"
-            label-alignment="start"
-          ></bs-progress-bar>
-          <div class="value-label">{{ singapore }}k</div>
+          <div class="font-weight-semibold ps-2" style="font-size: 12px">
+            {{ Helper.roundNumber(item.revenue/1000, 1) }} K
+          </div>
         </div>
       </bs-card-body>
     </bs-card>
-  </bs-app>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { Helper } from 'vue-mdbootstrap';
 
-const newYork = ref<number>(72);
-const sanFransisco = ref<number>(39);
-const sydney = ref<number>(25);
-const singapore = ref<number>(61);
+const revenues = [
+  {city: 'New York', revenue: '72345'},
+  {city: 'San Fransisco', revenue: '39145'},
+  {city: 'Sidney', revenue: '25139'},
+  {city: 'Singapore', revenue: '61439'},
+]
 </script>
 
-<style>
-.my-demo-wrapper { width: 100%; padding: 1rem; }
-.mobi-card { max-width: 400px; }
-.card > .md-appbar {
-  border-top-left-radius: var(--bs-card-inner-border-radius);
-  border-top-right-radius: var(--bs-card-inner-border-radius);
-}
-.md-list-tile-action.rating {
-  --md-tile-action-color: rgba(0, 0, 0, 0.4);
-  font-size: 120%;
-  font-weight: 300;
-}
-.dashboard-widgets .md-progress-wrapper + .value-label {
-  font-size: .8rem;
-  font-weight: 600;
-  margin-left: .5rem;
-}
-</style>
 ```
 :::
 
 ## CSS Variables
+As CSS technology evolves, Vue MDBootstrap introduces local CSS variables 
+on `.md-progressbar-simple` for better customization.
 
-The component css variables inherited from 
-[Bootstrap Progress](https://getbootstrap.com/docs/5.2/components/progress/#css).
-
-<SmallNote color="teal">Updated on v2.0.10</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 ```scss
---bs-progress-height: 1rem;
---bs-progress-font-size: 0.75rem;
---bs-progress-bg: #e9ecef;
---bs-progress-bar-color: #fff;
---bs-progress-bar-bg: #0d6efd;
---bs-progress-bar-transition: width 0.6s ease;
---bs-progress-border-radius: 0.375rem;
---bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-
-// custom variables
---md-progress-color: currentColor;
---md-progress-font-size: .75rem;
---md-progress-label-font-size: .825rem;
---md-progress-label-font-weight: 600;
+.md-progressbar-simple {
+  --md-progress-bg: #{vars.$progress-bg};
+  --md-progress-bar-bg: #{vars.$progress-bar-bg};
+  --md-progress-bar-color: #{vars.$progress-bar-color};
+  --md-progress-bar-transition: #{vars.$progress-bar-transition};
+  --md-progress-border-radius: #{vars.$progress-border-radius};
+  --md-progress-box-shadow: #{vars.$progress-box-shadow};
+  --md-progress-color: currentColor;
+  --md-progress-font-size: #{vars.$progress-font-size};
+  --md-progress-height: #{vars.$progress-height};
+  --md-progress-label-font-size: 0.825rem;
+  --md-progress-label-font-weight: 600;
+}
 
 ```
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Props" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Props">
     <div class="doc-table-responsive doc-table-props">
 
 | Property | Type     | Default | Description |
 |----------|----------|---------|-------------|
-| color    | `String` | | The control bar color appearance. Any of [MDBootstrap Colors](/reference/colors#mdbootstrap-colors) variant or [Material Color](/reference/colors#material-colors) variants can be applied. |
+| color    | `String` | | The control bar color appearance. Any of [Colors](/reference/colors) variants can be applied. |
 | height   | `Number` | | Progress bar thickness. |
-| inner-cls   | `String` | | Optional, control bar css classes. <BsBadge color="info">v2.0.10</BsBadge> |
-| label   | `String` | | The ProgressBar text label. <BsBadge color="info">v2.0.10</BsBadge> |
-| label-alignment   | `String` | `'center'` | The ProgressBar text label alignment. Valid values are: `start`, `end`, `center`. <BsBadge color="info">v2.0.10</BsBadge> |
-| label-position   | `String` | `'top'` | The ProgressBar label position. Valid values are: `top`, `bottom`, `start`, `end`. <BsBadge color="info">v2.0.10</BsBadge> |
+| inner-cls   | `String` | | Optional, control bar css classes. <MdBadge color="info">v2.0.10</MdBadge> |
+| label   | `String` | | The ProgressBar text label. <MdBadge color="info">v2.0.10</MdBadge> |
+| label-alignment   | `String` | `'center'` | The ProgressBar text label alignment. Valid values are: `start`, `end`, `center`. <MdBadge color="info">v2.0.10</MdBadge> |
+| label-position   | `String` | `'top'` | The ProgressBar label position. Valid values are: `top`, `bottom`, `start`, `end`. <MdBadge color="info">v2.0.10</MdBadge> |
 | model-value <Badge type="tip">v-model</Badge> | `Number` | `0` | The value monitored by `v-model` to control the progress bar value. |
-| rounded-off  | `Boolean` | `false`  | Remove the rounded side border of the progress bar. <BsBadge color="info">v2.0.10</BsBadge> |
+| rounded-off  | `Boolean` | `false`  | Remove the rounded side border of the progress bar. <MdBadge color="info">v2.0.10</MdBadge> |
 | striped  | `Boolean` | `false` | Create striped progress bar. |
 | striped-animation | `Boolean` | `false` | Create animated stripe progress bar. |
 | show-value | `Boolean` | `false` | Display progress bar value as text label or not. |
-| value-position | `String` | `'inside'` | Adjust text label placement. Valid values are: `inside`, `top`, `bottom`, `start`, `end`. <BsBadge color="info">v2.0.3</BsBadge> |
+| value-position | `String` | `'inside'` | Adjust text label placement. Valid values are: `inside`, `top`, `bottom`, `start`, `end`. <MdBadge color="info">v2.0.3</MdBadge> |
 
 </div>
   </BsTab>
@@ -445,21 +433,17 @@ The component css variables inherited from
 <script setup lang="ts">
 import { ref } from 'vue';
 import type { TDataSource, TDataListSchemaProps } from 'vue-mdbootstrap';
-import { BsArrayStore } from 'vue-mdbootstrap';
+import { BsArrayStore, Helper } from 'vue-mdbootstrap';
 
 const tabs1active = ref(0);
 const progress1 = ref(25);
 const progress2 = ref(70);
-const progress3 = ref(25);
-const progress4 = ref(50);
-const progress5 = ref(65);
-const progress6 = ref(80);
+const progress3 = ref(80);
+const progress4 = ref(25);
+const progress5 = ref(50);
+const progress6 = ref(65);
 const progress7 = ref(80);
 const thickness1 = ref(5);
-const newYork = ref(72);
-const sanFransisco = ref(39);
-const sydney = ref(25);
-const singapore = ref(61);
 
 const position1 = ref('inside');
 const position2 = ref('top');
@@ -493,12 +477,11 @@ const position2Src: TDataSource = {
   ),
   schema: { displayField: 'text', valueField: 'id' } as TDataListSchemaProps
 };
-</script>
 
-<style>
-.dashboard-widgets .md-progress-wrapper + .value-label {
-  font-size: .8rem;
-  font-weight: 600;
-  margin-left: .5rem;
-}
-</style>
+const revenues = [
+  {city: 'New York', revenue: '72345'},
+  {city: 'San Fransisco', revenue: '39145'},
+  {city: 'Sidney', revenue: '25139'},
+  {city: 'Singapore', revenue: '61439'},
+]
+</script>

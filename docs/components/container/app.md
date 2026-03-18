@@ -1,6 +1,6 @@
 ---
 outline: [2, 3] 
-description: App container is a lightweight components which is used for your application containment. 
+description: App Container is a lightweight components which is used for your application containment. 
 ---
 
 # App Container
@@ -13,8 +13,6 @@ and the app layouts such as Navigation Bar and SideBar will be using Vue MDBoots
 then you need these components so that [BsAppbar](/components/container/appbar) and 
 [BsSideDrawer](/components/container/side-drawer) components can work properly.
 :::
-
-<SmallNote color="teal">Updated in v2.0.11</SmallNote>
 
 
 ## Basic Usage
@@ -121,7 +119,7 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | app  | `Boolean` | `false` | Mount the component as part of application container or just ordinary container. If mounted as part of application container, then it will adapt to `BsSideDrawer` and `BsAppbar` size. |
-| tag  | `String`  | `'div'` | Html tag used to render the component. |
+| tag  | `String`  | `'div'` | HTML tag used to render the component. |
 
 </div>
   </BsTab>
@@ -154,7 +152,7 @@ The `<bs-app-container>` tag still works, but has been deprecated since v2.0.11.
 | Property    | Type        | Default     | Description |
 |-------------|-------------|-------------|-------------|
 | app  | `Boolean` | `false`  | If `true`, then the component will be wrapped by `BsContainer`. |
-| tag  | `String`  | `'main'` | Html tag used to render the component. |
+| tag  | `String`  | `'main'` | HTML tag used to render the component. |
 
 </div>
   </BsTab>

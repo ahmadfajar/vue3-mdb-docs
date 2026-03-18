@@ -145,7 +145,7 @@ export const sidebar = [
         ],
       },
       {
-        text: 'Progress Control',
+        text: 'Progress',
         collapsed: true,
         items: [
           { text: 'Progress', link: '/components/progress-controls/progress' },
