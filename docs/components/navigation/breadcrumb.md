@@ -40,7 +40,7 @@ const items1 = [
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
 **BsBreadcrumb** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/breadcrumb/) 
 classes. However, since v2.2.0, **BsBreadcrumb** no longer uses Bootstrap CSS. This improvement 
-allows **BsBreadcrumb** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+allows **BsBreadcrumb** to work seamlessly with the TailwindCSS and Bootstrap CSS frameworks.
 :::
 
 ## Icons

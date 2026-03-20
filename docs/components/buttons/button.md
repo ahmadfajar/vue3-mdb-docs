@@ -60,7 +60,7 @@ specifications. Featuring with many options, making it easy to adjust to your ne
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
 - **BsButton** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/buttons/) 
   classes. However, since v2.2.0, **BsButton** no longer uses Bootstrap CSS. This improvement 
-  allows **BsButton** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+  allows **BsButton** to work seamlessly with the TailwindCSS and Bootstrap CSS frameworks.
 - The bundle only provide contextual color variants. It is located
   at `dist/theme-light.css` and `dist/theme-dark.css` files. If the component style
   and color doesn't suit to your needs, you can customize it using the component's 
@@ -1517,7 +1517,7 @@ use 'vue-mdbootstrap/scss/mixins/button';
 | icon-variant  | `String`  | `'outlined'` | Use predefined icon style variant. Valid values are: `outlined`, `rounded`, `sharp`, `filled`, `outlined_filled`, `rounded_filled`, and `sharp_filled`. <MdBadge color="info">v2.1.0</MdBadge> <br /><br />See [Icon](#icon) section for details. |
 | mode     | `String`  | `'default'` | Create the component with spesific style variant. Valid values are: `default`, `icon`, `fab`. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** button style. |
-| pill <Badge type="warning">deprecated</Badge> | `Boolean` | `true`  | Enable ***rounded-pill*** button style. |
+| pill <Badge type="warning">deprecated</Badge> | `Boolean` | `true`  | Enable ***rounded-pill*** button style. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | pill-off | `Boolean` | `false`  | Disable ***rounded-pill*** button style. <MdBadge color="info">v2.2.0</MdBadge> |
 | raised   | `Boolean` | `false` | Enable ***elevated*** button style. |
 | readonly | `Boolean` | `false`  | The component state. <MdBadge color="info">v2.0.0</MdBadge> |

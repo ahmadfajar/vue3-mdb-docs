@@ -9,6 +9,7 @@ description: Tabs is a component used for creating a pseudo-navigation for a pag
 **BsTabs** is a component used for creating a pseudo-navigation for a page.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
 ## Overview
 

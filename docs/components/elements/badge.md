@@ -51,7 +51,7 @@ adding context to just about any content.
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
 - **BsBadge** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/badge/) 
   classes. However, since v2.2.0, **BsBadge** no longer uses Bootstrap CSS. This improvement 
-  allows **BsBadge** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+  allows **BsBadge** to work seamlessly with the TailwindCSS and Bootstrap CSS frameworks.
 - The bundle only provide contextual color variants. It is located
   at `dist/theme-light.css` and `dist/theme-dark.css` files. If the component style
   and color doesn't suit to your needs, you can customize it using the component's 
@@ -84,8 +84,8 @@ appearance of a badge. If no variant is specified, the `color` property is used.
 :::
 
 If you wish to use color different variation, you can change its appearance by explicitly 
-define the value of `color` property. Any [color variants](/reference/colors#additional-colors) 
-can be applied to the `color` property.
+define the value of `color` property. Any [additional color](/reference/colors#additional-colors)
+variants can be applied to the `color` property.
 
 ::: BlockVue {title="Badge Colors"}
 

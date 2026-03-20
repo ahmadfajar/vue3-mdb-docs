@@ -62,7 +62,7 @@ Landscape orientation only works on medium screen size and above.
 :::
 
 
-## Color Style
+## Custom Color
 
 `<bs-date-picker>` color styles can be customize using properties: `header-color`, `button-color`,
 `selected-color`, `surface-class`.

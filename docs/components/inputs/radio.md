@@ -106,8 +106,6 @@ With `<bs-radio-group>`, collection of `<bs-radio>` can be arranged in multi-col
 When the number of `<bs-radio>` exceed the number of maximum columns, then the remaining 
 `<bs-radio>` will be placed on the next row.
 
-<SmallNote color="teal">Updated in v2.0.0</SmallNote>
-
 ::: BlockVue {title="Radio Group Multicolumn" file="./docs/components/inputs/js/radio-3.js"}
 
 ```vue
@@ -279,7 +277,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | items <Badge type="danger">required</Badge> | `TRadioInputProps[]` |  | The configuration option to construct the `<bs-radio>`. |
 | model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number` |  | The component value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |

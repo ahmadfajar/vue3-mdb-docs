@@ -472,8 +472,8 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | color         | `String`  | `'default'` | The component's color appearance. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 375px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | disabled      | `Boolean` | `false`     | Sets the component into disable state and sets the `<input>` element `disabled` attribute. |
 | id            | `String`  |  | Sets the `<input>` element `ID` attribute. This property value is auto generates. |
-| inset-mode <Badge type="warning">deprecated</Badge> | `Boolean` | `false`     | Sets the switch style appearance to ***Inset***. <div class="pt-2">Use `variant` instead.</div> |
-| inset-outlined <Badge type="warning">deprecated</Badge> | `Boolean` | `false`    | Sets the switch style appearance to ***Outline Inset***. <div class="pt-2">Use `variant` instead.</div> |
+| inset-mode <Badge type="warning">deprecated</Badge> | `Boolean` | `false`     | Sets the switch style appearance to ***Inset***. <MdBadge color="info">Updated in v2.2.1</MdBadge> <div class="pt-2">Use `variant` instead.</div> |
+| inset-outlined <Badge type="warning">deprecated</Badge> | `Boolean` | `false`    | Sets the switch style appearance to ***Outline Inset***. <MdBadge color="info">Updated in v2.2.1</MdBadge> <div class="pt-2">Use `variant` instead.</div> |
 | label-class    | `String`&#124;`String[]` |  | Additional css class for the text label. |
 | label-position | `String` | `'right'`   | The switch text label position, valid values are: `left`, `right`. |
 | model-value <Badge type="tip">v-model</Badge> | `String`&#124;`Number`&#124;`Boolean` |  | The value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |

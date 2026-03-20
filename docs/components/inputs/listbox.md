@@ -505,7 +505,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | checkbox-color    | `String`  | `'default'` | Sets the Listbox checkbox color. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3" style="min-width: 400px">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger` and `info`.</div> |
 | checkbox-position | `String`  | `'left'`    | Sets the Listbox checkbox position. Valid values are: `left`, `right`. |
 | circle-image      | `Boolean` | `false`     | Display image with **_circle_** shape for each item that has image property. |
-| color <Badge type="warning">deprecated</Badge>    | `String`      |  | Apply custom color the Listbox background. <div class="pt-3">Use global CSS variable instead.</div>|
+| color <Badge type="warning">deprecated</Badge>    | `String`      |  | Apply custom color the Listbox background. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Use global CSS variable instead.</div>|
 | data-source <Badge type="danger">required</Badge> | `TDataSource` |  | Sets the data source configuration. |
 | disabled            | `Boolean` | `false`   | Put the component in _disabled_ state and sets the `<select>` element `disabled` attribute. |
 | empty-data-message  | `String`  | `'No data to display.'` | Sets the **_no data message_** when the Listbox is empty. |

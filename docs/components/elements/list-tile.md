@@ -128,8 +128,6 @@ Sometimes our page may contains **_data list_** with complex structures. For exa
 we want to display a list of data which contains _image_, _title_, _description_ and
 another content. Example below will shows you how to create this complex data list structures.
 
-<SmallNote color="teal">Updated in v2.0.0</SmallNote>
-
 ::: BlockVue {title="ListTile MultiLine Content" file="./docs/components/elements/js/list-tile-2.js"}
 
 ```vue

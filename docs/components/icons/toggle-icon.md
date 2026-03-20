@@ -11,8 +11,6 @@ load icon from [Google Material Symbols](https://fonts.google.com/icons?icon.set
 dynamically.
 :::
 
-<SmallNote color="teal">Updated in v2.1.0</SmallNote>
-
 
 ## Overview
 

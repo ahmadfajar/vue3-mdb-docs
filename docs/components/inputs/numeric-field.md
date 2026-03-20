@@ -1,13 +1,13 @@
 ---
 outline: [2, 3] 
-description: Numeric Field is a component that let users enter numeric text into an UI.
+description: Numeric Field is a form field component that let users enter numeric text into an UI.
 ---
 
 # Numeric Field
 
 
 ::: lead
-**BsNumericField** is a component that let users enter numeric text into an UI.
+**BsNumericField** is a form field component that let users enter numeric text into an UI.
 :::
 
 
@@ -355,9 +355,6 @@ Use any valid android icon name from [Google Material Symbols](https://fonts.goo
 with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, 
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. 
-
-<SmallNote color="teal">Updated in v2.1.0</SmallNote>
-
 
 ::: BlockVue {clientOnly="true" title="Numeric Field with Icon"}
 
@@ -789,7 +786,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | model-value <Badge type="tip">v-model</Badge> | `Number` |  | Monitored by `v-model` to maintain this field value. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets `<input>` element `name` attribute. |
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | placeholder  | `String` |        | Sets the field placeholder. |
 | prefix       | `String` |        | Prepend inline non-modifiable text before the input field. <MdBadge color="info">v2.0.10</MdBadge> |

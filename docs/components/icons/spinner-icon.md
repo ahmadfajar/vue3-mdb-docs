@@ -1,5 +1,5 @@
 ---
-description: Spinner icon is component that is normally used for displaying loading indicator. 
+description: Spinner Icon is component that is normally used for displaying loading indicator. 
 --- 
 
 # Spinner Icon

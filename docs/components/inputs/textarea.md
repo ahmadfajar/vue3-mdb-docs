@@ -1,12 +1,12 @@
 ---
 outline: [2, 3] 
-description: TextArea is a component that let users enter a large amounts of text into an UI. 
+description: TextArea is a form field component that let users enter a large amounts of text into an UI. 
 ---
 
 # TextArea Field
 
 ::: lead
-**BsTextArea** is a component that let users enter a large amounts of text into an UI.
+**BsTextArea** is a form field component that let users enter a large amounts of text into an UI.
 :::
 
 
@@ -342,8 +342,6 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. 
 
-<SmallNote color="teal">Updated in v2.1.0</SmallNote>
-
 ::: BlockVue {title="TextArea with Icon"}
 
 ```vue
@@ -449,7 +447,7 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 The following is an example that demonstrate more advanced use of the `<bs-text-area>` 
 with form validation.
 
-::: BlockVuelidate {clientOnly="true" title="Text Area advanced example" file="./docs/components/inputs/js/textarea-3.js"}
+::: BlockVuelidate {clientOnly="true" title="Text Area Usage" file="./docs/components/inputs/js/textarea-3.js"}
 
 ```vue
 <template>
@@ -713,7 +711,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | name        | `String`  |  | Sets `<textarea>` element `name` attribute. |
 | no-resize   | `Boolean` | `false`  | Disable resizing the `<textarea>` element. When set, the browser's resize handle will be disabled which prevents the user from changing the height of the `<textarea>` element. |
 | outlined    | `Boolean` | `false`  | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | placeholder  | `String` |        | Sets the field placeholder. |
 | prepend-icon | `String` |        | <div style="min-width:400px">Sets icon to display at the inner left side. <MdBadge color="info">Updated in v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |

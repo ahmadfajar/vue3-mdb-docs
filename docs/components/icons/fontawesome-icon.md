@@ -1,15 +1,15 @@
 ---
-description: FontawesomeIcon is small and lightweight component which can be used inside almost any component or html element and the icon is loaded from Font Awesome dynamically. 
+description: FontawesomeIcon is small and lightweight component which can be used inside almost any component or HTML element. FontawesomeIcon loads Font Awesome free icons dynamically. 
 --- 
 
 # Font Awesome Icon
 
 ::: lead
 **BsFontawesomeIcon** is small and a lightweight component. It can be used inside almost
-any component or html element. **BsFontawesomeIcon** loads *Font Awesome* free icons dynamically.
+any component or HTML element. **BsFontawesomeIcon** loads *Font Awesome* free icons dynamically.
 :::
 
-<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+<SmallNote color="teal">Updated in v2.2.1</SmallNote>
 
 
 ## Overview

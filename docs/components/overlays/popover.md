@@ -5,7 +5,7 @@ description: Popover is a lightweight component which is used as a popup contain
 # Popover
 
 :::lead
-**bs-popover** is a lightweight component which is used as a popup container.
+**BsPopover** is a lightweight component which is used as a popup container.
 :::
 
 
@@ -70,6 +70,7 @@ const enableHints = ref(true);
 const show1 = ref(false);
 const activator1 = ref<ComponentPublicInstance | null>(null);
 </script>
+
 ```
 :::
 

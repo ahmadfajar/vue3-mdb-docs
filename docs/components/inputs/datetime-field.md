@@ -588,8 +588,6 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. 
 
-<SmallNote color="teal">Updated in v2.1.0</SmallNote>
-
 ::: BlockVue {clientOnly="true" title="DateTime Field with Icon" file="./docs/components/inputs/js/datetime-field-16.js"}
 
 ```vue
@@ -918,11 +916,11 @@ function cancel() {
 | name          | `String`  |         | Sets `<input>` element `name` attribute. |
 | open-on-hover | `Boolean` | `false` | Display the Date picker when mouse hover the component. |
 | outlined      | `Boolean` | `false` | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | picker-button      | `String` | `'dark'` | Sets calendar `date`, `month`, `year` `time` and `navigation` button color. <MdBadge color="info">v2.2.0</MdBadge> <div class="pt-3">Built-in color variants are: `default`, `primary`, `secondary`, `success`, `warning`, `danger`, `info`, `light` and `dark`.</div> |
 | picker-cls         | `String`&#124;`String[]`  | `'rounded shadow'` | Additional Popover css classes. |
-| picker-color <Badge type="warning">deprecated</Badge> | `String`  |  | Apply custom background color to the Date picker container. <div class="pt-3">Use `surface-cls` instead.</div> |
+| picker-color <Badge type="warning">deprecated</Badge> | `String`  |  | Apply custom background color to the Date picker container. <MdBadge color="info">Updated in v2.2.0</MdBadge> <div class="pt-3">Use `surface-cls` instead.</div> |
 | picker-mode        | `String`  | `'date'` | The Date picker view mode, valid values are: `date`, `month`, `year` or `time`. <MdBadge color="info">v2.0.0</MdBadge> |
 | picker-placement   | `String`  | `'bottom-left'` | The Date picker popup display placement. Valid values are: `top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`. |
 | picker-selected-color | `String` | `'primary'` | Sets selected calendar `date`, `month`, `year` and `time` button color. <MdBadge color="info">v2.2.0</MdBadge> <div class="pt-3">Default is interpolated from `header-color`.</div> |

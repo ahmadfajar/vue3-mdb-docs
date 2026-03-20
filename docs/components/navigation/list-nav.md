@@ -50,24 +50,25 @@ use `<bs-list-nav-item>` to compose the navigation menus. The navigation menus c
 ```
 :::
 
-::: tip <BsIcon icon="tips_and_updates" /> <span class="ms-2 h6 mb-0">TIP</span>
-See [BsIcon](/components/icons/icon) to learn more about how to apply **Google Material Icons**
-to the `icon` property.
+::: info <BsIcon icon="info_outlined" /> <span class="ms-2 h6 mb-0">INFO</span>
+- See [BsIcon](/components/icons/icon) to learn more about how to apply **Google Material Symbols**
+to the `icon` property. 
+- Since Vue MDBootstrap v2.1.0, [Google Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons) are replaced with [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols). 
 :::
-
-<!-- @include: @/components/icon-migration-info.md --> 
 
 
 ## Styling
 
-### Color {#styling-color}
+### Custom Color {#styling-custom-color}
 
-We can also make `<bs-list-nav>` to have a background color other than _white_. To achieve this,
-we need to set the `color` property of `<bs-list-view>` component to the desired _color name_.
+We can also make `<bs-list-nav>` to have different background color. To achieve this,
+just style the parent container with the desired background color then use local CSS 
+variables to set the navigation's item color or use global CSS variables for 
+consistent application UI color.
 
 <SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
-::: BlockVue {title="ListNav Styles - Color"}
+::: BlockVue {title="ListNav Styles - Custom Color"}
 
 ```vue
 <template>
@@ -79,16 +80,36 @@ we need to set the `color` property of `<bs-list-view>` component to the desired
       </bs-appbar>
       <bs-list-view class="listview-custom">
         <bs-list-nav>
-          <bs-list-nav-item icon="folder" label="My Files" url="#color"></bs-list-nav-item>
+          <bs-list-nav-item 
+            icon="folder" 
+            label="My Files" 
+            url="#styling-custom-color"
+          ></bs-list-nav-item>
           <bs-list-nav-item
             icon="folder-shared"
             label="Shared with me"
-            url="#color"
+            url="#styling-custom-color"
           ></bs-list-nav-item>
-          <bs-list-nav-item icon="star" label="Starred" url="#color"></bs-list-nav-item>
-          <bs-list-nav-item icon="upload" label="Upload" url="#color"></bs-list-nav-item>
-          <bs-list-nav-item icon="cloud_upload" label="Backup" url="#color"></bs-list-nav-item>
-          <bs-list-nav-item icon="delete" label="Trash" url="#color"></bs-list-nav-item>
+          <bs-list-nav-item 
+            icon="star" 
+            label="Starred" 
+            url="#styling-custom-color"
+          ></bs-list-nav-item>
+          <bs-list-nav-item 
+            icon="upload" 
+            label="Upload" 
+            url="#styling-custom-color"
+          ></bs-list-nav-item>
+          <bs-list-nav-item 
+            icon="cloud_upload" 
+            label="Backup" 
+            url="#styling-custom-color"
+          ></bs-list-nav-item>
+          <bs-list-nav-item 
+            icon="delete" 
+            label="Trash" 
+            url="#styling-custom-color"
+          ></bs-list-nav-item>
         </bs-list-nav>
       </bs-list-view>
     </bs-card>
@@ -407,6 +428,7 @@ navigation menus.
     </bs-card>
   </bs-app>
 </template>
+
 ```
 :::
 
@@ -415,7 +437,7 @@ navigation menus.
 
 `<bs-list-nav>` can also be used inside `<bs-side-drawer>` to create side navigation menus.
 
-::: BlockVue {title="ListNav Inside SideDrawer Example" clientOnly="true" file="./docs/components/container/js/side-drawer-1.js"}
+::: BlockVue {title="ListNav Inside SideDrawer" clientOnly="true" file="./docs/components/container/js/side-drawer-1.js"}
 
 ```vue
 <template>

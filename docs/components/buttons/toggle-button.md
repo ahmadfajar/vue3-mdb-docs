@@ -532,7 +532,8 @@ const albums = [
 
 ## CSS Variables
 
-The component css variables inherited from [BsButton](/components/buttons/button#css-variables) css variables.
+The component CSS variables are inherited from [BsButton](/components/buttons/button#css-variables) 
+CSS variables.
 
 <SmallNote color="teal">Updated in v2.2.0</SmallNote>
 
@@ -554,8 +555,8 @@ The component css variables inherited from [BsButton](/components/buttons/button
 | multiple | `Boolean` | `false` | Enable multiple selection mode. The default is single selection mode. |
 | name     | `String`  |         | The `<input>` element name. |
 | outlined | `Boolean` | `false` | Enable ***outlined*** toggle button style. |
-| pill <Badge type="warning">deprecated</Badge> | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. |
-| pill-off | `Boolean` | `false`  | Disable ***rounded-pill*** button style. <MdBadge color="info">v2.2.0</MdBadge> |
+| pill <Badge type="warning">deprecated</Badge> | `Boolean` | `true`  | Enable ***rounded-pill*** toggle button style. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
+| pill-off | `Boolean` | `false`  | Disable ***rounded-pill*** toggle button style. <MdBadge color="info">v2.2.0</MdBadge> |
 | raised   | `Boolean` | `false` | Enable ***elevated*** toggle button style. |
 | readonly | `Boolean` | `false` | The component state. |
 | rounded  | `Boolean` | `false` | Enable ***rounded*** toggle button style. <MdBadge color="info">v2.0.0</MdBadge> |

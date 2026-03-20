@@ -105,8 +105,6 @@ With `<bs-checkbox-group>`, collection of `<bs-checkbox>` can be arranged in mul
 When the number of `<bs-checkbox>` exceed the number of maximum columns, then the remaining 
 `<bs-checkbox>` will be placed on the next row.
 
-<SmallNote color="teal">Updated in v2.0.0</SmallNote>
-
 ::: BlockVue {title="Checkbox Group Multicolumn" file="./docs/components/inputs/js/checkbox-3.js"}
 
 ```vue

@@ -83,9 +83,9 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 ```css
 .md-divider {
+  --md-divider-color: oklch(0 0 0 / 0.15);
   --md-divider-height: 1px;
   --md-divider-margin-y: 0.25rem;
-  --md-divider-color: oklch(0 0 0 / 0.15);
 }
 
 ```
@@ -99,10 +99,10 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 
 | Property     | Type        | Default  | Description |
 |--------------|-------------|----------|-------------|
-| dark         | `Boolean`   | `false`  | Define explicitly when is placed inside element with dark background. |
-| left-indent  | `Number`&#124;`String` |    | Indentation from left side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
-| right-indent | `Number`&#124;`String` |    | Indentation from right side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
-| thickness    | `Number`&#124;`String` |    | Divider thickness. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em`, or `rem`). |
+| dark         | `Boolean`   | `false`  | Define explicitly when is placed inside element with dark background. <MdBadge color="info">Updated in v2.2.1</MdBadge> |
+| left-indent  | `Number`&#124;`String` |    | Indentation from left side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em` or `rem`). |
+| right-indent | `Number`&#124;`String` |    | Indentation from right side. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em` or `rem`). |
+| thickness    | `Number`&#124;`String` |    | Divider thickness. Numbers get converted to pixel. Any other value must include the units (such as `px`, `em` or `rem`). |
 
 </div>
   </BsTab>

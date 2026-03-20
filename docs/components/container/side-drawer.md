@@ -91,7 +91,7 @@ function toggleSideDrawer1(value: boolean) {
 **BsSideDrawer** support 2 position location: ***left*** and ***right***. Use 
 `position` property with value `left` or `right` to change the position location. 
 
-<SmallNote color="teal">Added since v2.0.0</SmallNote>
+<SmallNote color="teal">Added in v2.0.0</SmallNote>
 
 ::: BlockVue {title="Side Drawer Location" clientOnly="true" file="./docs/components/container/js/side-drawer-2.js"}
 
@@ -240,6 +240,7 @@ import { ref } from 'vue';
 
 const miniSideDrawer1 = ref(false);
 </script>
+
 ```
 :::
 
@@ -298,6 +299,7 @@ function toggleSideDrawer3(value: boolean) {
   openSideDrawer3.value = !value;
 }
 </script>
+
 ```
 :::
 
@@ -351,6 +353,7 @@ function toggleSideDrawer4(value: boolean) {
   openSideDrawer4.value = !value;
 }
 </script>
+
 ```
 :::
 
@@ -400,7 +403,7 @@ As CSS technology evolves, Vue MDBootstrap introduces global CSS variables for b
 | overlay-color | `String` | `'#000'` | The backdrop overlay color when the component is displayed as modal. The value must be in hexa-decimal color format. <MdBadge color="info">v2.0.0</MdBadge> |
 | position      | `String` | `'left'`   | The component position location. Valid values are: `left`, `right`. <MdBadge color="info">v2.0.0</MdBadge> |
 | shadow        | `Boolean`| `false`    | Add shadow effect to the component. |
-| tag           | `String` | `'aside'`  | Html tag used to render the component. |
+| tag           | `String` | `'aside'`  | HTML tag used to render the component. |
 | width         | `Number` | `250`      | The component width in pixel. |
 
 </div>

@@ -17,6 +17,7 @@ Released: March XX, 2026
 - **BsColorPicker**: 
   - Add property `mode-button-tonal`.
   - Improve input fields.
+- **BsDivider**: improve color when `dark` property is defined.  
 - **BsFontawesomeIcon**:
   - Update the valid value of `variant` property to `solid`, `regular` and `brands`. 
     See [Font Awesome](https://fontawesome.com/search?ic=free-collection) free icons documentation for details.
@@ -173,6 +174,7 @@ Released: February 02, 2026
 ### Breaking Changes
 
 - **BsAlert**: remove deprecated properties: `iconType`, `solidFill`.
+- **BsButton**: mark `pill` property as **deprecated**.
 - **BsCheckboxGroup**, **BsRadioGroup**, **BsChipField**: 
   - Remove deprecated property `externalValidator`.
   - Mark `persistent-help-text` property as **deprecated**.

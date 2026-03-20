@@ -22,16 +22,6 @@
   }
 }
 
-// Layout z-index
-//--------------------------------------------------------------------------
-:root {
-  --vp-z-index-local-nav: 1020;
-  --vp-z-index-nav: 1030;
-  --vp-z-index-layout-top: 1040;
-  --vp-z-index-backdrop: 1050;
-  --vp-z-index-sidebar: 1060;
-}
-
 // Colors
 //--------------------------------------------------------------------------
 :root {
@@ -88,6 +78,16 @@
   --doc-custom-text-2: oklch(94.297% 0.01349 286.028 / 0.6);
 }
 
+// Layout z-index
+//--------------------------------------------------------------------------
+:root {
+  --vp-z-index-local-nav: 1015;
+  --vp-z-index-nav: 1016;
+  --vp-z-index-layout-top: 1018;
+  --vp-z-index-backdrop: 1019;
+  --vp-z-index-sidebar: 1020;
+}
+
 @media (min-width: 640px) {
   :root {
     --vp-home-hero-image-filter: blur(56px);
@@ -97,7 +97,7 @@
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: blur(72px);
-    --vp-z-index-sidebar: 1025;
+    --vp-z-index-sidebar: 1015;
   }
 }
 

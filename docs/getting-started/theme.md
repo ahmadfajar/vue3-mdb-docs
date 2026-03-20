@@ -1,7 +1,7 @@
 # Theme Customization 
 
 ::: lead 
-Vue MDBootstrap comes with standard support for light and dark variants. And can easily
+Vue MDBootstrap comes with standard support for light and dark theme. And can easily
 customize your application’s default text colors, surfaces, and more. 
 ::: 
 
@@ -11,7 +11,7 @@ customize your application’s default text colors, surfaces, and more.
 
 Since **version 2.2.0**, Vue MDBootstrap has introduced unified global CSS variables to 
 maintain UI color consistency and can be easily modified to suit your needs. Furthermore, 
-it uses a CSS layer that's compatible with TailwindCSS.
+it uses a CSS layer that is compatible with TailwindCSS.
 
 ::: code-group
 

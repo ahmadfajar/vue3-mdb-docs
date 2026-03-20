@@ -62,7 +62,6 @@ use arrow key **left/right** as navigation.
       ref="lightbox1"
       v-model:open="showGalleryItems1"
       :items="galleryItems1"
-      z-index="2000"
     ></bs-lightbox>
   </div>
 </template>
@@ -165,7 +164,6 @@ you must set the source type correctly on the Lightbox data source.
       :items="galleryItems2"
       :show-item-title="false"
       thumbnail-height="62"
-      z-index="2000"
     ></bs-lightbox>
   </div>
 </template>
@@ -312,7 +310,6 @@ buttons. The buttons that don't provide any actions are: **download**,
       v-model:open="showGalleryItems4"
       :items="galleryItems4"
       :toolbar="buttons"
-      z-index="2000"
     >
       <template #menubar>
         <bs-list-view>

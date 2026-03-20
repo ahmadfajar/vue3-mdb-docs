@@ -76,8 +76,6 @@ other components.
 the menu items color can be set via local CSS variables. Or use global CSS variables 
 for consistent application UI color.
 
-<SmallNote color="teal">Updated in v2.2.0</SmallNote>
-
 ::: BlockVue {title="DropdownMenu Color"}
 
 ```vue
@@ -91,7 +89,7 @@ for consistent application UI color.
             <a class="dropdown-item" href="#color">First Action</a>
             <a class="dropdown-item" href="#color">Second Action</a>
             <a class="dropdown-item" href="#color">Third Action</a>
-            <bs-divider></bs-divider>
+            <bs-divider dark></bs-divider>
             <a class="dropdown-item" href="#color">Other Action</a>
             <a class="dropdown-item disabled" href="#color">Another Action</a>
           </div>
@@ -119,6 +117,9 @@ for consistent application UI color.
 ```
 :::
 
+::: warning <BsIcon icon="report_sharp" /><span class="ms-2 h6 mb-0">IMPORTANT</span>
+The `color` property has been marked as deprecated since v2.2.0.
+:::
 
 ## Display on Hover
 
@@ -345,12 +346,9 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 ```scss [Global CSS]
 :root {
   --border-translucent: oklch(0.88 0.001 17.18 / 0.75);
-
   --navigation-item-foreground: var(--foreground);
   --navigation-item-active-background: #{vars.$default-active-bgcolor};
-  --navigation-item-active-foreground: #{helper.to-oklch(
-      color.change(color.scale(vars.$default-active-bgcolor, $lightness: -10%), $alpha: 1)
-    )};
+  --navigation-item-active-foreground: #{helper.to-oklch(color.change(color.scale(vars.$default-active-bgcolor, $lightness: -10%), $alpha: 1))};
   --navigation-item-hover-background: #{vars.$default-hover-bgcolor};
   --navigation-item-hover-foreground: var(--foreground);
 }

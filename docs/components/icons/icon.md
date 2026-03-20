@@ -10,8 +10,6 @@ any component or html element. **BsIcon** loads icon from
 [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) dynamically.
 :::
 
-<SmallNote color="teal">Updated on v2.1.0</SmallNote>
-
 
 ## Overview
 

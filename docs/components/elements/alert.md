@@ -36,7 +36,7 @@ change its color and add some emotional weight.
 ::: info <BsIcon icon="info_outlined" /><span class="ms-2 h6 mb-0">INFO</span>
 - **BsAlert** originally used [Bootstrap CSS](https://getbootstrap.com/docs/5.2/components/alerts/) 
   classes. However, since v2.2.0, **BsAlert** no longer uses Bootstrap CSS. This improvement 
-  allows **BsAlert** to work seamlessly with both TailwindCSS and Bootstrap CSS frameworks.
+  allows **BsAlert** to work seamlessly with the TailwindCSS and Bootstrap CSS frameworks.
 - The bundle only provide contextual color variants. It is located
   at `dist/theme-light.css` and `dist/theme-dark.css` files. If the component style
   and color doesn't suit to your needs, you can customize it using the component's 
@@ -348,7 +348,7 @@ function closeAlert() {
 ## CSS Variables
 
 As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on 
-`.md-card` for better customization.
+`.md-alert` for better customization.
 
 <SmallNote color="teal">Updated in v2.2.0</SmallNote>
 

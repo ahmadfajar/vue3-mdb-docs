@@ -521,8 +521,6 @@ In multiple selection mode, the selected items can be display as chips. Use prop
 can use `chip-color` property to set the chips color and `chip-outlined` or `chip-pill`
 to style the chips appearance.
 
-<SmallNote color="teal">Updated in v2.0.0</SmallNote>
-
 ::: BlockVue {clientOnly="true" title="Combobox Multi-Selection - Chips Mode" file="./docs/components/inputs/js/combobox-8.js"}
 
 ```vue
@@ -1055,8 +1053,6 @@ with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`,
 `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`. Suffix 
 `_filled` and `_outlined_filled` will display the same icon style variant. 
 
-<SmallNote color="teal">Updated in v2.1.0</SmallNote>
-
 ::: BlockVue {clientOnly="true" title="Combobox with Icon" file="./docs/components/inputs/js/combobox-14.js"}
 
 ```vue
@@ -1500,7 +1496,7 @@ onUnmounted(() => {
 | open-on-hover | `Boolean` | `false` | Display the Listbox when mouse hover the component. |
 | outlined      | `Boolean` | `false` | Create the component with **_outline style_** appearance. See [Google Material Design](https://material.io/components/text-fields) spec. |
 | parent-value  | `String`&#124;`Number`   |  | Sets the cascading combobox parent value. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | placeholder         | `String`  |         | Sets the field placeholder. |
 | prepend-icon       | `String`     |           | <div style="min-width:375px">Sets icon to display at the inner left side. <MdBadge color="info">Updated on v2.1.0</MdBadge> <br /> <br />Use any valid android icon name from [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) with or without a suffix. Valid suffixes are: `_outlined`, `_rounded`, `_sharp`, `_filled`, `_outlined_filled`, `_rounded_filled`, and `_sharp_filled`.</div> |
