@@ -6,7 +6,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
 </script>
 
 <template>
-  <ListGroup class="md-shadow mt-4">
+  <ListGroup class="shadow-sm mt-4">
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Animations:" />
       <ListGroup>
@@ -120,12 +120,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             just about any content.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="elements/breadcrumb">
-          <ListGroupItemTitle title="Breadcrumb" badge="v2.1.0" />
-          <ListGroupItemContent>
-            A component that indicate the current page's location within a navigational hierarchy.
-          </ListGroupItemContent>
-        </ListGroupItem>
         <ListGroupItem href="elements/divider">
           <ListGroupItemTitle title="Divider" />
           <ListGroupItemContent>
@@ -141,7 +135,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="elements/image-holder">
-          <ListGroupItemTitle title="Image Holder" />
+          <ListGroupItemTitle title="Image Placeholder" />
           <ListGroupItemContent>
             A lightweight component which is primarily used to create SVG shape to visualize image
             placeholder.
@@ -166,6 +160,13 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Icons:" />
       <ListGroup>
+        <ListGroupItem href="icons/fontawesome-icon">
+          <ListGroupItemTitle title="FontAwesome Icon" badge="v2.1.0" />
+          <ListGroupItemContent>
+            Small and lightweight component which can be used inside almost any component or html
+            element. The component loads <em>Font Awesome</em> free icons dynamically.
+          </ListGroupItemContent>
+        </ListGroupItem>
         <ListGroupItem href="icons/icon">
           <ListGroupItemTitle title="Icon" />
           <ListGroupItemContent>
@@ -174,21 +175,14 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             <strong>Google Material Symbols</strong> dynamically.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="icons/icon-fontawesome">
-          <ListGroupItemTitle title="Icon Font Awesome" badge="v2.1.0" />
-          <ListGroupItemContent>
-            Small and lightweight component which can be used inside almost any component or html
-            element and the icon is loaded from <strong>Font Awesome</strong> dynamically.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="icons/icon-spinner">
-          <ListGroupItemTitle title="Icon Spinner" badge="v2.0.0" />
+        <ListGroupItem href="icons/spinner-icon">
+          <ListGroupItemTitle title="Spinner Icon" badge="v2.0.0" />
           <ListGroupItemContent>
             An icon component that is normally used for displaying loading indicator.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="icons/icon-svg">
-          <ListGroupItemTitle title="Icon SVG" badge="v2.0.0" />
+        <ListGroupItem href="icons/svg-icon">
+          <ListGroupItemTitle title="SVG Icon" badge="v2.0.0" />
           <ListGroupItemContent>
             A lightweight component which is primarily used to embed SVG icon inline inside an html
             element and the SVG icon is loaded from
@@ -214,40 +208,10 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             off.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="inputs/radio">
-          <ListGroupItemTitle title="Radio Button" />
-          <ListGroupItemContent>
-            A component that let users select one option from a set of options.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="inputs/switch">
-          <ListGroupItemTitle title="Switch" />
-          <ListGroupItemContent>
-            A component that let users toggle the selection of an item on or off.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="inputs/textfield">
-          <ListGroupItemTitle title="Text Field" />
-          <ListGroupItemContent>
-            A component that let users enter text into an UI.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="inputs/textarea">
-          <ListGroupItemTitle title="TextArea Field" />
-          <ListGroupItemContent>
-            A component that let users enter a large amounts of text into an UI.
-          </ListGroupItemContent>
-        </ListGroupItem>
-        <ListGroupItem href="inputs/numeric-field">
-          <ListGroupItemTitle title="Numeric Field" />
-          <ListGroupItemContent>
-            A component that let users enter numeric text into an UI.
-          </ListGroupItemContent>
-        </ListGroupItem>
         <ListGroupItem href="inputs/chipfield">
           <ListGroupItemTitle title="Chip Field" />
           <ListGroupItemContent>
-            A component that let users enter arbitrary items, like <em>categories</em> or
+            A form field component that let users enter arbitrary items, like <em>categories</em> or
             <em>tags</em> into an UI to convey a small pieces of information.
           </ListGroupItemContent>
         </ListGroupItem>
@@ -258,17 +222,53 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             list.
           </ListGroupItemContent>
         </ListGroupItem>
+        <ListGroupItem href="inputs/datetime-field">
+          <ListGroupItemTitle title="DateTime Field" />
+          <ListGroupItemContent>
+            A fully featured date selection component that let users select a date, time, month,
+            year, or datetime.
+          </ListGroupItemContent>
+        </ListGroupItem>
         <ListGroupItem href="inputs/listbox">
           <ListGroupItemTitle title="Listbox" badge="v2.0.0" />
           <ListGroupItemContent>
             A component that let users select one or more items from a displayed list.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="inputs/datetime-field">
-          <ListGroupItemTitle title="DateTime Field" />
+        <ListGroupItem href="inputs/numeric-field">
+          <ListGroupItemTitle title="Numeric Field" />
           <ListGroupItemContent>
-            A fully featured date selection component that let users select a date, time, month,
-            year, or datetime.
+            A form field component that let users enter numeric text into an UI.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/radio">
+          <ListGroupItemTitle title="Radio Button" />
+          <ListGroupItemContent>
+            A component that let users select one option from a set of options.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/search-field">
+          <ListGroupItemTitle title="Search Field" />
+          <ListGroupItemContent>
+            A component that let users enter search keyword into an UI.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/switch">
+          <ListGroupItemTitle title="Switch Button" />
+          <ListGroupItemContent>
+            A component that let users toggle the selection of an item on or off.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/textfield">
+          <ListGroupItemTitle title="Text Field" />
+          <ListGroupItemContent>
+            A form field component that let users enter text into an UI.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="inputs/textarea">
+          <ListGroupItemTitle title="TextArea Field" />
+          <ListGroupItemContent>
+            A form field component that let users enter a large amounts of text into an UI.
           </ListGroupItemContent>
         </ListGroupItem>
         <ListGroupItem href="inputs/toggle-field">
@@ -278,17 +278,17 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             It is primarily used to visualize choices with different approach.
           </ListGroupItemContent>
         </ListGroupItem>
-        <ListGroupItem href="inputs/search-field">
-          <ListGroupItemTitle title="Search Field" />
-          <ListGroupItemContent>
-            A component that let users enter search keyword into an UI.
-          </ListGroupItemContent>
-        </ListGroupItem>
       </ListGroup>
     </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Navigation:" />
       <ListGroup>
+        <ListGroupItem href="navigation/breadcrumb">
+          <ListGroupItemTitle title="Breadcrumb" badge="v2.1.0" />
+          <ListGroupItemContent>
+            A component that indicate the current page's location within a navigational hierarchy.
+          </ListGroupItemContent>
+        </ListGroupItem>
         <ListGroupItem href="navigation/list-nav">
           <ListGroupItemTitle title="List Nav" />
           <ListGroupItemContent>
@@ -372,7 +372,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
       </ListGroup>
     </ListGroupItem>
     <ListGroupItem>
-      <ListGroupItemTitle tag="div" class="h5 mb-4" title="Progress Control:" />
+      <ListGroupItemTitle tag="div" class="h5 mb-4" title="Progress Controls:" />
       <ListGroup>
         <ListGroupItem href="progress-controls/progress">
           <ListGroupItemTitle title="Progresss" />

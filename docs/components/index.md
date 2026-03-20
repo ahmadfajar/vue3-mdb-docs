@@ -1,11 +1,11 @@
 ---
 prev:
-  text: 'Release Notes'
-  link: '/release-notes'
+  text: 'Starter Kit & Demos'
+  link: '/getting-started/starter-kit'
 
 next:
-  text: 'Alert'
-  link: '/components/alert'
+  text: 'Ripple'
+  link: '/components/animations/ripple'
 ---
 
 # Component Catalog

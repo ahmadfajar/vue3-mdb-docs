@@ -6,7 +6,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
 </script>
 
 <template>
-  <ListGroup class="md-shadow mt-4">
+  <ListGroup class="shadow-sm mt-4">
     <ListGroupItem href="global-api">
       <ListGroupItemTitle title="Global API" />
       <ListGroupItemContent>
@@ -39,7 +39,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
     <ListGroupItem href="colors">
       <ListGroupItemTitle title="Colors" />
       <ListGroupItemContent>
-        Various color classes provided by Vue MDBootstrap.
+        Various color variants and their CSS classes provided by Vue MDBootstrap.
       </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem href="shadows">

@@ -23,8 +23,8 @@ You only need to add one of the shadow classes to the chosen element.
 ::: BlockVue {title="Shadows Example"}
 
 ```html
-<div class="bg-white rounded-md-3 p-5 w-100">
-  <div class="d-flex flex-column flex-sm-row align-items-center justify-content-around gap-5 text-center mb-5">
+<div class="bg-white rounded-3 p-5 w-100">
+  <div class="flex flex-col flex-md-row items-center justify-around gap-5 text-center mb-5">
     <div class="md-shadow text-body rounded p-3" style="width: 160px">
       md-shadow
     </div>
@@ -35,7 +35,7 @@ You only need to add one of the shadow classes to the chosen element.
       md-shadow-2
     </div>
   </div>
-  <div class="d-flex flex-column flex-sm-row align-items-center justify-content-around gap-5 text-center">
+  <div class="flex flex-col flex-md-row items-center justify-around gap-5 text-center">
     <div class="md-shadow-3 text-body rounded p-3" style="width: 160px">
       md-shadow-3
     </div>
