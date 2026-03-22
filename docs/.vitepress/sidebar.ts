@@ -177,6 +177,7 @@ export const sidebar = [
           { text: 'Color', link: '/reference/classes/color' },
           { text: 'Helper', link: '/reference/classes/helper' },
           { text: 'StringHelper', link: '/reference/classes/stringhelper' },
+          { text: 'CacheManager', link: '/reference/classes/cachemanager' },
           { text: 'PopupManager', link: '/reference/classes/popupmanager' },
         ],
       },

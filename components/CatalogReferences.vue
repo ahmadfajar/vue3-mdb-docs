@@ -69,10 +69,17 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
             Static utility helper class for working with strings.
           </ListGroupItemContent>
         </ListGroupItem>
+        <ListGroupItem href="classes/cachemanager">
+          <ListGroupItemTitle title="CacheManager" badge="v2.2.0" />
+          <ListGroupItemContent>
+            A singleton instance that caches data objects in the sessionStorage 
+            if available, otherwise memory is used.
+          </ListGroupItemContent>
+        </ListGroupItem>
         <ListGroupItem href="classes/popupmanager">
           <ListGroupItemTitle title="PopupManager" />
           <ListGroupItemContent>
-            Singleton instance that help manage the popup elements.
+            A singleton instance that help manage the popup elements.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>

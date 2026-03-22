@@ -1,11 +1,11 @@
 ---
-description: Singleton instance that help manage the popup elements.
+description: A singleton instance that help manage the popup elements.
 ---
 
-# PopupManager Class
+# PopupManager
 
 ::: lead
-Singleton instance that help manage the popup elements. 
+A singleton instance that help manage the popup elements. 
 :::
 
 <div class="doc-api">
@@ -16,6 +16,7 @@ Singleton instance that help manage the popup elements.
 class PopupManager {
   static add(instance: ComponentInternalInstance, props: Readonly<TPopupOptions>, active: Ref<boolean>): void; 
 }
+
 ```
 
 Add any vue component instance that has `TPopupOptions` as its property to the PopupManager. 
@@ -32,6 +33,7 @@ Add any vue component instance that has `TPopupOptions` as its property to the P
 class PopupManager {
   static remove(instance: ComponentInternalInstance): void; 
 }
+
 ```
 
 Remove component instance that already exists in the PopupManager's data store. 
@@ -46,6 +48,7 @@ Remove component instance that already exists in the PopupManager's data store.
 class PopupManager {
   static findItem(instance: ComponentInternalInstance): number; 
 }
+
 ```
 
 Find an instance of a component in the PopupManager's data store and return 
@@ -61,6 +64,7 @@ its position index.
 class PopupManager {
   static closePopover(instance: ComponentInternalInstance, active: Ref<boolean>, message: string): void; 
 }
+
 ```
 
 Find component instance, trigger `close` event if it is found and remove it from 
@@ -78,6 +82,7 @@ the PopupManager's data store.
 class PopupManager {
   static preventScrolling(): void; 
 }
+
 ```
 
 Prevent document body from scrolling. This method is automatically called by `add()` 
@@ -90,6 +95,7 @@ method if the given component instance has overlay.
 class PopupManager {
   static allowScrolling(): void; 
 }
+
 ```
 
 Enable scrolling to the document body. This method is automatically called by `remove()` 
