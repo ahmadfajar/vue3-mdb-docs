@@ -12,7 +12,7 @@ Global API provided by **Vue MDBootstrap**.
 <SmallNote color="teal">Since v2.0.0</SmallNote>
 
 
-## createVueMdb
+## createVueMdb {#create-vue-mdb}
 
 Creates an application instance and register all components, plugins and directives.
 
@@ -20,7 +20,7 @@ Creates an application instance and register all components, plugins and directi
 function createVueMdb(rootComponent: Component): App
 ```
 
-### Example {#createvuemdb-example}
+### Example {#create-vue-mdb-example}
 
 With inline root component:
 
@@ -43,7 +43,7 @@ const app = createVueMdb(App);
 app.mount('#app');
 ```
 
-Standalone web page:
+Standalone web page: 
 
 ```html
 <!DOCTYPE html>
@@ -52,8 +52,9 @@ Standalone web page:
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
-  <link href="https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/bundle-core.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/theme-light.min.css" rel="stylesheet" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-mdbootstrap@2/dist/vue-mdb.umd.min.js" crossorigin="anonymous"></script>
 </head>
@@ -61,9 +62,10 @@ Standalone web page:
 <body>
   <div id="app" class="container">
     <h3 class="mt-4">Contextual Buttons</h3>
-    <bs-card class="bg-grey-200 border-0 mt-3">
+    <bs-card class="mt-4">
       <bs-card-body>
-        <div class="d-flex justify-content-center">
+        <div class="flex flex-wrap md-gap-3">
+          <bs-button @click="count++">Click me</bs-button>
           <bs-button color="primary" @click="count++">Click me</bs-button>
           <bs-button color="secondary" @click="count++">Click me</bs-button>
           <bs-button color="success" @click="count++">Click me</bs-button>
@@ -71,8 +73,8 @@ Standalone web page:
           <bs-button color="warning" @click="count++">Click me</bs-button>
           <bs-button color="info" @click="count++">Click me</bs-button>
         </div>
-        <div class="mt-3 text-center md-fw-semibold">Count: {{ count }}</div>
       </bs-card-body>
+      <bs-card-footer class="font-weight-semibold">Count: {{ count }}</bs-card-footer>
     </bs-card>
   </div>
   <script>
@@ -88,10 +90,11 @@ Standalone web page:
   </script>
 </body>
 </html>
+
 ```
 
 
-## useAxiosPlugin 
+## useAxiosPlugin {#use-axios-plugin}
 
 **Vue MDBootstrap** provides built-in **axios plugin** to perform HTTP request.
 This function retrieve axios plugin instance. Must be called within component or 
@@ -103,7 +106,7 @@ function useAxiosPlugin(): AxiosInstance | undefined
 
 See [axios library](https://axios-http.com/docs/api_intro) for the instance method details.
 
-### Example {#useaxiosplugin-example class="mb-4"}
+### Example {#use-axios-plugin-example class="mb-4"}
 
 ```ts
 import { useAxiosPlugin } from 'vue-mdbootstrap';
@@ -113,7 +116,7 @@ const response = await axios?.get("<api-url>");
 ```
 
 
-## useHttpService 
+## useHttpService {#use-http-service}
 
 Retrieve HTTP service plugin instance. This instance will forward all the HTTP request 
 task to the axios plugin. Must be called within component or within `<script setup>`. 
@@ -122,7 +125,7 @@ task to the axios plugin. Must be called within component or within `<script set
 function useHttpService(): IHttpService | undefined
 ```
 
-### Example {#usehttpservice-example class="mb-4"}
+### Example {#use-http-service-example class="mb-4"}
 
 ```ts
 import { useHttpService } from 'vue-mdbootstrap';
@@ -131,7 +134,7 @@ const http = useHttpService();
 const response = await http?.get("<api-url>");
 ```
 
-### Instance Method {#usehttpservice-methods class="mb-4"}
+### Instance Method {#use-http-service-methods class="mb-4"}
 
 <div class="doc-api">
 <ul>
@@ -147,8 +150,8 @@ Send _HTTP GET_ to the remote service.
 
 **Details**:
 * `url`: the API url
-* `data`: the data to be sent <span class="text-muted">(optional)</span>
-* `options`: Additional options <span class="text-muted">(optional)</span> 
+* `data`: the data to be sent <span class="text-subtle">(optional)</span>
+* `options`: Additional options <span class="text-subtle">(optional)</span> 
 
 </li>
 <li class="mt-4">patch() 
@@ -164,7 +167,7 @@ Send _HTTP PATCH_ to the remote service.
 **Details**:
 * `url`: the API url
 * `data`: the data to be sent 
-* `options`: Additional options <span class="text-muted">(optional)</span>
+* `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
 <li class="mt-4">post() 
@@ -180,7 +183,7 @@ Send _HTTP POST_ to the remote service.
 **Details**:
 * `url`: the API url
 * `data`: the data to be sent 
-* `options`: Additional options <span class="text-muted">(optional)</span>
+* `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
 <li class="mt-4">put() 
@@ -196,7 +199,7 @@ Send _HTTP PUT_ to the remote service.
 **Details**:
 * `url`: the API url
 * `data`: the data to be sent 
-* `options`: Additional options <span class="text-muted">(optional)</span>
+* `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
 <li class="mt-4">delete() 
@@ -211,14 +214,14 @@ Send _HTTP DELETE_ to the remote service.
 
 **Details**:
 * `url`: the API url
-* `data`: the data to be sent <span class="text-muted">(optional)</span>
-* `options`: Additional options <span class="text-muted">(optional)</span>
+* `data`: the data to be sent <span class="text-subtle">(optional)</span>
+* `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
 </ul>
 </div>
 
-## useVueMdbService 
+## useVueMdbService  {#use-vue-mdb-service}
 
 Shortcut to retrieve the VueMdb plugin instance.
 
@@ -226,7 +229,7 @@ Shortcut to retrieve the VueMdb plugin instance.
 function useVueMdbService(): TVueMdb | undefined 
 ```
 
-## useVueMdbNotification 
+## useVueMdbNotification {#use-vue-mdb-notification}
 
 Shortcut to retrieve the `INotificationProvider` instance. See 
 [Notification](/components/overlays/notification) component for more details.
@@ -235,7 +238,7 @@ Shortcut to retrieve the `INotificationProvider` instance. See
 function useVueMdbNotification(): INotificationProvider | undefined 
 ```
 
-### Example {#usevuemdbnotification-example class="mb-4"}
+### Example {#use-vue-mdb-notification-example class="mb-4"}
 
 ```ts
 import { useVueMdbNotification } from 'vue-mdbootstrap';
@@ -245,16 +248,7 @@ notification?.success("Your message");
 notification?.warning("Your message", "Message Title");
 ```
 
-## useCurrentRoute 
-
-Get current active route if exists. Returns current route location if 
-[Vue Router](https://router.vuejs.org/) instance already loaded.
-
-```ts
-function useCurrentRoute(): Ref<RouteLocationNormalizedLoaded> | undefined 
-```
-
-## useBreakpointMax 
+## useBreakpointMax {#use-breakpoint-max}
 
 Simple function to detect whether a device's screen is within allowable maximum 
 screen resolution. Returns `true` when the screen resolution is within allowable 
@@ -264,9 +258,9 @@ resolution otherwise `false`. Available breakpoints are: `xs`, `sm`, `md`, `lg`,
 function useBreakpointMax(breakpoint: TBreakpoint | number): boolean 
 ```
 
-See Bootstrap [Breakpoints](https://getbootstrap.com/docs/5.2/layout/breakpoints/) for more details.
+See Bootstrap [Breakpoints](https://getbootstrap.com/docs/5.3/layout/breakpoints/) for more details.
 
-### Example {#usebreakpointmax-example class="mb-4"}
+### Example {#use-breakpoint-max-example class="mb-4"}
 
 ```ts
 import { ref } from 'vue';
@@ -288,7 +282,7 @@ if (useBreakpointMax('lg')) {
 
 ```
 
-## useBreakpointMin 
+## useBreakpointMin {#use-breakpoint-min}
 
 Simple function to detect whether a device's screen is within allowable minimum 
 screen resolution. Returns `true` when the screen resolution is within allowable 
@@ -298,10 +292,10 @@ resolution otherwise `false`. Available breakpoints are: `xs`, `sm`, `md`, `lg`,
 function useBreakpointMin(breakpoint: TBreakpoint | number): boolean 
 ```
 
-See Bootstrap [Breakpoints](https://getbootstrap.com/docs/5.2/layout/breakpoints/) for more details.
+See Bootstrap [Breakpoints](https://getbootstrap.com/docs/5.3/layout/breakpoints/) for more details.
 
 
-### Example {#usebreakpointmin-example class="mb-4"}
+### Example {#use-breakpoint-min-example class="mb-4"}
 
 ```ts
 import { ref } from 'vue';
@@ -321,7 +315,7 @@ if (useBreakpointMin('xl')) {
 
 ```
 
-## useMobileDevice 
+## useMobileDevice {#use-mobile-device}
 
 Check whether it is using a mobile browser or not. Returns `true` if mobile 
 browser is used otherwise `false`.
@@ -330,7 +324,7 @@ browser is used otherwise `false`.
 function useMobileDevice(): boolean 
 ```
 
-## useAddResizeListener 
+## useAddResizeListener {#use-add-resize-listener}
 
 Simple function that use [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) 
 Web API to detect if an `Element`'s dimension was changed or not. Must be called 
@@ -340,7 +334,7 @@ within component or within `<script setup>`.
 function useAddResizeListener(el: IBindingElement, fn: CallableFunction): void 
 ```
 
-### Example {#useaddresizelistener-example class="mb-4"}
+### Example {#use-add-resize-listener-example class="mb-4"}
 
 ```ts
 import { useAddResizeListener } from 'vue-mdbootstrap';
@@ -357,7 +351,7 @@ onMounted(() => {
 
 ```
 
-## useRemoveResizeListener 
+## useRemoveResizeListener {#use-remove-resize-listener}
 
 Remove observer from an element and disconnect [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) 
 instance if no more element to observe. Must be called within component or within `<script setup>`.
@@ -366,7 +360,7 @@ instance if no more element to observe. Must be called within component or withi
 function useRemoveResizeListener(el: IBindingElement, fn?: CallableFunction): void 
 ```
 
-### Example {#useremoveresizelistener-example class="mb-4"}
+### Example {#use-remove-resize-listener-example class="mb-4"}
 
 ```ts
 import { useAddResizeListener, useRemoveResizeListener } from 'vue-mdbootstrap';
@@ -386,3 +380,203 @@ onBeforeUnmount(() => {
 });
 
 ```
+
+## useCurrentRoute {#use-current-route}
+
+Get current active route if exists. Returns current route location if 
+[Vue Router](https://router.vuejs.org/) instance already loaded.
+
+```ts
+function useCurrentRoute(): Ref<RouteLocationNormalizedLoaded> | undefined 
+```
+
+## useGenerateId {#use-genereate-id}
+
+Generate component's ID.
+
+```ts
+function useGenerateId(): string 
+
+```
+
+## useMergeClass {#use-merge-class}
+
+<SmallNote color="teal">Added in v2.1.0</SmallNote>
+
+Merge one or more CSS classes.
+
+```ts
+function useMergeClass(...args: (string | string[])[]): string[]
+
+```
+<div class="doc-api">
+
+**Details**:
+* `args`: The CSS classes to be merged.
+
+</div>
+
+## useRenderSlot {#use-render-slot}
+
+<SmallNote color="teal">Added in v2.1.0</SmallNote>
+
+Simple function to render a VNode with custom slot. If the custom slot doesn't exist 
+or `undefined` then the default `children` will be rendered. 
+
+```ts
+function useRenderSlot(
+  slots: Slots,
+  name: string,
+  props: Readonly<TRecord>,
+  children?: VNodeArrayChildren | VNode,
+  slotArgs?: TRecord
+): VNode
+
+```
+<div class="doc-api">
+
+**Details**:
+* `slots`: The slot instance
+* `name`: The slot name
+* `props`: VNode property, include slot identifier
+* `children`: The default VNode children to replace the slot <span class="text-subtle">(optional)</span> 
+* `slotArgs`: The argument for the given slot <span class="text-subtle">(optional)</span> 
+
+</div>
+
+## useRenderSVG {#use-render-svg}
+
+<SmallNote color="teal">Added in v2.1.0</SmallNote>
+
+Function to draw inline SVG xml directly.
+
+```ts
+function useRenderSVG(
+  data: string,
+  width: number,
+  height: number,
+  clazz: string | string[]
+): VNode
+
+```
+<div class="doc-api">
+
+**Details**:
+* `data`: The SVG xml string
+* `width`: The desired [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) width
+* `height`: The desired [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) height
+* `clazz`: Optional css class name
+
+</div>
+
+## useRenderTransition {#use-render-transition}
+
+<SmallNote color="teal">Added in v2.1.0</SmallNote>
+
+Simple function to render a Transition component.
+
+```ts
+function useRenderTransition(
+  props: Readonly<TransitionProps>,
+  children: VNodeArrayChildren | VNode,
+  asBlock?: boolean
+): VNode
+
+```
+<div class="doc-api">
+
+**Details**:
+* `props`: The transition properties
+* `children`: The child nodes
+* `asBlock`: Render the Transition as block VNode <span class="text-subtle">(optional)</span> 
+
+</div>
+
+## useWrapSlot {#use-wrap-slot}
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+Simple function to render a VNode with custom slot and wrap it with the given `wrapperTag` 
+and properties. If the custom slot doesn't exist or `undefined` then the default 
+`children` will be rendered inside the `wrapperTag`.
+
+```ts
+function useWrapSlot(
+  slots: Slots,
+  name: string,
+  key: string,
+  wrapperProps: Readonly<TRecord>,
+  children?: VNodeArrayChildren | VNode,
+  wrapperTag?: string,
+  slotArgs?: TRecord
+): VNode
+
+```
+<div class="doc-api">
+
+**Details**:
+* `slots`: The slot instance
+* `name`: The slot name
+* `key`: Fragment key identifier
+* `wrapperProps`: The VNode wrapper properties
+* `children`: The default VNode children to replace the slot <span class="text-subtle">(optional)</span> 
+* `wrapperTag`: Valid html tag name, default is `div` <span class="text-subtle">(optional)</span> 
+* `slotArgs`: The argument for the given slot <span class="text-subtle">(optional)</span> 
+
+</div>
+
+## useWrapSlotDefault {#use-wrap-slot-default}
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+Simple function to render an HTML tag as VNode or render default slot and wrap an 
+HTML tag around it.
+
+```ts
+function useWrapSlotDefault(
+  tag: string,
+  slots?: Slots,
+  classes?: string | string[],
+  styles?: TRecord
+): VNode
+
+```
+<div class="doc-api">
+
+**Details**:
+* `tag`: Valid HTML tag name
+* `slots`: The slot instance <span class="text-subtle">(optional)</span>
+* `classes`: Custom CSS classes to apply <span class="text-subtle">(optional)</span>
+* `styles`: Custom inline stylesheet to apply <span class="text-subtle">(optional)</span>
+
+</div>
+
+## useWrapSlotWithCondition {#use-wrap-slot-with-condition}
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Simple function to render a VNode with custom slot and wrap it with the given `wrapTag` 
+and properties. The VNode will be rendered if the given `condition` is matched.
+
+```ts
+function useWrapSlotWithCondition(
+  slots: Slots,
+  name: string,
+  condition: boolean,
+  wrapProps?: Readonly<TRecord>,
+  wrapTag?: string,
+  slotArgs?: TRecord
+): VNode | undefined
+
+```
+<div class="doc-api">
+
+**Details**:
+* `slots`: The slot instance
+* `name`: The slot name
+* `condition`: The given condition
+* `wrapProps`: The VNode wrapper properties <span class="text-subtle">(optional)</span>
+* `wrapTag`: Valid html tag name, default is `div` <span class="text-subtle">(optional)</span> 
+* `slotArgs`: The argument for the given slot <span class="text-subtle">(optional)</span> 
+
+</div>
