@@ -85,8 +85,8 @@ const results = myStore.sort([
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Method" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Methods">
 <div class="doc-api pt-3">
 <ul>
 <li><div class="h5">destroy</div>
@@ -522,7 +522,7 @@ Shortcut function to register `loaded` event listener.
 </ul>
 </div>
   </BsTab>
-  <BsTab label="Property" url="#api-reference">
+  <BsTab label="Properties">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Type | Description |
@@ -543,7 +543,7 @@ Shortcut function to register `loaded` event listener.
 
 </div>
   </BsTab>  
-  <BsTab label="Constructor" url="#api-reference">
+  <BsTab label="Constructor">
     <div class="pt-3 px-3 px-lg-0">
 
 ```ts
@@ -551,11 +551,13 @@ class BsArrayStore {
   constructor(data: unknown[], config?: TDataStoreConfig);
 }
 
-```  
+``` 
+<div class="doc-api">
+
 **Details**:
 -  `data`: Collection of records to be assigned.
--  `config`: The configuration options. <BsBadge color="info">Optional</BsBadge>
-
+-  `config`: The configuration options. <MdBadge color="info">Optional</MdBadge>
+</div>
 </div>
   </BsTab>
 </BsTabs>

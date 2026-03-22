@@ -336,8 +336,8 @@ export declare interface ISupplier extends Supplier {
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Method" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Methods">
 <div class="doc-api pt-3">
 <ul>
 <li><div class="h5">destroy</div>
@@ -557,7 +557,7 @@ overridden on inherited classes.
 </ul>
 </div>
   </BsTab>
-  <BsTab label="Property" url="#api-reference">
+  <BsTab label="Properties">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Type | Description |
@@ -567,14 +567,14 @@ overridden on inherited classes.
 | updating | `Boolean` | Readonly data Model state, whether it is still in the process of saving/updating data to the remote service or not. |
 | deleting | `Boolean` | Readonly data Model state, whether it is still in the process of deleting data from the remote service or not. |
 | hasError | `Boolean` | Readonly data Model state, whether there was an error when loading/saving/deleting data or not. |
-| csrfConfig | `Readonly<TCSRFConfig>`/`undefined` | Returns the CSRF configuration. |
+| csrfConfig | `Readonly<TCSRFConfig>`&#124;`undefined` | Returns the CSRF configuration. |
 | proxy    | `IRestAdapter` | Returns REST proxy adapter which is used to work with remote service. |
 | restUrl <Badge>Get/Set</Badge> | `TRestConfig`  | REST URL configuration. |
 | idProperty | `String` | Returns the ID field name for this data model. |
 
 </div>
   </BsTab>  
-  <BsTab label="Constructor" url="#api-reference">
+  <BsTab label="Constructor">
     <div class="pt-3 px-3 px-lg-0">
 
 ```ts
@@ -587,13 +587,15 @@ class BsModel {
   );
 }
 
-```  
+``` 
+<div class="doc-api">
+
 **Details**:
 -  `schema`: The data model schema.
--  `adapter`: Axios adapter instance. <BsBadge color="info">Optional</BsBadge>
--  `idProperty`: Data model ID field name, default is `id`. <BsBadge color="info">Optional</BsBadge>
--  `dataProperty`: REST response data property, default is `data`. <BsBadge color="info">Optional</BsBadge>
-
+-  `adapter`: Axios adapter instance. <MdBadge color="info">Optional</MdBadge>
+-  `idProperty`: Data model ID field name, default is `id`. <MdBadge color="info">Optional</MdBadge>
+-  `dataProperty`: REST response data property, default is `data`. <MdBadge color="info">Optional</MdBadge>
+</div>
 </div>
   </BsTab>
 </BsTabs>

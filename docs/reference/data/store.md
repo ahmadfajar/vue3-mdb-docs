@@ -203,8 +203,8 @@ dsStore.setSorters([{ property: 'fullName', direction: 'asc' }])
 
 ## API Reference
 
-<BsTabs v-model="tabs1active" variant="material" color="grey-700" class="doc-api-reference">
-  <BsTab label="Method" url="#api-reference">
+<BsTabs v-model="tabs1active" variant="md3" class="doc-api-reference">
+  <BsTab label="Methods">
 <div class="doc-api pt-3">
 <ul>
 <li><div class="h5">destroy</div>
@@ -718,7 +718,7 @@ Shortcut function to register `loaded` event listener.
 </ul>
 </div>
   </BsTab>
-  <BsTab label="Property" url="#api-reference">
+  <BsTab label="Properties">
 <div class="doc-table-responsive doc-table-3cols">
 
 | Name   | Type | Description |
@@ -728,8 +728,8 @@ Shortcut function to register `loaded` event listener.
 | updating | `Boolean` | Readonly data store state, whether it is still in the process of saving/updating data to the remote service or not. |
 | deleting | `Boolean` | Readonly data store state, whether it is still in the process of deleting data from the remote service or not. |
 | hasError | `Boolean` | Readonly data store state, whether there was an error when loading/saving/deleting data or not. |
-| proxy    | `IRestAdapter`/`undefined` | Returns REST proxy adapter which is used to work with remote service. |
-| adapterInstance | `AxiosInstance`/`undefined` | Returns the axios plugin adapter. |
+| proxy    | `IRestAdapter`&#124;`undefined` | Returns REST proxy adapter which is used to work with remote service. |
+| adapterInstance | `AxiosInstance`&#124;`undefined` | Returns the axios plugin adapter. |
 | restUrl <Badge>Get/Set</Badge> | `TRestConfig` | REST URL configuration. |
 | currentPage | `Number` | Returns active page number (base-1 index). |
 | pageSize <Badge>Get/Set</Badge> | `Number` | Number of items within a page. |
@@ -746,7 +746,7 @@ Shortcut function to register `loaded` event listener.
 
 </div>
   </BsTab>  
-  <BsTab label="Constructor" url="#api-reference">
+  <BsTab label="Constructor">
     <div class="pt-3 px-3 px-lg-0">
 
 ```ts
@@ -754,11 +754,13 @@ class BsStore {
   constructor(config: TDataStoreConfig, adapter?: AxiosInstance | null);
 }
 
-```  
+``` 
+<div class="doc-api">
+
 **Details**:
 -  `config`: The configuration options.
--  `adapter`: Axios adapter instance. <BsBadge color="info">Optional</BsBadge>
-
+-  `adapter`: Axios adapter instance. <MdBadge color="info">Optional</MdBadge>
+</div>
 </div>
   </BsTab>
 </BsTabs>

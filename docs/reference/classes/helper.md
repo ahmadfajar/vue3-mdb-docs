@@ -252,7 +252,7 @@ Converts `number` or `string` to any valid html css unit size. Returns Css inlin
 
 **Details**:
 * `value`: The value to convert
-* `unit`: The css unit dimension to add as suffix, default `px`.
+* `unit`: The css unit dimension to add as suffix, default `px`. <MdBadge color="info">Optional</MdBadge>
 
 ## sortArrayObj
 
@@ -266,8 +266,8 @@ Sort an array of object. Returns the sorted array.
 
 **Details**:
 * `items`: Array of object to be sorted
-* `key`: Field name or key to sort.
-* `isDescending`: Sort descending or ascending.
+* `key`: Field name or key to sort
+* `isDescending`: Sort descending or ascending <MdBadge color="info">Optional</MdBadge>
 
 ## uuid
 
@@ -280,6 +280,6 @@ class Helper {
 Generate simple/random UUID or standard UUID v4. Returns UUID v4 or random UUID. 
 
 **Details**:
-* `standard`: If `true` then generate standard UUID v4 otherwise generate random UUID
+* `standard`: If `true` then generate standard UUID v4 otherwise generate random UUID <MdBadge color="info">Optional</MdBadge>
 
 </div>
