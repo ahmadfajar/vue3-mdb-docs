@@ -1,12 +1,12 @@
 ---
-description: Explains global API provided by the Vue MDBootstrap.
+description: Explains functional API provided by the Vue MDBootstrap.
 ---
 
 # Global API
 
 
 ::: lead
-Global API provided by **Vue MDBootstrap**.
+Functional API provided by **Vue MDBootstrap**.
 :::
 
 <SmallNote color="teal">Since v2.0.0</SmallNote>

@@ -82,7 +82,6 @@ Object.entries(fullColors).forEach(([key, value]) => {
         <div class="sticky-top text-bg-surface" style="top: 64px">&nbsp;</div>
         <div
           class="grid grid-cols-11 color-table-header text-bg-surface font-weight-medium md-gap-x-1 py-1 sticky-top"
-          style="top: 64px"
         >
           <div>50</div>
           <div>100</div>
@@ -160,6 +159,7 @@ Object.entries(fullColors).forEach(([key, value]) => {
   font-size: 13px;
   justify-items: start;
   padding-bottom: 0.5rem !important;
+  top: 47px;
 
   > * {
     writing-mode: vertical-lr;
@@ -178,6 +178,14 @@ Object.entries(fullColors).forEach(([key, value]) => {
       rotate: none;
       height: auto;
     }
+  }
+
+  @media (min-width: 60rem) {
+    top: 112px;
+  }
+
+  @media (min-width: 75rem) {
+    top: 64px;
   }
 }
 

@@ -36,7 +36,7 @@
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
   --vp-c-mute: rgba(239, 239, 239, 0.8);
   --vp-c-yellow-soft: rgba(234, 179, 8, 0.1);
-  --vp-code-tab-bg: oklch(94.5% 0.00104 11.251);
+  --vp-code-tab-bg: oklch(0.89 0 0);
   --vp-code-block-bg: oklch(98.288% 0.00104 11.251);
   --vp-code-color: var(--bs-code-color);
   --vp-badge-tip-text: oklch(56.735% 0.20357 299.732);
@@ -380,7 +380,7 @@
   --vp-custom-block-important-border: oklch(41.444% 0.04043 297.96);
   --vp-custom-block-caution-border: oklch(39.937% 0.05402 2.21);
 
-  --vp-code-tab-bg: oklch(0.3 0.02 264.21); // oklch(0.15 0 0);
+  --vp-code-tab-bg: oklch(0.36 0.02 264.24);
   --vp-code-block-bg: oklch(20.105% 0.00397 285.961);
   --vp-code-color: oklch(80.897% 0.07286 276.847);
   

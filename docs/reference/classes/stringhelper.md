@@ -22,6 +22,24 @@ const result = StringHelper.titleCase(str);
 
 <div class="doc-api">
 
+## isContains 
+
+```ts
+class StringHelper {
+  static isContains(source?: string, searches?: string[]): boolean;
+}
+``` 
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+Determines whether an input string contains with any of the specified string or not. Returns 
+`true` if any of the given strings in the collection is found at any position of the input string, 
+otherwise `false`. 
+
+**Details**:
+* `source`: The input string to evaluate.
+* `searches`: Collection of string to be searched.
+
 ## isEndWith 
 
 ```ts
@@ -30,13 +48,31 @@ class StringHelper {
 }
 ``` 
 
-Determines whether a string ends with any of the specified string or not. Returns 
-`true` if any of the given strings in the collection is found at the end of the string, 
+Determines whether an input string ends with any of the specified string or not. Returns 
+`true` if any of the given strings in the collection is found at the end of the input string, 
 otherwise `false`. 
 
 **Details**:
 * `source`: The input string to evaluate.
-* `searches`: Collection of string to search at the end of string.
+* `searches`: Collection of string to be searched at the end of the input string.
+
+## isStartWith 
+
+```ts
+class StringHelper {
+  static isStartWith(source?: string, searches?: string[]): boolean;
+}
+``` 
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote>
+
+Determines whether an input string starts with any of the specified string or not. Returns 
+`true` if any of the given strings in the collection is found at the starts of the input string, 
+otherwise `false`. 
+
+**Details**:
+* `source`: The input string to evaluate.
+* `searches`: Collection of string to be searched at the start of the input string.
 
 ## titleCase 
 

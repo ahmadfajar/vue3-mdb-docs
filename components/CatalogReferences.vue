@@ -10,7 +10,7 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
     <ListGroupItem href="global-api">
       <ListGroupItemTitle title="Global API" />
       <ListGroupItemContent>
-        Global API provided by the Vue MDBootstrap.
+        Functional API provided by the Vue MDBootstrap.
       </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem>
@@ -35,18 +35,6 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>
-    </ListGroupItem>
-    <ListGroupItem href="colors">
-      <ListGroupItemTitle title="Colors" />
-      <ListGroupItemContent>
-        Various color variants and their CSS classes provided by Vue MDBootstrap.
-      </ListGroupItemContent>
-    </ListGroupItem>
-    <ListGroupItem href="shadows">
-      <ListGroupItemTitle title="Shadows" />
-      <ListGroupItemContent>
-        Add or remove shadows to elements with box-shadow utilities.
-      </ListGroupItemContent>
     </ListGroupItem>
     <ListGroupItem>
       <ListGroupItemTitle tag="div" class="h5 mb-4" title="Utility Classes:" />
@@ -80,6 +68,78 @@ import ListGroupItemContent from './ListGroupItemContent.vue';
           <ListGroupItemTitle title="PopupManager" />
           <ListGroupItemContent>
             A singleton instance that help manage the popup elements.
+          </ListGroupItemContent>
+        </ListGroupItem>
+      </ListGroup>
+    </ListGroupItem>
+    <ListGroupItem href="colors">
+      <ListGroupItemTitle title="Colors" />
+      <ListGroupItemContent>
+        Various color variants and their CSS classes provided by Vue MDBootstrap.
+      </ListGroupItemContent>
+    </ListGroupItem>
+    <ListGroupItem>
+      <ListGroupItemTitle tag="div" class="h5 mb-4" title="CSS Utilities:" />
+      <ListGroup>
+        <ListGroupItem href="css-utils/borders">
+          <ListGroupItemTitle title="Borders" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes to quickly style the border and border-radius of an element.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/display">
+          <ListGroupItemTitle title="Display" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes for controlling the display value of an element.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/flex">
+          <ListGroupItemTitle title="Flex" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes for controlling the flex items.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/grid">
+          <ListGroupItemTitle title="Grid" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes to build flexbox grid layout with twelve column system 
+            and six default responsive tiers.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/position">
+          <ListGroupItemTitle title="Position" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes for controlling the element position.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/shadows">
+          <ListGroupItemTitle title="Shadows"/>
+          <ListGroupItemContent>
+            Add or remove shadows to elements with box-shadow utilities.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/size">
+          <ListGroupItemTitle title="Size" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes for controlling the element size.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/spacing">
+          <ListGroupItemTitle title="Spacing" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes to quickly control the margin and padding of an element.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/text">
+          <ListGroupItemTitle title="Text" badge="v2.2.0" />
+          <ListGroupItemContent>
+            CSS classes to quickly style the text color, font-size and font-weight of an element.
+          </ListGroupItemContent>
+        </ListGroupItem>
+        <ListGroupItem href="css-utils/others">
+          <ListGroupItemTitle title="Others" badge="v2.2.0" />
+          <ListGroupItemContent>
+            Unclassified CSS classes to quickly style an element.
           </ListGroupItemContent>
         </ListGroupItem>
       </ListGroup>

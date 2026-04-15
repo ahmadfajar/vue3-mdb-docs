@@ -29,10 +29,25 @@ class Color {
 }
 ``` 
 
-Convert HSLA to HSVA and returns HSVA color value.
+Convert HSL color space to HSV color space and returns HSVA color value.
 
 **Details**:
-* `color`: The HSLA color value
+* `color`: The HSLA color value. **Hue** as degrees [0..360], **Saturation** and **Lightness** as number in range [0..1].
+
+## hslaToRgba
+
+```ts
+class Color {
+  static hslaToRgba(color: HSLA): RGBA; 
+}
+``` 
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Convert HSL color space to sRGB color space and returns RGBA color value. 
+**Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
+
+**Details**:
+* `color`: The HSLA color value. **Hue** as degrees [0..360], **Saturation** and **Lightness** as number in range [0..1].
 
 ## hslaToString 
 
@@ -42,10 +57,10 @@ class Color {
 }
 ```
 
-Convert HSL/HSLA color to string and returns CSS color string.
+Convert HSL/HSLA color value to string and returns CSS color string.
 
 **Details**:
-* `color`: The HSLA color value
+* `color`: The HSLA color value. **Hue** as degrees [0..360], **Saturation** and **Lightness** as number in range [0..1].
 
 ## hsvaToHsla 
 
@@ -55,7 +70,8 @@ class Color {
 }
 ```
 
-Convert HSVA to HSLA and returns HSLA color value.
+Convert HSV color space to HSL color space and returns HSLA color value.
+**Hue** as degrees [0..360], **Saturation** and **Lightness** as number in range [0..100].
 
 **Details**:
 * `color`: The HSVA color value
@@ -68,7 +84,8 @@ class Color {
 }
 ```
 
-Convert HSVA to RGBA and returns RGBA color value. 
+Convert HSV color space to sRGB color space and returns RGBA color value. 
+**Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 **Details**:
 * `color`: The HSVA color value
@@ -81,10 +98,57 @@ class Color {
 }
 ```
 
-Convert CSS HEX color to RGBA color and returns RGBA color value. 
+Convert CSS HEX color format to sRGB color space and returns RGBA color value. 
+**Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 **Details**:
 * `color`: The css HEX color value
+
+## oklchToRgba 
+
+```ts
+class Color {
+  static oklchToRgba(color: LCHA): RGBA; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Convert OKLCH color space to sRGB color space and returns RGBA color value. 
+**Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
+
+**Details**:
+* `color`: The OKLCH color value
+
+## oklchToString 
+
+```ts
+class Color {
+  static oklchToString(color: LCHA): string; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Convert OKLCH color space to string and returns CSS color string. 
+
+**Details**:
+* `color`: The OKLCH value. **Lightness**, **Chroma** as number in range [0..1] and **Hue** as degrees [0..360].
+
+## oklchFromString 
+
+```ts
+class Color {
+  static oklchFromString(source: string): LCHA; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Parse a string that represent `oklch` color formatted string and returns LCHA color value. 
+
+**Details**:
+* `source`: The `oklch` color formatted string.
 
 ## rgbaToHex 
 
@@ -94,10 +158,26 @@ class Color {
 }
 ```
 
-Convert RGB/RGBA color to CSS HEX color format and returns CSS HEX color value.
+Convert RGB/RGBA color value to CSS HEX color format and returns CSS HEX color value.
 
 **Details**:
-* `color`: The RGB/RGBA color value
+* `color`: The RGB/RGBA color value. **Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
+
+## rgbaToHsla 
+
+```ts
+class Color {
+  static rgbaToHsla(color: RGBA): HSLA; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Convert sRGB color space to HSL color space and returns HSLA color value. 
+**Hue** as degrees [0..360], **Saturation** and **Lightness** as number in range [0..100].
+
+**Details**:
+* `color`: The RGBA color value. **Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 ## rgbaToHsva 
 
@@ -107,10 +187,26 @@ class Color {
 }
 ```
 
-Convert RGBA to HSVA and returns HSVA color value.
+Convert sRGB color space to HSV color space and returns HSVA color value.
 
 **Details**:
-* `color`: The RGBA color value
+* `color`: The RGBA color value. **Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
+
+## rgbaToOklch 
+
+```ts
+class Color {
+  static rgbaToOklch(color: RGBA): LCHA; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Convert sRGB color space to OKLCH color space and returns LCHA color value. 
+**Lightness**, **Chroma** as number in range [0..1] and **Hue** as degrees [0..360].
+
+**Details**:
+* `color`: The RGBA color value. **Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 ## rgbaToString 
 
@@ -120,10 +216,10 @@ class Color {
 }
 ```
 
-Convert RGB/RGBA color to string and returns CSS color string.
+Convert RGB/RGBA color value to string and returns CSS color string.
 
 **Details**:
-* `color`: The RGB/RGBA color value
+* `color`: The RGB/RGBA color value. **Red**, **Green**, **Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 ## rgbaFromString 
 
@@ -133,7 +229,8 @@ class Color {
 }
 ```
 
-Parse a string to RGBA and returns RGBA color value.
+Parse a string to RGBA and returns RGBA color value. **Red**, **Green**, 
+**Blue** as number in range [0..255], and **Alpha** as number in range [0..1].
 
 **Details**:
 * `canvasCtx`: The canvas rendering context
@@ -143,14 +240,30 @@ Parse a string to RGBA and returns RGBA color value.
 
 ```ts
 class Color {
-  static brightnessLevel(color: RGBA): number; 
+  static brightnessLevel(color: string | RGBA): number; 
 }
 ```
 
-Get brightness level from RGBA color and returns brightness level.
+Get brightness level from RGBA color and returns brightness level in range [1..255].
 
 **Details**:
-* `color`: The RGB/RGBA color value
+* `color`: The RGBA color value or HEX color formatted string
+
+## lightnessLevel  
+
+```ts
+class Color {
+  static lightnessLevel(color: RGBA | HSLA | LCHA): number; 
+}
+```
+
+<SmallNote color="teal">Added in v2.2.0</SmallNote> 
+
+Get Lightness level from `RGBA`, `HSLA` or `OKLCH` color object and returns lightness 
+level in range [1..100].
+
+**Details**:
+* `color`: The `RGBA`, `HSLA` or `LCHA` color value
 
 ## shadeColor  
 

@@ -38,13 +38,16 @@
   }
 
   .doc-api {
+    --vp-code-custom: oklch(64.822% 0.17993 45.857);
+
     ul > li > code:nth-child(1) {
-      color: oklch(64.822% 0.17993 45.857);
+      color: var(--vp-code-custom);
     }
   }
 }
 
 .doc-api-reference {
+  --vp-code-custom: oklch(44.63% 0.21791 296.271);
   margin: 3rem -1.5rem 0;
 
   &.md-tabs {
@@ -231,7 +234,22 @@
       }
     }
   }
+  
+  .table\:code\:col-2 {
+    > table {
+      td {
+        &:nth-child(2) {
+          color: var(--vp-code-custom);
+        }
+      }
+    }
+  }
 
+  .code {
+    color: var(--vp-code-color);
+    font-family: var(--font-monospace);
+  }
+  
   @media (min-width: 590px) {
     margin: 3rem 0 0;
 
@@ -244,13 +262,13 @@
 .dark {
   .vp-doc {
     .doc-api {
-      ul > li > code:nth-child(1) {
-        color: oklch(81.113% 0.12418 55.065);
-      }
+      --vp-code-custom: oklch(81.113% 0.12418 55.065);
     }
   }
 
   .doc-api-reference {
+    --vp-code-custom: oklch(81.113% 0.12418 55.065);
+
     &.md-tabs {
       --md-tab-item-color: oklch(88.837% 0.0001 271.152deg / 0.6);
       --md-tab-item-active-color: oklch(100% 0.00011 271.152deg);
