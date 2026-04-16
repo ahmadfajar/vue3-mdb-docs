@@ -138,7 +138,7 @@ const response = await http?.get("<api-url>");
 
 <div class="doc-api">
 <ul>
-<li>get() 
+<li><div class="h5">get</div> 
 
 ```ts
 interface IHttpService {
@@ -154,7 +154,7 @@ Send _HTTP GET_ to the remote service.
 * `options`: Additional options <span class="text-subtle">(optional)</span> 
 
 </li>
-<li class="mt-4">patch() 
+<li class="mt-4"><div class="h5">patch</div> 
 
 ```ts
 interface IHttpService {
@@ -170,7 +170,7 @@ Send _HTTP PATCH_ to the remote service.
 * `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
-<li class="mt-4">post() 
+<li class="mt-4"><div class="h5">post</div> 
 
 ```ts
 interface IHttpService {
@@ -186,7 +186,7 @@ Send _HTTP POST_ to the remote service.
 * `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
-<li class="mt-4">put() 
+<li class="mt-4"><div class="h5">put</div> 
 
 ```ts
 interface IHttpService {
@@ -202,7 +202,7 @@ Send _HTTP PUT_ to the remote service.
 * `options`: Additional options <span class="text-subtle">(optional)</span>
 
 </li>
-<li class="mt-4">delete() 
+<li class="mt-4"><div class="h5">delete</div> 
 
 ```ts
 interface IHttpService {

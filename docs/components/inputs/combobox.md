@@ -10,6 +10,8 @@ description: Combobox is a form field component that let users select one or mor
 from a dropdown displayed list.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 
 ## Overview
 

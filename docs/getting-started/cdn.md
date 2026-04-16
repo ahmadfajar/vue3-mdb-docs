@@ -67,7 +67,7 @@ Code below is an example on how to create HTML page using Vue MDBootstrap.
     const app = createVueMdb({
       setup() {
         const count = ref(0);
-        return {count};
+        return { count };
       }
     });
     app.mount('#app');

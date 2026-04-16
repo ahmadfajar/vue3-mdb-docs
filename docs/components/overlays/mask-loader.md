@@ -10,6 +10,8 @@ description: MaskLoader is a component which are typically used for displaying a
 progress with backdrop overlay.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 
 ## Overview
 

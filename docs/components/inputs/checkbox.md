@@ -327,7 +327,7 @@ As CSS technology evolves, Vue MDBootstrap introduces local CSS variables on
 | items <Badge type="danger">required</Badge> | `TCheckboxInputProps[]` |  | The configuration option to construct the `<bs-checkbox>`. |
 | model-value <Badge type="tip">v-model</Badge> | `String[]`&#124;`Number[]` |  | The component value monitored by `v-model` to maintain checked state. <MdBadge color="info">v2.0.0</MdBadge> |
 | name        | `String`  |  | Sets default `<input>` element `name` attribute. |
-| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. |
+| persistent-help-text <Badge type="warning">deprecated</Badge> | `Boolean` | `true` | Use `persistent-help-off` instead. <MdBadge color="info">Updated in v2.2.0</MdBadge> |
 | persistent-help-off | `Boolean` | `false` | Prevents help text from being visible when the component is not focused. <MdBadge color="info">v2.2.0</MdBadge> |
 | readonly    | `Boolean` | `false` | Put the component in readonly state and sets the `<input>` element `readonly` attribute. |
 | required    | `Boolean` | `false` | Sets the `<input>` element `required` attribute. |

@@ -13,7 +13,6 @@ import './decorators.scss';
 import './main.scss';
 import './doc-api.scss';
 import './shoutbox.scss';
-// import './styles-block.scss';
 
 export default {
   extends: DefaultTheme,

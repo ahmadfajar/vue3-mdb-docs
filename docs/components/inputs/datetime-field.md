@@ -10,6 +10,8 @@ description: DateTime Field is a fully featured date selection component that le
 select a date, time, month, year, or datetime.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote> 
+
 
 ## Overview
 

@@ -11,6 +11,8 @@ description: Chip Field is a form field component that let users enter arbitrary
 like _categories_ or _tags_ into an UI to convey a small pieces of information.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 
 ## Overview
 

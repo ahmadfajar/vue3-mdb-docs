@@ -9,6 +9,8 @@ description: DatePicker is aA component that generates a calendar style date sel
 **BsDatePicker** is a component that generates a calendar style date selection widget.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote> 
+
 
 ## Overview
 

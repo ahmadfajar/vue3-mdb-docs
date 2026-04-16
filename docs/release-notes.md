@@ -11,7 +11,7 @@ and can be viewed below for your convenience.
 
 Released: March 20, 2026
 
-### Features & Improvements
+<h3>Features & Improvements</h3>
 
 - **BsButton**: improve CSS variables and color variants.
 - **BsColorPicker**: 
@@ -35,7 +35,7 @@ Released: March 20, 2026
 - **BsToggleButton**: improve active button border color when property `multiple` is set to `true`.
 - **BsTooltip**: improve `background-color` on dark theme.
 
-### Bug Fixes
+<h3>Bug Fixes</h3>
 
 - **BsButton**: fixed bug where the CSS `background-color` and `border` were not working properly. 
 - **BsDatePicker**: fixed calendar table CSS rules break on VitePress.
@@ -51,7 +51,7 @@ Released: March 20, 2026
 
 Released: February 02, 2026
 
-### Features & Improvements
+<h3>Features & Improvements</h3>
 
 - Add support for **Bootstrap v5.3** and **TailwindCSS v4.1**.
 - Add support for dark theme.
@@ -171,7 +171,7 @@ Released: February 02, 2026
 - **BsTooltip**: improve animation, inner padding, border radius and CSS variables.
 - **CacheManager**: improve performance using sessionStorage if available
 
-### Breaking Changes
+<h3>Breaking Changes</h3>
 
 - **BsAlert**: remove deprecated properties: `iconType`, `solidFill`.
 - **BsButton**: mark `pill` property as **deprecated**.
@@ -214,7 +214,7 @@ Released: February 02, 2026
 
 Released: February 03, 2025
 
-### Bug Fixes
+<h3>Bug Fixes</h3>
 
 - **BsTextArea**: fixed bug could not determine its height when `auto-grow` and `readonly`
   were enabled and the `model-value` wasn't empty.
@@ -224,7 +224,7 @@ Released: February 03, 2025
 
 Released: February 01, 2025
 
-### Improvements
+<h3>Improvements</h3>
 
 - **BsButton**: 
   - Improve inner element spacing and padding when `dropdown-toggle` is enabled.
@@ -232,7 +232,7 @@ Released: February 01, 2025
     **undefined** and `dropdown-toggle` is enabled.
 - **BsTooltip**: improve show or hide animation timing.
 
-### Bug Fixes
+<h3>Bug Fixes</h3>
 
 - **BsTab**: fixed bug that caused `v-if` to not work as expected.
 
@@ -241,7 +241,7 @@ Released: February 01, 2025
 
 Released: December 30, 2024
 
-### Improvements
+<h3>Improvements</h3>
 
 - **BsTooltip**: improve arrow positioning when activator width greater than tooltip width.
 - **AxiosPlugin**: 
@@ -254,7 +254,7 @@ Released: December 30, 2024
 
 Released: December 28, 2024
 
-### Improvements
+<h3>Improvements</h3>
 
 - **BsTooltip**: 
   - Prevent displaying tooltip beyond the screen viewport by shifting its 
@@ -266,7 +266,7 @@ Released: December 28, 2024
 
 Released: December 10, 2024
 
-### Features & Improvements
+<h3>Features & Improvements</h3>
 
 - **BsNotification**: 
   - Add feature to enable hiding the notification icon. 
@@ -279,7 +279,7 @@ Released: December 10, 2024
 
 Released: December 08, 2024
 
-### Bug Fixes
+<h3>Bug Fixes</h3>
 
 - **BsAppbarTitle**: fixed bug incorrect left margin when placed as the first child of `<BsAppbar>`.
 - **BsBreadcrumb**: fixed css variables.
@@ -292,13 +292,13 @@ Released: December 08, 2024
 
 Released: December 04, 2024
 
-### Improvements
+<h3>Improvements</h3>
 
 - **BsColorPicker**: rename property `outlineModeButton` to `modeButtonOutlined`. 
 - Rename component **BsFontAwesome** to **BsIconFontawesome** for consistency.
 - Improve typescript doc comments.
 
-### Bug Fixes
+<h3>Bug Fixes</h3>
 
 - **BsTooltip**: fixed bug inconsistent arrow color.
 
@@ -307,7 +307,7 @@ Released: December 04, 2024
 
 Released: December 03, 2024
 
-### Features & Improvements
+<h3>Features & Improvements</h3>
 
 - Migrate **Google Material Icons** to **[Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)**.
   This migration improve icon naming consistency, clarity and reduce the bundle size.

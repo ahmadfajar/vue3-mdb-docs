@@ -10,6 +10,8 @@ description: Search Field is a component that let users enter search keyword int
 **BsSearchField** is a component that let users enter search keyword into an UI.
 :::
 
+<SmallNote color="teal">Updated in v2.2.0</SmallNote>
+
 
 ## Overview
 
