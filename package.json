@@ -22,7 +22,7 @@
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
     "vue": "^3.5.32",
-    "vue-mdbootstrap": "^2.2.1"
+    "vue-mdbootstrap": "^2.2.2"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.11.0",
@@ -35,5 +35,5 @@
     "vite": "7.3.2",
     "vitepress": "^1.6.4"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.0"
 }
